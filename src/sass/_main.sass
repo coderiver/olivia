@@ -1,9 +1,122 @@
-// Normally mainpage styles
-// body
-// 	+s(coderiver)
-div
-	+r(1024)
-		display: block
-p
-	+r(1024)
-		background: red
+.main
+	margin-top: -90px
+	&__in
+		min-height: 400px
+		background: #fff
+		border: 1px solid #dce0e7
+		border-radius: 6px
+
+.upper
+	position: relative
+	min-height: 90px
+	padding: 18px 18px 8px
+	background: #f7f8f9
+	border-bottom: 1px solid #dce0e7
+	&__ttl
+		margin-bottom: 12px
+		color: #282828
+		font-size: 20px
+		+opensans-b
+	&__list
+
+		+clr
+	&__option
+		float: left
+		&:first-child
+			.upper__link
+				margin-left: 0
+	&__link
+		color: #097bf2
+		font-size: 14px
+		margin-left: 30px
+		&:hover
+			color: #000
+		&.is-active
+			color: #000
+			+opensans-b
+	.add-btn
+		position: absolute
+		right: 23px
+		bottom: 0
+		margin-bottom: -25px
+
+.start
+	position: relative
+	margin: 35px 0 110px
+	text-align: center
+	font-size: 16px
+	color: #6c757a
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		right: 47px
+		width: 330px
+		height: 114px
+		margin-top: 20px
+		border-right: 2px solid #899bac
+		border-bottom: 2px solid #899bac
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		right: 38px
+		margin-top: 10px
+		+arr(21, 14, #899bac, t)
+	&__in
+		position: relative
+		max-width: 500px
+		margin: 0 auto
+	&__ttl
+		margin-bottom: 25px
+		font-size: 26px
+		color: #282828
+	&__folder
+		position: relative
+		margin-bottom: 30px
+		line-height: 1
+	.icon-folder
+		font-size: 122px
+		color: #899bac
+		box-shadow: 15px 15px 0px 0px #fff
+	.icon-plus
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -15px 0 0 -15px
+		font-size: 30px
+		color: #FFF
+
+
+.add-btn
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	background: #2C83CB
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.31)
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		border-radius: 50%
+		will-change: opacity
+		+tr(0.2s)
+	&:before
+		+g(#2c83cb, #025bb7)
+	&:after
+		opacity: 0
+		+g(#025bb7, #2c83cb)
+	&:hover
+		&:before
+			opacity: 0
+		&:after
+			opacity: 1
+	.icon-plus
+		position: relative
+		font-size: 15px
+		color: #FFF
+		z-index: 1

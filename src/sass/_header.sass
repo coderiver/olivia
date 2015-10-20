@@ -1,0 +1,114 @@
+.header
+	min-height: 153px
+	background-color: #474e52
+	&__in
+		padding: 15px 0
+		+clr
+	&__logo
+		float: left
+		margin-top: 10px
+		color: #fff
+
+.menu
+	float: left
+	margin: 10px 0 0 20px
+	+clr
+	&__option
+		float: left
+		margin: 0 13.5px
+	&__link
+		position: relative
+		text-transform: uppercase
+		color: #93988f
+		letter-spacing: 0.5px
+		&:after
+			display: none
+			content: ""
+			position: absolute
+			top: 100%
+			left: 50%
+			margin: 12px 0 0 -10px
+			+arr(20, 12, #f7f8f9, t)
+		&:hover
+			color: #fff
+		&.is-active
+			color: #fff
+			&:after
+				display: block
+	&__notification
+		position: absolute
+		top: 0
+		left: 100%
+		margin: -6.5px 0 0 1px
+		font-size: 11px
+		text-align: center
+		padding: 1px 3px 0px 2px
+		background: #f76300
+		line-height: 1
+		color: #FFF
+		span
+			display: inline-block
+			max-width: 19px
+			overflow: hidden
+			white-space: nowrap
+	+r(900)
+		margin-left: 10px
+
+.helpers
+	float: right
+	font-size: 0
+	&__info
+		display: inline-block
+		width: 18px
+		height: 18px
+		text-decoration: none
+		text-align: center
+		font-size: 13px
+		background: #6c757a
+		color: #474e52
+		border-radius: 50%
+		vertical-align: middle
+		+rmono
+		&:hover
+			background: #fff
+	&__bell
+		margin-left: 16px
+		font-size: 19px
+		color: #6c757a
+		vertical-align: middle
+		&:hover
+			color: #fff
+	+r(900)
+		&__bell
+			margin-left: 10px
+
+.search
+	position: relative
+	display: inline-block
+	max-width: 225px
+	margin-left: 15px
+	vertical-align: middle
+	input
+		width: 100%
+		padding: 8px 8px 8px 40px
+		border: 1px solid #6c757a
+		border-radius: 40px
+		font-size: 13px
+		background: none
+		color: #fff
+		-webkit-appearance: none
+		+placeholder-color(#757a7d)
+	.icon-zoom
+		position: absolute
+		top: 50%
+		left: 15px
+		margin-top: -7px
+		font-size: 14px
+		color: #757A7D
+	+r(900)
+		max-width: 130px
+		margin-left: 10px
+		input
+			padding: 8px 8px 8px 28px
+		.icon-zoom
+			left: 10px

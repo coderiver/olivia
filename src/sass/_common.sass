@@ -48,10 +48,34 @@
 // 	+jpg(bla)
 
 
++font(opensans, opensans)
++font(opensans-bold, opensans-bold)
++font(opensans-light, opensans-light)
++font(robotomono, robotomono)
+
+=opensans
+	font-family: "opensans", Arial, sans-serif
+=opensans-l
+	font-family: "opensans-light", Arial, sans-serif
+=opensans-b
+	font-family: "opensans-bold", Arial, sans-serif
+=rmono
+	font-family: "robotomono", Arial, sans-serif
+
 body
-	font-family: Arial, sans-serif
 	font-size: 12px
 	line-height: 1.4
+	background: #F3F4F6
+	+opensans
 
+.out
+	min-width: 768px
 
 // common blocks
+.l
+	max-width: 983px
+	padding: 0 20px
+	margin: 0 auto
+
+a
+	text-decoration: none
