@@ -31,16 +31,19 @@
 					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
 					<!-- begin suggest for new deal -->
 						<div class="suggest js-popup" id="suggest">
-							<div class="suggest__folder" data-popup="create">
-								<i class="icon icon-folder"></i>
-								<i class="icon icon-plus"></i>
+							<div class="suggest__head">
+								<div class="suggest__folder" data-popup="create">
+									<i class="icon icon-folder"></i>
+									<i class="icon icon-plus"></i>
+								</div>
+								<p class="suggest__txt">Start a New Deal Folder</p>
+								<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
 							</div>
-							<p class="suggest__txt">Start a New Deal Folder</p>
-							<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
 						</div>
 					<!-- end suggest for new deal -->
 				</div>
 				<div class="start">
+					<div class="arrow-block"></div>
 					<div class="start__in">
 						<h1 class="start__ttl">Start by creating a deal folder</h1>
 						<div class="start__folder">
@@ -58,8 +61,23 @@
 </div>
 <!-- END out-->
 <div class="overlay">
-	<div class="newdeal js-popup" id="create">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti pariatur architecto laudantium saepe impedit voluptas atque quae animi hic, necessitatibus sint quam rerum beatae soluta in voluptatem? Natus, voluptatem, laudantium!
+	<div class="popup is-newdeal js-popup" id="create">
+		<div class="popup__head">
+			<p>Start a New Deal Folder</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<form class="popup__form">
+				<p class="popup__form-ttl">Deal Name</p>
+				<label>
+					<input type="text" placeholder="Please keep this short and informal">
+				</label>
+				<div class="popup__btn">
+					<button class="btn btn-ok" type="submit">Create deal</button>
+					<button class="btn btn-no" type="button">Cancel</button>
+				</div>
+			</form>
+		</div>
 	</div>
 </div>
 </body>

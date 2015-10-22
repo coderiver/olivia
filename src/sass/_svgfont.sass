@@ -5,11 +5,14 @@
 	font-weight: normal
 	font-style: normal
 
-$icon-bell: "\EA01"
-$icon-folder: "\EA02"
-$icon-logo: "\EA03"
-$icon-plus: "\EA04"
-$icon-zoom: "\EA05"
+$icon-arrow: "\EA01"
+$icon-bell: "\EA02"
+$icon-close: "\EA03"
+$icon-folder: "\EA04"
+$icon-logo: "\EA05"
+$icon-plus: "\EA06"
+$icon-warn: "\EA07"
+$icon-zoom: "\EA08"
 
 
 %icon
@@ -26,13 +29,19 @@ $icon-zoom: "\EA05"
 	@extend %icon
 	display: inline-block
 
+.icon-arrow:before
+	content: $icon-arrow
 .icon-bell:before
 	content: $icon-bell
+.icon-close:before
+	content: $icon-close
 .icon-folder:before
 	content: $icon-folder
 .icon-logo:before
 	content: $icon-logo
 .icon-plus:before
 	content: $icon-plus
+.icon-warn:before
+	content: $icon-warn
 .icon-zoom:before
 	content: $icon-zoom

@@ -35,24 +35,25 @@
 			color: #fff
 			&:after
 				display: block
-	&__notification
-		position: absolute
-		top: 0
-		left: 100%
-		margin: -6.5px 0 0 1px
-		font-size: 11px
-		text-align: center
-		padding: 1px 3px 0px 2px
-		background: #f76300
-		line-height: 1
-		color: #FFF
-		span
-			display: inline-block
-			max-width: 19px
-			overflow: hidden
-			white-space: nowrap
 	+r(900)
 		margin-left: 10px
+
+.notification
+	position: absolute
+	top: 0
+	left: 100%
+	margin: -6.5px 0 0 1px
+	font-size: 11px
+	text-align: center
+	padding: 2px 3px 0px 2px
+	background: #f76300
+	line-height: 1
+	color: #FFF
+	span
+		display: inline-block
+		max-width: 19px
+		overflow: hidden
+		white-space: nowrap
 
 .helpers
 	float: right
@@ -96,8 +97,9 @@
 		font-size: 13px
 		background: none
 		color: #fff
-		-webkit-appearance: none
 		+placeholder-color(#757a7d)
+		&:focus
+			box-shadow: none
 	.icon-zoom
 		position: absolute
 		top: 50%

@@ -20,7 +20,8 @@
 	top: 0
 	right: 0
 	margin-top: 43px
-	padding: 20px 23px
+	min-width: 390px
+	padding: 20px 23px 20px 26px
 	font-size: 0
 	background: #FFF
 	border-radius: 4px
@@ -32,8 +33,10 @@
 	&.is-active
 		opacity: 1
 		visibility: visible
-	.suggest__close
-		display: inline-block
+	&__head
+		+clr
+	&__close
+		float: right
 		width: 50px
 		height: 50px
 		background-color: #097bf2
@@ -43,41 +46,115 @@
 		cursor: pointer
 		+vertical
 		+rotate(-45)
-	.suggest__txt
+	&__txt
 		display: inline-block
-		margin: 0 60px 0 23px
 		color: #097bf2
 		font-size: 14px
 		vertical-align: middle
-	.icon-plus
-		font-size: 15px
-		color: #FFF
-		vertical-align: middle
-	.suggest__folder
+		&:first-child
+			margin-top: 14px
+			font-size: 16px
+			color: #282828
+	&__folder
 		position: relative
 		display: inline-block
+		margin-right: 23px
 		font-size: 44px
 		color: #899bac
 		line-height: 1
 		vertical-align: middle
+		cursor: pointer
 		.icon-plus
 			position: absolute
 			top: 50%
 			left: 50%
 			margin: -7.5px 0 0 -7.5px
+	&__menu
+		margin-top: 10px
+	&__bl
+		display: block
+		font-size: 12px
+		margin-bottom: 15px
+		color: #097bf2
+		&.is-disabled
+			color: #cfd5e0
+			.transaction-ico
+				background-image: url('../img/svg-bg/transaction-disabled.svg')
+			.customer-ico
+				background-image: url('../img/svg-bg/customer-disabled.svg')
+		p:first-child
+			margin-bottom: 5px
+			font-size: 14px
+	&__in
+		display: inline-block
+		max-width: 250px
+		margin-left: 20px
+		vertical-align: middle
+	.svg-ico
+		width: 55px
+		height: 55px
+		background-size: 55px 55px
+		vertical-align: middle
+		&.memo-ico
+			display: inline-block
+			background-size: initial
+			+s(memo-small)
+	.icon-plus
+		font-size: 15px
+		color: #FFF
+		vertical-align: middle
 
-// new deal
-.newdeal
+// common popup style
+.popup
 	display: inline-block
 	width: 100%
-	max-width: 460px
 	margin-top: 30px
+	text-align: left
 	border-radius: 4px
 	box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5)
 	background: #fff
 	opacity: 0
 	visibility: hidden
 	z-index: 11
+	+tr(0.4s)
 	&.is-active
 		opacity: 1
 		visibility: visible
+	&.is-newdeal
+		max-width: 460px
+	&__head
+		position: relative
+		padding: 14px 21px
+		color: #282828
+		font-size: 16px
+		background: #f7f8f9
+		border-bottom: 1px solid #dce0e7
+	&__body
+		padding: 15px 20px 20px
+		&.no-padding
+			padding: 0
+	&__form-ttl
+		margin-bottom: 8px
+		font-size: 14px
+		line-height: 19px
+		+opensans-b
+	&__btn
+		margin-top: 60px
+		text-align: right
+		font-size: 0
+		.btn
+			margin-left: 8px
+			vertical-align: middle
+	.icon-close
+		position: absolute
+		top: 50%
+		right: 20px
+		margin-top: -7.5px
+		font-size: 13px
+		color: #6c757a
+		cursor: pointer
+		+tr(color 0.3s)
+		&:hover
+			color: red
+
+

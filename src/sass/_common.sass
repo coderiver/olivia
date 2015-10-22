@@ -15,10 +15,10 @@
 // ## animations easing, see easings.net for full list and examples, tnx @ai
 //     transition: all 1.2s ceaser($ease-in)
 // ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
+//     +background-image(linear-gradient(#232323, #5c5c5c))
+//     +g(#232323, #5c5c5c)
 //	   horizontal
-//     +gh(#232323, #5c5c5c);
+//     +gh(#232323, #5c5c5c)
 // ## making bw-images
 //     img
 //			@extend %gray
@@ -30,7 +30,7 @@
 // ## use cycles
 //     @for $i from 1 through 3
 //       .item-#{$i}
-//			width: 2em * $i;
+//			width: 2em * $i
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
@@ -52,6 +52,7 @@
 +font(opensans-bold, opensans-bold)
 +font(opensans-light, opensans-light)
 +font(robotomono, robotomono)
++font(handwrite, handwrite)
 
 =opensans
 	font-family: "opensans", Arial, sans-serif
@@ -61,6 +62,8 @@
 	font-family: "opensans-bold", Arial, sans-serif
 =rmono
 	font-family: "robotomono", Arial, sans-serif
+=handwrite
+	font-family: "handwrite", Arial, sans-serif
 
 body
 	font-size: 12px
@@ -79,3 +82,85 @@ body
 
 a
 	text-decoration: none
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea
+	-webkit-appearance: none
+
+input
+	width: 100%
+	padding: 8px 12px
+	border-radius: 4px
+	border: 1px solid rgba(0, 0, 0, 0.15)
+	+placeholder-color(#bcc6cc)
+	+tr(0.3s)
+	&:focus
+		box-shadow: 0 0 6px #097bf2
+		border-color: transparent
+
+// buttons
+.btn
+	display: inline-block
+	padding: 8px 35px
+	background: #e4e4e4
+	border-radius: 4px
+	color: #282828
+	font-size: 12px
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.32)
+	+g(#f0f0f0, gainsboro 100%)
+	+tr(0.3s ease)
+	&:hover
+		box-shadow: 0 1px 5px 0 rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12)
+	&.btn-ok
+		background: #025bb7
+		color: #fff
+		+g(#2c83cb, #025bb7)
+
+.status
+	display: inline-block
+	padding: 4px 10px
+	font-size: 13px
+	color: #FFF
+	background: #f76300
+	border-radius: 40px
+	span, i
+		display: inline-block
+		vertical-align: middle
+	i
+		margin-right: 3px
+
+// icons with svg as bg
+.svg-ico
+	display: inline-block
+	background-repeat: no-repeat
+	background-position: 0 0
+	vertical-align: top
+
+.letter-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/letter.svg')
+	background-size: 70px 70px
+
+.memo-ico
+	+s(memo)
+
+.customer-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/customer.svg')
+	background-size: 70px 70px
+
+.transaction-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/transaction.svg')
+	background-size: 70px 70px
+
+.getpaid-ico
+	width: 110px
+	height: 106px
+	background-image: url('../img/svg-bg/getpaid.svg')
+	background-size: 110px 106px

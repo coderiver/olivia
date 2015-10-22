@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Start deal</title>
+	<title>Index</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -46,37 +46,12 @@
 		<div class="l">
 			<div class="main__in">
 				<div class="upper">
-					<p class="upper__ttl">Deals</p>
-					<ul class="upper__list">
-						<li class="upper__option"><a class="upper__link is-active" href="#">All Deals</a></li>
-						<li class="upper__option"><a class="upper__link" href="#">All Transactions</a></li>
-						<li class="upper__option"><a class="upper__link" href="#">All Customers</a></li>
-					</ul>
-					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
-					<!-- begin suggest for new deal -->
-						<div class="suggest js-popup" id="suggest">
-							<div class="suggest__head">
-								<div class="suggest__folder" data-popup="create">
-									<i class="icon icon-folder"></i>
-									<i class="icon icon-plus"></i>
-								</div>
-								<p class="suggest__txt">Start a New Deal Folder</p>
-								<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
-							</div>
-						</div>
-					<!-- end suggest for new deal -->
+					<p class="upper__ttl">List of pages</p>
 				</div>
-				<div class="start">
-					<div class="arrow-block"></div>
-					<div class="start__in">
-						<h1 class="start__ttl">Start by creating a deal folder</h1>
-						<div class="start__folder">
-							<i class="icon icon-folder"></i>
-							<i class="icon icon-plus"></i>
-						</div>
-						<p>This will be where your tasks, documents and status are kept for each deal you work on.</p>
-					</div>
-				</div>
+				<ol style="margin: 50px; list-style-type: decimal; font-size: 20px;">
+					<li><a href="start-deal.html">Start Deal</a></li>
+					<li><a href="deal-step-one.html">Deal step one</a></li>
+				</ol>
 			</div>
 		</div>
 	</div>
@@ -90,25 +65,5 @@
 	<!-- end footer -->
 </div>
 <!-- END out-->
-<div class="overlay">
-	<div class="popup is-newdeal js-popup" id="create">
-		<div class="popup__head">
-			<p>Start a New Deal Folder</p>
-			<i class="icon icon-close js-close"></i>
-		</div>
-		<div class="popup__body">
-			<form class="popup__form">
-				<p class="popup__form-ttl">Deal Name</p>
-				<label>
-					<input type="text" placeholder="Please keep this short and informal">
-				</label>
-				<div class="popup__btn">
-					<button class="btn btn-ok" type="submit">Create deal</button>
-					<button class="btn btn-no" type="button">Cancel</button>
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
 </body>
 </html>

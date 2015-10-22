@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Avocode 2.4.3-3630f5a - http://avocode.com -->
+<svg height="72" width="70" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 72">
+    <defs>
+        <linearGradient y2="100%" y1="0%" x2="0%" x1="0%" id="gradient-1">
+            <stop stop-color="#3caca2" offset="0%" />
+            <stop stop-color="#39a299" offset="100%" />
+        </linearGradient>
+    </defs>
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="4" stroke="#3caca2" fill="url(#gradient-1)" fill-rule="evenodd" d="M 34.96 67.84 C 53.12 67.84 67.84 53.12 67.84 34.96 C 67.84 16.8 53.12 2.08 34.96 2.08 C 16.8 2.08 2.08 16.8 2.08 34.96 C 2.08 53.12 16.8 67.84 34.96 67.84 Z M 34.96 67.84" />
+    <path fill="#ffffff" fill-rule="evenodd" d="M 41.21 52.89 C 41.01 50.64 41.08 49.07 41.08 47.02 C 42.09 46.49 43.9 43.09 44.21 40.22 C 45 40.15 46.25 39.37 46.62 36.29 C 46.82 34.64 46.03 33.71 45.55 33.42 C 46.84 29.5 49.53 17.4 40.59 16.15 C 39.67 14.53 37.32 13.7 34.26 13.7 C 22.02 13.93 20.54 23.01 23.23 33.42 C 22.75 33.71 21.96 34.64 22.16 36.29 C 22.53 39.37 23.78 40.15 24.57 40.22 C 24.88 43.09 26.76 46.49 27.77 47.02 C 27.77 49.07 27.84 50.64 27.64 52.89 C 25.9 57.61 16.95 57.98 11.78 62.53 C 17.18 68 25.93 71.92 35.17 71.92 C 44.4 71.92 55.26 64.58 57.06 62.57 C 51.93 57.98 42.96 57.62 41.21 52.89 L 41.21 52.89 Z M 41.21 52.89" />
+</svg>
