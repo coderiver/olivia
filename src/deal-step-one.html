@@ -9,6 +9,7 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/tooltipster.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
@@ -22,7 +23,7 @@
 		<div class="l">
 			<div class="main__in">
 				<div class="upper">
-					<p class="upper__ttl"><i class="icon icon-folder"></i>Space X</p>
+					<p class="upper__ttl"><a href="#"><i class="icon icon-folder"></i></a>Space X</p>
 					<ul class="upper__list">
 						<li class="upper__option"><a class="upper__link is-active" href="#">Summary</a></li>
 						<li class="upper__option"><a class="upper__link" href="#">Tasks<p class="notification"><span>1</span></p></a></li>
@@ -75,6 +76,7 @@
 					<!-- end suggest for new deal -->
 				</div>
 				<div class="start">
+					<div class="arrow-block is-big"></div>
 					<h1 class="start__ttl">Your deal has been created. What's next? </h1>
 					<div class="steps">
 						<div class="steps__bl">
@@ -128,9 +130,57 @@
 					</div>
 					<div class="start__callfor">
 						<h2><span>Let's get started!</span></h2>
-						<div class="arrow-block is-big"></div>
 					</div>
 				</div>
+				<div class="task">
+					<div class="deal">
+						<div class="tooltip">
+							<p>Tasks</p>
+							<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
+						</div>
+					</div>
+					<table class="table">
+						<tr class="js-link" data-href="http://www.google.com">
+							<td>
+								<div class="status">
+									<i class="icon icon-warn"></i>
+									<span>Submit</span>
+								</div>
+								<div class="table__info">
+									<i class="ico letter-ico"></i>
+									<span>Submit Engagement Letter</span>
+								</div>
+							</td>
+							<td class="txt-right">
+								<p>Aug 10, 2015</p>
+							</td>
+							<td class="txt-right js-table-drop">
+								<div class="dropdown">
+									<span class="dropdown__bl"></span>
+								</div>
+							</td>
+						</tr>
+					</table>
+					<div class="deal">
+						<div class="tooltip">
+							<p>Deal Folder</p>
+							<div class="tooltip__ico js-tooltip" title="Deal folder Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
+						</div>
+						<small>Here is where all your files will be stored</small>
+					</div>
+					<div class="deal">
+						<div class="tooltip">
+							<p>Deal Status</p>
+							<div class="tooltip__ico js-tooltip" title="Deal status Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
+						</div>
+						<p class="deal__active">Active Deal</p>
+						<p>Keep this status for deal when you are working on it</p>
+						<div class="deal__status">
+							<a href="#" class="deal__status-change">Change status</a><a href="#" class="deal__status-delete">Permanently delete</a>
+						</div>
+					</div>
+				</div>
+				<div class="back-to-top"><a href="#" class="js-top"><i class="icon icon-arr-top"></i><span>Back to top</span></a></div>
 			</div>
 		</div>
 	</div>

@@ -69,6 +69,8 @@ body
 	font-size: 12px
 	line-height: 1.4
 	background: #F3F4F6
+	overflow: auto !important
+	font-weight: normal
 	+opensans
 
 .out
@@ -89,6 +91,9 @@ input[type="tel"],
 textarea
 	-webkit-appearance: none
 
+*[data-href]
+	cursor: pointer
+
 input
 	width: 100%
 	padding: 8px 12px
@@ -104,27 +109,32 @@ input
 .btn
 	display: inline-block
 	padding: 8px 35px
-	background: #e4e4e4
+	background-color: #e4e4e4
 	border-radius: 4px
 	color: #282828
 	font-size: 12px
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.32)
 	+g(#f0f0f0, gainsboro 100%)
-	+tr(0.3s ease)
+	+tr(0.3s)
 	&:hover
-		box-shadow: 0 1px 5px 0 rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12)
+		background-color: #E6E6E6
+		+g(#E6E6E6, #f0f0f0)
 	&.btn-ok
-		background: #025bb7
+		background-color: #025bb7
 		color: #fff
 		+g(#2c83cb, #025bb7)
+		&:hover
+			background-color: #3691DB
+			+g(#2c83cb, #3691DB)
 
 .status
 	display: inline-block
-	padding: 4px 10px
+	padding: 3px 8px
 	font-size: 13px
 	color: #FFF
 	background: #f76300
 	border-radius: 40px
+	line-height: 1
 	span, i
 		display: inline-block
 		vertical-align: middle
@@ -164,3 +174,56 @@ input
 	height: 106px
 	background-image: url('../img/svg-bg/getpaid.svg')
 	background-size: 110px 106px
+
+
+// back to top
+.back-to-top
+	margin: 23px 0 23px 20px
+	a
+		font-size: 13px
+		color: #bcc6cc
+	span
+		display: inline-block
+		vertical-align: middle
+	.icon
+		font-size: 9px
+		margin-right: 14px
+		vertical-align: middle
+
+
+// tooltip
+.tooltipster-base
+	color: #282828
+	background-color: #fff6e6
+	border: 1px solid #e8e0cf
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25)
+	.tooltipster-content
+		padding: 18px 10px 19px
+		font-size: 13px
+		+opensans
+
+// dropit
+.dropit
+	position: absolute
+	min-width: 160px
+	padding: 15px
+	background: #fff
+	border: 1px solid #dce0e7
+	border-radius: 4px
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25)
+	z-index: 1
+	opacity: 0
+	visibility: hidden
+	+tr(0.3s)
+	&.is-visible
+		opacity: 1
+		visibility: visible
+	&__option
+		margin-bottom: 9px
+		&:last-child
+			margin-bottom: 0
+	a
+		font-size: 13px
+		color: #282828
+		&:hover
+			text-decoration: underline

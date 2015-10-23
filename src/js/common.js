@@ -34,5 +34,45 @@ $(document).ready(function() {
 		$('.overlay').removeClass('is-active');
 	});
 
+	// animate back to top
+	$('.js-top').click(function(e) {
+		e.preventDefault();
+		$( 'html, body' ).animate({
+			scrollTop: 0
+		}, 'slow');
+	});
+
+	// detect link on click
+	$('.js-link').click(function(e) {
+		var targetLink = $(this).data('href');
+
+		if ($(e.target).parents('.js-table-drop').length > 0) {
+			e.preventDefault;
+		} else {
+			e.preventDefault;
+			window.location.href = targetLink;
+		}
+	});
+
+	// tooltip
+	$('.js-tooltip').tooltipster({
+		position: 'right',
+		maxWidth: 290
+	});
+
+	// dropdown
+	$('.js-dropit').click(function(e) {
+		e.preventDefault();
+		$(this).parent().find('.js-to-drop').toggleClass('is-visible');
+	});
+
+	$('body').click(function(e) {
+		if ( $(e.target).parents('.js-wrap').length > 0 ) {
+			e.stopPropagation();
+		} else {
+			$('.js-to-drop').removeClass('is-visible');
+		}
+	});
+
 });
 

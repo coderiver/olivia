@@ -5,14 +5,16 @@
 	font-weight: normal
 	font-style: normal
 
-$icon-arrow: "\EA01"
-$icon-bell: "\EA02"
-$icon-close: "\EA03"
-$icon-folder: "\EA04"
-$icon-logo: "\EA05"
-$icon-plus: "\EA06"
-$icon-warn: "\EA07"
-$icon-zoom: "\EA08"
+$icon-arr-right: "\EA01"
+$icon-arr-top: "\EA02"
+$icon-bell: "\EA03"
+$icon-clip: "\EA04"
+$icon-close: "\EA05"
+$icon-folder: "\EA06"
+$icon-logo: "\EA07"
+$icon-plus: "\EA08"
+$icon-warn: "\EA09"
+$icon-zoom: "\EA0A"
 
 
 %icon
@@ -29,10 +31,14 @@ $icon-zoom: "\EA08"
 	@extend %icon
 	display: inline-block
 
-.icon-arrow:before
-	content: $icon-arrow
+.icon-arr-right:before
+	content: $icon-arr-right
+.icon-arr-top:before
+	content: $icon-arr-top
 .icon-bell:before
 	content: $icon-bell
+.icon-clip:before
+	content: $icon-clip
 .icon-close:before
 	content: $icon-close
 .icon-folder:before

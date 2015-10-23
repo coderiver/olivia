@@ -75,8 +75,9 @@
 	text-align: center
 	font-size: 16px
 	color: #6c757a
+	z-index: 0
 	&__in
-		max-width: 600px
+		max-width: 620px
 		margin: 0 auto
 	&__ttl
 		margin-bottom: 25px
@@ -145,28 +146,37 @@
 		z-index: 1
 
 .steps
-	margin-top: 40px
+	max-width: 850px
+	margin: 40px auto 0
 	font-size: 0
 	text-align: center
 	&__bl
 		display: inline-block
+		width: 15%
 		margin-bottom: 30px
 		padding: 0 17px
 		font-size: 13px
 		color: #6c757a
 		vertical-align: top
 		+opensans-l
+		&:last-child
+			.steps__icon
+				&:before
+					display: none
 	&__icon
 		position: relative
+		display: inline-block
+		min-width: 70px
 		min-height: 80px
 		&:before
-			content: $icon-arrow
+			content: $icon-arr-right
 			position: absolute
 			top: 50%
-			font-family: "svgfont"
+			left: 100%
 			font-size: 16px
-			margin-top: -8px
+			margin: -8px 0 0 20px
 			color: #bcc6cc
+			@extend %icon
 	&__paid
 		position: absolute
 		top: 0
@@ -192,11 +202,11 @@
 		+handwrite
 		&:first-child
 			font-size: 35px
-			left: 23px
+			left: 15px
 		&:last-child
 			top: 0
 			left: initial
-			right: 10px
+			right: 0
 			font-size: 40px
 
 .arrow-block
@@ -208,6 +218,7 @@
 	margin-top: 20px
 	border-right: 2px solid #899bac
 	border-bottom: 2px solid #899bac
+	z-index: -1
 	&:after
 		content: ""
 		position: absolute
@@ -216,10 +227,130 @@
 		margin: -7px -10.5px 0 0
 		+arr(21, 14, #899bac, t)
 	&.is-big
-		top: initial
-		height: 350px
-		bottom: 100%
-		margin-top: 0
-		margin-bottom: -14px
-	+r(900)
+		height: calc(100% - 30.5px)
+		margin-top: 17px
+	+r(940)
 		display: none
+
+// table
+.table
+	margin-bottom: 45px
+	font-size: 13px
+	color: #6c757a
+	border-collapse: collapse
+	border-top: 1px solid #efefef
+	border-bottom: 1px solid #efefef
+	&__info
+		display: inline-block
+		margin: 0 10px 0 17px
+		font-size: 13px
+		color: #097bf2
+		vertical-align: middle
+		white-space: nowrap
+		&:only-child
+			margin: 0
+		span
+			display: inline-block
+			vertical-align: middle
+	&__head
+		background: #f7f8f9
+		text-align: left
+		border-bottom: 1px solid #efefef
+	&__name
+		width: 34.5%
+	&__clip
+		width: 40px
+		text-align: center
+		font-size: 15px
+		color: #bcc6cc
+	th
+		padding: 10px
+		border-right: 1px solid #dce0e7
+		&:last-child
+			border-right: 0
+	td
+		padding: 10px
+		border-bottom: 1px solid #efefef
+		vertical-align: middle
+	b
+		color: #282828
+		+opensans-b
+	.status
+		margin: 0 17px 0 20px
+	.ico
+		display: inline-block
+		width: 16px
+		height: 16px
+		margin-right: 5px
+		background-size: 16px 16px
+		vertical-align: middle
+	.txt-right
+		text-align: right
+		padding-right: 10px
+
+.dropdown
+	line-height: 1
+	&__bl
+		position: relative
+		display: inline-block
+		width: 30px
+		height: 27px
+		border: 1px solid #e4e4e4
+		border-radius: 4px
+		cursor: pointer
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -3px 0 0 -4px
+			+arr(9, 6, #d8d8d8, b)
+
+.tooltip
+	margin-bottom: 10px
+	font-size: 17px
+	color: #282828
+	p
+		display: inline-block
+		vertical-align: middle
+	&__ico
+		display: inline-block
+		width: 14px
+		height: 14px
+		border: 1px solid #cfd5e0
+		border-radius: 50%
+		vertical-align: middle
+		cursor: pointer
+		+opensans-b
+		+vertical
+		span
+			display: inline-block
+			font-size: 8px
+			color: #a6acb8
+			vertical-align: middle
+
+.deal
+	padding: 10px 20px
+	font-size: 13px
+	color: #738496
+	&__active
+		margin: 2px 0
+		color: #282828
+		+opensans-b
+	&__status
+		&-change
+			color: #097bf2
+		&-delete
+			color: #ff4159
+		a
+			display: inline-block
+			margin-right: 12px
+			vertical-align: middle
+			&:hover
+				text-decoration: underline
+	small
+		font-size: 13px
+		color: #bcc6cc
+	.tooltip
+		&:only-child
+			margin-bottom: 0
