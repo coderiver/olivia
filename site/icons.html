@@ -115,14 +115,17 @@
     .icon-logo:before {
       content: "\EA07";
     }
-    .icon-plus:before {
+    .icon-pending:before {
       content: "\EA08";
     }
-    .icon-warn:before {
+    .icon-plus:before {
       content: "\EA09";
     }
-    .icon-zoom:before {
+    .icon-warn:before {
       content: "\EA0A";
+    }
+    .icon-zoom:before {
+      content: "\EA0B";
     }
   </style>
 </head>
@@ -193,8 +196,16 @@
     </li>
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-plus" readonly>
+      <input class="icon-class-name autoselect" type="text" value=".icon-pending" readonly>
       <input class="icon-unicode autoselect" type="text" value="\EA08" readonly>
+      <div class="icon-container">
+        <i class="icon icon-pending"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-plus" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA09" readonly>
       <div class="icon-container">
         <i class="icon icon-plus"></i>
       </div>
@@ -202,7 +213,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-warn" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA09" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA0A" readonly>
       <div class="icon-container">
         <i class="icon icon-warn"></i>
       </div>
@@ -210,7 +221,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-zoom" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA0A" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA0B" readonly>
       <div class="icon-container">
         <i class="icon icon-zoom"></i>
       </div>

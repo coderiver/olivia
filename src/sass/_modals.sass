@@ -1,15 +1,19 @@
 .overlay
-	position: absolute
+	position: fixed
 	top: 0
 	left: 0
 	right: 0
 	bottom: 0
+	padding: 10px
 	text-align: center
 	background: rgba(#F3F4F6, 0.6)
 	opacity: 0
 	visibility: hidden
+	overflow: auto
 	z-index: 10
-	+tr(0.3s)
+	white-space: nowrap
+	transition: opacity 0.4s, visibility 0.4s
+	+vertical
 	&.is-active
 		opacity: 1
 		visibility: visible
@@ -26,9 +30,9 @@
 	background: #FFF
 	border-radius: 4px
 	box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5)
-	z-index: 11
 	opacity: 0
 	visibility: hidden
+	z-index: 11
 	+tr(0.4s)
 	&.is-active
 		opacity: 1
@@ -106,22 +110,27 @@
 
 // common popup style
 .popup
-	display: inline-block
+	display: none
 	width: 100%
-	margin-top: 30px
+	min-width: 768px
 	text-align: left
-	border-radius: 4px
-	box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5)
+	font-size: 13px
 	background: #fff
-	opacity: 0
-	visibility: hidden
-	z-index: 11
-	+tr(0.4s)
+	box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5)
+	border-radius: 4px
+	vertical-align: middle
+	z-index: -1
+	white-space: normal
 	&.is-active
-		opacity: 1
-		visibility: visible
+		display: inline-block
 	&.is-newdeal
+		margin-top: 30px
 		max-width: 460px
+		vertical-align: top
+	&.is-dealflow
+		max-width: 820px
+		margin: 0
+		vertical-align: middle
 	&__head
 		position: relative
 		padding: 14px 21px
@@ -129,6 +138,15 @@
 		font-size: 16px
 		background: #f7f8f9
 		border-bottom: 1px solid #dce0e7
+		&.no-bg
+			background: none
+			border: none
+			+clr
+	&__ttl
+		text-align: center
+		font-size: 26px
+		color: #282828
+		line-height: 36px
 	&__body
 		padding: 15px 20px 20px
 		&.no-padding
@@ -154,7 +172,12 @@
 		color: #6c757a
 		cursor: pointer
 		+tr(color 0.3s)
+		&:only-child
+			position: static
+			float: right
+			margin-top: 0
 		&:hover
 			color: red
-
+	.steps
+		margin-top: 15px
 

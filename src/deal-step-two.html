@@ -44,17 +44,17 @@
 								<a href="#" class="suggest__bl">
 									<i class="svg-ico letter-ico"></i>
 									<div class="suggest__in">
-										<p> Add Engagement Letter</p>
-										<div class="status">
-											<i class="icon icon-warn"></i>
-											<span>Submit</span>
-										</div>
+										<p>Add Engagement Letter</p>
 									</div>
 								</a>
 								<a href="#" class="suggest__bl">
 									<i class="svg-ico memo-ico"></i>
 									<div class="suggest__in">
 										<p>Add Deal Memo</p>
+										<div class="status">
+											<span class="status__info">New</span>
+											<span>Submit</span>
+										</div>
 									</div>
 								</a>
 								<a href="#" class="suggest__bl is-disabled">
@@ -75,99 +75,142 @@
 						</div>
 					<!-- end suggest for new deal -->
 				</div>
-				<div class="start">
+				<!-- begin start  -->
+				<div class="start s-bottom-margin">
 					<div class="arrow-block is-big"></div>
-					<h1 class="start__ttl">Your deal has been created. What's next? </h1>
+					<h1 class="start__ttl">Submit Deal Memo</h1>
 					<div class="start__in">
 						<p>Once Deal Memo will be approved we will review your customers and transactions</p>
-						<a href="#">Show deal flow</a>
+						<div class="start__links">
+							<a class="start__link" href="#" data-popup="deal-flow">Show deal flow</a>
+						</div>
 					</div>
 				</div>
-				<div class="task">
-					<div class="deal">
-						<div class="tooltip">
-							<p>Tasks</p>
-							<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
-						</div>
+				<!-- end start -->
+				<div class="deal">
+					<div class="tooltip">
+						<p>Tasks</p>
+						<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
 					</div>
-					<table class="table">
-						<tr class="js-link" data-href="http://www.google.com">
-							<td>
-								<div class="status">
-									<i class="icon icon-warn"></i>
-									<span>Submit</span>
-								</div>
-								<div class="table__info">
-									<i class="ico letter-ico"></i>
-									<span>Submit Deal Memo</span>
-								</div>
-							</td>
-							<td class="txt-right">
-								<p>Aug 10, 2015</p>
-							</td>
-							<td class="txt-right js-table-drop">
-								<div class="dropdown">
-									<span class="dropdown__bl"></span>
-								</div>
-							</td>
-						</tr>
-					</table>
-					<div class="deal">
-						<div class="tooltip">
-							<p>Deal Folder</p>
-							<div class="tooltip__ico js-tooltip" title="Deal folder Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
-						</div>
-						<small>Here is where all your files will be stored</small>
+				</div>
+				<!-- begin table  -->
+				<table class="table">
+					<tr class="js-link" data-href="http://www.google.com">
+						<td>
+							<div class="status">
+								<span class="status__info">New</span>
+								<span>Submit</span>
+							</div>
+						</td>
+						<td class="table__info">
+							<div class="table__desc">
+								<i class="ico memo-ico"></i>
+								<span>Submit Deal Memo</span>
+							</div>
+							<p>Once your Memo will be approved we will review your customers and transactions</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop txt-right js-table-drop">
+							<div class="dropdown">
+								<span class="dropdown__bl"></span>
+							</div>
+						</td>
+					</tr>
+					<tr class="is-pending js-link" data-href="http://www.imgur.com">
+						<td>
+							<div class="table__pending">
+								<i class="icon icon-pending"></i>
+								<span>Sent for review</span>
+							</div>
+						</td>
+						<td class="table__info">
+							<div class="table__desc">
+								<i class="ico letter-ico"></i>
+								<span>Submit Space X Engagement Letter</span>
+							</div>
+							<p>Submitted Space X Engagement Letter Steve Buscemi. Document sent for review to Amanda Brown.</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop txt-right js-table-drop">
+							<div class="dropdown">
+								<span class="dropdown__bl"></span>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<!-- end table -->
+				<!-- begin activity  -->
+				<div class="activity">
+					<p class="activity__ttl">Recent activity</p>
+					<div class="activity__table">
+						<p><small>Aug 27</small> <span>You submited <a href="#">Engagement Letter Steve Buscemi</a></span></p>
+						<p><small>Aug 26</small> <span>You created Space X deal</span></p>
 					</div>
-					<table class="table">
-						<tr class="table__head">
-							<th><p>ID</p></th>
-							<th class="table__name"><p>Name</p></th>
-							<th><p>Type</p></th>
-							<th><p>Status</p></th>
-							<th class="table__clip"><i class="icon icon-clip"></i></th>
-							<th><p>Last Update</p></th>
-							<th><p>&nbsp;</p></th>
-						</tr>
-						<tr class="js-link" data-href="http://www.google.com">
-							<td>
-								<div class="table__info">
-									<i class="ico letter-ico"></i>
-									<span>EL12522</span>
-								</div>
-							</td>
-							<td class="table__name">
-								<b>Steve Bushemi</b>
-							</td>
-							<td>
-								<p>Engagement Letter</p>
-							</td>
-							<td>
-								<p>Sent for review</p>
-							</td>
-							<td class="table__clip">
-								<i class="icon icon-clip"></i>
-							</td>
-							<td>
-								<p>Aug 10, 2015</p>
-							</td>
-							<td class="txt-right js-table-drop">
-								<div class="dropdown">
-									<span class="dropdown__bl"></span>
-								</div>
-							</td>
-						</tr>
-					</table>
-					<div class="deal">
-						<div class="tooltip">
-							<p>Deal Status</p>
-							<div class="tooltip__ico js-tooltip" title="Deal status Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
-						</div>
-						<p class="deal__active">Active Deal</p>
-						<p>Keep this status for deal when you are working on it</p>
-						<div class="deal__status">
-							<a href="#" class="deal__status-change">Change status</a>
-						</div>
+				</div>
+				<!-- end activity -->
+				<div class="deal">
+					<div class="tooltip">
+						<p>Deal Folder</p>
+						<div class="tooltip__ico js-tooltip" title="Deal folder Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
+					</div>
+				</div>
+				<!-- begin table  -->
+				<table class="table">
+					<tr class="table__head">
+						<th><p>ID</p></th>
+						<th class="table__name"><p>Name</p></th>
+						<th><p>Type</p></th>
+						<th><p>Status</p></th>
+						<th class="table__clip"><i class="icon icon-clip"></i></th>
+						<th><p>Last Update</p></th>
+						<th class="table__drop"><p>&nbsp;</p></th>
+					</tr>
+					<tr class="js-link" data-href="http://www.google.com">
+						<td>
+							<div class="table__el">
+								<i class="ico letter-ico"></i>
+								<span>EL12522</span>
+							</div>
+						</td>
+						<td class="table__name">
+							<b>Steve Bushemi</b>
+						</td>
+						<td>
+							<p>Engagement Letter</p>
+						</td>
+						<td>
+							<div class="table__pending">
+								<i class="icon icon-pending"></i>
+								<span>Sent for review</span>
+							</div>
+						</td>
+						<td class="table__clip">
+							<i class="icon icon-clip"></i>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="txt-right table__drop js-table-drop">
+							<div class="dropdown">
+								<span class="dropdown__bl"></span>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<!-- end table -->
+				<div class="deal">
+					<div class="tooltip">
+						<p>Deal Status</p>
+						<div class="tooltip__ico js-tooltip" title="Deal status Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
+					</div>
+					<p class="deal__active">Active Deal</p>
+					<p>Keep this status for deal when you are working on it</p>
+					<div class="deal__status">
+						<a href="#" class="deal__status-change">Change status</a>
 					</div>
 				</div>
 				<div class="back-to-top"><a href="#" class="js-top"><i class="icon icon-arr-top"></i><span>Back to top</span></a></div>
@@ -179,22 +222,59 @@
 </div>
 <!-- END out-->
 <div class="overlay">
-	<div class="popup is-newdeal js-popup" id="create">
-		<div class="popup__head">
-			<p>Start a New Deal Folder</p>
+	<div class="popup is-dealflow js-popup" id="deal-flow">
+		<div class="popup__head no-bg">
 			<i class="icon icon-close js-close"></i>
 		</div>
+		<p class="popup__ttl">How to submit documentation to get paid</p>
 		<div class="popup__body">
-			<form class="popup__form">
-				<p class="popup__form-ttl">Deal Name</p>
-				<label>
-					<input type="text" placeholder="Please keep this short and informal">
-				</label>
-				<div class="popup__btn">
-					<button class="btn btn-ok" type="submit">Create deal</button>
-					<button class="btn btn-no" type="button">Cancel</button>
+			<div class="steps">
+				<div class="steps__bl">
+					<div class="steps__icon">
+						<i class="svg-ico letter-ico"></i>
+					</div>
+					<p>Submit</p>
+					<p>Engagement Letter</p>
 				</div>
-			</form>
+				<div class="steps__bl">
+					<div class="steps__icon">
+						<i class="svg-ico memo-ico"></i>
+					</div>
+					<p>Submit</p>
+					<p>Deal Memo</p>
+				</div>
+				<div class="steps__bl">
+					<div class="steps__icon">
+						<i class="svg-ico customer-ico"></i>
+					</div>
+					<p>Submit</p>
+					<p>Customers</p>
+				</div>
+				<div class="steps__bl">
+					<div class="steps__icon">
+						<i class="svg-ico transaction-ico"></i>
+					</div>
+					<p>Submit</p>
+					<p>Transaction Reports</p>
+				</div>
+				<div class="steps__bl">
+					<div class="steps__icon">
+						<span class="steps__dollar">$</span>
+						<span class="steps__dollar">$</span>
+						<span class="steps__dollar">$</span>
+					</div>
+					<p>Receive Funds</p>
+				</div>
+				<div class="steps__bl">
+					<div class="steps__icon">
+						<i class="svg-ico getpaid-ico"></i>
+						<div class="steps__paid">
+							<p>get</p>
+							<p>paid</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

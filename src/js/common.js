@@ -12,11 +12,15 @@ $(document).ready(function() {
 		if ($('.overlay').not('is-active')) {
 			$('.overlay').addClass('is-active');
 		}
+		if (!popup.hasClass('suggest')) {
+			$('body').addClass('is-overflow');
+		}
 	};
 
 	var hidePopup = function(popup) {
 		popup.removeClass('is-active');
 		openedPopup = null;
+		$('body').removeClass('is-overflow');
 	};
 
 	$('[data-popup]').each(function(index, el) {
@@ -72,6 +76,17 @@ $(document).ready(function() {
 		} else {
 			$('.js-to-drop').removeClass('is-visible');
 		}
+	});
+
+	// tablehead filter
+	$('.table th').click(function() {
+		$(this).siblings().removeClass('is-active');
+		$(this).addClass('is-active');
+	});
+
+	$('.js-slide-up').click(function(e) {
+		e.preventDefault();
+		$(this).parents('.js-slide-parent').slideUp();
 	});
 
 });

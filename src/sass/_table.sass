@@ -1,0 +1,125 @@
+// table
+.table
+	margin-bottom: 45px
+	font-size: 13px
+	color: #6c757a
+	border-collapse: collapse
+	border-top: 1px solid #efefef
+	border-bottom: 1px solid #efefef
+	&__head
+		background: #f7f8f9
+		text-align: left
+		border-bottom: 1px solid #efefef
+	&__name
+		width: 34.5%
+	&__info
+		width: 71%
+		color: #282828
+	&__clip
+		text-align: center
+		font-size: 15px
+		color: #bcc6cc
+		.icon
+			vertical-align: -1px
+	&__desc
+		display: inline-block
+		font-size: 0
+		margin-bottom: 6px
+		color: #097bf2
+		text-transform: capitalize
+		white-space: nowrap
+		&:only-child
+			margin: 0
+		.ico
+			margin-right: 8px
+		span
+			display: inline-block
+			font-size: 13px
+			vertical-align: middle
+	&__el
+		+rmono
+		span
+			display: inline-block
+			vertical-align: middle
+	&__pending
+		+clr
+		i
+			float: left
+			margin-top: 2px
+		span
+			display: block
+			overflow: hidden
+	tr
+		&:hover
+			background: darken(#fff, 5%)
+		&.is-pending
+			.table__info
+				color: #9AA4A6
+			.table__desc
+				color: #6C757A
+		&.table__head
+			&:hover
+				background: #f7f8f9
+	th
+		position: relative
+		padding: 10px
+		border-right: 1px solid #dce0e7
+		cursor: pointer
+		vertical-align: middle
+		&:before
+			display: none
+			content: ""
+			position: absolute
+			top: 50%
+			right: 10px
+			margin-top: -2px
+			+arr(7, 4, #6c757a, b)
+		&:hover
+			background: rgba(0, 0, 0, 0.05)
+		&.is-active
+			padding-right: 20px
+			background: rgba(0, 0, 0, 0.05)
+			&:before
+				display: block
+		&:first-child
+			padding-left: 17px
+		&:last-child
+			border-right: 0
+		&.table__drop
+			background: none
+			&:before
+				display: none
+	td
+		max-width: 627px
+		padding: 10px 8.5px
+		border-bottom: 1px solid #efefef
+		vertical-align: top
+		&:first-child
+			width: 115px
+			padding-left: 17px
+		&.table__drop
+			width: 50px
+			padding: 5px 8.5px
+	b
+		color: #282828
+		+opensans-b
+	.ico
+		display: inline-block
+		width: 16px
+		height: 16px
+		background-size: 16px 16px
+		vertical-align: middle
+		&.memo-ico
+			background-size: initial
+			+s(memo-mini)
+	.icon-pending
+		margin-right: 10px
+	.txt-right
+		text-align: right
+		padding-right: 10px
+	+r(940)
+		.table__name
+			width: 30%
+		.table__info
+			width: auto
+			max-width: 400px
