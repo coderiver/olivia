@@ -108,6 +108,116 @@
 		color: #FFF
 		vertical-align: middle
 
+// sysmessage
+.sysmessage
+	position: absolute
+	top: 100%
+	margin-top: 12px
+	right: 0
+	width: 380px
+	font-size: 13px
+	background: #fff
+	border: 1px solid #dce0e7
+	border-radius: 4px
+	box-shadow: 0 2px 9px rgba(0, 0, 0, 0.5)
+	z-index: 11
+	opacity: 0
+	visibility: hidden
+	+tr(0.4s)
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+	&:before
+		top: -14px
+		left: 105px
+		+arr(22, 14, #dde2e7, t)
+	&:after
+		top: -12px
+		left: 106px
+		+arr(20, 12, #f7f8f9, t)
+	&.is-active
+		opacity: 1
+		visibility: visible
+	&__head
+		position: relative
+		padding: 10px 17px
+		background: #f7f8f9
+	&__ttl
+		max-width: 320px
+		font-size: 13px
+		color: #f76300
+		+opensans-sb
+	&__el
+		padding: 10px 17px
+		background: #f7f8f9
+		border-top: 1px solid #dce0e7
+		border-bottom: 1px solid #dce0e7
+		&:last-child
+			border-bottom: none
+	&__name
+		margin-top: 3px
+	&__bl
+		padding: 10px 17px
+		+clr
+	&__img
+		width: 100%
+		max-width: 40px
+		float: left
+		margin-right: 12px
+		border-radius: 50%
+	&__info
+		overflow: hidden
+		p
+			margin: 10px 0
+	&__name
+		h4
+			color: #282828
+			+opensans-sb
+		span
+			display: inline-block
+			vertical-align: middle
+	&__date
+		display: block
+		font-size: 13px
+		color: #6c757a
+	&__list
+		margin: 17px 0
+	&__filter
+		font-size: 0
+		li
+			position: relative
+			display: inline-block
+			font-size: 13px
+			vertical-align: middle
+			&:after
+				content: "|"
+				display: inline-block
+				margin: 0 5px
+				color: #b1d3d5
+				vertical-align: middle
+			&:last-child
+				&:after
+					display: none
+	&__link
+		display: inline-block
+		color: #097bf2
+		vertical-align: middle
+		&:hover
+			text-decoration: underline
+	.icon-close
+		position: absolute
+		top: 11px
+		right: 10px
+		cursor: pointer
+		&:hover
+			color: red
+	.icon-check
+		color: #2caf24
+		margin-right: 5px
+		vertical-align: middle
+
+
 // common popup style
 .popup
 	display: none
@@ -155,7 +265,7 @@
 		margin-bottom: 8px
 		font-size: 14px
 		line-height: 19px
-		+opensans-b
+		+opensans-sb
 	&__btn
 		margin-top: 60px
 		text-align: right

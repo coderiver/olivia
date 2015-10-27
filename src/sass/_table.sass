@@ -12,6 +12,9 @@
 		border-bottom: 1px solid #efefef
 	&__name
 		width: 34.5%
+		span
+			color: #282828
+			+opensans-sb
 	&__info
 		width: 71%
 		color: #282828
@@ -100,9 +103,6 @@
 		&.table__drop
 			width: 50px
 			padding: 5px 8.5px
-	b
-		color: #282828
-		+opensans-b
 	.ico
 		display: inline-block
 		width: 16px
@@ -117,9 +117,3 @@
 	.txt-right
 		text-align: right
 		padding-right: 10px
-	+r(940)
-		.table__name
-			width: 30%
-		.table__info
-			width: auto
-			max-width: 400px

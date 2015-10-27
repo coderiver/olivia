@@ -34,13 +34,11 @@
 			color: #fff
 		&.is-active
 			color: #fff
-			+opensans-b
+			+opensans-sb
 			&:after
 				display: block
 	.dropit
 		left: -15px
-	+r(900)
-		margin-left: 10px
 
 .notification
 	position: absolute
@@ -49,7 +47,7 @@
 	margin: -6.5px 0 0 1px
 	font-size: 11px
 	text-align: center
-	padding: 2px 3px 0px 2px
+	padding: 2px 3px 1px 2px
 	background: #f76300
 	line-height: 1
 	color: #FFF
@@ -60,6 +58,7 @@
 		white-space: nowrap
 
 .helpers
+	position: relative
 	float: right
 	font-size: 0
 	&__info
@@ -77,15 +76,34 @@
 		&:hover
 			background: #fff
 	&__bell
+		display: inline-block
 		margin-left: 16px
 		font-size: 19px
 		color: #6c757a
 		vertical-align: middle
+		&.is-active
+			color: #f76300
 		&:hover
 			color: #fff
-	+r(900)
-		&__bell
-			margin-left: 10px
+		.icon
+			vertical-align: middle
+	&__message
+		position: relative
+		display: inline-block
+		padding: 2px 5px 3px 4px
+		font-size: 11px
+		color: #fff
+		background: #f76300
+		line-height: 1
+		vertical-align: middle
+		+opensans-sb
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 0
+			margin: -3px 0 0 -4px
+			+arr(4, 6, #f76300, l)
 
 .search
 	position: relative
@@ -111,10 +129,3 @@
 		margin-top: -7px
 		font-size: 14px
 		color: #757A7D
-	+r(900)
-		max-width: 130px
-		margin-left: 10px
-		input
-			padding: 8px 8px 8px 28px
-		.icon-zoom
-			left: 10px
