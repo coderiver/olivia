@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>All customers</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#fff">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/tooltipster.css" >
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/app.js"></script>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	//= partials/header-active-notification.html
+
+	<div class="main">
+		<div class="l">
+			<div class="main__in">
+				<div class="upper">
+					<p class="upper__ttl">Deals</p>
+					<ul class="upper__list">
+						<li class="upper__option"><a class="upper__link" href="#">All Deals</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">All Engagement Letters</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">All Deal Memos</a></li>
+						<li class="upper__option"><a class="upper__link is-active" href="#">All Customers</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">All Transactions</a></li>
+					</ul>
+					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
+					<!-- begin suggest for new deal -->
+						<div class="suggest js-popup js-avoid-overflow" id="suggest">
+							<div class="suggest__head">
+								<p class="suggest__txt">Submit Deal Memo</p>
+								<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
+							</div>
+							<div class="suggest__menu">
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico letter-ico"></i>
+									<div class="suggest__in">
+										<p>Add Engagement Letter</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico memo-ico"></i>
+									<div class="suggest__in">
+										<p>Add Deal Memo</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico customer-ico"></i>
+									<div class="suggest__in">
+										<p>Add Customer</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico transaction-ico"></i>
+									<div class="suggest__in">
+										<p>Add Transaction Report</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					<!-- end suggest for new deal -->
+				</div>
+				<p style="margin: 20px 0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aliquam ipsa tempora ex doloremque ratione dolores eius sit, quod, provident quis! Et, veniam, optio. Officiis magnam qui fuga ducimus eaque.</p>
+				<!-- begin table  -->
+				<table class="table">
+					<tr class="table__head">
+						<th><p>ID</p></th>
+						<th class="table__name"><p>Deal</p></th>
+						<th><p>Name</p></th>
+						<th><p>Operations</p></th>
+						<th><p>Type</p></th>
+						<th><p>Status</p></th>
+						<th class="table__drop"><p>&nbsp;</p></th>
+					</tr>
+					<tr class="js-link" data-href="http://www.google.com">
+						<td>
+							<div class="table__el">
+								<i class="ico customer-ico"></i>
+								<span>CU12522</span>
+							</div>
+						</td>
+						<td class="table__name">
+							<span>Samsung – Round A Search And Development</span>
+						</td>
+						<td>
+							<p>Steve Bushemi</p>
+						</td>
+						<td>
+							<p>Buy</p>
+						</td>
+						<td class="table__clip">
+							<i class="icon icon-clip"></i>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="txt-right table__drop js-table-drop">
+							<div class="dropdown">
+								<span class="dropdown__bl"></span>
+							</div>
+						</td>
+					</tr>
+					<tr class="js-link" data-href="http://www.imgur.com">
+						<td>
+							<div class="table__el">
+								<i class="ico customer-ico"></i>
+								<span>CU12522</span>
+							</div>
+						</td>
+						<td class="table__name">
+							<span>Samsung – Round A Search for Investement</span>
+						</td>
+						<td>
+							<p>Engagement Letter</p>
+						</td>
+						<td>
+							<div class="table__pending">
+								<i class="icon icon-pending"></i>
+								<span>Sent for review</span>
+							</div>
+						</td>
+						<td class="table__clip">
+							<i class="icon icon-clip"></i>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="txt-right table__drop js-table-drop">
+							<div class="dropdown">
+								<span class="dropdown__bl"></span>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<!-- end table -->
+				<div class="back-to-top"><a href="#" class="js-top"><i class="icon icon-arr-top"></i><span>Back to top</span></a></div>
+			</div>
+		</div>
+	</div>
+
+	//= partials/footer.html
+</div>
+<!-- END out-->
+<div class="overlay">
+	<div class="popup is-dealflow js-popup" id="deal-flow">
+		<div class="popup__head no-bg">
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<p class="popup__ttl">How to submit documentation to get paid</p>
+		<div class="popup__body">
+			<div class="steps">
+				<div class="steps__bl">
+					<div class="steps__icon">
+						<i class="svg-ico letter-ico"></i>
+					</div>
+					<p>Submit</p>
+					<p>Engagement Letter</p>
+				</div>
+				<div class="steps__bl">
+					<div class="steps__icon">
+						<i class="svg-ico memo-ico"></i>
+					</div>
+					<p>Submit</p>
+					<p>Deal Memo</p>
+				</div>
+				<div class="steps__bl">
+					<div class="steps__icon">
+						<i class="svg-ico customer-ico"></i>
+					</div>
+					<p>Submit</p>
+					<p>Customers</p>
+				</div>
+				<div class="steps__bl">
+					<div class="steps__icon">
+						<i class="svg-ico transaction-ico"></i>
+					</div>
+					<p>Submit</p>
+					<p>Transaction Reports</p>
+				</div>
+				<div class="steps__bl">
+					<div class="steps__icon">
+						<span class="steps__dollar">$</span>
+						<span class="steps__dollar">$</span>
+						<span class="steps__dollar">$</span>
+					</div>
+					<p>Receive Funds</p>
+				</div>
+				<div class="steps__bl">
+					<div class="steps__icon">
+						<i class="svg-ico getpaid-ico"></i>
+						<div class="steps__paid">
+							<p>get</p>
+							<p>paid</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

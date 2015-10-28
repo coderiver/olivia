@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Deal task two</title>
+	<title>Deal task initial (Memo)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -17,8 +17,44 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	//= partials/header.html
+	<!-- begin header  -->
+	<div class="header">
+		<div class="l">
+			<div class="header__in">
+				<a href="#" class="header__logo"><i class="icon icon-logo"></i></a>
+				<ul class="menu">
+					<li class="menu__option"><a class="menu__link" href="#">Tasks <p class="notification"><span>2</span></p></a></li>
+					<li class="menu__option"><a class="menu__link is-active" href="#">Deals</a></li>
+					<li class="menu__option"><a class="menu__link" href="#">Entries</a></li>
+					<li class="menu__option"><a class="menu__link" href="#">Reports</a></li>
+					<li class="menu__option"><a class="menu__link" href="#">Library</a></li>
+					<li class="menu__option js-wrap">
+						<a class="menu__link js-dropit" href="#">Me</a>
+						<div class="dropit js-to-drop">
+							<ul>
+								<li class="dropit__option"><a href="#">Profile</a></li>
+								<li class="dropit__option"><a href="#">Settings</a></li>
+								<li class="dropit__option"><a href="#">My Team</a></li>
+								<li class="dropit__option"><a href="#">Activity Log</a></li>
+								<li class="dropit__option"><a href="#">Log Out</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<div class="helpers">
+					<a href="#" class="helpers__info">?</a>
+					<a href="#" class="helpers__bell icon icon-bell"></a>
+					<label class="search">
+						<i class="icon icon-zoom"></i>
+						<input type="search" placeholder="Search">
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
 
+	<!-- begin main  -->
 	<div class="main">
 		<div class="l">
 			<div class="main__in">
@@ -40,19 +76,19 @@
 						<p><a href="#">Tasks</a> / Task: TS27487</p>
 					</div>
 					<div class="task__in">
-						<h2>Update Deal Memo DM45681</h2>
-						<div class="task__info">
-							<p>Created: Aug 10, 2015 by Amanda Brown  Last update: Aug 21, 2015</p>
-							<p>Сurrent status: <span>Open task that requires your action</span></p>
+						<h2>Submit Engagement Letter</h2>
+						<div class="task__info is-review">
+							<p>Created: Aug 10, 2015 Last update: Aug 21, 2015</p>
+							<p>Сurrent status: <span>On review by GCS Staff (Amanda Brown)</span></p>
 						</div>
-						<p class="task__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget metus vitae purus luctus lacinia sed ut dolor. Praesent ultricies ex erat, at pretium elit aliquam sed. Sed consequat magna nisi, ut pellentesque risus tristique et. Praesent et nisi congue, hendrerit eros nec, molestie nulla. Quisque lectus justo, commodo eget dolor id, tristique rhoncus tortor. Praesent iaculis lorem nec sagittis finibus.</p>
+						<p class="task__text">First your Engagement Letter and Deal Memo must be approved by the compliance team. Then you can start showing the deal to investors. When you have a transaction in the works, submit a Customer form and a Transaction report for approval. When all four of those forms have been approved, and we have received funds on your behalf, you get paid.</p>
 						<div class="task__el">
 							<i class="svg-ico memo-ico"></i>
 							<div class="task__name">
-								<a href="#">Space X Deal Memo (DM45681)</a>
+								<a href="#">Add Deal Memo</a>
 								<div class="status">
 									<i class="icon icon-warn"></i>
-									<span>Update</span>
+									<span>Submit</span>
 								</div>
 							</div>
 						</div>
@@ -62,33 +98,6 @@
 								<div class="tooltip">
 									<p>Conversation & Activity</p>
 									<div class="tooltip__ico js-tooltip-guide" data-attr="1" title="<p>This is where all comments and questions appear until this task is positively resolved.</p><a href='#' data-attr='1' class='tooltipster__link js-tooltip-guide-hide'>Got it</a>"><span>?</span></div>
-								</div>
-							</div>
-							<div class="comments__bl">
-								<img class="comments__avatar" src="img/user.png" alt="">
-								<div class="comments__el">
-									<div class="comments__in">
-										<div class="comments__name"><span>Me</span></div>
-										<p class="comments__date">Oct 8, 2015</p>
-									</div>
-									<div class="comments__txt">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget metus vitae purus luctus lacinia sed ut dolor. Praesent ultricies ex erat, at pretium elit aliquam sed. Sed consequat magna nisi, ut pellentesque risus tristique et. Praesent et nisi congue, hendrerit eros nec, molestie nulla. Quisque lectus justo, commodo eget dolor id, tristique rhoncus tortor. Praesent iaculis lorem nec sagittis finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget metus vitae purus luctus lacinia sed ut dolor. Praesent ultricies ex erat, at pretium elit aliquam sed. Sed consequat magna nisi, ut pellentesque risus tristique et. Praesent et nisi congue, hendrerit
-									</div>
-								</div>
-							</div>
-							<div class="comments__bl">
-								<img class="comments__avatar" src="img/user1.png" alt="">
-								<div class="comments__el">
-									<div class="comments__in">
-										<div class="comments__name">
-											<div class="status"><span class="status__info">New</span></div>
-											<span>Amanda Brown</span>
-										</div>
-										<p class="comments__date">2 hours ago</p>
-									</div>
-									<div class="comments__txt">
-										Yes, you got it right, I just need several fields updated
-									</div>
 								</div>
 							</div>
 							<div class="comments__post">
@@ -105,8 +114,15 @@
 			</div>
 		</div>
 	</div>
+	<!-- end main -->
 
-	//= partials/footer.html
+	<!-- begin footer  -->
+	<div class="footer">
+		<div class="l">
+			<p>© 2009-2013 Growth Capital Services.  Growth Capital Services, Member FINRA, SIPC. All information presented herein is CONFIDENTIAL.</p>
+		</div>
+	</div>
+	<!-- end footer -->
 </div>
 <!-- END out-->
 <div class="overlay">

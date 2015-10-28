@@ -379,13 +379,17 @@
 		a
 			color: #097bf2
 	&__in
-		margin-top: 20px
+		margin-top: 30px
 	&__info
 		margin: 5px 0 10px
 		color: #6c757a
 		font-size: 13px
+		&.is-review
+			span
+				color: #282828
 		span
 			color: #f76300
+			+opensans-sb
 	&__text
 		margin: 5px 0
 		font-size: 14px
@@ -402,17 +406,95 @@
 			color: #097bf2
 			&:hover
 				text-decoration: underline
-	.status
-		display: block
+		.status
+			display: block
 
 // comments
 .comments
 	&__head
-		margin-bottom: 20px
+		font-size: 13px
 		border-bottom: 1px solid #efefef
 		+clr
-	&__post
+	&__bl
+		margin-top: 20px
+		font-size: 13px
+		color: #6c757a
 		+clr
+	&__avatar
+		float: left
+		width: 100%
+		max-width: 40px
+		max-height: 40px
+		margin-right: 25px
+		border-radius: 50%
+	&__el
+		overflow: hidden
+	&__in
+		margin-bottom: 5px
+		+clr
+	&__name
+		float: left
+		color: #282828
+		+opensans-sb
+		span
+			display: inline-block
+			vertical-align: middle
+	&__date
+		float: right
+		color: #8c99a0
+	&__autorespond
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+		a
+			color: #097bf2
+			&:hover
+				text-decoration: underline
+	&__post
+		margin-top: 30px
+		+clr
+		&:only-child
+			margin-top: 20px
 		.btn
 			margin-top: 10px
 			float: right
+	&__archive
+		float: right
+		margin-top: 5px
+		color: #738496
+		&:hover
+			text-decoration: underline
+	.tooltip
+		float: left
+
+
+// report
+.report
+	margin: 15px 0
+	padding: 13px 65px 15px 17px
+	font-size: 13px
+	color: #282828
+	background: #FFF6E6
+	border: 1px solid #FFC55E
+	&__ttl
+		margin-bottom: 5px
+		font-size: 14px
+		+opensans-sb
+
+// bar
+.bar
+	position: fixed
+	top: -100px
+	left: 0
+	right: 0
+	padding: 11px 0
+	text-align: center
+	font-size: 13px
+	background: #fff6e6
+	color: #282828
+	z-index: 2
+	+tr(1s)
+	&.is-active
+		top: 0
+	&__link
+		color: #097bf2

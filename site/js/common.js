@@ -32,10 +32,12 @@ $(document).ready(function() {
 		});
 	});
 
-	$('.js-close').on('click touchend', function() {
+	$('.js-close').on('click touchend', function(e) {
+		e.preventDefault();
 		var popup = $(this).parents('.js-popup');
 		hidePopup(popup);
 		$('.overlay').removeClass('is-active');
+		$(this).parents('.js-bar').removeClass('is-active');
 	});
 
 	// animate back to top
@@ -117,5 +119,8 @@ $(document).ready(function() {
 
 		this.rows = rows < minRows ? minRows : rows;
 	});
+
+	// bar
+	$('.js-bar').addClass('is-active');
 
 });
