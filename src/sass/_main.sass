@@ -66,11 +66,23 @@
 	font-size: 16px
 	color: #6c757a
 	z-index: 0
+	overflow: hidden
+	&:after
+		content: ""
+		position: absolute
+		top: 22px
+		right: 0
+		bottom: 0
+		width: 47px
+		background: #fff
+		z-index: 1
 	&.no-b-margin
 		margin-bottom: 0
 	&__in
+		position: relative
 		max-width: 620px
 		margin: 0 auto
+		z-index: 0
 	&__ttl
 		margin-bottom: 10px
 		font-size: 26px
@@ -79,6 +91,19 @@
 		position: relative
 		margin-bottom: 30px
 		line-height: 1
+		.icon-folder
+			position: relative
+			&:after
+				content: ""
+				position: absolute
+				width: 1000px
+				height: 1000px
+				top: 50%
+				left: 100%
+				margin: -1px 0 0 20px
+				border-top: 2px solid #899bac
+				background: #FFF
+				z-index: -1
 	&__callfor
 		position: relative
 		margin-top: 12px
@@ -91,10 +116,11 @@
 			padding: 0 20px
 			background: #fff
 			z-index: 1
-	&__links
+	&__linkwrap
 		margin-top: 10px
 		font-size: 0
 	&__link
+		position: relative
 		display: inline-block
 		text-decoration: underline
 		font-size: 13px
@@ -107,7 +133,6 @@
 	.icon-folder
 		font-size: 122px
 		color: #899bac
-		box-shadow: 15px 15px 0px 0px #fff
 	.icon-plus
 		position: absolute
 		top: 50%
@@ -115,7 +140,10 @@
 		margin: -15px 0 0 -15px
 		font-size: 30px
 		color: #FFF
-
+	@media print
+		.icon-folder
+			&:after
+				display: none
 
 .add-btn
 	width: 50px
@@ -217,13 +245,11 @@
 .arrow-block
 	position: absolute
 	top: 0
+	bottom: 0
 	right: 47px
-	width: 330px
-	height: 114px
-	margin-top: 20px
+	margin-top: 15px
 	border-right: 2px solid #899bac
-	border-bottom: 2px solid #899bac
-	z-index: -1
+	z-index: 0
 	&:after
 		content: ""
 		position: absolute
@@ -231,9 +257,20 @@
 		right: 0
 		margin: -7px -10.5px 0 0
 		+arr(21, 14, #899bac, t)
-	&.is-big
-		height: calc(100% - 30.5px)
-		margin-top: 17px
+	@media print
+		display: none
+
+.line-block
+	position: absolute
+	top: 50%
+	left: 100%
+	margin: -1px 0 0 20px
+	width: 1000px
+	height: 1000px
+	border-top: 2px solid #899bac
+	background: #FFF
+	@media print
+		display: none
 
 .dropdown
 	line-height: 1
