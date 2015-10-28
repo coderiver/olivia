@@ -258,9 +258,9 @@ input:focus, .textarea:focus { box-shadow: 0 0 6px #097bf2; border-color: transp
 
 .comments__head { margin-bottom: 20px; border-bottom: 1px solid #efefef; *zoom: 1; }
 .comments__head:after { content: " "; display: table; clear: both; }
-.comments__body { *zoom: 1; }
-.comments__body:after { content: " "; display: table; clear: both; }
-.comments__body .btn { margin-top: 10px; float: right; }
+.comments__post { *zoom: 1; }
+.comments__post:after { content: " "; display: table; clear: both; }
+.comments__post .btn { margin-top: 10px; float: right; }
 
 .table { margin-bottom: 45px; font-size: 13px; color: #6c757a; border-collapse: collapse; border-top: 1px solid #efefef; border-bottom: 1px solid #efefef; }
 .table__head { background: #f7f8f9; text-align: left; border-bottom: 1px solid #efefef; }
