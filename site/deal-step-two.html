@@ -178,7 +178,7 @@
 					<h1 class="start__ttl">Submit Deal Memo</h1>
 					<div class="start__in">
 						<p>Once Deal Memo will be approved we will review your customers and transactions</p>
-						<div class="start__links">
+						<div class="start__linkwrap">
 							<a class="start__link" href="#" data-popup="deal-flow">Show deal flow <i class="line-block"></i></a>
 						</div>
 					</div>
@@ -212,6 +212,11 @@
 						<td class="table__drop txt-right js-table-drop">
 							<div class="dropdown">
 								<span class="dropdown__bl"></span>
+								<ul class="dropdown__list">
+									<li><a href="#">Open in new window</a></li>
+									<li><a href="#">Download all in ZIP</a></li>
+									<li><a href="#">Deal status</a></li>
+								</ul>
 							</div>
 						</td>
 					</tr>
@@ -235,6 +240,11 @@
 						<td class="table__drop txt-right js-table-drop">
 							<div class="dropdown">
 								<span class="dropdown__bl"></span>
+								<ul class="dropdown__list">
+									<li><a href="#">Open in new window</a></li>
+									<li><a href="#">Download all in ZIP</a></li>
+									<li><a href="#">Deal status</a></li>
+								</ul>
 							</div>
 						</td>
 					</tr>
@@ -285,7 +295,7 @@
 								<span>Sent for review</span>
 							</div>
 						</td>
-						<td class="table__clip">
+						<td class="table__clip" data-popup="attach">
 							<i class="icon icon-clip"></i>
 						</td>
 						<td>
@@ -294,6 +304,11 @@
 						<td class="txt-right table__drop js-table-drop">
 							<div class="dropdown">
 								<span class="dropdown__bl"></span>
+								<ul class="dropdown__list">
+									<li><a href="#">Open in new window</a></li>
+									<li><a href="#">Download all in ZIP</a></li>
+									<li><a href="#">Deal status</a></li>
+								</ul>
 							</div>
 						</td>
 					</tr>
@@ -362,23 +377,288 @@
 				</div>
 				<div class="steps__bl">
 					<div class="steps__icon">
-						<span class="steps__dollar">$</span>
-						<span class="steps__dollar">$</span>
-						<span class="steps__dollar">$</span>
+						<i class="svg-ico funds-ico"></i>
 					</div>
 					<p>Receive Funds</p>
 				</div>
 				<div class="steps__bl">
 					<div class="steps__icon">
-						<i class="svg-ico getpaid-ico"></i>
-						<div class="steps__paid">
-							<p>get</p>
-							<p>paid</p>
-						</div>
+						<i class="svg-ico paid-ico"></i>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="popup is-attach js-popup" id="attach">
+		<div class="popup__head">
+			<p>Attached files</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<p>Below are files attached to і [Document type]:</p>
+			<div class="popup__bl">
+				<div class="popup__el">
+					<i class="svg-ico letter-ico"></i>
+					<span class="popup__num">EL12522</span>
+					<span class="txt-bold">[Name of the form]</span>
+				</div>
+				<a href="#" class="popup__more">Open form to add file</a>
+			</div>
+		</div>
+		<!-- begin table  -->
+		<table class="table">
+			<tr class="table__head">
+				<th><p>ID</p></th>
+				<th class="table__name"><p>Name</p></th>
+				<th><p>Type</p></th>
+				<th><p>Uploaded</p></th>
+				<th class="table__drop"><p>&nbsp;</p></th>
+			</tr>
+			<tr class="js-link" data-href="http://www.google.com">
+				<td>
+					<div class="table__el">
+						<i class="svg-ico pdf-ico"></i>
+						<span>FI12522-001</span>
+					</div>
+				</td>
+				<td class="table__name">
+					<span>Approval Letter</span>
+				</td>
+				<td>
+					<p>PDF</p>
+				</td>
+				<td>
+					<p>Aug 10, 2015</p>
+				</td>
+				<td class="txt-right table__drop js-table-drop">
+					<div class="dropdown">
+						<span class="dropdown__bl"></span>
+						<ul class="dropdown__list">
+							<li><a href="#">Open in new window</a></li>
+							<li><a href="#">Download all in ZIP</a></li>
+							<li><a href="#">Deal status</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr class="js-link" data-href="http://www.google.com">
+				<td>
+					<div class="table__el">
+						<i class="svg-ico pic-ico"></i>
+						<span>FI12522-002</span>
+					</div>
+				</td>
+				<td class="table__name">
+					<span>Attachment Name</span>
+				</td>
+				<td>
+					<p>Image</p>
+				</td>
+				<td>
+					<p>Aug 10, 2015</p>
+				</td>
+				<td class="txt-right table__drop js-table-drop">
+					<div class="dropdown">
+						<span class="dropdown__bl"></span>
+						<ul class="dropdown__list">
+							<li><a href="#">Open in new window</a></li>
+							<li><a href="#">Download all in ZIP</a></li>
+							<li><a href="#">Deal status</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr class="js-link" data-href="http://www.google.com">
+				<td>
+					<div class="table__el">
+						<i class="svg-ico pic-ico"></i>
+						<span>FI12522-003</span>
+					</div>
+				</td>
+				<td class="table__name">
+					<span>Client ID Scan</span>
+				</td>
+				<td>
+					<p>Image</p>
+				</td>
+				<td>
+					<p>Aug 10, 2015</p>
+				</td>
+				<td class="txt-right table__drop js-table-drop">
+					<div class="dropdown">
+						<span class="dropdown__bl"></span>
+						<ul class="dropdown__list">
+							<li><a href="#">Open in new window</a></li>
+							<li><a href="#">Download all in ZIP</a></li>
+							<li><a href="#">Deal status</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr class="js-link" data-href="http://www.google.com">
+				<td>
+					<div class="table__el">
+						<i class="svg-ico unknown-ico"></i>
+						<span>FI12522-004</span>
+					</div>
+				</td>
+				<td class="table__name">
+					<span>Client ID Scan Back</span>
+				</td>
+				<td>
+					<p>File</p>
+				</td>
+				<td>
+					<p>Aug 10, 2015</p>
+				</td>
+				<td class="txt-right table__drop js-table-drop">
+					<div class="dropdown">
+						<span class="dropdown__bl"></span>
+						<ul class="dropdown__list">
+							<li><a href="#">Open in new window</a></li>
+							<li><a href="#">Download all in ZIP</a></li>
+							<li><a href="#">Deal status</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr class="js-link" data-href="http://www.google.com">
+				<td>
+					<div class="table__el">
+						<i class="svg-ico doc-ico"></i>
+						<span>FI12522-034</span>
+					</div>
+				</td>
+				<td class="table__name">
+					<span>FINRA Approval Letter</span>
+				</td>
+				<td>
+					<p>DOC</p>
+				</td>
+				<td>
+					<p>Aug 10, 2015</p>
+				</td>
+				<td class="txt-right table__drop js-table-drop">
+					<div class="dropdown">
+						<span class="dropdown__bl"></span>
+						<ul class="dropdown__list">
+							<li><a href="#">Open in new window</a></li>
+							<li><a href="#">Download all in ZIP</a></li>
+							<li><a href="#">Deal status</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr class="js-link" data-href="http://www.google.com">
+				<td>
+					<div class="table__el">
+						<i class="svg-ico pdf-ico"></i>
+						<span>FI12522-006</span>
+					</div>
+				</td>
+				<td class="table__name">
+					<span>NDA template</span>
+				</td>
+				<td>
+					<p>PDF</p>
+				</td>
+				<td>
+					<p>Aug 10, 2015</p>
+				</td>
+				<td class="txt-right table__drop js-table-drop">
+					<div class="dropdown">
+						<span class="dropdown__bl"></span>
+						<ul class="dropdown__list">
+							<li><a href="#">Open in new window</a></li>
+							<li><a href="#">Download all in ZIP</a></li>
+							<li><a href="#">Deal status</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr class="js-link" data-href="http://www.google.com">
+				<td>
+					<div class="table__el">
+						<i class="svg-ico pic-ico"></i>
+						<span>FI12522-008</span>
+					</div>
+				</td>
+				<td class="table__name">
+					<span>My ID Scan</span>
+				</td>
+				<td>
+					<p>Image</p>
+				</td>
+				<td>
+					<p>Aug 10, 2015</p>
+				</td>
+				<td class="txt-right table__drop js-table-drop">
+					<div class="dropdown">
+						<span class="dropdown__bl"></span>
+						<ul class="dropdown__list">
+							<li><a href="#">Open in new window</a></li>
+							<li><a href="#">Download all in ZIP</a></li>
+							<li><a href="#">Deal status</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr class="js-link" data-href="http://www.google.com">
+				<td>
+					<div class="table__el">
+						<i class="svg-ico pic-ico"></i>
+						<span>FI12522-008</span>
+					</div>
+				</td>
+				<td class="table__name">
+					<span>My ID Scan</span>
+				</td>
+				<td>
+					<p>Image</p>
+				</td>
+				<td>
+					<p>Aug 10, 2015</p>
+				</td>
+				<td class="txt-right table__drop js-table-drop">
+					<div class="dropdown">
+						<span class="dropdown__bl"></span>
+						<ul class="dropdown__list">
+							<li><a href="#">Open in new window</a></li>
+							<li><a href="#">Download all in ZIP</a></li>
+							<li><a href="#">Deal status</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr class="js-link" data-href="http://www.google.com">
+				<td>
+					<div class="table__el">
+						<i class="svg-ico doc-ico"></i>
+						<span>FI12522-009</span>
+					</div>
+				</td>
+				<td class="table__name">
+					<span>Document name</span>
+				</td>
+				<td>
+					<p>DOC</p>
+				</td>
+				<td>
+					<p>Aug 10, 2015</p>
+				</td>
+				<td class="txt-right table__drop js-table-drop">
+					<div class="dropdown">
+						<span class="dropdown__bl"></span>
+						<ul class="dropdown__list">
+							<li><a href="#">Open in new window</a></li>
+							<li><a href="#">Download all in ZIP</a></li>
+							<li><a href="#">Deal status</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<!-- end table -->
 	</div>
 </div>
 </body>

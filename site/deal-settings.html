@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Deal step one</title>
+	<title>Deal settings</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -60,13 +60,13 @@
 				<div class="upper">
 					<p class="upper__ttl"><a href="#"><i class="icon icon-folder"></i></a>Space X</p>
 					<ul class="upper__list">
-						<li class="upper__option"><a class="upper__link is-active" href="#">Summary</a></li>
-						<li class="upper__option"><a class="upper__link" href="#">Tasks<p class="notification"><span>1</span></p></a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Summary</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Tasks</p></a></li>
 						<li class="upper__option"><a class="upper__link" href="#">Engagement Letters</a></li>
 						<li class="upper__option"><a class="upper__link" href="#">Deal Memo</a></li>
 						<li class="upper__option"><a class="upper__link" href="#">Customers</a></li>
 						<li class="upper__option"><a class="upper__link" href="#">Transactions</a></li>
-						<li class="upper__option"><a class="upper__link" href="#">Deal Status</a></li>
+						<li class="upper__option"><a class="upper__link is-active" href="#">Deal Status</a></li>
 					</ul>
 					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
 					<!-- begin suggest for new deal -->
@@ -80,142 +80,91 @@
 									<i class="svg-ico letter-ico"></i>
 									<div class="suggest__in">
 										<p> Add Engagement Letter</p>
-										<div class="status">
-											<span class="status__info">New</span>
-											<span>Submit</span>
-										</div>
 									</div>
 								</a>
 								<a href="#" class="suggest__bl">
-									<i class="svg-ico memo-ico"></i>
-									<div class="suggest__in">
-										<p>Add Deal Memo</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl is-disabled">
 									<i class="svg-ico customer-ico"></i>
 									<div class="suggest__in">
 										<p>Add Customer</p>
-										<p>Preferebly submit after engagement letter and deal memo approval</p>
 									</div>
 								</a>
-								<a href="#" class="suggest__bl is-disabled">
+								<a href="#" class="suggest__bl">
 									<i class="svg-ico transaction-ico"></i>
 									<div class="suggest__in">
 										<p>Add Transaction Report</p>
-										<p>Preferebly submit after engagement letter and deal memo approval</p>
 									</div>
 								</a>
 							</div>
 						</div>
 					<!-- end suggest for new deal -->
 				</div>
-				<!-- begin start  -->
-				<div class="start">
-					<div class="arrow-block is-big"></div>
-					<h1 class="start__ttl">Your deal has been created. What's next? </h1>
-					<div class="steps">
-						<div class="steps__bl">
-							<div class="steps__icon">
-								<i class="svg-ico letter-ico"></i>
-							</div>
-							<p>Submit</p>
-							<p>Engagement Letter</p>
-						</div>
-						<div class="steps__bl">
-							<div class="steps__icon">
-								<i class="svg-ico memo-ico"></i>
-							</div>
-							<p>Submit</p>
-							<p>Deal Memo</p>
-						</div>
-						<div class="steps__bl">
-							<div class="steps__icon">
-								<i class="svg-ico customer-ico"></i>
-							</div>
-							<p>Submit</p>
-							<p>Customers</p>
-						</div>
-						<div class="steps__bl">
-							<div class="steps__icon">
-								<i class="svg-ico transaction-ico"></i>
-							</div>
-							<p>Submit</p>
-							<p>Transaction Reports</p>
-						</div>
-						<div class="steps__bl">
-							<div class="steps__icon">
-								<i class="svg-ico funds-ico"></i>
-							</div>
-							<p>Receive Funds</p>
-						</div>
-						<div class="steps__bl">
-							<div class="steps__icon">
-								<i class="svg-ico paid-ico"></i>
-							</div>
-						</div>
-					</div>
-					<div class="start__in">
-						<p>First your Engagement Letter and Deal Memo must be approved by the compliance team. Then you can start showing the deal to investors. When you have a transaction in the works, submit a Customer form and a Transaction report for approval. When all four of those forms have been approved, and we have received funds on your behalf, you get paid.</p>
-					</div>
-					<div class="start__callfor">
-						<h2><span>Let's get started!<i class="line-block"></i></span></h2>
-					</div>
-				</div>
-				<!-- end start -->
 				<div class="deal">
-					<div class="tooltip">
-						<p>Tasks</p>
-						<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
+					<p class="deal__ttl">Deal Status</p>
+					<!-- begin actions  -->
+					<div class="actions">
+						<div class="actions__bl js-action is-active">
+							<div class="actions__in">
+								<div class="actions__ico">
+									<i class="icon icon-folder"></i>
+								</div>
+								<label class="radio">
+									<input type="radio" name="action" value="active" checked>
+									<span class="radio__span">Active</span>
+								</label>
+								<p class="actions__txt">Keep this status for deal when you are working on it</p>
+							</div>
+						</div>
+						<div class="actions__bl js-action">
+							<div class="actions__in">
+								<div class="actions__ico">
+									<i class="icon icon-folder"></i>
+									<i class="icon icon-marked"></i>
+								</div>
+								<label class="radio">
+									<input type="radio" name="action" value="closed">
+									<span class="radio__span">Closed</span>
+								</label>
+								<p class="actions__txt">Set this status when all the transactions are done, approved and you got paid</p>
+							</div>
+						</div>
+						<div class="actions__bl js-action">
+							<div class="actions__in">
+								<div class="actions__ico">
+									<i class="icon icon-archive"></i>
+								</div>
+								<label class="radio">
+									<input type="radio" name="action" value="inactive">
+									<span class="radio__span">Inactive</span>
+								</label>
+								<p class="actions__txt">Set this status if your deal actually never happened</p>
+							</div>
+						</div>
+						<div class="actions__bl js-action is-disabled">
+							<div class="actions__in">
+								<div class="actions__ico">
+									<i class="icon icon-delete"></i>
+								</div>
+								<label class="radio">
+									<input type="radio" name="action" value="delete" disabled>
+									<span class="radio__span">Permanently Delete</span>
+								</label>
+								<p class="actions__txt">RESTRICTED</p>
+								<p class="actions__txt">Deal can be deleted only if any document was ever submitted to this deal</p>
+							</div>
+						</div>
 					</div>
-				</div>
-				<!-- begin table  -->
-				<table class="table">
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="status">
-								<span class="status__info">New</span>
-								<span>Submit</span>
-							</div>
-						</td>
-						<td class="table__info">
-							<div class="table__desc">
-								<i class="ico letter-ico"></i>
-								<span>Submit Engagement Letter</span>
-							</div>
-							<p>First your Engagement Letter and Deal Memo must be approved by the compliance team. Then you can start showing the deal to investors, When you have a transaction in the works, submit</p>
-						</td>
-						<td class="txt-right">
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop txt-right js-table-drop">
-							<div class="dropdown is-task">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Ask a question (e-mail)</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-				</table>
-				<!-- end table -->
-				<div class="deal">
-					<div class="tooltip">
-						<p>Deal Folder</p>
-						<div class="tooltip__ico js-tooltip" title="Deal folder Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
-					</div>
-					<small>Here is where all your files will be stored</small>
+					<!-- end actions -->
 				</div>
 				<div class="deal">
-					<div class="tooltip">
-						<p>Deal Status</p>
-						<div class="tooltip__ico js-tooltip" title="Deal status Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
-					</div>
-					<p class="deal__active">Active Deal</p>
-					<p>Keep this status for deal when you are working on it</p>
-					<div class="deal__status">
-						<a href="#" class="deal__status-change">Change status</a><a href="#" class="deal__status-delete">Permanently delete</a>
+					<div class="deal__ttl">Deal Info</div>
+					<form class="deal__form">
+						<div class="deal__form-ttl">Deal Name</div>
+						<label><input type="text" value="Space X"></label>
+						<button type="submit" class="btn btn-ok">Save new name</button>
+					</form>
+					<div class="deal__time">
+						<p>Created: Jul 13, 2015 2:13 PM</p>
+						<p>Last activity: Aug 26, 2015 2:13 PM</p>
 					</div>
 				</div>
 				<div class="back-to-top"><a href="#" class="js-top"><i class="icon icon-arr-top"></i><span>Back to top</span></a></div>

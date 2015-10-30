@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Avocode 2.4.3-3630f5a - http://avocode.com -->
-<svg height="69" width="69" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69 69">
-    <defs>
-        <linearGradient y2="100%" y1="0%" x2="0%" x1="0%" id="gradient-1">
-            <stop stop-color="#ecbb24" offset="0%" />
-            <stop stop-color="#e8b000" offset="100%" />
-        </linearGradient>
-    </defs>
-    <path fill="url(#gradient-1)" fill-rule="evenodd" d="M 0 3.01 C 0 1.35 1.35 0 3.01 0 L 65.99 0 C 67.65 0 69 1.35 69 3.01 L 69 65.99 C 69 67.65 67.65 69 65.99 69 L 3.01 69 C 1.35 69 0 67.65 0 65.99 L 0 3.01 Z M 0 3.01" />
-    <path fill="#ffffff" fill-rule="evenodd" d="M -7 31 L 37 31 L 37 39 L -7 39 L -7 31 Z M -7 31" />
-    <path fill="#ffffff" fill-rule="evenodd" d="M 32 31 L 76 31 L 76 39 L 32 39 L 32 31 Z M 32 31" />
-    <path fill="#ffffff" fill-rule="evenodd" d="M 26 25 L 60 25 L 60 33 L 26 33 L 26 25 Z M 26 25" />
-    <path fill="#ffffff" opacity="0.44" fill-rule="evenodd" d="M 35 44 L 36 44 L 36 45 L 35 45 L 35 44 Z M 35 44" />
-    <path fill="#ffffff" opacity="0.44" fill-rule="evenodd" d="M 33 44 L 34 44 L 34 45 L 33 45 L 33 44 Z M 33 44" />
-    <path fill="#ffffff" fill-rule="evenodd" d="M 34 44 L 35 44 L 35 45 L 34 45 L 34 44 Z M 34 44" />
-    <path fill="#ffffff" fill-rule="evenodd" d="M 9 25 L 43 25 L 43 33 L 9 33 L 9 25 Z M 9 25" />
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="69px" height="69px"
+	 viewBox="-245 446 69 69" enable-background="new -245 446 69 69" xml:space="preserve">
+<title>Deal Memo 69</title>
+<desc>Created with Sketch.</desc>
+<g id="assets" sketch:type="MSPage">
+	<g id="Deal-Memo-69" sketch:type="MSLayerGroup">
+		
+			<linearGradient id="Rectangle-128_1_" gradientUnits="userSpaceOnUse" x1="-485.9493" y1="954.5507" x2="-485.9493" y2="953.5507" gradientTransform="matrix(69 0 0 -69 33320 66310)">
+			<stop  offset="0" style="stop-color:#ECBC23"/>
+			<stop  offset="1" style="stop-color:#E9B000"/>
+		</linearGradient>
+		<path id="Rectangle-128" sketch:type="MSShapeGroup" fill="url(#Rectangle-128_1_)" d="M-242,446h63c1.657,0,3,1.343,3,3v63
+			c0,1.657-1.343,3-3,3h-63c-1.657,0-3-1.343-3-3v-63C-245,447.343-243.657,446-242,446z"/>
+		<path id="Rectangle-128-Copy" sketch:type="MSShapeGroup" fill="#FFFFFF" d="M-210.5,479.382l15.5-19.839V459h8v44h-8v-30.463
+			l-10.424,13.342l0.042,0.054l-0.217,0.169l-3.716,4.756l-1.186-0.926l-1.186,0.926l-3.716-4.756l-0.217-0.169l0.042-0.054
+			L-226,472.537V503h-8v-44h8v0.543L-210.5,479.382z"/>
+		
+			<rect id="Rectangle-1668" x="-210" y="490" sketch:type="MSShapeGroup" opacity="0.4427" fill="#FFFFFF" enable-background="new    " width="1" height="1">
+		</rect>
+		
+			<rect id="Rectangle-1668-Copy" x="-212" y="490" sketch:type="MSShapeGroup" opacity="0.4427" fill="#FFFFFF" enable-background="new    " width="1" height="1">
+		</rect>
+		<rect id="Rectangle-1668-Copy-2" x="-211" y="490" sketch:type="MSShapeGroup" fill="#FFFFFF" width="1" height="1">
+		</rect>
+	</g>
+</g>
 </svg>

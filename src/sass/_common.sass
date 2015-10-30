@@ -77,6 +77,74 @@ body
 	&.is-overflow
 		overflow: hidden !important
 
+// icons with svg as bg
+// not in font because of incorrect display
+.svg-ico
+	display: inline-block
+	background-repeat: no-repeat
+	background-position: 0 0
+	vertical-align: top
+
+.letter-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/letter.svg')
+	background-size: 70px 70px
+
+.memo-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/memo.svg')
+	background-size: 70px 70px
+
+.customer-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/customer.svg')
+	background-size: 70px 70px
+
+.transaction-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/transaction.svg')
+	background-size: 70px 70px
+
+.paid-ico
+	width: 110px
+	height: 106px
+	background-image: url('../img/svg-bg/paid.svg')
+	background-size: 110px 106px
+
+.funds-ico
+	width: 66px
+	height: 66px
+	background-image: url('../img/svg-bg/funds.svg')
+	background-size: 66px 66px
+
+.doc-ico
+	width: 16px
+	height: 16px
+	background-image: url('../img/svg-bg/doc.svg')
+	background-size: 16px 16px
+
+.pdf-ico
+	width: 16px
+	height: 16px
+	background-image: url('../img/svg-bg/pdf.svg')
+	background-size: 16px 16px
+
+.pic-ico
+	width: 16px
+	height: 16px
+	background-image: url('../img/svg-bg/pic.svg')
+	background-size: 16px 16px
+
+.unknown-ico
+	width: 16px
+	height: 16px
+	background-image: url('../img/svg-bg/pdf.svg')
+	background-size: 16px 16px
+
 // common blocks
 .l
 	max-width: 1370px
@@ -144,6 +212,8 @@ input
 	+opensans-sb
 	&.is-pending
 		color: #738496
+	&.is-approved
+		color: #2caf24
 	&__info
 		margin-right: 5px
 		padding: 1px 5px
@@ -156,43 +226,9 @@ input
 		display: inline-block
 		vertical-align: middle
 	.icon
+		margin-right: 2px
 		font-size: 12px
 		vertical-align: middle
-
-// icons with svg as bg
-.svg-ico
-	display: inline-block
-	background-repeat: no-repeat
-	background-position: 0 0
-	vertical-align: top
-
-.letter-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/letter.svg')
-	background-size: 70px 70px
-
-.memo-ico
-	+s(memo)
-
-.customer-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/customer.svg')
-	background-size: 70px 70px
-
-.transaction-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/transaction.svg')
-	background-size: 70px 70px
-
-.getpaid-ico
-	width: 110px
-	height: 106px
-	background-image: url('../img/svg-bg/getpaid.svg')
-	background-size: 110px 106px
-
 
 // back to top
 .back-to-top
@@ -252,3 +288,51 @@ input
 		color: #282828
 		&:hover
 			text-decoration: underline
+
+// radiobox
+.radio
+	position: relative
+	display: block
+	&__span
+		position: relative
+		display: inline-block
+		padding-left: 20px
+		color: #097bf2
+		font-size: 14px
+		line-height: 1
+		cursor: pointer
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 0
+			width: 14px
+			height: 14px
+			margin-top: -8px
+			background: #fff
+			border: 1px solid #b2b2b2
+			border-radius: 50%
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 5px
+			width: 4px
+			height: 4px
+			margin-top: -3px
+			border-radius: 50%
+			background: #fff
+	input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+		&:focus
+			box-shadow: none
+		&:checked + span
+			color: #282828
+			+opensans-sb
+			&:before
+				background-color: #6c757a
+				border-color: #6c757a

@@ -9,6 +9,7 @@
 .upper
 	position: relative
 	min-height: 90px
+	margin-bottom: 20px
 	padding: 18px 18px 8px
 	background: #f7f8f9
 	border-bottom: 1px solid #dce0e7
@@ -210,20 +211,6 @@
 			margin: -8px 0 0 20px
 			color: #bcc6cc
 			@extend %icon
-	&__paid
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		margin-top: 20px
-		text-align: center
-		font-size: 36px
-		color: #c374d3
-		line-height: 0.9
-		+handwrite
-		p:first-child
-			color: #4a90e2
-			transform: rotate(8deg) translateX(-3px)
 	&__dollar
 		position: absolute
 		top: 10px
@@ -272,25 +259,6 @@
 	@media print
 		display: none
 
-.dropdown
-	line-height: 1
-	&__bl
-		position: relative
-		display: inline-block
-		width: 30px
-		height: 27px
-		border: 1px solid #e4e4e4
-		border-radius: 4px
-		cursor: pointer
-		background: #FFF
-		&:before
-			content: ""
-			position: absolute
-			top: 50%
-			left: 50%
-			margin: -3px 0 0 -4px
-			+arr(9, 6, #d8d8d8, b)
-
 .tooltip
 	margin-bottom: 10px
 	font-size: 17px
@@ -335,6 +303,19 @@
 			vertical-align: middle
 			&:hover
 				text-decoration: underline
+	&__ttl
+		font-size: 17px
+		color: #282828
+	&__form
+		max-width: 565px
+		margin: 10px 0 15px
+		&-ttl
+			margin-bottom: 10px
+			color: #282828
+			font-size: 14px
+			+opensans-sb
+		.btn
+			margin-top: 15px
 	small
 		font-size: 13px
 		color: #bcc6cc
@@ -498,3 +479,59 @@
 		top: 0
 	&__link
 		color: #097bf2
+
+// actions
+.actions
+	margin: 15px 0 40px
+	text-align: center
+	font-size: 0
+	&__bl
+		display: inline-block
+		width: 25%
+		max-width: 230px
+		padding: 0 10px
+		text-align: center
+		font-size: 13px
+		color: #738496
+		vertical-align: top
+		cursor: pointer
+		&.is-disabled
+			color: #bcc6cc
+			.radio__span
+				color: #bcc6cc
+			.actions__ico
+				opacity: 0.15
+		&.is-active
+			.actions__in
+				border-color: #097bf2
+			.icon
+				opacity: 1
+	&__in
+		min-height: 253px
+		padding: 22px
+		border: 1px solid #cfd5e0
+		border-radius: 6px
+	&__ico
+		position: relative
+		display: inline-block
+		margin-bottom: 20px
+	&__txt
+		color: #6c757a
+	.radio
+		margin-bottom: 10px
+	.icon
+		font-size: 77px
+		opacity: 0.5
+	.icon-marked
+		position: absolute
+		top: 25px
+		right: 6px
+		font-size: 25px
+		color: #fff
+		opacity: 1
+	.icon-delete
+		color: red
+	+r(1000)
+		text-align: left
+		margin-left: -10px
+		margin-right: -10px
