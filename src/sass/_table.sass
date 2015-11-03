@@ -1,17 +1,57 @@
+// common wrapper
+.tablewrap
+	position: relative
+	margin-bottom: 55px
+
+// filters
+.filters
+	padding: 15px 10px 10px 20px
+	+clr
+	&__ttl
+		float: left
+		margin-top: 10px
+		font-size: 17px
+		color: #282828
+	&__in
+		float: right
+		font-size: 0
+
+.toggle-btn
+	display: inline-block
+	width: 33px
+	height: 33px
+	margin-right: 8px
+	border: 1px solid #cfd5e0
+	border-radius: 4px
+	vertical-align: middle
+	cursor: pointer
+	+vertical
+	&.is-active
+		background: #828c92
+		border-color: #828c92
+		i
+			color: #fff
+	i
+		color: #6c757a
+		vertical-align: middle
+	.icon-zoom
+		font-size: 15px
+	.icon-menu
+		font-size: 12px
+
 // table
 .table
 	margin-bottom: 45px
 	font-size: 13px
 	color: #6c757a
-	border-collapse: collapse
-	border-top: 1px solid #efefef
-	border-bottom: 1px solid #efefef
 	&__head
 		background: #f7f8f9
 		text-align: left
+		border-top: 1px solid #efefef
 		border-bottom: 1px solid #efefef
 	&__name
 		width: 32.5%
+		max-width: 350px
 		span
 			color: #282828
 			+opensans-sb
@@ -96,8 +136,8 @@
 		&.table__status
 			width: 170px
 	td
-		max-width: 627px
-		padding: 10px 8.5px
+		padding: 8px 8.5px 8px
+		border-top: 1px solid #efefef
 		border-bottom: 1px solid #efefef
 		vertical-align: top
 		&:first-child
@@ -178,3 +218,139 @@
 			color: #282828
 			&:hover
 				color: #097bf2
+
+// sidebar
+.sidebar
+	position: absolute
+	top: 0
+	left: 0
+	width: 0
+	background-color: #f7f8f9
+	border: 1px double #dce0e7
+	border-width: 1px 1px 1px 0
+	overflow: hidden
+	+tr(0.3s ease)
+	&__in
+		width: 240px
+	&.is-active
+		width: 240px
+
+// scrolling part of table
+.scrollbar
+	margin-right: 50px
+	+tr(0.3s ease)
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		bottom: 0
+		width: 240px
+		height: 16px
+		background: #f7f8f9
+		border-right: 1px solid #dce0e7
+		border-bottom: 1px solid #dce0e7
+	&:after
+		display: none
+		content: ""
+		position: absolute
+		right: 0
+		bottom: 0
+		width: 50px
+		height: 15px
+		background: #f7f8f9
+		border-top: 1px solid #dce0e7
+		border-left: 1px solid #dce0e7
+		border-bottom: 1px solid #dce0e7
+	&.mCustomScrollbar
+		&:before,
+		&:after
+			display: block
+	&.mCS_no_scrollbar
+		&:before,
+		&:after
+			display: none
+	&.is-sidebar
+		margin-left: 240px
+	.table
+		min-width: 1000px
+		margin-bottom: 0
+		td
+			padding: 9px 8.5px 6px
+		td > span, p
+			max-width: 90%
+			overflow: hidden
+			-ms-text-overflow: ellipsis
+			text-overflow: ellipsis
+			white-space: nowrap
+		td > span
+			display: inline-block
+	.mCSB_horizontal.mCSB_inside > .mCSB_container
+		margin-bottom: 15px
+	.mCSB_draggerContainer
+		margin: 0 28px 0 0 !important
+		border: 1px solid #dce0e7
+		border-left: none
+	.mCSB_scrollTools
+		opacity: 1
+		.mCSB_dragger
+			z-index: 0
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail
+		height: 100%
+		margin: 0
+		border-radius: 0
+		background: #f7f8f9
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar
+		height: 8px
+		margin: 3px auto
+		background: #cacdd3
+		border-radius: 0
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight,
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft
+		width: 14px
+		background: #f7f8f9
+		border: 1px solid #dce0e7
+		opacity: 1
+		z-index: 1
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -2.5px 0 0 -2px
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight
+		border-right: none
+		&:before
+			+arr(4, 5, #cacdd3, r)
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft
+		right: 14px
+		left: initial
+		border-left: none
+		&:before
+			+arr(4, 5, #cacdd3, l)
+
+// sidedrop
+.sidedrop
+	position: absolute
+	top: 0
+	right: 0
+	width: 50px
+	text-align: center
+	.table
+		margin-bottom: 0
+		border-left: 1px solid #dce0e7
+		tr
+			border-bottom: 1px solid #efefef
+		td
+			height: 40px
+			padding: 0
+			vertical-align: middle
+			&:first-child
+				width: auto
+				padding-left: 0
+			&:last-child
+				border-bottom: none
+	.table__head
+		width: auto
+		padding-left: 0
+	.dropdown
+		vertical-align: middle
