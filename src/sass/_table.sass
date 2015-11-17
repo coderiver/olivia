@@ -6,6 +6,7 @@
 // filters
 .filters
 	padding: 15px 10px 10px 20px
+	margin: 0 -4px
 	+clr
 	&__ttl
 		float: left
@@ -20,7 +21,7 @@
 	display: inline-block
 	width: 33px
 	height: 33px
-	margin-right: 8px
+	margin: 0 4px
 	border: 1px solid #cfd5e0
 	border-radius: 4px
 	vertical-align: middle
@@ -38,6 +39,27 @@
 		font-size: 15px
 	.icon-menu
 		font-size: 12px
+
+.tabs
+	display: inline-block
+	margin: 0 4px
+	font-size: 0
+	vertical-align: middle
+	border: 1px solid #cfd5e0
+	border-radius: 4px
+	&__el
+		display: inline-block
+		padding: 7.5px 16px
+		font-size: 13px
+		color: #6c757a
+		vertical-align: middle
+		border-right: 1px solid #cfd5e0
+		cursor: pointer
+		&:last-child
+			border-right: none
+		&.is-active
+			background: #828c92
+			color: #FFF
 
 // table
 .table
@@ -105,7 +127,9 @@
 				background: #f7f8f9
 	th
 		position: relative
-		padding: 10px
+		height: 38px
+		text-align: left
+		padding: 0 10px
 		border-right: 1px solid #dce0e7
 		cursor: pointer
 		vertical-align: middle
@@ -131,6 +155,8 @@
 			background: none
 			&:before
 				display: none
+		&.table__clip
+			text-align: center
 		&.table__clip.is-active
 			padding-right: 20px
 		&.table__status
@@ -159,72 +185,17 @@
 	.txt-right
 		text-align: right
 		padding-right: 10px
-
-// table dropdown
-.dropdown
-	position: relative
-	display: inline-block
-	line-height: 1
-	&.is-active
-		.dropdown__bl
-			border-bottom: none
-			border-bottom-left-radius: 0
-			border-bottom-right-radius: 0
-			z-index: 2
-			&:before
-				+arr(9, 6, #6c757a, t)
-		.dropdown__list
-			display: block
-	&.is-task
-		.dropdown__list
-			min-width: 200px
-	&__bl
-		position: relative
-		display: inline-block
-		width: 30px
-		height: 27px
-		border: 1px solid #e4e4e4
-		border-radius: 4px
-		cursor: pointer
-		background: #FFF
-		z-index: 0
-		&:before
-			content: ""
-			position: absolute
-			top: 50%
-			left: 50%
-			margin: -3px 0 0 -4px
-			+arr(9, 6, #d8d8d8, b)
-	&__list
-		display: none
-		position: absolute
-		top: 26px
-		right: 0
-		min-width: 160px
-		padding: 20px 14px
-		text-align: left
-		font-size: 13px
-		background: #fff
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25)
-		border-radius: 4px
-		border-top-right-radius: 0
-		border: 1px solid #dce0e7
-		z-index: 1
-		li
-			margin-bottom: 10px
-			&:last-child
-				margin-bottom: 0
-		a
-			color: #282828
-			&:hover
-				color: #097bf2
+	.is-bold
+		+opensans-sb
 
 // sidebar
 .sidebar
 	position: absolute
 	top: 0
 	left: 0
+	bottom: 0
 	width: 0
+	padding-bottom: 13px
 	background-color: #f7f8f9
 	border: 1px double #dce0e7
 	border-width: 1px 1px 1px 0
@@ -232,6 +203,72 @@
 	+tr(0.3s ease)
 	&__in
 		width: 240px
+		height: 100%
+	&__content
+		height: calc(100% - 38px)
+	&__ttl
+		position: relative
+		max-width: 100%
+		height: 38px
+		padding: 0 10px
+		color: #282828
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+		line-height: 38px
+		+opensans-sb
+		i
+			position: absolute
+			top: 50%
+			right: 10px
+			margin-top: -4.5px
+			cursor: pointer
+			+arr(6, 9, #6c757a, l)
+	&__option
+		&.is-active
+			p
+				background: #dce0e7
+		p, a
+			display: block
+			padding: 3px 20px
+			font-size: 13px
+			color: #6c757a
+			white-space: nowrap
+			&:hover
+				background: rgba(#dce0e7, 0.5)
+			.icon
+				margin-right: 5px
+				font-size: 11px
+				color: #899bac
+				vertical-align: middle
+			.svg-ico
+				width: 10px
+				height: 10px
+				margin-right: 5px
+				background-size: 10px 10px
+				vertical-align: middle
+		p
+			cursor: pointer
+		span
+			display: inline-block
+			max-width: 100%
+			vertical-align: middle
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
+	&__sublist
+		display: none
+		padding: 5px 20px
+	&__bl
+		padding: 10px 20px
+	&__link
+		display: block
+		margin-bottom: 2px
+		font-size: 12px
+		color: #6c757a
+		+opensans-sb
+		&:hover
+			text-decoration: underline
 	&.is-active
 		width: 240px
 
@@ -245,35 +282,27 @@
 		left: 0
 		bottom: 0
 		width: 240px
-		height: 16px
+		height: 13px
 		background: #f7f8f9
+		border-top: 1px solid #dce0e7
 		border-right: 1px solid #dce0e7
 		border-bottom: 1px solid #dce0e7
 	&:after
-		display: none
 		content: ""
 		position: absolute
 		right: 0
 		bottom: 0
 		width: 50px
-		height: 15px
+		height: 13px
 		background: #f7f8f9
-		border-top: 1px solid #dce0e7
 		border-left: 1px solid #dce0e7
 		border-bottom: 1px solid #dce0e7
-	&.mCustomScrollbar
-		&:before,
-		&:after
-			display: block
-	&.mCS_no_scrollbar
-		&:before,
-		&:after
-			display: none
 	&.is-sidebar
 		margin-left: 240px
 	.table
 		min-width: 1000px
 		margin-bottom: 0
+		background: #FFF
 		td
 			padding: 9px 8.5px 6px
 		td > span, p
@@ -285,7 +314,7 @@
 		td > span
 			display: inline-block
 	.mCSB_horizontal.mCSB_inside > .mCSB_container
-		margin-bottom: 15px
+		margin-bottom: 12px
 	.mCSB_draggerContainer
 		margin: 0 28px 0 0 !important
 		border: 1px solid #dce0e7
@@ -294,14 +323,16 @@
 		opacity: 1
 		.mCSB_dragger
 			z-index: 0
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal
+		height: 13px
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail
 		height: 100%
 		margin: 0
 		border-radius: 0
 		background: #f7f8f9
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar
-		height: 8px
-		margin: 3px auto
+		height: 7px
+		margin: 2px auto
 		background: #cacdd3
 		border-radius: 0
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight,
@@ -323,7 +354,7 @@
 			+arr(4, 5, #cacdd3, r)
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft
 		right: 14px
-		left: initial
+		left: auto
 		border-left: none
 		&:before
 			+arr(4, 5, #cacdd3, l)
@@ -338,19 +369,18 @@
 	.table
 		margin-bottom: 0
 		border-left: 1px solid #dce0e7
-		tr
-			border-bottom: 1px solid #efefef
+		background: #FFF
 		td
-			height: 40px
 			padding: 0
 			vertical-align: middle
+			border-bottom: 1px solid #efefef
 			&:first-child
 				width: auto
 				padding-left: 0
-			&:last-child
-				border-bottom: none
 	.table__head
 		width: auto
 		padding-left: 0
+		td
+			height: 38px
 	.dropdown
 		vertical-align: middle

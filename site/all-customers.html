@@ -174,6 +174,29 @@
 						<div class="toggle-btn">
 							<i class="icon icon-zoom"></i>
 						</div>
+						<div class="tabs">
+							<div class="tabs__el js-tab-el is-active">All</div>
+							<div class="tabs__el js-tab-el">Buyers</div>
+							<div class="tabs__el js-tab-el">Sellers</div>
+						</div>
+						<div class="dropdown is-filter js-dropdown">
+							<p>Filter by status</p>
+							<ul class="dropdown__list">
+								<li><a href="#">All statuses</a></li>
+								<li><a href="#">With tasks</a></li>
+								<li><a href="#">Approved</a></li>
+								<li><a href="#">Funds received</a></li>
+								<li><a href="#">Comission paid</a></li>
+							</ul>
+						</div>
+						<div class="dropdown is-filter js-dropdown">
+							<p>Settings</p>
+							<ul class="dropdown__list js-inner">
+								<label>
+									<input type="checkbox">
+								</label>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<!-- end filters -->
@@ -182,7 +205,27 @@
 					<!-- begin sidebar  -->
 					<div class="sidebar js-sidebar">
 						<div class="sidebar__in">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio magnam esse fuga quam, explicabo, quod voluptatem laboriosam similique! Facilis eos natus, vero. Quasi, magni eaque. Consequuntur aut error ipsam quasi.</p>
+							<p class="sidebar__ttl js-sidebar-ttl">Active Deals <i class="js-hide-sidebar"></i></p>
+							<div class="sidebar__content js-content">
+								<ul>
+									<li class="sidebar__option js-sidebar-option"><p><i class="icon icon-folder"></i><span>All</span></p></li>
+									<li class="sidebar__option js-sidebar-option"><p><i class="icon icon-folder"></i><span>Alphabet</span></p></li>
+									<li class="sidebar__option js-sidebar-option"><p><i class="icon icon-folder"></i><span>Google</span></p></li>
+									<li class="sidebar__option js-sidebar-option">
+										<p><i class="icon icon-folder"></i><span>Samsung - Round a Search blablabla</span></p>
+										<ul class="sidebar__sublist js-sublist">
+											<li><a href="#"><i class="svg-ico letter-ico"></i><span>Steve Buscemi</span></a></li>
+											<li><a href="#"><i class="svg-ico letter-ico"></i><span>Kirk Douglas</span></a></li>
+											<li><a href="#"><i class="svg-ico letter-ico"></i><span>Anette Stevenson-McCloud</span></a></li>
+										</ul>
+									</li>
+									<li class="sidebar__option js-sidebar-option"><p><i class="icon icon-folder"></i><span>Space X</span></p></li>
+								</ul>
+								<div class="sidebar__bl">
+									<a href="#" class="sidebar__link">Closed Deals (2)</a>
+									<a href="#" class="sidebar__link">Inactive Deals (3)</a>
+								</div>
+							</div>
 						</div>
 					</div>
 					<!-- end sidebar -->
@@ -190,13 +233,13 @@
 					<div class="scrollbar js-scrollbar">
 						<!-- begin table  -->
 						<table class="table">
-							<tr class="table__head js-row-head">
-								<th><p>ID</p></th>
-								<th><p>Deal</p></th>
-								<th><p>Name</p></th>
-								<th><p>Operations</p></th>
-								<th><p>Type</p></th>
-								<th><p>Status</p></th>
+							<tr class="table__head">
+								<th title="ID"><p>ID</p></th>
+								<th title="Deal"><p>Deal</p></th>
+								<th title="Name"><p>Name</p></th>
+								<th title="Operations"><p>Operations</p></th>
+								<th title="Type"><p>Type</p></th>
+								<th title="Status"><p>Status</p></th>
 							</tr>
 							<tr class="js-link" data-href="http://www.google.com">
 								<td>
@@ -205,7 +248,7 @@
 										<span>CU12522</span>
 									</div>
 								</td>
-								<td>
+								<td class="is-bold">
 									<span>Samsung – Round A Search And Development</span>
 								</td>
 								<td>
@@ -231,7 +274,7 @@
 										<span>CU12522</span>
 									</div>
 								</td>
-								<td>
+								<td class="is-bold">
 									<span>Samsung – Round A Search for Investement</span>
 								</td>
 								<td>
@@ -257,7 +300,7 @@
 										<span>CU12522</span>
 									</div>
 								</td>
-								<td>
+								<td class="is-bold">
 									<p>Samsung – Round A Search And Development</p>
 								</td>
 								<td>
@@ -283,7 +326,7 @@
 										<span>CU12522</span>
 									</div>
 								</td>
-								<td>
+								<td class="is-bold">
 									<span>Space X</span>
 								</td>
 								<td>
@@ -309,7 +352,7 @@
 										<span>CU12522</span>
 									</div>
 								</td>
-								<td>
+								<td class="is-bold">
 									<span>Space X</span>
 								</td>
 								<td>
@@ -335,7 +378,7 @@
 										<span>CU12522</span>
 									</div>
 								</td>
-								<td>
+								<td class='is-bold'>
 									<span>Space X</span>
 								</td>
 								<td>
@@ -361,7 +404,7 @@
 										<span>CU12522</span>
 									</div>
 								</td>
-								<td>
+								<td class='is-bold'>
 									<span>Foursquare Inc.</span>
 								</td>
 								<td>
@@ -392,7 +435,7 @@
 							</tr>
 							<tr class="js-row">
 								<td class="js-table-drop">
-									<div class="dropdown">
+									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
 											<li><a href="#">Open in new window</a></li>
@@ -404,7 +447,7 @@
 							</tr>
 							<tr class="js-row">
 								<td class="js-table-drop">
-									<div class="dropdown">
+									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
 											<li><a href="#">Open in new window</a></li>
@@ -416,7 +459,7 @@
 							</tr>
 							<tr class="js-row">
 								<td class="js-table-drop">
-									<div class="dropdown">
+									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
 											<li><a href="#">Open in new window</a></li>
@@ -428,7 +471,7 @@
 							</tr>
 							<tr class="js-row">
 								<td class="js-table-drop">
-									<div class="dropdown">
+									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
 											<li><a href="#">Open in new window</a></li>
@@ -440,7 +483,7 @@
 							</tr>
 							<tr class="js-row">
 								<td class="js-table-drop">
-									<div class="dropdown">
+									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
 											<li><a href="#">Open in new window</a></li>
@@ -452,7 +495,7 @@
 							</tr>
 							<tr class="js-row">
 								<td class="js-table-drop">
-									<div class="dropdown">
+									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
 											<li><a href="#">Open in new window</a></li>
@@ -464,7 +507,7 @@
 							</tr>
 							<tr class="js-row">
 								<td class="js-table-drop">
-									<div class="dropdown">
+									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
 											<li><a href="#">Open in new window</a></li>
