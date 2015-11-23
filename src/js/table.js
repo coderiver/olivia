@@ -27,7 +27,8 @@ $(document).ready(function() {
 		// scroll table
 		scrollTable.mCustomScrollbar({
 			axis: 'x',
-			scrollButtons: {enable: true}
+			scrollButtons: {enable: true},
+			scrollInertia: 300
 		});
 
 		// height of td in sidedrop
@@ -41,6 +42,33 @@ $(document).ready(function() {
 		}
 
 		sidedropRowHeight();
+
+		function columnsMove() {
+			var input = $('.js-check input');
+			//var theadId = parentWrap.find('th');
+
+			input.on('change', function() {
+				var data = $(this).parent().data('attr');
+				var thead = $('.js-tablewrap th[data-id="' + data + '"]');
+				var theadIndex = thead.index();
+
+				if ( !$(this).is(':checked') ) {
+					thead.hide();
+
+					$('.js-link').each(function() {
+						$(this).find('td').eq(theadIndex).hide();
+					});
+				} else {
+					thead.show();
+					$('.js-link').each(function() {
+						$(this).find('td').eq(theadIndex).show();
+					});
+				}
+			});
+
+		}
+
+		columnsMove();
 
 		// sidebar inner scroll
 		sidebar.find('.js-content').mCustomScrollbar({

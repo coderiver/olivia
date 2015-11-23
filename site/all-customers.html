@@ -25,8 +25,8 @@
 				<ul class="menu">
 					<li class="menu__option"><a class="menu__link" href="#">Tasks <p class="notification"><span>2</span></p></a></li>
 					<li class="menu__option"><a class="menu__link is-active" href="#">Deals</a></li>
-					<li class="menu__option"><a class="menu__link" href="#">Entries</a></li>
 					<li class="menu__option"><a class="menu__link" href="#">Reports</a></li>
+					<li class="menu__option"><a class="menu__link" href="#">Entries</a></li>
 					<li class="menu__option"><a class="menu__link" href="#">Library</a></li>
 					<li class="menu__option js-wrap">
 						<a class="menu__link js-dropit" href="#">Me</a>
@@ -180,9 +180,9 @@
 							<div class="tabs__el js-tab-el">Sellers</div>
 						</div>
 						<div class="dropdown is-filter js-dropdown">
-							<p>Filter by status</p>
+							<p class="dropdown__item">Filter by status</p>
 							<ul class="dropdown__list">
-								<li><a href="#">All statuses</a></li>
+								<li><a href="#" class="is-active">All statuses</a></li>
 								<li><a href="#">With tasks</a></li>
 								<li><a href="#">Approved</a></li>
 								<li><a href="#">Funds received</a></li>
@@ -190,12 +190,111 @@
 							</ul>
 						</div>
 						<div class="dropdown is-filter js-dropdown">
-							<p>Settings</p>
-							<ul class="dropdown__list js-inner">
-								<label>
-									<input type="checkbox">
-								</label>
-							</ul>
+							<p class="dropdown__item">Settings</p>
+							<div class="dropdown__list js-inner js-check">
+								<div class="dropdown__check">
+									<label class="check" data-attr="id">
+										<input type="checkbox" checked>
+										<span class="check__span">ID</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="deal">
+										<input type="checkbox" checked>
+										<span class="check__span">Deal</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="name">
+										<input type="checkbox" checked>
+										<span class="check__span">Name</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="operations">
+										<input type="checkbox" checked>
+										<span class="check__span">Operations</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="type">
+										<input type="checkbox" checked>
+										<span class="check__span">Type</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="status">
+										<input type="checkbox" checked>
+										<span class="check__span">Status</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="letters">
+										<input type="checkbox">
+										<span class="check__span">Engagement Letter(s)</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="transactionnum">
+										<input type="checkbox">
+										<span class="check__span">Number of transactions</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="">
+										<input type="checkbox">
+										<span class="check__span">Latest transaction date</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="latestid">
+										<input type="checkbox">
+										<span class="check__span">Latest transaction ID</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="lateststat">
+										<input type="checkbox">
+										<span class="check__span">Latest transaction status</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="transactionsum">
+										<input type="checkbox">
+										<span class="check__span">Transactions total</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="comissionsum">
+										<input type="checkbox">
+										<span class="check__span">My comission total</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="gcs">
+										<input type="checkbox">
+										<span class="check__span">GCS comission total</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="funds">
+										<input type="checkbox">
+										<span class="check__span">Latest funds arrived date</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="date">
+										<input type="checkbox">
+										<span class="check__span">Date created</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="update">
+										<input type="checkbox" checked>
+										<span class="check__span">Last update</span>
+									</label>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -234,12 +333,12 @@
 						<!-- begin table  -->
 						<table class="table">
 							<tr class="table__head">
-								<th title="ID"><p>ID</p></th>
-								<th title="Deal"><p>Deal</p></th>
-								<th title="Name"><p>Name</p></th>
-								<th title="Operations"><p>Operations</p></th>
-								<th title="Type"><p>Type</p></th>
-								<th title="Status"><p>Status</p></th>
+								<th title="ID" width="115" data-id="id"><p>ID</p></th>
+								<th title="Deal" width="257" data-id="deal"><p>Deal</p></th>
+								<th title="Name" width="226" data-id="name"><p>Name</p></th>
+								<th title="Operations" width="107" data-id="operations"><p>Operations</p></th>
+								<th title="Type" width="130" data-id="type"><p>Type</p></th>
+								<th title="Status" width="150" data-id="status"><p>Status</p></th>
 							</tr>
 							<tr class="js-link" data-href="http://www.google.com">
 								<td>
@@ -434,7 +533,7 @@
 								<td>&nbsp;</td>
 							</tr>
 							<tr class="js-row">
-								<td class="js-table-drop">
+								<td>
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
@@ -446,7 +545,7 @@
 								</td>
 							</tr>
 							<tr class="js-row">
-								<td class="js-table-drop">
+								<td>
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
@@ -458,7 +557,7 @@
 								</td>
 							</tr>
 							<tr class="js-row">
-								<td class="js-table-drop">
+								<td>
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
@@ -470,7 +569,7 @@
 								</td>
 							</tr>
 							<tr class="js-row">
-								<td class="js-table-drop">
+								<td>
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
@@ -482,7 +581,7 @@
 								</td>
 							</tr>
 							<tr class="js-row">
-								<td class="js-table-drop">
+								<td>
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
@@ -494,7 +593,7 @@
 								</td>
 							</tr>
 							<tr class="js-row">
-								<td class="js-table-drop">
+								<td>
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
@@ -506,7 +605,7 @@
 								</td>
 							</tr>
 							<tr class="js-row">
-								<td class="js-table-drop">
+								<td>
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
@@ -535,60 +634,5 @@
 	<!-- end footer -->
 </div>
 <!-- END out-->
-<div class="overlay">
-	<div class="popup is-dealflow js-popup" id="deal-flow">
-		<div class="popup__head no-bg">
-			<i class="icon icon-close js-close"></i>
-		</div>
-		<p class="popup__ttl">How to submit documentation to get paid</p>
-		<div class="popup__body">
-			<div class="steps">
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico letter-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Engagement Letter</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico memo-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Deal Memo</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico customer-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Customers</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico transaction-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Transaction Reports</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico paid-ico"></i>
-					</div>
-					<p>Receive Funds</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico getpaid-ico"></i>
-						<div class="steps__paid">
-							<p>get</p>
-							<p>paid</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 </body>
 </html>

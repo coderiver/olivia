@@ -83,9 +83,9 @@
 							<div class="tabs__el js-tab-el">Sellers</div>
 						</div>
 						<div class="dropdown is-filter js-dropdown">
-							<p>Filter by status</p>
+							<p class="dropdown__item">Filter by status</p>
 							<ul class="dropdown__list">
-								<li><a href="#">All statuses</a></li>
+								<li><a href="#" class="is-active">All statuses</a></li>
 								<li><a href="#">With tasks</a></li>
 								<li><a href="#">Approved</a></li>
 								<li><a href="#">Funds received</a></li>
@@ -93,12 +93,8 @@
 							</ul>
 						</div>
 						<div class="dropdown is-filter js-dropdown">
-							<p>Settings</p>
-							<ul class="dropdown__list js-inner">
-								<label>
-									<input type="checkbox">
-								</label>
-							</ul>
+							<p class="dropdown__item">Settings</p>
+							//= partials/all-customer-settings.html
 						</div>
 					</div>
 				</div>
@@ -137,12 +133,12 @@
 						<!-- begin table  -->
 						<table class="table">
 							<tr class="table__head">
-								<th title="ID"><p>ID</p></th>
-								<th title="Deal"><p>Deal</p></th>
-								<th title="Name"><p>Name</p></th>
-								<th title="Operations"><p>Operations</p></th>
-								<th title="Type"><p>Type</p></th>
-								<th title="Status"><p>Status</p></th>
+								<th title="ID" width="115" data-id="id"><p>ID</p></th>
+								<th title="Deal" width="257" data-id="deal"><p>Deal</p></th>
+								<th title="Name" width="226" data-id="name"><p>Name</p></th>
+								<th title="Operations" width="107" data-id="operations"><p>Operations</p></th>
+								<th title="Type" width="130" data-id="type"><p>Type</p></th>
+								<th title="Status" width="150" data-id="status"><p>Status</p></th>
 							</tr>
 							<tr class="js-link" data-href="http://www.google.com">
 								<td>
@@ -337,7 +333,7 @@
 								<td>&nbsp;</td>
 							</tr>
 							<tr class="js-row">
-								<td class="js-table-drop">
+								<td>
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
@@ -349,7 +345,7 @@
 								</td>
 							</tr>
 							<tr class="js-row">
-								<td class="js-table-drop">
+								<td>
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
@@ -361,7 +357,7 @@
 								</td>
 							</tr>
 							<tr class="js-row">
-								<td class="js-table-drop">
+								<td>
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
@@ -373,7 +369,7 @@
 								</td>
 							</tr>
 							<tr class="js-row">
-								<td class="js-table-drop">
+								<td>
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
@@ -385,7 +381,7 @@
 								</td>
 							</tr>
 							<tr class="js-row">
-								<td class="js-table-drop">
+								<td>
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
@@ -397,7 +393,7 @@
 								</td>
 							</tr>
 							<tr class="js-row">
-								<td class="js-table-drop">
+								<td>
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
@@ -409,7 +405,7 @@
 								</td>
 							</tr>
 							<tr class="js-row">
-								<td class="js-table-drop">
+								<td>
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list">
@@ -432,60 +428,5 @@
 	//= partials/footer.html
 </div>
 <!-- END out-->
-<div class="overlay">
-	<div class="popup is-dealflow js-popup" id="deal-flow">
-		<div class="popup__head no-bg">
-			<i class="icon icon-close js-close"></i>
-		</div>
-		<p class="popup__ttl">How to submit documentation to get paid</p>
-		<div class="popup__body">
-			<div class="steps">
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico letter-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Engagement Letter</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico memo-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Deal Memo</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico customer-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Customers</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico transaction-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Transaction Reports</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico paid-ico"></i>
-					</div>
-					<p>Receive Funds</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico getpaid-ico"></i>
-						<div class="steps__paid">
-							<p>get</p>
-							<p>paid</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 </body>
 </html>

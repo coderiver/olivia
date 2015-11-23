@@ -24,18 +24,23 @@ $(document).ready(function() {
 	};
 
 	$('[data-popup]').each(function(index, el) {
-		var el = $(el);
-		el.on('click', function(event) {
+		var $el = $(el);
+		var popup;
+
+		$el.on('click', function(event) {
 			event.preventDefault();
 			event.stopPropagation();
-			var popup = $('#' + el.data('popup'));
+			popup = $('#' + $el.data('popup'));
 			showPopup(popup);
 		});
 	});
 
+	// close popup
 	$('.js-close').on('click touchend', function(e) {
+		var popup;
+
 		e.preventDefault();
-		var popup = $(this).parents('.js-popup');
+		popup = $(this).parents('.js-popup');
 		hidePopup(popup);
 		$('.overlay').removeClass('is-active');
 		$(this).parents('.js-bar').removeClass('is-active');
@@ -67,7 +72,7 @@ $(document).ready(function() {
 
 	$('.js-tooltip-guide').click(function() {
 		var data = $(this).data('attr');
-		$('.js-tooltip-guide-hide[data-attr="" + data + ""]').parents('.tooltipster-base').toggle();
+		$('.js-tooltip-guide-hide[data-attr="' + data + '"]').parents('.tooltipster-base').toggle();
 	});
 
 	$('.js-tooltip-guide-hide').click(function(e) {
@@ -82,7 +87,7 @@ $(document).ready(function() {
 		$(this).parent().find('.js-to-drop').toggleClass('is-visible');
 	});
 
-	// close dropdown on click
+	// close dropdown on body click
 	$('body').click(function(e) {
 		if ( $(e.target).parents('.js-wrap').length > 0 || $(e.target).parents('.js-dropdown-wrap').length > 0) {
 			e.stopPropagation();
@@ -92,7 +97,7 @@ $(document).ready(function() {
 		}
 	});
 
-	// textare autoresize
+	// textarea autoresize
 	$(document).on('input.textarea', '.js-expand', function() {
 		var minRows = this.getAttribute('data-min-rows') | 0,
 			rows	= this.value.split('\n').length;
@@ -133,7 +138,36 @@ $(document).ready(function() {
 		}
 
 		$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active');
+	});
 
+	// fixed header
+	function scrollFixedElements() {
+		var scrLeft = $(this).scrollLeft();
+		$('.js-fixed').css({
+			left: -scrLeft
+		});
+	}
+	scrollFixedElements();
+
+	function removeHeaderBg() {
+		var win = $(window),
+			headerFixed = $('.js-fixed');
+			headerEl  = headerFixed.find('.js-hide');
+
+		if ( win.scrollTop() === 0 ) {
+			headerFixed.removeClass('is-active');
+			headerEl.show();
+		} else if ( win.scrollTop() > 0 ) {
+			headerFixed.addClass('is-active');
+			headerEl.hide();
+		}
+	}
+
+	removeHeaderBg();
+
+	$(window).scroll(function() {
+		scrollFixedElements();
+		removeHeaderBg();
 	});
 
 });

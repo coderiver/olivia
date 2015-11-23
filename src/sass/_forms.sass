@@ -1,0 +1,79 @@
+// forms
+.form
+	margin: 45px 0 80px
+	font-size: 13px
+	color: #6c757a
+	&__ttl
+		margin-bottom: 20px
+		font-size: 18px
+		color: #282828
+		+opensans-sb
+	&__subttl
+		margin-bottom: 5px
+		font-size: 14px
+		color: #282828
+		+opensans-sb
+	&__bl
+		margin-bottom: 20px
+	&__upload
+		padding-left: 32px
+		font-size: 14px
+		margin: 15px 0
+		a
+			position: relative
+			display: inline-block
+			color: #097bf2
+			line-height: 1
+			&:hover
+				text-decoration: underline
+		small
+			display: block
+			font-size: 13px
+		.icon
+			position: absolute
+			top: 50%
+			right: 100%
+			margin-top: -11px
+			margin-right: 10px
+			font-size: 22px
+			vertical-align: middle
+	label
+		display: block
+	hr
+		border: none
+		margin: 25px 0
+		border-top: 1px solid #cfd5e0
+	.radio
+		margin: 7px 0
+	.radio__span
+		color: #282828
+	.textarea
+		min-height: 66px
+		margin-top: 7px
+
+.alert
+	margin-bottom: 14px
+	padding: 9px 15px
+	font-size: 13px
+	color: #282828
+	background: #fffaf6
+	border: 1px solid #f76300
+	+opensans-sb
+	+clr
+	&__bl
+		float: right
+		&:first-child
+			float: left
+		span
+			vertical-align: middle
+	&__link
+		color: #097bf2
+		+opensans
+		&:hover
+			text-decoration: underline
+	.icon
+		font-size: 12px
+		margin-right: 5px
+		vertical-align: middle
+	.icon-warn
+		color: #f76300
