@@ -151,10 +151,17 @@ body
 	padding: 0 20px
 	margin: 0 auto
 
+.l-head
+	@extend .l
+	max-width: 1064px
+
+.l-form
+	@extend .l
+	max-width: 840px
+
 .l-center
+	@extend .l
 	max-width: 620px
-	padding: 0 20px
-	margin: 0 auto
 
 a
 	text-decoration: none
@@ -379,10 +386,14 @@ label
 			content: $icon-checked
 			position: absolute
 			top: 50%
-			left: 2px
+			left: 3px
 			font-size: 8px
 			margin-top: -4px
 			font-family: 'svgfont'
+	&.is-light-border
+		.check__span
+			&:before
+				border-color: rgba(0, 0, 0, 0.15)
 	input
 		position: absolute
 		top: 0

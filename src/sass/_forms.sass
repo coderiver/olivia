@@ -4,17 +4,24 @@
 	font-size: 13px
 	color: #6c757a
 	&__ttl
-		margin-bottom: 20px
+		max-width: 580px
+		margin: 0 auto 20px
 		font-size: 18px
 		color: #282828
 		+opensans-sb
 	&__subttl
-		margin-bottom: 5px
+		margin-bottom: 10px
 		font-size: 14px
 		color: #282828
 		+opensans-sb
 	&__bl
+		position: relative
+		padding: 0 109px
 		margin-bottom: 20px
+		&:hover
+			.comment
+				opacity: 1
+				visibility: visible
 	&__upload
 		padding-left: 32px
 		font-size: 14px
@@ -39,12 +46,12 @@
 			vertical-align: middle
 	label
 		display: block
-	hr
-		border: none
-		margin: 25px 0
-		border-top: 1px solid #cfd5e0
-	.radio
 		margin: 7px 0
+	hr
+		max-width: 580px
+		margin: 25px auto
+		border: none
+		border-top: 1px solid #cfd5e0
 	.radio__span
 		color: #282828
 	.textarea
@@ -77,3 +84,30 @@
 		vertical-align: middle
 	.icon-warn
 		color: #f76300
+
+.comment
+	position: absolute
+	display: inline-block
+	top: 4px
+	left: 30px
+	text-align: center
+	font-size: 11px
+	color: #c6ccd8
+	opacity: 0
+	visibility: hidden
+	&.is-visible
+		visibility: visible
+		opacity: 1
+	.icon-comment
+		font-size: 23px
+
+.newpost
+	position: relative
+	padding: 15px 30px
+	background: #f3f4f6
+	border: 1px solid #cfd5e0
+	border-radius: 4px
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12)
+	+clr
+	.btn-group
+		float: right

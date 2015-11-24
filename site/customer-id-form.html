@@ -19,7 +19,7 @@
 <div class="out">
 	<!-- begin header  -->
 	<div class="header is-form js-fixed">
-		<div class="l">
+		<div class="l-head">
 			<div class="header__in">
 				<div class="header__group">
 					<a href="#" class="header__close"><i class="icon icon-close"></i></a>
@@ -46,333 +46,288 @@
 	<!-- end header -->
 
 	<div class="main is-form">
-		<div class="l">
+		<div class="l-form">
 			<div class="main__in">
-				<div class="l-center">
-					<form class="form">
-						<div class="form__bl">
-							<p class="form__ttl">Customer Identification Form: Individual</p>
-							<p>Complete this form for each customer that is a person (as opposed to an entity). Customers include both buyers and sellers.</p>
+				<form class="form">
+					<div class="form__bl">
+						<p class="form__ttl">Customer Identification Form: Individual</p>
+						<p>Complete this form for each customer that is a person (as opposed to an entity). Customers include both buyers and sellers.</p>
+					</div>
+					<hr>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Name</p>
+						<label>
+							<input type="text" placeholder="Type here">
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Date of Birth</p>
+						<label class="is-small-size">
+							<input type="text" placeholder="Type here">
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">US Citizenship</p>
+						<label class="radio">
+							<input type="radio" name="citizenship" value="yes" checked>
+							<span class="radio__span">Yes</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="citizenship" value="no">
+							<span class="radio__span">No</span>
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Social Security Number</p>
+						<p>Fill in if customer is US citizenship</p>
+						<label class="is-middle-size">
+							<input type="text" placeholder="Type here">
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Type of ID</p>
+						<label class="radio">
+							<input type="radio" name="idtype" value="license" checked>
+							<span class="radio__span">Driver's License</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="idtype" value="passport">
+							<span class="radio__span">Passport</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="idtype" value="other">
+							<span class="radio__span">Other</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="idtype" value="unavailable">
+							<span class="radio__span">Not available</span>
+						</label>
+					</div>
+					<hr>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Country</p>
+						<div class="dropdown is-form js-dropdown">
+							<p class="dropdown__item is-chosen">USA</p>
+							<ul class="dropdown__list">
+								<li><a href="#">USA</a></li>
+								<li><a href="#">Ukraine</a></li>
+								<li><a href="#">China</a></li>
+								<li><a href="#">Japan</a></li>
+								<li><a href="#">UK</a></li>
+							</ul>
 						</div>
-						<hr>
-						<div class="form__bl">
-							<p class="form__subttl">Name</p>
-							<label>
-								<input type="text" placeholder="Type here">
-							</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">State</p>
+						<div class="dropdown is-form js-dropdown">
+							<p class="dropdown__item">Choose</p>
+							<ul class="dropdown__list">
+								<li><a href="#">USA</a></li>
+								<li><a href="#">Ukraine</a></li>
+								<li><a href="#">China</a></li>
+								<li><a href="#">Japan</a></li>
+								<li><a href="#">UK</a></li>
+							</ul>
 						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Date of Birth</p>
-							<label class="is-small-size">
-								<input type="text" placeholder="Type here">
-							</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">City</p>
+						<label class="is-middle-size">
+							<input type="text" placeholder="Type here">
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Street</p>
+						<label>
+							<input type="text" placeholder="Type here">
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Phone Number</p>
+						<label class="is-middle-size">
+							<input type="text" placeholder="Type here">
+						</label>
+					</div>
+					<hr>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">E-mail Address</p>
+						<label>
+							<input type="text" placeholder="Type here">
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Phone Number</p>
+						<label>
+							<input type="text" placeholder="Type here">
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Occupation</p>
+						<label>
+							<input type="text" placeholder="Type here">
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Associated with a Securities Firm?</p>
+						<label class="radio">
+							<input type="radio" name="firm" value="yes">
+							<span class="radio__span">Yes</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="firm" value="no">
+							<span class="radio__span">No</span>
+						</label>
+						<p>If Yes: Name of Firm, Title, Contact Information for Compliance Supervisor</p>
+						<label>
+							<input type="text" placeholder="Type here">
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Director of a Public Company?</p>
+						<label class="radio">
+							<input type="radio" name="director" value="yes">
+							<span class="radio__span">Yes</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="director" value="no">
+							<span class="radio__span">No</span>
+						</label>
+						<p>If Yes, Name of Company</p>
+						<label>
+							<input type="text" placeholder="Type here">
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">10% Shareholder / Policy-Making Officer in a Public Company?</p>
+						<label class="radio">
+							<input type="radio" name="shareholder" value="yes">
+							<span class="radio__span">Yes</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="shareholder" value="no">
+							<span class="radio__span">No</span>
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Notes</p>
+						<label>
+							<input type="text" placeholder="Type here">
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Registered Representative Attestations:</p>
+						<label class="check is-light-border">
+							<input type="checkbox">
+							<span class="check__span">I attest that all of the information provided is true to the best of my knowledge.</span>
+						</label>
+						<label class="check is-light-border">
+							<input type="checkbox">
+							<span class="check__span">I attest that I have a prior, existing and current relationship with this customer.</span>
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Registered Representative Signature</p>
+						<p>Type your First & Last Name</p>
+						<label>
+							<input type="text" placeholder="Type here">
+						</label>
+					</div>
+					<div class="form__bl">
+						<a class="comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">File Uploads</p>
+						<p>Upload a copy of the proposed engagement letter.</p>
+						<div class="form__upload">
+							<a href="#"><i class="icon icon-upload"></i>Upload a copy of the above-listed identification document (ID)</a>
 						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Country</p>
-							<div class="dropdown is-form js-dropdown">
-								<p class="dropdown__item is-chosen">USA</p>
-								<ul class="dropdown__list">
-									<li><a href="#">USA</a></li>
-									<li><a href="#">Ukraine</a></li>
-									<li><a href="#">China</a></li>
-									<li><a href="#">Japan</a></li>
-									<li><a href="#">UK</a></li>
-								</ul>
-							</div>
+						<div class="form__upload">
+							<a href="#"><i class="icon icon-upload"></i>Upload a copy of the paper Customer Identification Form if you have one (optional)</a>
 						</div>
-						<div class="form__bl">
-							<p class="form__subttl">State</p>
-							<div class="dropdown is-form js-dropdown">
-								<p class="dropdown__item">Choose</p>
-								<ul class="dropdown__list">
-									<li><a href="#">USA</a></li>
-									<li><a href="#">Ukraine</a></li>
-									<li><a href="#">China</a></li>
-									<li><a href="#">Japan</a></li>
-									<li><a href="#">UK</a></li>
-								</ul>
-							</div>
+						<div class="form__upload">
+							<a href="#"><i class="icon icon-upload"></i>Additional file upload (optional)</a>
 						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Street</p>
-							<label>
-								<input type="text" placeholder="Type here">
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">ZIP code</p>
-							<label class="is-small-size">
-								<input type="text" placeholder="Type here">
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Industry Group (of Issuer)</p>
-							<label class="radio">
-								<input type="radio" name="group" value="agriculture">
-								<span class="radio__span">Agriculture</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="group" value="banking">
-								<span class="radio__span">Banking and Financial Services</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="group" value="business">
-								<span class="radio__span">Business Services</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="group" value="energy">
-								<span class="radio__span">Energy</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="group" value="health">
-								<span class="radio__span">Health Care</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="group" value="manufacturing">
-								<span class="radio__span">Manufacturing</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="group" value="estate">
-								<span class="radio__span">Real Estate</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="group" value="retail">
-								<span class="radio__span">Retail</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="group" value="technology">
-								<span class="radio__span">Technology</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="group" value="travel">
-								<span class="radio__span">Travel</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="group" value="other">
-								<span class="radio__span">Other</span>
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Website</p>
-							<label>
-								<input type="text" placeholder="Type here">
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Phone Number</p>
-							<label>
-								<input type="text" placeholder="Type here">
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Contact Person's Name and Title</p>
-							<label>
-								<input type="text" placeholder="Type here">
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">If Form D has been filed by the issuer, enter CIK (Filer ID Number) (optional)</p>
-							<label>
-								<input type="text" placeholder="Type here">
-							</label>
-						</div>
-						<hr>
-						<p class="form__ttl">Deal Summary</p>
-						<div class="form__bl">
-							<p class="form__subttl">List other reps involved (optional)</p>
-							<p>If any, including co-marketing agreements with other GCS reps or outside Broker Dealers</p>
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Business Summary</p>
-							<p>Brief description of age, size and nature of business model</p>
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Principals</p>
-							<p>Names and backgrounds of the company's key principals</p>
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Counsel for the Company</p>
-							<p>Firm name, contact name, phone, email address, website</p>
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">History of Engagement</p>
-							<p>How you came to know about the company, how long, and in what depth</p>
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Due Diligence Summary</p>
-							<p>Describe what you have done to check out the story including names of people you have met, dates, and results of any site visits, third party verification, etc.</p>
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Selling Points</p>
-							<p>Key benefits of the opportunity</p>
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Risk Factors / Areas of Concern</p>
-							<p>Issues that detract from the overall opportunity -- NOTE anything included here should be formally communicated to all parties as a risk disclosure</p>
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Economics of Engagement</p>
-							<p>How much capital is being raised, in what type of security, what is the fee on this deal</p>
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Are you, or do you plan to be, an investor in this company?</p>
-							<p>If yes, please complete a "Private Securities Transaction" form after you have completed this form.</p>
-							<label class="radio">
-								<input type="radio" name="plan" value="yes">
-								<span class="radio__span">Yes</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="plan" value="no">
-								<span class="radio__span">No</span>
-							</label>
-						</div>
-						<hr>
-						<p class="form__ttl">FINRA Private Placement Form Questions</p>
-						<div class="form__bl">
-							<p class="form__subttl">Maximum Amount to be raised in dollars</p>
-							<label class="is-middle-size">
-								<input type="text" placeholder="Type here">
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Commencement Date</p>
-							<label class="is-middle-size">
-								<input type="text" placeholder="Type here">
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Conclusion Date</p>
-							<p>Enter date, unknown, or continuous</p>
-							<label class="is-middle-size">
-								<input type="text" placeholder="Type here">
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Maximum Sales Commission (% rate)</p>
-							<label class="is-middle-size">
-								<input type="text" placeholder="Type here">
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Aggregate amount of any other compensation to registered persons disclosed in the offering document:</p>
-							<label class="is-middle-size">
-								<input type="text" placeholder="Type here">
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Dollar amount of compensation disclosed</p>
-							<label class="is-middle-size">
-								<input type="text" placeholder="Type here">
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Stated or Target Rate of Return (%) as disclosed in the offering document</p>
-							<p>Enter date, unknown, or continuous</p>
-							<label class="is-middle-size">
-								<input type="text" placeholder="Type here">
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Are you using a private placement memorandum in connection with any sales in the offering? (optional)</p>
-							<label class="radio">
-								<input type="radio" name="private" value="yes">
-								<span class="radio__span">Yes</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="private" value="no">
-								<span class="radio__span">No</span>
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Is the offering a “contingency offering”?</p>
-							<label class="radio">
-								<input type="radio" name="offer" value="yes">
-								<span class="radio__span">Yes</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="offer" value="no">
-								<span class="radio__span">No</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="offer" value="unknown">
-								<span class="radio__span">Unknown</span>
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Are independently audited financial statements available for the issuer’s most recently completed fiscal year?</p>
-							<label class="radio">
-								<input type="radio" name="available" value="yes">
-								<span class="radio__span">Yes</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="available" value="no">
-								<span class="radio__span">No</span>
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">Is the issuer able to use offering proceeds to make or repay loans to, or purchase assets from, any officer, director or executive management of the issuer, sponsor, general partner, manager, advisor or any of the issuer’s affiliates?</p>
-							<label class="radio">
-								<input type="radio" name="usage" value="yes">
-								<span class="radio__span">Yes</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="usage" value="no">
-								<span class="radio__span">No</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="usage" value="unknown">
-								<span class="radio__span">Unknown</span>
-							</label>
-						</div>
-						<div class="form__bl">
-							<p class="form__subttl">File Uploads</p>
-							<p>Some information is Required, some is Optional. If you have the Optional documentation, it must be included for a supervisor to review. Please remember that ALL materials that will be shown to investors must be uploaded here. If you do not yet have any of this documentation in hand, use the NOTES field above to provide an explanation.</p>
-							<div class="form__upload">
-								<a href="#"><i class="icon icon-upload"></i>Engagement Letter: EXECUTED copy</a>
-							</div>
-							<div class="form__upload">
-								<a href="#"><i class="icon icon-upload"></i>Investment Memorandum (PPM, CIM, etc)</a>
-							</div>
-							<div class="form__upload">
-								<a href="#"><i class="icon icon-upload"></i>Letter of Incorporation</a>
-							</div>
-							<div class="form__upload">
-								<a href="#"><i class="icon icon-upload"></i>Subscription Packet</a>
-							</div>
-							<div class="form__upload">
-								<a href="#"><i class="icon icon-upload"></i>Management Bios (optional)</a>
-								<small>Please provide a more complete description of the principals than would be found on their website, for example</small>
-							</div>
-							<div class="form__upload">
-								<a href="#"><i class="icon icon-upload"></i>Presentation (optional)</a>
-							</div>
-							<div class="form__upload">
-								<a href="#"><i class="icon icon-upload"></i>Form D Upload (if applicable) (optional)</a>
-							</div>
-							<div class="form__upload">
-								<a href="#"><i class="icon icon-upload"></i>Placement Agent Disclosure (optional)</a>
-							</div>
-							<div class="form__upload">
-								<a href="#"><i class="icon icon-upload"></i>Target Investor List (optional)</a>
-							</div>
-							<div class="form__upload">
-								<a href="#"><i class="icon icon-upload"></i>Upload additional file (optional)</a>
-							</div>
-						</div>
-					</form>
-				</div>
+					</div>
+				</form>
 			</div>
 		</div>
-
 	</div>
 </div>
 <!-- END out-->

@@ -1,51 +1,4 @@
 $(document).ready(function() {
-
-	// popups
-	var openedPopup = null;
-
-	var showPopup = function(popup) {
-		if ( openedPopup ) {
-			hidePopup(openedPopup);
-		}
-		popup.addClass('is-active');
-		openedPopup = popup;
-		if ($('.overlay').not('is-active')) {
-			$('.overlay').addClass('is-active');
-		}
-		if (!popup.hasClass('js-avoid-overflow')) {
-			$('body').addClass('is-overflow');
-		}
-	};
-
-	var hidePopup = function(popup) {
-		popup.removeClass('is-active');
-		openedPopup = null;
-		$('body').removeClass('is-overflow');
-	};
-
-	$('[data-popup]').each(function(index, el) {
-		var $el = $(el);
-		var popup;
-
-		$el.on('click', function(event) {
-			event.preventDefault();
-			event.stopPropagation();
-			popup = $('#' + $el.data('popup'));
-			showPopup(popup);
-		});
-	});
-
-	// close popup
-	$('.js-close').on('click touchend', function(e) {
-		var popup;
-
-		e.preventDefault();
-		popup = $(this).parents('.js-popup');
-		hidePopup(popup);
-		$('.overlay').removeClass('is-active');
-		$(this).parents('.js-bar').removeClass('is-active');
-	});
-
 	// animate back to top
 	$('.js-top').click(function(e) {
 		e.preventDefault();
@@ -61,23 +14,38 @@ $(document).ready(function() {
 	});
 
 	$('.js-tooltip-guide').tooltipster({
-		position: 'right',
 		maxWidth: 290,
+		position: 'right',
 		interactive: true,
 		contentAsHTML: true,
-		trigger: 'custom'
+		trigger: 'custom',
+		functionReady: function(origin, tooltip) {
+			origin.tooltipster('option', 'position', origin.data('tooltip-position'));
+
+			tooltip.find('a').on('click', function(evt) {
+				evt.preventDefault();
+				origin.tooltipster('hide').removeClass('is-visible');
+			});
+		}
 	});
 
 	$('.js-tooltip-guide').tooltipster('show');
-
-	$('.js-tooltip-guide').click(function() {
-		var data = $(this).data('attr');
-		$('.js-tooltip-guide-hide[data-attr="' + data + '"]').parents('.tooltipster-base').toggle();
+	$('.js-tooltip-guide').click(function(evt) {
+		evt.preventDefault();
 	});
 
-	$('.js-tooltip-guide-hide').click(function(e) {
-		e.preventDefault();
-		$(this).parents('.tooltipster-base').hide();
+	// comments
+	$('.js-comment').on('click', function(evt) {
+		evt.preventDefault();
+		var newComment,
+			commentParent = $(this).parent();
+
+		if ( commentParent.children('.newpost').length === 0 ) {
+			newComment = document.createElement('div');
+			newComment.innerHTML = '<label><input type="text" placeholder="Type your comment/question"></label><div class="btn-group"><button class="btn btn-no s-pad" type="button">Cancel</button><button class="btn btn-ok s-pad" type="submit">Comment</button></div>';
+			newComment.classList.add('newpost');
+			commentParent.append(newComment);
+		}
 	});
 
 	// dropit
