@@ -10,13 +10,14 @@
 	opacity: 0
 	visibility: hidden
 	overflow: auto
-	z-index: 10
 	white-space: nowrap
-	transition: opacity 0.4s, visibility 0.4s
+	z-index: -1
 	+vertical
+	+tr(0.4s)
 	&.is-active
 		opacity: 1
 		visibility: visible
+		z-index: 10
 
 // suggest
 .suggest
@@ -32,11 +33,11 @@
 	box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5)
 	opacity: 0
 	visibility: hidden
-	z-index: 11
 	+tr(0.4s)
 	&.is-active
 		opacity: 1
 		visibility: visible
+		z-index: 11
 	&__head
 		+clr
 	&__close
@@ -116,7 +117,6 @@
 	border: 1px solid #dce0e7
 	border-radius: 4px
 	box-shadow: 0 2px 9px rgba(0, 0, 0, 0.5)
-	z-index: 11
 	opacity: 0
 	visibility: hidden
 	+tr(0.4s)
@@ -135,6 +135,7 @@
 	&.is-active
 		opacity: 1
 		visibility: visible
+		z-index: 11
 	&__head
 		position: relative
 		padding: 10px 17px
@@ -311,4 +312,3 @@
 			background-size: 16px 16px
 	.steps
 		margin-top: 15px
-

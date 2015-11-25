@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Engagement Letter (comment can be added)</title>
+	<title>Engagement Letter 2 (with comment added)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -17,34 +17,12 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<!-- begin header  -->
-	<div class="header is-form js-fixed">
-		<div class="l-head">
-			<div class="header__in">
-				<div class="header__group">
-					<a href="#" class="header__close"><i class="icon icon-close"></i></a>
-					<div class="header__bl">
-						<p><i class="svg-ico letter-ico"></i><span>Engagement Letter Steve Buscemi</span></p>
-						<small>Space X</small>
-					</div>
-				</div>
-				<div class="btn-group">
-					<button class="btn btn-no s-pad" type="button">Save as draft</button>
-					<button class="btn btn-ok s-pad" type="submit">Submit for review</button>
-				</div>
-			</div>
-			<div class="header__in js-hide">
-				<ul class="header__list">
-					<li><a href="#" class="header__option">Current task</a></li>
-					<li><a href="#" class="header__option">Form Info</a></li>
-					<li><a href="#" class="header__option">Attachments</a></li>
-					<li><a href="#" class="header__option">Help</a></li>
-				</ul>
-			</div>
-		</div>
+	//= partials/header-form-elform.html
+	<!-- begin bar  -->
+	<div class="bar js-bar">
+		<p>Comment posted to task page <a href="#" class="bar__link js-close">OK</a></p>
 	</div>
-	<!-- end header -->
-
+	<!-- end bar -->
 	<div class="main is-form">
 		<div class="l-form">
 			<!-- begin alert  -->
@@ -66,7 +44,7 @@
 					</div>
 					<hr>
 					<div class="form__bl">
-						<a href="#" class="addpost is-visible js-tooltip-guide js-comment" data-tooltip-position="bottom-left" title="<p>You can ask a question about any field and get a reply before submitting the form. Leave a comment close the document and GCS staff will be notified.</p><a href='#' class='tooltipster__link'>Got it</a>">
+						<a href="#" class="addpost js-comment">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
@@ -75,6 +53,27 @@
 						<label>
 							<input type="text" placeholder="Type here">
 						</label>
+						<div class="newpost js-newpost">
+							<div class="newpost__in">
+								<a href="#" class="newpost__link">Mark as resolved</a>
+								<div class="newpost__bl is-client">
+									<div class="newpost__ttl">
+										Me
+										<span class="newpost__date">6 hours ago</span>
+									</div>
+									<p>I have no idea what does this mean. Can you please help me out?</p>
+									<div class="newpost__edit">
+										<a href="#">Edit</a>
+										<a href="#">Delete</a>
+									</div>
+								</div>
+								<label><input type="text" placeholder="Type your comment/question"></label>
+								<div class="btn-group">
+									<button class="btn btn-no m-pad" type="button">Cancel</button>
+									<button class="btn btn-ok m-pad" type="submit" disabled>Comment</button>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a href="#" class="addpost js-comment">

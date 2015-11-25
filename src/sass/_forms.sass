@@ -19,7 +19,7 @@
 		padding: 0 109px
 		margin-bottom: 20px
 		&:hover
-			.comment
+			.addpost
 				opacity: 1
 				visibility: visible
 	&__upload
@@ -85,7 +85,7 @@
 	.icon-warn
 		color: #f76300
 
-.comment
+.addpost
 	position: absolute
 	display: inline-block
 	top: 4px
@@ -103,11 +103,61 @@
 
 .newpost
 	position: relative
-	padding: 15px 30px
+	margin-top: 17px
+	padding: 15px 20px
 	background: #f3f4f6
 	border: 1px solid #cfd5e0
 	border-radius: 4px
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12)
-	+clr
-	.btn-group
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		bottom: 100%
+	&:before
+		left: 22px
+		+arr(18, 11, #cfd5e0, t)
+	&:after
+		left: 24px
+		+arr(15, 10, #f3f4f6, t)
+	&__in
+		+clr
+	&__bl
+		margin-bottom: 17px
+		color: #282828
+		&.is-client
+			color: #6c757a
+		a
+			color: #097bf2
+			&:hover
+				text-decoration: underline
+	&__link
+		margin-left: 10px
 		float: right
+		color: #097bf2
+		&:hover
+			text-decoration: underline
+	&__ttl
+		margin-bottom: 2px
+		color: #282828
+		+opensans-sb
+		.status__info
+			vertical-align: 2px
+	&__date
+		margin-left: 3px
+		color: #96a0a6
+		+opensans
+	&__edit
+		margin-top: 5px
+		font-size: 11px
+		a
+			display: inline-block
+			margin-right: 8px
+			color: #96a0a6
+	label
+		margin: 0 0 10px
+	.btn-group
+		display: none
+		float: right
+		&.is-visible
+			display: block
