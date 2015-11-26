@@ -28,15 +28,15 @@
 					<li class="menu__option"><a class="menu__link" href="#">Reports</a></li>
 					<li class="menu__option"><a class="menu__link" href="#">Entries</a></li>
 					<li class="menu__option"><a class="menu__link" href="#">Library</a></li>
-					<li class="menu__option js-wrap">
-						<a class="menu__link js-dropit" href="#">Me</a>
-						<div class="dropit js-to-drop">
-							<ul>
-								<li class="dropit__option"><a href="#">Profile</a></li>
-								<li class="dropit__option"><a href="#">Settings</a></li>
-								<li class="dropit__option"><a href="#">My Team</a></li>
-								<li class="dropit__option"><a href="#">Activity Log</a></li>
-								<li class="dropit__option"><a href="#">Log Out</a></li>
+					<li class="menu__option">
+						<div class="dropdown is-menu js-dropdown">
+							<p class="dropdown__item">Me</p>
+							<ul class="dropdown__list">
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Settings</a></li>
+								<li><a href="#">My Team</a></li>
+								<li><a href="#">Activity Log</a></li>
+								<li><a href="#">Log Out</a></li>
 							</ul>
 						</div>
 					</li>
@@ -128,7 +128,7 @@
 						<td>
 							<div class="status is-pending">
 								<i class="icon icon-pending"></i>
-								<span>Sent for review</span>
+								<span title="Sent for review">Sent for review</span>
 							</div>
 						</td>
 						<td>
@@ -156,7 +156,7 @@
 						<td>
 							<div class="status is-pending">
 								<i class="icon icon-pending"></i>
-								<span>Sent for review</span>
+								<span title="Sent for review">Sent for review</span>
 							</div>
 						</td>
 						<td>
@@ -342,7 +342,7 @@
 						<td>
 							<div class="status is-pending">
 								<i class="icon icon-pending"></i>
-								<span>Sent for review</span>
+								<span title="Sent for review">Sent for review</span>
 							</div>
 						</td>
 						<td class="table__clip" data-popup="attach">
@@ -378,7 +378,7 @@
 						<td>
 							<div class="status is-pending">
 								<i class="icon icon-pending"></i>
-								<span>Sent for review</span>
+								<span title="Sent for review">Sent for review</span>
 							</div>
 						</td>
 						<td class="table__clip" data-popup="attach">
@@ -414,7 +414,7 @@
 						<td>
 							<div class="status is-pending">
 								<i class="icon icon-pending"></i>
-								<span>In queue for review</span>
+								<span title="In queue for review">In queue for review</span>
 							</div>
 						</td>
 						<td class="table__clip">&nbsp;</td>

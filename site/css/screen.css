@@ -192,6 +192,9 @@ label.is-middle-size { max-width: 340px; }
 .dropdown.is-filter .dropdown__list { top: 100%; }
 .dropdown.is-form { width: 100%; max-width: 340px; }
 .dropdown.is-form .dropdown__list { width: 100%; }
+.dropdown.is-menu .dropdown__item { padding: 0; border: none; background: none; text-transform: uppercase; color: #93988f; }
+.dropdown.is-menu .dropdown__item:before { display: none; }
+.dropdown.is-menu .dropdown__list { left: -15px; border-radius: 4px; }
 .dropdown__item { position: relative; padding: 10px 25px 10px 10px; font-size: 13px; color: #6c757a; border: 1px solid #cfd5e0; border-radius: 4px; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-color: #f7f8f9; background-image: linear-gradient(#f7f8f9, #ebeced); }
 .dropdown__item:before { content: ""; position: absolute; top: 50%; right: 10px; margin-top: -3px; width: 0px; height: 0px; border-style: solid; border-width: 5px 4.5px 0 4.5px; border-color: #6c757a transparent transparent transparent; }
 .dropdown__item.is-chosen { color: #282828; }
@@ -433,7 +436,7 @@ label.is-middle-size { max-width: 340px; }
 .tabs__el:last-child { border-right: none; }
 .tabs__el.is-active { background: #828c92; color: #FFF; }
 
-.table { margin-bottom: 45px; font-size: 13px; color: #6c757a; }
+.table { max-width: 100%; margin-bottom: 45px; font-size: 13px; color: #6c757a; table-layout: fixed; }
 .table.is-top-aligned td { padding: 10.5px 8.5px; vertical-align: top; }
 .table.is-top-aligned .table__drop { padding-top: 5px; }
 .table__head { background: #f7f8f9; text-align: left; border-top: 1px solid #efefef; border-bottom: 1px solid #efefef; }
@@ -461,9 +464,11 @@ label.is-middle-size { max-width: 340px; }
 .table th.table__drop:before { display: none; }
 .table th.table__clip { text-align: center; }
 .table th.table__clip.is-active { padding-right: 17px; }
-.table td { padding: 5px 8.5px; border-top: 1px solid #efefef; border-bottom: 1px solid #efefef; vertical-align: middle; }
+.table td { padding: 5px 8.5px; border-top: 1px solid #efefef; border-bottom: 1px solid #efefef; vertical-align: middle; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.table td > * { overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; }
 .table td:first-child { padding-left: 17px; }
 .table .dropdown { vertical-align: middle; }
+.table .status span { text-overflow: ellipsis; white-space: nowrap; }
 .table .svg-ico { display: inline-block; width: 16px; height: 16px; background-size: 16px 16px; vertical-align: middle; }
 .table .icon-pending { margin-right: 5px; }
 .table .icon-customer2 { font-size: 17px; color: #3caca2; vertical-align: middle; }

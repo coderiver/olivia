@@ -63,9 +63,11 @@
 
 // table
 .table
+	max-width: 100%
 	margin-bottom: 45px
 	font-size: 13px
 	color: #6c757a
+	table-layout: fixed
 	&.is-top-aligned
 		td
 			padding: 10.5px 8.5px
@@ -162,10 +164,21 @@
 		border-top: 1px solid #efefef
 		border-bottom: 1px solid #efefef
 		vertical-align: middle
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+		> *
+			overflow: hidden
+			-ms-text-overflow: ellipsis
+			text-overflow: ellipsis
 		&:first-child
 			padding-left: 17px
 	.dropdown
 		vertical-align: middle
+	.status
+		span
+			text-overflow: ellipsis
+			white-space: nowrap
 	.svg-ico
 		display: inline-block
 		width: 16px
