@@ -66,60 +66,57 @@
 	margin-bottom: 45px
 	font-size: 13px
 	color: #6c757a
+	&.is-top-aligned
+		td
+			padding: 10.5px 8.5px
+			vertical-align: top
+		.table__drop
+			padding-top: 5px
 	&__head
 		background: #f7f8f9
 		text-align: left
 		border-top: 1px solid #efefef
 		border-bottom: 1px solid #efefef
-	&__name
-		width: 32.5%
-		max-width: 350px
-		span
-			color: #282828
-			+opensans-sb
-	&__info
-		width: 63%
-		color: #282828
 	&__clip
+		width: 5%
 		text-align: center
 		font-size: 15px
 		color: #bcc6cc
 		.icon
 			vertical-align: -1px
+	&__drop
+		width: 50px
+		padding: 5px 8.5px
+		text-align: center
 	&__desc
-		display: inline-block
+		position: relative
 		font-size: 0
 		margin-bottom: 6px
-		color: #097bf2
+		color: #6C757A
 		text-transform: capitalize
-		white-space: nowrap
 		&:only-child
 			margin: 0
-		.svg-ico
-			margin-right: 8px
+		.svg-ico, .icon
+			position: absolute
+			top: 50%
+			margin-top: -9px
 		span
 			display: inline-block
+			padding-left: 24px
 			font-size: 13px
-			vertical-align: middle
+			line-height: 1.2
+			&:only-child
+				padding-left: 0
 	&__el
 		white-space: nowrap
 		+rmono
 		span
 			display: inline-block
-	&__pending
-		+clr
-		i
-			float: left
-			margin-top: 2px
-		span
-			display: block
-			overflow: hidden
+			vertical-align: middle
 	tr
 		&:hover
 			background: darken(#fff, 5%)
 		&.is-pending
-			.table__info
-				color: #9AA4A6
 			.table__desc
 				color: #6C757A
 		&.table__head
@@ -133,6 +130,7 @@
 		border-right: 1px solid #dce0e7
 		cursor: pointer
 		vertical-align: middle
+		+opensans-sb
 		&:before
 			display: none
 			content: ""
@@ -158,22 +156,16 @@
 		&.table__clip
 			text-align: center
 		&.table__clip.is-active
-			padding-right: 20px
-		&.table__status
-			width: 170px
+			padding-right: 17px
 	td
-		padding: 8px 8.5px 8px
+		padding: 5px 8.5px
 		border-top: 1px solid #efefef
 		border-bottom: 1px solid #efefef
-		vertical-align: top
+		vertical-align: middle
 		&:first-child
-			width: 115px
 			padding-left: 17px
-		&.table__drop
-			width: 50px
-			padding: 5px 8.5px
-		&.table__status
-			width: 170px
+	.dropdown
+		vertical-align: middle
 	.svg-ico
 		display: inline-block
 		width: 16px
@@ -182,11 +174,13 @@
 		vertical-align: middle
 	.icon-pending
 		margin-right: 5px
-	.txt-right
-		text-align: right
-		padding-right: 10px
-	.is-bold
-		line-height: 1.2
+	.icon-customer2
+		font-size: 17px
+		color: #3caca2
+		vertical-align: middle
+	.txt-black
+		color: #282828
+	.txt-bold
 		+opensans-sb
 
 // sidebar

@@ -33,6 +33,7 @@
 	box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5)
 	opacity: 0
 	visibility: hidden
+	z-index: -1
 	+tr(0.4s)
 	&.is-active
 		opacity: 1
@@ -119,6 +120,7 @@
 	box-shadow: 0 2px 9px rgba(0, 0, 0, 0.5)
 	opacity: 0
 	visibility: hidden
+	z-index: -1
 	+tr(0.4s)
 	&:before,
 	&:after
@@ -226,8 +228,8 @@
 	box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5)
 	border-radius: 4px
 	vertical-align: middle
-	z-index: -1
 	white-space: normal
+	z-index: -1
 	&.is-active
 		display: inline-block
 	&.is-newdeal
