@@ -90,7 +90,7 @@ $(document).ready(function() {
 
 	// close dropdown on body click
 	$('body').click(function(e) {
-		if ( $(e.target).parents('.js-wrap').length > 0 || $(e.target).parents('.js-dropdown-wrap').length > 0) {
+		if ( $(e.target).parents('.js-wrap').length > 0 || $(e.target).parents('.js-dropdown').length > 0) {
 			e.stopPropagation();
 		} else {
 			$('.js-to-drop').removeClass('is-visible');
@@ -132,8 +132,6 @@ $(document).ready(function() {
 
 	// dropdown
 	$('.js-dropdown').click(function(e) {
-		e.stopPropagation();
-
 		if ( $(e.target).parents('.js-inner').length === 0 ) {
 			$(this).toggleClass('is-active');
 		}

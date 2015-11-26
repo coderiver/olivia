@@ -15,7 +15,7 @@ $(document).ready(function() {
 		// detect click on table row
 		$('.js-link').click(function(e) {
 			var targetLink = $(this).data('href');
-			if ($(e.target).parents('.js-dropdown-wrap').length > 0) {
+			if ($(e.target).parents('.js-dropdown').length > 0) {
 				if (!$(e.target).parents('.dropdown__list').length > 0) {
 					e.preventDefault();
 				}
