@@ -10,7 +10,7 @@
 	+clr
 	&__ttl
 		float: left
-		margin-top: 10px
+		margin-top: 5px
 		font-size: 17px
 		color: #282828
 	&__in
@@ -84,7 +84,7 @@
 		text-align: center
 		font-size: 15px
 		color: #bcc6cc
-		.icon
+		.icon.icon-clip
 			vertical-align: -1px
 	&__drop
 		width: 50px
@@ -96,6 +96,9 @@
 		margin-bottom: 6px
 		color: #6C757A
 		text-transform: capitalize
+		&.is-blue
+			color: #097bf2
+			+opensans-sb
 		&:only-child
 			margin: 0
 		.svg-ico, .icon
@@ -110,7 +113,6 @@
 			&:only-child
 				padding-left: 0
 	&__el
-		white-space: nowrap
 		+rmono
 		span
 			display: inline-block
@@ -164,35 +166,36 @@
 		border-top: 1px solid #efefef
 		border-bottom: 1px solid #efefef
 		vertical-align: middle
-		overflow: hidden
-		text-overflow: ellipsis
-		white-space: nowrap
-		> *
+		> *:not(.dropdown)
 			overflow: hidden
-			-ms-text-overflow: ellipsis
 			text-overflow: ellipsis
+			max-width: 100%
+			white-space: nowrap
 		&:first-child
 			padding-left: 17px
 	.dropdown
 		vertical-align: middle
 	.status
 		span
-			text-overflow: ellipsis
-			white-space: nowrap
+			display: inline
 	.svg-ico
 		display: inline-block
 		width: 16px
 		height: 16px
 		background-size: 16px 16px
 		vertical-align: middle
+	.icon
+		vertical-align: middle
 	.icon-pending
 		margin-right: 5px
-	.icon-customer2
+	.icon-customer2,
+	.icon-corp
 		font-size: 17px
 		color: #3caca2
-		vertical-align: middle
 	.txt-black
 		color: #282828
+	.txt-grey
+		color: #96a0a6
 	.txt-bold
 		+opensans-sb
 
@@ -393,3 +396,9 @@
 			height: 38px
 	.dropdown
 		vertical-align: middle
+
+.show-more
+	display: inline-block
+	padding: 5px 0
+	color: #097bf2
+	vertical-align: middle

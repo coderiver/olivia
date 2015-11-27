@@ -132,44 +132,44 @@
 					</ul>
 					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
 					<!-- begin suggest for new deal -->
-						<div class="suggest js-popup js-avoid-overflow" id="suggest">
-							<div class="suggest__head">
-								<p class="suggest__txt">Submit Deal Memo</p>
-								<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
-							</div>
-							<div class="suggest__menu">
-								<a href="#" class="suggest__bl">
-									<i class="svg-ico letter-ico"></i>
-									<div class="suggest__in">
-										<p>Add Engagement Letter</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl">
-									<i class="svg-ico memo-ico"></i>
-									<div class="suggest__in">
-										<p>Add Deal Memo</p>
-										<div class="status">
-											<span class="status__info">New</span>
-											<span>Submit</span>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl is-disabled">
-									<i class="svg-ico customer-ico"></i>
-									<div class="suggest__in">
-										<p>Add Customer</p>
-										<p>Preferebly submit after engagement letter and deal memo approval</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl is-disabled">
-									<i class="svg-ico transaction-ico"></i>
-									<div class="suggest__in">
-										<p>Add Transaction Report</p>
-										<p>Preferebly submit after engagement letter and deal memo approval</p>
-									</div>
-								</a>
-							</div>
+					<div class="suggest js-popup js-avoid-overflow" id="suggest">
+						<div class="suggest__head">
+							<p class="suggest__txt">Submit Deal Memo</p>
+							<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
 						</div>
+						<div class="suggest__menu">
+							<a href="#" class="suggest__bl">
+								<i class="svg-ico letter-ico"></i>
+								<div class="suggest__in">
+									<p>Add Engagement Letter</p>
+								</div>
+							</a>
+							<a href="#" class="suggest__bl">
+								<i class="svg-ico memo-ico"></i>
+								<div class="suggest__in">
+									<p>Add Deal Memo</p>
+									<div class="status">
+										<span class="status__info">New</span>
+										<span>Submit</span>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="suggest__bl is-disabled">
+								<i class="svg-ico customer-ico"></i>
+								<div class="suggest__in">
+									<p>Add Customer</p>
+									<p>Preferebly submit after engagement letter and deal memo approval</p>
+								</div>
+							</a>
+							<a href="#" class="suggest__bl is-disabled">
+								<i class="svg-ico transaction-ico"></i>
+								<div class="suggest__in">
+									<p>Add Transaction Report</p>
+									<p>Preferebly submit after engagement letter and deal memo approval</p>
+								</div>
+							</a>
+						</div>
+					</div>
 					<!-- end suggest for new deal -->
 				</div>
 				<!-- begin start  -->
@@ -191,7 +191,13 @@
 					</div>
 				</div>
 				<!-- begin table  -->
-				<table class="table">
+				<table class="table is-top-aligned">
+					<colgroup>
+						<col width="130">
+						<col width="632">
+						<col width="117">
+						<col>
+					</colgroup>
 					<tr class="js-link" data-href="http://www.google.com">
 						<td>
 							<div class="status">
@@ -199,12 +205,12 @@
 								<span>Submit</span>
 							</div>
 						</td>
-						<td class="table__info">
-							<div class="table__desc">
+						<td class="txt-grey">
+							<div class="table__desc is-blue">
 								<i class="svg-ico memo-ico"></i>
 								<span>Submit Deal Memo</span>
 							</div>
-							<p>Once your Memo will be approved we will review your customers and transactions</p>
+							<p class="txt-black">Once your Memo will be approved we will review your customers and transactions</p>
 						</td>
 						<td>
 							<p>Aug 10, 2015</p>
@@ -227,7 +233,7 @@
 								<span>Sent for review</span>
 							</div>
 						</td>
-						<td class="table__info">
+						<td class="txt-grey">
 							<div class="table__desc">
 								<i class="svg-ico letter-ico"></i>
 								<span>Submit Space X Engagement Letter</span>
@@ -259,22 +265,135 @@
 					</div>
 				</div>
 				<!-- end activity -->
-				<div class="deal">
-					<div class="tooltip">
-						<p>Deal Folder</p>
-						<div class="tooltip__ico js-tooltip" title="Deal folder Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
+				<!-- begin filters  -->
+				<div class="filters">
+					<div class="filters__ttl">
+						<div class="tooltip">
+							<p>Deal Folder</p>
+							<div class="tooltip__ico js-tooltip" title="Deal folder Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
+						</div>
+					</div>
+					<div class="filters__in">
+						<div class="dropdown is-filter js-dropdown">
+							<p class="dropdown__item">Settings</p>
+							<div class="dropdown__list js-inner js-check">
+								<div class="dropdown__check">
+									<label class="check" data-attr="letter">
+										<input type="checkbox" checked>
+										<span class="check__span">Engagement Letter</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="deal">
+										<input type="checkbox" checked>
+										<span class="check__span">Deal Memo</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="customers">
+										<input type="checkbox" checked>
+										<span class="check__span">Customers</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="transactions">
+										<input type="checkbox" checked>
+										<span class="check__span">Transactions</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="tasks">
+										<input type="checkbox" checked>
+										<span class="check__span">Tasks</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="letterNum">
+										<input type="checkbox" checked>
+										<span class="check__span">Number of engag. letters</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="customersNum">
+										<input type="checkbox">
+										<span class="check__span">Number of customers</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="transactionNum">
+										<input type="checkbox">
+										<span class="check__span">Number of transactions</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="transactionTotal">
+										<input type="checkbox">
+										<span class="check__span">Transactions total</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="fundsTotal">
+										<input type="checkbox">
+										<span class="check__span">Funds received total</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="latestfunds">
+										<input type="checkbox">
+										<span class="check__span">Latest funds received date</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="comissionTotal">
+										<input type="checkbox">
+										<span class="check__span">My commission total</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="latestCommisionPaid">
+										<input type="checkbox">
+										<span class="check__span">Latest comission paid</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="latestCommisionDate">
+										<input type="checkbox">
+										<span class="check__span">Latest comission paid date</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="gcs">
+										<input type="checkbox">
+										<span class="check__span">GCS commision total</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="dateCreated">
+										<input type="checkbox">
+										<span class="check__span">Date created</span>
+									</label>
+								</div>
+								<div class="dropdown__check">
+									<label class="check" data-attr="update">
+										<input type="checkbox" checked>
+										<span class="check__span">Last update</span>
+									</label>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+				<!-- end filters -->
 				<!-- begin table  -->
 				<table class="table">
 					<tr class="table__head">
-						<th><p>ID</p></th>
-						<th class="table__name"><p>Name</p></th>
-						<th><p>Type</p></th>
-						<th><p>Status</p></th>
+						<th width="112"><p>ID</p></th>
+						<th width="316"><p>Name</p></th>
+						<th width="150"><p>Type</p></th>
+						<th width="150"><p>Status</p></th>
 						<th class="table__clip"><i class="icon icon-clip"></i></th>
-						<th><p>Last Update</p></th>
-						<th class="table__drop"><p>&nbsp;</p></th>
+						<th width="117"><p>Last Update</p></th>
+						<th class="table__drop">&nbsp;</th>
 					</tr>
 					<tr class="js-link" data-href="http://www.google.com">
 						<td>
@@ -283,7 +402,7 @@
 								<span>EL12522</span>
 							</div>
 						</td>
-						<td class="table__name">
+						<td class="txt-bold">
 							<span>Steve Bushemi</span>
 						</td>
 						<td>
@@ -376,9 +495,7 @@
 					<p>Transaction Reports</p>
 				</div>
 				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico funds-ico"></i>
-					</div>
+					<i class="svg-ico funds-ico"></i>
 					<p>Receive Funds</p>
 				</div>
 				<div class="steps__bl">
@@ -408,10 +525,10 @@
 		<!-- begin table  -->
 		<table class="table">
 			<tr class="table__head">
-				<th><p>ID</p></th>
-				<th class="table__name"><p>Name</p></th>
+				<th width="137"><p>ID</p></th>
+				<th width="307"><p>Name</p></th>
 				<th><p>Type</p></th>
-				<th><p>Uploaded</p></th>
+				<th width="98"><p>Uploaded</p></th>
 				<th class="table__drop"><p>&nbsp;</p></th>
 			</tr>
 			<tr class="js-link" data-href="http://www.google.com">
@@ -421,7 +538,7 @@
 						<span>FI12522-001</span>
 					</div>
 				</td>
-				<td class="table__name">
+				<td class="txt-black">
 					<span>Approval Letter</span>
 				</td>
 				<td>
@@ -430,7 +547,7 @@
 				<td>
 					<p>Aug 10, 2015</p>
 				</td>
-				<td class="txt-right table__drop">
+				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list">
@@ -448,7 +565,7 @@
 						<span>FI12522-002</span>
 					</div>
 				</td>
-				<td class="table__name">
+				<td class="txt-black">
 					<span>Attachment Name</span>
 				</td>
 				<td>
@@ -457,7 +574,7 @@
 				<td>
 					<p>Aug 10, 2015</p>
 				</td>
-				<td class="txt-right table__drop">
+				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list">
@@ -475,7 +592,7 @@
 						<span>FI12522-003</span>
 					</div>
 				</td>
-				<td class="table__name">
+				<td class="txt-black">
 					<span>Client ID Scan</span>
 				</td>
 				<td>
@@ -484,7 +601,7 @@
 				<td>
 					<p>Aug 10, 2015</p>
 				</td>
-				<td class="txt-right table__drop">
+				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list">
@@ -502,7 +619,7 @@
 						<span>FI12522-004</span>
 					</div>
 				</td>
-				<td class="table__name">
+				<td class="txt-black">
 					<span>Client ID Scan Back</span>
 				</td>
 				<td>
@@ -511,7 +628,7 @@
 				<td>
 					<p>Aug 10, 2015</p>
 				</td>
-				<td class="txt-right table__drop">
+				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list">
@@ -529,7 +646,7 @@
 						<span>FI12522-034</span>
 					</div>
 				</td>
-				<td class="table__name">
+				<td  class="txt-black">
 					<span>FINRA Approval Letter</span>
 				</td>
 				<td>
@@ -538,7 +655,7 @@
 				<td>
 					<p>Aug 10, 2015</p>
 				</td>
-				<td class="txt-right table__drop">
+				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list">
@@ -556,7 +673,7 @@
 						<span>FI12522-006</span>
 					</div>
 				</td>
-				<td class="table__name">
+				<td class="txt-black">
 					<span>NDA template</span>
 				</td>
 				<td>
@@ -565,7 +682,7 @@
 				<td>
 					<p>Aug 10, 2015</p>
 				</td>
-				<td class="txt-right table__drop">
+				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list">
@@ -583,7 +700,7 @@
 						<span>FI12522-008</span>
 					</div>
 				</td>
-				<td class="table__name">
+				<td class="txt-black">
 					<span>My ID Scan</span>
 				</td>
 				<td>
@@ -592,7 +709,7 @@
 				<td>
 					<p>Aug 10, 2015</p>
 				</td>
-				<td class="txt-right table__drop">
+				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list">
@@ -610,7 +727,7 @@
 						<span>FI12522-008</span>
 					</div>
 				</td>
-				<td class="table__name">
+				<td class="txt-black">
 					<span>My ID Scan</span>
 				</td>
 				<td>
@@ -619,7 +736,7 @@
 				<td>
 					<p>Aug 10, 2015</p>
 				</td>
-				<td class="txt-right table__drop">
+				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list">
@@ -637,7 +754,7 @@
 						<span>FI12522-009</span>
 					</div>
 				</td>
-				<td class="table__name">
+				<td class="txt-black">
 					<span>Document name</span>
 				</td>
 				<td>
@@ -646,7 +763,7 @@
 				<td>
 					<p>Aug 10, 2015</p>
 				</td>
-				<td class="txt-right table__drop">
+				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list">
