@@ -31,6 +31,21 @@ $(document).ready(function() {
 			scrollInertia: 300
 		});
 
+		// measure width of more block
+		function measureMoreblock(){
+			setTimeout(function() {
+				$('.js-plus-more span:first-child').each(function() {
+					var plusBlockWidth = $(this).siblings('.table__more').outerWidth();
+					$(this).css({
+						'width' : 'calc(100% - ' + plusBlockWidth + 'px)'
+					});
+					$(this).parent().addClass('is-measured');
+				});
+			}, 0);
+		}
+
+		measureMoreblock();
+
 		// height of td in sidedrop
 		function sidedropRowHeight() {
 			setTimeout(function() {

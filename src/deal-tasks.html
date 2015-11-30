@@ -82,26 +82,26 @@
 					</div>
 				</div>
 				<!-- begin table  -->
-				<table class="table">
+				<table class="table is-top-aligned">
 					<tr class="table__head">
-						<th class="table__status"><p>Status</p></th>
-						<th><p>Description</p></th>
-						<th><p>Last Updated</p></th>
+						<th width="170"><p>Status</p></th>
+						<th width="598"><p>Description</p></th>
+						<th width="117"><p>Last Updated</p></th>
 						<th class="table__drop"><p>&nbsp;</p></th>
 					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td class="table__status">
+					<tr class="is-active js-link" data-href="http://www.google.com">
+						<td>
 							<div class="status">
 								<span class="status__info">New</span>
 								<span>Update</span>
 							</div>
 						</td>
-						<td class="table__info">
+						<td>
 							<div class="table__desc">
 								<i class="svg-ico memo-ico"></i>
 								<span>Update Space X Deal Memo</span>
 							</div>
-							<p>Hey Brian, your deal is 6 months old and its time to update a Deal memo, please open Deal Memo and fill in requested fields (marked orange). Better if you do it till…</p>
+							<p>Hey Brian, your deal is 6 months old and its time to update a Deal memo, please open Deal Memo and fill in requested fields (marked orange). Better if you do it till</p>
 						</td>
 						<td>
 							<p>Aug 10, 2015</p>
@@ -117,14 +117,14 @@
 							</div>
 						</td>
 					</tr>
-					<tr class="js-link" data-href="http://www.imgur.com">
-						<td class="table__status">
+					<tr class="is-active js-link" data-href="http://www.imgur.com">
+						<td>
 							<div class="status">
 								<i class="icon icon-warn"></i>
 								<span>Update</span>
 							</div>
 						</td>
-						<td class="table__info">
+						<td>
 							<div class="table__desc">
 								<i class="icon icon-customer2"></i>
 								<span>Update Steve Buscemi</span>
@@ -146,13 +146,13 @@
 						</td>
 					</tr>
 					<tr class="is-pending js-link" data-href="http://www.imgur.com">
-						<td class="table__status">
+						<td>
 							<div class="status is-pending">
 								<i class="icon icon-pending"></i>
 								<span>Sent for review</span>
 							</div>
 						</td>
-						<td class="table__info">
+						<td>
 							<div class="table__desc">
 								<i class="svg-ico letter-ico"></i>
 								<span>Submit Space X Engagement Letter</span>
@@ -182,15 +182,21 @@
 					</div>
 				</div>
 				<!-- begin table  -->
-				<table class="table">
+				<table class="table is-top-aligned">
+					<colgroup>
+						<col width="170">
+						<col width="598">
+						<col width="117">
+						<col>
+					</colgroup>
 					<tr class="js-link" data-href="http://www.google.com">
-						<td class="table__status">
+						<td>
 							<div class="status is-approved">
 								<i class="icon icon-check"></i>
 								<span>Approved</span>
 							</div>
 						</td>
-						<td class="table__info">
+						<td>
 							<div class="table__desc">
 								<i class="svg-ico letter-ico"></i>
 								<span>Submit Space X Engagement Letter</span>
@@ -200,7 +206,7 @@
 						<td>
 							<p>Aug 8, 2015</p>
 						</td>
-						<td class="txt-right table__drop">
+						<td class="table__drop">
 							<div class="dropdown js-dropdown">
 								<span class="dropdown__bl"></span>
 								<ul class="dropdown__list">
@@ -233,326 +239,8 @@
 </div>
 <!-- END out-->
 <div class="overlay">
-	<div class="popup is-dealflow js-popup" id="deal-flow">
-		<div class="popup__head no-bg">
-			<i class="icon icon-close js-close"></i>
-		</div>
-		<p class="popup__ttl">How to submit documentation to get paid</p>
-		<div class="popup__body">
-			<div class="steps">
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico letter-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Engagement Letter</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico memo-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Deal Memo</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico customer-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Customers</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico transaction-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Transaction Reports</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico funds-ico"></i>
-					</div>
-					<p>Receive Funds</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico paid-ico"></i>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="popup is-attach js-popup" id="attach">
-		<div class="popup__head">
-			<p>Attached files</p>
-			<i class="icon icon-close js-close"></i>
-		</div>
-		<div class="popup__body">
-			<p>Below are files attached to і [Document type]:</p>
-			<div class="popup__bl">
-				<div class="popup__el">
-					<i class="svg-ico letter-ico"></i>
-					<span class="popup__num">EL12522</span>
-					<span class="txt-bold">[Name of the form]</span>
-				</div>
-				<a href="#" class="popup__more">Open form to add file</a>
-			</div>
-		</div>
-		<!-- begin table  -->
-		<table class="table">
-			<tr class="table__head">
-				<th><p>ID</p></th>
-				<th class="table__name"><p>Name</p></th>
-				<th><p>Type</p></th>
-				<th><p>Uploaded</p></th>
-				<th class="table__drop"><p>&nbsp;</p></th>
-			</tr>
-			<tr class="js-link" data-href="http://www.google.com">
-				<td>
-					<div class="table__el">
-						<i class="svg-ico pdf-ico"></i>
-						<span>FI12522-001</span>
-					</div>
-				</td>
-				<td class="table__name">
-					<span>Approval Letter</span>
-				</td>
-				<td>
-					<p>PDF</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
-				</td>
-				<td class="txt-right table__drop">
-					<div class="dropdown js-dropdown">
-						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list">
-							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-			<tr class="js-link" data-href="http://www.google.com">
-				<td>
-					<div class="table__el">
-						<i class="svg-ico pic-ico"></i>
-						<span>FI12522-002</span>
-					</div>
-				</td>
-				<td class="table__name">
-					<span>Attachment Name</span>
-				</td>
-				<td>
-					<p>Image</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
-				</td>
-				<td class="txt-right table__drop">
-					<div class="dropdown js-dropdown">
-						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list">
-							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-			<tr class="js-link" data-href="http://www.google.com">
-				<td>
-					<div class="table__el">
-						<i class="svg-ico pic-ico"></i>
-						<span>FI12522-003</span>
-					</div>
-				</td>
-				<td class="table__name">
-					<span>Client ID Scan</span>
-				</td>
-				<td>
-					<p>Image</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
-				</td>
-				<td class="txt-right table__drop">
-					<div class="dropdown js-dropdown">
-						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list">
-							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-			<tr class="js-link" data-href="http://www.google.com">
-				<td>
-					<div class="table__el">
-						<i class="svg-ico unknown-ico"></i>
-						<span>FI12522-004</span>
-					</div>
-				</td>
-				<td class="table__name">
-					<span>Client ID Scan Back</span>
-				</td>
-				<td>
-					<p>File</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
-				</td>
-				<td class="txt-right table__drop">
-					<div class="dropdown js-dropdown">
-						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list">
-							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-			<tr class="js-link" data-href="http://www.google.com">
-				<td>
-					<div class="table__el">
-						<i class="svg-ico doc-ico"></i>
-						<span>FI12522-034</span>
-					</div>
-				</td>
-				<td class="table__name">
-					<span>FINRA Approval Letter</span>
-				</td>
-				<td>
-					<p>DOC</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
-				</td>
-				<td class="txt-right table__drop">
-					<div class="dropdown js-dropdown">
-						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list">
-							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-			<tr class="js-link" data-href="http://www.google.com">
-				<td>
-					<div class="table__el">
-						<i class="svg-ico pdf-ico"></i>
-						<span>FI12522-006</span>
-					</div>
-				</td>
-				<td class="table__name">
-					<span>NDA template</span>
-				</td>
-				<td>
-					<p>PDF</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
-				</td>
-				<td class="txt-right table__drop">
-					<div class="dropdown js-dropdown">
-						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list">
-							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-			<tr class="js-link" data-href="http://www.google.com">
-				<td>
-					<div class="table__el">
-						<i class="svg-ico pic-ico"></i>
-						<span>FI12522-008</span>
-					</div>
-				</td>
-				<td class="table__name">
-					<span>My ID Scan</span>
-				</td>
-				<td>
-					<p>Image</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
-				</td>
-				<td class="txt-right table__drop">
-					<div class="dropdown js-dropdown">
-						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list">
-							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-			<tr class="js-link" data-href="http://www.google.com">
-				<td>
-					<div class="table__el">
-						<i class="svg-ico pic-ico"></i>
-						<span>FI12522-008</span>
-					</div>
-				</td>
-				<td class="table__name">
-					<span>My ID Scan</span>
-				</td>
-				<td>
-					<p>Image</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
-				</td>
-				<td class="txt-right table__drop">
-					<div class="dropdown js-dropdown">
-						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list">
-							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-			<tr class="js-link" data-href="http://www.google.com">
-				<td>
-					<div class="table__el">
-						<i class="svg-ico doc-ico"></i>
-						<span>FI12522-009</span>
-					</div>
-				</td>
-				<td class="table__name">
-					<span>Document name</span>
-				</td>
-				<td>
-					<p>DOC</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
-				</td>
-				<td class="txt-right table__drop">
-					<div class="dropdown js-dropdown">
-						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list">
-							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-		</table>
-		<!-- end table -->
-	</div>
+	//= partials/popup-dealflow.html
+	//= partials/popup-attach.html
 </div>
 </body>
 </html>
