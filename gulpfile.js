@@ -166,7 +166,7 @@ gulp.task('font', function(){
             }))
             .pipe(gulp.dest('site/'));
     })
-    .pipe(gulp.dest('site/css/fonts/'))
+    .pipe(gulp.dest('site/fonts/'))
     .pipe(reload({stream: true}));
 });
 

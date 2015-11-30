@@ -24,12 +24,10 @@ html { box-sizing: border-box; }
 * { box-sizing: border-box; }
 *:before, *:after { box-sizing: border-box; }
 
-@font-face { font-family: "svgfont"; src: url("fonts/svgfont.eot"); src: url("fonts/svgfont.eot?#iefix") format("eot"), url("fonts/svgfont.woff") format("woff"), url("fonts/svgfont.woff2") format("woff2"), url("fonts/svgfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "svgfont"; src: url("../fonts/svgfont.eot"); src: url("../fonts/svgfont.eot?#iefix") format("eot"), url("../fonts/svgfont.woff") format("woff"), url("../fonts/svgfont.woff2") format("woff2"), url("../fonts/svgfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 .icon, [class^="icon-"], [class*=" icon-"], .steps__icon:before { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
-
-.icon-archive:before { content: ""; }
 
 .icon-arr-right:before { content: ""; }
 
@@ -39,29 +37,31 @@ html { box-sizing: border-box; }
 
 .icon-checked:before { content: ""; }
 
-.icon-clip:before { content: ""; }
-
 .icon-check:before { content: ""; }
-
-.icon-comment:before { content: ""; }
 
 .icon-close:before { content: ""; }
 
-.icon-delete:before { content: ""; }
+.icon-comment:before { content: ""; }
 
-.icon-customer2:before { content: ""; }
+.icon-clip:before { content: ""; }
 
 .icon-corp:before { content: ""; }
 
-.icon-logo:before { content: ""; }
+.icon-customer2:before { content: ""; }
+
+.icon-delete:before { content: ""; }
 
 .icon-folder:before { content: ""; }
+
+.icon-marked:before { content: ""; }
+
+.icon-logo:before { content: ""; }
 
 .icon-menu:before { content: ""; }
 
 .icon-pending:before { content: ""; }
 
-.icon-marked:before { content: ""; }
+.icon-plus:before { content: ""; }
 
 .icon-upload:before { content: ""; }
 
@@ -69,7 +69,7 @@ html { box-sizing: border-box; }
 
 .icon-warn:before { content: ""; }
 
-.icon-plus:before { content: ""; }
+.icon-archive:before { content: ""; }
 
 @font-face { font-family: opensans; src: url("../fonts/opensans.eot"); src: url("../fonts/opensans.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: opensans-semibold; src: url("../fonts/opensans-semibold.eot"); src: url("../fonts/opensans-semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-semibold.woff2") format("woff2"), url("../fonts/opensans-semibold.woff") format("woff"), url("../fonts/opensans-semibold.ttf") format("truetype"); font-weight: normal; font-style: normal; }

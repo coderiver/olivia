@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="18px" height="18px" viewBox="-290 292 18 18" enable-background="new -290 292 18 18" xml:space="preserve">
-<path fill="#3CACA2" d="M-285,298h4h4v9c0,0-0.17,0.63-1,1c-0.85,0.38-2.36,0.5-3,0.5c-0.82,0-2.12-0.08-3-0.5c-0.64-0.31-1-1-1-1
-	V298z"/>
-<path fill="#3CACA2" d="M-281,309.68c4.79,0,8.68-3.89,8.68-8.68s-3.89-8.68-8.68-8.68s-8.68,3.89-8.68,8.68
-	S-285.79,309.68-281,309.68L-281,309.68z M-281,307.68c-3.69,0-6.68-2.99-6.68-6.68s2.99-6.68,6.68-6.68s6.68,2.99,6.68,6.68
-	S-277.31,307.68-281,307.68L-281,307.68z"/>
+<!-- Generator: Avocode 2.4.3-3630f5a - http://avocode.com -->
+<svg height="18" width="18" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+    <path fill="#3caca2" fill-rule="evenodd" d="M 5 6 L 9 6 L 13 6 L 13 15 C 13 15 12.83 15.63 12 16 C 11.15 16.38 9.64 16.5 9 16.5 C 8.18 16.5 6.88 16.42 6 16 C 5.36 15.69 5 15 5 15 L 5 6 Z M 5 6" />
+    <path fill="#3caca2" fill-rule="evenodd" d="M 9 17.68 C 13.79 17.68 17.68 13.79 17.68 9 C 17.68 4.21 13.79 0.32 9 0.32 C 4.21 0.32 0.32 4.21 0.32 9 C 0.32 13.79 4.21 17.68 9 17.68 L 9 17.68 Z M 9 15.68 C 5.31 15.68 2.32 12.69 2.32 9 C 2.32 5.31 5.31 2.32 9 2.32 C 12.69 2.32 15.68 5.31 15.68 9 C 15.68 12.69 12.69 15.68 9 15.68 L 9 15.68 Z M 9 15.68" />
 </svg>

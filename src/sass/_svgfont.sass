@@ -1,31 +1,31 @@
 @font-face
 	font-family: "svgfont"
-	src: url('fonts/svgfont.eot')
-	src: url('fonts/svgfont.eot?#iefix') format('eot'), url('fonts/svgfont.woff') format('woff'), url('fonts/svgfont.woff2') format('woff2'), url('fonts/svgfont.ttf') format('truetype')
+	src: url('../fonts/svgfont.eot')
+	src: url('../fonts/svgfont.eot?#iefix') format('eot'), url('../fonts/svgfont.woff') format('woff'), url('../fonts/svgfont.woff2') format('woff2'), url('../fonts/svgfont.ttf') format('truetype')
 	font-weight: normal
 	font-style: normal
 
-$icon-archive: "\EA01"
 $icon-arr-right: "\EA02"
 $icon-arr-top: "\EA03"
 $icon-bell: "\EA04"
 $icon-checked: "\EA06"
-$icon-clip: "\EA07"
 $icon-check: "\EA05"
-$icon-comment: "\EA09"
 $icon-close: "\EA08"
-$icon-delete: "\EA0C"
-$icon-customer2: "\EA0B"
+$icon-comment: "\EA09"
+$icon-clip: "\EA07"
 $icon-corp: "\EA0A"
-$icon-logo: "\EA0E"
+$icon-customer2: "\EA0B"
+$icon-delete: "\EA0C"
 $icon-folder: "\EA0D"
+$icon-marked: "\EA0F"
+$icon-logo: "\EA0E"
 $icon-menu: "\EA10"
 $icon-pending: "\EA11"
-$icon-marked: "\EA0F"
+$icon-plus: "\EA12"
 $icon-upload: "\EA13"
 $icon-zoom: "\EA15"
 $icon-warn: "\EA14"
-$icon-plus: "\EA12"
+$icon-archive: "\EA01"
 
 
 %icon
@@ -42,8 +42,6 @@ $icon-plus: "\EA12"
 	@extend %icon
 	display: inline-block
 
-.icon-archive:before
-	content: $icon-archive
 .icon-arr-right:before
 	content: $icon-arr-right
 .icon-arr-top:before
@@ -52,35 +50,37 @@ $icon-plus: "\EA12"
 	content: $icon-bell
 .icon-checked:before
 	content: $icon-checked
-.icon-clip:before
-	content: $icon-clip
 .icon-check:before
 	content: $icon-check
-.icon-comment:before
-	content: $icon-comment
 .icon-close:before
 	content: $icon-close
-.icon-delete:before
-	content: $icon-delete
-.icon-customer2:before
-	content: $icon-customer2
+.icon-comment:before
+	content: $icon-comment
+.icon-clip:before
+	content: $icon-clip
 .icon-corp:before
 	content: $icon-corp
-.icon-logo:before
-	content: $icon-logo
+.icon-customer2:before
+	content: $icon-customer2
+.icon-delete:before
+	content: $icon-delete
 .icon-folder:before
 	content: $icon-folder
+.icon-marked:before
+	content: $icon-marked
+.icon-logo:before
+	content: $icon-logo
 .icon-menu:before
 	content: $icon-menu
 .icon-pending:before
 	content: $icon-pending
-.icon-marked:before
-	content: $icon-marked
+.icon-plus:before
+	content: $icon-plus
 .icon-upload:before
 	content: $icon-upload
 .icon-zoom:before
 	content: $icon-zoom
 .icon-warn:before
 	content: $icon-warn
-.icon-plus:before
-	content: $icon-plus
+.icon-archive:before
+	content: $icon-archive
