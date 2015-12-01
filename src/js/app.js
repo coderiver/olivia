@@ -3,4 +3,5 @@
 //= lib/malihu-scrollbar.min.js
 //= popups.js
 //= table.js
+//= comments.js
 //= common.js

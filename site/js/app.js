@@ -14,9 +14,9 @@ $(document).ready(function() {
 	// popups
 	var openedPopup = null;
 
-	var showPopup = function(popup) {
+	$.showPopup = function(popup) {
 		if ( openedPopup ) {
-			hidePopup(openedPopup);
+			$.hidePopup(openedPopup);
 		}
 		popup.addClass('is-active');
 		openedPopup = popup;
@@ -28,9 +28,10 @@ $(document).ready(function() {
 		}
 	};
 
-	var hidePopup = function(popup) {
+	$.hidePopup = function(popup) {
 		popup.removeClass('is-active');
 		openedPopup = null;
+		$('.overlay').removeClass('is-active');
 		$('body').removeClass('is-overflow');
 	};
 
@@ -38,28 +39,28 @@ $(document).ready(function() {
 		var $el = $(el);
 		var popup;
 
-		$el.on('click', function(event) {
-			event.preventDefault();
-			event.stopPropagation();
+		$el.on('click', function(evt) {
+			evt.preventDefault();
+			evt.stopPropagation();
 			popup = $('#' + $el.data('popup'));
-			showPopup(popup);
+			$.showPopup(popup);
 		});
 	});
 
 	// close popup
-	$('.js-close').on('click touchend', function(e) {
+	$('.js-close').on('click touchend', function(evt) {
 		var popup;
+		evt.preventDefault();
 
-		e.preventDefault();
 		popup = $(this).parents('.js-popup');
-		hidePopup(popup);
-		$('.overlay').removeClass('is-active');
+		$.hidePopup(popup);
 		$(this).parents('.js-bar').removeClass('is-active');
 	});
 
 });
 $(document).ready(function() {
 	(function() {
+
 		var sidebar = $('.js-sidebar'),
 			parentWrap = $('.js-tablewrap'),
 			row = $('.js-sidedrop .js-row'),
@@ -92,12 +93,12 @@ $(document).ready(function() {
 		});
 
 		// measure width of more block
-		function measureMoreblock(){
+		function measureMoreblock() {
 			setTimeout(function() {
 				$('.js-plus-more span:first-child').each(function() {
 					var plusBlockWidth = $(this).siblings('.table__more').outerWidth();
 					$(this).css({
-						'width' : 'calc(100% - ' + plusBlockWidth + 'px)'
+						'width': 'calc(100% - ' + plusBlockWidth + 'px)'
 					});
 					$(this).parent().addClass('is-measured');
 				});
@@ -120,7 +121,6 @@ $(document).ready(function() {
 
 		function columnsMove() {
 			var input = $('.js-check input');
-			//var theadId = parentWrap.find('th');
 
 			input.on('change', function() {
 				var data = $(this).parent().data('attr');
@@ -140,7 +140,6 @@ $(document).ready(function() {
 					});
 				}
 			});
-
 		}
 
 		columnsMove();
@@ -178,46 +177,12 @@ $(document).ready(function() {
 			$(this).siblings().removeClass('is-active');
 			$(this).addClass('is-active');
 		});
-
 	})();
 
 });
+// comments
 $(document).ready(function() {
-	// animate back to top
-	$('.js-top').click(function(e) {
-		e.preventDefault();
-		$( 'html, body' ).animate({
-			scrollTop: 0
-		}, 'slow');
-	});
 
-	// tooltips
-	$('.js-tooltip').tooltipster({
-		position: 'right',
-		maxWidth: 290
-	});
-
-	$('.js-tooltip-guide').tooltipster({
-		maxWidth: 290,
-		interactive: true,
-		contentAsHTML: true,
-		trigger: 'custom',
-		functionReady: function(origin, tooltip) {
-			origin.tooltipster('option', 'position', origin.data('tooltip-position'));
-
-			tooltip.find('a').on('click', function(evt) {
-				evt.preventDefault();
-				origin.tooltipster('hide').removeClass('is-visible');
-			});
-		}
-	});
-
-	$('.js-tooltip-guide').tooltipster('show');
-	$('.js-tooltip-guide').click(function(evt) {
-		evt.preventDefault();
-	});
-
-	// comments
 	function commentBl(element) {
 		var input = $(element).find('input'),
 			commentBtn = $(element).find('.btn[type="submit"]'),
@@ -265,6 +230,47 @@ $(document).ready(function() {
 		}
 	});
 
+	// mark problem as resolved
+	$('.js-resolved').click(function(evt) {
+		evt.preventDefault();
+		$(this).closest('.js-newpost').remove();
+	});
+
+});
+$(document).ready(function() {
+	// animate back to top
+	$('.js-top').click(function(e) {
+		e.preventDefault();
+		$( 'html, body' ).animate({
+			scrollTop: 0
+		}, 'slow');
+	});
+
+	// tooltips
+	$('.js-tooltip').tooltipster({
+		position: 'right',
+		maxWidth: 290
+	});
+
+	$('.js-tooltip-guide').tooltipster({
+		maxWidth: 290,
+		interactive: true,
+		contentAsHTML: true,
+		trigger: 'custom',
+		functionReady: function(origin, tooltip) {
+			origin.tooltipster('option', 'position', origin.data('tooltip-position'));
+			tooltip.find('a').on('click', function(evt) {
+				evt.preventDefault();
+				origin.tooltipster('hide').removeClass('is-visible');
+			});
+		}
+	});
+
+	$('.js-tooltip-guide').tooltipster('show');
+	$('.js-tooltip-guide').click(function(evt) {
+		evt.preventDefault();
+	});
+
 	// textarea autoresize
 	$(document).on('input.textarea', '.js-expand', function() {
 		var minRows = this.getAttribute('data-min-rows') | 0,
@@ -277,8 +283,8 @@ $(document).ready(function() {
 	$('.js-bar').addClass('is-active');
 
 	// slide up info block
-	$('.js-slide-up').click(function(e) {
-		e.preventDefault();
+	$('.js-slide-up').click(function(evt) {
+		evt.preventDefault();
 		$(this).parents('.js-slide-parent').slideUp();
 	});
 
@@ -298,8 +304,8 @@ $(document).ready(function() {
 	});
 
 	// dropdown
-	$('.js-dropdown').click(function(e) {
-		if ( $(e.target).parents('.js-inner').length === 0 ) {
+	$('.js-dropdown').click(function(evt) {
+		if ( $(evt.target).parents('.js-inner').length === 0 ) {
 			$(this).toggleClass('is-active');
 		}
 
@@ -307,15 +313,15 @@ $(document).ready(function() {
 	});
 
 	// close dropdown on body click
-	$('body').click(function(e) {
-		if ( $(e.target).parents('.js-dropdown').length > 0 ) {
-			e.stopPropagation();
+	$('body').click(function(evt) {
+		if ( $(evt.target).parents('.js-dropdown').length > 0 ) {
+			evt.stopPropagation();
 		} else {
 			$('.js-dropdown').removeClass('is-active');
 		}
 	});
 
-	// fixed header
+	// fixed header in forms pages
 	function scrollFixedElements() {
 		var scrLeft = $(this).scrollLeft();
 		$('.js-fixed').css({

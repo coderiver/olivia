@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	(function() {
+
 		var sidebar = $('.js-sidebar'),
 			parentWrap = $('.js-tablewrap'),
 			row = $('.js-sidedrop .js-row'),
@@ -32,12 +33,12 @@ $(document).ready(function() {
 		});
 
 		// measure width of more block
-		function measureMoreblock(){
+		function measureMoreblock() {
 			setTimeout(function() {
 				$('.js-plus-more span:first-child').each(function() {
 					var plusBlockWidth = $(this).siblings('.table__more').outerWidth();
 					$(this).css({
-						'width' : 'calc(100% - ' + plusBlockWidth + 'px)'
+						'width': 'calc(100% - ' + plusBlockWidth + 'px)'
 					});
 					$(this).parent().addClass('is-measured');
 				});
@@ -60,7 +61,6 @@ $(document).ready(function() {
 
 		function columnsMove() {
 			var input = $('.js-check input');
-			//var theadId = parentWrap.find('th');
 
 			input.on('change', function() {
 				var data = $(this).parent().data('attr');
@@ -80,7 +80,6 @@ $(document).ready(function() {
 					});
 				}
 			});
-
 		}
 
 		columnsMove();
@@ -118,7 +117,6 @@ $(document).ready(function() {
 			$(this).siblings().removeClass('is-active');
 			$(this).addClass('is-active');
 		});
-
 	})();
 
 });

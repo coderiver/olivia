@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Deal step three-four</title>
+	<title>Deal step two</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -17,7 +17,7 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	//= partials/header.html
+	//= partials/header-active-notification.html
 
 	<div class="main">
 		<div class="l">
@@ -35,42 +35,54 @@
 					</ul>
 					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
 					<!-- begin suggest for new deal -->
-						<div class="suggest js-popup js-avoid-overflow" id="suggest">
-							<div class="suggest__head">
-								<p class="suggest__txt">Submit Deal Memo</p>
-								<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
-							</div>
-							<div class="suggest__menu">
-								<a href="#" class="suggest__bl">
-									<i class="svg-ico letter-ico"></i>
-									<div class="suggest__in">
-										<p>Add Engagement Letter</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl">
-									<i class="svg-ico customer-ico"></i>
-									<div class="suggest__in">
-										<p>Add Customer</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl">
-									<i class="svg-ico transaction-ico"></i>
-									<div class="suggest__in">
-										<p>Add Transaction Report</p>
-									</div>
-								</a>
-							</div>
+					<div class="suggest js-popup js-avoid-overflow" id="suggest">
+						<div class="suggest__head">
+							<p class="suggest__txt">Submit Deal Memo</p>
+							<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
 						</div>
+						<div class="suggest__menu">
+							<a href="#" class="suggest__bl">
+								<i class="svg-ico letter-ico"></i>
+								<div class="suggest__in">
+									<p>Add Engagement Letter</p>
+								</div>
+							</a>
+							<a href="#" class="suggest__bl">
+								<i class="svg-ico memo-ico"></i>
+								<div class="suggest__in">
+									<p>Add Deal Memo</p>
+									<div class="status">
+										<span class="status-info">New</span>
+										<span>Submit</span>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="suggest__bl is-disabled">
+								<i class="svg-ico customer-ico"></i>
+								<div class="suggest__in">
+									<p>Add Customer</p>
+									<p>Preferebly submit after engagement letter and deal memo approval</p>
+								</div>
+							</a>
+							<a href="#" class="suggest__bl is-disabled">
+								<i class="svg-ico transaction-ico"></i>
+								<div class="suggest__in">
+									<p>Add Transaction Report</p>
+									<p>Preferebly submit after engagement letter and deal memo approval</p>
+								</div>
+							</a>
+						</div>
+					</div>
 					<!-- end suggest for new deal -->
 				</div>
 				<!-- begin start  -->
-				<div class="start s-b-margin js-slide-parent">
-					<h1 class="start__ttl">Wait for both Engagement Letter and Deal Memo to be approved</h1>
+				<div class="start s-b-margin">
+					<div class="arrow-block"></div>
+					<h1 class="start__ttl">Submit Deal Memo</h1>
 					<div class="start__in">
-						<p>Remember, both the Engagement Letter and the Deal Memo have to be approved before you can start showing the deal to investors.</p>
+						<p>Once Deal Memo will be approved we will review your customers and transactions</p>
 						<div class="start__linkwrap">
-							<a class="start__link js-slide-up" href="#">Got it</a>
-							<a class="start__link" href="#" data-popup="deal-flow">Show deal flow</a>
+							<a class="start__link" href="#" data-popup="deal-flow">Show deal flow <i class="line-block"></i></a>
 						</div>
 					</div>
 				</div>
@@ -89,11 +101,11 @@
 						<col width="117">
 						<col>
 					</colgroup>
-					<tr class="is-pending js-link" data-href="http://www.google.com">
+					<tr class="js-link is-active" data-href="http://www.google.com">
 						<td>
-							<div class="status is-pending">
-								<i class="icon icon-pending"></i>
-								<span title="Sent for review">Sent for review</span>
+							<div class="status">
+								<span class="status-info">New</span>
+								<span>Submit</span>
 							</div>
 						</td>
 						<td>
@@ -101,7 +113,7 @@
 								<i class="svg-ico memo-ico"></i>
 								<span>Submit Deal Memo</span>
 							</div>
-							<p>Submited Space X Deal memo. Document sent for review to Amanda Brown.</p>
+							<p>Once your Memo will be approved we will review your customers and transactions</p>
 						</td>
 						<td>
 							<p>Aug 10, 2015</p>
@@ -117,11 +129,11 @@
 							</div>
 						</td>
 					</tr>
-					<tr class="is-pending js-link" data-href="http://www.imgur.com">
+					<tr class="js-link is-pending" data-href="http://www.imgur.com">
 						<td>
 							<div class="status is-pending">
 								<i class="icon icon-pending"></i>
-								<span title="Sent for review">Sent for review</span>
+								<span>Sent for review</span>
 							</div>
 						</td>
 						<td>
@@ -129,7 +141,7 @@
 								<i class="svg-ico letter-ico"></i>
 								<span>Submit Space X Engagement Letter</span>
 							</div>
-							<p>Submited Space X Engagement Letter Steve Buscemi. Document sent for review to Amanda Brown.</p>
+							<p>Submitted Space X Engagement Letter Steve Buscemi. Document sent for review to Amanda Brown.</p>
 						</td>
 						<td>
 							<p>Aug 10, 2015</p>
@@ -151,11 +163,9 @@
 				<div class="activity">
 					<p class="activity__ttl">Recent activity</p>
 					<div class="activity__table">
-						<p class="activity__row"><small>Aug 28</small> <span>You submited <a href="#" class="activity__link">Space X Deal Memo</a></span></p>
-						<p class="activity__row"><small>Aug 27</small> <span>GCS staff approved <a href="#" class="activity__link">Engagement Letter Steve Buscemi</a></span></p>
-						<p class="activity__row"><small>Aug 27</small> <span>You submited <a href="#" class="activity__link">Engagement Letter Steve Buscemi</a></span></p>
+						<p><small>Aug 27</small> <span>You submited <a href="#">Engagement Letter Steve Buscemi</a></span></p>
+						<p><small>Aug 26</small> <span>You created Space X deal</span></p>
 					</div>
-					<a href="#">See full activity log</a>
 				</div>
 				<!-- end activity -->
 				<!-- begin filters  -->
@@ -188,42 +198,6 @@
 					<tr class="js-link" data-href="http://www.google.com">
 						<td>
 							<div class="table__el">
-								<i class="svg-ico memo-ico"></i>
-								<span>DM45681</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>Space X Deal Memo</span>
-						</td>
-						<td>
-							<p>Deal Memo</p>
-						</td>
-						<td>
-							<div class="status is-pending">
-								<i class="icon icon-pending"></i>
-								<span title="Sent for review">Sent for review</span>
-							</div>
-						</td>
-						<td class="table__clip" data-popup="attach">
-							<i class="icon icon-clip"></i>
-						</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
 								<i class="svg-ico letter-ico"></i>
 								<span>EL12522</span>
 							</div>
@@ -237,46 +211,12 @@
 						<td>
 							<div class="status is-pending">
 								<i class="icon icon-pending"></i>
-								<span title="Sent for review">Sent for review</span>
+								<span>Sent for review</span>
 							</div>
 						</td>
 						<td class="table__clip" data-popup="attach">
 							<i class="icon icon-clip"></i>
 						</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="icon icon-customer2"></i>
-								<span>CU23794</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>Steve Bushemi</span>
-						</td>
-						<td>
-							<p>Individual</p>
-						</td>
-						<td>
-							<div class="status is-pending">
-								<i class="icon icon-pending"></i>
-								<span title="In queue for review">In queue for review</span>
-							</div>
-						</td>
-						<td class="table__clip">&nbsp;</td>
 						<td>
 							<p>Aug 10, 2015</p>
 						</td>

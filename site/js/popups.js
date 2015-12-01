@@ -3,9 +3,9 @@ $(document).ready(function() {
 	// popups
 	var openedPopup = null;
 
-	var showPopup = function(popup) {
+	$.showPopup = function(popup) {
 		if ( openedPopup ) {
-			hidePopup(openedPopup);
+			$.hidePopup(openedPopup);
 		}
 		popup.addClass('is-active');
 		openedPopup = popup;
@@ -17,9 +17,10 @@ $(document).ready(function() {
 		}
 	};
 
-	var hidePopup = function(popup) {
+	$.hidePopup = function(popup) {
 		popup.removeClass('is-active');
 		openedPopup = null;
+		$('.overlay').removeClass('is-active');
 		$('body').removeClass('is-overflow');
 	};
 
@@ -27,22 +28,21 @@ $(document).ready(function() {
 		var $el = $(el);
 		var popup;
 
-		$el.on('click', function(event) {
-			event.preventDefault();
-			event.stopPropagation();
+		$el.on('click', function(evt) {
+			evt.preventDefault();
+			evt.stopPropagation();
 			popup = $('#' + $el.data('popup'));
-			showPopup(popup);
+			$.showPopup(popup);
 		});
 	});
 
 	// close popup
-	$('.js-close').on('click touchend', function(e) {
+	$('.js-close').on('click touchend', function(evt) {
 		var popup;
+		evt.preventDefault();
 
-		e.preventDefault();
 		popup = $(this).parents('.js-popup');
-		hidePopup(popup);
-		$('.overlay').removeClass('is-active');
+		$.hidePopup(popup);
 		$(this).parents('.js-bar').removeClass('is-active');
 	});
 

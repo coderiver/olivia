@@ -77,6 +77,11 @@ body
 	&.is-overflow
 		overflow: hidden !important
 
+.footer
+	margin: 15px 0
+	font-size: 12px
+	color: #C2C3C5
+
 // icons with svg as bg
 // not in font because of incorrect display
 .svg-ico
@@ -107,6 +112,12 @@ body
 	width: 70px
 	height: 70px
 	background-image: url('../img/svg-bg/transaction.svg')
+	background-size: 70px 70px
+
+.library-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/library.svg')
 	background-size: 70px 70px
 
 .paid-ico
@@ -248,16 +259,6 @@ label
 		color: #2caf24
 		.icon-check
 			display: inline-block
-	&__info
-		display: inline-block
-		margin-right: 5px
-		padding: 3px 5px 2px
-		text-transform: uppercase
-		font-size: 10px
-		background: #f76300
-		color: #fff
-		border-radius: 2px
-		line-height: 1
 	span
 		vertical-align: middle
 	.icon
@@ -267,6 +268,18 @@ label
 	.icon-pending,
 	.icon-check
 		display: none
+
+.status-info
+	display: inline-block
+	margin-right: 5px
+	padding: 3px 5px 2px
+	text-transform: uppercase
+	font-size: 10px
+	background: #f76300
+	color: #fff
+	border-radius: 2px
+	line-height: 1
+	vertical-align: middle
 
 // back to top
 .back-to-top

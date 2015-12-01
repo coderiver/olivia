@@ -20,7 +20,6 @@ $(document).ready(function() {
 		trigger: 'custom',
 		functionReady: function(origin, tooltip) {
 			origin.tooltipster('option', 'position', origin.data('tooltip-position'));
-
 			tooltip.find('a').on('click', function(evt) {
 				evt.preventDefault();
 				origin.tooltipster('hide').removeClass('is-visible');
@@ -31,54 +30,6 @@ $(document).ready(function() {
 	$('.js-tooltip-guide').tooltipster('show');
 	$('.js-tooltip-guide').click(function(evt) {
 		evt.preventDefault();
-	});
-
-	// comments
-	function commentBl(element) {
-		var input = $(element).find('input'),
-			commentBtn = $(element).find('.btn[type="submit"]'),
-			cancelBtn = $(element).find('.btn[type="button"]'),
-			btnGroup = $(element).find('.btn-group');
-
-		input.on( 'keyup', function() {
-			if ( input.val().length > 0 ) {
-				commentBtn.removeAttr('disabled');
-			} else if (input.val().length === 0 ) {
-				commentBtn.prop('disabled', true);
-			}
-		}).on('focus', function() {
-			btnGroup.addClass('is-visible');
-		});
-
-		cancelBtn.on('click', function() {
-			input.val('');
-			commentBtn.prop('disabled', true);
-		});
-	}
-
-	$('.js-newpost').each(function(index, element) {
-		commentBl(element);
-	});
-
-	$('.js-comment').on('click', function(evt) {
-		evt.preventDefault();
-		var commentParent = $(this).parent(),
-			wrapper,
-			inner;
-
-		if ( commentParent.children('.js-newpost').length === 0 ) {
-			wrapper = $('<div />', {'class': 'newpost js-newpost'}).appendTo(commentParent);
-			inner = $(
-				'<div class="newpost__in">'
-					+ '<label><input type="text" placeholder="Type your comment/question"></label>'
-					+ '<div class="btn-group is-visible">'
-						+ '<button class="btn btn-no m-pad" type="button">Cancel</button>'
-						+ '<button class="btn btn-ok m-pad" type="submit" disabled>Comment</button>'
-					+ '</div>'
-				+ '</div>').appendTo(wrapper);
-			commentParent.children('.js-newpost').find('input').focus();
-			commentBl(wrapper);
-		}
 	});
 
 	// textarea autoresize
@@ -93,8 +44,8 @@ $(document).ready(function() {
 	$('.js-bar').addClass('is-active');
 
 	// slide up info block
-	$('.js-slide-up').click(function(e) {
-		e.preventDefault();
+	$('.js-slide-up').click(function(evt) {
+		evt.preventDefault();
 		$(this).parents('.js-slide-parent').slideUp();
 	});
 
@@ -114,8 +65,8 @@ $(document).ready(function() {
 	});
 
 	// dropdown
-	$('.js-dropdown').click(function(e) {
-		if ( $(e.target).parents('.js-inner').length === 0 ) {
+	$('.js-dropdown').click(function(evt) {
+		if ( $(evt.target).parents('.js-inner').length === 0 ) {
 			$(this).toggleClass('is-active');
 		}
 
@@ -123,15 +74,15 @@ $(document).ready(function() {
 	});
 
 	// close dropdown on body click
-	$('body').click(function(e) {
-		if ( $(e.target).parents('.js-dropdown').length > 0 ) {
-			e.stopPropagation();
+	$('body').click(function(evt) {
+		if ( $(evt.target).parents('.js-dropdown').length > 0 ) {
+			evt.stopPropagation();
 		} else {
 			$('.js-dropdown').removeClass('is-active');
 		}
 	});
 
-	// fixed header
+	// fixed header in forms pages
 	function scrollFixedElements() {
 		var scrLeft = $(this).scrollLeft();
 		$('.js-fixed').css({

@@ -34,7 +34,6 @@
 	opacity: 0
 	visibility: hidden
 	z-index: -1
-	+tr(0.4s)
 	&.is-active
 		opacity: 1
 		visibility: visible
@@ -82,15 +81,23 @@
 		font-size: 12px
 		margin-bottom: 15px
 		color: #097bf2
+		&:hover
+			p:first-child
+				text-decoration: underline
 		&.is-disabled
 			color: #cfd5e0
 			.transaction-ico
 				background-image: url('../img/svg-bg/transaction-disabled.svg')
 			.customer-ico
 				background-image: url('../img/svg-bg/customer-disabled.svg')
+			&:hover
+				cursor: default
+				p:first-child
+					text-decoration: none
 		p:first-child
 			margin-bottom: 5px
 			font-size: 14px
+			text-transform: capitalize
 	&__in
 		display: inline-block
 		max-width: 250px
@@ -121,7 +128,6 @@
 	opacity: 0
 	visibility: hidden
 	z-index: -1
-	+tr(0.4s)
 	&:before,
 	&:after
 		content: ""
@@ -221,25 +227,22 @@
 // common popup style
 .popup
 	display: none
-	width: 100%
+	width: 460px
 	text-align: left
 	font-size: 13px
 	background: #fff
 	box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5)
 	border-radius: 4px
-	vertical-align: middle
 	white-space: normal
+	vertical-align: middle
 	z-index: -1
 	&.is-active
 		display: inline-block
-	&.is-newdeal
+	&.is-top
 		margin-top: 30px
-		width: 460px
 		vertical-align: top
 	&.is-dealflow
 		width: 820px
-		margin: 0
-		vertical-align: middle
 	&.is-attach
 		width: 665px
 	&__head
@@ -260,11 +263,16 @@
 		line-height: 36px
 	&__body
 		padding: 15px 20px 20px
+	&__form
+		label
+			display: block
+			margin: 8px 0
 	&__form-ttl
-		margin-bottom: 8px
 		font-size: 14px
 		line-height: 19px
 		+opensans-sb
+	&__form-subttl
+		color: #6c757a
 	&__btn
 		margin-top: 60px
 		text-align: right
@@ -272,6 +280,8 @@
 		.btn
 			margin-left: 8px
 			vertical-align: middle
+		&.s-margin
+			margin-top: 40px
 	&__bl
 		margin: 10px 0
 		+clr
@@ -314,3 +324,6 @@
 			background-size: 16px 16px
 	.steps
 		margin-top: 15px
+	.report
+		&:only-child
+			margin: 0

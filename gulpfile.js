@@ -150,7 +150,7 @@ gulp.task('font', function(){
             .pipe(consolidate('lodash', {
                 glyphs: glyphs,
                 fontName: fontname,
-                fontPath: 'fonts/',
+                fontPath: '../fonts/',
                 className: 'icon'
             }))
             .pipe(gulp.dest('src/sass/'));
@@ -158,7 +158,7 @@ gulp.task('font', function(){
             .pipe(consolidate('lodash', {
                 glyphs: glyphs,
                 fontName: fontname,
-                fontPath: 'fonts/',
+                fontPath: '../fonts/',
                 className: 'icon',
                 htmlBefore: '<i class="icon ',
                 htmlAfter: '"></i>',

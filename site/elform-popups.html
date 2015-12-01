@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Engagement Letter 3 (only comments)</title>
+	<title>Engagement Letter popups (click on "submit button" and "upload engagement letter")</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -17,7 +17,33 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	//= partials/header-form-elform.html
+	<!-- begin header  -->
+	<div class="header is-form js-fixed">
+		<div class="l-head">
+			<div class="header__in">
+				<div class="header__group">
+					<a href="#" class="header__close"><i class="icon icon-close"></i></a>
+					<div class="header__bl">
+						<p><i class="svg-ico letter-ico"></i><span>Engagement Letter Steve Buscemi</span></p>
+						<small>Space X</small>
+					</div>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-no s-pad" type="button">Save as draft</button>
+					<button class="btn btn-ok s-pad" type="submit" data-popup="no-submit">Submit for review</button>
+				</div>
+			</div>
+			<div class="header__in js-hide">
+				<ul class="header__list">
+					<li><a href="#" class="header__option">Current task</a></li>
+					<li><a href="#" class="header__option">Form Info</a></li>
+					<li><a href="#" class="header__option">Attachments</a></li>
+					<li><a href="#" class="header__option">Help</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
 	<div class="main is-form">
 		<div class="l-form">
 			<!-- begin alert  -->
@@ -48,27 +74,6 @@
 						<label>
 							<input type="text" placeholder="Type here">
 						</label>
-						<div class="newpost js-newpost">
-							<div class="newpost__in">
-								<a href="#" class="newpost__link js-resolved">Mark as resolved</a>
-								<div class="newpost__bl is-client">
-									<div class="newpost__ttl">
-										Me
-										<span class="newpost__date">6 hours ago</span>
-									</div>
-									<p>I have no idea what does this mean. Can you please help me out?</p>
-									<div class="newpost__edit">
-										<a href="#">Edit</a>
-										<a href="#">Delete</a>
-									</div>
-								</div>
-								<label><input type="text" placeholder="Type your comment/question"></label>
-								<div class="btn-group">
-									<button class="btn btn-no m-pad" type="button">Cancel</button>
-									<button class="btn btn-ok m-pad" type="submit" disabled>Comment</button>
-								</div>
-							</div>
-						</div>
 					</div>
 					<div class="form__bl">
 						<a href="#" class="addpost js-comment">
@@ -94,9 +99,9 @@
 						<div class="newpost js-newpost">
 							<div class="newpost__in">
 								<a href="#" class="newpost__link js-resolved">Mark as resolved</a>
-								<div class="newpost__bl is-client">
+								<div class="newpost__bl">
 									<div class="newpost__ttl">
-										Me
+										<span>Me</span>
 										<span class="newpost__date">just now</span>
 									</div>
 									<p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu. Curabitur fermentum suscipit est, tincidunt mattis lorem luctus id. Donec eget massa <a href="#">Read more</a></p>
@@ -104,6 +109,14 @@
 										<a href="#">Edit</a>
 										<a href="#">Delete</a>
 									</div>
+								</div>
+								<div class="newpost__bl">
+									<div class="newpost__ttl">
+										<span class="status-info">New</span>
+										<span>Amanda Brown</span>
+										<span class="newpost__date">4 hours ago</span>
+									</div>
+									<p>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. </p>
 								</div>
 								<label><input type="text" placeholder="Type your comment/question"></label>
 								<div class="btn-group">
@@ -131,7 +144,7 @@
 						<p class="form__subttl">File Uploads</p>
 						<p>Upload a copy of the proposed engagement letter.</p>
 						<div class="form__upload">
-							<a href="#"><i class="icon icon-upload"></i>Upload Engagement Letter</a>
+							<a href="#" data-popup="upload-el"><i class="icon icon-upload"></i>Upload Engagement Letter</a>
 						</div>
 						<div class="form__upload">
 							<a href="#"><i class="icon icon-upload"></i>Upload additional file (optional)</a>
@@ -144,5 +157,39 @@
 	</div>
 </div>
 <!-- END out-->
+<div class="overlay">
+	<div class="popup js-popup" id="no-submit">
+		<div class="popup__head">
+			<p>Submit Engagement Letter</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<div class="report is-error">
+				<p>Form can not be submitted.</p>
+				<p>Missing:</p>
+				<p class="txt-bold">File uploads. Upload Engagement Letter </p>
+			</div>
+		</div>
+	</div>
+	<div class="popup is-top js-popup" id="upload-el">
+		<div class="popup__head">
+			<p>Give a proper file name</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<form class="popup__form">
+				<p class="popup__form-ttl">File Name</p>
+				<p class="popup__form-subttl">Keep names understandable for you and staff</p>
+				<label>
+					<input type="text" value="Engagement Letter">
+				</label>
+				<div class="popup__btn s-margin">
+					<button class="btn btn-ok" type="submit">Upload</button>
+					<button class="btn btn-no" type="button">Cancel</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
 </body>
 </html>
