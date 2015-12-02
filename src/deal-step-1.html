@@ -57,18 +57,30 @@
 										<p>Add Deal Memo</p>
 									</div>
 								</a>
-								<a href="#" class="suggest__bl is-disabled">
+								<a href="#" class="suggest__bl">
 									<i class="svg-ico customer-ico"></i>
 									<div class="suggest__in">
 										<p>Add Customer</p>
 										<p>Preferebly submit after engagement letter and deal memo approval</p>
 									</div>
 								</a>
-								<a href="#" class="suggest__bl is-disabled">
+								<a href="#" class="suggest__bl">
 									<i class="svg-ico transaction-ico"></i>
 									<div class="suggest__in">
 										<p>Add Transaction Report</p>
 										<p>Preferebly submit after engagement letter and deal memo approval</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico library-ico"></i>
+									<div class="suggest__in">
+										<p>Add Marketing Materials</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico library-ico"></i>
+									<div class="suggest__in">
+										<p>Add from Templates or Other</p>
 									</div>
 								</a>
 							</div>
@@ -187,7 +199,7 @@
 					<p class="deal__active">Active Deal</p>
 					<p>Keep this status for deal when you are working on it</p>
 					<div class="deal__status">
-						<a href="#" class="deal__status-change">Change status</a><a href="#" class="deal__status-delete">Permanently delete</a>
+						<a href="#">Change status</a><a href="#" class="is-delete">Permanently delete</a>
 					</div>
 				</div>
 				<div class="back-to-top"><a href="#" class="js-top"><i class="icon icon-arr-top"></i><span>Back to top</span></a></div>
@@ -198,25 +210,6 @@
 	//= partials/footer.html
 </div>
 <!-- END out-->
-<div class="overlay">
-	<div class="popup is-newdeal js-popup" id="create">
-		<div class="popup__head">
-			<p>Start a New Deal Folder</p>
-			<i class="icon icon-close js-close"></i>
-		</div>
-		<div class="popup__body">
-			<form class="popup__form">
-				<p class="popup__form-ttl">Deal Name</p>
-				<label>
-					<input type="text" placeholder="Please keep this short and informal">
-				</label>
-				<div class="popup__btn">
-					<button class="btn btn-ok" type="submit">Create deal</button>
-					<button class="btn btn-no" type="button">Cancel</button>
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
+<div class="overlay"></div>
 </body>
 </html>

@@ -74,6 +74,8 @@
 			vertical-align: top
 		.table__drop
 			padding-top: 5px
+	&.s-bottom-margin
+		margin-bottom: 5px
 	&__head
 		background: #f7f8f9
 		text-align: left
@@ -123,6 +125,8 @@
 		display: inline-block
 		font-size: 13px
 		vertical-align: top
+	&__info
+		color: #f76300
 	tr
 		&:hover
 			background: darken(#fff, 5%)
@@ -130,12 +134,15 @@
 			.table__desc
 				color: #097bf2
 				+opensans-sb
-				~ *
+				~ *:not(.table__info)
 					color: #282828
 		&.is-pending
 			.table__desc
-				~ *
+				~ *:not(.table__info)
 					color: #96a0a6
+			.table__name
+				color: #6c757a
+				+opensans
 		&.table__head
 			&:hover
 				background: #f7f8f9
@@ -176,7 +183,7 @@
 		&.table__clip.is-active
 			padding-right: 17px
 	td
-		padding: 5px 8.5px
+		padding: 6px 8.5px
 		font-size: 0
 		border-top: 1px solid #efefef
 		border-bottom: 1px solid #efefef

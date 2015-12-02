@@ -22,9 +22,8 @@
 // suggest
 .suggest
 	position: absolute
-	top: 0
+	top: 50%
 	right: 0
-	margin-top: 43px
 	min-width: 390px
 	padding: 20px 23px 20px 26px
 	font-size: 0
@@ -78,26 +77,17 @@
 		margin-top: 10px
 	&__bl
 		display: block
-		font-size: 12px
+		font-size: 11px
 		margin-bottom: 15px
-		color: #097bf2
+		color: #96A0A6
 		&:hover
 			p:first-child
 				text-decoration: underline
-		&.is-disabled
-			color: #cfd5e0
-			.transaction-ico
-				background-image: url('../img/svg-bg/transaction-disabled.svg')
-			.customer-ico
-				background-image: url('../img/svg-bg/customer-disabled.svg')
-			&:hover
-				cursor: default
-				p:first-child
-					text-decoration: none
 		p:first-child
-			margin-bottom: 5px
-			font-size: 14px
+			margin-bottom: 2px
 			text-transform: capitalize
+			font-size: 14px
+			color: #097bf2
 	&__in
 		display: inline-block
 		max-width: 250px

@@ -17,6 +17,31 @@
 	padding: 18px 18px 8px
 	background: #f7f8f9
 	border-bottom: 1px solid #dce0e7
+	&.is-custom
+		min-height: 60px
+		font-size: 0
+		+clr
+		.upper__ttl
+			position: relative
+			display: inline-block
+			margin-bottom: 0
+			vertical-align: middle
+			&:after
+				content: $icon-arr-right
+				display: inline-block
+				margin: 0 7px
+				font-family: svgfont
+				font-size: 11px
+				color: #96a0a6
+				vertical-align: 2px
+			&:only-of-type
+				&:after
+					content: none
+		.btn
+			float: right
+			padding: 8px 31px
+		.suggest
+			margin-top: -16px
 	&__ttl
 		margin-bottom: 12px
 		color: #282828
@@ -298,16 +323,15 @@
 		color: #282828
 		+opensans-sb
 	&__status
-		&-change
-			color: #097bf2
-		&-delete
-			color: #ff4159
 		a
 			display: inline-block
 			margin-right: 12px
+			color: #097bf2
 			vertical-align: middle
 			&:hover
 				text-decoration: underline
+			&.is-delete
+				color: #ff4159
 	&__ttl
 		font-size: 17px
 		color: #282828
@@ -379,6 +403,21 @@
 	&__text
 		margin: 5px 0
 		font-size: 14px
+	&__bl
+		margin: 30px 0
+	&__ttl
+		margin-bottom: 10px
+		font-size: 17px
+	&__upload
+		margin-top: 10px
+		+clr
+		.upload
+			margin-left: 4px
+			float: left
+		.btn
+			float: right
+			margin-top: 9px
+			padding: 8px 31px
 
 .taskstat
 	display: table

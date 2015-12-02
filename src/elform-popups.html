@@ -17,33 +17,7 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<!-- begin header  -->
-	<div class="header is-form js-fixed">
-		<div class="l-head">
-			<div class="header__in">
-				<div class="header__group">
-					<a href="#" class="header__close"><i class="icon icon-close"></i></a>
-					<div class="header__bl">
-						<p><i class="svg-ico letter-ico"></i><span>Engagement Letter Steve Buscemi</span></p>
-						<small>Space X</small>
-					</div>
-				</div>
-				<div class="btn-group">
-					<button class="btn btn-no s-pad" type="button">Save as draft</button>
-					<button class="btn btn-ok s-pad" type="submit" data-popup="no-submit">Submit for review</button>
-				</div>
-			</div>
-			<div class="header__in js-hide">
-				<ul class="header__list">
-					<li><a href="#" class="header__option">Current task</a></li>
-					<li><a href="#" class="header__option">Form Info</a></li>
-					<li><a href="#" class="header__option">Attachments</a></li>
-					<li><a href="#" class="header__option">Help</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- end header -->
+	//= partials/header-form-elform.html
 	<div class="main is-form">
 		<div class="l-form">
 			<!-- begin alert  -->
@@ -143,15 +117,25 @@
 						</a>
 						<p class="form__subttl">File Uploads</p>
 						<p>Upload a copy of the proposed engagement letter.</p>
-						<div class="form__upload">
-							<a href="#" data-popup="upload-el"><i class="icon icon-upload"></i>Upload Engagement Letter</a>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file">
+								<i class="icon icon-upload"></i>
+								<span>Upload Engagement Letter</span>
+							</div>
 						</div>
-						<div class="form__upload">
-							<a href="#"><i class="icon icon-upload"></i>Upload additional file (optional)</a>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file">
+								<i class="icon icon-upload"></i>
+								<span>Upload additional file (optional)</span>
+							</div>
 						</div>
 					</div>
 				</form>
 				<!-- end form -->
+				<a style="font-size: 15px; margin-left: 20px; margin-bottom: 20px; display: inline-block" href="#" data-popup="no-submit">попап с ошибкой</a>
+				<a style="font-size: 15px; margin-left: 20px; margin-bottom: 20px; display: inline-block" href="#" data-popup="upload-el">загрузить engagement letter</a>
 			</div>
 		</div>
 	</div>

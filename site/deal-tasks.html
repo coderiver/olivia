@@ -17,7 +17,7 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<!-- begin header with active notification  -->
+	<!-- begin header  -->
 	<div class="header">
 		<div class="l">
 			<div class="header__in">
@@ -43,73 +43,11 @@
 				</ul>
 				<div class="helpers">
 					<a href="#" class="helpers__info">?</a>
-					<a href="#" class="helpers__bell is-active" data-popup="sysmessage">
-						<i class="icon icon-bell"></i>
-						<span class="helpers__message">5</span>
-					</a>
+					<a href="#" class="helpers__bell icon icon-bell"></a>
 					<label class="search">
 						<i class="icon icon-zoom"></i>
 						<input type="search" placeholder="Search">
 					</label>
-					<!-- begin sysmessage  -->
-					<div id="sysmessage" class="sysmessage js-popup js-avoid-overflow">
-						<div class="sysmessage__head">
-							<p class="sysmessage__ttl">1 New Payment, 4 other notifications since your last visit</p>
-							<i class="icon icon-close js-close"></i>
-						</div>
-						<div class="sysmessage__el">
-							<p>Messages (1)</p>
-						</div>
-						<div class="sysmessage__bl">
-							<img class="sysmessage__img" src="img/user1.png" alt="">
-							<div class="sysmessage__info">
-								<div class="sysmessage__name">
-									<h4>New Payment!</h4>
-									<span>Sept. 13, 2015</span>
-								</div>
-								<p>Transaction T34782 from Alphabet between James Brown and Steve Buscemy was payed Sept. 12, 2015</p>
-								<ul class="sysmessage__list">
-									<li>Transaction amount: $400.000.00</li>
-									<li>Funds received: $400.000.00</li>
-									<li>GCS commission: $10.000.00</li>
-									<li>Your comission*: $15.000.00</li>
-								</ul>
-								<p>Your commission will be payed to you according to your GCS agreement conditions</p>
-								<ul class="sysmessage__filter">
-									<li><a class="sysmessage__link" href="#">Mark as read</a></li>
-									<li><a class="sysmessage__link" href="#">View deal</a></li>
-									<li><a class="sysmessage__link" href="#">View transaction</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="sysmessage__el">
-							<p>Updates (4)</p>
-						</div>
-						<div class="sysmessage__bl">
-							<img class="sysmessage__img" src="img/sysmessage-img2.png" alt="">
-							<div class="sysmessage__info">
-								<div class="sysmessage__name">
-									<h4><i class="icon icon-check"></i><span>Deal Memo Approved for Space X</span></h4>
-									<small class="sysmessage__date">Sept. 13, 2015</small>
-								</div>
-								<p><a class="sysmessage__link" href="#">View deal</a></p>
-							</div>
-						</div>
-						<div class="sysmessage__bl">
-							<img class="sysmessage__img" src="img/user2.png" alt="">
-							<div class="sysmessage__info">
-								<div class="sysmessage__name">
-									<h4><i class="icon icon-check"></i><span>Deal Memo Approved for Space X</span></h4>
-									<small class="sysmessage__date">Sept. 13, 2015</small>
-								</div>
-								<p><a class="sysmessage__link" href="#">View deal</a></p>
-							</div>
-						</div>
-						<div class="sysmessage__el">
-							<p class="txt-center"><a class="sysmessage__link" href="#">See all</a></p>
-						</div>
-					</div>
-					<!-- end sysmessage -->
 				</div>
 			</div>
 		</div>
@@ -122,8 +60,8 @@
 				<div class="upper">
 					<p class="upper__ttl"><a href="#"><i class="icon icon-folder"></i></a>Space X</p>
 					<ul class="upper__list">
-						<li class="upper__option"><a class="upper__link is-active" href="#">Summary</a></li>
-						<li class="upper__option"><a class="upper__link" href="#">Tasks<p class="notification"><span>1</span></p></a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Summary</a></li>
+						<li class="upper__option"><a class="upper__link is-active" href="#">Tasks<p class="notification"><span>2</span></p></a></li>
 						<li class="upper__option"><a class="upper__link" href="#">Engagement Letters</a></li>
 						<li class="upper__option"><a class="upper__link" href="#">Deal Memo</a></li>
 						<li class="upper__option"><a class="upper__link" href="#">Customers</a></li>
@@ -324,7 +262,7 @@
 					<p class="deal__active">Active Deal</p>
 					<p>Keep this status for deal when you are working on it</p>
 					<div class="deal__status">
-						<a href="#" class="deal__status-change">Change status</a>
+						<a href="#">Change status</a>
 					</div>
 				</div>
 				<div class="back-to-top"><a href="#" class="js-top"><i class="icon icon-arr-top"></i><span>Back to top</span></a></div>
