@@ -66,21 +66,23 @@ $(document).ready(function() {
 
 	// dropdown
 	$('.js-dropdown').click(function(evt) {
-		if ( $(evt.target).parents('.js-inner').length === 0 ) {
-			$(this).toggleClass('is-active');
-		}
-
+		$(this).toggleClass('is-active');
 		$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active');
 	});
 
 	// close dropdown on body click
 	$('body').click(function(evt) {
-		if ( $(evt.target).parents('.js-dropdown').length > 0 ) {
-			evt.stopPropagation();
+		if ( $(evt.target).parents('.js-dropdown').length > 0 || $(evt.target).is('.js-inner').length > 0 ) {
+			evt.preventDefault();
 		} else {
 			$('.js-dropdown').removeClass('is-active');
 		}
+		console.log($(evt.target));
 	});
+
+	// $('.js-inner').click(function(evt) {
+	// 	evt.stopPropagation();
+	// });
 
 	// fixed header in forms pages
 	function scrollFixedElements() {

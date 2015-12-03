@@ -59,30 +59,41 @@ $(document).ready(function() {
 
 		sidedropRowHeight();
 
-		function columnsMove() {
-			var input = $('.js-check input');
+		function columnsToggle() {
+			var input = $('.js-check input'),
+				tableRow = $('.js-tablewrap .js-link');
 
 			input.on('change', function() {
-				var data = $(this).parent().data('attr');
-				var thead = $('.js-tablewrap th[data-id="' + data + '"]');
-				var theadIndex = thead.index();
+				var data = $(this).parent().data('attr'),
+					thead = $('.js-tablewrap th[data-id="' + data + '"]'),
+					theadData = thead.data('id'),
+					theadIndex = thead.index(),
+					checkedInput = $('.js-check input[type="checkbox"]:checked'),
+					checkedInputNum = checkedInput.length;
 
-				if ( !$(this).is(':checked') ) {
-					thead.hide();
+				if ( theadData && checkedInputNum > 1 ) {
+					checkedInput.prop('disabled', false);
 
-					$('.js-link').each(function() {
-						$(this).find('td').eq(theadIndex).hide();
-					});
-				} else {
-					thead.show();
-					$('.js-link').each(function() {
-						$(this).find('td').eq(theadIndex).show();
-					});
+					if ( $(this).is(':checked') ) {
+						thead.show();
+
+						tableRow.each(function() {
+							$(this).find('td').eq(theadIndex).show();
+						});
+					} else {
+						thead.hide();
+
+						tableRow.each(function() {
+							$(this).find('td').eq(theadIndex).hide();
+						});
+					}
+				} else if ( !theadData && checkedInputNum === 1 ) {
+					checkedInput.prop('disabled', true);
 				}
 			});
 		}
 
-		columnsMove();
+		columnsToggle();
 
 		// sidebar inner scroll
 		sidebar.find('.js-content').mCustomScrollbar({

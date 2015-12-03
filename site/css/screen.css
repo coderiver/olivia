@@ -371,27 +371,31 @@ label.is-middle-size { max-width: 340px; }
 .activity .activity__link { color: #6c757a; }
 
 .task { max-width: 700px; margin: 15px auto 0; }
-.task__num { color: #6c757a; }
+.task__num { font-size: 13px; color: #6c757a; }
 .task__num a { color: #097bf2; }
 .task__in { margin-top: 30px; }
+.task__in h2 { font-size: 20px; }
 .task__info { margin: 5px 0 10px; color: #6c757a; font-size: 13px; }
 .task__info.is-review span { color: #282828; }
 .task__info span { color: #f76300; font-family: "opensans-semibold", Arial, sans-serif; }
 .task__text { margin: 5px 0; font-size: 14px; }
-.task__bl { margin: 30px 0; }
+.task__bl { margin-top: 40px; }
+.task__bl .table + .task__upload .upload { margin-left: 4px; }
 .task__ttl { margin-bottom: 10px; font-size: 17px; }
 .task__upload { margin-top: 10px; *zoom: 1; }
 .task__upload:after { content: " "; display: table; clear: both; }
-.task__upload .upload { margin-left: 4px; float: left; }
+.task__upload .upload { float: left; }
 .task__upload .btn { float: right; margin-top: 9px; padding: 8px 31px; }
 
-.taskstat { display: table; margin: 15px 0 30px; }
+.taskstat { display: table; margin-top: 15px; }
 .taskstat__cell { display: table-cell; vertical-align: middle; font-size: 14px; }
 .taskstat__cell:first-child { padding-right: 20px; }
 .taskstat a { color: #097bf2; }
 .taskstat a:hover { text-decoration: underline; }
 .taskstat .status { margin-top: 2px; }
+.taskstat .svg-ico { width: 50px; height: 50px; background-size: 50px 50px; }
 
+.comments { margin-top: 50px; }
 .comments__head { font-size: 17px; padding-bottom: 5px; border-bottom: 1px solid #efefef; *zoom: 1; }
 .comments__head:after { content: " "; display: table; clear: both; }
 .comments__bl { margin-top: 20px; font-size: 13px; color: #6c757a; *zoom: 1; }
@@ -400,10 +404,11 @@ label.is-middle-size { max-width: 340px; }
 .comments__el { overflow: hidden; }
 .comments__in { margin-bottom: 5px; *zoom: 1; }
 .comments__in:after { content: " "; display: table; clear: both; }
-.comments__name { float: left; color: #282828; font-size: 0; font-family: "opensans-semibold", Arial, sans-serif; }
-.comments__name span { display: inline-block; font-size: 13px; vertical-align: middle; }
+.comments__name { float: left; color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
+.comments__name span { display: inline-block; vertical-align: middle; }
 .comments__date { float: right; color: #8c99a0; }
 .comments__autorespond { margin-bottom: 10px; }
+.comments__autorespond.is-bold { color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
 .comments__autorespond:last-child { margin-bottom: 0; }
 .comments__autorespond a { color: #097bf2; }
 .comments__autorespond a:hover { text-decoration: underline; }
