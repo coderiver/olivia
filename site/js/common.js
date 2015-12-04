@@ -50,39 +50,36 @@ $(document).ready(function() {
 	});
 
 	// actions on deal settings
-	$('.js-action input').change(function() {
-		$('.js-action').removeClass('is-active');
-		$(this).parents('.js-action').addClass('is-active');
-	});
+	function chooseAction() {
+		var actionBl = $('.js-action:not(".is-disabled")'),
+			actionSiblings = null;
 
-	$('.js-action').click(function() {
-		if (!$(this).hasClass('is-disabled')) {
-			$(this).siblings().removeClass('is-active');
-			$(this).siblings().find('input').prop('checked', false);
-			$(this).find('input').prop('checked', true);
+		actionBl.click(function() {
+			actionSiblings = $(this).siblings();
+
+			actionSiblings.removeClass('is-active')
+						  .find('input').prop('checked', false);
 			$(this).addClass('is-active');
-		}
-	});
+			$(this).find('input').prop('checked', true);
+		});
+	}
+
+	chooseAction();
 
 	// dropdown
-	$('.js-dropdown').click(function(evt) {
+	$('body').on('click', '.js-dropdown', function(evt) {
+		if ( $(evt.target).closest('.js-inner').length > 0 ) {
+			return;
+		}
 		$(this).toggleClass('is-active');
 		$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active');
 	});
 
-	// close dropdown on body click
-	$('body').click(function(evt) {
-		if ( $(evt.target).parents('.js-dropdown').length > 0 || $(evt.target).is('.js-inner').length > 0 ) {
-			evt.preventDefault();
-		} else {
+	$('body').on('click', function(evt) {
+		if ( $(evt.target).parents('.js-dropdown').length === 0 ) {
 			$('.js-dropdown').removeClass('is-active');
 		}
-		console.log($(evt.target));
 	});
-
-	// $('.js-inner').click(function(evt) {
-	// 	evt.stopPropagation();
-	// });
 
 	// fixed header in forms pages
 	function scrollFixedElements() {

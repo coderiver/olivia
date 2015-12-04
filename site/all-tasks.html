@@ -60,12 +60,12 @@
 						<div class="sysmessage__el">
 							<p>Messages (1)</p>
 						</div>
-						<div class="sysmessage__bl">
+						<div class="sysmessage__el no-bg">
 							<img class="sysmessage__img" src="img/user1.png" alt="">
 							<div class="sysmessage__info">
 								<div class="sysmessage__name">
 									<h4>New Payment!</h4>
-									<span>Sept. 13, 2015</span>
+									<small class="sysmessage__date">Sept. 13, 2015</small>
 								</div>
 								<p>Transaction T34782 from Alphabet between James Brown and Steve Buscemy was payed Sept. 12, 2015</p>
 								<ul class="sysmessage__list">
@@ -85,25 +85,49 @@
 						<div class="sysmessage__el">
 							<p>Updates (4)</p>
 						</div>
-						<div class="sysmessage__bl">
-							<img class="sysmessage__img" src="img/sysmessage-img2.png" alt="">
+						<div class="sysmessage__el no-bg">
+							<img class="sysmessage__img" src="img/user2.png" alt="">
+							<i class="svg-ico memo-ico"></i>
 							<div class="sysmessage__info">
 								<div class="sysmessage__name">
-									<h4><i class="icon icon-check"></i><span>Deal Memo Approved for Space X</span></h4>
+									<h4><span>Deal Memo Approved for Space X</span></h4>
 									<small class="sysmessage__date">Sept. 13, 2015</small>
 								</div>
-								<p><a class="sysmessage__link" href="#">View deal</a></p>
+								<ul class="sysmessage__filter">
+									<li><a class="sysmessage__link" href="#">View</a></li>
+									<li><a class="sysmessage__link" href="#">Open deal</a></li>
+								</ul>
+							</div>
+							<i class="icon icon-check"></i>
+						</div>
+						<div class="sysmessage__el no-bg">
+							<img class="sysmessage__img" src="img/user2.png" alt="">
+							<i class="icon icon-bubble"></i>
+							<div class="sysmessage__info">
+								<div class="sysmessage__name">
+									<h4>New comment for EL James Brown for Space X</h4>
+									<small class="sysmessage__date">Sept. 13, 2015</small>
+								</div>
+								<ul class="sysmessage__filter">
+									<li><a class="sysmessage__link" href="#">View</a></li>
+									<li><a class="sysmessage__link" href="#">Open deal</a></li>
+								</ul>
 							</div>
 						</div>
-						<div class="sysmessage__bl">
-							<img class="sysmessage__img" src="img/user2.png" alt="">
+						<div class="sysmessage__el no-bg">
+							<img class="sysmessage__img" src="img/user1.png" alt="">
+							<i class="svg-ico memo-ico"></i>
 							<div class="sysmessage__info">
 								<div class="sysmessage__name">
-									<h4><i class="icon icon-check"></i><span>Deal Memo Approved for Space X</span></h4>
+									<h4>Deal Memo Approved for Space X</h4>
 									<small class="sysmessage__date">Sept. 13, 2015</small>
 								</div>
-								<p><a class="sysmessage__link" href="#">View deal</a></p>
+								<ul class="sysmessage__filter">
+									<li><a class="sysmessage__link" href="#">View</a></li>
+									<li><a class="sysmessage__link" href="#">Open deal</a></li>
+								</ul>
 							</div>
+							<i class="icon icon-warn"></i>
 						</div>
 						<div class="sysmessage__el">
 							<p class="txt-center"><a class="sysmessage__link" href="#">See all</a></p>
@@ -123,50 +147,50 @@
 					<p class="upper__ttl">Tasks</p>
 					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
 					<!-- begin suggest for new deal -->
-					<div class="suggest js-popup js-avoid-overflow" id="suggest">
-						<div class="suggest__head">
-							<p class="suggest__txt">Submit Deal Memo</p>
-							<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
+						<div class="suggest js-popup js-avoid-overflow" id="suggest">
+							<div class="suggest__head">
+								<p class="suggest__txt">Submit Deal Memo</p>
+								<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
+							</div>
+							<div class="suggest__menu">
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico letter-ico"></i>
+									<div class="suggest__in">
+										<p>Add Engagement Letter</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico memo-ico"></i>
+									<div class="suggest__in">
+										<p>Add Deal memo</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico customer-ico"></i>
+									<div class="suggest__in">
+										<p>Add Customer</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico transaction-ico"></i>
+									<div class="suggest__in">
+										<p>Add Transaction Report</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico library-ico"></i>
+									<div class="suggest__in">
+										<p>Add Marketing Materials</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico library-ico"></i>
+									<div class="suggest__in">
+										<p>Add from Templates or Other</p>
+									</div>
+								</a>
+							</div>
 						</div>
-						<div class="suggest__menu">
-							<a href="#" class="suggest__bl">
-								<i class="svg-ico letter-ico"></i>
-								<div class="suggest__in">
-									<p> Add Engagement Letter</p>
-								</div>
-							</a>
-							<a href="#" class="suggest__bl">
-								<i class="svg-ico memo-ico"></i>
-								<div class="suggest__in">
-									<p>Add Deal Memo</p>
-								</div>
-							</a>
-							<a href="#" class="suggest__bl">
-								<i class="svg-ico customer-ico"></i>
-								<div class="suggest__in">
-									<p>Add Customer</p>
-								</div>
-							</a>
-							<a href="#" class="suggest__bl">
-								<i class="svg-ico transaction-ico"></i>
-								<div class="suggest__in">
-									<p>Add Transaction Report</p>
-								</div>
-							</a>
-							<a href="#" class="suggest__bl">
-								<i class="svg-ico library-ico"></i>
-								<div class="suggest__in">
-									<p>Add Marketing Materials</p>
-								</div>
-							</a>
-							<a href="#" class="suggest__bl">
-								<i class="svg-ico library-ico"></i>
-								<div class="suggest__in">
-									<p>Add from Templates or Other</p>
-								</div>
-							</a>
-						</div>
-					</div>
 					<!-- end suggest for new deal -->
 				</div>
 				<div class="deal">

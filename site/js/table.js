@@ -14,11 +14,12 @@ $(document).ready(function() {
 		});
 
 		// detect click on table row
-		$('.js-link').click(function(e) {
+		$('body').on('click', '.js-link', function(evt) {
 			var targetLink = $(this).data('href');
-			if ($(e.target).parents('.js-dropdown').length > 0) {
-				if (!$(e.target).parents('.dropdown__list').length > 0) {
-					e.preventDefault();
+
+			if ( $(evt.target).parents('.js-dropdown').length > 0 ) {
+				if ( !$(evt.target).parents('.dropdown__list').length > 0 ) {
+					evt.preventDefault();
 				}
 			} else {
 				window.location.href = targetLink;
@@ -68,12 +69,11 @@ $(document).ready(function() {
 					thead = $('.js-tablewrap th[data-id="' + data + '"]'),
 					theadData = thead.data('id'),
 					theadIndex = thead.index(),
-					checkedInput = $('.js-check input[type="checkbox"]:checked'),
+					checkedInput = $('.js-check input:checked'),
 					checkedInputNum = checkedInput.length;
 
-				if ( theadData && checkedInputNum > 1 ) {
-					checkedInput.prop('disabled', false);
-
+				// check if th with input id exists
+				if ( theadData ) {
 					if ( $(this).is(':checked') ) {
 						thead.show();
 
@@ -87,8 +87,13 @@ $(document).ready(function() {
 							$(this).find('td').eq(theadIndex).hide();
 						});
 					}
-				} else if ( !theadData && checkedInputNum === 1 ) {
+				}
+
+				// at least one column in table
+				if ( checkedInputNum < 3 ) {
 					checkedInput.prop('disabled', true);
+				} else {
+					checkedInput.prop('disabled', false);
 				}
 			});
 		}

@@ -156,6 +156,35 @@ body
 	background-image: url('../img/svg-bg/unknown.svg')
 	background-size: 16px 16px
 
+
+// default color for icons
+.icon-customer2, .icon-corp
+	color: #3caca2
+
+.icon-clip
+	color: #BCC6CC
+
+.icon-warn
+	color: #f76300
+
+.icon-check
+	color: #2caf24
+
+.icon-comment
+	color: #c6ccd8
+
+.icon-close
+	color: #6C757A
+
+.icon-pending
+	color: #738496
+
+.icon-upload
+	color: #097BF2
+
+.icon-bubble
+	color: #96A0A6
+
 // common blocks
 .l
 	max-width: 1370px
@@ -314,32 +343,6 @@ label
 		&:hover
 			text-decoration: underline
 
-// dropit
-.dropit
-	position: absolute
-	min-width: 160px
-	padding: 15px
-	background: #fff
-	border: 1px solid #dce0e7
-	border-radius: 4px
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25)
-	z-index: 1
-	opacity: 0
-	visibility: hidden
-	+tr(0.3s)
-	&.is-visible
-		opacity: 1
-		visibility: visible
-	&__option
-		margin-bottom: 9px
-		&:last-child
-			margin-bottom: 0
-	a
-		font-size: 13px
-		color: #282828
-		&:hover
-			text-decoration: underline
-
 // radiobox
 .radio
 	position: relative
@@ -398,6 +401,7 @@ label
 		color: #282828
 		line-height: 1
 		cursor: pointer
+		+nosel
 		&:before
 			content: ""
 			position: absolute
@@ -431,7 +435,6 @@ label
 			color: #282828
 			&:after
 				display: block
-
 
 // dropdown
 .dropdown
