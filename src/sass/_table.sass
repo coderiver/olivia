@@ -76,11 +76,48 @@
 			padding-top: 5px
 	&.s-bottom-margin
 		margin-bottom: 5px
-	&__head
+	.table__head
 		background: #f7f8f9
 		text-align: left
 		border-top: 1px solid #efefef
 		border-bottom: 1px solid #efefef
+		th
+			position: relative
+			height: 38px
+			text-align: left
+			padding: 0 10px
+			font-size: 13px
+			font-weight: normal
+			border-right: 1px solid #dce0e7
+			cursor: pointer
+			vertical-align: middle
+			+opensans-sb
+			&:before
+				display: none
+				content: ""
+				position: absolute
+				top: 50%
+				right: 10px
+				margin-top: -2px
+				+arr(7, 4, #6c757a, b)
+			&:hover
+				background: rgba(0, 0, 0, 0.05)
+			&.is-active
+				background: rgba(0, 0, 0, 0.05)
+				&:before
+					display: block
+			&:first-child
+				padding-left: 17px
+			&:last-child
+				border-right: 0
+			&.table__drop
+				background: none
+				&:before
+					display: none
+			&.table__clip
+				text-align: center
+			&.table__clip.is-active
+				padding-right: 17px
 	&__clip
 		width: 5%
 		text-align: center
@@ -127,6 +164,9 @@
 	&__info
 		color: #f76300
 	tr
+		&:first-child
+			&:hover
+				background: none
 		&:hover
 			background: darken(#fff, 5%)
 		&.is-active
@@ -146,41 +186,8 @@
 			&:hover
 				background: #f7f8f9
 	th
-		position: relative
-		height: 38px
-		text-align: left
-		padding: 0 10px
-		font-weight: normal
-		border-right: 1px solid #dce0e7
-		cursor: pointer
-		vertical-align: middle
-		+opensans-sb
-		&:before
-			display: none
-			content: ""
-			position: absolute
-			top: 50%
-			right: 10px
-			margin-top: -2px
-			+arr(7, 4, #6c757a, b)
-		&:hover
-			background: rgba(0, 0, 0, 0.05)
-		&.is-active
-			background: rgba(0, 0, 0, 0.05)
-			&:before
-				display: block
-		&:first-child
-			padding-left: 17px
-		&:last-child
-			border-right: 0
-		&.table__drop
-			background: none
-			&:before
-				display: none
-		&.table__clip
-			text-align: center
-		&.table__clip.is-active
-			padding-right: 17px
+		padding: 0
+		font-size: 0
 	td
 		padding: 6px 8.5px
 		font-size: 0
