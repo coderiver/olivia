@@ -585,6 +585,12 @@ label.is-middle-size { max-width: 340px; }
 
 .show-more { display: inline-block; padding: 5px 0; color: #097bf2; vertical-align: middle; }
 
+.fake-header { position: fixed; top: 0; left: 0; right: 0; opacity: 0; visibility: hidden; }
+.fake-header.is-visible { opacity: 1; visibility: visible; }
+.fake-header .l-table { max-width: 1328px; margin: 0 auto; overflow: hidden; }
+.fake-header .table { position: relative; margin-bottom: 0; }
+.fake-header .table__head { background: green; }
+
 .form { margin: 45px 0 80px; font-size: 13px; color: #6c757a; }
 .form__ttl { max-width: 580px; margin: 0 auto 20px; font-size: 18px; color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
 .form__subttl { margin-bottom: 10px; font-size: 14px; color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }

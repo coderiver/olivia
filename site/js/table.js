@@ -30,7 +30,24 @@ $(document).ready(function() {
 		scrollTable.mCustomScrollbar({
 			axis: 'x',
 			scrollButtons: {enable: true},
-			scrollInertia: 300
+			scrollInertia: 300,
+			callbacks: {
+				onInit: function() {
+					var scrollHeader = $(this).find('.js-fake-head .table'),
+						containerWidth = $(this).find('.mCSB_container').outerWidth();
+
+					if ( scrollHeader.length > 0 ) {
+						scrollHeader.css('width', containerWidth);
+					}
+				},
+				whileScrolling: function() {
+					var scrollHeader = $(this).find('.js-fake-head .table');
+
+					if ( scrollHeader.length > 0 ) {
+						scrollHeader.css('left', this.mcs.left);
+					}
+				}
+			}
 		});
 
 		// measure width of more block
@@ -133,6 +150,28 @@ $(document).ready(function() {
 			$(this).siblings().removeClass('is-active');
 			$(this).addClass('is-active');
 		});
+
+		// fake header
+		$('.js-tablewrap .js-clone-head').clone(true).removeClass('js-clone-head').appendTo('.js-fake-head .table');
+
+		function scrollFakeHeader() {
+			var win = $(window),
+				scrollPos = win.scrollTop(),
+				fakeHead = $('.js-fake-head'),
+				parentWrapPos = parentWrap.offset().top;
+
+			if ( scrollPos > parentWrapPos - 200) {
+				fakeHead.addClass('is-visible');
+			} else {
+				fakeHead.removeClass('is-visible');
+			}
+		}
+
+		$(window).scroll(function() {
+			scrollFakeHeader();
+		});
+
+
 	})();
 
 });
