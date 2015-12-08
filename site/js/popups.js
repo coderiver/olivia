@@ -26,13 +26,14 @@ $(document).ready(function() {
 
 	$('[data-popup]').each(function(index, el) {
 		var $el = $(el);
-		var popup;
-
+		var $popup = $('#' + $el.data('popup'));
+		if (!$popup.parents('.overlay').length && !$popup.hasClass('js-avoid-overflow')) {
+			$popup.appendTo('.overlay');
+		}
 		$el.on('click', function(evt) {
 			evt.preventDefault();
 			evt.stopPropagation();
-			popup = $('#' + $el.data('popup'));
-			$.showPopup(popup);
+			$.showPopup($popup);
 		});
 	});
 

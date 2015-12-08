@@ -68,6 +68,7 @@
 	font-size: 13px
 	color: #6c757a
 	table-layout: fixed
+	background: #FFF
 	&.is-top-aligned
 		td
 			padding: 10.5px 8.5px
@@ -342,6 +343,7 @@
 			display: inline-block
 	.mCSB_horizontal.mCSB_inside > .mCSB_container
 		margin-bottom: 12px
+	.mCustomScrollBox
 	.mCSB_draggerContainer
 		margin: 0 28px 0 0 !important
 		border: 1px solid #dce0e7
@@ -426,17 +428,34 @@
 	top: 0
 	left: 0
 	right: 0
+	padding: 0 20px
 	opacity: 0
 	visibility: hidden
 	&.is-visible
 		opacity: 1
 		visibility: visible
 	.l-table
-		max-width: 1328px
+		max-width: 1330px
 		margin: 0 auto
 		overflow: hidden
 	.table
 		position: relative
 		margin-bottom: 0
 	.table__head
-		background: green
+		background: red
+
+// .fake-header
+// 	position: absolute
+// 	top: 0
+// 	left: 0
+// 	right: 0
+// 	opacity: 0
+// 	visibility: hidden
+// 	z-index: 1
+// 	&.is-visible
+// 		opacity: 1
+// 		visibility: visible
+// 	.table
+// 		margin-bottom: 0
+// 	.table__head
+// 		background: red

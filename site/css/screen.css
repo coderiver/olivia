@@ -226,7 +226,8 @@ label.is-middle-size { max-width: 340px; }
 .dropdown__list { display: none; position: absolute; top: 26px; right: 0; min-width: 160px; padding: 20px 14px; text-align: left; font-size: 13px; background: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); border-radius: 4px; border-top-right-radius: 0; border: 1px solid #dce0e7; white-space: nowrap; }
 .dropdown__list li { margin-bottom: 10px; }
 .dropdown__list li:last-child { margin-bottom: 0; }
-.dropdown__list a { color: #282828; }
+.dropdown__list li.is-disabled a, .dropdown__list li.is-disabled a:hover { color: #BCC6CC; cursor: default; }
+.dropdown__list a { display: block; color: #282828; }
 .dropdown__list a:hover { color: #097bf2; }
 .dropdown__list a.is-active { font-family: "opensans-semibold", Arial, sans-serif; }
 .dropdown__check { margin-bottom: 14px; }
@@ -487,7 +488,7 @@ label.is-middle-size { max-width: 340px; }
 .tabs__el:last-child { border-right: none; }
 .tabs__el.is-active { background: #828c92; color: #FFF; }
 
-.table { max-width: 100%; margin-bottom: 45px; font-size: 13px; color: #6c757a; table-layout: fixed; }
+.table { max-width: 100%; margin-bottom: 45px; font-size: 13px; color: #6c757a; table-layout: fixed; background: #FFF; }
 .table.is-top-aligned td { padding: 10.5px 8.5px; vertical-align: top; }
 .table.is-top-aligned .table__drop { padding-top: 5px; }
 .table.s-bottom-margin { margin-bottom: 5px; }
@@ -585,11 +586,11 @@ label.is-middle-size { max-width: 340px; }
 
 .show-more { display: inline-block; padding: 5px 0; color: #097bf2; vertical-align: middle; }
 
-.fake-header { position: fixed; top: 0; left: 0; right: 0; opacity: 0; visibility: hidden; }
+.fake-header { position: fixed; top: 0; left: 0; right: 0; padding: 0 20px; opacity: 0; visibility: hidden; }
 .fake-header.is-visible { opacity: 1; visibility: visible; }
-.fake-header .l-table { max-width: 1328px; margin: 0 auto; overflow: hidden; }
+.fake-header .l-table { max-width: 1330px; margin: 0 auto; overflow: hidden; }
 .fake-header .table { position: relative; margin-bottom: 0; }
-.fake-header .table__head { background: green; }
+.fake-header .table__head { background: red; }
 
 .form { margin: 45px 0 80px; font-size: 13px; color: #6c757a; }
 .form__ttl { max-width: 580px; margin: 0 auto 20px; font-size: 18px; color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }

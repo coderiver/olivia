@@ -70,6 +70,8 @@ $(document).ready(function() {
 	$('body').on('click', '.js-dropdown', function(evt) {
 		if ( $(evt.target).closest('.js-inner').length > 0 ) {
 			return;
+		} else if ( $(evt.target).parent('.is-disabled').length > 0 ) {
+			evt.preventDefault();
 		}
 		$(this).toggleClass('is-active');
 		$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active');
