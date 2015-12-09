@@ -5,8 +5,10 @@
 
 // filters
 .filters
+	position: relative
 	padding: 15px 10px 10px 20px
 	margin: 0 -4px
+	z-index: 3
 	+clr
 	&__ttl
 		float: left
@@ -233,6 +235,7 @@
 	border: 1px double #dce0e7
 	border-width: 1px 1px 1px 0
 	overflow: hidden
+	z-index: 2
 	+tr(0.3s ease)
 	&__in
 		width: 240px
@@ -307,6 +310,7 @@
 
 // scrolling part of table
 .scrollbar
+	//position: relative
 	margin-right: 50px
 	+tr(0.3s ease)
 	&:before
@@ -396,6 +400,7 @@
 	right: 0
 	width: 50px
 	text-align: center
+	z-index: 2
 	.table
 		margin-bottom: 0
 		border-left: 1px solid #dce0e7
@@ -431,9 +436,12 @@
 	padding: 0 20px
 	opacity: 0
 	visibility: hidden
+	z-index: 1
 	&.is-visible
 		opacity: 1
 		visibility: visible
+	&.is-sidebar
+		padding-left: 260px
 	.l-table
 		max-width: 1330px
 		margin: 0 auto
@@ -441,21 +449,3 @@
 	.table
 		position: relative
 		margin-bottom: 0
-	.table__head
-		background: red
-
-// .fake-header
-// 	position: absolute
-// 	top: 0
-// 	left: 0
-// 	right: 0
-// 	opacity: 0
-// 	visibility: hidden
-// 	z-index: 1
-// 	&.is-visible
-// 		opacity: 1
-// 		visibility: visible
-// 	.table
-// 		margin-bottom: 0
-// 	.table__head
-// 		background: red

@@ -5,7 +5,8 @@ $(document).ready(function() {
 			parentWrap = $('.js-tablewrap'),
 			row = $('.js-sidedrop .js-row'),
 			scrollTable = $('.js-scrollbar'),
-			sublist = $('.js-sublist');
+			sublist = $('.js-sublist'),
+			fakeHead = parentWrap.find('.fake-header');
 
 		// tablehead filter
 		$('.table th').click(function() {
@@ -60,6 +61,10 @@ $(document).ready(function() {
 				scrollHeader.css('left', el.mcs.left);
 			}
 		}
+
+		// scrollTable.perfectScrollbar({
+		// 	maxScrollbarLength: 350
+		// });
 
 		// measure width of more block
 		function measureMoreblock() {
@@ -138,6 +143,8 @@ $(document).ready(function() {
 			$(this).toggleClass('is-active');
 			sidebar.toggleClass('is-active');
 			scrollTable.toggleClass('is-sidebar').mCustomScrollbar('update');
+			//scrollTable.toggleClass('is-sidebar').perfectScrollbar('update');
+			fakeHead.toggleClass('is-sidebar');
 		});
 
 		// hide sidebar
@@ -169,39 +176,22 @@ $(document).ready(function() {
 			if ( parentWrap.length > 0 ) {
 				var win = $(window),
 					scrollPos = win.scrollTop(),
-					fakeHead = $('.js-fake-head'),
+					parentWrapHeight = parentWrap.outerHeight(),
 					parentWrapPos = parentWrap.offset().top;
 
-				if ( scrollPos > parentWrapPos ) {
+				if ( scrollPos > parentWrapPos && scrollPos < parentWrapHeight ) {
 					fakeHead.addClass('is-visible');
-				} else {
+				} else if ( scrollPos > parentWrapHeight ) {
+					fakeHead.removeClass('is-visible');
+				} else{
 					fakeHead.removeClass('is-visible');
 				}
 			}
 		}
 
-		// function scrollFakeHeader() {
-		// 	if ( parentWrap.length > 0 ) {
-		// 		var win = $(window),
-		// 			scrollPos = win.scrollTop(),
-		// 			fakeHead = $('.js-fake-head'),
-		// 			parentWrapPos = parentWrap.offset().top;
-
-		// 		if ( scrollPos > parentWrapPos ) {
-		// 			fakeHead.addClass('is-visible').css('top', scrollPos - parentWrapPos );
-		// 			//.stop().animate({'top': (scrollPos - parentWrapPos) + 'px'}, 'fast' );
-
-		// 		} else {
-		// 			fakeHead.removeClass('is-visible');
-		// 		}
-		// 	}
-		// }
-
 		$(window).scroll(function() {
 			scrollFakeHeader();
 		});
-
-
 	})();
 
 });
