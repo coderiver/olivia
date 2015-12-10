@@ -291,7 +291,7 @@ label.is-middle-size { max-width: 340px; }
 .search .icon-zoom { position: absolute; top: 50%; left: 15px; margin-top: -7px; font-size: 14px; color: #757A7D; }
 
 .main { margin-top: -90px; }
-.main__in { min-height: 400px; background: #fff; border: 1px solid #dce0e7; border-radius: 6px; }
+.main__in { min-height: 300px; background: #fff; border: 1px solid #dce0e7; border-radius: 6px; }
 .main.is-form { margin-top: 0; margin-bottom: 30px; padding-top: 120px; }
 
 .upper { position: relative; min-height: 90px; margin-bottom: 20px; padding: 18px 18px 8px; background: #f7f8f9; border-bottom: 1px solid #dce0e7; border-radius: 6px 6px 0 0; }
@@ -532,12 +532,15 @@ label.is-middle-size { max-width: 340px; }
 .table td .icon.icon-clip { font-size: 14px; }
 .table td:first-child { padding-left: 17px; }
 .table .dropdown { vertical-align: middle; }
+.table .status { padding-left: 1px; }
+.table .status span { display: inline-block; max-width: 90%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .table .svg-ico { display: inline-block; width: 16px; height: 16px; background-size: 16px 16px; vertical-align: middle; }
 .table .icon { vertical-align: middle; }
 .table .icon-pending { vertical-align: -2px; }
 .table .icon-customer2, .table .icon-corp { font-size: 17px; }
 
-.sidebar { position: absolute; top: 0; left: 0; bottom: 0; width: 0; padding-bottom: 13px; background-color: #f7f8f9; border: 1px double #dce0e7; border-width: 1px 1px 1px 0; overflow: hidden; z-index: 2; transition: 0.3s ease; }
+.sidebar { position: absolute; top: 0; left: 0; bottom: 0; width: 0; padding-bottom: 13px; background-color: #f7f8f9; overflow: hidden; z-index: 2; transition: width 0.3s ease; }
+.sidebar.is-active { width: 240px; border: 1px solid #dce0e7; border-width: 1px 1px 1px 0; }
 .sidebar__in { width: 240px; height: 100%; }
 .sidebar__content { height: calc(100% - 38px); }
 .sidebar__ttl { position: relative; max-width: 100%; height: 38px; padding: 0 10px; color: #282828; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; line-height: 38px; font-family: "opensans-semibold", Arial, sans-serif; }
@@ -553,12 +556,12 @@ label.is-middle-size { max-width: 340px; }
 .sidebar__bl { padding: 10px 20px; }
 .sidebar__link { display: block; margin-bottom: 2px; font-size: 12px; color: #6c757a; font-family: "opensans-semibold", Arial, sans-serif; }
 .sidebar__link:hover { text-decoration: underline; }
-.sidebar.is-active { width: 240px; }
 
 .scrollbar { margin-right: 50px; transition: 0.3s ease; }
 .scrollbar:before { content: ""; position: absolute; left: 0; bottom: 0; width: 240px; height: 13px; background: #f7f8f9; border-top: 1px solid #dce0e7; border-right: 1px solid #dce0e7; border-bottom: 1px solid #dce0e7; }
 .scrollbar:after { content: ""; position: absolute; right: 0; bottom: 0; width: 50px; height: 13px; background: #f7f8f9; border-left: 1px solid #dce0e7; border-bottom: 1px solid #dce0e7; }
 .scrollbar.is-sidebar { margin-left: 240px; }
+.scrollbar.is-sidebar:before { z-index: 2; }
 .scrollbar .table { min-width: 1000px; margin-bottom: 0; background: #FFF; }
 .scrollbar .table td { padding: 9px 8.5px 6px; height: 38px; }
 .scrollbar .table td > span { display: inline-block; }

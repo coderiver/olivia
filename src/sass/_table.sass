@@ -209,6 +209,14 @@
 			padding-left: 17px
 	.dropdown
 		vertical-align: middle
+	.status
+		padding-left: 1px
+		span
+			display: inline-block
+			max-width: 90%
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
 	.svg-ico
 		display: inline-block
 		width: 16px
@@ -232,11 +240,13 @@
 	width: 0
 	padding-bottom: 13px
 	background-color: #f7f8f9
-	border: 1px double #dce0e7
-	border-width: 1px 1px 1px 0
 	overflow: hidden
 	z-index: 2
-	+tr(0.3s ease)
+	transition: width 0.3s ease
+	&.is-active
+		width: 240px
+		border: 1px solid #dce0e7
+		border-width: 1px 1px 1px 0
 	&__in
 		width: 240px
 		height: 100%
@@ -305,8 +315,6 @@
 		+opensans-sb
 		&:hover
 			text-decoration: underline
-	&.is-active
-		width: 240px
 
 // scrolling part of table
 .scrollbar
@@ -336,6 +344,8 @@
 		border-bottom: 1px solid #dce0e7
 	&.is-sidebar
 		margin-left: 240px
+		&:before
+			z-index: 2
 	.table
 		min-width: 1000px
 		margin-bottom: 0
