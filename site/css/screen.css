@@ -223,15 +223,17 @@ label.is-middle-size { max-width: 340px; }
 .dropdown__item.is-chosen { color: #282828; }
 .dropdown__bl { position: relative; display: inline-block; width: 30px; height: 27px; border: 1px solid #e4e4e4; border-radius: 4px; cursor: pointer; background: #FFF; }
 .dropdown__bl:before { content: ""; position: absolute; top: 50%; left: 50%; margin: -3px 0 0 -4px; width: 0px; height: 0px; border-style: solid; border-width: 6px 4.5px 0 4.5px; border-color: #d8d8d8 transparent transparent transparent; }
-.dropdown__list { display: none; position: absolute; top: 26px; right: 0; min-width: 160px; padding: 20px 14px; text-align: left; font-size: 13px; background: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); border-radius: 4px; border-top-right-radius: 0; border: 1px solid #dce0e7; white-space: nowrap; }
-.dropdown__list li { margin-bottom: 10px; }
-.dropdown__list li:last-child { margin-bottom: 0; }
+.dropdown__list { display: none; position: absolute; top: 26px; right: 0; min-width: 160px; padding: 10px 0; text-align: left; font-size: 13px; background: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); border-radius: 4px; border-top-right-radius: 0; border: 1px solid #dce0e7; white-space: nowrap; }
+.dropdown__list li { position: relative; }
+.dropdown__list li:hover .dropdown__list { opacity: 1; visibility: visible; }
 .dropdown__list li.is-disabled a, .dropdown__list li.is-disabled a:hover { color: #BCC6CC; cursor: default; }
-.dropdown__list a { display: block; color: #282828; }
+.dropdown__list a { display: block; padding: 5px 14px; color: #282828; }
 .dropdown__list a:hover { color: #097bf2; }
 .dropdown__list a.is-active { font-family: "opensans-semibold", Arial, sans-serif; }
 .dropdown__check { margin-bottom: 14px; }
 .dropdown__check:last-child { margin-bottom: 0; }
+.dropdown__more { margin-top: 2px; padding-top: 5px; border-top: 1px solid #e5e5e5; }
+.dropdown__more .dropdown__list { position: absolute; right: 99%; top: -1px; opacity: 0; visibility: hidden; white-space: normal; z-index: 5; }
 
 .header { min-height: 153px; background-color: #474e52; }
 .header.is-form { min-height: initial; position: fixed; min-width: 1000px; top: 0; left: 0; right: 0; background: #FFF; z-index: 9; border-bottom: 1px solid #dee1e7; }

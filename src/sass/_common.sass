@@ -525,7 +525,7 @@ label
 		top: 26px
 		right: 0
 		min-width: 160px
-		padding: 20px 14px
+		padding: 10px 0
 		text-align: left
 		font-size: 13px
 		background: #fff
@@ -535,15 +535,18 @@ label
 		border: 1px solid #dce0e7
 		white-space: nowrap
 		li
-			margin-bottom: 10px
-			&:last-child
-				margin-bottom: 0
+			position: relative
+			&:hover
+				.dropdown__list
+					opacity: 1
+					visibility: visible
 			&.is-disabled
 				a, a:hover
 					color: #BCC6CC
 					cursor: default
 		a
 			display: block
+			padding: 5px 14px
 			color: #282828
 			&:hover
 				color: #097bf2
@@ -553,3 +556,15 @@ label
 		margin-bottom: 14px
 		&:last-child
 			margin-bottom: 0
+	&__more
+		margin-top: 2px
+		padding-top: 5px
+		border-top: 1px solid #e5e5e5
+		.dropdown__list
+			position: absolute
+			right: 99%
+			top: -1px
+			opacity: 0
+			visibility: hidden
+			white-space: normal
+			z-index: 5
