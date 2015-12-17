@@ -12,16 +12,12 @@ $(document).ready(function() {
 		if ($('.overlay').not('is-active')) {
 			$('.overlay').addClass('is-active');
 		}
-		if (!popup.hasClass('js-avoid-overflow')) {
-			$('body').addClass('is-overflow');
-		}
 	};
 
 	$.hidePopup = function(popup) {
 		popup.removeClass('is-active');
 		openedPopup = null;
 		$('.overlay').removeClass('is-active');
-		$('body').removeClass('is-overflow');
 	};
 
 	$('[data-popup]').each(function(index, el) {

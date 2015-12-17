@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>All engagement letters</title>
+	<title>Deal customers</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -17,29 +17,39 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	//= partials/header.html
+	//= partials/header-active-notification.html
 
 	<div class="main">
 		<div class="l">
 			<div class="main__in">
 				<div class="upper">
-					<p class="upper__ttl">Deals</p>
+					<p class="upper__ttl"><a href="#"><i class="icon icon-folder"></i></a>Space X</p>
 					<ul class="upper__list">
-						<li class="upper__option"><a class="upper__link" href="#">All Deals</a></li>
-						<li class="upper__option"><a class="upper__link" href="#">All Engagement Letters</a></li>
-						<li class="upper__option"><a class="upper__link is-active" href="#">All Deal Memos</a></li>
-						<li class="upper__option"><a class="upper__link" href="#">All Customers</a></li>
-						<li class="upper__option"><a class="upper__link" href="#">All Transactions</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Summary</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Tasks</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Engagement Letters</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Deal Memo</a></li>
+						<li class="upper__option"><a class="upper__link is-active" href="#">Customers</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Transactions</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Deal Status</a></li>
 					</ul>
 					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
 					//= partials/menu-suggest.html
 				</div>
 				<!-- begin filters  -->
 				<div class="filters">
-					<div class="filters__ttl">All Engagement Letters</div>
+					<div class="filters__ttl">Customers</div>
 					<div class="filters__in">
+						<div class="toggle-btn js-toggle-sidebar">
+							<i class="icon icon-menu"></i>
+						</div>
 						<div class="toggle-btn">
 							<i class="icon icon-zoom"></i>
+						</div>
+						<div class="tabs">
+							<div class="tabs__el js-tab-el is-active">All</div>
+							<div class="tabs__el js-tab-el">Buyers</div>
+							<div class="tabs__el js-tab-el">Sellers</div>
 						</div>
 						<div class="dropdown is-filter js-dropdown">
 							<p class="dropdown__item">Filter by status</p>
@@ -60,6 +70,23 @@
 				<!-- end filters -->
 				<!-- begin tablewrap  -->
 				<div class="tablewrap js-tablewrap">
+					<!-- begin sidebar  -->
+					<div class="sidebar js-sidebar">
+						<div class="sidebar__in">
+							<p class="sidebar__ttl js-sidebar-ttl">Engagement Letters <i class="js-hide-sidebar"></i></p>
+							<div class="sidebar__content js-content">
+								<ul>
+									<li class="sidebar__option js-sidebar-option"><p><i class="svg-ico letter-ico"></i><span>All</span></p></li>
+									<li class="sidebar__option js-sidebar-option"><p><i class="svg-ico letter-ico"></i><span>Kevin Spencer</span></p></li>
+									<li class="sidebar__option js-sidebar-option"><p><i class="svg-ico letter-ico"></i><span>Jason Simpson</span></p></li>
+									<li class="sidebar__option js-sidebar-option"><p><i class="svg-ico letter-ico"></i><span>Idris Elba</span></p></li>
+									<li class="sidebar__option js-sidebar-option"><p><i class="svg-ico letter-ico"></i><span>Steven Fry</span></p></li>
+									<li class="sidebar__option js-sidebar-option"><p><i class="svg-ico letter-ico"></i><span>Aaron Sorkin</span></p></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end sidebar -->
 					<!-- begin scrollbar  -->
 					<div class="fake-header js-fake-head js-fixed">
 						<div class="l-table">
@@ -71,26 +98,28 @@
 						<table class="table">
 							<tr class="table__head js-clone-head">
 								<th title="ID" width="115" data-id="id"><p>ID</p></th>
-								<th title="Deal" width="260" data-id="deal"><p>Deal</p></th>
-								<th title="Name" width="238" data-id="name"><p>Name</p></th>
+								<th title="Name" width="226" data-id="name"><p>Name</p></th>
+								<th title="Operations" width="107" data-id="operations"><p>Operations</p></th>
 								<th title="Type" width="130" data-id="type"><p>Type</p></th>
 								<th title="Status" width="150" data-id="status"><p>Status</p></th>
+								<th class="table__clip"><i class="icon icon-clip"></i></th>
+								<th class="is-active" width="117" data-id="update"><p>Last Update</p></th>
 							</tr>
 							<tr class="js-link" data-href="http://www.google.com">
 								<td>
 									<div class="table__el">
-										<i class="svg-ico memo-ico"></i>
-										<span>EL12521</span>
+										<i class="svg-ico customer-ico"></i>
+										<span>CU12522</span>
 									</div>
 								</td>
 								<td class="table__name">
-									<span>Samsung – Round A Search</span>
+									<p>Steve Bushemi</p>
 								</td>
 								<td>
-									<p>Samsung-Ro.Deal Memo</p>
+									<p>Buy</p>
 								</td>
 								<td>
-									<p>Deal Memo</p>
+									<p>Individual</p>
 								</td>
 								<td>
 									<div class="status is-approved">
@@ -98,143 +127,185 @@
 										<span>Approved</span>
 									</div>
 								</td>
+								<td>
+									<p>&nbsp;</p>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
 							</tr>
 							<tr class="js-link" data-href="http://www.imgur.com">
 								<td>
 									<div class="table__el">
-										<i class="svg-ico memo-ico"></i>
-										<span>EL12521</span>
+										<i class="svg-ico customer-ico"></i>
+										<span>CU12522</span>
 									</div>
 								</td>
 								<td class="table__name">
-									<span>Space X</span>
+									<p>James Smith</p>
 								</td>
 								<td>
-									<p>Space X Deal Memo</p>
+									<p>Buy</p>
 								</td>
 								<td>
-									<p>Deal Memo</p>
+									<p>Individual</p>
 								</td>
 								<td>
-									<div class="table__pending">
+									<div class="status is-pending">
 										<i class="icon icon-pending"></i>
 										<span>Sent for review</span>
 									</div>
 								</td>
+								<td>
+									<p>&nbsp;</p>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
 							</tr>
 							<tr class="js-link" data-href="http://www.google.com">
 								<td>
 									<div class="table__el">
-										<i class="svg-ico memo-ico"></i>
-										<span>EL12521</span>
+										<i class="svg-ico customer-ico"></i>
+										<span>CU12522</span>
 									</div>
 								</td>
 								<td class="table__name">
-									<p>Samsung</p>
+									<p>Aaron Siwoku</p>
 								</td>
 								<td>
-									<p>Samsung Deal Memo</p>
+									<p>Buy</p>
 								</td>
 								<td>
-									<p>Deal Memo</p>
+									<p>Individual</p>
 								</td>
 								<td>
 									<div class="status is-approved">
 										<i class="icon icon-check"></i>
 										<span>Approved</span>
 									</div>
+								</td>
+								<td>
+									<p>&nbsp;</p>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
 								</td>
 							</tr>
 							<tr class="js-link" data-href="http://www.imgur.com">
 								<td>
 									<div class="table__el">
-										<i class="svg-ico memo-ico"></i>
-										<span>EL12521</span>
+										<i class="svg-ico customer-ico"></i>
+										<span>CU12522</span>
 									</div>
 								</td>
 								<td class="table__name">
-									<span>Foursquare</span>
+									<p>Steve Brown</p>
 								</td>
 								<td>
-									<p>Foursquare Deal Memo</p>
+									<p>Buy</p>
 								</td>
 								<td>
-									<p>Deal Memo</p>
+									<p>Individual</p>
 								</td>
 								<td>
 									<div class="status is-approved">
 										<i class="icon icon-check"></i>
 										<span>Approved</span>
 									</div>
+								</td>
+								<td class="table__clip" data-popup="attach">
+									<i class="icon icon-clip"></i>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
 								</td>
 							</tr>
 							<tr class="js-link" data-href="http://www.imgur.com">
 								<td>
 									<div class="table__el">
-										<i class="svg-ico memo-ico"></i>
-										<span>EL12521</span>
+										<i class="svg-ico customer-ico"></i>
+										<span>CU12522</span>
 									</div>
 								</td>
 								<td class="table__name">
-									<span>Deal with a very long name user</span>
+									<p>Luan Ha</p>
 								</td>
 								<td>
-									<p>Deal with a re. Deal Memo</p>
+									<p>Buy</p>
 								</td>
 								<td>
-									<p>Deal Memo</p>
+									<p>Individual</p>
 								</td>
 								<td>
 									<div class="status is-approved">
 										<i class="icon icon-check"></i>
 										<span>Approved</span>
 									</div>
+								</td>
+								<td class="table__clip" data-popup="attach">
+									<i class="icon icon-clip"></i>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
 								</td>
 							</tr>
 							<tr class="js-link" data-href="http://www.imgur.com">
 								<td>
 									<div class="table__el">
-										<i class="svg-ico memo-ico"></i>
-										<span>EL12521</span>
+										<i class="svg-ico customer-ico"></i>
+										<span>CU12522</span>
 									</div>
 								</td>
 								<td class="table__name">
-									<span>Google</span>
+									<p>Kiko Marsell</p>
 								</td>
 								<td>
-									<p>Google Deal Memo</p>
+									<p>Buy</p>
 								</td>
 								<td>
-									<p>Deal Memo</p>
+									<p>Individual</p>
 								</td>
 								<td>
 									<div class="status is-approved">
 										<i class="icon icon-check"></i>
 										<span>Approved</span>
 									</div>
+								</td>
+								<td>
+									<p>&nbsp;</p>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
 								</td>
 							</tr>
 							<tr class="js-link" data-href="http://www.imgur.com">
 								<td>
 									<div class="table__el">
-										<i class="svg-ico memo-ico"></i>
-										<span>EL12521</span>
+										<i class="svg-ico customer-ico"></i>
+										<span>CU12522</span>
 									</div>
 								</td>
 								<td class="table__name">
-									<span>Johnsons</span>
+									<p>Katherine Stone</p>
 								</td>
 								<td>
-									<p>Johnsons Deal Memo</p>
+									<p>Buy</p>
 								</td>
 								<td>
-									<p>Deal Memo</p>
+									<p>Individual</p>
 								</td>
 								<td>
 									<div class="status is-approved">
 										<i class="icon icon-check"></i>
 										<span>Approved</span>
 									</div>
+								</td>
+								<td>
+									<p>&nbsp;</p>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
 								</td>
 							</tr>
 						</table>
@@ -253,8 +324,9 @@
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list js-inner">
 											<li><a href="#">Open in new window</a></li>
-											<li><a href="#">Download all in ZIP</a></li>
-											<li><a href="#">Deal status</a></li>
+											<li><a href="#">Edit</a></li>
+											<li><a href="#">View related transactions</a></li>
+											<li><a href="#">View related engag. letters</a></li>
 										</ul>
 									</div>
 								</td>
@@ -265,8 +337,9 @@
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list js-inner">
 											<li><a href="#">Open in new window</a></li>
-											<li><a href="#">Download all in ZIP</a></li>
-											<li><a href="#">Deal status</a></li>
+											<li><a href="#">Edit</a></li>
+											<li><a href="#">View related transactions</a></li>
+											<li><a href="#">View related engag. letters</a></li>
 										</ul>
 									</div>
 								</td>
@@ -277,8 +350,9 @@
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list js-inner">
 											<li><a href="#">Open in new window</a></li>
-											<li><a href="#">Download all in ZIP</a></li>
-											<li><a href="#">Deal status</a></li>
+											<li><a href="#">Edit</a></li>
+											<li><a href="#">View related transactions</a></li>
+											<li><a href="#">View related engag. letters</a></li>
 										</ul>
 									</div>
 								</td>
@@ -289,8 +363,9 @@
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list js-inner">
 											<li><a href="#">Open in new window</a></li>
-											<li><a href="#">Download all in ZIP</a></li>
-											<li><a href="#">Deal status</a></li>
+											<li><a href="#">Edit</a></li>
+											<li><a href="#">View related transactions</a></li>
+											<li><a href="#">View related engag. letters</a></li>
 										</ul>
 									</div>
 								</td>
@@ -301,8 +376,9 @@
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list js-inner">
 											<li><a href="#">Open in new window</a></li>
-											<li><a href="#">Download all in ZIP</a></li>
-											<li><a href="#">Deal status</a></li>
+											<li><a href="#">Edit</a></li>
+											<li><a href="#">View related transactions</a></li>
+											<li><a href="#">View related engag. letters</a></li>
 										</ul>
 									</div>
 								</td>
@@ -313,8 +389,9 @@
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list js-inner">
 											<li><a href="#">Open in new window</a></li>
-											<li><a href="#">Download all in ZIP</a></li>
-											<li><a href="#">Deal status</a></li>
+											<li><a href="#">Edit</a></li>
+											<li><a href="#">View related transactions</a></li>
+											<li><a href="#">View related engag. letters</a></li>
 										</ul>
 									</div>
 								</td>
@@ -325,8 +402,9 @@
 										<span class="dropdown__bl"></span>
 										<ul class="dropdown__list js-inner">
 											<li><a href="#">Open in new window</a></li>
-											<li><a href="#">Download all in ZIP</a></li>
-											<li><a href="#">Deal status</a></li>
+											<li><a href="#">Edit</a></li>
+											<li><a href="#">View related transactions</a></li>
+											<li><a href="#">View related engag. letters</a></li>
 										</ul>
 									</div>
 								</td>
@@ -342,6 +420,8 @@
 	//= partials/footer.html
 </div>
 <!-- END out-->
-<div class="overlay"></div>
+<div class="overlay">
+	//= partials/popup-attach.html
+</div>
 </body>
 </html>

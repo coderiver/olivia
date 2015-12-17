@@ -6,7 +6,8 @@ $(document).ready(function() {
 			row = $('.js-sidedrop .js-row'),
 			scrollTable = $('.js-scrollbar'),
 			sublist = $('.js-sublist'),
-			fakeHead = parentWrap.find('.fake-header');
+			fakeHead = parentWrap.find('.js-fake-head'),
+			fakeHeadTable = fakeHead.find('.table');
 
 		// tablehead filter
 		$('.table th').click(function() {
@@ -46,7 +47,7 @@ $(document).ready(function() {
 		});
 
 		function scrollHeaderWidth(el) {
-			var scrollHeader = $(el).find('.js-fake-head .table'),
+			var scrollHeader = $(el).closest(parentWrap).find('.js-fake-head .table'),
 				containerWidth = $(el).find('.mCSB_container').outerWidth();
 
 			if ( scrollHeader.length > 0 ) {
@@ -55,16 +56,26 @@ $(document).ready(function() {
 		}
 
 		function scrollHeaderPos(el) {
-			var scrollHeader = $(el).find('.js-fake-head .table');
+			var scrollHeader = $(el).closest(parentWrap).find('.js-fake-head .table');
 
 			if ( scrollHeader.length > 0 ) {
 				scrollHeader.css('left', el.mcs.left);
 			}
 		}
 
-		// scrollTable.perfectScrollbar({
-		// 	maxScrollbarLength: 350
+		// scrollTable.perfectScrollbar();
+
+		// scrollTable.on('ps-scroll-right', function() {
+		// 	var scrollPos = scrollTable.find('.ps-scrollbar-x').position().left;
+		// 	fakeHeadTable.css('left', -scrollPos);
 		// });
+
+		// scrollTable.on('ps-scroll-left', function() {
+		// 	var scrollPos = scrollTable.find('.ps-scrollbar-x').position().left;
+		// 	console.log(-scrollPos + (-scrollPos + scrollPos));
+		// 	fakeHeadTable.css('left', -scrollPos + (-scrollPos + scrollPos));
+		// });
+
 
 		// measure width of more block
 		function measureMoreblock() {
@@ -143,7 +154,7 @@ $(document).ready(function() {
 			$(this).toggleClass('is-active');
 			sidebar.toggleClass('is-active');
 			scrollTable.toggleClass('is-sidebar').mCustomScrollbar('update');
-			//scrollTable.toggleClass('is-sidebar').perfectScrollbar('update');
+			// scrollTable.toggleClass('is-sidebar').perfectScrollbar('update');
 			fakeHead.toggleClass('is-sidebar');
 		});
 
@@ -160,13 +171,7 @@ $(document).ready(function() {
 			$(this).siblings().find(sublist).slideUp();
 
 			$(this).addClass('is-active');
-			$(this).find(sublist).slideToggle();
-		});
-
-		// tabs
-		$('.js-tab-el').click(function() {
-			$(this).siblings().removeClass('is-active');
-			$(this).addClass('is-active');
+			$(this).find(sublist).slideDown();
 		});
 
 		// fake header
@@ -193,6 +198,17 @@ $(document).ready(function() {
 			scrollFakeHeader();
 		});
 	})();
+
+	// TODO FAKEHEADER LEFT - 0, TABLE - LEFT 0
+	// $(window).resize(function() {
+
+	// });
+
+	// tabs for filter
+	$('.js-tab-el').click(function() {
+		$(this).siblings().removeClass('is-active');
+		$(this).addClass('is-active');
+	});
 
 });
 

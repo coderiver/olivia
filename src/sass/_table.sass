@@ -6,7 +6,7 @@
 // filters
 .filters
 	position: relative
-	padding: 15px 10px 10px 20px
+	padding: 17px 10px 10px 20px
 	margin: 0 -4px
 	z-index: 3
 	+clr
@@ -191,6 +191,16 @@
 	th
 		padding: 0
 		font-size: 0
+		> *
+			max-width: 100%
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
+		&.txt-right
+			text-align: right
+			&:before
+				right: auto
+				left: 10px
 	td
 		padding: 6px 8.5px
 		font-size: 0
@@ -230,6 +240,8 @@
 	.icon-customer2,
 	.icon-corp
 		font-size: 17px
+	.txt-right
+		text-align: right
 
 // sidebar
 .sidebar
@@ -243,9 +255,11 @@
 	overflow: hidden
 	z-index: 2
 	transition: width 0.3s ease
+	border: 1px solid transparent
+	+tr(0.3s ease)
 	&.is-active
 		width: 240px
-		border: 1px solid #dce0e7
+		border-color: #dce0e7
 		border-width: 1px 1px 1px 0
 	&__in
 		width: 240px
@@ -332,6 +346,7 @@
 		border-top: 1px solid #dce0e7
 		border-right: 1px solid #dce0e7
 		border-bottom: 1px solid #dce0e7
+		opacity: 0
 	&:after
 		content: ""
 		position: absolute
@@ -344,8 +359,6 @@
 		border-bottom: 1px solid #dce0e7
 	&.is-sidebar
 		margin-left: 240px
-		&:before
-			z-index: 2
 	.table
 		min-width: 1000px
 		margin-bottom: 0
@@ -458,4 +471,5 @@
 		overflow: hidden
 	.table
 		position: relative
+		min-width: 1000px
 		margin-bottom: 0

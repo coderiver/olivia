@@ -70,12 +70,9 @@ body
 	font-size: 12px
 	line-height: 1.4
 	background: #F3F4F6
-	overflow: auto !important
 	font-weight: normal
 	+opensans
 	+font-smoothing
-	&.is-overflow
-		overflow: hidden !important
 
 .footer
 	margin: 15px 0
@@ -113,6 +110,8 @@ body
 	height: 70px
 	background-image: url('../img/svg-bg/transaction.svg')
 	background-size: 70px 70px
+	&.is-disabled
+		background-image: url('../img/svg-bg/transaction-disabled.svg')
 
 .library-ico
 	width: 70px
@@ -184,6 +183,10 @@ body
 
 .icon-bubble
 	color: #96A0A6
+
+.icon-calendar
+	font-size: 16px
+	color: #6c757a
 
 // common blocks
 .l
@@ -288,6 +291,9 @@ label
 		color: #2caf24
 		.icon-check
 			display: inline-block
+	&.is-draft
+		color: #6C757A
+		+opensans
 	span
 		vertical-align: middle
 	.icon
@@ -537,6 +543,8 @@ label
 		li
 			position: relative
 			&:hover
+				a:before
+					+arr(6, 9, #6c757a, r)
 				.dropdown__list
 					opacity: 1
 					visibility: visible
@@ -546,20 +554,36 @@ label
 					cursor: default
 		a
 			display: block
+			max-width: 250px
 			padding: 5px 14px
 			color: #282828
+			overflow: hidden
+			-ms-text-overflow: ellipsis
+			text-overflow: ellipsis
 			&:hover
 				color: #097bf2
 			&.is-active
 				+opensans-sb
 	&__check
-		margin-bottom: 14px
+		padding: 7px 14px
+		&:first-child
+			padding-top: 5px
 		&:last-child
-			margin-bottom: 0
+			padding-bottom: 5px
 	&__more
 		margin-top: 2px
 		padding-top: 5px
 		border-top: 1px solid #e5e5e5
+		> a
+			position: relative
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 100%
+				margin: -4px 0 0 -14px
+				+tr(0.3s)
+				+arr(6, 9, #d8d8d8, r)
 		.dropdown__list
 			position: absolute
 			right: 99%
@@ -567,4 +591,3 @@ label
 			opacity: 0
 			visibility: hidden
 			white-space: normal
-			z-index: 5
