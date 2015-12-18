@@ -1,7 +1,8 @@
 // common wrapper
 .tablewrap
-	position: relative
 	margin-bottom: 55px
+	&__in
+		position: relative
 
 // filters
 .filters
@@ -49,6 +50,14 @@
 	vertical-align: middle
 	border: 1px solid #cfd5e0
 	border-radius: 4px
+	&.is-table
+		display: table
+		width: 100%
+		table-layout: fixed
+		text-align: center
+		.tabs__el
+			display: table-cell
+			padding: 7.5px 0
 	&__el
 		display: inline-block
 		padding: 7.5px 16px
@@ -281,9 +290,12 @@
 			position: absolute
 			top: 50%
 			right: 10px
-			margin-top: -4.5px
 			cursor: pointer
-			+arr(6, 9, #6c757a, l)
+		.icon-filter
+			margin-top: -6px
+	&-arr
+		margin-top: -4.5px
+		+arr(6, 9, #6c757a, l)
 	&__option
 		&.is-active
 			p
@@ -299,7 +311,6 @@
 			.icon
 				margin-right: 5px
 				font-size: 11px
-				color: #899bac
 				vertical-align: middle
 			.svg-ico
 				width: 10px
@@ -329,6 +340,17 @@
 		+opensans-sb
 		&:hover
 			text-decoration: underline
+	.tabs
+		margin: 0 auto 5px
+		width: 92%
+	.tabs__el
+		&:first-child
+			width: 20%
+	.mCSB_scrollTools
+		width: 5px
+	.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical,
+	.mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical
+		margin: 0
 
 // scrolling part of table
 .scrollbar
@@ -473,3 +495,17 @@
 		position: relative
 		min-width: 1000px
 		margin-bottom: 0
+
+// sum
+.sum
+	margin: 10px 0
+	text-align: right
+	font-size: 0
+	&__bl
+		display: inline-block
+		margin: 0 10px
+		font-size: 14px
+		color: #6c757a
+		vertical-align: middle
+		span
+			color: #282828

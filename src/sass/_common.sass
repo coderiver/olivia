@@ -92,18 +92,24 @@ body
 	height: 70px
 	background-image: url('../img/svg-bg/letter.svg')
 	background-size: 70px 70px
+	&.is-disabled
+		background-image: url('../img/svg-bg/letter-disabled.svg')
 
 .memo-ico
 	width: 70px
 	height: 70px
 	background-image: url('../img/svg-bg/memo.svg')
 	background-size: 70px 70px
+	&.is-disabled
+		background-image: url('../img/svg-bg/memo-disabled.svg')
 
 .customer-ico
 	width: 70px
 	height: 70px
 	background-image: url('../img/svg-bg/customer.svg')
 	background-size: 70px 70px
+	&.is-disabled
+		background-image: url('../img/svg-bg/customer-disabled.svg')
 
 .transaction-ico
 	width: 70px
@@ -159,6 +165,8 @@ body
 // default color for icons
 .icon-customer2, .icon-corp
 	color: #3caca2
+	&.is-disabled
+		color: #CFD5E0
 
 .icon-clip
 	color: #BCC6CC
@@ -187,6 +195,13 @@ body
 .icon-calendar
 	font-size: 16px
 	color: #6c757a
+
+.icon-filter
+	color: #6c757a
+
+.icon-folder
+	color: #899BAC
+
 
 // common blocks
 .l

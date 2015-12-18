@@ -60,11 +60,11 @@ $(document).ready(function() {
 $(document).ready(function() {
 	(function() {
 
-		var sidebar = $('.js-sidebar'),
-			parentWrap = $('.js-tablewrap'),
-			row = $('.js-sidedrop .js-row'),
-			scrollTable = $('.js-scrollbar'),
-			sublist = $('.js-sublist'),
+		var	parentWrap = $('.js-tablewrap'),
+			sidebar = parentWrap.find('.js-sidebar'),
+			row = parentWrap.find('.js-sidedrop .js-row'),
+			scrollTable = parentWrap.find('.js-scrollbar'),
+			sublist = parentWrap.find('.js-sublist'),
 			fakeHead = parentWrap.find('.js-fake-head'),
 			fakeHeadTable = fakeHead.find('.table');
 
@@ -234,20 +234,20 @@ $(document).ready(function() {
 		});
 
 		// fake header
-		$('.js-tablewrap .js-clone-head').clone(true).removeClass('js-clone-head').appendTo('.js-fake-head .table');
+		parentWrap.find('.js-clone-head').clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
 
 		function scrollFakeHeader() {
 			if ( parentWrap.length > 0 ) {
 				var win = $(window),
 					scrollPos = win.scrollTop(),
 					parentWrapHeight = parentWrap.outerHeight(),
-					parentWrapPos = parentWrap.offset().top;
+					tableTop = scrollTable.offset().top;
 
-				if ( scrollPos > parentWrapPos && scrollPos < parentWrapHeight ) {
+				if ( scrollPos > tableTop && scrollPos < parentWrapHeight ) {
 					fakeHead.addClass('is-visible');
 				} else if ( scrollPos > parentWrapHeight ) {
 					fakeHead.removeClass('is-visible');
-				} else{
+				} else {
 					fakeHead.removeClass('is-visible');
 				}
 			}
