@@ -752,6 +752,7 @@ label.is-middle-size { max-width: 340px; }
 .popup__btn { margin-top: 60px; text-align: right; font-size: 0; }
 .popup__btn .btn { margin-left: 8px; vertical-align: middle; }
 .popup__btn.s-margin { margin-top: 40px; }
+.popup__btn.xs-margin { margin-top: 15px; }
 .popup__bl { margin: 10px 0; *zoom: 1; }
 .popup__bl:after { content: " "; display: table; clear: both; }
 .popup__el { float: left; }
@@ -768,6 +769,7 @@ label.is-middle-size { max-width: 340px; }
 .popup .table .svg-ico { width: 16px; height: 16px; background-size: 16px 16px; }
 .popup .steps { margin-top: 15px; }
 .popup .report:only-child { margin: 0; padding: 13px 15px; }
+.popup .textarea { height: 100px; }
 
 /*
 == malihu jquery custom scrollbar plugin ==

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Deal settings</title>
+	<title>Deal status</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -52,7 +52,7 @@
 								<p class="actions__txt">Keep this status for deal when you are working on it</p>
 							</div>
 						</div>
-						<div class="actions__bl js-action">
+						<div class="actions__bl js-action" data-popup="close-deal">
 							<div class="actions__in">
 								<div class="actions__ico">
 									<i class="icon icon-folder"></i>
@@ -113,5 +113,8 @@
 	//= partials/footer.html
 </div>
 <!-- END out-->
+<div class="overlay">
+	//= partials/popup-close-deal.html
+</div>
 </body>
 </html>
