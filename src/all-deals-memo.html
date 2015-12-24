@@ -17,42 +17,7 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<!-- begin header  -->
-	<div class="header">
-		<div class="l">
-			<div class="header__in">
-				<a href="#" class="header__logo"><i class="icon icon-logo"></i></a>
-				<ul class="menu">
-					<li class="menu__option"><a class="menu__link" href="#">Tasks <p class="notification"><span>2</span></p></a></li>
-					<li class="menu__option"><a class="menu__link is-active" href="#">Deals</a></li>
-					<li class="menu__option"><a class="menu__link" href="#">Reports</a></li>
-					<li class="menu__option"><a class="menu__link" href="#">Entries</a></li>
-					<li class="menu__option"><a class="menu__link" href="#">Library</a></li>
-					<li class="menu__option">
-						<div class="dropdown is-menu js-dropdown">
-							<p class="dropdown__item">Me</p>
-							<ul class="dropdown__list js-inner">
-								<li><a href="#">Profile</a></li>
-								<li><a href="#">Settings</a></li>
-								<li><a href="#">My Team</a></li>
-								<li><a href="#">Activity Log</a></li>
-								<li><a href="#">Log Out</a></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-				<div class="helpers">
-					<a href="#" class="helpers__info">?</a>
-					<a href="#" class="helpers__bell icon icon-bell"></a>
-					<label class="search">
-						<i class="icon icon-zoom"></i>
-						<input type="search" placeholder="Search">
-					</label>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end header -->
+	//= partials/header.html
 
 	<div class="main">
 		<div class="l">
@@ -61,58 +26,13 @@
 					<p class="upper__ttl">Deals</p>
 					<ul class="upper__list">
 						<li class="upper__option"><a class="upper__link" href="#">All Deals</a></li>
-						<li class="upper__option"><a class="upper__link is-active" href="#">All Engagement Letters</a></li>
-						<li class="upper__option"><a class="upper__link" href="#">All Deal Memos</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">All Engagement Letters</a></li>
+						<li class="upper__option"><a class="upper__link is-active" href="#">All Deal Memos</a></li>
 						<li class="upper__option"><a class="upper__link" href="#">All Customers</a></li>
 						<li class="upper__option"><a class="upper__link" href="#">All Transactions</a></li>
 					</ul>
 					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
-					<!-- begin suggest for new deal -->
-						<div class="suggest js-popup js-avoid-overflow" id="suggest">
-							<div class="suggest__head">
-								<p class="suggest__txt">Submit Deal Memo</p>
-								<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
-							</div>
-							<div class="suggest__menu">
-								<a href="#" class="suggest__bl">
-									<i class="svg-ico letter-ico"></i>
-									<div class="suggest__in">
-										<p>Add Engagement Letter</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl" data-popup="popup-deal-memo-info">
-									<i class="svg-ico memo-ico"></i>
-									<div class="suggest__in">
-										<p>Add Deal memo</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl">
-									<i class="svg-ico customer-ico"></i>
-									<div class="suggest__in">
-										<p>Add Customer</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl">
-									<i class="svg-ico transaction-ico"></i>
-									<div class="suggest__in">
-										<p>Add Transaction Report</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl">
-									<i class="svg-ico library-ico"></i>
-									<div class="suggest__in">
-										<p>Add Marketing Materials</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl">
-									<i class="svg-ico library-ico"></i>
-									<div class="suggest__in">
-										<p>Add from Templates or Other</p>
-									</div>
-								</a>
-							</div>
-						</div>
-					<!-- end suggest for new deal -->
+					//= partials/menu-suggest.html
 				</div>
 				<!-- begin tablewrap  -->
 				<div class="tablewrap js-tablewrap">
@@ -135,121 +55,18 @@
 							</div>
 							<div class="dropdown is-filter js-dropdown">
 								<p class="dropdown__item">Settings</p>
-								<div class="dropdown__list js-inner js-check">
-									<div class="dropdown__check">
-										<label class="check" data-attr="id">
-											<input type="checkbox" checked>
-											<span class="check__span">ID</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="deal">
-											<input type="checkbox" checked>
-											<span class="check__span">Deal</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="name">
-											<input type="checkbox" checked>
-											<span class="check__span">Name</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="operations">
-											<input type="checkbox" checked>
-											<span class="check__span">Operations</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="type">
-											<input type="checkbox" checked>
-											<span class="check__span">Type</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="status">
-											<input type="checkbox" checked>
-											<span class="check__span">Status</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="letters">
-											<input type="checkbox">
-											<span class="check__span">Engagement Letter(s)</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="transactionnum">
-											<input type="checkbox">
-											<span class="check__span">Number of transactions</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="">
-											<input type="checkbox">
-											<span class="check__span">Latest transaction date</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="latestid">
-											<input type="checkbox">
-											<span class="check__span">Latest transaction ID</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="lateststat">
-											<input type="checkbox">
-											<span class="check__span">Latest transaction status</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="transactionsum">
-											<input type="checkbox">
-											<span class="check__span">Transactions total</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="comissionsum">
-											<input type="checkbox">
-											<span class="check__span">My comission total</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="gcs">
-											<input type="checkbox">
-											<span class="check__span">GCS comission total</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="funds">
-											<input type="checkbox">
-											<span class="check__span">Latest funds arrived date</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="date">
-											<input type="checkbox">
-											<span class="check__span">Date created</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="update">
-											<input type="checkbox" checked>
-											<span class="check__span">Last update</span>
-										</label>
-									</div>
-								</div>
+								//= partials/all-settings.html
 							</div>
 						</div>
 					</div>
 					<!-- end filters -->
-					<div class="tablwerap__in">
+					<div class="tablewrap__in">
+						<!-- begin scrollbar  -->
 						<div class="fake-header js-fake-head js-fixed">
 							<div class="l-table">
 								<table class="table"></table>
 							</div>
 						</div>
-						<!-- begin scrollbar  -->
 						<div class="scrollbar js-scrollbar">
 							<!-- begin table  -->
 							<table class="table">
@@ -263,7 +80,7 @@
 								<tr class="js-link" data-href="http://www.google.com">
 									<td>
 										<div class="table__el">
-											<i class="svg-ico letter-ico"></i>
+											<i class="svg-ico memo-ico"></i>
 											<span>EL12521</span>
 										</div>
 									</td>
@@ -271,10 +88,10 @@
 										<span>Samsung – Round A Search</span>
 									</td>
 									<td>
-										<p>James Dean</p>
+										<p>Samsung-Ro.Deal Memo</p>
 									</td>
 									<td>
-										<p>Engagement Letter</p>
+										<p>Deal Memo</p>
 									</td>
 									<td>
 										<div class="status is-approved">
@@ -286,7 +103,7 @@
 								<tr class="js-link" data-href="http://www.imgur.com">
 									<td>
 										<div class="table__el">
-											<i class="svg-ico letter-ico"></i>
+											<i class="svg-ico memo-ico"></i>
 											<span>EL12521</span>
 										</div>
 									</td>
@@ -294,10 +111,10 @@
 										<span>Space X</span>
 									</td>
 									<td>
-										<p>Steve Buscemi</p>
+										<p>Space X Deal Memo</p>
 									</td>
 									<td>
-										<p>Engagement Letter</p>
+										<p>Deal Memo</p>
 									</td>
 									<td>
 										<div class="table__pending">
@@ -309,7 +126,7 @@
 								<tr class="js-link" data-href="http://www.google.com">
 									<td>
 										<div class="table__el">
-											<i class="svg-ico letter-ico"></i>
+											<i class="svg-ico memo-ico"></i>
 											<span>EL12521</span>
 										</div>
 									</td>
@@ -317,10 +134,10 @@
 										<p>Samsung</p>
 									</td>
 									<td>
-										<p>Aaron Siwoku</p>
+										<p>Samsung Deal Memo</p>
 									</td>
 									<td>
-										<p>Engagement Letter</p>
+										<p>Deal Memo</p>
 									</td>
 									<td>
 										<div class="status is-approved">
@@ -332,18 +149,18 @@
 								<tr class="js-link" data-href="http://www.imgur.com">
 									<td>
 										<div class="table__el">
-											<i class="svg-ico letter-ico"></i>
+											<i class="svg-ico memo-ico"></i>
 											<span>EL12521</span>
 										</div>
 									</td>
 									<td class="table__name">
-										<span>Samsung</span>
+										<span>Foursquare</span>
 									</td>
 									<td>
-										<p>Steve Buscemi</p>
+										<p>Foursquare Deal Memo</p>
 									</td>
 									<td>
-										<p>Engagement Letter</p>
+										<p>Deal Memo</p>
 									</td>
 									<td>
 										<div class="status is-approved">
@@ -355,7 +172,7 @@
 								<tr class="js-link" data-href="http://www.imgur.com">
 									<td>
 										<div class="table__el">
-											<i class="svg-ico letter-ico"></i>
+											<i class="svg-ico memo-ico"></i>
 											<span>EL12521</span>
 										</div>
 									</td>
@@ -363,10 +180,10 @@
 										<span>Deal with a very long name user</span>
 									</td>
 									<td>
-										<p>Tom Ford</p>
+										<p>Deal with a re. Deal Memo</p>
 									</td>
 									<td>
-										<p>Engagement Letter</p>
+										<p>Deal Memo</p>
 									</td>
 									<td>
 										<div class="status is-approved">
@@ -378,7 +195,7 @@
 								<tr class="js-link" data-href="http://www.imgur.com">
 									<td>
 										<div class="table__el">
-											<i class="svg-ico letter-ico"></i>
+											<i class="svg-ico memo-ico"></i>
 											<span>EL12521</span>
 										</div>
 									</td>
@@ -386,10 +203,10 @@
 										<span>Google</span>
 									</td>
 									<td>
-										<p>David McCarter</p>
+										<p>Google Deal Memo</p>
 									</td>
 									<td>
-										<p>Engagement Letter</p>
+										<p>Deal Memo</p>
 									</td>
 									<td>
 										<div class="status is-approved">
@@ -401,7 +218,7 @@
 								<tr class="js-link" data-href="http://www.imgur.com">
 									<td>
 										<div class="table__el">
-											<i class="svg-ico letter-ico"></i>
+											<i class="svg-ico memo-ico"></i>
 											<span>EL12521</span>
 										</div>
 									</td>
@@ -409,10 +226,10 @@
 										<span>Johnsons</span>
 									</td>
 									<td>
-										<p>Trent Reznor</p>
+										<p>Johnsons Deal Memo</p>
 									</td>
 									<td>
-										<p>Engagement Letter</p>
+										<p>Deal Memo</p>
 									</td>
 									<td>
 										<div class="status is-approved">
@@ -524,13 +341,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- begin footer  -->
-	<div class="footer">
-		<div class="l">
-			<p>© 2009-2013 Growth Capital Services.  Growth Capital Services, Member FINRA, SIPC. All information presented herein is CONFIDENTIAL.</p>
-		</div>
-	</div>
-	<!-- end footer -->
+	//= partials/footer.html
 </div>
 <!-- END out-->
 <div class="overlay"></div>

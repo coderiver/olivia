@@ -1,21 +1,23 @@
 // common wrapper
 .tablewrap
-	margin-bottom: 55px
+	margin: 40px 0
 	&__in
 		position: relative
 
 // filters
 .filters
 	position: relative
-	padding: 17px 10px 10px 20px
+	padding: 0 10px 10px 20px
 	margin: 0 -4px
 	z-index: 3
 	+clr
 	&__ttl
 		float: left
-		margin-top: 5px
+		margin-top: 10px
 		font-size: 17px
 		color: #282828
+		.tooltip
+			margin-bottom: 0
 	&__in
 		float: right
 		font-size: 0
@@ -128,8 +130,8 @@
 					display: none
 			&.table__clip
 				text-align: center
-			&.table__clip.is-active
-				padding-right: 17px
+				&.is-active
+					padding-right: 17px
 	&__clip
 		width: 5%
 		text-align: center
@@ -164,6 +166,13 @@
 			white-space: nowrap
 		span
 			display: inline-block
+			max-width: 95%
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+			vertical-align: middle
+		.icon, .svg-ico
+			margin-right: 5px
 	&__el
 		+rmono
 		span
@@ -205,11 +214,14 @@
 			overflow: hidden
 			text-overflow: ellipsis
 			white-space: nowrap
-		&.txt-right
+		&.cell-right
 			text-align: right
-			&:before
-				right: auto
-				left: 10px
+			&.is-active
+				padding-right: 20px
+		&.cell-center
+			text-align: center
+			&.is-active
+				padding-right: 15px
 	td
 		padding: 6px 8.5px
 		font-size: 0
@@ -226,6 +238,10 @@
 			font-size: 14px
 		&:first-child
 			padding-left: 17px
+		&.cell-center
+			text-align: center
+		&.cell-right
+			text-align: right
 	.dropdown
 		vertical-align: middle
 	.status
@@ -249,8 +265,6 @@
 	.icon-customer2,
 	.icon-corp
 		font-size: 17px
-	.txt-right
-		text-align: right
 
 // sidebar
 .sidebar
@@ -278,14 +292,19 @@
 	&__ttl
 		position: relative
 		max-width: 100%
-		height: 38px
-		padding: 0 10px
+		margin: 11px 0
+		padding: 0 20px
 		color: #282828
 		overflow: hidden
 		white-space: nowrap
 		text-overflow: ellipsis
-		line-height: 38px
 		+opensans-sb
+		&:first-child
+			height: 38px
+			margin: 0
+			line-height: 38px
+		&.no-b-margin
+			margin-bottom: 0
 		i
 			position: absolute
 			top: 50%
@@ -340,6 +359,9 @@
 		+opensans-sb
 		&:hover
 			text-decoration: underline
+	&__filtered
+		margin-bottom: 5px
+		padding: 0 20px
 	.tabs
 		margin: 0 auto 5px
 		width: 92%
@@ -388,6 +410,8 @@
 		td
 			padding: 9px 8.5px 6px
 			height: 38px
+			&:first-child
+				padding-left: 17px
 		td > span
 			display: inline-block
 	.mCSB_horizontal.mCSB_inside > .mCSB_container

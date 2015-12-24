@@ -39,6 +39,17 @@
 		z-index: 11
 	&__head
 		+clr
+		&.is-border
+			position: relative
+			margin-bottom: 20px
+			padding-bottom: 20px
+			&:before
+				content: ""
+				position: absolute
+				left: -26px
+				right: -23px
+				bottom: 0
+				border-bottom: 1px solid #efefef
 	&__close
 		float: right
 		width: 50px
@@ -50,6 +61,10 @@
 		cursor: pointer
 		+vertical
 		+rotate(-45)
+	&__ttl
+		margin-bottom: 23px
+		font-size: 16px
+		color: #282828
 	&__txt
 		display: inline-block
 		color: #097bf2

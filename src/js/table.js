@@ -6,8 +6,7 @@ $(document).ready(function() {
 			row = parentWrap.find('.js-sidedrop .js-row'),
 			scrollTable = parentWrap.find('.js-scrollbar'),
 			sublist = parentWrap.find('.js-sublist'),
-			fakeHead = parentWrap.find('.js-fake-head'),
-			fakeHeadTable = fakeHead.find('.table');
+			fakeHead = parentWrap.find('.js-fake-head');
 
 		// tablehead filter
 		$('.table th').click(function() {
@@ -37,7 +36,7 @@ $(document).ready(function() {
 				onInit: function() {
 					scrollHeaderWidth(this);
 				},
-				onUpdate: function(){
+				onUpdate: function() {
 					scrollHeaderWidth(this);
 				},
 				whileScrolling: function() {
@@ -62,19 +61,6 @@ $(document).ready(function() {
 				scrollHeader.css('left', el.mcs.left);
 			}
 		}
-
-		// scrollTable.perfectScrollbar();
-
-		// scrollTable.on('ps-scroll-right', function() {
-		// 	var scrollPos = scrollTable.find('.ps-scrollbar-x').position().left;
-		// 	fakeHeadTable.css('left', -scrollPos);
-		// });
-
-		// scrollTable.on('ps-scroll-left', function() {
-		// 	var scrollPos = scrollTable.find('.ps-scrollbar-x').position().left;
-		// 	console.log(-scrollPos + (-scrollPos + scrollPos));
-		// 	fakeHeadTable.css('left', -scrollPos + (-scrollPos + scrollPos));
-		// });
 
 
 		// measure width of more block
@@ -175,40 +161,45 @@ $(document).ready(function() {
 		});
 
 		// fake header
-		parentWrap.find('.js-clone-head').clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
 
-		function scrollFakeHeader() {
-			if ( parentWrap.length > 0 ) {
+		parentWrap.each(function() {
+			fakeHeadTable = $(this).find('.js-fake-head .table');
+			$(this).find('.js-clone-head').clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
+		});
+
+		function scrollFakeHeader(el) {
+			if ( el.length > 0 ) {
 				var win = $(window),
 					scrollPos = win.scrollTop(),
-					parentWrapHeight = parentWrap.outerHeight(),
-					tableTop = scrollTable.offset().top;
+					parentWrapHeight = el.outerHeight(),
+					tableTop = el.find('.js-scrollbar').offset().top;
 
 				if ( scrollPos > tableTop && scrollPos < parentWrapHeight ) {
-					fakeHead.addClass('is-visible');
+					el.find('.js-fake-head').addClass('is-visible');
 				} else if ( scrollPos > parentWrapHeight ) {
-					fakeHead.removeClass('is-visible');
+					el.find('.js-fake-head').removeClass('is-visible');
 				} else {
-					fakeHead.removeClass('is-visible');
+					el.find('.js-fake-head').removeClass('is-visible');
 				}
 			}
 		}
 
 		$(window).scroll(function() {
-			scrollFakeHeader();
+
 		});
+
+		// TODO FAKEHEADER LEFT - 0, TABLE - LEFT 0
+		// $(window).resize(function() {
+
+		// });
+
+		// tabs for filter
+		$('.js-tab-el').click(function() {
+			$(this).siblings().removeClass('is-active');
+			$(this).addClass('is-active');
+		});
+
 	})();
-
-	// TODO FAKEHEADER LEFT - 0, TABLE - LEFT 0
-	// $(window).resize(function() {
-
-	// });
-
-	// tabs for filter
-	$('.js-tab-el').click(function() {
-		$(this).siblings().removeClass('is-active');
-		$(this).addClass('is-active');
-	});
 
 });
 
