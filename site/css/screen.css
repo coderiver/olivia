@@ -192,6 +192,7 @@ label.is-middle-size { max-width: 340px; }
 .status .icon-pending, .status .icon-check { display: none; }
 
 .status-info { display: inline-block; margin-right: 5px; padding: 3px 5px 2px; text-transform: uppercase; font-size: 10px; background: #f76300; color: #fff; border-radius: 2px; line-height: 1; vertical-align: middle; }
+.status-info.is-approved { background: #2caf24; }
 
 .back-to-top { margin: 23px 0 23px 20px; }
 .back-to-top a { font-size: 13px; color: #bcc6cc; }
@@ -543,8 +544,9 @@ label.is-middle-size { max-width: 340px; }
 .table__desc span:only-child { padding-left: 0; }
 .table__name { color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
 .table__name.is-measured { white-space: nowrap; }
-.table__name span { display: inline-block; max-width: 95%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; }
+.table__name > span { display: inline-block; max-width: 95%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; }
 .table__name .icon, .table__name .svg-ico { margin-right: 5px; }
+.table__name .status { display: inline-block; }
 .table__el { font-family: "robotomono", Arial, sans-serif; }
 .table__el span { display: inline-block; vertical-align: middle; }
 .table__more { display: inline-block; font-size: 13px; vertical-align: top; }

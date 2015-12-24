@@ -120,7 +120,7 @@ $(document).ready(function() {
 		}
 
 
-		// measure width of more block
+		// measure width of more block TODO MEASURE IN PERCENTAGE
 		function measureMoreblock() {
 			setTimeout(function() {
 				$('.js-plus-more span:first-child').each(function() {
@@ -218,32 +218,31 @@ $(document).ready(function() {
 		});
 
 		// fake header
-
 		parentWrap.each(function() {
 			fakeHeadTable = $(this).find('.js-fake-head .table');
 			$(this).find('.js-clone-head').clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
 		});
 
-		function scrollFakeHeader(el) {
-			if ( el.length > 0 ) {
-				var win = $(window),
-					scrollPos = win.scrollTop(),
-					parentWrapHeight = el.outerHeight(),
-					tableTop = el.find('.js-scrollbar').offset().top;
+		// function scrollFakeHeader() {
+		// 	if ( el.length > 0 ) {
+		// 		var win = $(window),
+		// 			scrollPos = win.scrollTop(),
+		// 			parentWrapHeight = el.outerHeight(),
+		// 			tableTop = el.find('.js-scrollbar').offset().top;
 
-				if ( scrollPos > tableTop && scrollPos < parentWrapHeight ) {
-					el.find('.js-fake-head').addClass('is-visible');
-				} else if ( scrollPos > parentWrapHeight ) {
-					el.find('.js-fake-head').removeClass('is-visible');
-				} else {
-					el.find('.js-fake-head').removeClass('is-visible');
-				}
-			}
-		}
+		// 		if ( scrollPos > tableTop && scrollPos < parentWrapHeight ) {
+		// 			el.find('.js-fake-head').addClass('is-visible');
+		// 		} else if ( scrollPos > parentWrapHeight ) {
+		// 			el.find('.js-fake-head').removeClass('is-visible');
+		// 		} else {
+		// 			el.find('.js-fake-head').removeClass('is-visible');
+		// 		}
+		// 	}
+		// }
 
-		$(window).scroll(function() {
-
-		});
+		// $(window).scroll(function() {
+		// 	scrollFakeHeader();
+		// });
 
 		// TODO FAKEHEADER LEFT - 0, TABLE - LEFT 0
 		// $(window).resize(function() {
