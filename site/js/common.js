@@ -94,7 +94,7 @@ $(document).ready(function() {
 
 	function removeHeaderBg() {
 		var win = $(window),
-			headerFixed = $('.js-fixed');
+			headerFixed = $('.header.is-form.js-fixed');
 			headerEl  = headerFixed.find('.js-hide');
 
 		if ( win.scrollTop() === 0 ) {

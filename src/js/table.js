@@ -5,8 +5,7 @@ $(document).ready(function() {
 			sidebar = parentWrap.find('.js-sidebar'),
 			row = parentWrap.find('.js-sidedrop .js-row'),
 			scrollTable = parentWrap.find('.js-scrollbar'),
-			sublist = parentWrap.find('.js-sublist'),
-			fakeHead = parentWrap.find('.js-fake-head');
+			sublist = parentWrap.find('.js-sublist');
 
 		// tablehead filter
 		$('.table th').click(function() {
@@ -27,41 +26,45 @@ $(document).ready(function() {
 			}
 		});
 
-		// scroll table
-		scrollTable.mCustomScrollbar({
-			axis: 'x',
-			scrollButtons: {enable: true},
-			scrollInertia: 300,
-			callbacks: {
-				onInit: function() {
-					scrollHeaderWidth(this);
-				},
-				onUpdate: function() {
-					scrollHeaderWidth(this);
-				},
-				whileScrolling: function() {
-					scrollHeaderPos(this);
-				}
+		// scroll table and scroll buttons
+		scrollTable.perfectScrollbar();
+
+		function toggleDesignElem() {
+			if (scrollTable.hasClass('ps-active-x')) {
+				scrollTable.siblings().addClass('is-scrollbar');
+			} else {
+				scrollTable.siblings().removeClass('is-scrollbar');
 			}
+		}
+
+		toggleDesignElem();
+
+		$(window).resize(function() {
+			scrollTable.perfectScrollbar('update');
+			toggleDesignElem();
 		});
 
-		function scrollHeaderWidth(el) {
-			var scrollHeader = $(el).closest(parentWrap).find('.js-fake-head .table'),
-				containerWidth = $(el).find('.mCSB_container').outerWidth();
+		function addScrollButtons() {
+			scrollTable.each(function() {
+				var buttonPrev = $('<div />', {'class': 'btn-prev'}),
+					buttonNext = $('<div />', {'class': 'btn-next'});
 
-			if ( scrollHeader.length > 0 ) {
-				scrollHeader.css('width', containerWidth);
-			}
+				buttonPrev.bind('click', function(evt) {
+					evt.stopPropagation();
+					$(this).closest(scrollTable).scrollLeft($(this).closest(scrollTable).scrollLeft() - 20);
+				});
+
+				buttonNext.bind('click', function(evt) {
+					evt.stopPropagation();
+					$(this).closest(scrollTable).scrollLeft($(this).closest(scrollTable).scrollLeft() + 20);
+				});
+
+				buttonPrev.appendTo($(this).find('.ps-scrollbar-x-rail'));
+				buttonNext.appendTo($(this).find('.ps-scrollbar-x-rail'));
+			});
 		}
 
-		function scrollHeaderPos(el) {
-			var scrollHeader = $(el).closest(parentWrap).find('.js-fake-head .table');
-
-			if ( scrollHeader.length > 0 ) {
-				scrollHeader.css('left', el.mcs.left);
-			}
-		}
-
+		addScrollButtons();
 
 		// measure width of more block TODO MEASURE IN PERCENTAGE
 		function measureMoreblock() {
@@ -90,6 +93,7 @@ $(document).ready(function() {
 
 		sidedropRowHeight();
 
+		// add/remove columns
 		function columnsToggle() {
 			var input = $('.js-check input'),
 				tableRow = $('.js-tablewrap .js-link');
@@ -135,13 +139,13 @@ $(document).ready(function() {
 			theme: 'minimal-dark'
 		});
 
+		//sidebar.find('.js-content').perfectScrollbar();
+
 		// toggle sidebar
 		$('.js-toggle-sidebar').click(function() {
 			$(this).toggleClass('is-active');
 			sidebar.toggleClass('is-active');
-			scrollTable.toggleClass('is-sidebar').mCustomScrollbar('update');
-			// scrollTable.toggleClass('is-sidebar').perfectScrollbar('update');
-			fakeHead.toggleClass('is-sidebar');
+			scrollTable.toggleClass('is-sidebar').perfectScrollbar('update');
 		});
 
 		// hide sidebar
@@ -160,37 +164,35 @@ $(document).ready(function() {
 			$(this).find(sublist).slideDown();
 		});
 
-		// fake header
+		// create and scroll fake header
 		parentWrap.each(function() {
 			fakeHeadTable = $(this).find('.js-fake-head .table');
 			$(this).find('.js-clone-head').clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
 		});
 
-		// function scrollFakeHeader() {
-		// 	if ( el.length > 0 ) {
-		// 		var win = $(window),
-		// 			scrollPos = win.scrollTop(),
-		// 			parentWrapHeight = el.outerHeight(),
-		// 			tableTop = el.find('.js-scrollbar').offset().top;
+		function scrollFakeHeader() {
+			if ( parentWrap.length > 0 ) {
+				$(window).scroll(function() {
+					var scrollPos = $(window).scrollTop();
 
-		// 		if ( scrollPos > tableTop && scrollPos < parentWrapHeight ) {
-		// 			el.find('.js-fake-head').addClass('is-visible');
-		// 		} else if ( scrollPos > parentWrapHeight ) {
-		// 			el.find('.js-fake-head').removeClass('is-visible');
-		// 		} else {
-		// 			el.find('.js-fake-head').removeClass('is-visible');
-		// 		}
-		// 	}
-		// }
+					parentWrap.each(function() {
+						var	tableTop = $(this).find('.js-scrollbar').offset().top,
+							tableHeight = $(this).find('.js-scrollbar').outerHeight() - 114;
 
-		// $(window).scroll(function() {
-		// 	scrollFakeHeader();
-		// });
+						if ( scrollPos > tableTop ) {
+							$(this).find('.js-fake-head').css('top', scrollPos - tableTop);
+							if ( scrollPos > tableTop + tableHeight) {
+								$(this).find('.js-fake-head').css('top', '0');
+							}
+						} else {
+							$(this).find('.js-fake-head').css('top', '0');
+						}
+					});
+				});
+			}
+		}
 
-		// TODO FAKEHEADER LEFT - 0, TABLE - LEFT 0
-		// $(window).resize(function() {
-
-		// });
+		scrollFakeHeader();
 
 		// tabs for filter
 		$('.js-tab-el').click(function() {
