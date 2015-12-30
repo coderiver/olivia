@@ -144,14 +144,15 @@ $(document).ready(function() {
 		// toggle sidebar
 		$('.js-toggle-sidebar').click(function() {
 			$(this).toggleClass('is-active');
-			sidebar.toggleClass('is-active');
-			scrollTable.toggleClass('is-sidebar').perfectScrollbar('update');
+			$(this).parents(parentWrap).find('.js-sidebar').toggleClass('is-active');
+			$(this).closest(parentWrap).find('.js-scrollbar').toggleClass('is-sidebar').perfectScrollbar('update');
+			toggleDesignElem();
 		});
 
 		// hide sidebar
 		$('.js-hide-sidebar').click(function() {
-			$(this).parents(sidebar).removeClass('is-active');
-			$(this).closest(parentWrap).find(scrollTable).removeClass('is-sidebar');
+			$(this).parents('.js-sidebar').removeClass('is-active');
+			$(this).parents(parentWrap).find('.js-scrollbar').removeClass('is-sidebar').perfectScrollbar('update');
 			$('.js-toggle-sidebar').removeClass('is-active');
 		});
 

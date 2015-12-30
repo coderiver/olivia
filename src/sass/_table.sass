@@ -282,6 +282,8 @@
 	transition: width 0.3s ease, border-color 0.3s ease
 	&.is-scrollbar
 		bottom: 0
+		.sidebar__content
+			height: calc(100% - 51px)
 		&:before
 			display: block
 	&:before
@@ -318,6 +320,8 @@
 			line-height: 38px
 		&.no-b-margin
 			margin-bottom: 0
+		&.is-border
+			border-bottom: 1px solid #dce0e7
 		i
 			position: absolute
 			top: 50%
@@ -418,6 +422,15 @@
 	// 	border-bottom: 1px solid #dce0e7
 	&.is-sidebar
 		margin-left: 240px
+	&.is-filtered
+		min-height: 513px
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			bottom: 13px
+			width: 100%
+			border-bottom: 1px solid #dce0e7
 	.table
 		min-width: 1000px
 		margin-bottom: 0
@@ -552,6 +565,25 @@
 	&.is-scrollbar
 		&:after
 			display: block
+		.table
+			border-color: #dce0e7
+		&.is-filtered
+			&:before
+				display: block
+	&.is-filtered
+		bottom: 13px
+		border-bottom: 1px solid #dce0e7
+		&:before
+			display: none
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			border-left: 1px solid #dce0e7
+		&:after
+			height: 14px
+			border-top: 1px solid #dce0e7
 	&:after
 		display: none
 		content: ""
@@ -566,7 +598,7 @@
 		border-bottom: 1px solid #dce0e7
 	.table
 		margin-bottom: 0
-		border-left: 1px solid #dce0e7
+		border-left: 1px solid transparent
 		background: #FFF
 		td
 			padding: 0
@@ -583,6 +615,8 @@
 	.dropdown
 		vertical-align: middle
 
+
+// show more
 .show-more
 	display: inline-block
 	padding: 5px 0

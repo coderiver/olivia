@@ -104,6 +104,7 @@ body.is-overflow { overflow: hidden; }
 .transaction-ico.is-disabled { background-image: url("../img/svg-bg/transaction-disabled.svg"); }
 
 .library-ico { width: 70px; height: 70px; background-image: url("../img/svg-bg/library.svg"); background-size: 70px 70px; }
+.library-ico.is-disabled { background-image: url("../img/svg-bg/library-disabled.svg"); }
 
 .paid-ico { width: 110px; height: 106px; background-image: url("../img/svg-bg/paid.svg"); background-size: 110px 106px; }
 
@@ -1247,6 +1248,7 @@ dark: -80px -56px, -100px -56px, -120px -56px, -140px -56px, -80px -128px, -100p
 
 .sidebar { position: absolute; top: 0; left: 0; bottom: 13px; width: 0; background-color: #f7f8f9; overflow: hidden; transition: width 0.3s ease; border: 1px solid transparent; border-left-width: 0; transition: width 0.3s ease, border-color 0.3s ease; }
 .sidebar.is-scrollbar { bottom: 0; }
+.sidebar.is-scrollbar .sidebar__content { height: calc(100% - 51px); }
 .sidebar.is-scrollbar:before { display: block; }
 .sidebar:before { display: none; content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 13px; background: #f7f8f9; border-top: 1px solid #dce0e7; }
 .sidebar.is-active { width: 240px; border-color: #dce0e7; }
@@ -1255,6 +1257,7 @@ dark: -80px -56px, -100px -56px, -120px -56px, -140px -56px, -80px -128px, -100p
 .sidebar__ttl { position: relative; max-width: 100%; margin: 11px 0; padding: 0 20px; color: #282828; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: "opensans-semibold", Arial, sans-serif; }
 .sidebar__ttl:first-child { height: 38px; margin: 0; line-height: 38px; }
 .sidebar__ttl.no-b-margin { margin-bottom: 0; }
+.sidebar__ttl.is-border { border-bottom: 1px solid #dce0e7; }
 .sidebar__ttl i { position: absolute; top: 50%; right: 10px; cursor: pointer; }
 .sidebar__ttl .icon-filter { margin-top: -6px; }
 .sidebar-arr { margin-top: -4.5px; width: 0px; height: 0px; border-style: solid; border-width: 4.5px 6px 4.5px 0; border-color: transparent #6c757a transparent transparent; }
@@ -1277,6 +1280,8 @@ dark: -80px -56px, -100px -56px, -120px -56px, -140px -56px, -80px -128px, -100p
 
 .scrollbar { position: relative; padding-bottom: 13px; margin-right: 50px; overflow: hidden; transition: 0.3s ease; }
 .scrollbar.is-sidebar { margin-left: 240px; }
+.scrollbar.is-filtered { min-height: 513px; }
+.scrollbar.is-filtered:before { content: ""; position: absolute; left: 0; bottom: 13px; width: 100%; border-bottom: 1px solid #dce0e7; }
 .scrollbar .table { min-width: 1000px; margin-bottom: 0; background: #FFF; }
 .scrollbar .table td { padding: 9px 8.5px 6px; height: 38px; }
 .scrollbar .table td:first-child { padding-left: 17px; }
@@ -1300,8 +1305,13 @@ dark: -80px -56px, -100px -56px, -120px -56px, -140px -56px, -80px -128px, -100p
 
 .sidedrop { position: absolute; top: 0; right: 0; width: 50px; text-align: center; }
 .sidedrop.is-scrollbar:after { display: block; }
+.sidedrop.is-scrollbar .table { border-color: #dce0e7; }
+.sidedrop.is-scrollbar.is-filtered:before { display: block; }
+.sidedrop.is-filtered { bottom: 13px; border-bottom: 1px solid #dce0e7; }
+.sidedrop.is-filtered:before { display: none; content: ""; position: absolute; top: 0; left: 0; bottom: 0; border-left: 1px solid #dce0e7; }
+.sidedrop.is-filtered:after { height: 14px; border-top: 1px solid #dce0e7; }
 .sidedrop:after { display: none; content: ""; position: absolute; top: 100%; left: 0; right: 0; width: 50px; height: 13px; background: #f7f8f9; border-left: 1px solid #dce0e7; border-bottom: 1px solid #dce0e7; }
-.sidedrop .table { margin-bottom: 0; border-left: 1px solid #dce0e7; background: #FFF; }
+.sidedrop .table { margin-bottom: 0; border-left: 1px solid transparent; background: #FFF; }
 .sidedrop .table td { padding: 0; vertical-align: middle; border-bottom: 1px solid #efefef; }
 .sidedrop .table td:first-child { width: auto; padding-left: 0; }
 .sidedrop .table__head { width: auto; padding-left: 0; }
@@ -1452,7 +1462,6 @@ dark: -80px -56px, -100px -56px, -120px -56px, -140px -56px, -80px -128px, -100p
 .popup .icon-close { position: absolute; top: 50%; right: 20px; margin-top: -7.5px; font-size: 13px; cursor: pointer; transition: color 0.3s; }
 .popup .icon-close:only-child { position: static; float: right; margin-top: 0; }
 .popup .icon-close:hover { color: red; }
-.popup .table { margin: 0; }
 .popup .table .svg-ico { width: 16px; height: 16px; background-size: 16px 16px; }
 .popup .steps { margin-top: 15px; }
 .popup .report:only-child { margin: 0; padding: 13px 15px; }
