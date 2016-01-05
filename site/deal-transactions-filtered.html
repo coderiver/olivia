@@ -241,33 +241,79 @@
 					<!-- end filters -->
 					<div class="tablewrap__in">
 						<!-- begin sidebar  -->
-						<div class="sidebar js-sidebar">
+						<div class="sidebar is-filtered js-sidebar">
 							<div class="sidebar__in">
-								<p class="sidebar__ttl js-sidebar-ttl">Enagagement Letters <i class="sidebar-arr js-hide-sidebar"></i></p>
+								<p class="sidebar__ttl js-sidebar-ttl">Engagement Letters <i class="sidebar-arr js-hide-sidebar"></i></p>
 								<div class="sidebar__content js-content">
 									<ul>
-										<li class="sidebar__option js-sidebar-option"><p><i class="svg-ico letter-ico"></i><span>All</span></p></li>
-										<li class="sidebar__option js-sidebar-option"><p><i class="svg-ico letter-ico"></i><span>Kevin Spencer</span></p></li>
-										<li class="sidebar__option js-sidebar-option"><p><i class="svg-ico letter-ico"></i><span>Jason Simpson</span></p></li>
-										<li class="sidebar__option js-sidebar-option"><p><i class="svg-ico letter-ico"></i><span>Idris Elba</span></p></li>
-										<li class="sidebar__option js-sidebar-option"><p><i class="svg-ico letter-ico"></i><span>Steven Fry</span></p></li>
-										<li class="sidebar__option js-sidebar-option"><p><i class="svg-ico letter-ico"></i><span>Aaron Sorkin</span></p></li>
+										<li class="sidebar__option">
+											<a href="#">
+												<i class="svg-ico letter-ico"></i><span>All</span>
+											</a>
+										</li>
+										<li class="sidebar__option is-active">
+											<a href="#">
+												<i class="svg-ico letter-ico"></i><span>Kevin Spencer</span>
+											</a>
+										</li>
+										<li class="sidebar__option">
+											<a href="#">
+												<i class="svg-ico letter-ico"></i><span>Jason Simpson</span>
+											</a>
+										</li>
+										<li class="sidebar__option">
+											<a href="#">
+												<i class="svg-ico letter-ico"></i><span>Idris Elba</span>
+											</a>
+										</li>
+										<li class="sidebar__option">
+											<a href="#">
+												<i class="svg-ico letter-ico"></i><span>Steven Fry</span>
+											</a>
+										</li>
+										<li class="sidebar__option">
+											<a href="#">
+												<i class="svg-ico letter-ico"></i><span>Aaron Sorkin</span>
+											</a>
+										</li>
 									</ul>
-									<p class="sidebar__ttl no-b-margin">Customers <i class="icon icon-filter"></i></p>
-									<p class="sidebar__filtered">rel to: EL Kevin Spencer</p>
+									<div class="sidebar__filter">
+										<p class="sidebar__ttl">Customers <i class="icon icon-filter"></i></p>
+										<p class="sidebar__rel">rel to: EL Kevin Spencer</p>
+									</div>
 									<ul>
-										<li class="sidebar__option js-sidebar-option"><p><i class="icon icon-customer2"></i><span>All filtered</span></p></li>
-										<li class="sidebar__option js-sidebar-option"><p><i class="icon icon-corp"></i><span>Big Group Capital Services</span></p></li>
-										<li class="sidebar__option js-sidebar-option"><p><i class="icon icon-customer2"></i><span>Steve Buscemi</span></p></li>
-										<li class="sidebar__option js-sidebar-option"><p><i class="icon icon-customer2"></i><span>James Smith</span></p></li>
-										<li class="sidebar__option js-sidebar-option"><p><i class="icon icon-customer2"></i><span>Kevin Jordan</span></p></li>
+										<li class="sidebar__option is-active">
+											<a href="#">
+												<i class="icon icon-customer2"></i><span>All filtered</span>
+											</a>
+										</li>
+										<li class="sidebar__option">
+											<a href="#">
+												<i class="icon icon-corp"></i><span>Big Group Capital Services
+											</a>
+										</li>
+										<li class="sidebar__option">
+											<a href="#">
+												<i class="icon icon-customer2"></i><span>Steve Buscemi</span>
+											</a>
+										</li>
+										<li class="sidebar__option">
+											<a href="#">
+												<i class="icon icon-customer2"></i><span>James Smith</span>
+											</a>
+										</li>
+										<li class="sidebar__option">
+											<a href="#">
+												<i class="icon icon-customer2"></i><span>Kevin Jordan</span>
+											</a>
+										</li>
 									</ul>
 								</div>
 							</div>
 						</div>
 						<!-- end sidebar -->
 						<!-- begin scrollbar  -->
-						<div class="scrollbar js-scrollbar">
+						<div class="scrollbar is-filtered js-scrollbar">
 							<!-- begin fake-header  -->
 							<div class="fake-header js-fake-head">
 								<table class="table"></table>
@@ -481,7 +527,7 @@
 						</div>
 						<!-- end scrollbar -->
 						<!-- begin sidedrop  -->
-						<div class="sidedrop js-sidedrop">
+						<div class="sidedrop is-filtered js-sidedrop">
 							<table class="table">
 								<tr class="table__head js-row-head">
 									<td>&nbsp;</td>
@@ -872,6 +918,17 @@
 			</tr>
 		</table>
 		<!-- end table -->
+	</div>
+	<div class="popup js-popup" id="popup-deal-memo-info">
+		<div class="popup__head">
+			<p>Submit Deal Memo</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<div class="report">
+				<p>All current Deal folders have Deal memos in them. As only one Deal memo is allowed within one Deal Folder you either go to Deal Folder and edit/delete existing Deal Memo or start a new deal.</p>
+			</div>
+		</div>
 	</div>
 </div>
 </body>

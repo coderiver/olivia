@@ -135,25 +135,31 @@ $(document).ready(function() {
 		columnsToggle();
 
 		// sidebar inner scroll
-		sidebar.find('.js-content').mCustomScrollbar({
-			theme: 'minimal-dark'
+		sidebar.find('.js-content').perfectScrollbar({
+			wheelPropagation: true
 		});
-
-		//sidebar.find('.js-content').perfectScrollbar();
 
 		// toggle sidebar
 		$('.js-toggle-sidebar').click(function() {
+			var scrollTable = $(this).parents(parentWrap).find('.js-scrollbar');
+
 			$(this).toggleClass('is-active');
 			$(this).parents(parentWrap).find('.js-sidebar').toggleClass('is-active');
-			$(this).closest(parentWrap).find('.js-scrollbar').toggleClass('is-sidebar').perfectScrollbar('update');
+			scrollTable.toggleClass('is-sidebar');
+			setTimeout(function(){
+				scrollTable.perfectScrollbar('update');
+			}, 300);
+
 			toggleDesignElem();
 		});
 
 		// hide sidebar
 		$('.js-hide-sidebar').click(function() {
 			$(this).parents('.js-sidebar').removeClass('is-active');
-			$(this).parents(parentWrap).find('.js-scrollbar').removeClass('is-sidebar').perfectScrollbar('update');
-			$('.js-toggle-sidebar').removeClass('is-active');
+			$(this).parents(parentWrap).find('.js-scrollbar')
+									   .removeClass('is-sidebar')
+									   .perfectScrollbar('update');
+			$(this).parents(parentWrap).find('.js-toggle-sidebar').removeClass('is-active');
 		});
 
 		// sidebar submenu show/hide

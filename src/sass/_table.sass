@@ -249,7 +249,7 @@
 		padding-left: 1px
 		span
 			display: inline-block
-			max-width: 90%
+			max-width: calc(100% - 15px)
 			overflow: hidden
 			text-overflow: ellipsis
 			white-space: nowrap
@@ -276,7 +276,6 @@
 	width: 0
 	background-color: #f7f8f9
 	overflow: hidden
-	transition: width 0.3s ease
 	border: 1px solid transparent
 	border-left-width: 0
 	transition: width 0.3s ease, border-color 0.3s ease
@@ -302,8 +301,14 @@
 	&__in
 		width: 240px
 		height: 100%
+		> .sidebar__ttl
+			height: 38px
+			margin: 0
+			line-height: 38px
 	&__content
+		position: relative
 		height: calc(100% - 38px)
+		overflow: hidden
 	&__ttl
 		position: relative
 		max-width: 100%
@@ -314,12 +319,6 @@
 		white-space: nowrap
 		text-overflow: ellipsis
 		+opensans-sb
-		&:first-child
-			height: 38px
-			margin: 0
-			line-height: 38px
-		&.no-b-margin
-			margin-bottom: 0
 		&.is-border
 			border-bottom: 1px solid #dce0e7
 		i
@@ -334,28 +333,16 @@
 		+arr(6, 9, #6c757a, l)
 	&__option
 		&.is-active
-			p
+			a
 				background: #dce0e7
-		p, a
+		a
+			position: relative
 			display: block
-			padding: 3px 20px
+			padding: 4px 20px 4px 30px
 			font-size: 13px
 			color: #6c757a
-			white-space: nowrap
 			&:hover
 				background: rgba(#dce0e7, 0.5)
-			.icon
-				margin-right: 5px
-				font-size: 11px
-				vertical-align: middle
-			.svg-ico
-				width: 10px
-				height: 10px
-				margin-right: 5px
-				background-size: 10px 10px
-				vertical-align: middle
-		p
-			cursor: pointer
 		span
 			display: inline-block
 			max-width: 100%
@@ -363,6 +350,24 @@
 			vertical-align: middle
 			text-overflow: ellipsis
 			white-space: nowrap
+		.icon
+			font-size: 11px
+		.svg-ico
+			width: 10px
+			height: 10px
+			background-size: 10px 10px
+		.icon, .svg-ico
+			position: absolute
+			top: 50%
+			left: 15px
+			margin-top: -6px
+		&.is-multi
+			.icon, .svg-ico
+				top: 6px
+				margin-top: 0
+			span
+				display: block
+				white-space: normal
 	&__sublist
 		display: none
 		padding: 5px 20px
@@ -376,20 +381,23 @@
 		+opensans-sb
 		&:hover
 			text-decoration: underline
-	&__filtered
-		margin-bottom: 5px
+	&__filter
+		margin: 34px 0 10px
+		.sidebar__ttl
+			margin: 0
+	&__rel
 		padding: 0 20px
 	.tabs
-		margin: 0 auto 5px
+		margin: 5px auto
 		width: 92%
 	.tabs__el
 		&:first-child
 			width: 20%
-	.mCSB_scrollTools
-		width: 5px
-	.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical,
-	.mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical
-		margin: 0
+	.ps-scrollbar-y-rail
+		right: 0
+		width: 3px
+		.ps-scrollbar-y
+			width: 3px
 
 // scrolling part of table
 .scrollbar

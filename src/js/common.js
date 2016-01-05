@@ -98,10 +98,8 @@ $(document).ready(function() {
 			headerEl  = headerFixed.find('.js-hide');
 
 		if ( win.scrollTop() === 0 ) {
-			headerFixed.removeClass('is-active');
 			headerEl.show();
 		} else if ( win.scrollTop() > 0 ) {
-			headerFixed.addClass('is-active');
 			headerEl.hide();
 		}
 	}
