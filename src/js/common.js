@@ -68,18 +68,34 @@ $(document).ready(function() {
 
 	// dropdown
 	$('body').on('click', '.js-dropdown', function(evt) {
+		// inner dropdown list clickable
 		if ( $(evt.target).closest('.js-inner').length > 0 ) {
 			return;
 		} else if ( $(evt.target).parent('.is-disabled').length > 0 ) {
 			evt.preventDefault();
 		}
+
+		// hide one dropdown if another is opened in the same table
+		if ( $(this).parents('tr') ) {
+			$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active');
+		}
 		$(this).toggleClass('is-active');
-		$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active');
+
+		// hide one dropdown if another is opened, and they both have common parent
+		$(this).siblings('.js-dropdown').removeClass('is-active');
 	});
 
 	$('body').on('click', function(evt) {
+		// hide dropdown
 		if ( $(evt.target).parents('.js-dropdown').length === 0 ) {
 			$('.js-dropdown').removeClass('is-active');
+		}
+
+		// hide search results
+		if ( $(evt.target).closest('.js-search-results').length > 0 || $(evt.target).closest('.js-search').length) {
+			return;
+		} else {
+			$('.js-search-results').removeClass('is-active');
 		}
 	});
 
@@ -92,9 +108,9 @@ $(document).ready(function() {
 	}
 	scrollFixedElements();
 
-	function removeHeaderBg() {
+	function removeHeaderElem() {
 		var win = $(window),
-			headerFixed = $('.header.is-form.js-fixed');
+			headerFixed = $('.header.js-fixed');
 			headerEl  = headerFixed.find('.js-hide');
 
 		if ( win.scrollTop() === 0 ) {
@@ -104,11 +120,25 @@ $(document).ready(function() {
 		}
 	}
 
-	removeHeaderBg();
+	removeHeaderElem();
 
 	$(window).scroll(function() {
 		scrollFixedElements();
-		removeHeaderBg();
+		removeHeaderElem();
+	});
+
+	// search
+	$('.js-search input').on('focus', function(){
+		$(this).parent().addClass('is-active');
+	}).on('blur', function(){
+		$(this).parent().removeClass('is-active');
+	});
+
+	// search results
+	$( '.js-search input' ).on( 'keydown' , function() {
+		if (!$('.js-search-results').hasClass('is-active')) {
+			$('.js-search-results').addClass('is-active');
+		};
 	});
 
 });

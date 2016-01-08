@@ -106,6 +106,7 @@ $(document).ready(function() {
 					checkedInput = $('.js-check input:checked'),
 					checkedInputNum = checkedInput.length;
 
+				measureMoreblock();
 				// check if th with input id exists
 				if ( theadData ) {
 					if ( $(this).is(':checked') ) {
@@ -148,9 +149,8 @@ $(document).ready(function() {
 			scrollTable.toggleClass('is-sidebar');
 			setTimeout(function(){
 				scrollTable.perfectScrollbar('update');
+				toggleDesignElem();
 			}, 300);
-
-			toggleDesignElem();
 		});
 
 		// hide sidebar
@@ -163,12 +163,15 @@ $(document).ready(function() {
 		});
 
 		// sidebar submenu show/hide
-		$('.js-sidebar-option').click(function() {
+		$('.js-sidebar-option').click(function(evt) {
+			evt.preventDefault();
 			$(this).siblings().removeClass('is-active');
 			$(this).siblings().find(sublist).slideUp();
 
 			$(this).addClass('is-active');
-			$(this).find(sublist).slideDown();
+			if ( $(this).children(sublist).length > 0 ){
+				$(this).children(sublist).slideDown();
+			}
 		});
 
 		// create and scroll fake header

@@ -9,11 +9,14 @@ $(document).ready(function() {
 		}
 		popup.addClass('is-active');
 		openedPopup = popup;
-		if ($('.overlay').not('is-active')) {
+		if ( $('.overlay').not('is-active') ) {
 			$('.overlay').addClass('is-active');
 		}
-		if (!popup.hasClass('js-avoid-overflow')) {
+		if ( !popup.hasClass('js-avoid-overflow') ) {
 			$('body').addClass('is-overflow');
+		}
+		if ( $('.js-search-results').hasClass('is-active') ) {
+ 			$('.js-search-results').removeClass('is-active');
 		}
 	};
 
