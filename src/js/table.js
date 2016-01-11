@@ -106,7 +106,7 @@ $(document).ready(function() {
 					checkedInput = $('.js-check input:checked'),
 					checkedInputNum = checkedInput.length;
 
-				measureMoreblock();
+				sidedropRowHeight();
 				// check if th with input id exists
 				if ( theadData ) {
 					if ( $(this).is(':checked') ) {

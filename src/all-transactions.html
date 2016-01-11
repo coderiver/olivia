@@ -1,0 +1,835 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>All transactions</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#fff">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/tooltipster.css" >
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/app.js"></script>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	//= partials/header.html
+
+	<div class="main">
+		<div class="l">
+			<div class="main__in">
+				<div class="upper">
+					<p class="upper__ttl">Deals</p>
+					<ul class="upper__list">
+						<li class="upper__option"><a class="upper__link" href="#">All Deals</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">All Engagement Letters</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">All Deal Memos</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">All Customers</a></li>
+						<li class="upper__option"><a class="upper__link is-active" href="#">All Transactions</a></li>
+					</ul>
+					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
+					//= partials/menu-deal.html
+				</div>
+				<!-- begin tablewrap  -->
+				<div class="tablewrap js-tablewrap">
+					<!-- begin filters  -->
+					<div class="filters">
+						<div class="filters__ttl">All Transactions</div>
+						<div class="filters__in">
+							<div class="toggle-btn js-toggle-sidebar">
+								<i class="icon icon-menu"></i>
+							</div>
+							<div class="toggle-btn">
+								<i class="icon icon-calendar"></i>
+							</div>
+							<div class="toggle-btn">
+								<i class="icon icon-zoom"></i>
+							</div>
+							<div class="dropdown is-filter js-dropdown">
+								<p class="dropdown__item">Filter by status</p>
+								<ul class="dropdown__list js-inner">
+									<li><a href="#" class="is-active">All statuses</a></li>
+									<li><a href="#">With tasks</a></li>
+									<li><a href="#">Approved</a></li>
+									<li><a href="#">Funds received</a></li>
+									<li><a href="#">Comission paid</a></li>
+								</ul>
+							</div>
+							<div class="dropdown is-filter js-dropdown">
+								<p class="dropdown__item">Settings</p>
+								//= partials/all-transactions-settings.html
+							</div>
+						</div>
+					</div>
+					<!-- end filters -->
+					<div class="tablewrap__in">
+						<!-- begin sidebar  -->
+						<div class="sidebar js-sidebar">
+							<div class="sidebar__in">
+								<p class="sidebar__ttl js-sidebar-ttl">Active Deals <i class="sidebar-arr js-hide-sidebar"></i></p>
+								<div class="sidebar__content js-content">
+									<ul>
+										<li class="sidebar__option js-sidebar-option is-active">
+											<a href="#"><i class="icon icon-folder"></i><span>All</span></a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#"><i class="icon icon-folder"></i><span>Alphabet</span></a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#"><i class="icon icon-folder"></i><span>Google</span></a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-folder"></i><span>Samsung - Round a Search blablabla</span>
+											</a>
+											<ul class="sidebar__sublist js-sublist">
+												<li>
+													<a href="#"><i class="svg-ico letter-ico"></i><span>Steve Buscemi</span></a>
+												</li>
+												<li>
+													<a href="#"><i class="svg-ico letter-ico"></i><span>Kirk Douglas</span></a>
+												</li>
+												<li>
+													<a href="#"><i class="svg-ico letter-ico"></i><span>Anette Stevenson-McCloud</span></a>
+												</li>
+											</ul>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#"><i class="icon icon-folder"></i><span>Space X</span></a>
+										</li>
+									</ul>
+									<div class="sidebar__bl">
+										<a href="#" class="sidebar__link">Closed Deals (2)</a>
+										<a href="#" class="sidebar__link">Inactive Deals (3)</a>
+									</div>
+									<p class="sidebar__ttl">Customers <i class="icon icon-filter"></i></p>
+									<ul>
+										<li class="sidebar__option js-sidebar-option is-active">
+											<a href="#">
+												<i class="icon icon-customer2"></i>
+												<span>All</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-corp"></i>
+												<span>Big Group Capital Services</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i>
+												<span>Steve Buscemi</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i>
+												<span>James Smith</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i>
+												<span>Kevin Jordan</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i><span>Mevin McCormick</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i>
+												<span>Big Group Capital Services</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i>
+												<span>Steve Buscemi</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i>
+												<span>James Smith</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i>
+												<span>All</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-corp"></i>
+												<span>Big Group Capital Services</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i><span>Steve Buscemi</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i><span>James Smith</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i><span>Kevin Jordan</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i><span>Mevin McCormick</span></a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i><span>Big Group Capital Services</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i><span>Steve Buscemi</span>
+											</a>
+										</li>
+										<li class="sidebar__option js-sidebar-option">
+											<a href="#">
+												<i class="icon icon-customer2"></i><span>James Smith</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end sidebar -->
+						<!-- begin scrollbar  -->
+						<div class="scrollbar js-scrollbar">
+							<!-- begin fake-header  -->
+							<div class="fake-header js-fake-head">
+								<table class="table"></table>
+							</div>
+							<!-- end fake-header -->
+							<!-- begin table  -->
+							<table class="table">
+								<tr class="table__head js-clone-head">
+									<th title="ID" width="106" data-id="id"><p>ID</p></th>
+									<th title="Deal" width="198" data-id="deal"><p>Deal</p></th>
+									<th title="Buyer" width="177" data-id="buyer"><p>Buyer</p></th>
+									<th title="Seller" width="177" data-id="seller"><p>Seller</p></th>
+									<th title="Status" width="116" data-id="status"><p>Status</p></th>
+									<th title="Amount" width="123" class="cell-right" data-id="amount"><p>Amount</p></th>
+								</tr>
+								<tr class="js-link" data-href="http://www.google.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Space X</p>
+									</td>
+									<td>
+										<p>Steve Bushemi</p>
+									</td>
+									<td>
+										<p>Steve Bushemi</p>
+									</td>
+									<td>
+										<div class="status">
+											<i class="icon icon-warn"></i>
+											<span>Changes required</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$10.000.00</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Space X</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<div class="status is-pending">
+											<i class="icon icon-pending"></i>
+											<span>Sent for review</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$100.200.000.00</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.google.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Space X</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<div class="status is-approved">
+											<i class="icon icon-check"></i>
+											<span>Approved</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$56.000.00</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Samsung – Round A Search and Development</p>
+									</td>
+									<td>
+										<p>Steve Bushemi</p>
+									</td>
+									<td>
+										<p>Steve Bushemi</p>
+									</td>
+									<td>
+										<div class="status is-approved">
+											<i class="icon icon-check"></i>
+											<span>Approved</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$1.460000.00</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico is-disabled"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Space X</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<div class="status is-draft">
+											<span>Draft</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$10.000.00</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Samsung – Round A Search and Development</p>
+									</td>
+									<td>
+										<p>Steve Bushemi</p>
+									</td>
+									<td>
+										<p>Steve Bushemi</p>
+									</td>
+									<td>
+										<div class="status is-approved">
+											<i class="icon icon-check"></i>
+											<span>Approved</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$10.200.000.00</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Samsung – Round A Search and Development</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<div class="status is-approved">
+											<i class="icon icon-check"></i>
+											<span>Approved</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$56.000.00</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Space X</p>
+									</td>
+									<td>
+										<p>Steve Bushemi</p>
+									</td>
+									<td>
+										<p>Steve Bushemi</p>
+									</td>
+									<td>
+										<div class="status is-approved">
+											<i class="icon icon-check"></i>
+											<span>Approved</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$10.200.000.00</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Twitter S</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<div class="status is-approved">
+											<i class="icon icon-check"></i>
+											<span>Approved</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$56.000.00</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Twitter S</p>
+									</td>
+									<td>
+										<p>Steve Bushemi</p>
+									</td>
+									<td>
+										<p>Steve Bushemi</p>
+									</td>
+									<td>
+										<div class="status is-approved">
+											<i class="icon icon-check"></i>
+											<span>Approved</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$10.200.000.00</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Space X</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<div class="status is-approved">
+											<i class="icon icon-check"></i>
+											<span>Approved</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$56.000.00</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Foursquare Inc.</p>
+									</td>
+									<td>
+										<p>Steve Bushemi</p>
+									</td>
+									<td>
+										<p>Steve Bushemi</p>
+									</td>
+									<td>
+										<div class="status is-approved">
+											<i class="icon icon-check"></i>
+											<span>Approved</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$10.200.000.00</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Foursquare Inc.</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<div class="status is-approved">
+											<i class="icon icon-check"></i>
+											<span>Approved</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$56.000.00</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Space X</p>
+									</td>
+									<td>
+										<p>Steve Bushemi</p>
+									</td>
+									<td>
+										<p>Steve Bushemi</p>
+									</td>
+									<td>
+										<div class="status is-approved">
+											<i class="icon icon-check"></i>
+											<span>Approved</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$10.200.000.00</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico transaction-ico"></i>
+											<span>T12344</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p>Space X</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<p>James Smith</p>
+									</td>
+									<td>
+										<div class="status is-approved">
+											<i class="icon icon-check"></i>
+											<span>Approved</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p>$56.000.00</p>
+									</td>
+								</tr>
+							</table>
+							<!-- end table -->
+						</div>
+						<!-- end scrollbar -->
+						<!-- begin sidedrop  -->
+						<div class="sidedrop js-sidedrop">
+							<table class="table">
+								<tr class="table__head js-row-head">
+									<td>&nbsp;</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!-- end sidedrop -->
+					</div>
+					<!-- begin sum  -->
+					<div class="sum">
+						<p class="sum__bl">Total: <span>$128.234.000.00</span></p>
+						<p class="sum__bl">You Earned: <span>$8.234.000.00</span></p>
+					</div>
+					<!-- end sum -->
+				</div>
+				<!-- end tablewrap -->
+				<div class="back-to-top"><a href="#" class="js-top"><i class="icon icon-arr-top"></i><span>Back to top</span></a></div>
+			</div>
+		</div>
+	</div>
+	//= partials/footer.html
+</div>
+<!-- END out-->
+<div class="overlay">
+	//= partials/popup-start-deal.html
+	//= partials/popup-deal-memo-info.html
+</div>
+</body>
+</html>

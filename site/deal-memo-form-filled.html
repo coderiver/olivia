@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>DM Form filled</title>
+	<title>DM Form</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -47,7 +47,6 @@
 
 	<div class="main is-form">
 		<div class="l-form">
-			<!-- begin alert  -->
 			<div class="alert">
 				<div class="alert__bl">
 					<i class="icon icon-warn"></i><span>Task: Submit Deal Memo</span>
@@ -56,9 +55,7 @@
 					<a href="#" class="alert__link">Open task page</a>
 				</div>
 			</div>
-			<!-- end alert -->
 			<div class="main__in">
-				<!-- begin form  -->
 				<form class="form">
 					<div class="form__bl">
 						<p class="form__ttl">Deal Memo</p>
@@ -90,7 +87,7 @@
 						</a>
 						<p class="form__subttl">State</p>
 						<div class="dropdown is-form js-dropdown">
-							<p class="dropdown__item is-chosen">California</p>
+							<p class="dropdown__item">California</p>
 							<ul class="dropdown__list js-inner">
 								<li><a href="#">USA</a></li>
 								<li><a href="#">Ukraine</a></li>
@@ -105,30 +102,30 @@
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">City</p>
-						<label class="is-middle-size">
+						<p class="form__subttl"><label for="">City</label></p>
+						<div class="form__el is-middle-size">
 							<input type="text" placeholder="Type here" value="San Francisco">
-						</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Street</p>
-						<label>
+						<p class="form__subttl"><label>Street</label></p>
+						<div class="form__el">
 							<input type="text" placeholder="Type here" value="Street name 13748">
-						</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">ZIP code</p>
-						<label class="is-small-size">
+						<p class="form__subttl"><label for="">ZIP code</label></p>
+						<div class="form__el is-small-size">
 							<input type="text" placeholder="Type here" value="79010">
-						</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -186,40 +183,40 @@
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Website</p>
-						<label>
+						<p class="form__subttl"><label>Website</label></p>
+						<div class="form__el">
 							<input type="text" placeholder="Type here" value="bankname.com">
-						</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Phone Number</p>
-						<label>
+						<p class="form__subttl"><label>Phone Number</label></p>
+						<div class="form__el">
 							<input type="text" placeholder="Type here" value="+1 293 78 838 92">
-						</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Contact Person's Name and Title</p>
-						<label>
+						<p class="form__subttl"><label>Contact Person's Name and Title</label></p>
+						<div class="form__el">
 							<input type="text" placeholder="Type here" value="James Brown, CEO">
-						</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">If Form D has been filed by the issuer, enter CIK (Filer ID Number) (optional)</p>
-						<label>
+						<p class="form__subttl"><label>If Form D has been filed by the issuer, enter CIK (Filer ID Number) (optional)</label></p>
+						<div class="form__el">
 							<input type="text" placeholder="Type here">
-						</label>
+						</div>
 					</div>
 					<hr>
 					<div class="form__bl">
@@ -229,8 +226,10 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">List other reps involved (optional)</p>
-						<p>If any, including co-marketing agreements with other GCS reps or outside Broker Dealers</p>
-						<textarea class="textarea" placeholder="Type here"></textarea>
+						<label>If any, including co-marketing agreements with other GCS reps or outside Broker Dealers</label>
+						<div class="form__el">
+							<textarea class="textarea" placeholder="Type here"></textarea>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -238,8 +237,10 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Business Summary</p>
-						<p>Brief description of age, size and nature of business model</p>
-						<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						<label>Brief description of age, size and nature of business model</label>
+						<div class="form__el">
+							<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -247,8 +248,10 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Principals</p>
-						<p>Names and backgrounds of the company's key principals</p>
-						<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						<label>Names and backgrounds of the company's key principals</label>
+						<div class="form__el">
+							<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -256,8 +259,10 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Counsel for the Company</p>
-						<p>Firm name, contact name, phone, email address, website</p>
-						<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						<label>Firm name, contact name, phone, email address, website</label>
+						<div class="form__el">
+							<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -265,8 +270,10 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">History of Engagement</p>
-						<p>How you came to know about the company, how long, and in what depth</p>
-						<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						<label>How you came to know about the company, how long, and in what depth</label>
+						<div class="form__el">
+							<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -274,8 +281,10 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Due Diligence Summary</p>
-						<p>Describe what you have done to check out the story including names of people you have met, dates, and results of any site visits, third party verification, etc.</p>
-						<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						<label>Describe what you have done to check out the story including names of people you have met, dates, and results of any site visits, third party verification, etc.</label>
+						<div class="form__el">
+							<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -283,8 +292,10 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Selling Points</p>
-						<p>Key benefits of the opportunity</p>
-						<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						<label>Key benefits of the opportunity</label>
+						<div class="form__el">
+							<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -292,8 +303,10 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Risk Factors / Areas of Concern</p>
-						<p>Issues that detract from the overall opportunity -- NOTE anything included here should be formally communicated to all parties as a risk disclosure</p>
-						<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						<label>Issues that detract from the overall opportunity -- NOTE anything included here should be formally communicated to all parties as a risk disclosure</label>
+						<div class="form__el">
+							<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -301,8 +314,10 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Economics of Engagement</p>
-						<p>How much capital is being raised, in what type of security, what is the fee on this deal</p>
-						<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						<label>How much capital is being raised, in what type of security, what is the fee on this deal</label>
+						<div class="form__el">
+							<textarea class="textarea" placeholder="Type here">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</textarea>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -327,20 +342,20 @@
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Maximum Amount to be raised in dollars</p>
-						<label class="is-middle-size">
+						<p class="form__subttl"><label>Maximum Amount to be raised in dollars</label></p>
+						<div class="form__el is-middle-size">
 							<input type="text" placeholder="Type here">
-						</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Commencement Date</p>
-						<label class="is-middle-size">
+						<p class="form__subttl"><label>Commencement Date</label></p>
+						<div class="form__el is-middle-size">
 							<input type="text" placeholder="Type here">
-						</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -348,10 +363,10 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Conclusion Date</p>
-						<p>Enter date, unknown, or continuous</p>
-						<label class="is-middle-size">
+						<label>Enter date, unknown, or continuous</label>
+						<div class="form__el is-middle-size">
 							<input type="text" placeholder="Type here">
-						</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -359,29 +374,29 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Maximum Sales Commission (% rate)</p>
-						<label class="is-middle-size">
+						<div class="form__el is-middle-size">
 							<input type="text" placeholder="Type here">
-						</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Aggregate amount of any other compensation to registered persons disclosed in the offering document:</p>
-						<label class="is-middle-size">
+						<p class="form__subttl"><label>Aggregate amount of any other compensation to registered persons disclosed in the offering document:</label></p>
+						<div class="form__el is-middle-size">
 							<input type="text" placeholder="Type here">
-						</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Dollar amount of compensation disclosed</p>
-						<label class="is-middle-size">
+						<p class="form__subttl"><label for="">Dollar amount of compensation disclosed</label></p>
+						<div class="form__el is-middle-size">
 							<input type="text" placeholder="Type here">
-						</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -389,10 +404,10 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Stated or Target Rate of Return (%) as disclosed in the offering document</p>
-						<p>Enter date, unknown, or continuous</p>
-						<label class="is-middle-size">
+						<label>Enter date, unknown, or continuous</label>
+						<div class="form__el is-middle-size">
 							<input type="text" placeholder="Type here">
-						</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -471,6 +486,34 @@
 						<p>Some information is Required, some is Optional. If you have the Optional documentation, it must be included for a supervisor to review. Please remember that ALL materials that will be shown to investors must be uploaded here. If you do not yet have any of this documentation in hand, use the NOTES field above to provide an explanation.</p>
 						<div class="upload">
 							<div class="upload__in">
+								<input type="file" name="executed-copy">
+								<i class="icon icon-upload"></i>
+								<span>Engagement Letter: EXECUTED copy</span>
+							</div>
+						</div>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file" name="memorandum">
+								<i class="icon icon-upload"></i>
+								<span>Investment Memorandum (PPM, CIM, etc)</span>
+							</div>
+						</div>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file" name="inc-letter">
+								<i class="icon icon-upload"></i>
+								<span>Letter of Incorporation</span>
+							</div>
+						</div>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file" name="subscription">
+								<i class="icon icon-upload"></i>
+								<span>Subscription Packet</span>
+							</div>
+						</div>
+						<div class="upload">
+							<div class="upload__in">
 								<input type="file" name="bios">
 								<i class="icon icon-upload"></i>
 								<span>Management Bios (optional)</span>
@@ -514,7 +557,6 @@
 						</div>
 					</div>
 				</form>
-				<!-- end form -->
 				<!-- begin table  -->
 				<table class="table">
 					<tr class="table__head">
@@ -636,7 +678,6 @@
 				<!-- end table -->
 			</div>
 		</div>
-
 	</div>
 </div>
 <!-- END out-->

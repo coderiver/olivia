@@ -21,19 +21,26 @@
 			.addpost
 				opacity: 1
 				visibility: visible
-	label
+	&__el
 		display: block
 		margin: 7px 0
+		&.is-small-size
+			max-width: 162px
+		&.is-middle-size
+			max-width: 340px
 	hr
 		max-width: 600px
 		margin: 25px auto
 		border: none
 		border-top: 1px solid #cfd5e0
+	.radio,
+	.check
+		display: block
+		margin: 7px 0
 	.radio__span
 		color: #282828
 	.textarea
 		min-height: 66px
-		margin-top: 7px
 
 .upload
 	margin: 15px 0

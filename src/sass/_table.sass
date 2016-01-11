@@ -89,6 +89,10 @@
 			padding-top: 5px
 	&.s-bottom-margin
 		margin-bottom: 5px
+	&.no-overflow
+		td
+			> p, > span
+				white-space: normal
 	.table__head
 		background: #f7f8f9
 		text-align: left
@@ -195,7 +199,7 @@
 	th
 		padding: 0
 		font-size: 0
-		> p, span
+		> p, > span
 			max-width: 100%
 			overflow: hidden
 			text-overflow: ellipsis
@@ -219,21 +223,21 @@
 			overflow: hidden
 			text-overflow: ellipsis
 			white-space: nowrap
-		.icon.icon-clip
-			font-size: 14px
 		&:first-child
 			padding-left: 17px
 		&.cell-center
 			text-align: center
 		&.cell-right
 			text-align: right
+		.icon.icon-clip
+			font-size: 14px
 	.dropdown
 		vertical-align: middle
 	.status
 		padding-left: 1px
 		span
 			display: inline-block
-			max-width: calc(100% - 15px)
+			max-width: calc(100% - 20px)
 			overflow: hidden
 			text-overflow: ellipsis
 			white-space: nowrap
@@ -297,7 +301,7 @@
 		position: relative
 		max-width: 100%
 		margin: 11px 0
-		padding: 0 20px
+		padding: 0 14px
 		color: #282828
 		overflow: hidden
 		white-space: nowrap
