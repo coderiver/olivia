@@ -67,752 +67,758 @@
 					<a href="#">See full activity log</a>
 				</div>
 				<!-- end activity -->
-				<!-- begin filters  -->
-				<div class="filters">
-					<div class="filters__ttl">
-						<div class="tooltip">
-							<p>Deal Folder</p>
-							<div class="tooltip__ico js-tooltip" title="Deal folder Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
+				<!-- begin tablewrap  -->
+				<div class="tablewrap js-tablewrap">
+					<!-- begin filters  -->
+					<div class="filters">
+						<div class="filters__ttl">
+							<div class="tooltip">
+								<p>Deal Folder</p>
+								<div class="tooltip__ico js-tooltip" title="Deal folder Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
+							</div>
+						</div>
+						<div class="filters__in">
+							<div class="dropdown is-filter js-dropdown">
+								<p class="dropdown__item">Settings</p>
+								//= partials/all-deal-settings.html
+							</div>
 						</div>
 					</div>
-					<div class="filters__in">
-						<div class="dropdown is-filter js-dropdown">
-							<p class="dropdown__item">Settings</p>
-							//= partials/all-deal-settings.html
-						</div>
+					<!-- end filters -->
+					<div class="tablewrap__in">
+						<!-- begin table  -->
+						<table class="table">
+							<tr class="table__head">
+								<th width="112"><p>ID</p></th>
+								<th width="316"><p>Name</p></th>
+								<th width="150"><p>Type</p></th>
+								<th width="150"><p>Status</p></th>
+								<th class="table__clip"><i class="icon icon-clip"></i></th>
+								<th width="117"><p>Last Update</p></th>
+								<th class="table__drop">&nbsp;</th>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="svg-ico letter-ico"></i>
+										<span>EL12522</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>Steve Bushemi</span>
+								</td>
+								<td>
+									<p>Engagement Letter</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip" data-popup="attach">
+									<i class="icon icon-clip"></i>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+											<li class="dropdown__more">
+												<a href="#">More options</a>
+												<ul class="dropdown__list">
+													<li><a href="#">lorem</a></li>
+													<li><a href="#">ipsum</a></li>
+													<li><a href="#">dolor</a></li>
+													<li><a href="#">dis</a></li>
+													<li><a href="#">amet</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="svg-ico letter-ico"></i>
+										<span>EL12521</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>James Smith</span>
+								</td>
+								<td>
+									<p>Engagement Letter</p>
+								</td>
+								<td>
+									<div class="status is-pending">
+										<i class="icon icon-pending"></i>
+										<span title="Sent for review">Sent for review</span>
+									</div>
+								</td>
+								<td class="table__clip" data-popup="attach">
+									<i class="icon icon-clip"></i>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="svg-ico memo-ico"></i>
+										<span>DM45681</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>Space X Deal Memo</span>
+								</td>
+								<td>
+									<p>Deal Memo</p>
+								</td>
+								<td>
+									<div class="status">
+										<i class="icon icon-warn"></i>
+										<span title="In queue for review">Update request</span>
+									</div>
+								</td>
+								<td class="table__clip" data-popup="attach">
+									<i class="icon icon-clip"></i>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="icon icon-customer2"></i>
+										<span>CU23794</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>Steve Bushemi</span>
+								</td>
+								<td>
+									<p>Customer</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip">&nbsp;</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="icon icon-customer2"></i>
+										<span>CU23793</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>James Smith</span>
+								</td>
+								<td>
+									<p>Customer</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip">&nbsp;</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="svg-ico transaction-ico"></i>
+										<span>TR23792</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>James Smith > Steven Fry</span>
+								</td>
+								<td>
+									<p>Transaction Report</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip" data-popup="attach">
+									<i class="icon icon-clip"></i>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="icon icon-corp"></i>
+										<span>CU23791</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>Nakatomi Corp</span>
+								</td>
+								<td>
+									<p>Customer</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip">&nbsp;</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="svg-ico transaction-ico"></i>
+										<span>TR23790</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>James Smith > Steven Fry</span>
+								</td>
+								<td>
+									<p>Transaction Report</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip" data-popup="attach">
+									<i class="icon icon-clip"></i>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="icon icon-customer2"></i>
+										<span>CU23794</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>Steve Bushemi</span>
+								</td>
+								<td>
+									<p>Customer</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip">&nbsp;</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="svg-ico transaction-ico"></i>
+										<span>TR23792</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>James Smith > Steven Fry</span>
+								</td>
+								<td>
+									<p>Transaction Report</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip" data-popup="attach">
+									<i class="icon icon-clip"></i>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="icon icon-customer2"></i>
+										<span>CU23792</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>James Smith > Steven Fry</span>
+								</td>
+								<td>
+									<p>Customer</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip">&nbsp;</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="svg-ico transaction-ico"></i>
+										<span>TR23791</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>James Smith > Steven Fry</span>
+								</td>
+								<td>
+									<p>Transaction Report</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip" data-popup="attach">
+									<i class="icon icon-clip"></i>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="svg-ico transaction-ico"></i>
+										<span>TR23790</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>James Smith > Steven Fry</span>
+								</td>
+								<td>
+									<p>Transaction Report</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip" data-popup="attach">
+									<i class="icon icon-clip"></i>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="icon icon-customer2"></i>
+										<span>CU23794</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>Steve Bushemi</span>
+								</td>
+								<td>
+									<p>Customer</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip">&nbsp;</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="svg-ico transaction-ico"></i>
+										<span>TR23793</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>James Smith > Steven Fry</span>
+								</td>
+								<td>
+									<p>Transaction Report</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip" data-popup="attach">
+									<i class="icon icon-clip"></i>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="icon icon-customer2"></i>
+										<span>CU23792</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>James Smith > Steven Fry</span>
+								</td>
+								<td>
+									<p>Customer</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip">&nbsp;</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="svg-ico transaction-ico"></i>
+										<span>TR23791</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>Nakatomi Corp</span>
+								</td>
+								<td>
+									<p>Transaction Report</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip">&nbsp;</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="svg-ico transaction-ico"></i>
+										<span>TR23790</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>James Smith > Steven Fry</span>
+								</td>
+								<td>
+									<p>Transaction Report</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip" data-popup="attach">
+									<i class="icon icon-clip"></i>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="svg-ico transaction-ico"></i>
+										<span>TR23791</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>Nakatomi Corp</span>
+								</td>
+								<td>
+									<p>Transaction Report</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip">&nbsp;</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="js-link" data-href="http://www.google.com">
+								<td>
+									<div class="table__el">
+										<i class="svg-ico transaction-ico"></i>
+										<span>TR23790</span>
+									</div>
+								</td>
+								<td class="table__name">
+									<span>James Smith > Steven Fry</span>
+								</td>
+								<td>
+									<p>Transaction Report</p>
+								</td>
+								<td>
+									<div class="status is-approved">
+										<i class="icon icon-check"></i>
+										<span title="Sent for review">Approved</span>
+									</div>
+								</td>
+								<td class="table__clip" data-popup="attach">
+									<i class="icon icon-clip"></i>
+								</td>
+								<td>
+									<p>Aug 10, 2015</p>
+								</td>
+								<td class="table__drop">
+									<div class="dropdown js-dropdown">
+										<span class="dropdown__bl"></span>
+										<ul class="dropdown__list js-inner">
+											<li><a href="#">Open in new window</a></li>
+											<li><a href="#">Download all in ZIP</a></li>
+											<li><a href="#">Deal status</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="7" class="js-show-more">
+									<a href="#" class="show-more">Show 50 more</a>
+								</td>
+							</tr>
+						</table>
+						<!-- end table -->
 					</div>
 				</div>
-				<!-- end filters -->
-				<!-- begin table  -->
-				<table class="table">
-					<tr class="table__head">
-						<th width="112"><p>ID</p></th>
-						<th width="316"><p>Name</p></th>
-						<th width="150"><p>Type</p></th>
-						<th width="150"><p>Status</p></th>
-						<th class="table__clip"><i class="icon icon-clip"></i></th>
-						<th width="117"><p>Last Update</p></th>
-						<th class="table__drop">&nbsp;</th>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="svg-ico letter-ico"></i>
-								<span>EL12522</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>Steve Bushemi</span>
-						</td>
-						<td>
-							<p>Engagement Letter</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip" data-popup="attach">
-							<i class="icon icon-clip"></i>
-						</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-									<li class="dropdown__more">
-										<a href="#">More options</a>
-										<ul class="dropdown__list">
-											<li><a href="#">lorem</a></li>
-											<li><a href="#">ipsum</a></li>
-											<li><a href="#">dolor</a></li>
-											<li><a href="#">dis</a></li>
-											<li><a href="#">amet</a></li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="svg-ico letter-ico"></i>
-								<span>EL12521</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>James Smith</span>
-						</td>
-						<td>
-							<p>Engagement Letter</p>
-						</td>
-						<td>
-							<div class="status is-pending">
-								<i class="icon icon-pending"></i>
-								<span title="Sent for review">Sent for review</span>
-							</div>
-						</td>
-						<td class="table__clip" data-popup="attach">
-							<i class="icon icon-clip"></i>
-						</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="svg-ico memo-ico"></i>
-								<span>DM45681</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>Space X Deal Memo</span>
-						</td>
-						<td>
-							<p>Deal Memo</p>
-						</td>
-						<td>
-							<div class="status">
-								<i class="icon icon-warn"></i>
-								<span title="In queue for review">Update request</span>
-							</div>
-						</td>
-						<td class="table__clip" data-popup="attach">
-							<i class="icon icon-clip"></i>
-						</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="icon icon-customer2"></i>
-								<span>CU23794</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>Steve Bushemi</span>
-						</td>
-						<td>
-							<p>Customer</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip">&nbsp;</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="icon icon-customer2"></i>
-								<span>CU23793</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>James Smith</span>
-						</td>
-						<td>
-							<p>Customer</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip">&nbsp;</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="svg-ico transaction-ico"></i>
-								<span>TR23792</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>James Smith > Steven Fry</span>
-						</td>
-						<td>
-							<p>Transaction Report</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip" data-popup="attach">
-							<i class="icon icon-clip"></i>
-						</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="icon icon-corp"></i>
-								<span>CU23791</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>Nakatomi Corp</span>
-						</td>
-						<td>
-							<p>Customer</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip">&nbsp;</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="svg-ico transaction-ico"></i>
-								<span>TR23790</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>James Smith > Steven Fry</span>
-						</td>
-						<td>
-							<p>Transaction Report</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip" data-popup="attach">
-							<i class="icon icon-clip"></i>
-						</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="icon icon-customer2"></i>
-								<span>CU23794</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>Steve Bushemi</span>
-						</td>
-						<td>
-							<p>Customer</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip">&nbsp;</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="svg-ico transaction-ico"></i>
-								<span>TR23792</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>James Smith > Steven Fry</span>
-						</td>
-						<td>
-							<p>Transaction Report</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip" data-popup="attach">
-							<i class="icon icon-clip"></i>
-						</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="icon icon-customer2"></i>
-								<span>CU23792</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>James Smith > Steven Fry</span>
-						</td>
-						<td>
-							<p>Customer</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip">&nbsp;</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="svg-ico transaction-ico"></i>
-								<span>TR23791</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>James Smith > Steven Fry</span>
-						</td>
-						<td>
-							<p>Transaction Report</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip" data-popup="attach">
-							<i class="icon icon-clip"></i>
-						</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="svg-ico transaction-ico"></i>
-								<span>TR23790</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>James Smith > Steven Fry</span>
-						</td>
-						<td>
-							<p>Transaction Report</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip" data-popup="attach">
-							<i class="icon icon-clip"></i>
-						</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="icon icon-customer2"></i>
-								<span>CU23794</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>Steve Bushemi</span>
-						</td>
-						<td>
-							<p>Customer</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip">&nbsp;</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="svg-ico transaction-ico"></i>
-								<span>TR23793</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>James Smith > Steven Fry</span>
-						</td>
-						<td>
-							<p>Transaction Report</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip" data-popup="attach">
-							<i class="icon icon-clip"></i>
-						</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="icon icon-customer2"></i>
-								<span>CU23792</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>James Smith > Steven Fry</span>
-						</td>
-						<td>
-							<p>Customer</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip">&nbsp;</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="svg-ico transaction-ico"></i>
-								<span>TR23791</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>Nakatomi Corp</span>
-						</td>
-						<td>
-							<p>Transaction Report</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip">&nbsp;</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="svg-ico transaction-ico"></i>
-								<span>TR23790</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>James Smith > Steven Fry</span>
-						</td>
-						<td>
-							<p>Transaction Report</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip" data-popup="attach">
-							<i class="icon icon-clip"></i>
-						</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="svg-ico transaction-ico"></i>
-								<span>TR23791</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>Nakatomi Corp</span>
-						</td>
-						<td>
-							<p>Transaction Report</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip">&nbsp;</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr class="js-link" data-href="http://www.google.com">
-						<td>
-							<div class="table__el">
-								<i class="svg-ico transaction-ico"></i>
-								<span>TR23790</span>
-							</div>
-						</td>
-						<td class="table__name">
-							<span>James Smith > Steven Fry</span>
-						</td>
-						<td>
-							<p>Transaction Report</p>
-						</td>
-						<td>
-							<div class="status is-approved">
-								<i class="icon icon-check"></i>
-								<span title="Sent for review">Approved</span>
-							</div>
-						</td>
-						<td class="table__clip" data-popup="attach">
-							<i class="icon icon-clip"></i>
-						</td>
-						<td>
-							<p>Aug 10, 2015</p>
-						</td>
-						<td class="table__drop">
-							<div class="dropdown js-dropdown">
-								<span class="dropdown__bl"></span>
-								<ul class="dropdown__list js-inner">
-									<li><a href="#">Open in new window</a></li>
-									<li><a href="#">Download all in ZIP</a></li>
-									<li><a href="#">Deal status</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="7" class="js-show-more">
-							<a href="#" class="show-more">Show 50 more</a>
-						</td>
-					</tr>
-				</table>
-				<!-- end table -->
+				<!-- end tablewrap -->
 				<div class="deal">
 					<div class="tooltip">
 						<p>Deal Status</p>

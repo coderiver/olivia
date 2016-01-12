@@ -1,6 +1,8 @@
 // common wrapper
 .tablewrap
 	margin: 40px 0
+	&.no-bottom-margin
+		margin-bottom: 0
 	&__in
 		position: relative
 
@@ -76,7 +78,6 @@
 // table
 .table
 	max-width: 100%
-	margin-bottom: 45px
 	font-size: 13px
 	color: #6c757a
 	table-layout: fixed
@@ -87,54 +88,10 @@
 			vertical-align: top
 		.table__drop
 			padding-top: 5px
-	&.s-bottom-margin
-		margin-bottom: 5px
 	&.no-overflow
 		td
 			> p, > span
 				white-space: normal
-	.table__head
-		background: #f7f8f9
-		text-align: left
-		border-top: 1px solid #efefef
-		border-bottom: 1px solid #efefef
-		th
-			position: relative
-			height: 38px
-			text-align: left
-			padding: 0 10px
-			font-size: 13px
-			font-weight: normal
-			border-right: 1px solid #dce0e7
-			cursor: pointer
-			vertical-align: middle
-			+opensans-sb
-			&:before
-				display: none
-				content: ""
-				position: absolute
-				top: 19px
-				right: 10px
-				margin-top: -2px
-				+arr(7, 4, #6c757a, b)
-			&:hover
-				background: rgba(0, 0, 0, 0.05)
-			&.is-active
-				background: rgba(0, 0, 0, 0.05)
-				&:before
-					display: block
-			&:first-child
-				padding-left: 17px
-			&:last-child
-				border-right: 0
-			&.table__drop
-				background: none
-				&:before
-					display: none
-			&.table__clip
-				text-align: center
-				&.is-active
-					padding-right: 17px
 	&__clip
 		width: 5%
 		text-align: center
@@ -150,8 +107,6 @@
 		overflow: hidden
 		white-space: nowrap
 		+opensans-sb
-		&.is-measured
-			white-space: nowrap
 		> span
 			display: inline-block
 			max-width: calc(100% - 20px)
@@ -231,16 +186,63 @@
 			text-align: right
 		.icon.icon-clip
 			font-size: 14px
+	.table__head
+		background: #f7f8f9
+		text-align: left
+		border-top: 1px solid #efefef
+		border-bottom: 1px solid #efefef
+		th
+			position: relative
+			height: 38px
+			text-align: left
+			padding: 0 10px
+			font-size: 13px
+			font-weight: normal
+			border-right: 1px solid #dce0e7
+			cursor: pointer
+			vertical-align: middle
+			+opensans-sb
+			&:before
+				display: none
+				content: ""
+				position: absolute
+				top: 19px
+				right: 10px
+				margin-top: -2px
+				+arr(7, 4, #6c757a, b)
+			&:hover
+				background: rgba(0, 0, 0, 0.05)
+			&.is-active
+				background: rgba(0, 0, 0, 0.05)
+				&:before
+					display: block
+			&:first-child
+				padding-left: 17px
+			&:last-child
+				border-right: 0
+			&.table__drop
+				background: none
+				&:before
+					display: none
+			&.table__clip
+				text-align: center
+				&.is-active
+					padding-right: 17px
 	.dropdown
 		vertical-align: middle
 	.status
 		padding-left: 1px
-		span
+		vertical-align: middle
+		span:not(.status-info)
 			display: inline-block
 			max-width: calc(100% - 20px)
 			overflow: hidden
 			text-overflow: ellipsis
 			white-space: nowrap
+		.status-info
+			&:first-child
+				+ span, p
+					max-width: calc(100% - 38px)
 	.svg-ico
 		display: inline-block
 		width: 16px
@@ -249,8 +251,6 @@
 		vertical-align: middle
 	.icon
 		vertical-align: middle
-	.icon-pending
-		vertical-align: -2px
 	.icon-customer2,
 	.icon-corp
 		font-size: 17px
@@ -431,6 +431,7 @@
 		margin-bottom: 0
 		background: #FFF
 		td
+			height: 38px
 			padding: 9px 8.5px 8px
 			&:first-child
 				padding-left: 17px
@@ -488,6 +489,7 @@
 			&:before, &:after
 				background: #eee
 	.ps-scrollbar-x-rail
+		width: 100% !important
 		bottom: 0 !important
 		height: 14px
 		background: #f7f8f9
@@ -539,14 +541,14 @@
 	border-left: 1px solid #dce0e7
 	border-right: 1px solid #dce0e7
 	&:before
-		margin: -2.5px 0 0 -3px
+		margin: -2px 0 0 -3px
 		+arr(4, 5, #cacdd3, l)
 
 .btn-next
 	width: 13px
 	right: 0
 	&:before
-		margin: -2.5px 0 0 -2px
+		margin: -2px 0 0 -2px
 		+arr(4, 5, #cacdd3, r)
 
 // sidedrop
@@ -560,7 +562,7 @@
 		&:after
 			display: block
 		.table
-			border-color: #dce0e7
+			border-left: 1px solid #dce0e7
 		&.is-filtered
 			&:before
 				display: block
@@ -578,6 +580,10 @@
 		&:after
 			height: 14px
 			border-top: 1px solid #dce0e7
+	&.is-top-aligned
+		.table td
+			padding-top: 6px
+			vertical-align: top
 	&:after
 		display: none
 		content: ""
@@ -592,12 +598,10 @@
 		border-bottom: 1px solid #dce0e7
 	.table
 		margin-bottom: 0
-		border-left: 1px solid transparent
 		background: #FFF
 		td
 			padding: 0
 			vertical-align: middle
-			border-bottom: 1px solid #efefef
 			&:first-child
 				width: auto
 				padding-left: 0

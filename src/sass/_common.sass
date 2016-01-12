@@ -304,6 +304,13 @@ input
 		&:hover
 			background-color: #3691DB
 			+g(#2c83cb, #3691DB)
+	&.is-prev,
+	&.is-next
+		box-shadow: none
+		border: 1px solid #cfd5e0
+		+g(#fafafa, #e2e2e2)
+		&:hover
+			+g(#e2e2e2, #fafafa)
 	&.is-prev
 		padding: 8px 15px 8px 37px
 	&.is-next
@@ -336,7 +343,7 @@ input
 		content: "\2192"
 
 .status
-	font-size: 13px
+	font-size: 0
 	color: #f76300
 	+opensans-sb
 	+clr
@@ -353,9 +360,12 @@ input
 		color: #6C757A
 		+opensans
 	span
+		font-size: 13px
 		vertical-align: middle
+	.status-info
+		font-size: 10px
 	.icon
-		margin-right: 3px
+		margin-right: 5px
 		font-size: 12px
 		vertical-align: middle
 	.icon-pending,
@@ -684,9 +694,15 @@ input
 		margin-top: -9px
 	.icon
 		font-size: 16px
+	.icon-folder
+		+ span, + p
+			padding-left: 27px
 	> span, > p
 		display: block
-		padding-left: 24px
+		padding-left: 22px
 		font-size: 13px
 		&:only-child
 			padding-left: 0
+
+.js-plus-more
+	display: inline-block

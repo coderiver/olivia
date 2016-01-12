@@ -100,11 +100,6 @@ $(document).ready(function() {
 
 		toggleDesignElem();
 
-		$(window).resize(function() {
-			scrollTable.perfectScrollbar('update');
-			toggleDesignElem();
-		});
-
 		function addScrollButtons() {
 			scrollTable.each(function() {
 				var buttonPrev = $('<div />', {'class': 'btn-prev'}),
@@ -130,12 +125,12 @@ $(document).ready(function() {
 		// measure width of more block TODO MEASURE IN PERCENTAGE
 		function measureMoreblock() {
 			setTimeout(function() {
-				$('.js-plus-more span:first-child').each(function() {
-					var plusBlockWidth = $(this).siblings('.table__more').outerWidth();
+				$('.js-measure').each(function() {
+					var	plusBlockWidth = $(this).siblings('.js-plus-more').outerWidth();
+
 					$(this).css({
-						'width': 'calc(100% - ' + plusBlockWidth + 'px)'
+						'max-width': 'calc( 100% - ' + plusBlockWidth + 'px)'
 					});
-					$(this).parent().addClass('is-measured');
 				});
 			}, 0);
 		}
@@ -168,6 +163,7 @@ $(document).ready(function() {
 					checkedInputNum = checkedInput.length;
 
 				sidedropRowHeight();
+
 				// check if th with input id exists
 				if ( theadData ) {
 					if ( $(this).is(':checked') ) {
@@ -208,7 +204,7 @@ $(document).ready(function() {
 			$(this).toggleClass('is-active');
 			$(this).parents(parentWrap).find('.js-sidebar').toggleClass('is-active');
 			scrollTable.toggleClass('is-sidebar');
-			setTimeout(function(){
+			setTimeout(function() {
 				scrollTable.perfectScrollbar('update');
 				toggleDesignElem();
 			}, 300);
@@ -216,11 +212,15 @@ $(document).ready(function() {
 
 		// hide sidebar
 		$('.js-hide-sidebar').click(function() {
+			var scrollTable = $(this).parents(parentWrap).find('.js-scrollbar');
+
 			$(this).parents('.js-sidebar').removeClass('is-active');
-			$(this).parents(parentWrap).find('.js-scrollbar')
-									   .removeClass('is-sidebar')
-									   .perfectScrollbar('update');
 			$(this).parents(parentWrap).find('.js-toggle-sidebar').removeClass('is-active');
+			scrollTable.removeClass('is-sidebar');
+			setTimeout(function() {
+				scrollTable.perfectScrollbar('update');
+				toggleDesignElem();
+			}, 300);
 		});
 
 		// sidebar submenu show/hide
@@ -230,7 +230,7 @@ $(document).ready(function() {
 			$(this).siblings().find(sublist).slideUp();
 
 			$(this).addClass('is-active');
-			if ( $(this).children(sublist).length > 0 ){
+			if ( $(this).children(sublist).length > 0 ) {
 				$(this).children(sublist).slideDown();
 			}
 		});
@@ -269,6 +269,13 @@ $(document).ready(function() {
 		$('.js-tab-el').click(function() {
 			$(this).siblings().removeClass('is-active');
 			$(this).addClass('is-active');
+		});
+
+		$(window).resize(function() {
+			scrollTable.perfectScrollbar('update');
+			toggleDesignElem();
+			measureMoreblock();
+			sidedropRowHeight();
 		});
 
 	})();
