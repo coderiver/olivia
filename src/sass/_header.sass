@@ -72,6 +72,9 @@
 		color: #6c757a
 		&:hover
 			text-decoration: underline
+		&.is-disabled
+			color: #DDECF4
+			text-decoration: none
 	.btn-group
 		float: right
 		padding-top: 15px
@@ -95,11 +98,6 @@
 		position: relative
 		float: left
 		margin: 0 13.5px
-	&__link
-		position: relative
-		text-transform: uppercase
-		color: #93988f
-		letter-spacing: 0.5px
 		&:after
 			display: none
 			content: ""
@@ -108,13 +106,19 @@
 			left: 50%
 			margin: 12px 0 0 -10px
 			+arr(20, 12, #f7f8f9, t)
-		&:hover
-			color: #fff
 		&.is-active
-			color: #fff
-			+opensans-sb
 			&:after
 				display: block
+			.menu__link,
+			.dropdown__item
+				color: #fff
+				+opensans-sb
+	&__link
+		text-transform: uppercase
+		color: #93988f
+		letter-spacing: 0.5px
+		&:hover
+			color: #fff
 	.dropit
 		left: -15px
 
@@ -125,7 +129,7 @@
 	margin: -6.5px 0 0 1px
 	font-size: 9px
 	text-align: center
-	padding: 1px 3px
+	padding: 2px 3px 1px
 	background: #f76300
 	line-height: 1
 	color: #FFF
@@ -404,29 +408,8 @@
 		color: #6c757a
 	&__list
 		margin: 17px 0
-	&__filter
-		margin-top: 15px
-		font-size: 0
-		li
-			position: relative
-			display: inline-block
-			font-size: 13px
-			vertical-align: middle
-			&:after
-				content: "|"
-				display: inline-block
-				margin: 0 5px
-				color: #b1d3d5
-				vertical-align: middle
-			&:last-child
-				&:after
-					display: none
-	&__link
-		display: inline-block
-		color: #097bf2
-		vertical-align: middle
-		&:hover
-			text-decoration: underline
+	.reaction
+		margin-bottom: 0
 	.icon-close
 		position: absolute
 		top: 11px
@@ -470,3 +453,28 @@
 		font-size: 17px
 	.txt-center
 		text-align: center
+
+// reaction
+.reaction
+	margin: 15px 0
+	font-size: 0
+	li
+		position: relative
+		display: inline-block
+		font-size: 13px
+		vertical-align: middle
+		&:after
+			content: "|"
+			display: inline-block
+			margin: 0 5px
+			color: #b1d3d5
+			vertical-align: middle
+		&:last-child
+			&:after
+				display: none
+	&__link
+		display: inline-block
+		color: #097bf2
+		vertical-align: middle
+		&:hover
+			text-decoration: underline

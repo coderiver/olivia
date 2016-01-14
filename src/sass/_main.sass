@@ -1,7 +1,7 @@
 .main
 	margin-top: -90px
 	&__in
-		min-height: 300px
+		min-height: 400px
 		background: #fff
 		border: 1px solid #dce0e7
 		border-radius: 6px
@@ -38,6 +38,9 @@
 			&:only-of-type
 				&:after
 					content: none
+			&:last-child
+				&:after
+					display: none
 		.btn
 			float: right
 			padding: 8px 31px
@@ -353,7 +356,7 @@
 			margin-bottom: 0
 
 .activity
-	margin: 10px 17px 26px
+	margin: 40px 17px
 	font-size: 13px
 	color: #6c757a
 	&__ttl
@@ -394,7 +397,7 @@
 		h2
 			font-size: 20px
 	&__info
-		margin: 5px 0 10px
+		margin: 5px 0 20px
 		color: #6c757a
 		font-size: 13px
 		&.is-review
@@ -423,6 +426,9 @@
 			float: right
 			margin-top: 9px
 			padding: 8px 31px
+	&__list
+		margin: 18px 0
+		font-size: 14px
 
 
 .taskstat

@@ -181,7 +181,7 @@ $(document).ready(function() {
 		});
 
 		function scrollFakeHeader() {
-			if ( parentWrap.length > 0 ) {
+			if ( scrollTable.length > 0 ) {
 				$(window).scroll(function() {
 					var scrollPos = $(window).scrollTop();
 
