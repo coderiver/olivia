@@ -118,6 +118,8 @@
 			margin-right: 5px
 		.status
 			display: inline-block
+		.icon-bubble
+			font-size: 15px
 	&__el
 		+rmono
 		span
@@ -129,6 +131,57 @@
 		vertical-align: middle
 	&__info
 		color: #f76300
+	&__pic
+		> div
+			float: left
+			width: 60px
+			height: 60px
+			margin-right: 10px
+			background-size: cover
+		> p, > span
+			overflow: hidden
+	.table__head
+		background: #f7f8f9
+		text-align: left
+		border-top: 1px solid #efefef
+		border-bottom: 1px solid #efefef
+		th
+			position: relative
+			height: 38px
+			text-align: left
+			padding: 0 10px
+			font-size: 13px
+			font-weight: normal
+			border-right: 1px solid #dce0e7
+			cursor: pointer
+			vertical-align: middle
+			+opensans-sb
+			&:before
+				display: none
+				content: ""
+				position: absolute
+				top: 19px
+				right: 10px
+				margin-top: -2px
+				+arr(7, 4, #6c757a, b)
+			&:hover
+				background: rgba(0, 0, 0, 0.05)
+			&.is-active
+				background: rgba(0, 0, 0, 0.05)
+				&:before
+					display: block
+			&:first-child
+				padding-left: 17px
+			&:last-child
+				border-right: 0
+			&.table__drop
+				background: none
+				&:before
+					display: none
+			&.table__clip
+				text-align: center
+				&.is-active
+					padding-right: 17px
 	tr
 		&:first-child
 			&:hover
@@ -186,48 +239,6 @@
 			text-align: right
 		.icon.icon-clip
 			font-size: 14px
-	.table__head
-		background: #f7f8f9
-		text-align: left
-		border-top: 1px solid #efefef
-		border-bottom: 1px solid #efefef
-		th
-			position: relative
-			height: 38px
-			text-align: left
-			padding: 0 10px
-			font-size: 13px
-			font-weight: normal
-			border-right: 1px solid #dce0e7
-			cursor: pointer
-			vertical-align: middle
-			+opensans-sb
-			&:before
-				display: none
-				content: ""
-				position: absolute
-				top: 19px
-				right: 10px
-				margin-top: -2px
-				+arr(7, 4, #6c757a, b)
-			&:hover
-				background: rgba(0, 0, 0, 0.05)
-			&.is-active
-				background: rgba(0, 0, 0, 0.05)
-				&:before
-					display: block
-			&:first-child
-				padding-left: 17px
-			&:last-child
-				border-right: 0
-			&.table__drop
-				background: none
-				&:before
-					display: none
-			&.table__clip
-				text-align: center
-				&.is-active
-					padding-right: 17px
 	.dropdown
 		vertical-align: middle
 	.status

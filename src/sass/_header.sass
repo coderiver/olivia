@@ -2,7 +2,7 @@
 	min-height: 153px
 	background-color: #474e52
 	&.is-form
-		min-height: initial
+		min-height: auto
 		position: fixed
 		min-width: 1000px
 		top: 0
@@ -48,6 +48,10 @@
 		small
 			font-size: 13px
 			color: #738496
+		.icon-check
+			margin-left: 5px
+			font-size: 12px
+			vertical-align: middle
 	&__list
 		position: relative
 		text-align: center
@@ -75,6 +79,8 @@
 		&.is-disabled
 			color: #DDECF4
 			text-decoration: none
+			pointer-events: none
+			-ms-pointer-events: none
 	.btn-group
 		float: right
 		padding-top: 15px

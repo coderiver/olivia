@@ -71,10 +71,11 @@ body
 	line-height: 1.4
 	background: #F3F4F6
 	font-weight: normal
+	overflow-x: auto !important
 	+opensans
 	+font-smoothing
 	&.is-overflow
-		overflow: hidden
+		overflow: hidden !important
 	.tooltipster-base
 		z-index: 8
 
@@ -323,6 +324,10 @@ input
 		opacity: 0.5
 		background: #2c83cb
 		cursor: default
+	.icon-lock
+		margin-right: 10px
+		font-size: 17px
+		vertical-align: -4px
 
 .left-arr,
 .right-arr
@@ -548,6 +553,11 @@ input
 		max-width: 340px
 		.dropdown__list
 			width: 100%
+	&.is-small
+		width: 100%
+		max-width: 200px
+		.dropdown__list
+			width: 100%
 	&.is-menu
 		.dropdown__item
 			padding: 0
@@ -556,10 +566,16 @@ input
 			text-transform: uppercase
 			color: #93988f
 			&:before
-				display: none
+				right: auto
+				left: 100%
+				margin-left: 5px
 		.dropdown__list
+			top: 18px
 			left: -15px
+			padding: 7px 0
 			border-radius: 4px
+			a
+				padding: 7px 15px
 	&.is-reference
 		.dropdown__list
 			min-width: 240px

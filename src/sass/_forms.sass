@@ -3,16 +3,24 @@
 	margin: 45px 0 80px
 	font-size: 13px
 	color: #6c757a
+	+clr
+	&.is-full-w
+		.form__bl
+			padding: 0
 	&__ttl
 		margin-bottom: 20px
 		font-size: 18px
 		color: #282828
 		+opensans-sb
+		&.s-bottom-margin
+			margin-bottom: 5px
 	&__subttl
 		margin-bottom: 10px
 		font-size: 14px
 		color: #282828
 		+opensans-sb
+		&.no-margin
+			margin-bottom: 0
 	&__bl
 		position: relative
 		padding: 0 109px
@@ -21,6 +29,8 @@
 			.addpost
 				opacity: 1
 				visibility: visible
+		&.s-bottom-margin
+			margin-bottom: 10px
 	&__el
 		display: block
 		margin: 7px 0
@@ -28,9 +38,20 @@
 			max-width: 162px
 		&.is-middle-size
 			max-width: 340px
+	&__link
+		color: #097BF3
+		&:hover
+			text-decoration: underline
+	&__img
+		&.is-right
+			float: right
+			max-width: 286px
+			padding-right: 109px
+			img
+				width: 100%
 	hr
 		max-width: 600px
-		margin: 25px auto
+		margin: 15px auto 25px
 		border: none
 		border-top: 1px solid #cfd5e0
 	.radio,
@@ -46,6 +67,11 @@
 	margin: 15px 0
 	font-size: 14px
 	color: #097bf2
+	&.is-error
+		padding: 5px
+		background: #FFFCFC
+		border: 1px solid #FFA4AF
+		+placeholder-color(#6c757a)
 	&__in
 		position: relative
 		display: inline-block
@@ -176,5 +202,6 @@
 	.btn-group
 		display: none
 		float: right
+		margin-top: 5px
 		&.is-visible
 			display: block

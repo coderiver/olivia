@@ -141,8 +141,10 @@ $(document).ready(function() {
 		function sidedropRowHeight() {
 			setTimeout(function() {
 				row.each(function(index) {
-					var rowHeight = parentWrap.find('.js-link').eq(index).height();
+					var rowHeight = parentWrap.find('.js-link').eq(index).outerHeight().toFixed(3);
 					$(this).find('td').css('height', rowHeight);
+
+					console.log(rowHeight);
 				});
 			}, 0);
 		}
@@ -320,7 +322,7 @@ $(document).ready(function() {
 			wrapper = $('<div />', {'class': 'newpost js-newpost'}).appendTo(commentParent);
 			inner = $(
 				'<div class="newpost__in">'
-					+ '<label><input type="text" placeholder="Type your comment/question"></label>'
+					+ '<div class="form__el"><label><input type="text" placeholder="Type your comment/question"></label></div>'
 					+ '<div class="btn-group is-visible">'
 						+ '<button class="btn btn-no m-pad" type="button">Cancel</button>'
 						+ '<button class="btn btn-ok m-pad" type="submit" disabled>Comment</button>'

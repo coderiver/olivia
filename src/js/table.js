@@ -80,8 +80,10 @@ $(document).ready(function() {
 		function sidedropRowHeight() {
 			setTimeout(function() {
 				row.each(function(index) {
-					var rowHeight = parentWrap.find('.js-link').eq(index).height();
+					var rowHeight = parentWrap.find('.js-link').eq(index).outerHeight().toFixed(3);
 					$(this).find('td').css('height', rowHeight);
+
+					console.log(rowHeight);
 				});
 			}, 0);
 		}
