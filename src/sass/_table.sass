@@ -5,6 +5,34 @@
 		margin-bottom: 0
 	&__in
 		position: relative
+		&.is-filtered
+			.scrollbar
+				min-height: 513px
+				&:before
+					content: ""
+					position: absolute
+					left: 0
+					bottom: 13px
+					width: 100%
+					border-bottom: 1px solid #dce0e7
+			.sidedrop
+				bottom: 13px
+				border-bottom: 1px solid #dce0e7
+				&:before
+					display: none
+					content: ""
+					position: absolute
+					top: 0
+					left: 0
+					bottom: 0
+					border-left: 1px solid #dce0e7
+				&:after
+					height: 14px
+					border-top: 1px solid #dce0e7
+				&.is-scrollbar
+					&:before
+						display: block
+
 
 // filters
 .filters
@@ -89,57 +117,60 @@
 		.table__drop
 			padding-top: 5px
 	&.no-overflow
-		td
-			> p, > span
-				white-space: normal
+		.table__text
+			white-space: normal
 	&__clip
 		width: 5%
 		text-align: center
 		.icon.icon-clip
 			font-size: 14px
-			vertical-align: -1px
 	&__drop
 		width: 50px
 		padding: 5px 8.5px
 		text-align: center
 	&__name
 		color: #282828
-		overflow: hidden
-		white-space: nowrap
 		+opensans-sb
-		> span
-			display: inline-block
-			max-width: calc(100% - 20px)
-			white-space: nowrap
-			overflow: hidden
-			text-overflow: ellipsis
-			vertical-align: middle
-		.icon, .svg-ico
-			margin-right: 5px
 		.status
 			display: inline-block
-		.icon-bubble
-			font-size: 15px
 	&__el
+		font-size: 0
 		+rmono
 		span
 			display: inline-block
+			max-width: calc(100% - 25px)
+			font-size: 13px
+			overflow: hidden
+			text-overflow: ellipsis
 			vertical-align: middle
+			white-space: nowrap
+		.svg-ico, .icon
+			margin-right: 5px
 	&__more
 		display: inline-block
 		font-size: 13px
 		vertical-align: middle
-	&__info
-		color: #f76300
+		&:first-child
+			vertical-align: baseline
 	&__pic
-		> div
+		div
 			float: left
 			width: 60px
 			height: 60px
 			margin-right: 10px
 			background-size: cover
-		> p, > span
+		p, span
 			overflow: hidden
+	&__text
+		max-width: 100%
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+		vertical-align: middle
+		&.is-info
+			color: #f76300
+	span.table__text
+		display: inline-block
 	.table__head
 		background: #f7f8f9
 		text-align: left
@@ -182,6 +213,12 @@
 				text-align: center
 				&.is-active
 					padding-right: 17px
+			p, span
+				display: block
+				max-width: 100%
+				text-overflow: ellipsis
+				overflow: hidden
+				white-space: nowrap
 	tr
 		&:first-child
 			&:hover
@@ -192,11 +229,11 @@
 			.description
 				color: #097bf2
 				+opensans-sb
-				~ *:not(.table__info)
+				~ *:not(.is-info)
 					color: #282828
 		&.is-pending
 			.description
-				~ *:not(.table__info)
+				~ *:not(.is-info)
 					color: #96a0a6
 			.table__name
 				color: #6c757a
@@ -207,11 +244,6 @@
 	th
 		padding: 0
 		font-size: 0
-		> p, > span
-			max-width: 100%
-			overflow: hidden
-			text-overflow: ellipsis
-			white-space: nowrap
 		&.cell-right
 			text-align: right
 			&.is-active
@@ -226,11 +258,7 @@
 		border-top: 1px solid #efefef
 		border-bottom: 1px solid #efefef
 		vertical-align: middle
-		> p, > span
-			max-width: 100%
-			overflow: hidden
-			text-overflow: ellipsis
-			white-space: nowrap
+		line-height: 18px
 		&:first-child
 			padding-left: 17px
 		&.cell-center
@@ -241,19 +269,22 @@
 			font-size: 14px
 	.dropdown
 		vertical-align: middle
+	.description
+		p, span
+			max-width: 100%
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
 	.status
 		padding-left: 1px
 		vertical-align: middle
+		white-space: nowrap
 		span:not(.status-info)
 			display: inline-block
 			max-width: calc(100% - 20px)
 			overflow: hidden
 			text-overflow: ellipsis
 			white-space: nowrap
-		.status-info
-			&:first-child
-				+ span, p
-					max-width: calc(100% - 38px)
 	.svg-ico
 		display: inline-block
 		width: 16px
@@ -428,15 +459,6 @@
 	// 	border-bottom: 1px solid #dce0e7
 	&.is-sidebar
 		margin-left: 240px
-	&.is-filtered
-		min-height: 513px
-		&:before
-			content: ""
-			position: absolute
-			left: 0
-			bottom: 13px
-			width: 100%
-			border-bottom: 1px solid #dce0e7
 	.table
 		min-width: 1000px
 		margin-bottom: 0
@@ -446,8 +468,6 @@
 			padding: 9px 8.5px 8px
 			&:first-child
 				padding-left: 17px
-		td > span
-			display: inline-block
 	// .mCSB_horizontal.mCSB_inside > .mCSB_container
 	// 	margin-bottom: 12px
 	// .mCustomScrollBox
@@ -574,23 +594,6 @@
 			display: block
 		.table
 			border-left: 1px solid #dce0e7
-		&.is-filtered
-			&:before
-				display: block
-	&.is-filtered
-		bottom: 13px
-		border-bottom: 1px solid #dce0e7
-		&:before
-			display: none
-			content: ""
-			position: absolute
-			top: 0
-			left: 0
-			bottom: 0
-			border-left: 1px solid #dce0e7
-		&:after
-			height: 14px
-			border-top: 1px solid #dce0e7
 	&.is-top-aligned
 		.table td
 			padding-top: 6px
@@ -627,10 +630,13 @@
 
 // show more
 .show-more
-	display: inline-block
-	padding: 5px 0
-	color: #097bf2
-	vertical-align: middle
+	padding: 11px 17px
+	font-size: 13px
+	border-bottom: 1px solid #efefef
+	a
+		display: inline-block
+		vertical-align: middle
+		color: #097bf2
 
 
 // fake header

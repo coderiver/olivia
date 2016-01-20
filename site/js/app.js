@@ -82,7 +82,7 @@ $(document).ready(function() {
 				if ( !$(evt.target).parents('.dropdown__list').length > 0 ) {
 					evt.preventDefault();
 				}
-			} else {
+			} else if (targetLink !== undefined && targetLink !== '') {
 				window.location.href = targetLink;
 			}
 		});
@@ -97,8 +97,6 @@ $(document).ready(function() {
 				scrollTable.siblings().removeClass('is-scrollbar');
 			}
 		}
-
-		toggleDesignElem();
 
 		function addScrollButtons() {
 			scrollTable.each(function() {
@@ -120,13 +118,12 @@ $(document).ready(function() {
 			});
 		}
 
-		addScrollButtons();
-
-		// measure width of more block TODO MEASURE IN PERCENTAGE
+		// measure width of more block
 		function measureMoreblock() {
 			setTimeout(function() {
 				$('.js-measure').each(function() {
-					var	plusBlockWidth = $(this).siblings('.js-plus-more').outerWidth();
+					// 5 stands for inline-block padding
+					var	plusBlockWidth = $(this).siblings('.js-plus-more').outerWidth() + 5;
 
 					$(this).css({
 						'max-width': 'calc( 100% - ' + plusBlockWidth + 'px)'
@@ -135,21 +132,15 @@ $(document).ready(function() {
 			}, 0);
 		}
 
-		measureMoreblock();
-
 		// height of td in sidedrop
 		function sidedropRowHeight() {
 			setTimeout(function() {
 				row.each(function(index) {
-					var rowHeight = parentWrap.find('.js-link').eq(index).outerHeight().toFixed(3);
+					var rowHeight = parentWrap.find('.js-link').eq(index).outerHeight();
 					$(this).find('td').css('height', rowHeight);
-
-					console.log(rowHeight);
 				});
 			}, 0);
 		}
-
-		sidedropRowHeight();
 
 		// add/remove columns
 		function columnsToggle() {
@@ -191,8 +182,6 @@ $(document).ready(function() {
 				}
 			});
 		}
-
-		columnsToggle();
 
 		// sidebar inner scroll
 		sidebar.find('.js-content').perfectScrollbar({
@@ -250,7 +239,7 @@ $(document).ready(function() {
 
 					parentWrap.each(function() {
 						var	tableTop = $(this).find('.js-scrollbar').offset().top,
-							tableHeight = $(this).find('.js-scrollbar').outerHeight() - 114;
+							tableHeight = $(this).find('.js-scrollbar').outerHeight() - 114; // TODO count children height
 
 						if ( scrollPos > tableTop ) {
 							$(this).find('.js-fake-head').css('top', scrollPos - tableTop);
@@ -265,13 +254,22 @@ $(document).ready(function() {
 			}
 		}
 
-		scrollFakeHeader();
-
 		// tabs for filter
-		$('.js-tab-el').click(function() {
-			$(this).siblings().removeClass('is-active');
-			$(this).addClass('is-active');
-		});
+		function filterTabs() {
+			$('.js-tab-el').click(function() {
+				$(this).siblings().removeClass('is-active');
+				$(this).addClass('is-active');
+			});
+		}
+
+		// summon them on load!
+		toggleDesignElem();
+		filterTabs();
+		scrollFakeHeader();
+		columnsToggle();
+		addScrollButtons();
+		sidedropRowHeight();
+		measureMoreblock();
 
 		$(window).resize(function() {
 			scrollTable.perfectScrollbar('update');

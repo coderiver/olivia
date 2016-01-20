@@ -694,6 +694,7 @@ input
 		padding: 5px 14px
 
 .highlight
+	display: inline-block
 	padding: 0 1px
 	background: #FFE8A1
 	+opensans-sb
@@ -704,21 +705,24 @@ input
 	margin-bottom: 6px
 	&:only-child
 		margin: 0
+	&.is-bold
+		p, span
+			color: #282828
+			+opensans-sb
 	.svg-ico, .icon
 		position: absolute
 		top: 50%
 		margin-top: -9px
 	.icon
 		font-size: 16px
-	.icon-folder
-		+ span, + p
-			padding-left: 27px
-	> span, > p
-		display: block
-		padding-left: 22px
+	.icon-folder,
+	.icon-folder-checked
+		margin-top: -8px
+		font-size: 14px
+	span, p
+		padding-left: 23px
 		font-size: 13px
+		&:not(.highlight)
+			display: block
 		&:only-child
 			padding-left: 0
-
-.js-plus-more
-	display: inline-block
