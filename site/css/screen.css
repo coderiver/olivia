@@ -168,7 +168,7 @@ input, .textarea { width: 100%; padding: 8px 12px; border-radius: 4px; border: 1
 input:-moz-placeholder, .textarea:-moz-placeholder, input::-moz-placeholder, .textarea::-moz-placeholder { color: #bcc6cc; opacity: 1; }
 input::-webkit-input-placeholder, .textarea::-webkit-input-placeholder { color: #bcc6cc; }
 input:focus, .textarea:focus { box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; border-color: transparent; }
-input.is-error, .is-error.textarea { background: #FFFCFC; border-color: #FFA4AF; box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.09); }
+input.is-error, .is-error.textarea { padding: 8px 12px; background: #FFFCFC; border-color: #FFA4AF; box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.09); }
 input.is-error:-moz-placeholder, .is-error.textarea:-moz-placeholder, input.is-error::-moz-placeholder, .is-error.textarea::-moz-placeholder { color: #6c757a; opacity: 1; }
 input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-placeholder { color: #6c757a; }
 
@@ -177,6 +177,8 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .errorlist li { color: #e0411b; font-family: "opensans-semibold", Arial, sans-serif; }
 
 .txt-center { text-align: center; }
+
+.is-error { padding: 0 5px; background: #FFFCFC; border: 1px solid #FFA4AF; }
 
 .btn-group { font-size: 0; }
 .btn-group .btn { margin-left: 10px; }
@@ -466,7 +468,6 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .main { margin-top: -90px; }
 .main__in { min-height: 400px; background: #fff; border: 1px solid #dce0e7; border-radius: 6px; }
 .main.is-form { margin-top: 0; margin-bottom: 30px; padding-top: 110px; }
-.main.is-form .report { margin: 0 0 13px; }
 
 .upper { position: relative; min-height: 90px; margin-bottom: 20px; padding: 18px 18px 8px; background: #f7f8f9; border-bottom: 1px solid #dce0e7; border-radius: 6px 6px 0 0; }
 .upper.is-custom { min-height: 60px; font-size: 0; *zoom: 1; }
@@ -610,14 +611,23 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .comments__archive:hover { text-decoration: underline; }
 .comments .tooltip { float: left; margin-bottom: 0; }
 
-.report { margin: 15px 0; padding: 13px 65px 15px 17px; font-size: 13px; color: #282828; background: #FFF6E6; border: 1px solid #FFC55E; }
+.report { margin: 15px 0; padding: 13px 65px 15px 17px; font-size: 13px; color: #282828; background: #FFF6E6; border: 1px solid #FFC55E; *zoom: 1; }
+.report:after { content: " "; display: table; clear: both; }
 .report.is-max-w { margin: 0 17px; padding-right: 18px; max-width: 663px; }
-.report.is-error { background: #fee; border-color: #ffc0c8; }
+.report.is-error { padding: 13px 15px; background: #fee; border-color: #ffc0c8; }
+.report.is-form { margin: 0 0 14px; padding: 9px 15px; color: #282828; background: #fffaf6; border: 1px solid #f76300; font-family: "opensans-semibold", Arial, sans-serif; }
 .report__ttl { margin-bottom: 5px; font-size: 14px; font-family: "opensans-semibold", Arial, sans-serif; }
+.report__bl { float: right; }
+.report__bl:first-child { float: left; }
+.report__bl span { vertical-align: middle; }
+.report__link { display: inline-block; margin-top: 3px; color: #097bf2; font-family: "opensans", Arial, sans-serif; }
+.report__link:hover { text-decoration: underline; }
+.report .icon { font-size: 12px; margin-right: 5px; vertical-align: middle; }
+.report .icon-warn { color: #f76300; }
 
-.bar { position: fixed; top: -100px; left: 0; right: 0; padding: 11px 0; text-align: center; font-size: 13px; background: #fff6e6; color: #282828; z-index: 100; transition: 1s; }
-.bar.is-active { top: 0; }
-.bar__link { color: #097bf2; }
+.ok-bar { position: fixed; top: -100px; left: 0; right: 0; padding: 11px 0; text-align: center; font-size: 13px; background: #fff6e6; color: #282828; z-index: 100; transition: 1s; }
+.ok-bar.is-active { top: 0; }
+.ok-bar__link { color: #097bf2; }
 
 .actions { margin: 15px 0 40px; text-align: center; font-size: 0; }
 .actions__bl { display: inline-block; width: 25%; max-width: 230px; padding: 0 10px; text-align: center; font-size: 13px; color: #738496; vertical-align: top; cursor: pointer; }
@@ -665,6 +675,7 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .tablewrap__in.is-filtered .sidedrop:before { display: none; content: ""; position: absolute; top: 0; left: 0; bottom: 0; border-left: 1px solid #dce0e7; }
 .tablewrap__in.is-filtered .sidedrop:after { height: 14px; border-top: 1px solid #dce0e7; }
 .tablewrap__in.is-filtered .sidedrop.is-scrollbar:before { display: block; }
+.tablewrap__in.no-sidedrop .scrollbar { margin-right: 0; }
 
 .filters { position: relative; padding: 0 10px 10px 20px; margin: 0 -4px; *zoom: 1; }
 .filters:after { content: " "; display: table; clear: both; }
@@ -853,16 +864,6 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .upload input[type="file"], .upload [type="file"].textarea { position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; padding: 0; opacity: 0; font-size: 0; cursor: pointer; z-index: 1; }
 .upload small { display: block; font-size: 13px; color: #6c757a; }
 .upload .icon { position: absolute; top: -2px; left: 0; font-size: 22px; }
-
-.alert { margin-bottom: 14px; padding: 9px 15px; font-size: 13px; color: #282828; background: #fffaf6; border: 1px solid #f76300; font-family: "opensans-semibold", Arial, sans-serif; *zoom: 1; }
-.alert:after { content: " "; display: table; clear: both; }
-.alert__bl { float: right; }
-.alert__bl:first-child { float: left; }
-.alert__bl span { vertical-align: middle; }
-.alert__link { color: #097bf2; font-family: "opensans", Arial, sans-serif; }
-.alert__link:hover { text-decoration: underline; }
-.alert .icon { font-size: 12px; margin-right: 5px; vertical-align: middle; }
-.alert .icon-warn { color: #f76300; }
 
 .addpost { position: absolute; display: inline-block; top: 4px; left: 30px; text-align: center; font-size: 11px; color: #c6ccd8; opacity: 0; visibility: hidden; }
 .addpost.is-visible { visibility: visible; opacity: 1; }
