@@ -1,4 +1,4 @@
-<div class="popup js-popup" id="popup-affiliate">
+<div class="popup js-popup" id="popup-affiliate-error">
 	<div class="popup__head">
 		<p>Add Affiliate</p>
 		<i class="icon icon-close js-close"></i>
@@ -8,32 +8,32 @@
 			<div class="form__bl">
 				<p class="form__subttl"><label for="">First Name</label></p>
 				<div class="form__el">
-					<input type="text" placeholder="Type first name">
+					<input class="is-error" type="text" placeholder="Type first name">
 				</div>
 			</div>
 			<div class="form__bl">
 				<p class="form__subttl"><label for="">Last Name</label></p>
 				<div class="form__el">
-					<input type="text" placeholder="Type last name">
+					<input class="is-error" type="text" placeholder="Type last name">
 				</div>
 			</div>
 			<div class="form__bl">
 				<p class="form__subttl"><label for="">E-mail</label></p>
 				<div class="form__el">
-					<input type="text" placeholder="Type e-mail address">
+					<input class="is-error" type="text" placeholder="Type e-mail address">
 				</div>
 			</div>
 			<div class="form__bl">
 				<p class="form__subttl"><label for="">Password</label></p>
 				<div class="form__el">
-					<input type="text" placeholder="Type password">
+					<input class="is-error" type="text" placeholder="Type password">
 				</div>
 			</div>
 			<div class="form__bl">
 				<p class="form__subttl no-margin">Password confirmation</p>
 				<label>Enter the dame password as above for verification</label>
 				<div class="form__el">
-					<input type="text" placeholder="Re-type same password">
+					<input class="is-error" type="text" placeholder="Re-type same password">
 				</div>
 			</div>
 			<div class="form__bl">
@@ -49,7 +49,7 @@
 			</div>
 			<div class="form__bl">
 				<p class="form__subttl">Modules</p>
-				<div>
+				<div class="is-error">
 					<label class="check is-light-border">
 						<input type="checkbox">
 						<span class="check__span">Memberhip</span>
@@ -68,12 +68,15 @@
 					</label>
 				</div>
 			</div>
-			<div class="upload">
+			<div class="upload is-error">
 				<div class="upload__in">
 					<input type="file" name="id">
 					<i class="icon icon-upload"></i>
 					<span>Upload photo</span>
 				</div>
+			</div>
+			<div class="report is-error">
+				<p>Affiliate cannot be saved cause not all fields are filled in. See those are marked above with pink outline and fill them in.</p>
 			</div>
 			<div class="popup__btn xs-margin">
 				<button class="btn btn-ok" type="submit">Add</button>

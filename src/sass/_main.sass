@@ -9,8 +9,6 @@
 		margin-top: 0
 		margin-bottom: 30px
 		padding-top: 110px
-		.report
-			margin: 0 0 13px
 
 .upper
 	position: relative
@@ -76,10 +74,10 @@
 			top: 100%
 			left: 50%
 		&:before
-			margin: 2px 0 0 -5px
+			margin: 2px 0 0 -9px
 			+arr(18, 10, #dce0e7, t)
 		&:after
-			margin: 3px 0 0 -4px
+			margin: 3px 0 0 -8px
 			+arr(16, 10, #fff, t)
 		&:hover
 			color: #000
@@ -527,20 +525,49 @@
 	color: #282828
 	background: #FFF6E6
 	border: 1px solid #FFC55E
+	+clr
 	&.is-max-w
 		margin: 0 17px
 		padding-right: 18px
 		max-width: 663px
 	&.is-error
+		padding: 13px 15px
 		background: #fee
 		border-color: #ffc0c8
+	&.is-form
+		margin: 0 0 14px
+		padding: 9px 15px
+		color: #282828
+		background: #fffaf6
+		border: 1px solid #f76300
+		+opensans-sb
 	&__ttl
 		margin-bottom: 5px
 		font-size: 14px
 		+opensans-sb
+	&__bl
+		float: right
+		&:first-child
+			float: left
+		span
+			vertical-align: middle
+	&__link
+		display: inline-block
+		margin-top: 3px
+		color: #097bf2
+		+opensans
+		&:hover
+			text-decoration: underline
+	.icon
+		font-size: 12px
+		margin-right: 5px
+		vertical-align: middle
+	.icon-warn
+		color: #f76300
+
 
 // bar
-.bar
+.ok-bar
 	position: fixed
 	top: -100px
 	left: 0

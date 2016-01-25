@@ -17,6 +17,9 @@
 			box-shadow: 0px 1px 0px 0px #dee1e7
 			&:first-child
 				background: #FFF
+	&.is-staff
+		.menu
+			margin-left: 5px
 	&__in
 		padding: 15px 0
 		+clr
@@ -95,6 +98,8 @@
 		margin-right: 5px
 		background-size: 16px 16px
 		vertical-align: middle
+	.icon-logo-short
+		font-size: 14px
 
 .menu
 	float: left
@@ -243,6 +248,12 @@
 		opacity: 1
 		visibility: visible
 		z-index: 11
+	&.is-staff
+		+clr
+		.suggest__head
+			float: right
+		.suggest__menu
+			margin-top: 0
 	&__head
 		+clr
 		&.is-border
@@ -319,6 +330,9 @@
 		width: 50px
 		height: 50px
 		background-size: 50px 50px
+		vertical-align: middle
+	.icon
+		font-size: 50px
 		vertical-align: middle
 	.icon-plus
 		font-size: 15px
