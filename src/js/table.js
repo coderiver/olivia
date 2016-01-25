@@ -78,7 +78,7 @@ $(document).ready(function() {
 					var rowHeight = parentWrap.find('.js-link').eq(index).outerHeight();
 					$(this).find('td').css('height', rowHeight);
 				});
-			}, 0);
+			}, 100);
 		}
 
 		// add/remove columns

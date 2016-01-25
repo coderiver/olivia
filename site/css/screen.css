@@ -249,9 +249,10 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .dropdown.is-active { z-index: 1; }
 .dropdown.is-active .dropdown__bl, .dropdown.is-active .dropdown__item { border-bottom-color: transparent; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
 .dropdown.is-active .dropdown__bl:before { width: 0px; height: 0px; border-style: solid; border-width: 0 4.5px 6px 4.5px; border-color: transparent transparent #6c757a transparent; }
+.dropdown.is-active .dropdown__bl:after { display: block; }
 .dropdown.is-active .dropdown__item { background: #FFF; }
 .dropdown.is-active .dropdown__item:before { width: 0px; height: 0px; border-style: solid; border-width: 0 4.5px 5px 4.5px; border-color: transparent transparent #6c757a transparent; }
-.dropdown.is-active .dropdown__list { display: block; z-index: -1; }
+.dropdown.is-active .dropdown__list { display: block; }
 .dropdown.is-filter { margin: 0 4px; vertical-align: middle; }
 .dropdown.is-filter.is-active { z-index: 2; }
 .dropdown.is-filter.is-active .dropdown__list { top: 96%; }
@@ -270,7 +271,9 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .dropdown__item:before { content: ""; position: absolute; top: 50%; right: 10px; margin-top: -3px; width: 0px; height: 0px; border-style: solid; border-width: 5px 4.5px 0 4.5px; border-color: #6c757a transparent transparent transparent; }
 .dropdown__item.is-chosen { color: #282828; }
 .dropdown__bl { position: relative; display: inline-block; width: 30px; height: 27px; border: 1px solid #e4e4e4; border-radius: 4px; cursor: pointer; background: #FFF; }
-.dropdown__bl:before { content: ""; position: absolute; top: 50%; left: 50%; margin: -3px 0 0 -4px; width: 0px; height: 0px; border-style: solid; border-width: 6px 4.5px 0 4.5px; border-color: #d8d8d8 transparent transparent transparent; }
+.dropdown__bl:before, .dropdown__bl:after { content: ""; position: absolute; }
+.dropdown__bl:before { top: 50%; left: 50%; margin: -3px 0 0 -4px; width: 0px; height: 0px; border-style: solid; border-width: 6px 4.5px 0 4.5px; border-color: #d8d8d8 transparent transparent transparent; }
+.dropdown__bl:after { display: none; left: 0; right: 0; bottom: -1px; border-bottom: 1px solid #fff; z-index: 1; }
 .dropdown__list { display: none; position: absolute; top: 26px; right: 0; min-width: 160px; padding: 10px 0; text-align: left; font-size: 13px; background: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); border-radius: 0 0 4px 4px; border: 1px solid #dce0e7; white-space: nowrap; }
 .dropdown__list li { position: relative; }
 .dropdown__list li:hover a:before { width: 0px; height: 0px; border-style: solid; border-width: 4.5px 0 4.5px 6px; border-color: transparent transparent transparent #6c757a; }
@@ -283,9 +286,9 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .dropdown__check:first-child { padding-top: 5px; }
 .dropdown__check:last-child { padding-bottom: 5px; }
 .dropdown__more { margin-top: 2px; padding-top: 5px; border-top: 1px solid #e5e5e5; }
-.dropdown__more > a { position: relative; }
-.dropdown__more > a:before { content: ""; position: absolute; top: 50%; left: 100%; margin: -4px 0 0 -14px; transition: 0.3s; width: 0px; height: 0px; border-style: solid; border-width: 4.5px 0 4.5px 6px; border-color: transparent transparent transparent #d8d8d8; }
 .dropdown__more .dropdown__list { position: absolute; right: 99%; top: -1px; opacity: 0; visibility: hidden; white-space: normal; }
+.dropdown__more-link { position: relative; }
+.dropdown__more-link:before { content: ""; position: absolute; top: 50%; left: 100%; margin: -4px 0 0 -14px; transition: 0.3s; width: 0px; height: 0px; border-style: solid; border-width: 4.5px 0 4.5px 6px; border-color: transparent transparent transparent #d8d8d8; }
 .dropdown__search { display: block; padding: 5px 14px; }
 
 .highlight { display: inline-block; padding: 0 1px; background: #FFE8A1; font-family: "opensans-semibold", Arial, sans-serif; }
@@ -665,6 +668,7 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .tablewrap__in.is-filtered .sidedrop:before { display: none; content: ""; position: absolute; top: 0; left: 0; bottom: 0; border-left: 1px solid #dce0e7; }
 .tablewrap__in.is-filtered .sidedrop:after { height: 14px; border-top: 1px solid #dce0e7; }
 .tablewrap__in.is-filtered .sidedrop.is-scrollbar:before { display: block; }
+.tablewrap__in.no-sidedrop .scrollbar { margin-right: 0; }
 
 .filters { position: relative; padding: 0 10px 10px 20px; margin: 0 -4px; *zoom: 1; }
 .filters:after { content: " "; display: table; clear: both; }
@@ -782,8 +786,10 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .scrollbar { position: relative; padding-bottom: 13px; margin-right: 50px; overflow: hidden; transition: 0.3s ease; }
 .scrollbar.is-sidebar { margin-left: 240px; }
 .scrollbar .table { min-width: 1000px; margin-bottom: 0; background: #FFF; }
+.scrollbar .table__head { opacity: 0; }
 .scrollbar .table td { height: 38px; padding: 9px 8.5px 8px; }
 .scrollbar .table td:first-child { padding-left: 17px; }
+.scrollbar .fake-header .table__head { opacity: 1; }
 .scrollbar.ps-in-scrolling.ps-x .ps-scrollbar-x:before, .scrollbar.ps-in-scrolling.ps-x .ps-scrollbar-x:after { background: #eee; }
 .scrollbar .ps-scrollbar-x-rail { width: 100% !important; bottom: 0 !important; height: 14px; background: #f7f8f9; opacity: 1; border-radius: 0; border: 1px solid #dce0e7; border-width: 1px 0 1px 0; }
 .scrollbar .ps-scrollbar-x-rail:hover .ps-scrollbar-x:before, .scrollbar .ps-scrollbar-x-rail:hover .ps-scrollbar-x:after { background: #eee; }
@@ -816,7 +822,7 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .show-more { padding: 11px 17px; font-size: 13px; border-bottom: 1px solid #efefef; }
 .show-more a { display: inline-block; vertical-align: middle; color: #097bf2; }
 
-.fake-header { position: absolute; top: 0; left: 0; right: 0; z-index: 1; }
+.fake-header { position: absolute; top: 0; left: 0; right: 0; }
 
 .sum { margin: 10px 0; text-align: right; font-size: 0; }
 .sum__bl { display: inline-block; margin: 0 10px; font-size: 14px; color: #6c757a; vertical-align: middle; }

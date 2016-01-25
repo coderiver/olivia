@@ -532,13 +532,15 @@ input
 		.dropdown__bl
 			&:before
 				+arr(9, 6, #6c757a, t)
+			&:after
+				display: block
 		.dropdown__item
 			background: #FFF
 			&:before
 				+arr(9, 5, #6c757a, t)
 		.dropdown__list
 			display: block
-			z-index: -1
+			// z-index: -1
 	&.is-filter
 		margin: 0 4px
 		vertical-align: middle
@@ -617,13 +619,22 @@ input
 		border-radius: 4px
 		cursor: pointer
 		background: #FFF
-		&:before
+		&:before,
+		&:after
 			content: ""
 			position: absolute
+		&:before
 			top: 50%
 			left: 50%
 			margin: -3px 0 0 -4px
 			+arr(9, 6, #d8d8d8, b)
+		&:after
+			display: none
+			left: 0
+			right: 0
+			bottom: -1px
+			border-bottom: 1px solid #fff
+			z-index: 1
 	&__list
 		display: none
 		position: absolute
@@ -672,16 +683,6 @@ input
 		margin-top: 2px
 		padding-top: 5px
 		border-top: 1px solid #e5e5e5
-		> a
-			position: relative
-			&:before
-				content: ""
-				position: absolute
-				top: 50%
-				left: 100%
-				margin: -4px 0 0 -14px
-				+tr(0.3s)
-				+arr(6, 9, #d8d8d8, r)
 		.dropdown__list
 			position: absolute
 			right: 99%
@@ -689,6 +690,16 @@ input
 			opacity: 0
 			visibility: hidden
 			white-space: normal
+	&__more-link
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 100%
+			margin: -4px 0 0 -14px
+			+tr(0.3s)
+			+arr(6, 9, #d8d8d8, r)
 	&__search
 		display: block
 		padding: 5px 14px

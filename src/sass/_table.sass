@@ -32,6 +32,9 @@
 				&.is-scrollbar
 					&:before
 						display: block
+		&.no-sidedrop
+			.scrollbar
+				margin-right: 0
 
 
 // filters
@@ -463,11 +466,16 @@
 		min-width: 1000px
 		margin-bottom: 0
 		background: #FFF
+		&__head
+			opacity: 0
 		td
 			height: 38px
 			padding: 9px 8.5px 8px
 			&:first-child
 				padding-left: 17px
+	.fake-header
+		.table__head
+			opacity: 1
 	// .mCSB_horizontal.mCSB_inside > .mCSB_container
 	// 	margin-bottom: 12px
 	// .mCustomScrollBox
@@ -645,7 +653,6 @@
 	top: 0
 	left: 0
 	right: 0
-	z-index: 1
 
 // sum
 .sum
