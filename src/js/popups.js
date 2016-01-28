@@ -50,4 +50,6 @@ $(document).ready(function() {
 		$(this).parents('.js-bar').removeClass('is-active');
 	});
 
+	$('.js-popup-scroll').perfectScrollbar();
+
 });

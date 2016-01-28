@@ -58,6 +58,8 @@
 		line-height: 36px
 	&__body
 		padding: 15px 20px 20px
+		&.no-b-pad
+			padding-bottom: 0
 	&__label
 		display: block
 		margin: 8px 0
@@ -81,6 +83,8 @@
 	&__bl
 		margin: 10px 0
 		+clr
+		.popup__label
+			margin: 0
 		.dropdown
 			float: right
 	&__el
@@ -104,6 +108,12 @@
 	&__num
 		margin-right: 5px
 		+rmono
+	&__gray
+		font-size: 13px
+		color: #6c757a
+	&__scroll
+		position: relative
+		height: 430px
 	.txt-bold
 		+opensans-sb
 	.icon-close
@@ -135,3 +145,47 @@
 		margin: 0
 	.textarea
 		height: 100px
+	.ps-container
+		> .ps-scrollbar-y-rail
+			width: 6px
+			> .ps-scrollbar-y
+				width: 6px
+
+.folder-list
+	&__option
+		border-bottom: 1px solid #efefef
+		&:first-child
+			border-top: 1px solid #efefef
+		&:last-child
+			border-bottom-color: transparent
+		&:hover
+			background: #F7F8F9
+		a
+			display: block
+			padding: 9px 20px
+			color: #282828
+			+clr
+	&__el
+		font-size: 0
+		overflow: hidden
+		white-space: nowrap
+		span, .icon, .svg-ico
+			display: inline-block
+			font-size: 13px
+			line-height: 1.2
+			vertical-align: middle
+		span
+			max-width: calc(100% - 45px)
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
+		.icon, .svg-ico
+			margin-right: 5px
+	&__ico
+		float: right
+		margin-top: 2px
+		font-size: 14px
+		color: #d8d8d8
+	.icon-folder
+		margin-right: 13px
+		font-size: 16px
