@@ -85,6 +85,13 @@ $(document).ready(function() {
 		$(this).siblings('.js-dropdown').removeClass('is-active');
 	});
 
+	// change dropdown options
+	$('.js-dropdown.is-form').on('click', '.js-inner a', function(e) {
+		e.preventDefault();
+		var text = $(this).html();
+		$(this).parents('.js-dropdown').removeClass('is-active').find('.dropdown__item').text(text);
+	});
+
 	$('body').on('click', function(evt) {
 		// hide dropdown
 		if ( $(evt.target).parents('.js-dropdown').length === 0 ) {

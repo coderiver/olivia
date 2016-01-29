@@ -178,7 +178,8 @@ $(document).ready(function() {
 
 					parentWrap.each(function() {
 						var	tableTop = $(this).find('.js-scrollbar').offset().top,
-							tableHeight = $(this).find('.js-scrollbar').outerHeight() - 114; // TODO count children height
+							childrenHeight = $(this).find('.js-link').outerHeight() * 4,
+							tableHeight = $(this).find('.js-scrollbar').outerHeight() - childrenHeight;
 
 						if ( scrollPos > tableTop ) {
 							$(this).find('.js-fake-head').css('top', scrollPos - tableTop);

@@ -552,7 +552,6 @@ input
 				display: block
 		.dropdown__list
 			display: block
-			// z-index: -1
 	&.is-filter
 		margin: 0 4px
 		vertical-align: middle
@@ -567,6 +566,8 @@ input
 		max-width: 340px
 		.dropdown__list
 			width: 100%
+			top: 100%
+			margin-top: -1px
 	&.is-small
 		width: 100%
 		max-width: 200px
@@ -583,6 +584,8 @@ input
 				right: auto
 				left: 100%
 				margin-left: 5px
+			&:after
+				display: none
 		.dropdown__list
 			top: 18px
 			left: -15px

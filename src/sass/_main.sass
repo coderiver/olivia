@@ -122,7 +122,7 @@
 		color: #282828
 	&__folder
 		position: relative
-		margin-bottom: 30px
+		margin: 28px 0 30px
 		line-height: 1
 		.icon-folder
 			position: relative
@@ -153,7 +153,6 @@
 		margin-top: 10px
 		font-size: 0
 	&__link
-		position: relative
 		display: inline-block
 		text-decoration: underline
 		font-size: 13px
@@ -161,8 +160,12 @@
 		vertical-align: middle
 		&:first-child
 			margin-right: 28px
+		&:only-child
+			margin-right: 0
 		&:hover
 			text-decoration: none
+	&__linebl
+		position: relative
 	.icon-folder
 		font-size: 122px
 	.icon-plus
@@ -246,23 +249,10 @@
 			margin: -8px 0 0 20px
 			color: #bcc6cc
 			@extend %icon
-	&__dollar
-		position: absolute
-		top: 10px
-		left: 50%
-		margin-left: -15px
-		color: #2caf24
-		font-size: 67px
-		line-height: 1
-		+handwrite
-		&:first-child
-			font-size: 35px
-			left: 15px
-		&:last-child
-			top: 0
-			left: initial
-			right: 0
-			font-size: 40px
+	.paid-ico
+		position: relative
+		top: -10px
+		left: -8px
 
 .arrow-block
 	position: absolute
@@ -390,8 +380,22 @@
 	&__num
 		font-size: 13px
 		color: #6c757a
+		+clr
+		li
+			position: relative
+			float: left
+			&:after
+				content: "/"
+				display: inline-block
+				margin: 0 5px
+				vertical-align: middle
+			&:last-child
+				&:after
+					display: none
 		a
 			color: #097bf2
+			&:hover
+				text-decoration: underline
 	&__in
 		margin-top: 30px
 		h2

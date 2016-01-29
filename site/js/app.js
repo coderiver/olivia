@@ -241,7 +241,8 @@ $(document).ready(function() {
 
 					parentWrap.each(function() {
 						var	tableTop = $(this).find('.js-scrollbar').offset().top,
-							tableHeight = $(this).find('.js-scrollbar').outerHeight() - 114; // TODO count children height
+							childrenHeight = $(this).find('.js-link').outerHeight() * 4,
+							tableHeight = $(this).find('.js-scrollbar').outerHeight() - childrenHeight;
 
 						if ( scrollPos > tableTop ) {
 							$(this).find('.js-fake-head').css('top', scrollPos - tableTop);
@@ -425,6 +426,13 @@ $(document).ready(function() {
 
 		// hide one dropdown if another is opened, and they both have common parent
 		$(this).siblings('.js-dropdown').removeClass('is-active');
+	});
+
+	// change dropdown options
+	$('.js-dropdown.is-form').on('click', '.js-inner a', function(e) {
+		e.preventDefault();
+		var text = $(this).html();
+		$(this).parents('.js-dropdown').removeClass('is-active').find('.dropdown__item').text(text);
 	});
 
 	$('body').on('click', function(evt) {
