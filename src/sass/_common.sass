@@ -273,9 +273,15 @@ input
 	resize: none
 
 .errorlist
-	li
-		color: #e0411b
-		+opensans-sb
+	color: #e0411b
+	+opensans-sb
+	&.is-border
+		padding: 5px 0
+		color: #E22B1B
+		background: #FEE
+		border: 1px solid #FFC0C8
+		li
+			padding: 5px 14px
 
 .txt-center
 	text-align: center
@@ -732,6 +738,7 @@ input
 	display: inline-block
 	padding: 0 1px
 	background: #FFE8A1
+	vertical-align: bottom
 	+opensans-sb
 
 .description

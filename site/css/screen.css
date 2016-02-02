@@ -178,7 +178,9 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 
 .textarea { resize: none; }
 
-.errorlist li { color: #e0411b; font-family: "opensans-semibold", Arial, sans-serif; }
+.errorlist { color: #e0411b; font-family: "opensans-semibold", Arial, sans-serif; }
+.errorlist.is-border { padding: 5px 0; color: #E22B1B; background: #FEE; border: 1px solid #FFC0C8; }
+.errorlist.is-border li { padding: 5px 14px; }
 
 .txt-center { text-align: center; }
 
@@ -303,7 +305,7 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .dropdown__more-link:before { content: ""; position: absolute; top: 50%; left: 100%; margin: -4px 0 0 -14px; transition: 0.3s; width: 0px; height: 0px; border-style: solid; border-width: 4.5px 0 4.5px 6px; border-color: transparent transparent transparent #d8d8d8; }
 .dropdown__search { display: block; padding: 5px 14px; }
 
-.highlight { display: inline-block; padding: 0 1px; background: #FFE8A1; font-family: "opensans-semibold", Arial, sans-serif; }
+.highlight { display: inline-block; padding: 0 1px; background: #FFE8A1; vertical-align: bottom; font-family: "opensans-semibold", Arial, sans-serif; }
 
 .description { position: relative; font-size: 0; margin-bottom: 6px; }
 .description:only-child { margin: 0; }
@@ -359,7 +361,7 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y { background-color: #999; }
 
 .header { min-height: 153px; background-color: #474e52; }
-.header.is-form { min-height: auto; position: fixed; min-width: 1000px; top: 0; left: 0; right: 0; background: #FFF; z-index: 9; border-bottom: 1px solid #dee1e7; }
+.header.is-form { min-height: auto; position: fixed; min-width: 1000px; top: 0; left: 0; right: 0; background: #FFF; z-index: 7; border-bottom: 1px solid #dee1e7; }
 .header.is-form .header__in { position: relative; padding: 0; box-shadow: 0px 1px 0px 0px #dee1e7; }
 .header.is-form .header__in:first-child { background: #FFF; }
 .header.is-staff .menu { margin-left: 5px; }
@@ -475,7 +477,6 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .results.is-active { opacity: 1; visibility: visible; }
 .results__bl { display: block; padding: 10px; color: #000; border-bottom: 1px solid #efefef; }
 .results .description { margin-bottom: 5px; color: #097BF2; }
-.results .icon { font-size: 17px; }
 .results .txt-center { text-align: center; }
 
 .reaction { margin: 15px 0; font-size: 0; }
@@ -488,6 +489,7 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .main { margin-top: -90px; }
 .main__in { min-height: 400px; background: #fff; border: 1px solid #dce0e7; border-radius: 6px; }
 .main.is-form { margin-top: 0; margin-bottom: 30px; padding-top: 110px; }
+.main.is-form .table { margin-bottom: 80px; }
 
 .upper { position: relative; min-height: 90px; margin-bottom: 20px; padding: 18px 18px 8px; background: #f7f8f9; border-bottom: 1px solid #dce0e7; border-radius: 6px 6px 0 0; }
 .upper.is-custom { min-height: 60px; font-size: 0; *zoom: 1; }
@@ -620,8 +622,7 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .comments__el { overflow: hidden; }
 .comments__in { margin-bottom: 5px; *zoom: 1; }
 .comments__in:after { content: " "; display: table; clear: both; }
-.comments__name { float: left; color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
-.comments__name span { display: inline-block; vertical-align: middle; }
+.comments__name { float: left; max-width: 80%; color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
 .comments__date { float: right; color: #8c99a0; }
 .comments__autorespond { margin-bottom: 10px; }
 .comments__autorespond.is-bold { color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
@@ -635,6 +636,7 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .comments__archive { float: right; margin-top: 5px; font-size: 13px; color: #738496; }
 .comments__archive:hover { text-decoration: underline; }
 .comments .tooltip { float: left; margin-bottom: 0; }
+.comments .status { color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
 
 .report { margin: 15px 0; padding: 13px 65px 15px 17px; font-size: 13px; color: #282828; background: #FFF6E6; border: 1px solid #FFC55E; *zoom: 1; }
 .report:after { content: " "; display: table; clear: both; }
@@ -687,12 +689,13 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .pagination__list a.is-active, .pagination__list a:hover { color: #000; }
 .pagination .btn { position: relative; display: inline-block; vertical-align: middle; }
 
-.settings { max-width: 340px; margin: 40px auto 0; }
+.settings { max-width: 340px; margin: 40px auto 60px; }
 .settings .tooltip { margin-bottom: 20px; font-size: 18px; font-family: "opensans-semibold", Arial, sans-serif; }
 .settings .form { margin-top: 0; }
 
 .tablewrap { margin: 40px 0; }
 .tablewrap.no-bottom-margin { margin-bottom: 0; }
+.tablewrap.s-bottom-margin { margin-bottom: 15px; }
 .tablewrap__in { position: relative; }
 .tablewrap__in.is-filtered .scrollbar { min-height: 513px; }
 .tablewrap__in.is-filtered .scrollbar:before { content: ""; position: absolute; left: 0; bottom: 13px; width: 100%; border-bottom: 1px solid #dce0e7; }
@@ -743,6 +746,7 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .table__text.is-info { color: #f76300; }
 .table span.table__text { display: inline-block; }
 .table .table__head { background: #f7f8f9; text-align: left; border-top: 1px solid #efefef; border-bottom: 1px solid #efefef; }
+.table .table__head.is-full-border { border: 1px solid #efefef; }
 .table .table__head th { position: relative; height: 38px; text-align: left; padding: 0 10px; font-size: 13px; font-weight: normal; border-right: 1px solid #dce0e7; cursor: pointer; vertical-align: middle; font-family: "opensans-semibold", Arial, sans-serif; }
 .table .table__head th:before { display: none; content: ""; position: absolute; top: 19px; right: 10px; margin-top: -2px; width: 0px; height: 0px; border-style: solid; border-width: 4px 3.5px 0 3.5px; border-color: #6c757a transparent transparent transparent; }
 .table .table__head th:hover { background: rgba(0, 0, 0, 0.05); }
@@ -804,12 +808,12 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .sidebar__option.is-multi .icon, .sidebar__option.is-multi .svg-ico { top: 6px; margin-top: 0; }
 .sidebar__option.is-multi span { display: block; white-space: normal; }
 .sidebar__sublist { display: none; padding: 5px 20px; }
-.sidebar__bl { padding: 10px 20px; }
+.sidebar__bl { padding: 10px 14px; }
 .sidebar__link { display: block; margin-bottom: 2px; font-size: 12px; color: #6c757a; font-family: "opensans-semibold", Arial, sans-serif; }
 .sidebar__link:hover { text-decoration: underline; }
-.sidebar__filter { margin: 34px 0 10px; }
+.sidebar__filter { margin: 14px 0 10px; }
 .sidebar__filter .sidebar__ttl { margin: 0; }
-.sidebar__rel { padding: 0 20px; }
+.sidebar__rel { padding: 0 14px; color: #6c757a; }
 .sidebar .tabs { margin: 5px auto; width: 92%; }
 .sidebar .tabs__el:first-child { width: 20%; }
 .sidebar .ps-scrollbar-y-rail { right: 0; width: 3px; }
@@ -860,8 +864,9 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .sum__bl { display: inline-block; margin: 0 10px; font-size: 14px; color: #6c757a; vertical-align: middle; }
 .sum__bl span { color: #282828; }
 
-.form { margin: 45px 0 80px; font-size: 13px; color: #6c757a; *zoom: 1; }
+.form { margin: 45px 0 5px; font-size: 13px; color: #6c757a; *zoom: 1; }
 .form:after { content: " "; display: table; clear: both; }
+.form:only-child { margin-bottom: 60px; }
 .form.is-full-w .form__bl { padding: 0; }
 .form__ttl { margin-bottom: 20px; font-size: 18px; color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
 .form__ttl.s-bottom-margin { margin-bottom: 5px; }
@@ -903,6 +908,7 @@ input.is-error::-webkit-input-placeholder, .is-error.textarea::-webkit-input-pla
 .newpost__in { *zoom: 1; }
 .newpost__in:after { content: " "; display: table; clear: both; }
 .newpost__bl { margin-bottom: 17px; color: #282828; }
+.newpost__bl.is-old { color: #6c757a; }
 .newpost__bl a { color: #097bf2; }
 .newpost__bl a:hover { text-decoration: underline; }
 .newpost__link { margin-left: 10px; float: right; color: #097bf2; }

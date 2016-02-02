@@ -1,9 +1,11 @@
 // forms
 .form
-	margin: 45px 0 80px
+	margin: 45px 0 5px
 	font-size: 13px
 	color: #6c757a
 	+clr
+	&:only-child
+		margin-bottom: 60px
 	&.is-full-w
 		.form__bl
 			padding: 0
@@ -143,6 +145,8 @@
 	&__bl
 		margin-bottom: 17px
 		color: #282828
+		&.is-old
+			color: #6c757a
 		a
 			color: #097bf2
 			&:hover

@@ -9,6 +9,8 @@
 		margin-top: 0
 		margin-bottom: 30px
 		padding-top: 110px
+		.table
+			margin-bottom: 80px
 
 .upper
 	position: relative
@@ -482,11 +484,9 @@
 		+clr
 	&__name
 		float: left
+		max-width: 80%
 		color: #282828
 		+opensans-sb
-		span
-			display: inline-block
-			vertical-align: middle
 	&__date
 		float: right
 		color: #8c99a0
@@ -519,6 +519,9 @@
 	.tooltip
 		float: left
 		margin-bottom: 0
+	.status
+		color: #282828
+		+opensans-sb
 
 
 // report
@@ -696,7 +699,7 @@
 // settings
 .settings
 	max-width: 340px
-	margin: 40px auto 0
+	margin: 40px auto 60px
 	.tooltip
 		margin-bottom: 20px
 		font-size: 18px
