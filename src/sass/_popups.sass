@@ -21,6 +21,7 @@
 
 // popup style
 .popup
+	position: relative
 	display: none
 	width: 460px
 	text-align: left
@@ -73,6 +74,7 @@
 		margin-top: 60px
 		text-align: right
 		font-size: 0
+		transition: opacity 0.2s, visibility 0.2s
 		.btn
 			margin-left: 8px
 			vertical-align: middle
@@ -80,6 +82,18 @@
 			margin-top: 40px
 		&.xs-margin
 			margin-top: 15px
+		&.is-absolute
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			margin: 0
+			background: #FFF
+			padding: 15px 20px
+			border-top: 1px solid #dce0e7
+		&.is-hidden
+			visibility: hidden
+			opacity: 0
 	&__bl
 		margin: 10px 0
 		+clr
@@ -100,6 +114,29 @@
 		.icon
 			font-size: 16px
 			vertical-align: -3px
+	&__choose
+		margin: 13px 0 21px
+		padding: 0 5px
+		font-size: 0
+		+clr
+		.popup__el
+			float: right
+			color: #097bf2
+			&:hover
+				text-decoration: underline
+			&:first-child
+				float: left
+			span
+				font-size: 14px
+		.svg-ico
+			margin-right: 14px
+			width: 56px
+			height: 56px
+			background-size: 56px 56px
+			vertical-align: middle
+		.icon
+			margin-right: 16px
+			vertical-align: middle
 	&__more
 		float: right
 		color: #097bf2
@@ -115,6 +152,11 @@
 		position: relative
 		height: 430px
 		overflow: hidden
+	&__link
+		display: inline-block
+		color: #097bf2
+		&:hover
+			text-decoration: underline
 	.txt-bold
 		+opensans-sb
 	.icon-close
@@ -144,6 +186,14 @@
 			padding: 13px 15px
 	.form
 		margin: 0
+	.dropdown
+		display: block
+	.dropdown__list
+		width: 100%
+		margin-top: -1px
+		white-space: normal
+		a
+			max-width: initial
 	.textarea
 		height: 100px
 	.ps-container
@@ -152,7 +202,9 @@
 			> .ps-scrollbar-y
 				width: 6px
 
-.folder-list
+.popup-list
+	&.is-hidden
+		display: none
 	&__option
 		border-bottom: 1px solid #efefef
 		&:first-child
@@ -170,23 +222,38 @@
 		font-size: 0
 		overflow: hidden
 		white-space: nowrap
-		span, .icon, .svg-ico
+		.icon, .svg-ico
 			display: inline-block
+			margin-right: 5px
 			font-size: 13px
 			line-height: 1.2
 			vertical-align: middle
 		span
-			max-width: calc(100% - 45px)
-			overflow: hidden
-			text-overflow: ellipsis
-			white-space: nowrap
-		.icon, .svg-ico
-			margin-right: 5px
+			vertical-align: middle
+	&__span
+		display: inline-block
+		max-width: calc(100% - 45px)
+		font-size: 13px
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+		line-height: 1.2
 	&__ico
 		float: right
 		margin-top: 2px
 		font-size: 14px
 		color: #d8d8d8
+	.icon
+		margin-right: 8px
+		font-size: 17px
 	.icon-folder
 		margin-right: 13px
 		font-size: 16px
+	.icon-square-arr
+		font-size: 14px
+	.check input:checked + .check__span
+		+opensans-sb
+		&:before
+			border-color: #6C757A
+	.check__span
+		display: block

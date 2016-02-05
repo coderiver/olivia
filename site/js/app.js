@@ -58,7 +58,44 @@ $(document).ready(function() {
 		$(this).parents('.js-bar').removeClass('is-active');
 	});
 
-	$('.js-popup-scroll').perfectScrollbar();
+	// popup scroll
+	function popupScrollBar() {
+		var popupScrollBl = $('.js-popup-scroll'),
+			list = popupScrollBl.find('.js-popup-list'),
+			input = popupScrollBl.find('.js-popup-search'),
+			checkbox = popupScrollBl.find('input[type="checkbox"]'),
+			buttons = $('.js-popup-btn'),
+			buttonsHeight = 0;
+
+		popupScrollBl.perfectScrollbar();
+
+		if ( list.hasClass('is-hidden') ) {
+			popupScrollBl.css('height', 'auto');
+		}
+
+		input.on('keydown', function() {
+			if ( list.hasClass('is-hidden') && input.val() ) {
+				list.removeClass('is-hidden');
+			}
+
+			popupScrollBl.css('height', '430px').perfectScrollbar('update');
+		});
+
+		checkbox.on('change', function() {
+			if ( checkbox.is(':checked') ) {
+				buttons.removeClass('is-hidden');
+				if ( buttonsHeight === 0 ) {
+					buttonsHeight = buttons.outerHeight();
+				}
+				popupScrollBl.css('padding-bottom', buttonsHeight + 'px').perfectScrollbar('update');
+			} else {
+				buttons.addClass('is-hidden');
+				popupScrollBl.css('padding-bottom', '0').perfectScrollbar('update');
+			}
+		});
+	}
+
+	popupScrollBar();
 
 });
 $(document).ready(function() {
@@ -435,6 +472,10 @@ $(document).ready(function() {
 		$(this).parents('.js-dropdown').removeClass('is-active').find('.dropdown__item').text(text);
 	});
 
+	$('.js-dropdown.is-disabled').click(function(evt) {
+		evt.stopPropagation();
+	});
+
 	$('body').on('click', function(evt) {
 		// hide dropdown
 		if ( $(evt.target).parents('.js-dropdown').length === 0 ) {
@@ -478,17 +519,17 @@ $(document).ready(function() {
 	});
 
 	// search
-	$('.js-search input').on('focus', function(){
+	$('.js-search input').on('focus', function() {
 		$(this).parent().addClass('is-active');
-	}).on('blur', function(){
+	}).on('blur', function() {
 		$(this).parent().removeClass('is-active');
 	});
 
 	// search results
-	$( '.js-search input' ).on( 'keydown' , function() {
+	$( '.js-search input' ).on('keydown', function() {
 		if (!$('.js-search-results').hasClass('is-active')) {
 			$('.js-search-results').addClass('is-active');
-		};
+		}
 	});
 
 });
