@@ -604,6 +604,14 @@ input
 				left: 100%
 			&:after
 				display: none
+			&.is-img
+				width: 18px
+				height: 18px
+				padding-right: 0
+				border-radius: 50%
+				+cover
+				&:before
+					display: none
 		.dropdown__list
 			left: -15px
 			margin-top: 5px
@@ -654,13 +662,6 @@ input
 			z-index: 1
 		&.is-chosen
 			color: #282828
-		&.is-img
-			width: 18px
-			height: 18px
-			border-radius: 50%
-			+cover
-			&:before
-				display: none
 	&__bl
 		position: relative
 		display: inline-block
