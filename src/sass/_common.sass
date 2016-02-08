@@ -654,6 +654,13 @@ input
 			z-index: 1
 		&.is-chosen
 			color: #282828
+		&.is-img
+			width: 18px
+			height: 18px
+			border-radius: 50%
+			+cover
+			&:before
+				display: none
 	&__bl
 		position: relative
 		display: inline-block
@@ -748,6 +755,9 @@ input
 	&__search
 		display: block
 		padding: 5px 14px
+	hr
+		border: 0
+		border-bottom: 1px solid #DCE0E7
 
 .highlight
 	display: inline-block

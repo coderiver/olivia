@@ -290,6 +290,8 @@ input.is-error::-webkit-input-placeholder { color: #6c757a; }
 .dropdown__item:before { top: 50%; right: 10px; margin-top: -3px; width: 0px; height: 0px; border-style: solid; border-width: 5px 4.5px 0 4.5px; border-color: #6c757a transparent transparent transparent; }
 .dropdown__item:after { display: none; left: 0; right: 0; bottom: -1px; border-bottom: 1px solid #fff; z-index: 1; }
 .dropdown__item.is-chosen { color: #282828; }
+.dropdown__item.is-img { width: 18px; height: 18px; border-radius: 50%; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.dropdown__item.is-img:before { display: none; }
 .dropdown__bl { position: relative; display: inline-block; width: 30px; height: 27px; border: 1px solid #e4e4e4; border-radius: 4px; cursor: pointer; background: #FFF; }
 .dropdown__bl:before, .dropdown__bl:after { content: ""; position: absolute; }
 .dropdown__bl:before { top: 50%; left: 50%; margin: -3px 0 0 -4px; width: 0px; height: 0px; border-style: solid; border-width: 6px 4.5px 0 4.5px; border-color: #d8d8d8 transparent transparent transparent; }
@@ -310,6 +312,7 @@ input.is-error::-webkit-input-placeholder { color: #6c757a; }
 .dropdown__more-link { position: relative; }
 .dropdown__more-link:before { content: ""; position: absolute; top: 50%; left: 100%; margin: -4px 0 0 -14px; transition: 0.3s; width: 0px; height: 0px; border-style: solid; border-width: 4.5px 0 4.5px 6px; border-color: transparent transparent transparent #d8d8d8; }
 .dropdown__search { display: block; padding: 5px 14px; }
+.dropdown hr { border: 0; border-bottom: 1px solid #DCE0E7; }
 
 .highlight { display: inline-block; padding: 0 1px; background: #FFE8A1; vertical-align: bottom; font-family: "opensans-semibold", Arial, sans-serif; }
 
@@ -373,7 +376,7 @@ input.is-error::-webkit-input-placeholder { color: #6c757a; }
 .header.is-staff .menu { margin-left: 5px; }
 .header__in { padding: 15px 0; *zoom: 1; }
 .header__in:after { content: " "; display: table; clear: both; }
-.header__logo { float: left; margin-top: 10px; color: #fff; }
+.header__logo { float: left; margin-top: 12px; color: #fff; }
 .header__group { float: left; }
 .header__close { display: inline-block; width: 66px; height: 64px; margin-right: 17px; vertical-align: middle; border-right: 1px solid #DEE1E7; text-align: center; font-size: 0; }
 .header__close:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
@@ -398,7 +401,7 @@ input.is-error::-webkit-input-placeholder { color: #6c757a; }
 
 .menu { float: left; margin: 10px 0 0 20px; *zoom: 1; }
 .menu:after { content: " "; display: table; clear: both; }
-.menu__option { position: relative; float: left; margin: 0 13.5px; }
+.menu__option { position: relative; float: left; margin: 0 13.5px; padding: 2px 0; }
 .menu__option:after { display: none; content: ""; position: absolute; top: 100%; left: 50%; margin: 12px 0 0 -10px; width: 0px; height: 0px; border-style: solid; border-width: 0 10px 12px 10px; border-color: transparent transparent #f7f8f9 transparent; }
 .menu__option.is-active:after { display: block; }
 .menu__option.is-active .menu__link, .menu__option.is-active .dropdown__item { color: #fff; font-family: "opensans-semibold", Arial, sans-serif; }
@@ -418,6 +421,7 @@ input.is-error::-webkit-input-placeholder { color: #6c757a; }
 .helpers__bell .icon { vertical-align: middle; }
 .helpers__message { position: relative; display: inline-block; padding: 2px 5px 3px 4px; font-size: 11px; color: #fff; background: #f76300; line-height: 1; vertical-align: middle; font-family: "opensans-semibold", Arial, sans-serif; }
 .helpers__message:before { content: ""; position: absolute; top: 50%; left: 0; margin: -3px 0 0 -4px; width: 0px; height: 0px; border-style: solid; border-width: 3px 4px 3px 0; border-color: transparent #f76300 transparent transparent; }
+.helpers .dropdown { display: inline-block; margin-right: 15px; vertical-align: middle; }
 
 .search { position: relative; display: inline-block; max-width: 225px; margin-left: 15px; vertical-align: middle; }
 .search.is-active input { background: #fff; color: #000; }
