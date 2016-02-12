@@ -1,7 +1,8 @@
-//= lib/jquery.js
-//= lib/tooltipster.min.js
-//= lib/perfect-scrollbar.jquery.min.js
-//= popups.js
-//= table.js
-//= comments.js
-//= common.js
+//=include lib/jquery.js
+//=include lib/slick.min.js
+//=include lib/tooltipster.min.js
+//=include lib/perfect-scrollbar.jquery.min.js
+//=include popups.js
+//=include table.js
+//=include comments.js
+//=include common.js
