@@ -183,8 +183,6 @@
 	.table__head
 		background: #f7f8f9
 		text-align: left
-		border-top: 1px solid #efefef
-		border-bottom: 1px solid #efefef
 		&.is-full-border
 			border: 1px solid #efefef
 		th
@@ -194,7 +192,8 @@
 			padding: 0 10px
 			font-size: 13px
 			font-weight: normal
-			border-right: 1px solid #dce0e7
+			border: 1px solid #dce0e7
+			border-width: 1px 1px 1px 0
 			cursor: pointer
 			vertical-align: middle
 			+opensans-sb
@@ -316,52 +315,62 @@
 	left: 0
 	bottom: 13px
 	width: 0
-	overflow: hidden
 	background: #fff
-	border-style: solid
-	border-width: 0 1px 1px 0
-	border-color: transparent
-	transition: width 0.3s ease, border-color 0.3s ease
-	&.is-scrollbar
-		bottom: 0
-		.sidebar__content
-			height: calc(100% - 51px)
-		&:before
-			display: block
+	+tr(width 0.3s)
 	&:before
 		display: none
 		content: ""
 		position: absolute
-		bottom: 0
+		top: 100%
 		left: 0
 		right: 0
 		height: 13px
 		background: #f7f8f9
-		border-top: 1px solid #dce0e7
+		border: 1px solid #dce0e7
+		border-width: 0 1px 1px 0
 	&.is-active
 		width: 240px
-		border-color: #dce0e7
+		.sidebar__in
+			border-right-width: 1px
+			opacity: 1
+	&.is-scrollbar
+		&:before
+			display: block
 	&__in
 		width: 240px
 		height: 100%
+		border: 1px solid #dce0e7
+		border-width: 1px 0 1px 0
+		opacity: 0
+		+tr(opacity 0.25s)
+	&__bl
+		overflow: hidden
+		+tr(height 0.3s)
+		&.is-active
+			.sidebar__ttl
+				background: #fff
+				&:before
+					content: "-"
+					font-size: 30px
+					margin-top: -18px
 	&__content
 		position: relative
 		height: calc(100% - 38px)
 		overflow: hidden
 	&__ttl
 		position: relative
-		padding: 0 8px
+		padding: 0 8px 0 24px
 		font-size: 0
 		color: #282828
 		background: #f7f8f9
 		height: 38px
 		line-height: 38px
-		border-top: 1px solid #dce0e7
 		border-bottom: 1px solid #dce0e7
+		cursor: pointer
 		+opensans-sb
 		span
 			display: inline-block
-			max-width: calc(100% - 20px)
+			max-width: 100%
 			font-size: 13px
 			overflow: hidden
 			white-space: nowrap
@@ -369,32 +378,38 @@
 			text-overflow: ellipsis
 		&:before
 			content: "+"
-			display: inline-block
+			position: absolute
+			top: 50%
+			left: 8px
+			margin-top: -9px
 			width: 16px
 			font-size: 18px
 			color: #979797
 			line-height: 1
-			vertical-align: middle
-		&.is-active
-			background: #fff
-			&:before
-				content: "-"
-	&-arr
-		margin-top: -4.5px
-		+arr(6, 9, #6c757a, l)
 	&__option
-		&.is-active a
-			color: #fff
+		position: relative
+		&:hover
+			background: rgba(#828C92, 0.5)
+			a
+				color: #fff
+		&.is-active
 			background: #828C92
+			a
+				color: #fff
+		&.is-title
+			a
+				color: #BCC6CC
+			&:hover
+				background: none
+				a
+					cursor: default
+					color: #BCC6CC
 		a
 			position: relative
 			display: block
 			padding: 4px 20px 4px 33px
 			font-size: 13px
 			color: #6c757a
-			&:hover
-				color: #fff
-				background: rgba(#828C92, 0.5)
 		span
 			display: inline-block
 			max-width: 100%
@@ -413,18 +428,8 @@
 			top: 50%
 			left: 15px
 			margin-top: -6px
-		&.is-multi
-			.icon, .svg-ico
-				top: 6px
-				margin-top: 0
-			span
-				display: block
-				white-space: normal
-	&__sublist
-		display: none
-		padding: 5px 20px
-	&__bl
-		padding: 10px 14px
+	&__list
+		margin: 7px 0
 	&__link
 		display: block
 		margin-bottom: 2px
@@ -446,12 +451,15 @@
 		input
 			padding: 4px 12px
 			font-size: 12px
-	.tabs
-		margin: 5px auto
-		width: 92%
-	.tabs__el
-		&:first-child
-			width: 20%
+	&-task-ico
+		position: absolute
+		top: 50%
+		left: 19px
+		margin-top: -3px
+		width: 6px
+		height: 6px
+		background: #F76300
+		border-radius: 50%
 	.ps-scrollbar-y-rail
 		right: 0
 		width: 3px
@@ -492,8 +500,8 @@
 		background: #f7f8f9
 		opacity: 1
 		border-radius: 0
-		border: 1px solid #dce0e7
-		border-width: 1px 0 1px 0
+		border-top: 1px solid #dce0e7
+		border-bottom: 1px solid #dce0e7
 		&:hover
 			.ps-scrollbar-x
 				&:before, &:after

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Слой_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px"
+	 viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+<title>action add task</title>
+<desc>Created with Sketch.</desc>
+<g id="assets" sketch:type="MSPage">
+	<g id="action-add-task" sketch:type="MSLayerGroup">
+		<g id="Layer_1" sketch:type="MSShapeGroup">
+			<path id="Shape" fill="#FB6D06" d="M46.875,0H3.125C1.398,0,0,1.398,0,3.125v43.75C0,48.602,1.398,50,3.125,50h43.75
+				C48.602,50,50,48.602,50,46.875V37.5v-25V3.125C50,1.398,48.602,0,46.875,0L46.875,0z"/>
+			<polygon id="Path" opacity="0.2451" points="34.077,35 34.077,43 15.989,43 15.989,35 7,35 7,7 43,7 43,35 			"/>
+			<path id="Shape_1_" fill="#FFFFFF" d="M32.808,12.463l-9.436,10.12l-4.324-4.636l-3.986,4.275l8.475,9.018l13.394-14.358
+				L32.808,12.463z"/>
+		</g>
+	</g>
+</g>
+</svg>

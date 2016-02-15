@@ -233,6 +233,7 @@ $(document).ready(function() {
 				$(this).toggleClass('is-active');
 				$(this).parents(parentWrap).find('.js-sidebar').toggleClass('is-active');
 				scrollTable.toggleClass('is-sidebar');
+
 				setTimeout(function() {
 					scrollTable.perfectScrollbar('update');
 					toggleDesignElem();
@@ -241,17 +242,39 @@ $(document).ready(function() {
 			});
 		}
 
-		// sidebar submenu show/hide
-		$('.js-sidebar-option').click(function(evt) {
-			evt.preventDefault();
-			$(this).siblings().removeClass('is-active');
-			$(this).siblings().find(sublist).slideUp();
+		function chooseSidebarOption() {
+			$('.js-sidebar-option').click(function(evt) {
+				evt.preventDefault();
+				$(this).parents('.js-content').find('.js-sidebar-option').removeClass('is-active');
+				$(this).addClass('is-active');
+			});
+		}
 
-			$(this).addClass('is-active');
-			if ( $(this).children(sublist).length > 0 ) {
-				$(this).children(sublist).slideDown();
-			}
-		});
+		function toggleSidebarContent() {
+			var sideBl    	  = $('.js-sidebar-bl'),
+				sideTitle	  = sideBl.find('.js-sidebar-ttl').outerHeight(),
+				sideTitleNum  = sideBl.find('.js-sidebar-ttl').length - 1,
+				allSideTitleH = sideTitle * sideTitleNum,
+				closed		  = {'height': '38px'};
+
+			sideBl.css(closed);
+			sideBl.on('click', '.js-sidebar-ttl', function() {
+				var closestBl = $(this).closest(sideBl);
+
+				// remove active class from siblings
+				closestBl.siblings().removeClass('is-active').css(closed);
+
+				// add active class to current
+				closestBl.toggleClass('is-active');
+
+				// calc height of current
+				if (closestBl.hasClass('is-active')) {
+					closestBl.css('height', 'calc(100% - ' + allSideTitleH + 'px)');
+				} else {
+					closestBl.css(closed);
+				}
+			});
+		}
 
 		// create and scroll fake header
 		parentWrap.each(function() {
@@ -299,6 +322,8 @@ $(document).ready(function() {
 		measureSidedropHeight();
 		measureMoreblock();
 		toggleSidebar();
+		chooseSidebarOption();
+		toggleSidebarContent();
 
 		$(window).resize(function() {
 			scrollTable.perfectScrollbar('update');

@@ -5,34 +5,35 @@
 	font-weight: normal
 	font-style: normal
 
-$icon-archive: "\EA01"
-$icon-arr-right: "\EA02"
-$icon-arr-top: "\EA03"
-$icon-bell: "\EA04"
-$icon-bubble: "\EA05"
-$icon-check: "\EA07"
-$icon-calendar: "\EA06"
-$icon-clip: "\EA09"
-$icon-checked: "\EA08"
-$icon-corp: "\EA0C"
-$icon-close: "\EA0A"
-$icon-customer2: "\EA0D"
-$icon-filter: "\EA0F"
-$icon-folder-checked: "\EA10"
-$icon-comment: "\EA0B"
-$icon-logo-short: "\EA13"
-$icon-delete: "\EA0E"
-$icon-lock: "\EA12"
-$icon-folder: "\EA11"
-$icon-logo: "\EA14"
-$icon-marked: "\EA15"
-$icon-menu: "\EA16"
-$icon-pending: "\EA17"
-$icon-square-arr: "\EA19"
-$icon-zoom: "\EA1C"
-$icon-plus: "\EA18"
-$icon-warn: "\EA1B"
-$icon-upload: "\EA1A"
+$icon-add-task: "\EA01"
+$icon-archive: "\EA02"
+$icon-arr-right: "\EA03"
+$icon-arr-top: "\EA04"
+$icon-bell: "\EA05"
+$icon-bubble: "\EA06"
+$icon-calendar: "\EA07"
+$icon-check: "\EA08"
+$icon-checked: "\EA09"
+$icon-clip: "\EA0A"
+$icon-close: "\EA0B"
+$icon-comment: "\EA0C"
+$icon-corp: "\EA0D"
+$icon-customer2: "\EA0E"
+$icon-delete: "\EA0F"
+$icon-filter: "\EA10"
+$icon-folder-checked: "\EA11"
+$icon-folder: "\EA12"
+$icon-lock: "\EA13"
+$icon-logo-short: "\EA14"
+$icon-logo: "\EA15"
+$icon-marked: "\EA16"
+$icon-menu: "\EA17"
+$icon-pending: "\EA18"
+$icon-plus: "\EA19"
+$icon-square-arr: "\EA1A"
+$icon-upload: "\EA1B"
+$icon-warn: "\EA1C"
+$icon-zoom: "\EA1D"
 
 
 %icon
@@ -49,6 +50,8 @@ $icon-upload: "\EA1A"
 	@extend %icon
 	display: inline-block
 
+.icon-add-task:before
+	content: $icon-add-task
 .icon-archive:before
 	content: $icon-archive
 .icon-arr-right:before
@@ -59,34 +62,34 @@ $icon-upload: "\EA1A"
 	content: $icon-bell
 .icon-bubble:before
 	content: $icon-bubble
-.icon-check:before
-	content: $icon-check
 .icon-calendar:before
 	content: $icon-calendar
-.icon-clip:before
-	content: $icon-clip
+.icon-check:before
+	content: $icon-check
 .icon-checked:before
 	content: $icon-checked
-.icon-corp:before
-	content: $icon-corp
+.icon-clip:before
+	content: $icon-clip
 .icon-close:before
 	content: $icon-close
+.icon-comment:before
+	content: $icon-comment
+.icon-corp:before
+	content: $icon-corp
 .icon-customer2:before
 	content: $icon-customer2
+.icon-delete:before
+	content: $icon-delete
 .icon-filter:before
 	content: $icon-filter
 .icon-folder-checked:before
 	content: $icon-folder-checked
-.icon-comment:before
-	content: $icon-comment
-.icon-logo-short:before
-	content: $icon-logo-short
-.icon-delete:before
-	content: $icon-delete
-.icon-lock:before
-	content: $icon-lock
 .icon-folder:before
 	content: $icon-folder
+.icon-lock:before
+	content: $icon-lock
+.icon-logo-short:before
+	content: $icon-logo-short
 .icon-logo:before
 	content: $icon-logo
 .icon-marked:before
@@ -95,13 +98,13 @@ $icon-upload: "\EA1A"
 	content: $icon-menu
 .icon-pending:before
 	content: $icon-pending
-.icon-square-arr:before
-	content: $icon-square-arr
-.icon-zoom:before
-	content: $icon-zoom
 .icon-plus:before
 	content: $icon-plus
-.icon-warn:before
-	content: $icon-warn
+.icon-square-arr:before
+	content: $icon-square-arr
 .icon-upload:before
 	content: $icon-upload
+.icon-warn:before
+	content: $icon-warn
+.icon-zoom:before
+	content: $icon-zoom
