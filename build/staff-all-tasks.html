@@ -226,42 +226,97 @@
 								<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
 							</div>
 							<div class="suggest__menu">
-								<a href="#" class="suggest__bl">
-									<i class="icon icon-add-task"></i>
-									<div class="suggest__in">
-										<p>Assign a new task</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl" data-popup="popup-deal-memo-info">
-									<i class="svg-ico memo-ico"></i>
-									<div class="suggest__in">
-										<p>Add Deal memo</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl">
-									<i class="svg-ico customer-ico"></i>
-									<div class="suggest__in">
-										<p>Add Customer</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl">
-									<i class="svg-ico transaction-ico"></i>
-									<div class="suggest__in">
-										<p>Add Transaction Report</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl">
-									<i class="svg-ico library-ico"></i>
-									<div class="suggest__in">
-										<p>Add Marketing Materials</p>
-									</div>
-								</a>
-								<a href="#" class="suggest__bl">
-									<i class="svg-ico library-ico"></i>
-									<div class="suggest__in">
-										<p>Add from Templates or Other</p>
-									</div>
-								</a>
+								<div class="suggest__side">
+									<a href="#" class="suggest__bl" data-popup="create">
+										<div class="suggest__folder">
+											<i class="icon icon-folder"></i>
+											<i class="icon icon-plus"></i>
+										</div>
+										<div class="suggest__in">
+											<p>Start a New Deal Folder</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl" data-popup="popup-add-letter">
+										<i class="svg-ico letter-ico"></i>
+										<div class="suggest__in">
+											<p>Add Engagement Letter</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl" data-popup="popup-deal-memo-info">
+										<i class="svg-ico memo-ico"></i>
+										<div class="suggest__in">
+											<p>Add Deal memo</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl" data-popup="popup-add-customer">
+										<i class="svg-ico customer-ico"></i>
+										<div class="suggest__in">
+											<p>Add Customer</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl" data-popup="popup-add-transaction">
+										<i class="svg-ico transaction-ico"></i>
+										<div class="suggest__in">
+											<p>Add Transaction Report</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico library-ico"></i>
+										<div class="suggest__in">
+											<p>Add Marketing Materials</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl" data-popup="popup-entries-submit">
+										<i class="svg-ico library-ico"></i>
+										<div class="suggest__in">
+											<p>Add from Templates or Other</p>
+										</div>
+									</a>
+								</div>
+								<div class="suggest__side">
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico add-task-ico"></i>
+										<div class="suggest__in">
+											<p>Assign a new task</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico customer-ico"></i>
+										<div class="suggest__in">
+											<p>Add User</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico cash-ico"></i>
+										<div class="suggest__in">
+											<p>Add Payment</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico add-library-ico"></i>
+										<div class="suggest__in">
+											<p>Add To Library</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico add-report-ico"></i>
+										<div class="suggest__in">
+											<p>Generate Report</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico add-mail-ico"></i>
+										<div class="suggest__in">
+											<p>Send Message</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico library-ico"></i>
+										<div class="suggest__in">
+											<p>Add News</p>
+										</div>
+									</a>
+								</div>
 							</div>
 						</div>
 					<!-- end suggest -->
@@ -277,7 +332,7 @@
 						</div>
 						<div class="filters__in">
 							<div class="toggle-btn js-toggle-sidebar">
-								<i class="icon icon-menu"></i>
+								<i class="icon icon-sidebar"></i>
 							</div>
 							<div class="toggle-btn">
 								<i class="icon icon-zoom"></i>
@@ -365,6 +420,15 @@
 									</div>
 								</div>
 							</div>
+							<div class="dropdown js-dropdown">
+								<p class="dropdown__item">Actions</p>
+								<div class="dropdown__list js-inner">
+									<div class="dropdown__text">
+										<p>Select tasks to make multiple actions</p>
+										<small>Select columns is switched on in Settings dropdown</small>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<!-- end filters -->
@@ -373,7 +437,7 @@
 						<div class="sidebar js-sidebar">
 							<div class="sidebar__in">
 								<div class="sidebar__bl js-sidebar-bl">
-									<p class="sidebar__ttl js-sidebar-ttl"><span>Users</span></p>
+									<div class="sidebar__ttl js-sidebar-ttl"><span>Users</span></div>
 									<div class="sidebar__content js-content">
 										<div class="sidebar__search">
 											<input type="search" placeholder="Quick search">
@@ -429,7 +493,7 @@
 									</div>
 								</div>
 								<div class="sidebar__bl js-sidebar-bl">
-									<p class="sidebar__ttl js-sidebar-ttl"><span>Form types</span></p>
+									<div class="sidebar__ttl js-sidebar-ttl"><span>Form types</span></div>
 									<div class="sidebar__content js-content">
 										<ul class="sidebar__list">
 											<li class="sidebar__option js-sidebar-option">
@@ -460,7 +524,7 @@
 									</div>
 								</div>
 								<div class="sidebar__bl js-sidebar-bl">
-									<p class="sidebar__ttl js-sidebar-ttl"><span>Deals</span></p>
+									<div class="sidebar__ttl js-sidebar-ttl"><span>Deals</span></div>
 									<div class="sidebar__content js-content">
 										<ul class="sidebar__list">
 											<li class="sidebar__option js-sidebar-option">
@@ -502,11 +566,11 @@
 							<!-- begin table  -->
 							<table class="table is-top-aligned">
 								<tr class="table__head js-clone-head">
-									<th title="Status" width="170" class="is-active"><p>Status</p></th>
-									<th title="Description" width="320"><p>Description</p></th>
-									<th title="Refered to" width="147"><p>Rep/Staff</p></th>
-									<th title="Refered to" width="137"><p>Refered to</p></th>
-									<th title="Last Updated" width="107"><p>Last Updated</p></th>
+									<th title="Status" width="170" class="is-active" data-id="status"><p>Status</p></th>
+									<th title="Description" width="320" data-id="description"><p>Description</p></th>
+									<th title="Refered to" width="147" data-id="repstaff"><p>Rep/Staff</p></th>
+									<th title="Refered to" width="137" data-id="refered"><p>Refered to</p></th>
+									<th title="Last Updated" width="107" data-id="update"><p>Last Updated</p></th>
 								</tr>
 								<tr class="is-active js-link" data-href="http://www.google.com">
 									<td>
@@ -742,103 +806,62 @@
 </div>
 <!-- END out-->
 <div class="overlay">
-	<div class="popup is-dealflow js-popup" id="deal-flow">
-		<div class="popup__head no-bg">
-			<i class="icon icon-close js-close"></i>
-		</div>
-		<p class="popup__ttl">How to submit documentation to get paid</p>
-		<div class="popup__body">
-			<div class="steps">
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico letter-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Engagement Letter</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico memo-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Deal Memo</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico customer-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Customers</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico transaction-ico"></i>
-					</div>
-					<p>Submit</p>
-					<p>Transaction Reports</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico funds-ico"></i>
-					</div>
-					<p>Receive Funds</p>
-				</div>
-				<div class="steps__bl">
-					<div class="steps__icon">
-						<i class="svg-ico paid-ico"></i>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="popup is-attach js-popup" id="attach">
+	<div class="popup is-attach js-popup" id="popup-entries-submit">
 		<div class="popup__head">
-			<p>Attached files</p>
+			<p>Submit From Library Template</p>
 			<i class="icon icon-close js-close"></i>
 		</div>
 		<div class="popup__body">
-			<p>Below are files attached to і [Document type]:</p>
+			<p>Quickly find a template:</p>
 			<div class="popup__bl">
-				<div class="popup__el">
-					<i class="svg-ico letter-ico"></i>
-					<span class="popup__num">EL12522</span>
-					<span class="txt-bold">[Name of the form]</span>
+				<div class="popup__el is-search">
+					<div class="popup__label">
+						<label></label>
+						<input type="text" placeholder="Search">
+					</div>
 				</div>
-				<a href="#" class="popup__more">Open form to add file</a>
+				<div class="dropdown js-dropdown">
+					<p class="dropdown__item">Filter by type:</p>
+					<ul class="dropdown__list js-inner">
+						<li><a href="#" class="is-active">All types</a></li>
+						<li><a href="#">Attachment</a></li>
+						<li><a href="#">Deal</a></li>
+						<li><a href="#">Task</a></li>
+						<li><a href="#">Engagement letter</a></li>
+						<li><a href="#">Deal Memo</a></li>
+						<li><a href="#">Customer</a></li>
+						<li><a href="#">GCS Form</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- begin table  -->
 		<table class="table">
 			<tr class="table__head">
-				<th width="137"><p>ID</p></th>
-				<th width="307"><p>Name</p></th>
-				<th><p>Type</p></th>
-				<th width="98"><p>Uploaded</p></th>
+				<th width="107"><p>ID</p></th>
+				<th width="360"><p>Name</p></th>
+				<th width="136" class="is-active"><p>Type</p></th>
 				<th class="table__drop"><p>&nbsp;</p></th>
 			</tr>
 			<tr class="js-link" data-href="http://www.google.com">
 				<td>
 					<div class="table__el">
-						<i class="svg-ico pdf-ico"></i>
-						<span>FI12522-001</span>
+						<i class="svg-ico library-ico"></i>
+						<span>FT12522</span>
 					</div>
 				</td>
 				<td>
-					<p>Approval Letter</p>
+					<p>Advertising & Marketing Materials</p>
 				</td>
 				<td>
-					<p>PDF</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
+					<p>Compliance form</p>
 				</td>
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list js-inner">
 							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
+							<li><a href="#">Show submissions</a></li>
 						</ul>
 					</div>
 				</td>
@@ -846,26 +869,22 @@
 			<tr class="js-link" data-href="http://www.google.com">
 				<td>
 					<div class="table__el">
-						<i class="svg-ico pic-ico"></i>
-						<span>FI12522-002</span>
+						<i class="svg-ico library-ico"></i>
+						<span>FT12522</span>
 					</div>
 				</td>
 				<td>
-					<p>Attachment Name</p>
+					<p>Background Check</p>
 				</td>
 				<td>
-					<p>Image</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
+					<p>Compliance form</p>
 				</td>
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list js-inner">
 							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
+							<li><a href="#">Show submissions</a></li>
 						</ul>
 					</div>
 				</td>
@@ -873,26 +892,22 @@
 			<tr class="js-link" data-href="http://www.google.com">
 				<td>
 					<div class="table__el">
-						<i class="svg-ico pic-ico"></i>
-						<span>FI12522-003</span>
+						<i class="svg-ico library-ico"></i>
+						<span>FT12522</span>
 					</div>
 				</td>
 				<td>
-					<p>Client ID Scan</p>
+					<p>Brokerage Account Disclosure or Request</p>
 				</td>
 				<td>
-					<p>Image</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
+					<p>Compliance form</p>
 				</td>
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list js-inner">
 							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
+							<li><a href="#">Show submissions</a></li>
 						</ul>
 					</div>
 				</td>
@@ -900,26 +915,22 @@
 			<tr class="js-link" data-href="http://www.google.com">
 				<td>
 					<div class="table__el">
-						<i class="svg-ico unknown-ico"></i>
-						<span>FI12522-004</span>
+						<i class="svg-ico library-ico"></i>
+						<span>FT12522</span>
 					</div>
 				</td>
 				<td>
-					<p>Client ID Scan Back</p>
+					<p>Brokerage Account Statements for Supervisory Review</p>
 				</td>
 				<td>
-					<p>File</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
+					<p>Compliance form</p>
 				</td>
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list js-inner">
 							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
+							<li><a href="#">Show submissions</a></li>
 						</ul>
 					</div>
 				</td>
@@ -927,26 +938,22 @@
 			<tr class="js-link" data-href="http://www.google.com">
 				<td>
 					<div class="table__el">
-						<i class="svg-ico doc-ico"></i>
-						<span>FI12522-034</span>
+						<i class="svg-ico library-ico"></i>
+						<span>FT12522</span>
 					</div>
 				</td>
-				<td >
-					<p>FINRA Approval Letter</p>
+				<td>
+					<p>Co-Marketing Agreement Request</p>
 				</td>
 				<td>
-					<p>DOC</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
+					<p>Compliance form</p>
 				</td>
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list js-inner">
 							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
+							<li><a href="#">Show submissions</a></li>
 						</ul>
 					</div>
 				</td>
@@ -954,26 +961,22 @@
 			<tr class="js-link" data-href="http://www.google.com">
 				<td>
 					<div class="table__el">
-						<i class="svg-ico pdf-ico"></i>
-						<span>FI12522-006</span>
+						<i class="svg-ico library-ico"></i>
+						<span>FT12522</span>
 					</div>
 				</td>
 				<td>
-					<p>NDA template</p>
+					<p>Communications Log for Reps</p>
 				</td>
 				<td>
-					<p>PDF</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
+					<p>Compliance form</p>
 				</td>
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list js-inner">
 							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
+							<li><a href="#">Show submissions</a></li>
 						</ul>
 					</div>
 				</td>
@@ -981,26 +984,22 @@
 			<tr class="js-link" data-href="http://www.google.com">
 				<td>
 					<div class="table__el">
-						<i class="svg-ico pic-ico"></i>
-						<span>FI12522-008</span>
+						<i class="svg-ico library-ico"></i>
+						<span>FT12522</span>
 					</div>
 				</td>
 				<td>
-					<p>My ID Scan</p>
+					<p>Customer Identification Form - Entity: GCS Verification</p>
 				</td>
 				<td>
-					<p>Image</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
+					<p>Compliance form</p>
 				</td>
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list js-inner">
 							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
+							<li><a href="#">Show submissions</a></li>
 						</ul>
 					</div>
 				</td>
@@ -1008,53 +1007,22 @@
 			<tr class="js-link" data-href="http://www.google.com">
 				<td>
 					<div class="table__el">
-						<i class="svg-ico pic-ico"></i>
-						<span>FI12522-008</span>
+						<i class="svg-ico library-ico"></i>
+						<span>FT12522</span>
 					</div>
 				</td>
 				<td>
-					<p>My ID Scan</p>
+					<p>Disclosure - Customer Complaint</p>
 				</td>
 				<td>
-					<p>Image</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
+					<p>Compliance form</p>
 				</td>
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
 						<ul class="dropdown__list js-inner">
 							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-			<tr class="js-link" data-href="http://www.google.com">
-				<td>
-					<div class="table__el">
-						<i class="svg-ico doc-ico"></i>
-						<span>FI12522-009</span>
-					</div>
-				</td>
-				<td>
-					<p>Document name</p>
-				</td>
-				<td>
-					<p>DOC</p>
-				</td>
-				<td>
-					<p>Aug 10, 2015</p>
-				</td>
-				<td class="table__drop">
-					<div class="dropdown js-dropdown">
-						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
-							<li><a href="#">Open in new window</a></li>
-							<li><a href="#">Download all in ZIP</a></li>
-							<li><a href="#">Deal status</a></li>
+							<li><a href="#">Show submissions</a></li>
 						</ul>
 					</div>
 				</td>
@@ -1062,6 +1030,542 @@
 		</table>
 		<!-- end table -->
 	</div>
+	<div class="popup js-popup" id="popup-deal-memo-info">
+		<div class="popup__head">
+			<p>Submit Deal Memo</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<div class="report">
+				<p>All current Deal folders have Deal memos in them. As only one Deal memo is allowed within one Deal Folder you either go to Deal Folder and edit/delete existing Deal Memo or start a new deal.</p>
+			</div>
+		</div>
+	</div>
+	<div class="popup js-popup" id="popup-add-letter">
+		<div class="popup__head">
+			<p>Add Engagement Letter to Deal...</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__scroll js-popup-scroll">
+			<div class="popup__body no-b-pad">
+				<small class="popup__gray">Select deal to submit engagement letter to:</small>
+				<div class="popup__bl">
+					<div class="popup__label">
+						<label></label>
+						<input type="text" placeholder="Search">
+					</div>
+				</div>
+			</div>
+			<ul class="popup-list">
+				<li class="popup-list__option">
+				 	<a href="#">
+				 		<div class="popup-list__ico">
+				 			<i class="icon icon-square-arr"></i>
+				 		</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Alphabet</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Deal With a Really Lond Name User Can Create if He Really Wants</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Foursquare Inc.</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Google</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Space X</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Samsung – Round A Search For People</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Twitter S</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Twitter Z</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Xero</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="popup js-popup" id="popup-add-customer">
+		<div class="popup__head">
+			<p>Add Customer to Deal...</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__scroll js-popup-scroll">
+			<div class="popup__body no-b-pad">
+				<small class="popup__gray">Select deal to submit engagement letter to:</small>
+				<div class="popup__bl">
+					<div class="popup__label">
+						<label></label>
+						<input type="text" placeholder="Search">
+					</div>
+				</div>
+			</div>
+			<ul class="popup-list">
+				<li class="popup-list__option">
+				 	<a href="#" data-popup="popup-new-customer">
+				 		<div class="popup-list__ico">
+				 			<i class="icon icon-square-arr"></i>
+				 		</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Alphabet</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-new-customer">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Deal With a Really Lond Name User Can Create if He Really Wants</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-new-customer">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Foursquare Inc.</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-new-customer">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Google</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-new-customer">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Space X</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-new-customer">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Samsung – Round A Search For People</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-new-customer">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Twitter S</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-new-customer">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Twitter Z</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-new-customer">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Xero</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="popup js-popup" id="popup-add-transaction">
+		<div class="popup__head">
+			<p>Add Transaction to Deal...</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__scroll js-popup-scroll">
+			<div class="popup__body no-b-pad">
+				<small class="popup__gray">Select deal to submit transaction to:</small>
+				<div class="popup__bl">
+					<div class="popup__label">
+						<label></label>
+						<input type="text" placeholder="Search">
+					</div>
+				</div>
+			</div>
+			<ul class="popup-list">
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-transaction-report">
+				 		<div class="popup-list__ico">
+				 			<i class="icon icon-square-arr"></i>
+				 		</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Alphabet</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-transaction-report">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Deal With a Really Lond Name User Can Create if He Really Wants</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-transaction-report">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Foursquare Inc.</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-transaction-report">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Google</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-transaction-report">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Space X</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-transaction-report">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Samsung – Round A Search For People</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-transaction-report">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Twitter S</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-transaction-report">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Twitter Z</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-transaction-report">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Xero</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="popup js-popup" id="popup-new-customer">
+		<div class="popup__head">
+			<p>Add Customer</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__scroll js-popup-scroll">
+			<div class="popup__body">
+				<p class="popup__form-ttl">Create new customer</p>
+				<div class="popup__choose">
+					<a href="#" class="popup__el">
+						<i class="svg-ico customer-ico"></i>
+						<span>New Retail</span>
+					</a>
+					<a href="#" class="popup__el">
+						<i class="svg-ico build-ico"></i>
+						<span>New Institutional</span>
+					</a>
+				</div>
+				<p class="popup__form-ttl">Import existing customers from other deals</p>
+				<small class="popup__gray">Exisiting customers will be re-submitted to this deal</small>
+				<div class="popup__bl">
+					<div class="popup__label">
+						<input type="text" placeholder="Search by customer or deal name" class="js-popup-search">
+					</div>
+				</div>
+			</div>
+			<ul class="popup-list is-hidden js-popup-list">
+				<li class="popup-list__option">
+				 	<a href="#">
+				 		<div class="popup-list__ico">
+				 			<i class="icon icon-square-arr"></i>
+				 		</div>
+						<div class="popup-list__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span"><i class="icon icon-customer2"></i><span class="popup-list__span">Albert June</span></span>
+							</label>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span"><i class="icon icon-customer2"></i><span class="popup-list__span">Brian Adams</span></span>
+							</label>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span"><i class="icon icon-corp"></i><span class="popup-list__span">Brothers Corp</span></span>
+							</label>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span"><i class="icon icon-customer2"></i><span class="popup-list__span">Clint Eastwwod</span></span>
+							</label>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span"><i class="icon icon-customer2"></i><span class="popup-list__span">Jack Dorsey</span></span>
+							</label>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span"><i class="icon icon-customer2"></i><span class="popup-list__span">Albert June</span></span>
+							</label>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span"><i class="icon icon-customer2"></i><span class="popup-list__span">Brian Adams</span></span>
+							</label>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span"><i class="icon icon-corp"></i><span class="popup-list__span">Brothers Corp</span></span>
+							</label>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__ico">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span"><i class="icon icon-customer2"></i><span class="popup-list__span">Clint Eastwwod</span></span>
+							</label>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="popup__btn is-hidden is-absolute js-popup-btn">
+			<button class="btn btn-ok s-pad" type="submit">Import selected</button>
+			<button class="btn btn-no" type="button">Cancel</button>
+		</div>
+	</div>
+	<div class="popup js-popup" id="popup-transaction-report">
+		<div class="popup__head">
+			<p>Submit Transaction Report</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<form class="form is-full-w">
+				<div class="form__bl">
+					<p class="form__subttl">Seller</p>
+					<div class="dropdown is-disabled js-dropdown">
+						<p class="dropdown__item">Choose seller</p>
+						<ul class="dropdown__list js-inner">
+							<li><a href="#">USA</a></li>
+							<li><a href="#">Ukraine</a></li>
+							<li><a href="#">China</a></li>
+							<li><a href="#">Japan</a></li>
+							<li><a href="#">UK</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="form__bl">
+					<p class="form__subttl">Buyer</p>
+					<div class="dropdown is-disabled js-dropdown">
+						<p class="dropdown__item">Choose seller</p>
+						<ul class="dropdown__list js-inner">
+							<li><a href="#">USA</a></li>
+							<li><a href="#">Ukraine</a></li>
+							<li><a href="#">China</a></li>
+							<li><a href="#">Japan</a></li>
+							<li><a href="#">UK</a></li>
+						</ul>
+					</div>
+					<label class="check is-light-border">
+						<input type="checkbox">
+						<span class="check__span">ROFR transaction</span>
+					</label>
+				</div>
+				<small class="popup__gray">Don't see your customer in the dropdown lists?</small>
+				<a href="#" class="popup__link" data-popup="popup-new-customer">Add new customer</a>
+				<div class="popup__btn xs-margin">
+					<button class="btn btn-ok" type="submit">Proceed</button>
+					<button class="btn btn-no" type="button">Cancel</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	//=include partials/popup-start-submit.html
 </div>
 </body>
 </html>

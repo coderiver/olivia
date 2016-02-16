@@ -116,7 +116,7 @@
 			position: absolute
 			top: 100%
 			left: 50%
-			margin: 12px 0 0 -10px
+			margin: 8px 0 0 -10px
 			+arr(20, 12, #f7f8f9, t)
 		&.is-active
 			&:after
@@ -256,10 +256,18 @@
 		z-index: 11
 	&.is-staff
 		+clr
-		.suggest__head
-			float: right
-		.suggest__menu
-			margin-top: 0
+		.suggest
+			&__head
+				position: absolute
+				right: 23px
+			&__menu
+				margin-top: 0
+				padding-right: 50px
+				+clr
+			&__folder
+				margin-right: 0
+		.icon-folder
+			font-size: 40px
 	&__head
 		+clr
 		&.is-border
@@ -301,11 +309,10 @@
 		position: relative
 		display: inline-block
 		margin-right: 23px
-		font-size: 44px
 		color: #899bac
-		line-height: 1
 		vertical-align: middle
 		cursor: pointer
+		line-height: 1
 		.icon-plus
 			position: absolute
 			top: 50%
@@ -313,6 +320,12 @@
 			margin: -5.5px 0 0 -7.5px
 	&__menu
 		margin-top: 10px
+	&__side
+		float: left
+		padding: 0 100px 0 44px
+		&:first-child
+			padding-left: 7px
+			border-right: 1px solid #DCE0E7
 	&__bl
 		display: block
 		font-size: 11px

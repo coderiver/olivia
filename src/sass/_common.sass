@@ -116,6 +116,7 @@ body
 	&.is-disabled
 		background-image: url('../img/svg-bg/customer-disabled.svg')
 
+
 .transaction-ico
 	width: 70px
 	height: 70px
@@ -131,6 +132,42 @@ body
 	background-size: 70px 70px
 	&.is-disabled
 		background-image: url('../img/svg-bg/library-disabled.svg')
+
+.add-task-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/add-task.svg')
+	background-size: 70px 70px
+
+.add-library-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/add-library.svg')
+	background-size: 70px 70px
+
+.add-mail-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/add-mail.svg')
+	background-size: 70px 70px
+
+.add-report-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/add-report.svg')
+	background-size: 70px 70px
+
+.add-user-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/add-user.svg')
+	background-size: 70px 70px
+
+.cash-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/cash.svg')
+	background-size: 70px 70px
 
 .paid-ico
 	width: 110px
@@ -540,9 +577,9 @@ input
 			content: $icon-checked
 			position: absolute
 			top: 50%
-			left: 3px
-			font-size: 8px
+			left: 2px
 			margin-top: -4px
+			font-size: 8px
 			font-family: 'svgfont'
 	&.is-light-border
 		.check__span
@@ -705,6 +742,8 @@ input
 		border-radius: 0 0 4px 4px
 		border: 1px solid #dce0e7
 		white-space: nowrap
+		&.is-big
+			min-width: 205px
 		li
 			position: relative
 			&:hover
@@ -719,7 +758,7 @@ input
 					cursor: default
 		a
 			display: block
-			max-width: 250px
+			max-width: 220px
 			padding: 5px 14px
 			color: #282828
 			overflow: hidden
@@ -759,6 +798,15 @@ input
 	&__search
 		display: block
 		padding: 5px 14px
+	&__text
+		width: 200px
+		padding: 4px 14px
+		color: #96A0A6
+		white-space: normal
+		line-height: 1.35
+		small
+			display: block
+			margin-top: 6px
 	hr
 		border: 0
 		border-bottom: 1px solid #DCE0E7

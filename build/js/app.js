@@ -106,8 +106,7 @@ $(document).ready(function() {
 		var	parentWrap = $('.js-tablewrap'),
 			sidebar = parentWrap.find('.js-sidebar'),
 			row = parentWrap.find('.js-sidedrop .js-row'),
-			scrollTable = parentWrap.find('.js-scrollbar'),
-			sublist = parentWrap.find('.js-sublist');
+			scrollTable = parentWrap.find('.js-scrollbar');
 
 		// tablehead filter
 		$('.table th').click(function() {
@@ -146,12 +145,16 @@ $(document).ready(function() {
 
 				buttonPrev.bind('click', function(evt) {
 					evt.stopPropagation();
-					$(this).closest(scrollTable).scrollLeft($(this).closest(scrollTable).scrollLeft() - 20);
+					var parentTabl = $(this).closest(scrollTable);
+
+					parentTabl.scrollLeft(parentTabl.scrollLeft() - 20);
 				});
 
 				buttonNext.bind('click', function(evt) {
 					evt.stopPropagation();
-					$(this).closest(scrollTable).scrollLeft($(this).closest(scrollTable).scrollLeft() + 20);
+					var parentTabl = $(this).closest(scrollTable);
+
+					parentTabl.scrollLeft(parentTabl.scrollLeft() + 20);
 				});
 
 				buttonPrev.appendTo($(this).find('.ps-scrollbar-x-rail'));
@@ -162,8 +165,7 @@ $(document).ready(function() {
 		function measureMoreblock() {
 			setTimeout(function() {
 				$('.js-measure').each(function() {
-					// 5 stands for inline-block padding
-					var	plusBlockWidth = $(this).siblings('.js-plus-more').outerWidth() + 5;
+					var	plusBlockWidth = $(this).siblings('.js-plus-more').outerWidth() + 5; // 5 stands for inline-block padding
 
 					$(this).css({
 						'max-width': 'calc( 100% - ' + plusBlockWidth + 'px)'
@@ -230,7 +232,7 @@ $(document).ready(function() {
 			$('.js-toggle-sidebar').click(function() {
 				var scrollTable = $(this).parents(parentWrap).find('.js-scrollbar');
 
-				$(this).toggleClass('is-active');
+				$(this).toggleClass('is-opened');
 				$(this).parents(parentWrap).find('.js-sidebar').toggleClass('is-active');
 				scrollTable.toggleClass('is-sidebar');
 
@@ -242,11 +244,22 @@ $(document).ready(function() {
 			});
 		}
 
+		function showActivityInSidebar() {
+
+			if ($('.js-sidebar-option').hasClass('is-active')) {
+				$('.js-sidebar-option').closest(parentWrap).find('.js-toggle-sidebar').addClass('is-active');
+			} else {
+				$('.js-sidebar-option').closest(parentWrap).find('.js-toggle-sidebar').removeClass('is-active');
+			}
+		}
+
 		function chooseSidebarOption() {
 			$('.js-sidebar-option').click(function(evt) {
 				evt.preventDefault();
 				$(this).parents('.js-content').find('.js-sidebar-option').removeClass('is-active');
 				$(this).addClass('is-active');
+
+				showActivityInSidebar();
 			});
 		}
 
@@ -261,18 +274,30 @@ $(document).ready(function() {
 			sideBl.on('click', '.js-sidebar-ttl', function() {
 				var closestBl = $(this).closest(sideBl);
 
-				// remove active class from siblings
-				closestBl.siblings().removeClass('is-active').css(closed);
+				if (!closestBl.hasClass('js-disabled')) {
+					// remove active class from siblings
+					closestBl.siblings().removeClass('is-active').css(closed);
 
-				// add active class to current
-				closestBl.toggleClass('is-active');
+					// add active class to current
+					closestBl.toggleClass('is-active');
 
-				// calc height of current
-				if (closestBl.hasClass('is-active')) {
-					closestBl.css('height', 'calc(100% - ' + allSideTitleH + 'px)');
-				} else {
-					closestBl.css(closed);
+					// calc height of current
+					if (closestBl.hasClass('is-active')) {
+						closestBl.css('height', 'calc(100% - ' + allSideTitleH + 'px)');
+					} else {
+						closestBl.css(closed);
+					}
 				}
+			});
+		}
+
+		function sidebarFilter() {
+			$('.js-sidebar-filter').click(function(evt) {
+				evt.stopPropagation();
+			});
+
+			$('.js-sidebar-filter-remove').click(function() {
+				$(this).parent().hide();
 			});
 		}
 
@@ -324,6 +349,8 @@ $(document).ready(function() {
 		toggleSidebar();
 		chooseSidebarOption();
 		toggleSidebarContent();
+		showActivityInSidebar();
+		sidebarFilter();
 
 		$(window).resize(function() {
 			scrollTable.perfectScrollbar('update');

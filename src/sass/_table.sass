@@ -75,13 +75,27 @@
 		border-color: #828c92
 		i
 			color: #fff
+		.icon-sidebar
+			&:after
+				border-color: transparent #FFF transparent transparent
+	&.is-opened
+		.icon-sidebar
+			&:after
+				display: block
 	i
+		font-size: 16px
 		color: #6c757a
 		vertical-align: middle
-	.icon-zoom
-		font-size: 15px
-	.icon-menu
-		font-size: 12px
+	.icon-sidebar
+		position: relative
+		&:after
+			content: ""
+			display: none
+			position: absolute
+			top: 50%
+			right: 4px
+			margin-top: -3.5px
+			+arr(4, 7, #6c757a, l)
 
 .tabs
 	display: inline-block
@@ -184,7 +198,7 @@
 		background: #f7f8f9
 		text-align: left
 		&.is-full-border
-			border: 1px solid #efefef
+			border: 1px solid #dce0e7
 		th
 			position: relative
 			height: 38px
@@ -331,7 +345,6 @@
 	&.is-active
 		width: 240px
 		.sidebar__in
-			border-right-width: 1px
 			opacity: 1
 	&.is-scrollbar
 		&:before
@@ -340,19 +353,28 @@
 		width: 240px
 		height: 100%
 		border: 1px solid #dce0e7
-		border-width: 1px 0 1px 0
+		border-width: 1px 1px 1px 0
 		opacity: 0
 		+tr(opacity 0.25s)
 	&__bl
 		overflow: hidden
 		+tr(height 0.3s)
+		&:first-child
+			.sidebar__ttl
+				border-top-width: 0
 		&.is-active
 			.sidebar__ttl
 				background: #fff
+				border-color: #DCE0E7
 				&:before
 					content: "-"
 					font-size: 30px
 					margin-top: -18px
+		&.is-disabled
+			.sidebar__ttl
+				color: #C0C6CF
+				&:before
+					color: #E4E5E6
 	&__content
 		position: relative
 		height: calc(100% - 38px)
@@ -365,12 +387,13 @@
 		background: #f7f8f9
 		height: 38px
 		line-height: 38px
-		border-bottom: 1px solid #dce0e7
+		border-top: 1px solid #dce0e7
+		border-bottom: 1px solid transparent
 		cursor: pointer
 		+opensans-sb
 		span
 			display: inline-block
-			max-width: 100%
+			max-width: 50%
 			font-size: 13px
 			overflow: hidden
 			white-space: nowrap
@@ -410,13 +433,13 @@
 			padding: 4px 20px 4px 33px
 			font-size: 13px
 			color: #6c757a
-		span
-			display: inline-block
-			max-width: 100%
-			overflow: hidden
-			vertical-align: middle
-			text-overflow: ellipsis
-			white-space: nowrap
+		// span
+		// 	display: inline-block
+		// 	max-width: 100%
+		// 	overflow: hidden
+		// 	vertical-align: middle
+		// 	text-overflow: ellipsis
+		// 	white-space: nowrap
 		.icon
 			font-size: 10px
 		.svg-ico
@@ -425,9 +448,8 @@
 			background-size: 10px 10px
 		.icon, .svg-ico
 			position: absolute
-			top: 50%
+			top: 6.5px
 			left: 15px
-			margin-top: -6px
 	&__list
 		margin: 7px 0
 	&__link
@@ -438,24 +460,46 @@
 		+opensans-sb
 		&:hover
 			text-decoration: underline
-	&__filter
-		margin: 14px 0 10px
-		.sidebar__ttl
-			margin: 0
-	&__rel
-		padding: 0 14px
-		color: #6c757a
 	&__search
 		margin: 7px 0
 		padding: 0 20px
 		input
 			padding: 4px 12px
 			font-size: 12px
+	&__filter
+		position: absolute
+		top: 50%
+		right: 10px
+		margin-top: -9px
+		font-size: 0
+		color: #fff
+		background: #828C92
+		border-radius: 18px
+		line-height: 17px
+		+opensans
+		p
+			display: inline-block
+			max-width: 85px
+			padding: 0 5px
+			font-size: 10px
+			text-overflow: ellipsis
+			overflow: hidden
+			vertical-align: middle
+			white-space: nowrap
+	&__cancel
+		display: inline-block
+		padding: 0 6px 0 5px
+		font-size: 5px
+		background: #6C757A
+		vertical-align: middle
+		border-radius: 0 18px 18px 0
+		.icon-close
+			color: #FFF
 	&-task-ico
 		position: absolute
 		top: 50%
 		left: 19px
-		margin-top: -3px
+		margin-top: -4px
 		width: 6px
 		height: 6px
 		background: #F76300
@@ -471,6 +515,7 @@
 	position: relative
 	padding-bottom: 13px
 	margin-right: 50px
+	background: #FFF
 	overflow: hidden
 	+tr(0.3s ease)
 	&.is-sidebar
