@@ -53,11 +53,11 @@
 				</ul>
 				<div class="helpers">
 					<div class="dropdown is-menu js-dropdown">
-						<div class="dropdown__item is-img" style="background-image: url('img/profile.jpg');"></div>
+						<div class="dropdown__item"><i class="dropdown__img is-img" style="background-image: url('img/profile.jpg');"></i><p class="dropdown__name">Steven <span>O'reilly</span></p></div>
 						<ul class="dropdown__list js-inner">
 							<li><a href="#">Eugene Rudyy Profile</a></li>
 							<li><a href="#">Change password</a></li>
-							<li><a href="#">Sign in as</a></li>
+							<li><a href="#" data-popup="popup-sign-in">Sign in as</a></li>
 							<li><a href="#">Log out</a></li>
 						</ul>
 					</div>
@@ -1655,11 +1655,161 @@
 				<div class="popup__label">
 					<input type="text" placeholder="Please keep this short and informal">
 				</div>
+				<div class="popup__label">
+					<label class="check is-light-border">
+						<input type="checkbox">
+						<span class="check__span">This is a team deal</span>
+					</label>
+					<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span>
+				</div>
 				<div class="popup__btn">
 					<button class="btn btn-ok" type="submit">Create deal</button>
 					<button class="btn btn-no" type="button">Cancel</button>
 				</div>
 			</form>
+		</div>
+	</div>
+	<div class="popup js-popup" id="popup-sign-in">
+		<div class="popup__head">
+			<p>Sign in as...</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__scroll js-popup-scroll">
+			<div class="popup__body no-b-pad">
+				<div class="popup__bl">
+					<div class="popup__label">
+						<input type="text" placeholder="Search">
+					</div>
+				</div>
+			</div>
+			<ul class="popup-list js-popup-list">
+				<li class="popup-list__option">
+				 	<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Aaron Siwoku</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Brian Dunn</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Clifford Simak</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Dilan Brocksson</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Diana Tailor</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Brian Dunn</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Clifford Simak</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Dilan Brocksson</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Diana Tailor</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+				 	<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Aaron Siwoku</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Brian Dunn</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Clifford Simak</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Dilan Brocksson</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Diana Tailor</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Brian Dunn</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Clifford Simak</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Dilan Brocksson</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Diana Tailor</span>
+						</div>
+					</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>

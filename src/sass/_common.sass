@@ -217,6 +217,12 @@ body
 	background-image: url('../img/svg-bg/build.svg')
 	background-size: 56px 56px
 
+.user-gray-ico
+	width: 16px
+	height: 16px
+	background-image: url('../img/svg-bg/user-gray.svg')
+	background-size: 16px 16px
+
 // default color for icons
 .icon-customer2, .icon-corp
 	color: #3caca2
@@ -556,6 +562,8 @@ input
 	&__span
 		position: relative
 		display: inline-block
+		min-width: 14px
+		min-height: 14px
 		padding-left: 20px
 		font-size: 13px
 		color: #282828
@@ -577,10 +585,12 @@ input
 			content: $icon-checked
 			position: absolute
 			top: 50%
-			left: 2px
+			left: 2.5px
 			margin-top: -4px
 			font-size: 8px
 			font-family: 'svgfont'
+		&:empty
+			padding: 0
 	&.is-light-border
 		.check__span
 			&:before
@@ -595,6 +605,7 @@ input
 			color: #282828
 			&:after
 				display: block
+
 
 // dropdown
 .dropdown
@@ -644,14 +655,6 @@ input
 				left: 100%
 			&:after
 				display: none
-			&.is-img
-				width: 18px
-				height: 18px
-				padding-right: 0
-				border-radius: 50%
-				+cover
-				&:before
-					display: none
 		.dropdown__list
 			left: -15px
 			margin-top: 5px
@@ -659,6 +662,9 @@ input
 			border-radius: 4px
 			a
 				padding: 7px 15px
+	&.is-login
+		.dropdown__item
+			text-transform: none
 	&.is-reference
 		.dropdown__list
 			right: auto
@@ -807,9 +813,28 @@ input
 		small
 			display: block
 			margin-top: 6px
+	&__img
+		display: inline-block
+		width: 18px
+		height: 18px
+		margin-right: 10px
+		border-radius: 50%
+		vertical-align: middle
+		+cover
+	&__name
+		display: inline-block
+		vertical-align: middle
 	hr
 		border: 0
 		border-bottom: 1px solid #DCE0E7
+	+r(1120)
+		&__name span
+			display: none
+	+r(1000)
+		&__img
+			margin-right: 0
+		&__name
+			display: none
 
 .highlight
 	display: inline-block

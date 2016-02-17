@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Entries</title>
+	<title>Staff all tasks select</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -210,8 +210,15 @@
 	<div class="main">
 		<div class="l">
 			<div class="main__in">
-				<div class="upper is-custom">
-					<p class="upper__ttl">Entries</p>
+				<div class="upper">
+					<p class="upper__ttl">Tasks</p>
+					<ul class="upper__list">
+						<li class="upper__option"><a class="upper__link is-active" href="#">My<p class="notification"><span>5</span></p></a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Sent<p class="notification"><span>1</span></p></a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Approved</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">All staff</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Reps</a></li>
+					</ul>
 					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
 					<!-- begin suggest -->
 						<div class="suggest is-staff js-popup js-avoid-overflow" id="suggest">
@@ -314,12 +321,12 @@
 						</div>
 					<!-- end suggest -->
 				</div>
-				<div class="tablewrap no-bottom-margin js-tablewrap">
+				<div class="tablewrap js-tablewrap">
 					<!-- begin filters  -->
 					<div class="filters">
 						<div class="filters__ttl">
 							<div class="tooltip">
-								<p>Submitted forms</p>
+								<p>My Tasks</p>
 								<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
 							</div>
 						</div>
@@ -328,14 +335,7 @@
 								<i class="icon icon-sidebar"></i>
 							</div>
 							<div class="toggle-btn">
-								<i class="icon icon-calendar"></i>
-							</div>
-							<div class="toggle-btn">
 								<i class="icon icon-zoom"></i>
-							</div>
-							<div class="tabs">
-								<div class="tabs__el js-tab-el is-active">All</div>
-								<div class="tabs__el js-tab-el">With tasks</div>
 							</div>
 							<div class="dropdown js-dropdown">
 								<p class="dropdown__item">Settings</p>
@@ -347,33 +347,15 @@
 										</label>
 									</div>
 									<div class="dropdown__check">
-										<label class="check" data-attr="id">
-											<input type="checkbox" checked>
-											<span class="check__span">ID</span>
+										<label class="check" data-attr="taskid">
+											<input type="checkbox">
+											<span class="check__span">Task ID</span>
 										</label>
 									</div>
 									<div class="dropdown__check">
 										<label class="check" data-attr="name">
-											<input type="checkbox" checked>
+											<input type="checkbox">
 											<span class="check__span">Name</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="type">
-											<input type="checkbox" checked>
-											<span class="check__span">Type</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="referred">
-											<input type="checkbox" checked>
-											<span class="check__span">Referred to</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="rep">
-											<input type="checkbox" checked>
-											<span class="check__span">Rep</span>
 										</label>
 									</div>
 									<div class="dropdown__check">
@@ -383,15 +365,51 @@
 										</label>
 									</div>
 									<div class="dropdown__check">
-										<label class="check" data-attr="attachments">
+										<label class="check" data-attr="description">
 											<input type="checkbox" checked>
-											<span class="check__span">Attachments</span>
+											<span class="check__span">Description</span>
 										</label>
 									</div>
 									<div class="dropdown__check">
-										<label class="check" data-attr="datecreate">
+										<label class="check" data-attr="user">
+											<input type="checkbox" checked>
+											<span class="check__span">User</span>
+										</label>
+									</div>
+									<div class="dropdown__check">
+										<label class="check" data-attr="referred">
+											<input type="checkbox" checked>
+											<span class="check__span">Referred to</span>
+										</label>
+									</div>
+									<div class="dropdown__check">
+										<label class="check" data-attr="formtype">
 											<input type="checkbox">
-											<span class="check__span">Date created</span>
+											<span class="check__span">Form type</span>
+										</label>
+									</div>
+									<div class="dropdown__check">
+										<label class="check" data-attr="assignedby">
+											<input type="checkbox">
+											<span class="check__span">Assigned by</span>
+										</label>
+									</div>
+									<div class="dropdown__check">
+										<label class="check" data-attr="preapprove">
+											<input type="checkbox">
+											<span class="check__span">Pre-approve staff mem.</span>
+										</label>
+									</div>
+									<div class="dropdown__check">
+										<label class="check" data-attr="created">
+											<input type="checkbox">
+											<span class="check__span">Created</span>
+										</label>
+									</div>
+									<div class="dropdown__check">
+										<label class="check" data-attr="deadline">
+											<input type="checkbox">
+											<span class="check__span">Deadline</span>
 										</label>
 									</div>
 									<div class="dropdown__check">
@@ -404,11 +422,12 @@
 							</div>
 							<div class="dropdown js-dropdown">
 								<p class="dropdown__item">Actions</p>
-								<ul class="dropdown__list is-big js-inner">
-									<li>
-										<a href="#">Generate report (CSV)</a>
-									</li>
-								</ul>
+								<div class="dropdown__list js-inner">
+									<div class="dropdown__text">
+										<p>Select tasks to make multiple actions</p>
+										<small>Select columns is switched on in Settings dropdown</small>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -418,7 +437,7 @@
 						<div class="sidebar js-sidebar">
 							<div class="sidebar__in">
 								<div class="sidebar__bl js-sidebar-bl">
-									<p class="sidebar__ttl js-sidebar-ttl"><span>Users</span></p>
+									<div class="sidebar__ttl js-sidebar-ttl"><span>Users</span></div>
 									<div class="sidebar__content js-content">
 										<div class="sidebar__search">
 											<input type="search" placeholder="Quick search">
@@ -470,11 +489,44 @@
 											<li class="sidebar__option js-sidebar-option">
 												<a href="#">Aisec Asimov</a>
 											</li>
+											<li class="sidebar__option is-title">
+												<a href="#">B</a>
+											</li>
+											<li class="sidebar__option js-sidebar-option">
+												<a href="#">Brian Dunn</a>
+											</li>
+											<li class="sidebar__option js-sidebar-option">
+												<a href="#">Boris Negov</a>
+											</li>
+											<li class="sidebar__option js-sidebar-option">
+												<a href="#">Brenda Stone</a>
+											</li>
+											<li class="sidebar__option js-sidebar-option">
+												<a href="#">Bonabe Mugaba</a>
+											</li>
+											<li class="sidebar__option is-title">
+												<a href="#">C</a>
+											</li>
+											<li class="sidebar__option js-sidebar-option">
+												<a href="#">Clint Clifford</a>
+											</li>
+											<li class="sidebar__option js-sidebar-option">
+												<a href="#">Cora Aricsson</a>
+											</li>
+											<li class="sidebar__option is-title">
+												<a href="#">D</a>
+											</li>
+											<li class="sidebar__option js-sidebar-option">
+												<a href="#">Denis Baley</a>
+											</li>
+											<li class="sidebar__option js-sidebar-option">
+												<a href="#">Duncan McLoud</a>
+											</li>
 										</ul>
 									</div>
 								</div>
 								<div class="sidebar__bl js-sidebar-bl">
-									<p class="sidebar__ttl js-sidebar-ttl"><span>Status</span></p>
+									<div class="sidebar__ttl js-sidebar-ttl"><span>Form types</span></div>
 									<div class="sidebar__content js-content">
 										<ul class="sidebar__list">
 											<li class="sidebar__option js-sidebar-option">
@@ -496,25 +548,6 @@
 												<a href="#">Aaron Siwoku</a>
 											</li>
 											<li class="sidebar__option js-sidebar-option">
-												<i class="sidebar-task-ico"></i>
-												<a href="#">Amanda Woodward</a>
-											</li>
-											<li class="sidebar__option js-sidebar-option">
-												<a href="#">Aisec Asimov</a>
-											</li>
-											<li class="sidebar__option js-sidebar-option">
-												<a href="#">Aaron Siwoku</a>
-											</li>
-											<li class="sidebar__option js-sidebar-option">
-												<a href="#">Amanda Woodward</a>
-											</li>
-											<li class="sidebar__option js-sidebar-option">
-												<a href="#">Aisec Asimov</a>
-											</li>
-											<li class="sidebar__option js-sidebar-option">
-												<a href="#">Aaron Siwoku</a>
-											</li>
-											<li class="sidebar__option js-sidebar-option">
 												<a href="#">Amanda Woodward</a>
 											</li>
 											<li class="sidebar__option js-sidebar-option">
@@ -524,72 +557,32 @@
 									</div>
 								</div>
 								<div class="sidebar__bl js-sidebar-bl">
-									<p class="sidebar__ttl js-sidebar-ttl"><span>Forms</span></p>
-									<div class="sidebar__content js-content">
-										<div class="sidebar__search">
-											<input type="search" placeholder="Quick search">
-										</div>
-										<ul class="sidebar__list">
-											<li class="sidebar__option js-sidebar-option">
-												<a href="#">All form types</a>
-											</li>
-											<li class="sidebar__option js-sidebar-option">
-												<a href="#">All compliance forms</a>
-											</li>
-											<li class="sidebar__option js-sidebar-option">
-												<a href="#">All deal forms</a>
-											</li>
-											<li class="sidebar__option js-sidebar-option">
-												<a href="#"><i class="svg-ico library-ico"></i>Reports</a>
-											</li>
-											<li class="sidebar__option js-sidebar-option">
-												<a href="#"><i class="svg-ico library-ico"></i>Advertising and Marketing Materials</a>
-											</li>
-											<li class="sidebar__option js-sidebar-option">
-												<a href="#"><i class="svg-ico library-ico"></i>Background Check</a>
-											</li>
-											<li class="sidebar__option js-sidebar-option">
-												<a href="#"><i class="svg-ico library-ico"></i>Brockerage Account Statements for Supervisory Review</a>
-											</li>
-											<li class="sidebar__option js-sidebar-option">
-												<a href="#"><i class="svg-ico library-ico"></i>Co-Marketing Agreement Request</a>
-											</li>
-											<li class="sidebar__option js-sidebar-option">
-												<a href="#"><i class="svg-ico library-ico"></i>Communication Log for Reps</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="sidebar__bl js-sidebar-bl">
-									<p class="sidebar__ttl js-sidebar-ttl"><span>Deals</span></p>
+									<div class="sidebar__ttl js-sidebar-ttl"><span>Deals</span></div>
 									<div class="sidebar__content js-content">
 										<ul class="sidebar__list">
 											<li class="sidebar__option js-sidebar-option">
-												<a href="#">All deals</a>
+												<a href="#">All users</a>
 											</li>
 											<li class="sidebar__option js-sidebar-option">
-												<a href="#">All active deals</a>
+												<a href="#">All reps</a>
 											</li>
 											<li class="sidebar__option js-sidebar-option">
-												<a href="#">All inactive deals</a>
+												<a href="#">All active reps</a>
 											</li>
 											<li class="sidebar__option js-sidebar-option">
-												<a href="#">All closed deals</a>
-											</li>
-											<li class="sidebar__option is-title">
-												<a href="#">A</a>
+												<a href="#">All inactive reps</a>
 											</li>
 											<li class="sidebar__option js-sidebar-option">
-												<a href="#"><i class="icon icon-folder"></i>ABC</a>
+												<a href="#">All staff</a>
 											</li>
 											<li class="sidebar__option js-sidebar-option">
-												<a href="#"><i class="icon icon-folder"></i>AMG Mercedes Benz</a>
+												<a href="#">Aaron Siwoku</a>
 											</li>
 											<li class="sidebar__option js-sidebar-option">
-												<a href="#"><i class="icon icon-folder"></i>Asics</a>
+												<a href="#">Amanda Woodward</a>
 											</li>
 											<li class="sidebar__option js-sidebar-option">
-												<a href="#"><i class="icon icon-folder"></i>Algol</a>
+												<a href="#">Aisec Asimov</a>
 											</li>
 										</ul>
 									</div>
@@ -604,412 +597,167 @@
 							</div>
 							<!-- end fake-header -->
 							<!-- begin table  -->
-							<table class="table">
+							<table class="table is-top-aligned">
 								<tr class="table__head js-clone-head">
-									<th title="ID" width="112" data-id="id"><p>ID</p></th>
-									<th title="Name" width="316" data-id="name"><p>Name</p></th>
-									<th title="Type" width="150" data-id="type"><p>Type</p></th>
-									<th title="Status" width="173" data-id="refered"><p>Refered to</p></th>
-									<th title="Status" width="133" data-id="rep"><p>Rep</p></th>
+									<th width="35" class="label-checkbox cell-center" data-id="select">
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span"></span>
+										</label>
+									</th>
+									<th title="Status" width="170" class="is-active" data-id="status"><p>Status</p></th>
+									<th title="Description" width="320" data-id="description"><p>Description</p></th>
+									<th title="Refered to" width="147" data-id="repstaff"><p>Rep/Staff</p></th>
+									<th title="Refered to" width="137" data-id="refered"><p>Refered to</p></th>
+									<th title="Last Updated" width="107" data-id="update"><p>Last Updated</p></th>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr class="is-active js-link" data-href="http://www.google.com">
+									<td class="cell-center cell-border-right js-select-row">
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span"></span>
+										</label>
+									</td>
 									<td>
-										<div class="table__el">
-											<i class="svg-ico letter-ico"></i>
-											<span>EL12522</span>
+										<div class="status">
+											<span class="status-info js-plus-more">New</span>
+											<span class="js-measure">Pre-approved</span>
 										</div>
 									</td>
-									<td class="table__name">
-										<p class="table__text">Steve Bushemi</p>
-									</td>
 									<td>
-										<p class="table__text">Engagement Letter</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Brian Dunn</p>
-									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="svg-ico letter-ico"></i>
-											<span>EL12521</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">James Smith</p>
-									</td>
-									<td>
-										<p class="table__text">Engagement Letter</p>
-									</td>
-									<td>
-										<p class="table__text">Samsung</p>
-									</td>
-									<td>
-										<p class="table__text">Eric Keele</p>
-									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
+										<div class="description">
 											<i class="svg-ico memo-ico"></i>
-											<span>DM45681</span>
+											<span>Update Space X Deal Memo</span>
 										</div>
+										<p class="table__text">Kimberly Yorkinsson Pre-approved Space X Deal Memo (DM45681)</p>
 									</td>
 									<td class="table__name">
-										<p class="table__text">Space X Deal Memo</p>
-									</td>
-									<td>
-										<p class="table__text">Deal Memo</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Eleonora Sink</p>
-									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="icon icon-customer2"></i>
-											<span>CU23794</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">Steve Bushemi</p>
-									</td>
-									<td>
-										<p class="table__text">Customer</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
 										<p class="table__text">Brian Dunn</p>
 									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="icon icon-customer2"></i>
-											<span>CU23793</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">James Smith</p>
-									</td>
-									<td>
-										<p class="table__text">Customer</p>
-									</td>
-									<td>
-										<p class="table__text">Samsung</p>
-									</td>
-									<td>
-										<p class="table__text">Eric Keele</p>
-									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="svg-ico transaction-ico"></i>
-											<span>TR23792</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">James Smith > Steven Fry</p>
-									</td>
-									<td>
-										<p class="table__text">Transaction Report</p>
-									</td>
 									<td>
 										<p class="table__text">Space X</p>
 									</td>
 									<td>
-										<p class="table__text">Eleonora Sink</p>
+										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr class="is-active js-link" data-href="http://www.imgur.com">
+									<td class="cell-center cell-border-right js-select-row">
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span"></span>
+										</label>
+									</td>
 									<td>
-										<div class="table__el">
+										<div class="status">
+											<i class="icon icon-warn"></i>
+											<span class="js-measure">Review</span>
+										</div>
+									</td>
+									<td>
+										<div class="description">
+											<span>Send us your photo</span>
+										</div>
+										<p class="table__text">File in the middle name properly</p>
+									</td>
+									<td class="table__name">
+										<p class="table__text">Brian Dunn</p>
+									</td>
+									<td>
+										<p class="table__text">Other</p>
+									</td>
+									<td>
+										<p class="table__text">Aug 5, 2015</p>
+									</td>
+								</tr>
+								<tr class="is-active js-link" data-href="http://www.imgur.com">
+									<td class="cell-center cell-border-right js-select-row">
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span"></span>
+										</label>
+									</td>
+									<td>
+										<div class="status is-failed">
+											<i class="icon icon-warn"></i>
+											<span class="js-measure">Review</span>
+										</div>
+									</td>
+									<td>
+										<div class="description">
 											<i class="icon icon-corp"></i>
-											<span>CU23791</span>
+											<span>Nakatomi Corp</span>
 										</div>
+										<p class="table__text">Brain Dunn commented: Hope this time I did it all well, please review, all best wishes</p>
 									</td>
 									<td class="table__name">
-										<p class="table__text">Nakatomi Corp</p>
-									</td>
-									<td>
-										<p class="table__text">Customer</p>
+										<p class="table__text">Brian Dunn</p>
 									</td>
 									<td>
 										<p class="table__text">Space X</p>
 									</td>
 									<td>
-										<p class="table__text">Brian Dunn</p>
+										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr class="is-active js-link" data-href="http://www.imgur.com">
+									<td class="cell-center cell-border-right js-select-row">
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span"></span>
+										</label>
+									</td>
 									<td>
-										<div class="table__el">
-											<i class="svg-ico transaction-ico"></i>
-											<span>TR23790</span>
+										<div class="status">
+											<i class="icon icon-warn"></i>
+											<span class="js-measure">Review</span>
 										</div>
 									</td>
+									<td>
+										<div class="description">
+											<i class="svg-ico letter-ico"></i>
+											<span>Submit Engagement Letter</span>
+										</div>
+										<p class="table__text">Brain Dunn submitted Space X Engagement Letter</p>
+									</td>
 									<td class="table__name">
-										<p class="table__text">James Smith > Steven Fry</p>
+										<p class="table__text">Brian Dunn</p>
 									</td>
 									<td>
-										<p class="table__text">Transaction Report</p>
+										<p class="table__text">Space X</p>
 									</td>
 									<td>
-										<p class="table__text">Samsung</p>
-									</td>
-									<td>
-										<p class="table__text">Eric Keele</p>
+										<p class="table__text">Aug 5, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr class="is-active js-link" data-href="http://www.imgur.com">
+									<td class="cell-center cell-border-right js-select-row">
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span"></span>
+										</label>
+									</td>
 									<td>
-										<div class="table__el">
+										<div class="status">
+											<i class="icon icon-warn"></i>
+											<span class="js-measure">Review</span>
+										</div>
+									</td>
+									<td>
+										<div class="description">
 											<i class="icon icon-customer2"></i>
-											<span>CU23794</span>
+											<span>Steve Bsucemy</span>
 										</div>
+										<p class="table__text">Brain Dunn submitted customer identification form: retail Steve Buscemy</p>
 									</td>
 									<td class="table__name">
-										<p class="table__text">Steve Bushemi</p>
-									</td>
-									<td>
-										<p class="table__text">Customer</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Eleonora Sink</p>
-									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="svg-ico transaction-ico"></i>
-											<span>TR23792</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">James Smith > Steven Fry</p>
-									</td>
-									<td>
-										<p class="table__text">Transaction Report</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
 										<p class="table__text">Brian Dunn</p>
 									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="icon icon-customer2"></i>
-											<span>CU23792</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">James Smith > Steven Fry</p>
-									</td>
-									<td>
-										<p class="table__text">Customer</p>
-									</td>
-									<td>
-										<p class="table__text">Samsung</p>
-									</td>
-									<td>
-										<p class="table__text">Eric Keele</p>
-									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="svg-ico transaction-ico"></i>
-											<span>TR23791</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">James Smith > Steven Fry</p>
-									</td>
-									<td>
-										<p class="table__text">Transaction Report</p>
-									</td>
 									<td>
 										<p class="table__text">Space X</p>
 									</td>
 									<td>
-										<p class="table__text">Eleonora Sink</p>
-									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="svg-ico transaction-ico"></i>
-											<span>TR23790</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">James Smith > Steven Fry</p>
-									</td>
-									<td>
-										<p class="table__text">Transaction Report</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Brian Dunn</p>
-									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="icon icon-customer2"></i>
-											<span>CU23794</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">Steve Bushemi</p>
-									</td>
-									<td>
-										<p class="table__text">Customer</p>
-									</td>
-									<td>
-										<p class="table__text">Samsung</p>
-									</td>
-									<td>
-										<p class="table__text">Eric Keele</p>
-									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="svg-ico transaction-ico"></i>
-											<span>TR23793</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">James Smith > Steven Fry</p>
-									</td>
-									<td>
-										<p class="table__text">Transaction Report</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Eleonora Sink</p>
-									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="icon icon-customer2"></i>
-											<span>CU23792</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">James Smith > Steven Fry</p>
-									</td>
-									<td>
-										<p class="table__text">Customer</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Brian Dunn</p>
-									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="svg-ico transaction-ico"></i>
-											<span>TR23791</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">Nakatomi Corp</p>
-									</td>
-									<td>
-										<p class="table__text">Transaction Report</p>
-									</td>
-									<td>
-										<p class="table__text">Samsung</p>
-									</td>
-									<td>
-										<p class="table__text">Eric Keele</p>
-									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="svg-ico transaction-ico"></i>
-											<span>TR23790</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">James Smith > Steven Fry</p>
-									</td>
-									<td>
-										<p class="table__text">Transaction Report</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Eleonora Sink</p>
-									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="svg-ico transaction-ico"></i>
-											<span>TR23791</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">Nakatomi Corp</p>
-									</td>
-									<td>
-										<p class="table__text">Transaction Report</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Brian Dunn</p>
-									</td>
-								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
-									<td>
-										<div class="table__el">
-											<i class="svg-ico transaction-ico"></i>
-											<span>TR23790</span>
-										</div>
-									</td>
-									<td class="table__name">
-										<p class="table__text">James Smith > Steven Fry</p>
-									</td>
-									<td>
-										<p class="table__text">Transaction Report</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Eleonora Sink</p>
+										<p class="table__text">Aug 5, 2015</p>
 									</td>
 								</tr>
 							</table>
@@ -1101,266 +849,10 @@
 										</div>
 									</td>
 								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
 							</table>
 						</div>
 						<!-- end sidedrop -->
 					</div>
-				</div>
-				<div class="pagination">
-					<a href="#" class="btn is-prev"><span>Previous</span><i class="left-arr"></i></a>
-					<ul class="pagination__list">
-						<li><a href="#" class="is-active">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#">6</a></li>
-						<li><a href="#">7</a></li>
-						<li><a href="#">8</a></li>
-						<li><a href="#">9</a></li>
-						<li><a href="#">10</a></li>
-					</ul>
-					<a href="#" class="btn is-next"><span>Next</span><i class="right-arr"></i></a>
 				</div>
 				<div class="back-to-top"><a href="#" class="js-top"><i class="icon icon-arr-top"></i><span>Back to top</span></a></div>
 			</div>
@@ -2140,6 +1632,149 @@
 					<button class="btn btn-no" type="button">Cancel</button>
 				</div>
 			</form>
+		</div>
+	</div>
+	<div class="popup js-popup" id="popup-sign-in">
+		<div class="popup__head">
+			<p>Sign in as...</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__scroll js-popup-scroll">
+			<div class="popup__body no-b-pad">
+				<div class="popup__bl">
+					<div class="popup__label">
+						<input type="text" placeholder="Search">
+					</div>
+				</div>
+			</div>
+			<ul class="popup-list js-popup-list">
+				<li class="popup-list__option">
+				 	<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Aaron Siwoku</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Brian Dunn</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Clifford Simak</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Dilan Brocksson</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Diana Tailor</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Brian Dunn</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Clifford Simak</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Dilan Brocksson</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Diana Tailor</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+				 	<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Aaron Siwoku</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Brian Dunn</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Clifford Simak</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Dilan Brocksson</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Diana Tailor</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Brian Dunn</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Clifford Simak</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Dilan Brocksson</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Diana Tailor</span>
+						</div>
+					</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 	<div class="popup is-top js-popup" id="create">

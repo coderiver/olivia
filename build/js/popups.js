@@ -15,15 +15,18 @@ $(document).ready(function() {
 		if ( !popup.hasClass('js-avoid-overflow') ) {
 			$('body').addClass('is-overflow');
 		}
+		if ( popup.find('.js-tooltip').length > 0 ) {
+			$('.overlay').addClass('low-index');
+		}
 		if ( $('.js-search-results').hasClass('is-active') ) {
- 			$('.js-search-results').removeClass('is-active');
+			$('.js-search-results').removeClass('is-active');
 		}
 	};
 
 	$.hidePopup = function(popup) {
 		popup.removeClass('is-active');
 		openedPopup = null;
-		$('.overlay').removeClass('is-active');
+		$('.overlay').removeClass('is-active').removeClass('low-index');
 		$('body').removeClass('is-overflow');
 	};
 
@@ -59,11 +62,13 @@ $(document).ready(function() {
 			buttons = $('.js-popup-btn'),
 			buttonsHeight = 0;
 
-		popupScrollBl.perfectScrollbar();
+		popupScrollBl.each(function() {
+			$(this).perfectScrollbar();
 
-		if ( list.hasClass('is-hidden') ) {
-			popupScrollBl.css('height', 'auto');
-		}
+			if ( $(this).find('.js-popup-list').hasClass('is-hidden') ) {
+				$(this).css('height', 'auto');
+			}
+		});
 
 		input.on('keydown', function() {
 			if ( list.hasClass('is-hidden') && input.val() ) {
