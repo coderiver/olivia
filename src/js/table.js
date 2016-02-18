@@ -257,6 +257,16 @@ $(document).ready(function() {
 			});
 		}
 
+		function toggleSearchTable() {
+			$('.js-search-table').click(function() {
+				$(this).addClass('search-opened');
+			});
+
+			$('.js-search-table input').on('blur', function() {
+				$(this).parent().removeClass('search-opened');
+			});
+		}
+
 		// summon them on load!
 		toggleDesignElem();
 		filterTabs();
@@ -271,6 +281,7 @@ $(document).ready(function() {
 		showActivityInSidebar();
 		sidebarFilter();
 		selectRow();
+		toggleSearchTable();
 
 		$(window).resize(function() {
 			scrollTable.perfectScrollbar('update');

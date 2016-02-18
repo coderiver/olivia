@@ -1,0 +1,413 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Library</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#fff">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/tooltipster.css" >
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/app.js"></script>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<!-- begin header with active notification  -->
+	<div class="header">
+		<div class="l">
+			<div class="header__in">
+				<a href="#" class="header__logo"><i class="icon icon-logo"></i></a>
+				<ul class="menu">
+					<li class="menu__option"><a class="menu__link" href="#">Tasks <p class="notification"><span>2</span></p></a></li>
+					<li class="menu__option"><a class="menu__link" href="#">Deals</a></li>
+					<li class="menu__option"><a class="menu__link" href="#">Entries</a></li>
+					<li class="menu__option"><a class="menu__link is-active" href="#">Library</a></li>
+					<li class="menu__option">
+						<div class="dropdown is-menu js-dropdown">
+							<p class="dropdown__item">Me</p>
+							<ul class="dropdown__list js-inner">
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">My Team</a></li>
+								<li><a href="#">Messages</a></li>
+								<li><a href="#">Activity Log</a></li>
+								<li><a href="#">Settings</a></li>
+								<li><a href="#">Log Out</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<div class="helpers">
+					<a href="#" class="helpers__info">?</a>
+					<a href="#" class="helpers__bell is-active" data-popup="sysmessage">
+						<i class="icon icon-bell"></i>
+						<span class="helpers__message">5</span>
+					</a>
+					<label class="search js-search">
+						<i class="icon icon-zoom"></i>
+						<input type="search" placeholder="Search">
+					</label>
+					//=include partials/system-message.html
+					//=include partials/search-results.html
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+	<div class="main">
+		<div class="l">
+			<div class="main__in">
+				<div class="upper is-custom">
+					<p class="upper__ttl">Library</p>
+				</div>
+				<!-- begin tablewrap  -->
+				<div class="tablewrap js-tablewrap">
+					<!-- begin filters  -->
+					<div class="filters">
+						<div class="filters__ttl">
+							<div class="tooltip">
+								<p>Form templates</p>
+								<div class="tooltip__ico js-tooltip" title="Form templates Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span>
+								</div>
+							</div>
+						</div>
+						<div class="filters__in">
+							<div class="toggle-btn js-search-table">
+								<input type="search" placeholder="Search table">
+								<i class="icon icon-zoom"></i>
+							</div>
+							<div class="dropdown js-dropdown">
+								<p class="dropdown__item">Settings</p>
+								//=include partials/all-settings.html
+							</div>
+						</div>
+					</div>
+					<!-- end filters -->
+					<div class="tablewrap__in">
+						<!-- begin scrollbar  -->
+						<div class="scrollbar js-scrollbar">
+							<!-- begin fake-header  -->
+							<div class="fake-header js-fake-head">
+								<table class="table"></table>
+							</div>
+							<!-- end fake-header -->
+							<!-- begin table  -->
+							<table class="table">
+								<tr class="table__head js-clone-head">
+									<th title="ID" width="115" data-id="id"><p>ID</p></th>
+									<th title="Name" width="406" data-id="name"><p>Name</p></th>
+									<th title="Type" width="135" data-id="type"><p>Type</p></th>
+									<th title="Submissions" width="107" data-id="submissions" class="cell-right"><p>Submissions</p></th>
+									<th title="Last submission" width="132" data-id="lastsubmission" class='cell-right is-active'><p>Last submission</p></th>
+								</tr>
+								<tr class="js-link" data-href="http://www.google.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico library-ico"></i>
+											<span>FT12522</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p class="table__text">Advertising & Marketing Materials</p>
+									</td>
+									<td>
+										<p class="table__text">Compliance form</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text" data-popup="library-submission">3</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">Aug 10, 2015</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico library-ico"></i>
+											<span>FT12522</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p class="table__text">Background Check</p>
+									</td>
+									<td>
+										<p class="table__text">Compliance form</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text" data-popup="library-submission">1</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">Aug 10, 2015</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.google.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico library-ico"></i>
+											<span>FT12522</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p class="table__text">Brokerage Account Disclosure or Request</p>
+									</td>
+									<td>
+										<p class="table__text">Compliance form</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text" data-popup="library-submission">8</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">Aug 10, 2015</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico library-ico"></i>
+											<span>FT12522</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p class="table__text">Brokerage Account Statements for Supervisory Review</p>
+									</td>
+									<td>
+										<p class="table__text">Compliance form</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">0</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">Aug 10, 2015</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico library-ico"></i>
+											<span>FT12522</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p class="table__text">Co-Marketing Agreement Request</p>
+									</td>
+									<td>
+										<p class="table__text">Compliance form</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">0</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">Aug 10, 2015</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico library-ico"></i>
+											<span>FT12522</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p class="table__text">Communications Log for Reps</p>
+									</td>
+									<td>
+										<p class="table__text">Compliance form</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">0</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">Aug 10, 2015</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico library-ico"></i>
+											<span>FT12522</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p class="table__text">Customer Identification Form - Entity: GCS Verification</p>
+									</td>
+									<td>
+										<p class="table__text">Legal template</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">0</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">Aug 10, 2015</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.google.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico library-ico"></i>
+											<span>FT12522</span>
+										</div>
+									</td>
+									<td class="table__name js-plus-more">
+										<span>Customer Identification Form - Individual: GCS Verification</span>
+									</td>
+									<td>
+										<p class="table__text">Legal template</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">0</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">Aug 10, 2015</p>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.imgur.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico library-ico"></i>
+											<span>FT12522</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p class="table__text">Disclosure - Customer Complaint</p>
+									</td>
+									<td>
+										<p class="table__text">Legal template</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">0</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">Aug 10, 2015</p>
+									</td>
+								</tr>
+							</table>
+							<!-- end table -->
+						</div>
+						<!-- end scrollbar -->
+						<!-- begin sidedrop  -->
+						<div class="sidedrop js-sidedrop">
+							<table class="table">
+								<tr class="table__head js-row-head">
+									<td>&nbsp;</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Show submissions</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Show submissions</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Show submissions</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Show submissions</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Show submissions</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Show submissions</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Show submissions</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Show submissions</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Show submissions</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!-- end sidedrop -->
+					</div>
+				</div>
+				<!-- end tablewrap -->
+				<div class="back-to-top"><a href="#" class="js-top"><i class="icon icon-arr-top"></i><span>Back to top</span></a></div>
+			</div>
+		</div>
+	</div>
+	//=include partials/footer.html
+</div>
+<!-- END out-->
+<div class="overlay">
+	//=include partials/popup-library-submission.html
+</div>
+</body>
+</html>

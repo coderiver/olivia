@@ -70,6 +70,7 @@
 	vertical-align: middle
 	cursor: pointer
 	+vertical
+	+tr(width 0.3s)
 	&.is-active
 		background: #828c92
 		border-color: #828c92
@@ -82,10 +83,12 @@
 		.icon-sidebar
 			&:after
 				display: block
-	i
-		font-size: 16px
-		color: #6c757a
-		vertical-align: middle
+	&.search-opened
+		width: 208px
+		.icon-zoom
+			display: none
+		input
+			display: inline-block
 	.icon-sidebar
 		position: relative
 		&:after
@@ -96,6 +99,15 @@
 			right: 4px
 			margin-top: -3.5px
 			+arr(4, 7, #6c757a, l)
+	i
+		font-size: 16px
+		color: #6c757a
+		vertical-align: middle
+	input
+		display: none
+		height: 100%
+		box-shadow: none
+		border: none
 
 .tabs
 	display: inline-block
@@ -333,6 +345,9 @@
 	.icon-customer2,
 	.icon-corp
 		font-size: 17px
+	.deal-team-ico
+		width: 18px
+		background-size: 18px 16px
 	a:visited
 		color: #6c757a
 

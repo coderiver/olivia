@@ -157,6 +157,8 @@ body .tooltipster-base { z-index: 8; }
 
 .user-gray-ico { width: 16px; height: 16px; background-image: url("../img/svg-bg/user-gray.svg"); background-size: 16px 16px; }
 
+.deal-team-ico { width: 16px; height: 16px; background-image: url("../img/svg-bg/deal-team.svg"); background-size: 16px 16px; }
+
 .icon-customer2, .icon-corp { color: #3caca2; }
 .icon-customer2.is-disabled, .icon-corp.is-disabled { color: #CFD5E0; }
 
@@ -780,15 +782,19 @@ input.is-error::placeholder { color: #6c757a; }
 .filters .dropdown { margin: 0 4px; vertical-align: middle; }
 .filters .dropdown.is-active { z-index: 2; }
 
-.toggle-btn { display: inline-block; width: 33px; height: 33px; margin: 0 4px; border: 1px solid #cfd5e0; -webkit-border-radius: 4px; border-radius: 4px; vertical-align: middle; cursor: pointer; text-align: center; font-size: 0; }
+.toggle-btn { display: inline-block; width: 33px; height: 33px; margin: 0 4px; border: 1px solid #cfd5e0; -webkit-border-radius: 4px; border-radius: 4px; vertical-align: middle; cursor: pointer; text-align: center; font-size: 0; -webkit-transition: width 0.3s; transition: width 0.3s; }
 .toggle-btn:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .toggle-btn.is-active { background: #828c92; border-color: #828c92; }
 .toggle-btn.is-active i { color: #fff; }
 .toggle-btn.is-active .icon-sidebar:after { border-color: transparent #FFF transparent transparent; }
 .toggle-btn.is-opened .icon-sidebar:after { display: block; }
-.toggle-btn i { font-size: 16px; color: #6c757a; vertical-align: middle; }
+.toggle-btn.search-opened { width: 208px; }
+.toggle-btn.search-opened .icon-zoom { display: none; }
+.toggle-btn.search-opened input { display: inline-block; }
 .toggle-btn .icon-sidebar { position: relative; }
 .toggle-btn .icon-sidebar:after { content: ""; display: none; position: absolute; top: 50%; right: 4px; margin-top: -3.5px; width: 0px; height: 0px; border-style: solid; border-width: 3.5px 4px 3.5px 0; border-color: transparent #6c757a transparent transparent; }
+.toggle-btn i { font-size: 16px; color: #6c757a; vertical-align: middle; }
+.toggle-btn input { display: none; height: 100%; -webkit-box-shadow: none; box-shadow: none; border: none; }
 
 .tabs { display: inline-block; margin: 0 4px; font-size: 0; vertical-align: middle; border: 1px solid #cfd5e0; -webkit-border-radius: 4px; border-radius: 4px; }
 .tabs.is-table { display: table; width: 100%; table-layout: fixed; text-align: center; }
@@ -858,6 +864,7 @@ input.is-error::placeholder { color: #6c757a; }
 .table .svg-ico { display: inline-block; width: 16px; height: 16px; background-size: 16px 16px; vertical-align: middle; }
 .table .icon { vertical-align: middle; }
 .table .icon-customer2, .table .icon-corp { font-size: 17px; }
+.table .deal-team-ico { width: 18px; background-size: 18px 16px; }
 .table a:visited { color: #6c757a; }
 
 .sidebar { position: absolute; top: 0; left: 0; bottom: 13px; width: 0; background: #fff; -webkit-transition: width 0.3s; transition: width 0.3s; }
