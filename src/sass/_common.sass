@@ -139,12 +139,6 @@ body
 	background-image: url('../img/svg-bg/add-task.svg')
 	background-size: 70px 70px
 
-.add-library-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/add-library.svg')
-	background-size: 70px 70px
-
 .add-mail-ico
 	width: 70px
 	height: 70px
@@ -155,6 +149,12 @@ body
 	width: 70px
 	height: 70px
 	background-image: url('../img/svg-bg/add-report.svg')
+	background-size: 70px 70px
+
+.add-news-ico
+	width: 70px
+	height: 70px
+	background-image: url('../img/svg-bg/add-news.svg')
 	background-size: 70px 70px
 
 .add-user-ico
@@ -223,6 +223,7 @@ body
 	background-image: url('../img/svg-bg/user-gray.svg')
 	background-size: 16px 16px
 
+
 // default color for icons
 .icon-customer2, .icon-corp
 	color: #3caca2
@@ -264,9 +265,21 @@ body
 	color: #899BAC
 
 .icon-archive,
-.icon-folder-checked
+.icon-folder-checked,
+.icon-deals-team-closed,
+.icon-deals-team-archived
 	color: #bcc6cc
 
+.icon-add-library,
+.icon-add-news
+	color: #738BA1
+
+.icon-team
+	color: #96A1A7
+	background: transparent
+
+.icon-firm
+	color: #96A1A7
 
 // common blocks
 .l
@@ -830,7 +843,7 @@ input
 	+r(1120)
 		&__name span
 			display: none
-	+r(1000)
+	+r(1020)
 		&__img
 			margin-right: 0
 		&__name

@@ -180,6 +180,8 @@
 			color: #f76300
 		&:hover
 			color: #fff
+		&:empty
+			vertical-align: middle
 		.icon
 			vertical-align: middle
 	&__message
@@ -205,7 +207,7 @@
 		vertical-align: middle
 		.dropdown__item
 			text-transform: none
-	+r(1000)
+	+r(1020)
 		.dropdown
 			margin-right: 10px
 			&__item
@@ -263,7 +265,7 @@
 		visibility: visible
 		z-index: 11
 	&.is-staff
-		+clr
+		font-size: 0
 		.suggest
 			&__head
 				position: absolute
@@ -329,7 +331,8 @@
 	&__menu
 		margin-top: 10px
 	&__side
-		float: left
+		display: inline-block
+		vertical-align: bottom
 		padding: 0 100px 0 44px
 		&:first-child
 			padding-left: 7px

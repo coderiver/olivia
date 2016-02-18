@@ -1,39 +1,46 @@
 @font-face
 	font-family: "svgfont"
-	src: url('fonts/svgfont.eot')
-	src: url('fonts/svgfont.eot?#iefix') format('eot'), url('fonts/svgfont.woff') format('woff'), url('fonts/svgfont.woff2') format('woff2'), url('fonts/svgfont.ttf') format('truetype')
+	src: url('../fonts/svgfont.eot')
+	src: url('../fonts/svgfont.eot?#iefix') format('eot'), url('../fonts/svgfont.woff') format('woff'), url('../fonts/svgfont.woff2') format('woff2'), url('../fonts/svgfont.ttf') format('truetype')
 	font-weight: normal
 	font-style: normal
 
-$icon-archive: "\EA01"
-$icon-arr-right: "\EA02"
-$icon-arr-top: "\EA03"
-$icon-bell: "\EA04"
-$icon-bubble: "\EA05"
-$icon-calendar: "\EA06"
-$icon-check: "\EA07"
-$icon-checked: "\EA08"
-$icon-clip: "\EA09"
-$icon-close: "\EA0A"
-$icon-comment: "\EA0B"
-$icon-corp: "\EA0C"
-$icon-customer2: "\EA0D"
-$icon-delete: "\EA0E"
-$icon-filter: "\EA0F"
-$icon-folder-checked: "\EA10"
-$icon-folder: "\EA11"
-$icon-lock: "\EA12"
-$icon-logo-short: "\EA13"
-$icon-logo: "\EA14"
-$icon-marked: "\EA15"
-$icon-menu: "\EA16"
-$icon-pending: "\EA17"
-$icon-plus: "\EA18"
-$icon-sidebar: "\EA19"
-$icon-square-arr: "\EA1A"
-$icon-upload: "\EA1B"
-$icon-warn: "\EA1C"
-$icon-zoom: "\EA1D"
+$icon-add-library: "\EA01"
+$icon-add-news: "\EA02"
+$icon-add-report: "\EA03"
+$icon-archive: "\EA04"
+$icon-arr-right: "\EA05"
+$icon-arr-top: "\EA06"
+$icon-bell: "\EA07"
+$icon-bubble: "\EA08"
+$icon-calendar: "\EA09"
+$icon-check: "\EA0A"
+$icon-checked: "\EA0B"
+$icon-clip: "\EA0C"
+$icon-close: "\EA0D"
+$icon-comment: "\EA0E"
+$icon-corp: "\EA0F"
+$icon-customer2: "\EA10"
+$icon-deals-team-archived: "\EA11"
+$icon-deals-team-closed: "\EA12"
+$icon-delete: "\EA13"
+$icon-filter: "\EA14"
+$icon-firm: "\EA15"
+$icon-folder-checked: "\EA16"
+$icon-folder: "\EA17"
+$icon-lock: "\EA18"
+$icon-logo-short: "\EA19"
+$icon-logo: "\EA1A"
+$icon-marked: "\EA1B"
+$icon-menu: "\EA1C"
+$icon-pending: "\EA1D"
+$icon-plus: "\EA1E"
+$icon-sidebar: "\EA1F"
+$icon-square-arr: "\EA20"
+$icon-team: "\EA21"
+$icon-upload: "\EA22"
+$icon-warn: "\EA23"
+$icon-zoom: "\EA24"
 
 
 %icon
@@ -50,6 +57,12 @@ $icon-zoom: "\EA1D"
 	@extend %icon
 	display: inline-block
 
+.icon-add-library:before
+	content: $icon-add-library
+.icon-add-news:before
+	content: $icon-add-news
+.icon-add-report:before
+	content: $icon-add-report
 .icon-archive:before
 	content: $icon-archive
 .icon-arr-right:before
@@ -76,10 +89,16 @@ $icon-zoom: "\EA1D"
 	content: $icon-corp
 .icon-customer2:before
 	content: $icon-customer2
+.icon-deals-team-archived:before
+	content: $icon-deals-team-archived
+.icon-deals-team-closed:before
+	content: $icon-deals-team-closed
 .icon-delete:before
 	content: $icon-delete
 .icon-filter:before
 	content: $icon-filter
+.icon-firm:before
+	content: $icon-firm
 .icon-folder-checked:before
 	content: $icon-folder-checked
 .icon-folder:before
@@ -102,6 +121,8 @@ $icon-zoom: "\EA1D"
 	content: $icon-sidebar
 .icon-square-arr:before
 	content: $icon-square-arr
+.icon-team:before
+	content: $icon-team
 .icon-upload:before
 	content: $icon-upload
 .icon-warn:before
