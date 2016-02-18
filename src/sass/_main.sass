@@ -242,6 +242,7 @@
 		display: inline-block
 		min-width: 70px
 		min-height: 80px
+		font-size: 70px
 		&:before
 			content: $icon-arr-right
 			position: absolute
@@ -251,6 +252,9 @@
 			margin: -8px 0 0 20px
 			color: #bcc6cc
 			@extend %icon
+	.icon
+		vertical-align: top
+		border-radius: 3px
 	.paid-ico
 		position: relative
 		top: -10px
@@ -446,6 +450,9 @@
 		font-size: 14px
 		&:first-child
 			padding-right: 20px
+			.icon
+				font-size: 50px
+				border-radius: 2px
 	a
 		color: #097bf2
 		&:hover

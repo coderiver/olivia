@@ -92,14 +92,6 @@ body
 	background-position: 0 0
 	vertical-align: top
 
-.letter-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/letter.svg')
-	background-size: 70px 70px
-	&.is-disabled
-		background-image: url('../img/svg-bg/letter-disabled.svg')
-
 .memo-ico
 	width: 70px
 	height: 70px
@@ -266,7 +258,8 @@ body
 .icon-filter
 	color: #6c757a
 
-.icon-folder
+.icon-folder,
+.icon-deal-team
 	color: #899BAC
 
 .icon-archive,
@@ -285,6 +278,12 @@ body
 
 .icon-firm
 	color: #96A1A7
+
+.icon-letter
+	color: #fff
+	+g(#3c8cea, #327bd1)
+	&.is-disabled
+		background: #CFD5E0
 
 // common blocks
 .l
