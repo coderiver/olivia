@@ -892,7 +892,9 @@ input.is-error::placeholder { color: #6c757a; }
 .sidebar__ttl { position: relative; padding: 0 8px 0 24px; font-size: 0; color: #282828; background: #f7f8f9; height: 38px; border-top: 1px solid #dce0e7; line-height: 38px; cursor: pointer; font-family: "opensans-semibold", Arial, sans-serif; }
 .sidebar__ttl:before { content: "+"; position: absolute; top: 50%; left: 8px; margin-top: -9px; width: 16px; font-size: 18px; color: #979797; line-height: 1; }
 .sidebar__ttl:after { display: none; content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: #dce0e7; }
-.sidebar__ttl span { display: inline-block; max-width: -webkit-calc(100% - 100px); max-width: calc(100% - 100px); font-size: 13px; overflow: hidden; white-space: nowrap; vertical-align: middle; text-overflow: ellipsis; }
+.sidebar__ttl.is-two-filter span { max-width: -webkit-calc(100% - 160px); max-width: calc(100% - 160px); }
+.sidebar__ttl span { display: inline-block; max-width: -webkit-calc(100% - 103px); max-width: calc(100% - 103px); font-size: 13px; overflow: hidden; white-space: nowrap; vertical-align: middle; text-overflow: ellipsis; }
+.sidebar__ttl span:only-child { max-width: 100%; }
 .sidebar__option { position: relative; }
 .sidebar__option:hover { background: rgba(130, 140, 146, 0.5); }
 .sidebar__option:hover a { color: #fff; }
@@ -902,6 +904,7 @@ input.is-error::placeholder { color: #6c757a; }
 .sidebar__option.is-title:hover { background: none; }
 .sidebar__option.is-title:hover a { cursor: default; color: #BCC6CC; }
 .sidebar__option a { position: relative; display: block; padding: 4px 20px 4px 33px; font-size: 13px; color: #6c757a; }
+.sidebar__option a.is-truncated { max-width: 100%; overflow: hidden; vertical-align: middle; text-overflow: ellipsis; white-space: nowrap; }
 .sidebar__option .icon { font-size: 10px; }
 .sidebar__option .svg-ico { width: 10px; height: 10px; background-size: 10px 10px; }
 .sidebar__option .icon, .sidebar__option .svg-ico { position: absolute; top: 6.5px; left: 15px; }
@@ -910,13 +913,18 @@ input.is-error::placeholder { color: #6c757a; }
 .sidebar__link:hover { text-decoration: underline; }
 .sidebar__search { margin: 7px 0; padding: 0 20px; }
 .sidebar__search input { padding: 4px 12px; font-size: 12px; }
-.sidebar__filter { position: absolute; top: 50%; right: 10px; margin-top: -9px; font-size: 0; color: #fff; background: #828C92; -webkit-border-radius: 18px; border-radius: 18px; line-height: 17px; font-family: "opensans", Arial, sans-serif; }
-.sidebar__filter p { display: inline-block; max-width: 85px; padding: 0 5px; font-size: 10px; text-overflow: ellipsis; overflow: hidden; vertical-align: middle; white-space: nowrap; }
 .sidebar__cancel { display: inline-block; padding: 0 6px 0 5px; font-size: 5px; background: #6C757A; vertical-align: middle; -webkit-border-radius: 0 18px 18px 0; border-radius: 0 18px 18px 0; }
 .sidebar__cancel .icon-close { color: #FFF; }
 .sidebar-task-ico { position: absolute; top: 50%; left: 19px; margin-top: -4px; width: 6px; height: 6px; background: #F76300; -webkit-border-radius: 50%; border-radius: 50%; }
 .sidebar .ps-scrollbar-y-rail { right: 0; width: 3px; }
 .sidebar .ps-scrollbar-y-rail .ps-scrollbar-y { width: 3px; }
+
+.sidebar-filter { position: absolute; top: 50%; right: 10px; margin-top: -8px; font-family: "opensans", Arial, sans-serif; }
+.sidebar-filter__bl { float: left; margin: 0 2px; font-size: 0; background: #828C92; color: #fff; -webkit-border-radius: 18px; border-radius: 18px; line-height: 17px; }
+.sidebar-filter__bl:only-child { float: none; }
+.sidebar-filter__bl:only-child .sidebar-filter__label { max-width: 85px; }
+.sidebar-filter__bl .sidebar-filter__label { max-width: 60px; }
+.sidebar-filter__label { display: inline-block; padding: 0 4px; font-size: 10px; text-overflow: ellipsis; overflow: hidden; vertical-align: middle; white-space: nowrap; }
 
 .scrollbar { position: relative; padding-bottom: 13px; margin-right: 50px; background: #FFF; overflow: hidden; -webkit-transition: 0.3s ease; transition: 0.3s ease; }
 .scrollbar.is-sidebar { margin-left: 240px; }

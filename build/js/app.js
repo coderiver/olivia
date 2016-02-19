@@ -250,7 +250,6 @@ $(document).ready(function() {
 		}
 
 		function showActivityInSidebar() {
-
 			if ($('.js-sidebar-option').hasClass('is-active')) {
 				$('.js-sidebar-option').closest(parentWrap).find('.js-toggle-sidebar').addClass('is-active');
 			} else {
@@ -308,10 +307,16 @@ $(document).ready(function() {
 		function sidebarFilter() {
 			$('.js-sidebar-filter').click(function(evt) {
 				evt.stopPropagation();
+
+				if ( $(this).children().length === 1 ) {
+					$(this).closest('.js-sidebar-ttl').removeClass('is-two-filter');
+				} else if ( $(this).children().length === 0) {
+					$(this).remove();
+				}
 			});
 
 			$('.js-sidebar-filter-remove').click(function() {
-				$(this).parent().hide();
+				$(this).parent().remove();
 			});
 		}
 
