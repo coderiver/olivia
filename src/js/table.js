@@ -26,7 +26,9 @@ $(document).ready(function() {
 		});
 
 		// scroll table and scroll buttons
-		scrollTable.perfectScrollbar();
+		scrollTable.perfectScrollbar({
+			  wheelPropagation: true
+		});
 
 		function toggleDesignElem() {
 			if (scrollTable.hasClass('ps-active-x')) {
@@ -39,24 +41,39 @@ $(document).ready(function() {
 		function addScrollButtons() {
 			scrollTable.each(function() {
 				var buttonPrev = $('<div />', {'class': 'btn-prev'}),
-					buttonNext = $('<div />', {'class': 'btn-next'});
+					buttonNext = $('<div />', {'class': 'btn-next'}),
+					parentTabl = $(this).closest(scrollTable),
+					horzScroll = parentTabl.find('.ps-scrollbar-x'),
+					fakeHeader = parentTabl.parents(parentWrap).find('.js-fake-head');
 
 				buttonPrev.bind('click', function(evt) {
 					evt.stopPropagation();
-					var parentTabl = $(this).closest(scrollTable);
 
 					parentTabl.scrollLeft(parentTabl.scrollLeft() - 20);
+					fakeHeader.css('left', parentTabl.scrollLeft());
 				});
 
 				buttonNext.bind('click', function(evt) {
 					evt.stopPropagation();
-					var parentTabl = $(this).closest(scrollTable);
 
 					parentTabl.scrollLeft(parentTabl.scrollLeft() + 20);
+					fakeHeader.css('left', parentTabl.scrollLeft());
 				});
 
 				buttonPrev.appendTo($(this).find('.ps-scrollbar-x-rail'));
 				buttonNext.appendTo($(this).find('.ps-scrollbar-x-rail'));
+
+				$(this).on('ps-scroll-x', function() {
+					fakeHeader.css('left', -horzScroll.position().left);
+				});
+
+				$(this).on('ps-x-reach-start', function() {
+					fakeHeader.css('left', '0');
+				});
+
+				$(this).on('ps-x-reach-end', function() {
+					fakeHeader.css('left', -horzScroll.position().left);
+				});
 			});
 		}
 
@@ -128,11 +145,12 @@ $(document).ready(function() {
 
 		function toggleSidebar() {
 			$('.js-toggle-sidebar').click(function() {
-				var scrollTable = $(this).parents(parentWrap).find('.js-scrollbar');
+				var scrollTable = $(this).parents(parentWrap);
 
 				$(this).toggleClass('is-opened');
-				$(this).parents(parentWrap).find('.js-sidebar').toggleClass('is-active');
-				scrollTable.toggleClass('is-sidebar');
+				scrollTable.find('.js-sidebar').toggleClass('is-active');
+				scrollTable.find('.js-scrollbar').toggleClass('is-sidebar');
+				scrollTable.find('.js-fake-head').toggleClass('is-sidebar');
 
 				setTimeout(function() {
 					scrollTable.perfectScrollbar('update');
@@ -160,6 +178,7 @@ $(document).ready(function() {
 			});
 		}
 
+		// sidebar filter
 		function toggleSidebarContent() {
 			var sideBl    	  = $('.js-sidebar-bl'),
 				sideTitle	  = sideBl.find('.js-sidebar-ttl').outerHeight(),
@@ -219,28 +238,37 @@ $(document).ready(function() {
 			$(this).find('.js-clone-head').clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
 		});
 
-		function scrollFakeHeader() {
-			if ( scrollTable.length > 0 ) {
-				$(window).scroll(function() {
-					var scrollPos = $(window).scrollTop();
+		// function scrollFakeHeader() {
+		// 	if ( scrollTable.length > 0 ) {
+		// 		$(window).scroll(function() {
+		// 			var scrollPos = $(window).scrollTop();
 
-					parentWrap.each(function() {
-						var	tableTop = $(this).find('.js-scrollbar').offset().top,
-							childrenHeight = $(this).find('.js-link').outerHeight() * 4,
-							tableHeight = $(this).find('.js-scrollbar').outerHeight() - childrenHeight;
+		// 			parentWrap.each(function() {
+		// 				var	tableTop = $(this).find('.js-scrollbar').offset().top,
+		// 					childrenHeight = $(this).find('.js-link').outerHeight() * 4,
+		// 					tableHeight = $(this).find('.js-scrollbar').outerHeight() - childrenHeight;
 
-						if ( scrollPos > tableTop ) {
-							$(this).find('.js-fake-head').css('top', scrollPos - tableTop);
-							if ( scrollPos > tableTop + tableHeight) {
-								$(this).find('.js-fake-head').css('top', '0');
-							}
-						} else {
-							$(this).find('.js-fake-head').css('top', '0');
-						}
-					});
-				});
-			}
-		}
+		// 				if ( scrollPos > tableTop ) {
+		// 					$(this).find('.js-fake-head').css('top', scrollPos - tableTop);
+		// 					if ( scrollPos > tableTop + tableHeight) {
+		// 						$(this).find('.js-fake-head').css('top', '0');
+		// 					}
+		// 				} else {
+		// 					$(this).find('.js-fake-head').css('top', '0');
+		// 				}
+		// 			});
+		// 		});
+		// 	}
+		// }
+
+		// function scrollFakeHeader() {
+		// 	scrollTable.each(function() {
+		// 		var fakeHead = $(this).closest(parentWrap).find('.js-fake-head');
+		// 		$(this).on('scroll', function() {
+		// 			fakeHead.css('top', $(this).scrollTop());
+		// 		});
+		// 	});
+		// }
 
 		function filterTabs() {
 			$('.js-tab-el').click(function() {
@@ -275,7 +303,7 @@ $(document).ready(function() {
 		// summon them on load!
 		toggleDesignElem();
 		filterTabs();
-		scrollFakeHeader();
+		//scrollFakeHeader();
 		columnsToggle();
 		addScrollButtons();
 		measureSidedropHeight();

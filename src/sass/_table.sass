@@ -7,6 +7,7 @@
 		margin-bottom: 15px
 	&__in
 		position: relative
+		overflow: hidden
 		&.is-filtered
 			.scrollbar
 				min-height: 513px
@@ -358,6 +359,7 @@
 	bottom: 13px
 	width: 0
 	background: #fff
+	z-index: 2
 	+tr(width 0.3s)
 	&:before
 		display: none
@@ -383,7 +385,7 @@
 		border: 1px solid #dce0e7
 		border-width: 1px 1px 1px 0
 		opacity: 0
-		+tr(opacity 0.25s)
+		+tr(opacity 0.3s)
 	&__bl
 		overflow: hidden
 		+tr(height 0.3s)
@@ -577,7 +579,7 @@
 	+tr(0.3s ease)
 	&.is-sidebar
 		margin-left: 240px
-	.table
+	> .table
 		min-width: 1000px
 		margin-bottom: 0
 		background: #FFF
@@ -598,13 +600,14 @@
 				background: #eee
 	.ps-scrollbar-x-rail
 		width: 100% !important
-		bottom: 0 !important
+		bottom: 0
 		height: 14px
 		background: #f7f8f9
-		opacity: 1
+		opacity: 1 !important
 		border-radius: 0
 		border-top: 1px solid #dce0e7
 		border-bottom: 1px solid #dce0e7
+		z-index: 1
 		&:hover
 			.ps-scrollbar-x
 				&:before, &:after
@@ -729,6 +732,12 @@
 	left: 0
 	right: 0
 	z-index: 1
+	+tr(padding-left 0.3s)
+	tr
+		background: green !important
+		color: #fff !important
+	&.is-sidebar
+		padding-left: 240px
 
 // sum
 .sum
