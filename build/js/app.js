@@ -111,7 +111,10 @@ $(document).ready(function() {
 		var	parentWrap = $('.js-tablewrap'),
 			sidebar = parentWrap.find('.js-sidebar'),
 			row = parentWrap.find('.js-sidedrop .js-row'),
-			scrollTable = parentWrap.find('.js-scrollbar');
+			scrollTable = parentWrap.find('.js-scrollbar'),
+			scrollTableIn = parentWrap.find('.js-scrollbar table'),
+			winH = $(window).height(),
+			footerH = $('.js-footer').outerHeight(true);
 
 		// tablehead filter
 		$('.table th').click(function() {
@@ -139,9 +142,11 @@ $(document).ready(function() {
 
 		function toggleDesignElem() {
 			if (scrollTable.hasClass('ps-active-x')) {
-				scrollTable.siblings().addClass('is-scrollbar');
+				scrollTableIn.css('margin-bottom', '13px');
+				scrollTable.perfectScrollbar('update').siblings().addClass('is-scrollbar');
 			} else {
-				scrollTable.siblings().removeClass('is-scrollbar');
+				scrollTableIn.css('margin-bottom', '0');
+				scrollTable.perfectScrollbar('update').siblings().removeClass('is-scrollbar');
 			}
 		}
 
@@ -150,36 +155,25 @@ $(document).ready(function() {
 				var buttonPrev = $('<div />', {'class': 'btn-prev'}),
 					buttonNext = $('<div />', {'class': 'btn-next'}),
 					parentTabl = $(this).closest(scrollTable),
-					horzScroll = parentTabl.find('.ps-scrollbar-x'),
-					fakeHeader = parentTabl.parents(parentWrap).find('.js-fake-head');
+					fakeHeader = parentTabl.parents(parentWrap).find('.js-fake-head'),
+					sidedrop   = parentTabl.parents(parentWrap).find('.js-sidedrop table');
 
 				buttonPrev.bind('click', function(evt) {
 					evt.stopPropagation();
-
 					parentTabl.scrollLeft(parentTabl.scrollLeft() - 20);
-					fakeHeader.css('left', parentTabl.scrollLeft());
 				});
 
 				buttonNext.bind('click', function(evt) {
 					evt.stopPropagation();
-
 					parentTabl.scrollLeft(parentTabl.scrollLeft() + 20);
-					fakeHeader.css('left', parentTabl.scrollLeft());
 				});
 
 				buttonPrev.appendTo($(this).find('.ps-scrollbar-x-rail'));
 				buttonNext.appendTo($(this).find('.ps-scrollbar-x-rail'));
 
-				$(this).on('ps-scroll-x', function() {
-					fakeHeader.css('left', -horzScroll.position().left);
-				});
-
-				$(this).on('ps-x-reach-start', function() {
-					fakeHeader.css('left', '0');
-				});
-
-				$(this).on('ps-x-reach-end', function() {
-					fakeHeader.css('left', -horzScroll.position().left);
+				$(this).on('scroll', function() {
+					fakeHeader.css('left', -$(this).scrollLeft());
+					sidedrop.css('margin-top', -$(this).scrollTop());
 				});
 			});
 		}
@@ -339,43 +333,17 @@ $(document).ready(function() {
 			});
 		}
 
-		// create and scroll fake header
 		parentWrap.each(function() {
-			fakeHeadTable = $(this).find('.js-fake-head .table');
+			var fakeHeadTable = $(this).find('.js-fake-head .table'),
+				table = $(this).find('.js-scrollbar'),
+				tableStart = table.offset().top,
+				wrapperPadding = ($(this).outerHeight(true) - $(this).height()) / 2 + 1, // bottom padding + 1px border of main container
+				tableH = winH - tableStart - footerH - wrapperPadding;
+			// create and scroll fake header
 			$(this).find('.js-clone-head').clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
+			// measure table height
+			table.css('max-height', tableH);
 		});
-
-		// function scrollFakeHeader() {
-		// 	if ( scrollTable.length > 0 ) {
-		// 		$(window).scroll(function() {
-		// 			var scrollPos = $(window).scrollTop();
-
-		// 			parentWrap.each(function() {
-		// 				var	tableTop = $(this).find('.js-scrollbar').offset().top,
-		// 					childrenHeight = $(this).find('.js-link').outerHeight() * 4,
-		// 					tableHeight = $(this).find('.js-scrollbar').outerHeight() - childrenHeight;
-
-		// 				if ( scrollPos > tableTop ) {
-		// 					$(this).find('.js-fake-head').css('top', scrollPos - tableTop);
-		// 					if ( scrollPos > tableTop + tableHeight) {
-		// 						$(this).find('.js-fake-head').css('top', '0');
-		// 					}
-		// 				} else {
-		// 					$(this).find('.js-fake-head').css('top', '0');
-		// 				}
-		// 			});
-		// 		});
-		// 	}
-		// }
-
-		// function scrollFakeHeader() {
-		// 	scrollTable.each(function() {
-		// 		var fakeHead = $(this).closest(parentWrap).find('.js-fake-head');
-		// 		$(this).on('scroll', function() {
-		// 			fakeHead.css('top', $(this).scrollTop());
-		// 		});
-		// 	});
-		// }
 
 		function filterTabs() {
 			$('.js-tab-el').click(function() {
@@ -410,7 +378,6 @@ $(document).ready(function() {
 		// summon them on load!
 		toggleDesignElem();
 		filterTabs();
-		//scrollFakeHeader();
 		columnsToggle();
 		addScrollButtons();
 		measureSidedropHeight();
