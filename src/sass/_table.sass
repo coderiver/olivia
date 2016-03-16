@@ -19,15 +19,10 @@
 		&.is-filtered
 			.scrollbar
 				min-height: 513px
-				&:before
-					content: ""
-					position: absolute
-					left: 0
-					bottom: 13px
-					width: 100%
-					border-bottom: 1px solid #dce0e7
+				tr:last-child td
+					border-bottom: 1px solid #efefef
 			.sidedrop
-				bottom: 13px
+				bottom: 0
 				border-bottom: 1px solid #dce0e7
 				&:before
 					display: none
@@ -40,6 +35,9 @@
 				&:after
 					height: 14px
 					border-top: 1px solid #dce0e7
+				.table
+					tr:last-child td
+						border-bottom: 1px solid #efefef
 				&.is-scrollbar
 					&:before
 						display: block
@@ -584,7 +582,6 @@
 	position: relative
 	margin-right: 50px
 	background: #FFF
-	//border-bottom: 1px solid #efefef
 	overflow: hidden
 	+tr(0.3s ease)
 	&.is-sidebar
@@ -645,6 +642,12 @@
 			right: 0
 			width: 30px
 			+tr(0.2s linear)
+	.ps-scrollbar-y-rail
+		right: 0
+		width: 3px
+		.ps-scrollbar-y
+			width: 3px
+
 
 // scrolling buttons
 .btn-prev,
@@ -688,7 +691,7 @@
 		display: none
 		content: ""
 		position: absolute
-		bottom: 0
+		bottom: -1px
 		right: 0
 		width: 50px
 		height: 14px
@@ -716,6 +719,7 @@
 		tr:last-child td
 			border-bottom: none
 		td
+			height: 38px
 			padding: 0
 			vertical-align: middle
 			&:first-child
@@ -749,6 +753,7 @@
 	left: 0
 	right: 0
 	padding-right: 50px
+	overflow: hidden
 	z-index: 1
 	+tr(padding-left 0.3s)
 	&:after

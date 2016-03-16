@@ -203,13 +203,15 @@
 			+arr(4, 6, #f76300, l)
 	.dropdown
 		display: inline-block
-		margin-right: 23px
 		vertical-align: middle
+		&:first-child
+			margin-right: 23px
 		.dropdown__item
 			text-transform: none
 	+r(1020)
 		.dropdown
-			margin-right: 10px
+			&:first-child
+				margin-right: 10px
 			&__item
 				&:before
 					display: none

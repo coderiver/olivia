@@ -68,17 +68,28 @@ $(document).ready(function() {
 
 	// dropdown
 	$('body').on('click', '.js-dropdown', function(evt) {
-		// inner dropdown list clickable
-		if ( $(evt.target).closest('.js-inner').length > 0 ) {
-			return;
-		} else if ( $(evt.target).parent('.is-disabled').length > 0 ) {
-			evt.preventDefault();
-		}
+		var innerList = $(this).find('.js-inner'),
+			table = $(this).parents('.js-tablewrap').find('.js-scrollbar');
 
 		// hide one dropdown if another is opened in the same table
 		if ( $(this).parents('tr') ) {
 			$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active');
 		}
+
+		// setTimeout(function() {
+		// 	if ($(this).hasClass('is-active')) {
+		// 		var innerListH = innerList.offset().top + innerList.outerHeight(),
+		// 			tableH = table.offset().top + table.outerHeight();
+
+		// 		if (innerListH > tableH) {
+		// 			$(this).addClass('is-top');
+		// 		}
+
+		// 		console.log(innerListH, tableH);
+		// 	}
+		// }, 0);
+
+
 		$(this).toggleClass('is-active');
 
 		// hide one dropdown if another is opened, and they both have common parent

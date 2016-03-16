@@ -122,19 +122,6 @@ $(document).ready(function() {
 			$(this).addClass('is-active');
 		});
 
-		// detect click on table row
-		$('body').on('click', '.js-link', function(evt) {
-			var targetLink = $(this).data('href');
-
-			if ( $(evt.target).parents('.js-dropdown').length > 0 ) {
-				if ( !$(evt.target).parents('.dropdown__list').length > 0 ) {
-					evt.preventDefault();
-				}
-			} else if ( targetLink !== undefined && targetLink !== '' ) {
-				window.location.href = targetLink;
-			}
-		});
-
 		// scroll table and scroll buttons
 		scrollTable.perfectScrollbar({
 			  wheelPropagation: true
@@ -143,10 +130,10 @@ $(document).ready(function() {
 		function toggleDesignElem() {
 			if (scrollTable.hasClass('ps-active-x')) {
 				scrollTableIn.css('margin-bottom', '13px');
-				scrollTable.perfectScrollbar('update').siblings().addClass('is-scrollbar');
+				scrollTable.siblings().addClass('is-scrollbar');
 			} else {
 				scrollTableIn.css('margin-bottom', '0');
-				scrollTable.perfectScrollbar('update').siblings().removeClass('is-scrollbar');
+				scrollTable.siblings().removeClass('is-scrollbar');
 			}
 		}
 
@@ -246,17 +233,18 @@ $(document).ready(function() {
 
 		function toggleSidebar() {
 			$('.js-toggle-sidebar').click(function() {
-				var scrollTable = $(this).parents(parentWrap);
+				var parentWrap = $(this).parents(parentWrap),
+					scrollTable = parentWrap.find('.js-scrollbar');
 
 				$(this).toggleClass('is-opened');
-				scrollTable.find('.js-sidebar').toggleClass('is-active');
-				scrollTable.find('.js-scrollbar').toggleClass('is-sidebar');
-				scrollTable.find('.js-fake-head').toggleClass('is-sidebar');
+				parentWrap.find('.js-sidebar').toggleClass('is-active');
+				parentWrap.find('.js-scrollbar').toggleClass('is-sidebar');
+				parentWrap.find('.js-fake-head').toggleClass('is-sidebar');
 
 				setTimeout(function() {
 					scrollTable.perfectScrollbar('update');
-					toggleDesignElem();
 					measureSidedropHeight();
+					toggleDesignElem();
 				}, 300);
 			});
 		}
@@ -334,15 +322,23 @@ $(document).ready(function() {
 		}
 
 		parentWrap.each(function() {
+			// vars
 			var fakeHeadTable = $(this).find('.js-fake-head .table'),
 				table = $(this).find('.js-scrollbar'),
 				tableStart = table.offset().top,
 				wrapperPadding = ($(this).outerHeight(true) - $(this).height()) / 2 + 1, // bottom padding + 1px border of main container
-				tableH = winH - tableStart - footerH - wrapperPadding;
+				tableH = winH - tableStart - footerH - wrapperPadding,
+				el = $(this),
+				row = el.find('.js-link');
+
 			// create and scroll fake header
 			$(this).find('.js-clone-head').clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
-			// measure table height
-			table.css('max-height', tableH);
+
+			setTimeout(function() {
+				var rowH = row.outerHeight();
+				// measure table height
+				table.css('max-height', Math.floor(tableH / rowH) * rowH);
+			}, 100);
 		});
 
 		function filterTabs() {
@@ -400,7 +396,6 @@ $(document).ready(function() {
 	})();
 
 });
-
 
 // comments
 $(document).ready(function() {
@@ -529,17 +524,28 @@ $(document).ready(function() {
 
 	// dropdown
 	$('body').on('click', '.js-dropdown', function(evt) {
-		// inner dropdown list clickable
-		if ( $(evt.target).closest('.js-inner').length > 0 ) {
-			return;
-		} else if ( $(evt.target).parent('.is-disabled').length > 0 ) {
-			evt.preventDefault();
-		}
+		var innerList = $(this).find('.js-inner'),
+			table = $(this).parents('.js-tablewrap').find('.js-scrollbar');
 
 		// hide one dropdown if another is opened in the same table
 		if ( $(this).parents('tr') ) {
 			$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active');
 		}
+
+		// setTimeout(function() {
+		// 	if ($(this).hasClass('is-active')) {
+		// 		var innerListH = innerList.offset().top + innerList.outerHeight(),
+		// 			tableH = table.offset().top + table.outerHeight();
+
+		// 		if (innerListH > tableH) {
+		// 			$(this).addClass('is-top');
+		// 		}
+
+		// 		console.log(innerListH, tableH);
+		// 	}
+		// }, 0);
+
+
 		$(this).toggleClass('is-active');
 
 		// hide one dropdown if another is opened, and they both have common parent
