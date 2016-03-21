@@ -123,9 +123,7 @@ $(document).ready(function() {
 		});
 
 		// scroll table and scroll buttons
-		scrollTable.perfectScrollbar({
-			  wheelPropagation: true
-		});
+		scrollTable.perfectScrollbar();
 
 		function toggleDesignElem() {
 			if (scrollTable.hasClass('ps-active-x')) {
@@ -142,8 +140,8 @@ $(document).ready(function() {
 				var buttonPrev = $('<div />', {'class': 'btn-prev'}),
 					buttonNext = $('<div />', {'class': 'btn-next'}),
 					parentTabl = $(this).closest(scrollTable),
-					fakeHeader = parentTabl.parents(parentWrap).find('.js-fake-head'),
-					sidedrop   = parentTabl.parents(parentWrap).find('.js-sidedrop table');
+					fakeHeader = parentTabl.parents(parentWrap).find('.js-fake-head .table'),
+					sidedrop   = parentTabl.parents(parentWrap).find('.js-sidedrop .table');
 
 				buttonPrev.bind('click', function(evt) {
 					evt.stopPropagation();
@@ -321,13 +319,15 @@ $(document).ready(function() {
 			});
 		}
 
+		if ( document.documentElement.scrollHeight >= document.documentElement.clientHeight ) {
+			var delta = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		}
+
 		parentWrap.each(function() {
 			// vars
 			var fakeHeadTable = $(this).find('.js-fake-head .table'),
 				table = $(this).find('.js-scrollbar'),
-				tableStart = table.offset().top,
-				wrapperPadding = ($(this).outerHeight(true) - $(this).height()) / 2 + 1, // bottom padding + 1px border of main container
-				tableH = winH - tableStart - footerH - wrapperPadding,
+				tableH = table.outerHeight() - delta,
 				el = $(this),
 				row = el.find('.js-link');
 
@@ -337,8 +337,12 @@ $(document).ready(function() {
 			setTimeout(function() {
 				var rowH = row.outerHeight();
 				// measure table height
-				table.css('max-height', Math.floor(tableH / rowH) * rowH);
-			}, 100);
+				if (delta === 0) {
+					table.css('max-height', 'auto');
+				} else {
+					table.css('max-height', Math.floor(tableH / rowH) * rowH);
+				}
+			}, 0);
 		});
 
 		function filterTabs() {
@@ -370,6 +374,13 @@ $(document).ready(function() {
 				$(this).parent().removeClass('search-opened');
 			});
 		}
+
+		// check scrollbar to add/remove overflow styles for dropdowns
+		setTimeout(function() {
+			if ( scrollTable.get(0).scrollHeight <= scrollTable.height() ) {
+				parentWrap.find('.tablewrap__in').addClass('is-visible');
+			}
+		}, 100);
 
 		// summon them on load!
 		toggleDesignElem();
@@ -455,9 +466,13 @@ $(document).ready(function() {
 
 });
 $(document).ready(function() {
+	var win = $(window),
+		searchInput   = $('.js-search input'),
+		searchResults = $('.js-search-results');
+
 	// animate back to top
-	$('.js-top').click(function(e) {
-		e.preventDefault();
+	$('.js-top').click(function(evt) {
+		evt.preventDefault();
 		$( 'html, body' ).animate({
 			scrollTop: 0
 		}, 'slow');
@@ -524,27 +539,38 @@ $(document).ready(function() {
 
 	// dropdown
 	$('body').on('click', '.js-dropdown', function(evt) {
-		var innerList = $(this).find('.js-inner'),
-			table = $(this).parents('.js-tablewrap').find('.js-scrollbar');
-
-		// hide one dropdown if another is opened in the same table
-		if ( $(this).parents('tr') ) {
-			$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active');
+		// inner dropdown list clickable
+		if ($(evt.target).closest('.js-inner').length > 0 ) {
+			return;
+		} else if ( $(evt.target).parent('.is-disabled').length > 0 ) {
+			evt.preventDefault();
 		}
 
-		// setTimeout(function() {
-		// 	if ($(this).hasClass('is-active')) {
-		// 		var innerListH = innerList.offset().top + innerList.outerHeight(),
-		// 			tableH = table.offset().top + table.outerHeight();
+		// hide one dropdown if another is opened in the same table
+		if ($(this).parents('tr')) {
+			$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active is-top');
+		}
 
-		// 		if (innerListH > tableH) {
-		// 			$(this).addClass('is-top');
-		// 		}
+		// show dropdown on top side if the end of the table
+		if ($(this).parents('.js-sidedrop').length && !$(this).hasClass('is-disabled') && !$('.tablewrap__in').hasClass('is-visible')) {
+			var innerList = $(this).find('.js-inner'),
+				table = $(this).parents('.js-tablewrap').find('.js-scrollbar'),
+				innerListH = innerList.offset().top + innerList.outerHeight(),
+				tableH = table.get(0).scrollHeight;
 
-		// 		console.log(innerListH, tableH);
-		// 	}
-		// }, 0);
+			console.log(innerListH, tableH)
 
+			if (innerListH > tableH) {
+				$(this).addClass('is-top');
+			} else {
+				$(this).removeClass('is-top');
+			}
+		}
+
+		// unclickable when disabled
+		if ($(this).hasClass('is-disabled')) {
+			return;
+		}
 
 		$(this).toggleClass('is-active');
 
@@ -553,28 +579,22 @@ $(document).ready(function() {
 	});
 
 	// change dropdown options
-	$('.js-dropdown.is-form').on('click', '.js-inner a', function(e) {
-		e.preventDefault();
-		var text = $(this).html();
-		$(this).parents('.js-dropdown').removeClass('is-active').find('.dropdown__item').text(text);
-	});
+	function changeDropdownOpt() {
+		$('.js-dropdown.is-form').on('click', '.js-inner a', function(e) {
+			e.preventDefault();
+			var text = $(this).html();
 
-	$('.js-dropdown.is-disabled').click(function(evt) {
-		evt.stopPropagation();
-	});
+			$(this).parents('.js-dropdown').removeClass('is-active').find('.dropdown__item').text(text);
+		});
+	}
 
+	// hide elements on click
 	$('body').on('click', function(evt) {
-		// hide dropdown
 		if ( $(evt.target).parents('.js-dropdown').length === 0 ) {
-			$('.js-dropdown').removeClass('is-active');
+			$('.js-dropdown').removeClass('is-active is-top');
 		}
 
-		// hide search results
-		if ( $(evt.target).closest('.js-search-results').length > 0 || $(evt.target).closest('.js-search').length) {
-			return;
-		} else {
-			$('.js-search-results').removeClass('is-active');
-		}
+		searchResults.removeClass('is-active');
 	});
 
 	// fixed header in forms pages
@@ -584,11 +604,9 @@ $(document).ready(function() {
 			left: -scrLeft
 		});
 	}
-	scrollFixedElements();
 
 	function removeHeaderElem() {
-		var win = $(window),
-			headerFixed = $('.header.js-fixed');
+		var headerFixed = $('.header.js-fixed'),
 			headerEl  = headerFixed.find('.js-hide');
 
 		if ( win.scrollTop() === 0 ) {
@@ -598,25 +616,31 @@ $(document).ready(function() {
 		}
 	}
 
-	removeHeaderElem();
+	// search
+	function search() {
+		searchInput.on('focus', function() {
+			$(this).parent().addClass('is-active');
+		}).on('blur', function() {
+			$(this).parent().removeClass('is-active');
+		});
 
-	$(window).scroll(function() {
+		searchInput.on('keydown', function() {
+			if (!searchResults.hasClass('is-active')) {
+				searchResults.addClass('is-active');
+			}
+		});
+	}
+
+	$('.js-sysmessage-scroll').perfectScrollbar();
+
+	removeHeaderElem();
+	scrollFixedElements();
+	search();
+	changeDropdownOpt();
+
+	win.scroll(function() {
 		scrollFixedElements();
 		removeHeaderElem();
-	});
-
-	// search
-	$('.js-search input').on('focus', function() {
-		$(this).parent().addClass('is-active');
-	}).on('blur', function() {
-		$(this).parent().removeClass('is-active');
-	});
-
-	// search results
-	$( '.js-search input' ).on('keydown', function() {
-		if (!$('.js-search-results').hasClass('is-active')) {
-			$('.js-search-results').addClass('is-active');
-		}
 	});
 
 });

@@ -51,10 +51,12 @@
 		small
 			font-size: 13px
 			color: #738496
+		.icon
+			margin-right: 5px
+			vertical-align: middle
 		.icon-check
 			margin-left: 5px
 			font-size: 12px
-			vertical-align: middle
 	&__list
 		position: relative
 		text-align: center
@@ -377,16 +379,16 @@
 .sysmessage
 	position: absolute
 	top: 100%
-	margin-top: 12px
 	right: 0
 	width: 380px
+	margin-top: 12px
 	font-size: 13px
 	background: #fff
+	opacity: 0
+	visibility: hidden
 	border: 1px solid #dce0e7
 	border-radius: 4px
 	box-shadow: 0 2px 9px rgba(0, 0, 0, 0.5)
-	opacity: 0
-	visibility: hidden
 	z-index: -1
 	+tr(0.4s ease)
 	&:before,
@@ -402,9 +404,13 @@
 		left: 124px
 		+arr(20, 12, #f7f8f9, t)
 	&.is-active
+		z-index: 11
 		opacity: 1
 		visibility: visible
-		z-index: 11
+	&__container
+		position: relative
+		max-height: 350px
+		overflow: hidden
 	&__head
 		position: relative
 		padding: 10px 17px
@@ -420,12 +426,15 @@
 		padding: 10px 17px
 		color: #282828
 		background: #f7f8f9
-		border-bottom: 1px solid #dce0e7
+		border-top: 1px solid #dce0e7
 		+clr
-		&:last-child
-			border-bottom: none
+		&:first-child
+			border-top: none
 		&.no-bg
 			background: none
+		&.is-all
+			border-top: 1px solid #dce0e7
+			border-bottom: none
 		> .icon:last-child
 			position: absolute
 			top: 14px
@@ -475,6 +484,12 @@
 		color: #2caf24
 		margin-right: 5px
 		vertical-align: middle
+	.ps-scrollbar-y-rail
+		right: 0
+		width: 4px
+		.ps-scrollbar-y
+			width: 4px
+
 
 // search results
 .results
@@ -482,7 +497,7 @@
 	top: 100%
 	right: 0
 	width: 100%
-	min-width: 343px
+	width: 343px
 	margin-top: 2px
 	font-size: 13px
 	background: #FFF
@@ -490,7 +505,7 @@
 	visibility: hidden
 	border-radius: 4px
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25)
-	z-index: 2
+	z-index: 5
 	+tr(0.3s ease)
 	&.is-active
 		opacity: 1

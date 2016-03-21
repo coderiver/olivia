@@ -16,9 +16,7 @@ $(document).ready(function() {
 		});
 
 		// scroll table and scroll buttons
-		scrollTable.perfectScrollbar({
-			  wheelPropagation: true
-		});
+		scrollTable.perfectScrollbar();
 
 		function toggleDesignElem() {
 			if (scrollTable.hasClass('ps-active-x')) {
@@ -35,8 +33,8 @@ $(document).ready(function() {
 				var buttonPrev = $('<div />', {'class': 'btn-prev'}),
 					buttonNext = $('<div />', {'class': 'btn-next'}),
 					parentTabl = $(this).closest(scrollTable),
-					fakeHeader = parentTabl.parents(parentWrap).find('.js-fake-head'),
-					sidedrop   = parentTabl.parents(parentWrap).find('.js-sidedrop table');
+					fakeHeader = parentTabl.parents(parentWrap).find('.js-fake-head .table'),
+					sidedrop   = parentTabl.parents(parentWrap).find('.js-sidedrop .table');
 
 				buttonPrev.bind('click', function(evt) {
 					evt.stopPropagation();
@@ -214,13 +212,15 @@ $(document).ready(function() {
 			});
 		}
 
+		if ( document.documentElement.scrollHeight >= document.documentElement.clientHeight ) {
+			var delta = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		}
+
 		parentWrap.each(function() {
 			// vars
 			var fakeHeadTable = $(this).find('.js-fake-head .table'),
 				table = $(this).find('.js-scrollbar'),
-				tableStart = table.offset().top,
-				wrapperPadding = ($(this).outerHeight(true) - $(this).height()) / 2 + 1, // bottom padding + 1px border of main container
-				tableH = winH - tableStart - footerH - wrapperPadding,
+				tableH = table.outerHeight() - delta,
 				el = $(this),
 				row = el.find('.js-link');
 
@@ -230,8 +230,12 @@ $(document).ready(function() {
 			setTimeout(function() {
 				var rowH = row.outerHeight();
 				// measure table height
-				table.css('max-height', Math.floor(tableH / rowH) * rowH);
-			}, 100);
+				if (delta === 0) {
+					table.css('max-height', 'auto');
+				} else {
+					table.css('max-height', Math.floor(tableH / rowH) * rowH);
+				}
+			}, 0);
 		});
 
 		function filterTabs() {
@@ -263,6 +267,13 @@ $(document).ready(function() {
 				$(this).parent().removeClass('search-opened');
 			});
 		}
+
+		// check scrollbar to add/remove overflow styles for dropdowns
+		setTimeout(function() {
+			if ( scrollTable.get(0).scrollHeight <= scrollTable.height() ) {
+				parentWrap.find('.tablewrap__in').addClass('is-visible');
+			}
+		}, 100);
 
 		// summon them on load!
 		toggleDesignElem();
