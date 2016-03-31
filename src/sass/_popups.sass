@@ -1,3 +1,6 @@
+*[data-popup]
+	cursor: pointer
+
 .overlay
 	position: fixed
 	top: 0
@@ -59,6 +62,9 @@
 		font-size: 26px
 		color: #282828
 		line-height: 36px
+	&__subttl
+		margin-bottom: 9px
+		font-size: 20px
 	&__body
 		padding: 15px 20px 20px
 		&.no-b-pad
@@ -159,6 +165,28 @@
 		color: #097bf2
 		&:hover
 			text-decoration: underline
+	&__over
+		overflow: hidden
+		padding-left: 20px
+		&:only-child
+			padding-left: 0
+	&__img
+		width: 110px
+		max-width: 100%
+	&__table
+		color: #282828
+		tr
+			&:first-child td
+				padding-bottom: 8px
+		td
+			&:first-child
+				padding-right: 7px
+				color: #6c757a
+		a
+			text-decoration: underline
+			color: #6c757a
+			&:hover
+				text-decoration: none
 	.txt-bold
 		+opensans-sb
 	.icon-close
@@ -190,9 +218,13 @@
 		margin: 0
 	.dropdown
 		display: block
+		&.is-active
+			.dropdown__list
+				display: block
 	.dropdown__list
+		display: none
 		width: 100%
-		margin-top: -1px
+		margin-top: -3px
 		white-space: normal
 		a
 			max-width: initial
@@ -202,6 +234,14 @@
 		vertical-align: middle
 	.tooltip
 		vertical-align: middle
+	.reaction
+		margin: 0 -15px
+		li
+			font-size: 14px
+			&:after
+				display: none
+		&__link
+			margin: 2px 15px
 	.ps-container
 		> .ps-scrollbar-y-rail
 			width: 6px
@@ -217,11 +257,13 @@
 			border-top: 1px solid #efefef
 		&:last-child
 			border-bottom-color: transparent
+		&:only-child
+			border-bottom-color: #efefef
 		&:hover
 			background: #F7F8F9
 		a
 			display: block
-			padding: 9px 20px
+			padding: 11px 20px 10px
 			color: #282828
 			+clr
 	&__el
@@ -230,10 +272,13 @@
 		white-space: nowrap
 		.icon, .svg-ico
 			display: inline-block
-			margin-right: 5px
-			font-size: 13px
-			line-height: 1.2
+			margin-right: 13px
 			vertical-align: middle
+		.svg-ico
+			width: 16px
+			height: 16px
+		.icon
+			font-size: 16px
 		span
 			vertical-align: middle
 	&__span
@@ -244,22 +289,45 @@
 		text-overflow: ellipsis
 		white-space: nowrap
 		line-height: 1.2
-	&__ico
+	&__more
 		float: right
-		margin-top: 2px
-		font-size: 14px
-		color: #d8d8d8
-	.icon
-		margin-right: 8px
-		font-size: 17px
+		font-size: 0
+		color: #6c757a
+		.icon
+			font-size: 14px
+			color: #d8d8d8
+	&__info
+		display: inline-block
+		margin-right: 20px
+		font-size: 13px
+		vertical-align: middle
+		p
+			display: inline-block
+			padding: 0 10px
+		span
+			color: #f76300
+			+opensans-sb
 	.icon-folder
-		margin-right: 13px
-		font-size: 16px
+		margin-right: 10px
+		font-size: 15px
+		vertical-align: -7px
+	.icon-customer2
+		margin-right: 12px
+		font-size: 17px
 	.icon-square-arr
 		font-size: 14px
+		vertical-align: middle
 	.check input:checked + .check__span
 		+opensans-sb
 		&:before
 			border-color: #6C757A
 	.check__span
 		display: block
+
+
+.members
+	.popup__bl
+		padding: 20px
+		border-bottom: 1px solid #efefef
+		&:last-child
+			border-bottom: none

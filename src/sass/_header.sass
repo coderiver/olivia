@@ -365,6 +365,22 @@
 		height: 50px
 		background-size: 50px 50px
 		vertical-align: middle
+	.memo-ico
+		background-image: url('../img/svg-bg/memo.svg')
+		&.is-disabled
+			background-image: url('../img/svg-bg/memo-disabled.svg')
+	.letter-ico
+		background-image: url('../img/svg-bg/letter.svg')
+		&.is-disabled
+			background-image: url('../img/svg-bg/letter-disabled.svg')
+	.customer-ico
+		background-image: url('../img/svg-bg/customer.svg')
+		&.is-disabled
+			background-image: url('../img/svg-bg/customer-disabled.svg')
+	.transaction-ico
+		background-image: url('../img/svg-bg/transaction.svg')
+		&.is-disabled
+			background-image: url('../img/svg-bg/transaction-disabled.svg')
 	.icon
 		font-size: 50px
 		vertical-align: middle
@@ -397,7 +413,7 @@
 		position: absolute
 	&:before
 		top: -14px
-		left: 123px
+		left: 124px
 		+arr(22, 14, #dde2e7, t)
 	&:after
 		top: -12px

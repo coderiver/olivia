@@ -362,22 +362,24 @@
 	&__table
 		display: table
 		margin-bottom: 8px
-		small
-			padding-right: 10px
-			font-size: 13px
-			color: #282828
-		span, small
-			display: table-cell
-			vertical-align: middle
 	&__row
 		display: table-row
-	a
+	&__cell
+		display: table-cell
+		padding: 0 10px 3px 0
+		vertical-align: top
+		&.m-width
+			width: 50%
+		small
+			font-size: 13px
+			color: #282828
+	&__link
 		text-decoration: underline
 		color: #6c757a
 		&:hover
 			text-decoration: none
-	.activity__link
-		color: #6c757a
+	&__more
+		color: #96a0a6
 
 // task
 .task
@@ -463,6 +465,22 @@
 		width: 50px
 		height: 50px
 		background-size: 50px 50px
+	.memo-ico
+		background-image: url('../img/svg-bg/memo.svg')
+		&.is-disabled
+			background-image: url('../img/svg-bg/memo-disabled.svg')
+	.letter-ico
+		background-image: url('../img/svg-bg/letter.svg')
+		&.is-disabled
+			background-image: url('../img/svg-bg/letter-disabled.svg')
+	.customer-ico
+		background-image: url('../img/svg-bg/customer.svg')
+		&.is-disabled
+			background-image: url('../img/svg-bg/customer-disabled.svg')
+	.transaction-ico
+		background-image: url('../img/svg-bg/transaction.svg')
+		&.is-disabled
+			background-image: url('../img/svg-bg/transaction-disabled.svg')
 
 // comments
 .comments
@@ -579,25 +597,6 @@
 	.icon-warn
 		color: #f76300
 
-
-// bar
-.ok-bar
-	position: fixed
-	top: -100px
-	left: 0
-	right: 0
-	padding: 11px 0
-	text-align: center
-	font-size: 13px
-	background: #fff6e6
-	color: #282828
-	z-index: 100
-	+tr(1s)
-	&.is-active
-		top: 0
-	&__link
-		color: #097bf2
-
 // actions
 .actions
 	margin: 15px 0 40px
@@ -680,7 +679,7 @@
 
 // pagination
 .pagination
-	//margin-top: 20px
+	margin-top: 20px
 	text-align: center
 	font-size: 0
 	&__list

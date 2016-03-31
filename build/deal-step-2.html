@@ -30,7 +30,7 @@
 					<li class="menu__option">
 						<div class="dropdown is-menu js-dropdown">
 							<p class="dropdown__item">Me</p>
-							<ul class="dropdown__list js-inner">
+							<ul class="dropdown__list is-top-level js-inner">
 								<li><a href="#">Profile</a></li>
 								<li><a href="#">My Team</a></li>
 								<li><a href="#">Messages</a></li>
@@ -148,7 +148,7 @@
 						</a>
 						<a href="#" class="results__bl">
 							<div class="description">
-								<i class="icon icon-customer2"></i>
+								<i class="svg-ico customer-ico"></i>
 								<p>Steve Buscemi</p>
 							</div>
 							<p>...<span class="highlight">amount</span> invested $120 0000 USD</p>
@@ -161,7 +161,7 @@
 						</a>
 						<a href="#" class="results__bl">
 							<div class="description">
-								<i class="icon icon-letter"></i>
+								<i class="svg-ico letter-ico"></i>
 								<span>Engagement Letter John Snow</span>
 							</div>
 							<p>...managers said its important. Use Upload File <span class="highlight">amount</span> below, uplo..</p>
@@ -213,7 +213,7 @@
 						</div>
 						<div class="suggest__menu">
 							<a href="#" class="suggest__bl">
-								<i class="icon icon-letter"></i>
+								<i class="svg-ico letter-ico"></i>
 								<div class="suggest__in">
 									<p>Add Engagement Letter</p>
 								</div>
@@ -271,7 +271,7 @@
 				</div>
 				<!-- end start -->
 				<!-- begin tablewrap  -->
-				<div class="tablewrap js-tablewrap">
+				<div class="tablewrap js-tablewrap no-bottom-padding">
 					<div class="deal">
 						<div class="tooltip">
 							<p>Tasks</p>
@@ -307,7 +307,7 @@
 								<td class="table__drop">
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
-										<ul class="dropdown__list js-inner">
+										<ul class="dropdown__list is-top-level js-inner">
 											<li><a href="#">Open in new window</a></li>
 											<li><a href="#">Download all in ZIP</a></li>
 											<li><a href="#">Deal status</a></li>
@@ -324,7 +324,7 @@
 								</td>
 								<td>
 									<div class="description">
-										<i class="icon icon-letter"></i>
+										<i class="svg-ico letter-ico"></i>
 										<span>Submit Space X Engagement Letter</span>
 									</div>
 									<p class="table__text">Submitted Space X Engagement Letter Steve Buscemi. Document sent for review to Amanda Brown.</p>
@@ -335,7 +335,7 @@
 								<td class="table__drop">
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
-										<ul class="dropdown__list js-inner">
+										<ul class="dropdown__list is-top-level js-inner">
 											<li><a href="#">Open in new window</a></li>
 											<li><a href="#">Download all in ZIP</a></li>
 											<li><a href="#">Deal status</a></li>
@@ -352,13 +352,20 @@
 				<div class="activity">
 					<p class="activity__ttl">Recent activity</p>
 					<div class="activity__table">
-						<p><small>Aug 27</small> <span>You submited <a href="#">Engagement Letter Steve Buscemi</a></span></p>
-						<p><small>Aug 26</small> <span>You created Space X deal</span></p>
+						<div class="activity__row">
+							<p class="activity__cell"><small>Aug 27</small></p>
+							<p class="activity__cell">You submited <a href="#" class="activity__link">Engagement Letter Steve Buscemi</a></p>
+						</div>
+						<div class="activity__row">
+							<p class="activity__cell"><small>Aug 26</small></p>
+							<p class="activity__cell">You created Space X deal</p>
+						</div>
 					</div>
+					<a href="#" class="activity__more">See full activity log</a>
 				</div>
 				<!-- end activity -->
 				<!-- begin tablewrap  -->
-				<div class="tablewrap js-tablewrap">
+				<div class="tablewrap js-tablewrap no-top-padding">
 					<!-- begin filters  -->
 					<div class="filters">
 						<div class="filters__ttl">
@@ -370,7 +377,7 @@
 						<div class="filters__in">
 							<div class="dropdown js-dropdown">
 								<p class="dropdown__item">Settings</p>
-								<div class="dropdown__list js-inner js-check">
+								<div class="dropdown__list is-top-level js-inner js-check">
 									<div class="dropdown__check">
 										<label class="check" data-attr="letter">
 											<input type="checkbox" checked>
@@ -493,7 +500,7 @@
 							<tr class="js-link" data-href="http://www.google.com">
 								<td>
 									<div class="table__el">
-										<i class="icon icon-letter"></i>
+										<i class="svg-ico letter-ico"></i>
 										<span>EL12522</span>
 									</div>
 								</td>
@@ -518,7 +525,7 @@
 								<td class="table__drop">
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
-										<ul class="dropdown__list js-inner">
+										<ul class="dropdown__list is-top-level js-inner">
 											<li><a href="#">Open in new window</a></li>
 											<li><a href="#">Download all in ZIP</a></li>
 											<li><a href="#">Deal status</a></li>
@@ -572,7 +579,7 @@
 			<div class="steps">
 				<div class="steps__bl">
 					<div class="steps__icon">
-						<i class="icon icon-letter"></i>
+						<i class="svg-ico letter-ico"></i>
 					</div>
 					<p>Submit</p>
 					<p>Engagement Letter</p>
@@ -621,7 +628,7 @@
 			<p>Below are files attached to і [Document type]:</p>
 			<div class="popup__bl">
 				<div class="popup__el">
-					<i class="icon icon-letter"></i>
+					<i class="svg-ico letter-ico"></i>
 					<span class="popup__num">EL12522</span>
 					<span class="txt-bold">[Name of the form]</span>
 				</div>
@@ -656,7 +663,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Download all in ZIP</a></li>
 							<li><a href="#">Deal status</a></li>
@@ -683,7 +690,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Download all in ZIP</a></li>
 							<li><a href="#">Deal status</a></li>
@@ -710,7 +717,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Download all in ZIP</a></li>
 							<li><a href="#">Deal status</a></li>
@@ -737,7 +744,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Download all in ZIP</a></li>
 							<li><a href="#">Deal status</a></li>
@@ -764,7 +771,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Download all in ZIP</a></li>
 							<li><a href="#">Deal status</a></li>
@@ -791,7 +798,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Download all in ZIP</a></li>
 							<li><a href="#">Deal status</a></li>
@@ -818,7 +825,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Download all in ZIP</a></li>
 							<li><a href="#">Deal status</a></li>
@@ -845,7 +852,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Download all in ZIP</a></li>
 							<li><a href="#">Deal status</a></li>
@@ -872,7 +879,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Download all in ZIP</a></li>
 							<li><a href="#">Deal status</a></li>

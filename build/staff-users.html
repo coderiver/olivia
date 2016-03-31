@@ -33,7 +33,7 @@
 					<li class="menu__option">
 						<div class="dropdown is-menu js-dropdown">
 							<p class="dropdown__item">Other</p>
-							<ul class="dropdown__list js-inner">
+							<ul class="dropdown__list is-top-level js-inner">
 								<li><a href="#">Reporting</a></li>
 								<li><a href="#">Documents</a></li>
 								<li><a href="#">Customers</a></li>
@@ -54,7 +54,7 @@
 				<div class="helpers">
 					<div class="dropdown is-menu js-dropdown">
 						<div class="dropdown__item"><i class="dropdown__img is-img" style="background-image: url('img/profile.jpg');"></i><p class="dropdown__name">Steven <span>O'reilly</span></p></div>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Eugene Rudyy Profile</a></li>
 							<li><a href="#">Change password</a></li>
 							<li><a href="#" data-popup="popup-sign-in">Sign in as</a></li>
@@ -167,7 +167,7 @@
 						</a>
 						<a href="#" class="results__bl">
 							<div class="description">
-								<i class="icon icon-customer2"></i>
+								<i class="svg-ico customer-ico"></i>
 								<p>Steve Buscemi</p>
 							</div>
 							<p>...<span class="highlight">amount</span> invested $120 0000 USD</p>
@@ -180,7 +180,7 @@
 						</a>
 						<a href="#" class="results__bl">
 							<div class="description">
-								<i class="icon icon-letter"></i>
+								<i class="svg-ico letter-ico"></i>
 								<span>Engagement Letter John Snow</span>
 							</div>
 							<p>...managers said its important. Use Upload File <span class="highlight">amount</span> below, uplo..</p>
@@ -232,7 +232,7 @@
 										</div>
 									</a>
 									<a href="#" class="suggest__bl" data-popup="popup-add-letter">
-										<i class="icon icon-letter"></i>
+										<i class="svg-ico letter-ico"></i>
 										<div class="suggest__in">
 											<p>Add Engagement Letter</p>
 										</div>
@@ -316,7 +316,7 @@
 						</div>
 					<!-- end suggest -->
 				</div>
-				<div class="tablewrap no-bottom-margin js-tablewrap">
+				<div class="tablewrap no-bottom-padding js-tablewrap">
 					<!-- begin filters  -->
 					<div class="filters">
 						<div class="filters__ttl">
@@ -339,7 +339,7 @@
 							</div>
 							<div class="dropdown js-dropdown">
 								<p class="dropdown__item">Settings</p>
-								<div class="dropdown__list js-inner js-check">
+								<div class="dropdown__list is-top-level js-inner js-check">
 									<div class="dropdown__check">
 										<label class="check" data-attr="select">
 											<input type="checkbox">
@@ -507,11 +507,6 @@
 							</div>
 						</div>
 						<!-- end sidebar -->
-						<!-- begin fake-header  -->
-						<div class="fake-header js-fake-head">
-							<table class="table"></table>
-						</div>
-						<!-- end fake-header -->
 						<div class="scrollbar js-scrollbar">
 							<!-- begin table  -->
 							<table class="table">
@@ -524,7 +519,7 @@
 									<th class="cell-center" title="User tasks" width="133" data-id="mytasks"><p>User tasks</p></th>
 									<th class="cell-right" title="Last activity" width="133" data-id="mytasks"><p>Last activity</p></th>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr class="js-link" data-popup="popup-user">
 									<td>
 										<div class="table__el">
 											<i class="svg-ico user-gray-ico"></i>
@@ -554,7 +549,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr class="js-link">
 									<td>
 										<div class="table__el">
 											<i class="svg-ico user-gray-ico"></i>
@@ -580,7 +575,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr class="js-link">
 									<td>
 										<div class="table__el">
 											<i class="svg-ico user-gray-ico"></i>
@@ -606,7 +601,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr class="js-link">
 									<td>
 										<div class="table__el">
 											<i class="svg-ico user-gray-ico"></i>
@@ -634,7 +629,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr class="js-link">
 									<td>
 										<div class="table__el">
 											<i class="svg-ico user-gray-ico"></i>
@@ -660,7 +655,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr class="js-link" data-popup="popup-user-team">
 									<td>
 										<div class="table__el">
 											<i class="icon icon-team"></i>
@@ -686,7 +681,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr class="js-link">
 									<td>
 										<div class="table__el">
 											<i class="svg-ico user-gray-ico"></i>
@@ -712,7 +707,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr class="js-link">
 									<td>
 										<div class="table__el">
 											<i class="icon icon-firm"></i>
@@ -749,7 +744,7 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
+											<ul class="dropdown__list is-top-level js-inner">
 												<li><a href="#">Open in new window</a></li>
 												<li><a href="#">Re-assign</a></li>
 												<li><a href="#">Edit</a></li>
@@ -765,7 +760,7 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
+											<ul class="dropdown__list is-top-level js-inner">
 												<li><a href="#">Open in new window</a></li>
 												<li><a href="#">Re-assign</a></li>
 												<li><a href="#">Edit</a></li>
@@ -781,7 +776,7 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
+											<ul class="dropdown__list is-top-level js-inner">
 												<li><a href="#">Open in new window</a></li>
 												<li><a href="#">Re-assign</a></li>
 												<li><a href="#">Edit</a></li>
@@ -797,7 +792,7 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
+											<ul class="dropdown__list is-top-level js-inner">
 												<li><a href="#">Open in new window</a></li>
 												<li><a href="#">Re-assign</a></li>
 												<li><a href="#">Edit</a></li>
@@ -813,7 +808,7 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
+											<ul class="dropdown__list is-top-level js-inner">
 												<li><a href="#">Open in new window</a></li>
 												<li><a href="#">Re-assign</a></li>
 												<li><a href="#">Edit</a></li>
@@ -829,7 +824,7 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
+											<ul class="dropdown__list is-top-level js-inner">
 												<li><a href="#">Open in new window</a></li>
 												<li><a href="#">Re-assign</a></li>
 												<li><a href="#">Edit</a></li>
@@ -845,7 +840,7 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
+											<ul class="dropdown__list is-top-level js-inner">
 												<li><a href="#">Open in new window</a></li>
 												<li><a href="#">Re-assign</a></li>
 												<li><a href="#">Edit</a></li>
@@ -861,7 +856,7 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list js-inner">
+											<ul class="dropdown__list is-top-level js-inner">
 												<li><a href="#">Open in new window</a></li>
 												<li><a href="#">Re-assign</a></li>
 												<li><a href="#">Edit</a></li>
@@ -876,6 +871,11 @@
 							</table>
 						</div>
 						<!-- end sidedrop -->
+						<!-- begin fake-header  -->
+						<div class="fake-header js-fake-head">
+							<table class="table"></table>
+						</div>
+						<!-- end fake-header -->
 					</div>
 				</div>
 				<div class="back-to-top"><a href="#" class="js-top"><i class="icon icon-arr-top"></i><span>Back to top</span></a></div>
@@ -915,7 +915,7 @@
 				</div>
 				<div class="dropdown js-dropdown">
 					<p class="dropdown__item">Filter by type:</p>
-					<ul class="dropdown__list js-inner">
+					<ul class="dropdown__list is-top-level js-inner">
 						<li><a href="#" class="is-active">All types</a></li>
 						<li><a href="#">Attachment</a></li>
 						<li><a href="#">Deal</a></li>
@@ -952,7 +952,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Show submissions</a></li>
 						</ul>
@@ -975,7 +975,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Show submissions</a></li>
 						</ul>
@@ -998,7 +998,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Show submissions</a></li>
 						</ul>
@@ -1021,7 +1021,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Show submissions</a></li>
 						</ul>
@@ -1044,7 +1044,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Show submissions</a></li>
 						</ul>
@@ -1067,7 +1067,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Show submissions</a></li>
 						</ul>
@@ -1090,7 +1090,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Show submissions</a></li>
 						</ul>
@@ -1113,7 +1113,7 @@
 				<td class="table__drop">
 					<div class="dropdown js-dropdown">
 						<span class="dropdown__bl"></span>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">Open in new window</a></li>
 							<li><a href="#">Show submissions</a></li>
 						</ul>
@@ -1152,7 +1152,7 @@
 			<ul class="popup-list">
 				<li class="popup-list__option">
 				 	<a href="#">
-				 		<div class="popup-list__ico">
+				 		<div class="popup-list__more">
 				 			<i class="icon icon-square-arr"></i>
 				 		</div>
 						<div class="popup-list__el">
@@ -1162,7 +1162,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1172,7 +1172,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1182,7 +1182,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1192,7 +1192,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1202,7 +1202,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1212,7 +1212,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1222,7 +1222,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1232,7 +1232,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1261,7 +1261,7 @@
 			<ul class="popup-list">
 				<li class="popup-list__option">
 				 	<a href="#" data-popup="popup-new-customer">
-				 		<div class="popup-list__ico">
+				 		<div class="popup-list__more">
 				 			<i class="icon icon-square-arr"></i>
 				 		</div>
 						<div class="popup-list__el">
@@ -1271,7 +1271,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-new-customer">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1281,7 +1281,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-new-customer">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1291,7 +1291,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-new-customer">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1301,7 +1301,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-new-customer">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1311,7 +1311,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-new-customer">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1321,7 +1321,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-new-customer">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1331,7 +1331,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-new-customer">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1341,7 +1341,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-new-customer">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1370,7 +1370,7 @@
 			<ul class="popup-list">
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-transaction-report">
-				 		<div class="popup-list__ico">
+				 		<div class="popup-list__more">
 				 			<i class="icon icon-square-arr"></i>
 				 		</div>
 						<div class="popup-list__el">
@@ -1380,7 +1380,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-transaction-report">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1390,7 +1390,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-transaction-report">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1400,7 +1400,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-transaction-report">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1410,7 +1410,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-transaction-report">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1420,7 +1420,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-transaction-report">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1430,7 +1430,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-transaction-report">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1440,7 +1440,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-transaction-report">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1450,7 +1450,7 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#" data-popup="popup-transaction-report">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1490,98 +1490,33 @@
 			<ul class="popup-list is-hidden js-popup-list">
 				<li class="popup-list__option">
 				 	<a href="#">
-				 		<div class="popup-list__ico">
+				 		<div class="popup-list__more">
 				 			<i class="icon icon-square-arr"></i>
 				 		</div>
 						<div class="popup-list__el">
 							<label class="check is-light-border">
 								<input type="checkbox">
-								<span class="check__span"><i class="icon icon-customer2"></i><span class="popup-list__span">Albert June</span></span>
+								<span class="check__span"><i class="svg-ico customer-ico"></i><span class="popup-list__span">Albert June</span></span>
 							</label>
 						</div>
 					</a>
 				</li>
 				<li class="popup-list__option">
 					<a href="#">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
 							<label class="check is-light-border">
 								<input type="checkbox">
-								<span class="check__span"><i class="icon icon-customer2"></i><span class="popup-list__span">Brian Adams</span></span>
+								<span class="check__span"><i class="svg-ico customer-ico"></i><span class="popup-list__span">Brian Adams</span></span>
 							</label>
 						</div>
 					</a>
 				</li>
 				<li class="popup-list__option">
 					<a href="#">
-						<div class="popup-list__ico">
-							<i class="icon icon-square-arr"></i>
-						</div>
-						<div class="popup-list__el">
-							<label class="check is-light-border">
-								<input type="checkbox">
-								<span class="check__span"><i class="icon icon-corp"></i><span class="popup-list__span">Brothers Corp</span></span>
-							</label>
-						</div>
-					</a>
-				</li>
-				<li class="popup-list__option">
-					<a href="#">
-						<div class="popup-list__ico">
-							<i class="icon icon-square-arr"></i>
-						</div>
-						<div class="popup-list__el">
-							<label class="check is-light-border">
-								<input type="checkbox">
-								<span class="check__span"><i class="icon icon-customer2"></i><span class="popup-list__span">Clint Eastwwod</span></span>
-							</label>
-						</div>
-					</a>
-				</li>
-				<li class="popup-list__option">
-					<a href="#">
-						<div class="popup-list__ico">
-							<i class="icon icon-square-arr"></i>
-						</div>
-						<div class="popup-list__el">
-							<label class="check is-light-border">
-								<input type="checkbox">
-								<span class="check__span"><i class="icon icon-customer2"></i><span class="popup-list__span">Jack Dorsey</span></span>
-							</label>
-						</div>
-					</a>
-				</li>
-				<li class="popup-list__option">
-					<a href="#">
-						<div class="popup-list__ico">
-							<i class="icon icon-square-arr"></i>
-						</div>
-						<div class="popup-list__el">
-							<label class="check is-light-border">
-								<input type="checkbox">
-								<span class="check__span"><i class="icon icon-customer2"></i><span class="popup-list__span">Albert June</span></span>
-							</label>
-						</div>
-					</a>
-				</li>
-				<li class="popup-list__option">
-					<a href="#">
-						<div class="popup-list__ico">
-							<i class="icon icon-square-arr"></i>
-						</div>
-						<div class="popup-list__el">
-							<label class="check is-light-border">
-								<input type="checkbox">
-								<span class="check__span"><i class="icon icon-customer2"></i><span class="popup-list__span">Brian Adams</span></span>
-							</label>
-						</div>
-					</a>
-				</li>
-				<li class="popup-list__option">
-					<a href="#">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
@@ -1594,13 +1529,78 @@
 				</li>
 				<li class="popup-list__option">
 					<a href="#">
-						<div class="popup-list__ico">
+						<div class="popup-list__more">
 							<i class="icon icon-square-arr"></i>
 						</div>
 						<div class="popup-list__el">
 							<label class="check is-light-border">
 								<input type="checkbox">
-								<span class="check__span"><i class="icon icon-customer2"></i><span class="popup-list__span">Clint Eastwwod</span></span>
+								<span class="check__span"><i class="svg-ico customer-ico"></i><span class="popup-list__span">Clint Eastwwod</span></span>
+							</label>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span"><i class="svg-ico customer-ico"></i><span class="popup-list__span">Jack Dorsey</span></span>
+							</label>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span"><i class="svg-ico customer-ico"></i><span class="popup-list__span">Albert June</span></span>
+							</label>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span"><i class="svg-ico customer-ico"></i><span class="popup-list__span">Brian Adams</span></span>
+							</label>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span"><i class="icon icon-corp"></i><span class="popup-list__span">Brothers Corp</span></span>
+							</label>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span"><i class="svg-ico customer-ico"></i><span class="popup-list__span">Clint Eastwwod</span></span>
 							</label>
 						</div>
 					</a>
@@ -1623,7 +1623,7 @@
 					<p class="form__subttl">Seller</p>
 					<div class="dropdown is-disabled js-dropdown">
 						<p class="dropdown__item">Choose seller</p>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">USA</a></li>
 							<li><a href="#">Ukraine</a></li>
 							<li><a href="#">China</a></li>
@@ -1636,7 +1636,7 @@
 					<p class="form__subttl">Buyer</p>
 					<div class="dropdown is-disabled js-dropdown">
 						<p class="dropdown__item">Choose seller</p>
-						<ul class="dropdown__list js-inner">
+						<ul class="dropdown__list is-top-level js-inner">
 							<li><a href="#">USA</a></li>
 							<li><a href="#">Ukraine</a></li>
 							<li><a href="#">China</a></li>
@@ -1656,6 +1656,281 @@
 					<button class="btn btn-no" type="button">Cancel</button>
 				</div>
 			</form>
+		</div>
+	</div>
+	<div class="popup js-popup" id="popup-user">
+		<div class="popup__head">
+			<p>Active Rep</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<div class="popup__bl">
+				<div class="popup__el">
+					<img class="popup__img" src="img/profile5.jpg" alt="">
+				</div>
+				<div class="popup__over">
+					<h3 class="popup__subttl">Brian Dunn</h3>
+					<table class="popup__table">
+						<tr>
+							<td>Roles:</td>
+							<td>Auditor, Prospect</td>
+						</tr>
+						<tr>
+							<td>Supervisor:</td>
+							<td>Amanda Brown</td>
+						</tr>
+						<tr>
+							<td>Deal sup:</td>
+							<td>Amanda Brown</td>
+						</tr>
+						<tr>
+							<td>Firm</td>
+							<td><a href="#">Chasels&Co</a></td>
+						</tr>
+						<tr>
+							<td>E-mail:</td>
+							<td><a href="mailto: alixvanessa@gmail.com">alixvanessa@gmail.com</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<ul class="reaction">
+				<li><a class="reaction__link" href="#">Assign task</a></li>
+				<li><a class="reaction__link" href="#">Send message</a></li>
+				<li><a class="reaction__link" href="#">View as user</a></li>
+				<li><a class="reaction__link" href="#">Edit</a></li>
+			</ul>
+		</div>
+		<ul class="popup-list">
+			<li class="popup-list__option">
+			 	<a href="#">
+			 		<div class="popup-list__more">
+						<div class="popup-list__info">
+							<p>My: <span>2</span></p>
+							<p>User: 4</p>
+						</div>
+			 			<i class="icon icon-square-arr"></i>
+			 		</div>
+					<div class="popup-list__el">
+						<i class="icon icon-warn"></i><span class="popup-list__span">Tasks</span>
+					</div>
+				</a>
+			</li>
+			<li class="popup-list__option">
+				<a href="#">
+					<div class="popup-list__more">
+						<i class="icon icon-square-arr"></i>
+					</div>
+					<div class="popup-list__el">
+						<i class="svg-ico entry-ico"></i><span class="popup-list__span">Entries</span>
+					</div>
+				</a>
+			</li>
+			<li class="popup-list__option">
+				<a href="#">
+					<div class="popup-list__more">
+						<i class="icon icon-square-arr"></i>
+					</div>
+					<div class="popup-list__el">
+						<i class="icon icon-folder"></i><span class="popup-list__span">Deals</span>
+					</div>
+				</a>
+			</li>
+			<li class="popup-list__option">
+				<a href="#">
+					<div class="popup-list__more">
+						<i class="icon icon-square-arr"></i>
+					</div>
+					<div class="popup-list__el">
+						<i class="svg-ico library-ico"></i><span class="popup-list__span">Compliance</span>
+					</div>
+				</a>
+			</li>
+			<li class="popup-list__option">
+				<a href="#">
+					<div class="popup-list__more">
+						<i class="icon icon-square-arr"></i>
+					</div>
+					<div class="popup-list__el">
+						<i class="svg-ico letter-ico"></i><span class="popup-list__span">Engagement Letters</span>
+					</div>
+				</a>
+			</li>
+			<li class="popup-list__option">
+				<a href="#">
+					<div class="popup-list__more">
+						<i class="icon icon-square-arr"></i>
+					</div>
+					<div class="popup-list__el">
+						<i class="svg-ico memo-ico"></i><span class="popup-list__span">Deal Memos</span>
+					</div>
+				</a>
+			</li>
+			<li class="popup-list__option">
+				<a href="#">
+					<div class="popup-list__more">
+						<i class="icon icon-square-arr"></i>
+					</div>
+					<div class="popup-list__el">
+						<i class="svg-ico customer-ico"></i><span class="popup-list__span">Customers</span>
+					</div>
+				</a>
+			</li>
+			<li class="popup-list__option">
+				<a href="#">
+					<div class="popup-list__more">
+						<i class="icon icon-square-arr"></i>
+					</div>
+					<div class="popup-list__el">
+						<i class="svg-ico transaction-ico"></i><span class="popup-list__span">Transactions</span>
+					</div>
+				</a>
+			</li>
+			<li class="popup-list__option">
+				<a href="#">
+					<div class="popup-list__more">
+						<i class="icon icon-square-arr"></i>
+					</div>
+					<div class="popup-list__el">
+						<i class="icon icon-team"></i><span class="popup-list__span">Team</span>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="popup js-popup" id="popup-user-team">
+		<div class="popup__head">
+			<p>Active Rep</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__scroll js-popup-scroll">
+			<div class="popup__body">
+				<div class="popup__bl">
+					<div class="popup__el">
+						<img class="popup__img" src="img/team-profile.jpg" alt="">
+					</div>
+					<div class="popup__over">
+						<h3 class="popup__subttl">A-Team</h3>
+						<ul class="reaction">
+							<li><a class="reaction__link" href="#">Edit team</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<ul class="popup-list">
+				<li class="popup-list__option">
+					<a href="#">
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Team deals</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="members">
+				<p class="members__ttl">Team Members</p>
+				<div class="popup__bl">
+					<div class="dropdown js-dropdown">
+						<span class="dropdown__bl"></span>
+						<ul class="dropdown__list is-top-level js-inner">
+							<li><a href="#">Open user</a></li>
+							<li><a href="#">Assign task</a></li>
+							<li><a href="#">Send message</a></li>
+							<li><a href="#">Sign in as user</a></li>
+							<li><a href="#">Edit</a></li>
+							<li><hr></li>
+							<li><a href="#">My tasks</a></li>
+							<li><a href="#">User tasks</a></li>
+							<li><a href="#">Entries</a></li>
+							<li><a href="#">Deals</a></li>
+							<li><a href="#">Compliance</a></li>
+							<li><a href="#">Engagement letters</a></li>
+							<li><a href="#">Deal memos</a></li>
+							<li><a href="#">Customers</a></li>
+							<li><a href="#">Transactions</a></li>
+							<li><a href="#">Team</a></li>
+						</ul>
+					</div>
+					<div class="popup__el">
+						<img class="popup__img" src="img/profile6.jpg" alt="">
+					</div>
+					<div class="popup__over">
+						<h3 class="popup__subttl">Andrew Thornton</h3>
+						<table class="popup__table">
+							<tr>
+								<td>Roles:</td>
+								<td>Auditor, Prospect</td>
+							</tr>
+							<tr>
+								<td>Supervisor:</td>
+								<td>Amanda Brown</td>
+							</tr>
+							<tr>
+								<td>Deal sup:</td>
+								<td>Amanda Brown</td>
+							</tr>
+							<tr>
+								<td>Firm</td>
+								<td><a href="#">Chasels&Co</a></td>
+							</tr>
+							<tr>
+								<td>E-mail:</td>
+								<td><a href="mailto: alixvanessa@gmail.com">alixvanessa@gmail.com</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="popup__bl">
+					<div class="dropdown js-dropdown">
+						<span class="dropdown__bl"></span>
+						<ul class="dropdown__list is-top-level js-inner">
+							<li><a href="#">Open user</a></li>
+							<li><a href="#">Assign task</a></li>
+							<li><a href="#">Send message</a></li>
+							<li><a href="#">Sign in as user</a></li>
+							<li><a href="#">Edit</a></li>
+							<li><hr></li>
+							<li><a href="#">My tasks</a></li>
+							<li><a href="#">User tasks</a></li>
+							<li><a href="#">Entries</a></li>
+							<li><a href="#">Deals</a></li>
+							<li><a href="#">Compliance</a></li>
+							<li><a href="#">Engagement letters</a></li>
+							<li><a href="#">Deal memos</a></li>
+							<li><a href="#">Customers</a></li>
+							<li><a href="#">Transactions</a></li>
+							<li><a href="#">Team</a></li>
+						</ul>
+					</div>
+					<div class="popup__el">
+						<img class="popup__img" src="img/profile.jpg" alt="">
+					</div>
+					<div class="popup__over">
+						<h3 class="popup__subttl">Alix Vanessa</h3>
+						<table class="popup__table">
+							<tr>
+								<td>Roles:</td>
+								<td>Auditor, Prospect</td>
+							</tr>
+							<tr>
+								<td>Supervisor:</td>
+								<td>Amanda Brown</td>
+							</tr>
+							<tr>
+								<td>Deal sup:</td>
+								<td>Amanda Brown</td>
+							</tr>
+							<tr>
+								<td>Firm</td>
+								<td><a href="#">Chasels&Co</a></td>
+							</tr>
+							<tr>
+								<td>E-mail:</td>
+								<td><a href="mailto: alixvanessa@gmail.com">alixvanessa@gmail.com</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="popup is-top js-popup" id="create">

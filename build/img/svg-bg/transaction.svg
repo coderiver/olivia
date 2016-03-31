@@ -1,13 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Avocode 2.4.3-3630f5a - http://avocode.com -->
-<svg height="69" width="69" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69 69">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="69px" height="69px" viewBox="0 0 69 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Transaction 69</title>
+    <desc>Created with Sketch.</desc>
     <defs>
-        <linearGradient y2="100%" y1="0%" x2="0%" x1="0%" id="gradient-1">
-            <stop stop-color="#c374d3" offset="0%" />
-            <stop stop-color="#b268c1" offset="100%" />
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="97.6104114%" id="linearGradient-1">
+            <stop stop-color="#C374D3" offset="0%"></stop>
+            <stop stop-color="#B268C1" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <path fill="url(#gradient-1)" fill-rule="evenodd" d="M 0 3.01 C 0 1.35 1.35 0 3.01 0 L 65.99 0 C 67.65 0 69 1.35 69 3.01 L 69 65.99 C 69 67.65 67.65 69 65.99 69 L 3.01 69 C 1.35 69 0 67.65 0 65.99 L 0 3.01 Z M 0 3.01" />
-    <path fill="#ffffff" fill-rule="evenodd" d="M 11 13 L 57 13 L 57 21 L 11 21 L 11 13 Z M 11 13" />
-    <path fill="#ffffff" fill-rule="evenodd" d="M 38 19 L 38 57 L 30 57 L 30 19 L 38 19 L 38 19 Z M 38 19" />
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Transaction-69">
+            <rect id="Rectangle-128" fill="url(#linearGradient-1)" x="9.09494702e-13" y="0" width="69" height="69" rx="3"></rect>
+            <path d="M24.4199219,16.2246094 L18.28125,16.2246094 L18.28125,33 L14.4257812,33 L14.4257812,16.2246094 L8.36914062,16.2246094 L8.36914062,13.09375 L24.4199219,13.09375 L24.4199219,16.2246094 Z M33.3476562,25.5625 L30.4355469,25.5625 L30.4355469,33 L26.59375,33 L26.59375,13.09375 L33.265625,13.09375 C34.3684951,13.09375 35.366532,13.2236315 36.2597656,13.4833984 C37.1529993,13.7431654 37.916338,14.1236954 38.5498047,14.625 C39.1832714,15.1263046 39.6708967,15.7506473 40.0126953,16.4980469 C40.3544939,17.2454464 40.5253906,18.1113232 40.5253906,19.0957031 C40.5253906,19.8066442 40.4410816,20.4469373 40.2724609,21.0166016 C40.1038403,21.5862659 39.8623063,22.0966774 39.5478516,22.5478516 C39.2333969,22.9990257 38.8551454,23.3932275 38.4130859,23.7304688 C37.9710264,24.06771 37.4765652,24.3593738 36.9296875,24.6054688 L41.2089844,32.8222656 L41.2089844,33 L37.09375,33 L33.3476562,25.5625 Z M30.4355469,22.4453125 L33.2792969,22.4453125 C34.3639377,22.4453125 35.2001924,22.1695991 35.7880859,21.6181641 C36.3759795,21.066729 36.6699219,20.3125048 36.6699219,19.3554688 C36.6699219,18.3619742 36.3828154,17.589521 35.8085938,17.0380859 C35.2343721,16.4866509 34.3867244,16.2109375 33.265625,16.2109375 L30.4355469,16.2109375 L30.4355469,22.4453125 Z" id="TR" fill="#FFFFFF"></path>
+        </g>
+    </g>
 </svg>

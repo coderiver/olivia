@@ -68,35 +68,31 @@ $(document).ready(function() {
 		});
 	}
 
-	chooseAction();
-
 	// dropdown
 	$('body').on('click', '.js-dropdown', function(evt) {
 		// inner dropdown list clickable
 		if ($(evt.target).closest('.js-inner').length > 0 ) {
 			return;
-		} else if ( $(evt.target).parent('.is-disabled').length > 0 ) {
+		} else if ($(evt.target).parent('.is-disabled').length > 0) {
 			evt.preventDefault();
 		}
 
 		// hide one dropdown if another is opened in the same table
-		if ($(this).parents('tr')) {
+		if ($(this).parents('tr').length) {
 			$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active is-top');
 		}
 
 		// show dropdown on top side if the end of the table
-		if ($(this).parents('.js-sidedrop').length && !$(this).hasClass('is-disabled') && !$('.tablewrap__in').hasClass('is-visible')) {
-			var innerList = $(this).find('.js-inner'),
-				table = $(this).parents('.js-tablewrap').find('.js-scrollbar'),
-				innerListH = innerList.offset().top + innerList.outerHeight(),
-				tableH = table.get(0).scrollHeight;
+		if ($(this).parents('.js-sidedrop').length && !$(this).hasClass('is-disabled')) {
+			if (!$('.tablewrap__in').hasClass('is-visible')) {
+				var	table = $(this).parents('.js-tablewrap').find('.js-scrollbar'),
+					tableScrollHeight = table.get(0).scrollHeight,
+					innerList = $(this).find('.js-inner'),
+					innerListH = $(this).position().top + innerList.outerHeight();
 
-			console.log(innerListH, tableH)
-
-			if (innerListH > tableH) {
-				$(this).addClass('is-top');
-			} else {
-				$(this).removeClass('is-top');
+				if (innerListH > tableScrollHeight) {
+					$(this).toggleClass('is-top');
+				}
 			}
 		}
 
@@ -170,6 +166,7 @@ $(document).ready(function() {
 	scrollFixedElements();
 	search();
 	changeDropdownOpt();
+	chooseAction();
 
 	win.scroll(function() {
 		scrollFixedElements();
