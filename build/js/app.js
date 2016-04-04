@@ -186,7 +186,7 @@ $(document).ready(function() {
 
 		function columnsToggle() {
 			var input = $('.js-check input'),
-				tableRow = $('.js-tablewrap .js-link');
+				tableRow = $('.js-tablewrap tr');
 
 			input.on('change', function() {
 				var data = $(this).parent().data('attr'),
@@ -329,7 +329,7 @@ $(document).ready(function() {
 				table = $(this).find('.js-scrollbar'),
 				tableH = table.outerHeight() - delta,
 				el = $(this),
-				row = el.find('.js-link');
+				row = el.find('tr');
 
 			// create and scroll fake header
 			$(this).find('.js-clone-head').clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
@@ -358,10 +358,28 @@ $(document).ready(function() {
 			});
 
 			$('.js-select-row').on('click', 'input[type="checkbox"]', function() {
-				var index = $(this).parents('.js-link').index();
+				var row = $(this).parents('tr'),
+					index = $(this).parents('tr').index();
 
 				$(this).parents('.js-scrollbar').siblings('.js-sidedrop').find('tr').eq(index).toggleClass('is-selected');
-				$(this).parents('.js-link').toggleClass('is-selected');
+				row.toggleClass('is-selected');
+			});
+		}
+
+		function selectAllRows() {
+			$('.label-checkbox').on('change','input[type="checkbox"]', function() {
+				if ($(this).prop('checked')) {
+					$(this).parents('.js-tablewrap').find('.js-scrollbar tr')
+												    .addClass('is-selected')
+													.find('input[type="checkbox"]').prop('checked', true);
+					$(this).parents('.js-tablewrap').find('.js-sidedrop tr').addClass('is-selected');
+
+				} else{
+					$(this).parents('.js-tablewrap').find('.js-scrollbar tr')
+												    .removeClass('is-selected')
+													.find('input[type="checkbox"]').prop('checked', false);
+					$(this).parents('.js-tablewrap').find('.js-sidedrop tr').removeClass('is-selected');
+				}
 			});
 		}
 
@@ -395,6 +413,7 @@ $(document).ready(function() {
 		showActivityInSidebar();
 		sidebarFilter();
 		selectRow();
+		selectAllRows();
 		toggleSearchTable();
 
 		$(window).resize(function() {
@@ -627,7 +646,7 @@ $(document).ready(function() {
 		});
 	}
 
-	$('.js-sysmessage-scroll').perfectScrollbar();
+	$('.js-vert-scroll').perfectScrollbar();
 
 	removeHeaderElem();
 	scrollFixedElements();

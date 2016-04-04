@@ -160,7 +160,7 @@ $(document).ready(function() {
 		});
 	}
 
-	$('.js-sysmessage-scroll').perfectScrollbar();
+	$('.js-vert-scroll').perfectScrollbar();
 
 	removeHeaderElem();
 	scrollFixedElements();
