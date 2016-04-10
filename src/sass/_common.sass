@@ -699,6 +699,9 @@ input
 		.dropdown__list.is-top-level
 			top: auto
 			bottom: 95%
+		.dropdown__more .dropdown__list
+			top: auto
+			bottom: -10px
 		.dropdown__bl
 			border-bottom-color: #e4e4e4
 			border-radius: 0 0 4px 4px
@@ -814,9 +817,12 @@ input
 		&:last-child
 			padding-bottom: 5px
 	&__more
-		margin-top: 2px
-		padding-top: 5px
+		position: relative
 		border-top: 1px solid #e5e5e5
+		&:hover
+			.dropdown__list
+				visibility: visible
+				opacity: 1
 		.dropdown__list
 			position: absolute
 			right: 99%
@@ -826,6 +832,8 @@ input
 			white-space: normal
 	&__more-link
 		position: relative
+		display: block
+		padding: 10px 14px
 		&:before
 			content: ""
 			position: absolute
@@ -857,9 +865,16 @@ input
 	&__name
 		display: inline-block
 		vertical-align: middle
+	&__scroll
+		position: relative
 	hr
 		border: 0
 		border-bottom: 1px solid #DCE0E7
+	.ps-scrollbar-y-rail
+		width: 3px !important
+		right: 1px !important
+		.ps-scrollbar-y
+			width: 3px !important
 	+r(1120)
 		&__name span
 			display: none

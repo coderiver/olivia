@@ -78,7 +78,7 @@ $(document).ready(function() {
 		}
 
 		function columnsToggle() {
-			var input = $('.js-check input'),
+			var input = $('.js-inner input'),
 				tableRow = $('.js-tablewrap tr');
 
 			input.on('change', function() {
@@ -86,7 +86,7 @@ $(document).ready(function() {
 					thead = $('.js-tablewrap th[data-id="' + data + '"]'),
 					theadData = thead.data('id'),
 					theadIndex = thead.index(),
-					checkedInput = $('.js-check input:checked'),
+					checkedInput = $('.js-inner input:checked'),
 					checkedInputNum = checkedInput.length;
 
 				measureSidedropHeight();

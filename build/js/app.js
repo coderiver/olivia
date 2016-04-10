@@ -185,7 +185,7 @@ $(document).ready(function() {
 		}
 
 		function columnsToggle() {
-			var input = $('.js-check input'),
+			var input = $('.js-inner input'),
 				tableRow = $('.js-tablewrap tr');
 
 			input.on('change', function() {
@@ -193,7 +193,7 @@ $(document).ready(function() {
 					thead = $('.js-tablewrap th[data-id="' + data + '"]'),
 					theadData = thead.data('id'),
 					theadIndex = thead.index(),
-					checkedInput = $('.js-check input:checked'),
+					checkedInput = $('.js-inner input:checked'),
 					checkedInputNum = checkedInput.length;
 
 				measureSidedropHeight();
@@ -574,9 +574,9 @@ $(document).ready(function() {
 				var	table = $(this).parents('.js-tablewrap').find('.js-scrollbar'),
 					tableScrollHeight = table.get(0).scrollHeight,
 					innerList = $(this).find('.js-inner'),
-					innerListH = $(this).position().top + innerList.outerHeight();
+					innerListH = $(this).position().top + innerList.outerHeight() + 50; // 50 stands for delta
 
-				if (innerListH > tableScrollHeight) {
+				if (innerListH >= tableScrollHeight) {
 					$(this).toggleClass('is-top');
 				}
 			}
@@ -601,6 +601,33 @@ $(document).ready(function() {
 
 			$(this).parents('.js-dropdown').removeClass('is-active').find('.dropdown__item').text(text);
 		});
+	}
+
+	function filterDropdownHeight() {
+		$('.js-filters .js-dropdown').each(function() {
+			var filterDrop = $(this).find('.js-inner'),
+				filterDropHeight = filterDrop.offset().top + filterDrop.outerHeight();
+
+			if (filterDropHeight >= win.height()) {
+				filterDrop.find('.js-vert-scroll').css('max-height', win.height() - filterDrop.offset().top - 50); // 20 for padding, 30 gutter for horz scroll just in case
+			}
+		});
+	}
+
+	function actionDropdownHeight() {
+		setTimeout(function() {
+			var tableHeight = parseInt($('.js-scrollbar').css('max-height'));
+
+			$('.js-sidedrop .js-dropdown').each(function() {
+				var actionDrop = $(this).find('.js-inner'),
+					actionDropHeight = actionDrop.position().top + actionDrop.outerHeight();
+
+				if (actionDropHeight >= tableHeight) {
+					actionDrop.find('.js-vert-scroll').css('max-height', tableHeight - actionDrop.position().top);
+				}
+				console.log(actionDrop.position().top, tableHeight, tableHeight - actionDrop.position().top);
+			});
+		}, 100);
 	}
 
 	// hide elements on click
@@ -653,6 +680,8 @@ $(document).ready(function() {
 	search();
 	changeDropdownOpt();
 	chooseAction();
+	filterDropdownHeight();
+	actionDropdownHeight();
 
 	win.scroll(function() {
 		scrollFixedElements();
