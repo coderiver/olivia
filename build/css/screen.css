@@ -977,6 +977,12 @@ input.is-error::placeholder { color: #6c757a; }
 .sidebar-filter__bl .sidebar-filter__label { max-width: 60px; }
 .sidebar-filter__label { display: inline-block; padding: 0 4px; font-size: 10px; text-overflow: ellipsis; overflow: hidden; vertical-align: middle; white-space: nowrap; }
 
+.sidebar-dates { padding: 18px 22px; font-size: 13px; color: #282828; }
+.sidebar-dates__bl { margin-bottom: 12px; }
+.sidebar-dates__ttl { margin-bottom: 8px; }
+.sidebar-dates__calendar { position: relative; padding: 8px 9px 8px 36px; color: #fff; background-color: #828c92; -webkit-border-radius: 4px; border-radius: 4px; cursor: pointer; }
+.sidebar-dates__calendar .icon { position: absolute; top: 50%; left: 9px; margin-top: -8px; color: #fff; }
+
 .scrollbar { position: relative; margin-right: 50px; background: #FFF; overflow: hidden; -webkit-transition: 0.3s ease; transition: 0.3s ease; }
 .scrollbar.is-sidebar { margin-left: 240px; }
 .scrollbar.ps-in-scrolling.ps-x .ps-scrollbar-x:before, .scrollbar.ps-in-scrolling.ps-x .ps-scrollbar-x:after { background: #eee; }
