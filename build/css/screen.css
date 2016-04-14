@@ -108,7 +108,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 @font-face { font-family: opensans-light; src: url("../fonts/opensans-light.eot"); src: url("../fonts/opensans-light.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-light.woff2") format("woff2"), url("../fonts/opensans-light.woff") format("woff"), url("../fonts/opensans-light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: robotomono; src: url("../fonts/robotomono.eot"); src: url("../fonts/robotomono.eot?#iefix") format("embedded-opentype"), url("../fonts/robotomono.woff2") format("woff2"), url("../fonts/robotomono.woff") format("woff"), url("../fonts/robotomono.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: handwrite; src: url("../fonts/handwrite.eot"); src: url("../fonts/handwrite.eot?#iefix") format("embedded-opentype"), url("../fonts/handwrite.woff2") format("woff2"), url("../fonts/handwrite.woff") format("woff"), url("../fonts/handwrite.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-body { min-width: 985px; font-size: 12px; line-height: 1.4; background: #F3F4F6; font-weight: normal; overflow-x: auto !important; font-family: "opensans", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
+body { min-width: 1040px; font-size: 12px; line-height: 1.4; background: #F3F4F6; font-weight: normal; overflow-x: auto !important; font-family: "opensans", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
 body.is-overflow { overflow: hidden !important; }
 body .tooltipster-base { z-index: 8; }
 
@@ -1028,11 +1028,15 @@ input.is-error::placeholder { color: #6c757a; }
 .show-more { padding: 11px 17px; font-size: 13px; border-bottom: 1px solid #efefef; }
 .show-more a { display: inline-block; vertical-align: middle; color: #097bf2; }
 
-.fake-header { position: absolute; top: 0; left: 0; right: 0; padding-right: 50px; overflow: hidden; z-index: 1; -webkit-transition: padding-left 0.3s; transition: padding-left 0.3s; }
-.fake-header:after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 50px; background: #f7f8f9; border-top: 1px solid #dce0e7; border-bottom: 1px solid #dce0e7; }
-.fake-header.is-sidebar { padding-left: 240px; }
-.fake-header.is-scrollbar:after { border-left: 1px solid #dce0e7; }
+.fake-header { position: absolute; top: 0; left: 0; z-index: 1; }
+.fake-header:after { display: none; content: ""; position: absolute; top: 0; right: 20px; bottom: 0; width: 51px; background: #f7f8f9; border: 1px solid #dce0e7; border-left-color: transparent; }
+.fake-header.is-sidebar { padding-left: 260px; }
+.fake-header.is-scrollbar:after { border-left-color: #dce0e7; }
+.fake-header.is-fixed { position: fixed; width: 100%; max-width: 1370px; left: 50%; padding: 0 20px; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
+.fake-header.is-fixed:after { display: block; }
+.fake-header.is-fixed .fake-header__in { border-left: 1px solid #dce0e7; }
 .fake-header .table { position: relative; min-width: 1000px; }
+.fake-header .fake-header__in { position: relative; margin-right: 50px; overflow: hidden; }
 
 .sum { margin: 10px 0; text-align: right; font-size: 0; }
 .sum__bl { display: inline-block; margin: 0 10px; font-size: 14px; color: #6c757a; vertical-align: middle; }
@@ -1209,6 +1213,8 @@ input.is-error::placeholder { color: #6c757a; }
 .members .popup__bl:last-child { border-bottom: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
+@media only screen and (max-width: 1300px){
+ .fake-header.is-fixed{ left: 0; min-width: 1040px; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); } }
 @media only screen and (max-width: 1120px){
  .dropdown__name span{ display: none; } }
 @media only screen and (max-width: 1020px){

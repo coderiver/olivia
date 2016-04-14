@@ -83,18 +83,18 @@ $(document).ready(function() {
 		}
 
 		// show dropdown on top side if the end of the table
-		if ($(this).parents('.js-sidedrop').length && !$(this).hasClass('is-disabled')) {
-			if (!$('.tablewrap__in').hasClass('is-visible')) {
-				var	table = $(this).parents('.js-tablewrap').find('.js-scrollbar'),
-					tableScrollHeight = table.get(0).scrollHeight,
-					innerList = $(this).find('.js-inner'),
-					innerListH = $(this).position().top + innerList.outerHeight() + 50; // 50 stands for delta
+		// if ($(this).parents('.js-sidedrop').length && !$(this).hasClass('is-disabled')) {
+		// 	if (!$('.tablewrap__in').hasClass('is-visible')) {
+		// 		var	table = $(this).parents('.js-tablewrap').find('.js-scrollbar'),
+		// 			tableScrollHeight = table.get(0).scrollHeight,
+		// 			innerList = $(this).find('.js-inner'),
+		// 			innerListH = $(this).position().top + innerList.outerHeight();
 
-				if (innerListH >= tableScrollHeight) {
-					$(this).toggleClass('is-top');
-				}
-			}
-		}
+		// 		if (innerListH > tableScrollHeight) {
+		// 			$(this).toggleClass('is-top');
+		// 		}
+		// 	}
+		// }
 
 		// unclickable when disabled
 		if ($(this).hasClass('is-disabled')) {

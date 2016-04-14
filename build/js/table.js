@@ -6,14 +6,7 @@ $(document).ready(function() {
 			row = parentWrap.find('.js-sidedrop .js-row'),
 			scrollTable = parentWrap.find('.js-scrollbar'),
 			scrollTableIn = parentWrap.find('.js-scrollbar table'),
-			winH = $(window).height(),
-			footerH = $('.js-footer').outerHeight(true);
-
-		// tablehead filter
-		$('.table th').click(function() {
-			$(this).siblings().removeClass('is-active');
-			$(this).addClass('is-active');
-		});
+			win = $(window);
 
 		// scroll table and scroll buttons
 		scrollTable.perfectScrollbar();
@@ -212,30 +205,30 @@ $(document).ready(function() {
 			});
 		}
 
-		if ( document.documentElement.scrollHeight >= document.documentElement.clientHeight ) {
-			var delta = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-		}
+		// if ( document.documentElement.scrollHeight >= document.documentElement.clientHeight ) {
+		// 	var delta = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		// }
 
 		parentWrap.each(function() {
 			// vars
-			var fakeHeadTable = $(this).find('.js-fake-head .table'),
-				table = $(this).find('.js-scrollbar'),
-				tableH = table.outerHeight() - delta,
-				el = $(this),
-				row = el.find('tr');
+			var fakeHeadTable = $(this).find('.js-fake-head .table');
+				//table = $(this).find('.js-scrollbar'),
+				//tableH = table.outerHeight() - delta,
+				//el = $(this),
+				//row = el.find('tr');
 
 			// create and scroll fake header
 			$(this).find('.js-clone-head').clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
 
-			setTimeout(function() {
-				var rowH = row.outerHeight();
-				// measure table height
-				if (delta === 0) {
-					table.css('max-height', 'auto');
-				} else {
-					table.css('max-height', Math.floor(tableH / rowH) * rowH);
-				}
-			}, 0);
+			// setTimeout(function() {
+			// 	var rowH = row.outerHeight();
+			// 	// measure table height
+			// 	if (delta === 0) {
+			// 		table.css('max-height', 'auto');
+			// 	} else {
+			// 		table.css('max-height', Math.floor(tableH / rowH) * rowH);
+			// 	}
+			// }, 0);
 		});
 
 		function filterTabs() {
@@ -286,6 +279,18 @@ $(document).ready(function() {
 			});
 		}
 
+		var scrollPos = win.scrollTop();
+		function headerFixed() {
+			var	fakeHeader = $('.js-fake-head'),
+				cloneHead  = $('.js-clone-head').offset().top;
+
+			if (scrollPos >= cloneHead)	{
+				fakeHeader.addClass('is-fixed');
+			} else {
+				fakeHeader.removeClass('is-fixed');
+			}
+		}
+
 		// check scrollbar to add/remove overflow styles for dropdowns
 		setTimeout(function() {
 			if ( scrollTable.get(0).scrollHeight <= scrollTable.height() ) {
@@ -308,12 +313,18 @@ $(document).ready(function() {
 		selectRow();
 		selectAllRows();
 		toggleSearchTable();
+		headerFixed();
 
 		$(window).resize(function() {
 			scrollTable.perfectScrollbar('update');
 			toggleDesignElem();
 			measureMoreblock();
 			measureSidedropHeight();
+		});
+
+		$(window).scroll(function() {
+			scrollPos = win.scrollTop();
+			headerFixed();
 		});
 
 	})();

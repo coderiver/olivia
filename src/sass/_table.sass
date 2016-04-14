@@ -801,33 +801,70 @@
 
 
 // fake header
+// .fake-header
+// 	position: absolute
+// 	top: 0
+// 	left: 0
+// 	right: 0
+// 	padding-right: 50px
+// 	overflow: hidden
+// 	z-index: 1
+// 	+tr(padding-left 0.3s)
+// 	&.is-sidebar
+// 		padding-left: 240px
+// 	&.is-scrollbar
+// 		&:after
+// 			border-left: 1px solid #dce0e7
+// 	.table
+// 		position: relative
+// 		min-width: 1000px
+
 .fake-header
 	position: absolute
 	top: 0
 	left: 0
-	right: 0
-	padding-right: 50px
-	overflow: hidden
 	z-index: 1
-	+tr(padding-left 0.3s)
+	//+tr(padding-left 0.3s)
 	&:after
+		display: none
 		content: ""
 		position: absolute
 		top: 0
-		right: 0
+		right: 20px
 		bottom: 0
-		width: 50px
+		width: 51px
 		background: #f7f8f9
-		border-top: 1px solid #dce0e7
-		border-bottom: 1px solid #dce0e7
+		border: 1px solid #dce0e7
+		border-left-color: transparent
 	&.is-sidebar
-		padding-left: 240px
+		padding-left: 260px
 	&.is-scrollbar
 		&:after
+			border-left-color: #dce0e7
+	&.is-fixed
+		position: fixed
+		width: 100%
+		max-width: 1370px
+		left: 50%
+		padding: 0 20px
+		transform: translateX(-50%)
+		&:after
+			display: block
+		.fake-header__in
 			border-left: 1px solid #dce0e7
 	.table
 		position: relative
 		min-width: 1000px
+	.fake-header__in
+		position: relative
+		margin-right: 50px
+		overflow: hidden
+	+r(1300)
+		&.is-fixed
+			left: 0
+			min-width: 1040px
+			transform: translateX(0)
+
 
 // sum
 .sum
