@@ -980,8 +980,11 @@ input.is-error::placeholder { color: #6c757a; }
 .sidebar-dates { padding: 18px 22px; font-size: 13px; color: #282828; }
 .sidebar-dates__bl { margin-bottom: 12px; }
 .sidebar-dates__ttl { margin-bottom: 8px; }
-.sidebar-dates__calendar { position: relative; padding: 8px 9px 8px 36px; color: #fff; background-color: #828c92; -webkit-border-radius: 4px; border-radius: 4px; cursor: pointer; }
-.sidebar-dates__calendar .icon { position: absolute; top: 50%; left: 9px; margin-top: -8px; color: #fff; }
+.sidebar-dates__calendar { position: relative; padding: 8px 9px 8px 36px; -webkit-border-radius: 4px; border-radius: 4px; cursor: pointer; border: 1px solid #cfd5e0; }
+.sidebar-dates__calendar.is-active { color: #fff; background: #828c92; border-color: #828c92; }
+.sidebar-dates__calendar.is-active .icon { color: #FFF; }
+.sidebar-dates__calendar .icon { position: absolute; top: 50%; left: 9px; margin-top: -8px; color: #282828; }
+.sidebar-dates__calendar input { position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; opacity: 0; }
 
 .scrollbar { position: relative; margin-right: 50px; background: #FFF; overflow: hidden; -webkit-transition: 0.3s ease; transition: 0.3s ease; }
 .scrollbar.is-sidebar { margin-left: 240px; }
