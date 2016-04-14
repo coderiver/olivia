@@ -64,7 +64,7 @@ $(document).ready(function() {
 		function measureSidedropHeight() {
 			setTimeout(function() {
 				row.each(function(index) {
-					var rowHeight = parentWrap.find('.js-link').eq(index).outerHeight();
+					var rowHeight = parentWrap.find('.js-scrollbar tr').eq(index).outerHeight();
 					$(this).find('td').css('height', rowHeight);
 				});
 			}, 100);
@@ -279,24 +279,32 @@ $(document).ready(function() {
 			});
 		}
 
-		var scrollPos = win.scrollTop();
-		function headerFixed() {
-			var	fakeHeader = $('.js-fake-head'),
-				cloneHead  = $('.js-clone-head').offset().top;
 
-			if (scrollPos >= cloneHead)	{
-				fakeHeader.addClass('is-fixed');
-			} else {
-				fakeHeader.removeClass('is-fixed');
+		function tableHeadFixed() {
+			if ($('.js-filters').length && $('.js-clone-head').length) {
+				var scrollPos = win.scrollTop(),
+					fakeHeader = $('.js-fake-head'),
+					filters = $('.js-filters'),
+					filtersTop = filters.offset().top,
+					filtersHeight = filters.outerHeight(),
+					cloneHead  = $('.js-clone-head').offset().top;
+
+				if (scrollPos > filtersTop)	{
+					filters.addClass('is-fixed');
+					fakeHeader.addClass('is-fixed').css('top', filtersHeight);
+				} else if ( scrollPos < cloneHead ) {
+					filters.removeClass('is-fixed');
+					fakeHeader.removeClass('is-fixed').css('top', '0');
+				}
 			}
 		}
 
 		// check scrollbar to add/remove overflow styles for dropdowns
-		setTimeout(function() {
-			if ( scrollTable.get(0).scrollHeight <= scrollTable.height() ) {
-				parentWrap.find('.tablewrap__in').addClass('is-visible');
-			}
-		}, 100);
+		// setTimeout(function() {
+		// 	if ( scrollTable.get(0).scrollHeight <= scrollTable.height() ) {
+		// 		parentWrap.find('.tablewrap__in').addClass('is-visible');
+		// 	}
+		// }, 100);
 
 		// summon them on load!
 		toggleDesignElem();
@@ -313,7 +321,7 @@ $(document).ready(function() {
 		selectRow();
 		selectAllRows();
 		toggleSearchTable();
-		headerFixed();
+		tableHeadFixed();
 
 		$(window).resize(function() {
 			scrollTable.perfectScrollbar('update');
@@ -324,7 +332,7 @@ $(document).ready(function() {
 
 		$(window).scroll(function() {
 			scrollPos = win.scrollTop();
-			headerFixed();
+			tableHeadFixed();
 		});
 
 	})();

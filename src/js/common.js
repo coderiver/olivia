@@ -79,7 +79,8 @@ $(document).ready(function() {
 
 		// hide one dropdown if another is opened in the same table
 		if ($(this).parents('tr').length) {
-			$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active is-top');
+			$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active');
+			//$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active is-top');
 		}
 
 		// show dropdown on top side if the end of the table
@@ -117,32 +118,32 @@ $(document).ready(function() {
 		});
 	}
 
-	function filterDropdownHeight() {
-		$('.js-filters .js-dropdown').each(function() {
-			var filterDrop = $(this).find('.js-inner'),
-				filterDropHeight = filterDrop.offset().top + filterDrop.outerHeight();
+	// function filterDropdownHeight() {
+	// 	$('.js-filters .js-dropdown').each(function() {
+	// 		var filterDrop = $(this).find('.js-inner'),
+	// 			filterDropHeight = filterDrop.offset().top + filterDrop.outerHeight();
 
-			if (filterDropHeight >= win.height()) {
-				filterDrop.find('.js-vert-scroll').css('max-height', win.height() - filterDrop.offset().top - 50); // 20 for padding, 30 gutter for horz scroll just in case
-			}
-		});
-	}
+	// 		if (filterDropHeight >= win.height()) {
+	// 			// 20 for padding, 30 gutter for horz scroll just in case
+	// 			filterDrop.find('.js-vert-scroll').css('max-height', win.height() - filterDrop.offset().top - 50);
+	// 		}
+	// 	});
+	// }
 
-	function actionDropdownHeight() {
-		setTimeout(function() {
-			var tableHeight = parseInt($('.js-scrollbar').css('max-height'));
+	// function actionDropdownHeight() {
+	// 	setTimeout(function() {
+	// 		var tableHeight = parseInt($('.js-scrollbar').css('max-height'));
 
-			$('.js-sidedrop .js-dropdown').each(function() {
-				var actionDrop = $(this).find('.js-inner'),
-					actionDropHeight = actionDrop.position().top + actionDrop.outerHeight();
+	// 		$('.js-sidedrop .js-dropdown').each(function() {
+	// 			var actionDrop = $(this).find('.js-inner'),
+	// 				actionDropHeight = actionDrop.position().top + actionDrop.outerHeight();
 
-				if (actionDropHeight >= tableHeight) {
-					actionDrop.find('.js-vert-scroll').css('max-height', tableHeight - actionDrop.position().top);
-				}
-				console.log(actionDrop.position().top, tableHeight, tableHeight - actionDrop.position().top);
-			});
-		}, 100);
-	}
+	// 			if (actionDropHeight >= tableHeight) {
+	// 				actionDrop.find('.js-vert-scroll').css('max-height', tableHeight - actionDrop.position().top);
+	// 			}
+	// 		});
+	// 	}, 100);
+	// }
 
 	// hide elements on click
 	$('body').on('click', function(evt) {
@@ -194,8 +195,8 @@ $(document).ready(function() {
 	search();
 	changeDropdownOpt();
 	chooseAction();
-	filterDropdownHeight();
-	actionDropdownHeight();
+	//filterDropdownHeight();
+	//actionDropdownHeight();
 
 	win.scroll(function() {
 		scrollFixedElements();

@@ -1,6 +1,6 @@
 // common wrapper
 .tablewrap
-	padding: 40px 0
+	padding: 20px 0
 	&.no-top-padding
 		padding-top: 0
 	&.no-bottom-padding
@@ -10,15 +10,6 @@
 	&__in
 		position: relative
 		overflow: hidden
-		&:before
-			content: ""
-			position: absolute
-			bottom: 0
-			left: 0
-			right: 0
-			height: 1px
-			background: #efefef
-			z-index: 1
 		&.is-filtered
 			.scrollbar
 				min-height: 513px
@@ -37,29 +28,28 @@
 		&.no-sidedrop
 			.scrollbar
 				margin-right: 0
-		&.is-visible
-			overflow: visible
-			&:before
-				display: none
-			.scrollbar .ps-scrollbar-x-rail
-				z-index: 0
-			.sidedrop
-				&:after
-					z-index: 0
 
 // filters
 .filters
-	position: relative
-	padding: 0 10px 10px 20px
-	//margin: 0 -4px
-	text-align: justify
-	font-size: 0.1px
-	&:after
-		content: ""
-		display: inline-block
+	&.is-fixed
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		max-width: 1370px
+		min-width: 100%
+		margin: 0 auto
+		padding: 0 20px
+		z-index: 10
+		.filters__wrap
+			border: 1px solid #dce0e7
+	&__wrap
+		display: table
 		width: 100%
+		padding: 10px 10px 10px 20px
+		background: #FFF
 	&__ttl
-		display: inline-block
+		display: table-cell
 		max-width: 200px
 		text-align: left
 		font-size: 17px
@@ -68,7 +58,8 @@
 		.tooltip
 			margin-bottom: 0
 	&__in
-		display: inline-block
+		display: table-cell
+		text-align: right
 		font-size: 0
 		vertical-align: bottom
 	.dropdown
@@ -349,9 +340,9 @@
 		vertical-align: middle
 		&.is-active
 			.dropdown__in
-				opacity: 1
-				visibility: visible
+				display: block
 		&__in
+			display: none
 			position: absolute
 			top: 100%
 			right: 0
@@ -361,9 +352,12 @@
 			border-radius: 4px
 			border: 1px solid #dce0e7
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25)
-			opacity: 0
-			visibility: hidden
+			.dropdown__list.is-top-level
+				position: relative
+				opacity: 1
+				visibility: visible
 		&__list
+			max-height: 345px
 			&.is-top-level
 				position: relative
 				right: auto
@@ -375,8 +369,6 @@
 				border: none
 				opacity: 1
 				visibility: visible
-		// &__list
-		// 	max-height: 345px
 		a, a:visited
 			color: #282828
 		a:hover
@@ -788,6 +780,8 @@
 		width: auto
 		height: 39px
 		padding-left: 0
+		td
+			border-color: #dce0e7
 
 // show more
 .show-more
@@ -823,8 +817,8 @@
 	position: absolute
 	top: 0
 	left: 0
+	right: 0
 	z-index: 1
-	//+tr(padding-left 0.3s)
 	&:after
 		display: none
 		content: ""
@@ -837,7 +831,8 @@
 		border: 1px solid #dce0e7
 		border-left-color: transparent
 	&.is-sidebar
-		padding-left: 260px
+		.fake-header__in
+			padding-left: 240px
 	&.is-scrollbar
 		&:after
 			border-left-color: #dce0e7
@@ -859,12 +854,12 @@
 		position: relative
 		margin-right: 50px
 		overflow: hidden
+		+tr(padding-left 0.3s)
 	+r(1300)
 		&.is-fixed
 			left: 0
 			min-width: 1040px
 			transform: translateX(0)
-
 
 // sum
 .sum
