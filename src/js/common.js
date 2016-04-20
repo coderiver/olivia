@@ -80,22 +80,7 @@ $(document).ready(function() {
 		// hide one dropdown if another is opened in the same table
 		if ($(this).parents('tr').length) {
 			$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active');
-			//$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active is-top');
 		}
-
-		// show dropdown on top side if the end of the table
-		// if ($(this).parents('.js-sidedrop').length && !$(this).hasClass('is-disabled')) {
-		// 	if (!$('.tablewrap__in').hasClass('is-visible')) {
-		// 		var	table = $(this).parents('.js-tablewrap').find('.js-scrollbar'),
-		// 			tableScrollHeight = table.get(0).scrollHeight,
-		// 			innerList = $(this).find('.js-inner'),
-		// 			innerListH = $(this).position().top + innerList.outerHeight();
-
-		// 		if (innerListH > tableScrollHeight) {
-		// 			$(this).toggleClass('is-top');
-		// 		}
-		// 	}
-		// }
 
 		// unclickable when disabled
 		if ($(this).hasClass('is-disabled')) {
@@ -118,33 +103,6 @@ $(document).ready(function() {
 		});
 	}
 
-	// function filterDropdownHeight() {
-	// 	$('.js-filters .js-dropdown').each(function() {
-	// 		var filterDrop = $(this).find('.js-inner'),
-	// 			filterDropHeight = filterDrop.offset().top + filterDrop.outerHeight();
-
-	// 		if (filterDropHeight >= win.height()) {
-	// 			// 20 for padding, 30 gutter for horz scroll just in case
-	// 			filterDrop.find('.js-vert-scroll').css('max-height', win.height() - filterDrop.offset().top - 50);
-	// 		}
-	// 	});
-	// }
-
-	// function actionDropdownHeight() {
-	// 	setTimeout(function() {
-	// 		var tableHeight = parseInt($('.js-scrollbar').css('max-height'));
-
-	// 		$('.js-sidedrop .js-dropdown').each(function() {
-	// 			var actionDrop = $(this).find('.js-inner'),
-	// 				actionDropHeight = actionDrop.position().top + actionDrop.outerHeight();
-
-	// 			if (actionDropHeight >= tableHeight) {
-	// 				actionDrop.find('.js-vert-scroll').css('max-height', tableHeight - actionDrop.position().top);
-	// 			}
-	// 		});
-	// 	}, 100);
-	// }
-
 	// hide elements on click
 	$('body').on('click', function(evt) {
 		if ( $(evt.target).parents('.js-dropdown').length === 0 ) {
@@ -154,9 +112,9 @@ $(document).ready(function() {
 		searchResults.removeClass('is-active');
 	});
 
-	// fixed header in forms pages
 	function scrollFixedElements() {
 		var scrLeft = $(this).scrollLeft();
+
 		$('.js-fixed').css({
 			left: -scrLeft
 		});
@@ -191,16 +149,21 @@ $(document).ready(function() {
 	$('.js-vert-scroll').perfectScrollbar();
 
 	removeHeaderElem();
-	scrollFixedElements();
 	search();
 	changeDropdownOpt();
 	chooseAction();
-	//filterDropdownHeight();
-	//actionDropdownHeight();
+	scrollFixedElements();
 
+	var winStart = 0;
 	win.scroll(function() {
-		scrollFixedElements();
+		var currTop = $(window).scrollTop();
+
 		removeHeaderElem();
+
+		if (winStart == currTop) {
+			scrollFixedElements();
+		}
+		winStart = currTop;
 	});
 
 });

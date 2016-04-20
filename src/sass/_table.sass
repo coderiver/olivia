@@ -1,6 +1,6 @@
 // common wrapper
 .tablewrap
-	padding: 20px 0
+	padding: 20px 0 10px
 	&.no-top-padding
 		padding-top: 0
 	&.no-bottom-padding
@@ -9,7 +9,6 @@
 		padding-bottom: 15px
 	&__in
 		position: relative
-		overflow: hidden
 		&.is-filtered
 			.scrollbar
 				min-height: 513px
@@ -17,14 +16,6 @@
 					display: block
 				tr:last-child td
 					border-bottom: 1px solid #efefef
-			.sidedrop
-				bottom: 0
-				.table
-					tr:last-child td
-						border-bottom: 1px solid #efefef
-				&.is-scrollbar
-					&:before
-						display: block
 		&.no-sidedrop
 			.scrollbar
 				margin-right: 0
@@ -34,16 +25,18 @@
 	&.is-fixed
 		position: fixed
 		top: 0
-		left: 0
-		right: 0
+		left: 50%
+		width: 100%
 		max-width: 1370px
-		min-width: 100%
+		min-width: 1040px
 		margin: 0 auto
 		padding: 0 20px
-		z-index: 10
+		z-index: 8
+		transform: translateX(-50%)
 		.filters__wrap
 			border: 1px solid #dce0e7
 	&__wrap
+		position: relative
 		display: table
 		width: 100%
 		padding: 10px 10px 10px 20px
@@ -67,6 +60,10 @@
 		vertical-align: middle
 		&.is-active
 			z-index: 3
+	+r(1300)
+		&.is-fixed
+			left: 0
+			transform: translateX(0)
 
 .toggle-btn
 	display: inline-block
@@ -254,6 +251,7 @@
 				border-right: 0
 			&.table__drop
 				background: none
+				padding-top: 0
 				&:before
 					display: none
 			&.table__clip
@@ -472,13 +470,13 @@
 		overflow: hidden
 	&__ttl
 		position: relative
+		height: 39px
 		padding: 0 8px 0 24px
 		font-size: 0
-		color: #282828
 		background: #f7f8f9
-		height: 38px
+		color: #282828
 		border-top: 1px solid #dce0e7
-		line-height: 38px
+		line-height: 39px
 		cursor: pointer
 		+opensans-sb
 		&:before
@@ -631,6 +629,7 @@
 	position: relative
 	min-height: 191px
 	margin-right: 50px
+	padding-bottom: 13px
 	background: #FFF
 	overflow: hidden
 	+tr(0.3s ease)
@@ -640,25 +639,18 @@
 		.ps-scrollbar-x
 			&:before, &:after
 				background: #eee
-	>.table
+	.table
 		min-width: 1000px
 		margin-bottom: 0
 		background: #FFF
 		&__head
 			opacity: 0
-		tr
-			&:last-child
-				td
-					border-bottom-color: #fff
 		td
 			height: 38px
 			padding: 9px 8.5px 8px
 			&:first-child
 				&:not(.cell-center)
 					padding-left: 17px
-	.fake-header
-		.table__head
-			opacity: 1
 	.ps-scrollbar-x-rail
 		width: 100% !important
 		bottom: 0
@@ -668,7 +660,6 @@
 		border-radius: 0
 		border-top: 1px solid #dce0e7
 		border-bottom: 1px solid #dce0e7
-		z-index: 2
 		&:hover
 			.ps-scrollbar-x
 				&:before, &:after
@@ -692,11 +683,6 @@
 			right: 0
 			width: 30px
 			+tr(0.2s linear)
-	.ps-scrollbar-y-rail
-		right: 0
-		width: 3px
-		.ps-scrollbar-y
-			width: 3px
 
 
 // scrolling buttons
@@ -748,12 +734,10 @@
 		background: #f7f8f9
 		border: 1px solid #dce0e7
 		border-right: none
-		z-index: 1
 	&.is-scrollbar
+		border-left: 1px solid #dce0e7
 		&:after
 			display: block
-		.table
-			border-left: 1px solid #dce0e7
 	&.is-top-aligned
 		.table td
 			padding-top: 6px
@@ -763,8 +747,6 @@
 		margin-bottom: 0
 		background: #FFF
 		tr
-			&:last-child td
-				border-bottom: none
 			&.is-selected
 				background: #FFFAEB
 				.dropdown__bl
@@ -783,7 +765,7 @@
 		td
 			border-color: #dce0e7
 
-// show more
+
 .show-more
 	padding: 11px 17px
 	font-size: 13px
@@ -794,48 +776,15 @@
 		color: #097bf2
 
 
-// fake header
-// .fake-header
-// 	position: absolute
-// 	top: 0
-// 	left: 0
-// 	right: 0
-// 	padding-right: 50px
-// 	overflow: hidden
-// 	z-index: 1
-// 	+tr(padding-left 0.3s)
-// 	&.is-sidebar
-// 		padding-left: 240px
-// 	&.is-scrollbar
-// 		&:after
-// 			border-left: 1px solid #dce0e7
-// 	.table
-// 		position: relative
-// 		min-width: 1000px
-
 .fake-header
 	position: absolute
 	top: 0
 	left: 0
 	right: 0
 	z-index: 1
-	&:after
-		display: none
-		content: ""
-		position: absolute
-		top: 0
-		right: 20px
-		bottom: 0
-		width: 51px
-		background: #f7f8f9
-		border: 1px solid #dce0e7
-		border-left-color: transparent
 	&.is-sidebar
 		.fake-header__in
 			padding-left: 240px
-	&.is-scrollbar
-		&:after
-			border-left-color: #dce0e7
 	&.is-fixed
 		position: fixed
 		width: 100%
@@ -843,25 +792,40 @@
 		left: 50%
 		padding: 0 20px
 		transform: translateX(-50%)
-		&:after
-			display: block
 		.fake-header__in
 			border-left: 1px solid #dce0e7
+			&:after
+				width: 51px
+				border-right-width: 1px
+				border-top: 0
+		.table
+			th
+				border-top: #000
 	.table
 		position: relative
 		min-width: 1000px
 	.fake-header__in
 		position: relative
-		margin-right: 50px
+		padding-right: 51px
 		overflow: hidden
 		+tr(padding-left 0.3s)
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			width: 50px
+			background: #f7f8f9
+			border: 1px solid #dce0e7
+			border-right-width: 0
+			z-index: 10
 	+r(1300)
 		&.is-fixed
 			left: 0
 			min-width: 1040px
 			transform: translateX(0)
 
-// sum
 .sum
 	margin: 10px 0
 	text-align: right

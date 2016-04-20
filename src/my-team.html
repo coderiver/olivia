@@ -9,7 +9,6 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-	<link rel="stylesheet" media="all" href="css/tooltipster.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
@@ -40,47 +39,49 @@
 				</div>
 				<div class="tablewrap js-tablewrap">
 					<!-- begin filters  -->
-					<div class="filters">
-						<div class="filters__ttl">
-							<div class="tooltip">
-								<p>Affiliates</p>
-								<div class="tooltip__ico js-tooltip" title="Active Deals Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span>
+					<div class="filters js-filters">
+						<div class="filters__wrap js-fixed">
+							<div class="filters__ttl">
+								<div class="tooltip">
+									<p>Affiliates</p>
+									<div class="tooltip__ico js-tooltip" title="Active Deals Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="filters__in">
-							<div class="dropdown js-dropdown">
-								<p class="dropdown__item">Settings</p>
-								<div class="dropdown__list is-top-level js-inner">
-									<div class="dropdown__check">
-										<label class="check" data-attr="id">
-											<input type="checkbox" checked>
-											<span class="check__span">ID</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="name">
-											<input type="checkbox" checked>
-											<span class="check__span">Name</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="email">
-											<input type="checkbox" checked>
-											<span class="check__span">E-mail</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="permissions">
-											<input type="checkbox" checked>
-											<span class="check__span">Permissions</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="modules">
-											<input type="checkbox" checked>
-											<span class="check__span">Modules</span>
-										</label>
+							<div class="filters__in">
+								<div class="dropdown js-dropdown">
+									<p class="dropdown__item">Settings</p>
+									<div class="dropdown__list is-top-level js-inner">
+										<div class="dropdown__check">
+											<label class="check" data-attr="id">
+												<input type="checkbox" checked>
+												<span class="check__span">ID</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="name">
+												<input type="checkbox" checked>
+												<span class="check__span">Name</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="email">
+												<input type="checkbox" checked>
+												<span class="check__span">E-mail</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="permissions">
+												<input type="checkbox" checked>
+												<span class="check__span">Permissions</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="modules">
+												<input type="checkbox" checked>
+												<span class="check__span">Modules</span>
+											</label>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -98,7 +99,7 @@
 								<th title="Modules" width="178" data-id="modules"><p>Modules</p></th>
 								<th class="table__drop"><p>&nbsp;</p></th>
 							</tr>
-							<tr class="js-link" data-href="http://www.google.com">
+							<tr>
 								<td>
 									<div class="table__pic">
 										<div style="background-image: url(img/profile2.jpg)"></div>
@@ -120,15 +121,17 @@
 								<td class="table__drop">
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
-										<ul class="dropdown__list is-top-level js-inner">
-											<li><a href="#">Open in new window</a></li>
-											<li><a href="#">Download all in ZIP</a></li>
-											<li><a href="#">Deal status</a></li>
-										</ul>
+										<div class="dropdown__in js-inner">
+											<ul class="dropdown__list is-top-level">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
 									</div>
 								</td>
 							</tr>
-							<tr class="js-link" data-href="http://www.imgur.com">
+							<tr>
 								<td>
 									<div class="table__pic">
 										<div style="background-image: url(img/profile4.jpg)"></div>
@@ -150,11 +153,13 @@
 								<td class="table__drop">
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
-										<ul class="dropdown__list is-top-level js-inner">
-											<li><a href="#">Open in new window</a></li>
-											<li><a href="#">Download all in ZIP</a></li>
-											<li><a href="#">Deal status</a></li>
-										</ul>
+										<div class="dropdown__in js-inner">
+											<ul class="dropdown__list is-top-level">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
 									</div>
 								</td>
 							</tr>
@@ -165,46 +170,48 @@
 				<div class="tablewrap js-tablewrap">
 					<!-- begin filters  -->
 					<div class="filters">
-						<div class="filters__ttl">
-							<div class="tooltip">
-								<p>Team Mates</p>
-								<div class="tooltip__ico js-tooltip" title="Team Mates Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span>
+						<div class="filters__wrap">
+							<div class="filters__ttl">
+								<div class="tooltip">
+									<p>Team Mates</p>
+									<div class="tooltip__ico js-tooltip" title="Team Mates Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="filters__in">
-							<div class="dropdown js-dropdown">
-								<p class="dropdown__item">Settings</p>
-								<div class="dropdown__list is-top-level js-inner">
-									<div class="dropdown__check">
-										<label class="check" data-attr="id">
-											<input type="checkbox" checked>
-											<span class="check__span">ID</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="name">
-											<input type="checkbox" checked>
-											<span class="check__span">Name</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="contacts">
-											<input type="checkbox" checked>
-											<span class="check__span">Contacts and Address</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="role">
-											<input type="checkbox" checked>
-											<span class="check__span">Role</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="company">
-											<input type="checkbox" checked>
-											<span class="check__span">Company</span>
-										</label>
+							<div class="filters__in">
+								<div class="dropdown js-dropdown">
+									<p class="dropdown__item">Settings</p>
+									<div class="dropdown__list is-top-level js-inner">
+										<div class="dropdown__check">
+											<label class="check" data-attr="id">
+												<input type="checkbox" checked>
+												<span class="check__span">ID</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="name">
+												<input type="checkbox" checked>
+												<span class="check__span">Name</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="contacts">
+												<input type="checkbox" checked>
+												<span class="check__span">Contacts and Address</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="role">
+												<input type="checkbox" checked>
+												<span class="check__span">Role</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="company">
+												<input type="checkbox" checked>
+												<span class="check__span">Company</span>
+											</label>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -222,7 +229,7 @@
 								<th title="Company" width="178" data-id="company"><p>Company</p></th>
 								<th class="table__drop"><p>&nbsp;</p></th>
 							</tr>
-							<tr class="js-link" data-href="http://www.google.com">
+							<tr>
 								<td>
 									<div class="table__pic">
 										<div style="background-image: url(img/profile3.jpg)"></div>
@@ -246,15 +253,17 @@
 								<td class="table__drop">
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
-										<ul class="dropdown__list is-top-level js-inner">
-											<li><a href="#">Open in new window</a></li>
-											<li><a href="#">Download all in ZIP</a></li>
-											<li><a href="#">Deal status</a></li>
-										</ul>
+										<div class="dropdown__in js-inner">
+											<ul class="dropdown__list is-top-level">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
 									</div>
 								</td>
 							</tr>
-							<tr class="js-link" data-href="http://www.imgur.com">
+							<tr>
 								<td>
 									<div class="table__pic">
 										<div style="background-image: url(img/profile.jpg)"></div>
@@ -278,11 +287,13 @@
 								<td class="table__drop">
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
-										<ul class="dropdown__list is-top-level js-inner">
-											<li><a href="#">Open in new window</a></li>
-											<li><a href="#">Download all in ZIP</a></li>
-											<li><a href="#">Deal status</a></li>
-										</ul>
+										<div class="dropdown__in js-inner">
+											<ul class="dropdown__list is-top-level">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
 									</div>
 								</td>
 							</tr>

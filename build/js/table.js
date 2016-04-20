@@ -1,4 +1,188 @@
 $(document).ready(function() {
+
+	(function() {
+		var oliviaTable = {
+			dom: function() {
+				this.tablewrap = $('.js-tablewrap');
+				this.scrollTable = this.findScrollTable(this.tablewrap);
+				this.sidebar = this.findSidebar(this.tablewrap);
+				this.fakeHead = this.findFakeHead(this.tablewrap);
+				this.siderow = this.tablewrap.find('.js-sidedrop .js-row');
+				this.input = this.tablewrap.find('.js-filters input');
+				this.tableRow = this.tablewrap.find('tr');
+			},
+			// find functions
+			findScrollTable: function(tablewrap) {
+				return tablewrap.find('.js-scrollbar');
+			},
+			findSidebar: function(tablewrap) {
+				return tablewrap.find('.js-sidebar');
+			},
+			findFakeHead: function(tablewrap) {
+				return tablewrap.find('.js-fake-head');
+			},
+			// main functions
+			toggleDesignElem: function(scrollTable) {
+				scrollTable = scrollTable || this.scrollTable;
+
+				var scrollTableIn = scrollTable.find('.js-scrollbar .table');
+
+				if (scrollTable.hasClass('ps-active-x')) {
+					scrollTableIn.css('margin-bottom', '13px');
+					scrollTable.siblings().addClass('is-scrollbar');
+				} else {
+					scrollTableIn.css('margin-bottom', '0');
+					scrollTable.siblings().removeClass('is-scrollbar');
+				}
+			},
+			perfectScroll: function(scrollTable) {
+				scrollTable = scrollTable || this.scrollTable;
+
+				if (scrollTable.length > 0) {
+					if (scrollTable.hasClass('ps-container')) {
+						scrollTable.perfectScrollbar('update');
+					} else {
+						scrollTable.perfectScrollbar();
+					}
+				}
+			},
+			measureMoreblock: function(scrollTable) {
+				scrollTable = scrollTable || this.scrollTable;
+				var measure = scrollTable.find('.js-measure');
+
+				setTimeout(function() {
+					measure.each(function() {
+						// 5 stands for inline-block padding
+						var	plusBlockWidth = $(this).siblings('.js-plus-more').outerWidth() + 5;
+
+						$(this).css({
+							'max-width': 'calc( 100% - ' + plusBlockWidth + 'px)'
+						});
+					});
+				}, 0);
+			},
+			measureSidedropHeight: function(siderow, tablewrap) {
+				siderow = siderow || this.siderow,
+				tablewrap = tablewrap || this.tablewrap;
+
+				setTimeout(function() {
+					siderow.each(function(index) {
+						var siderowHeight = tablewrap.find('.js-scrollbar tr:not(".table__head")').eq(index).outerHeight();
+						$(this).find('td').css('height', siderowHeight);
+					});
+				}, 100);
+			},
+			columnsToggle: function(input, tablewrap) {
+				input = input || this.input,
+				tablewrap = tablewrap || this.tablewrap;
+
+				var tableRow = tablewrap.find('tr');
+
+				input.on('change', function() {
+					var data = $(this).parent().data('attr'),
+						thead = tablewrap.find('th[data-id="' + data + '"]'),
+						theadData = thead.data('id'),
+						theadIndex = thead.index(),
+						checkedInput = tablewrap.find('.js-filters input:checked'),
+						checkedInputNum = checkedInput.length;
+
+					oliviaTable.measureSidedropHeight();
+
+					// check if th with input id exists
+					if ( theadData ) {
+						if ( $(this).is(':checked') ) {
+							thead.show();
+
+							tableRow.each(function() {
+								$(this).find('td').eq(theadIndex).show();
+							});
+						} else {
+							thead.hide();
+
+							tableRow.each(function() {
+								$(this).find('td').eq(theadIndex).hide();
+							});
+						}
+					}
+					// at least one column in table
+					if ( checkedInputNum < 3 ) {
+						checkedInput.prop('disabled', true);
+					} else {
+						checkedInput.prop('disabled', false);
+					}
+				});
+			},
+			// sidebar functions
+			toggleSidebar: function(tablewrap) {
+				tablewrap = tablewrap || this.tablewrap;
+
+				var scrollTable = this.findScrollTable(tablewrap),
+					fakeHead 	= this.findFakeHead(tablewrap),
+					sidebar  	= this.findSidebar(tablewrap),
+					toggleSidebarBtn = tablewrap.find('.js-toggle-sidebar');
+
+				toggleSidebarBtn.click(function() {
+					$(this).toggleClass('is-opened');
+					sidebar.toggleClass('is-active');
+					fakeHead.toggleClass('is-sidebar');
+					tablewrap.find('.js-scrollbar').toggleClass('is-sidebar');
+
+					setTimeout(function() {
+						oliviaTable.perfectScroll();
+						oliviaTable.measureSidedropHeight();
+						oliviaTable.toggleDesignElem();
+					}, 300);
+				});
+			},
+			sidebarScroll: function(sidebar) {
+				sidebar  = sidebar || this.sidebar;
+
+				if (sidebar.length > 0) {
+					sidebar.find('.js-content').perfectScrollbar({
+						wheelPropagation: true
+					});
+				}
+			},
+			showActivityInSidebar: function(tablewrap, sidebar) {
+				tablewrap = tablewrap || this.tablewrap;
+				sidebar   = sidebar || this.sidebar;
+
+				var sidebarOption 	 = sidebar.find('.js-sidebar-option'),
+					toggleSidebarBtn = tablewrap.find('.js-toggle-sidebar');
+
+				if (sidebarOption.hasClass('is-active')) {
+					toggleSidebarBtn.addClass('is-active');
+				} else {
+					toggleSidebarBtn.removeClass('is-active');
+				}
+
+				toggleSidebarBtn.addClass('is-active');
+				console.log(toggleSidebarBtn)
+			}
+		};
+
+		oliviaTable.dom();
+		oliviaTable.toggleDesignElem();
+		oliviaTable.perfectScroll();
+		oliviaTable.measureSidedropHeight();
+		oliviaTable.measureMoreblock();
+		oliviaTable.columnsToggle();
+		oliviaTable.toggleSidebar();
+		oliviaTable.sidebarScroll();
+		//oliviaTable.showActivityInSidebar();
+
+		$(window).resize(function() {
+			oliviaTable.toggleDesignElem();
+			oliviaTable.perfectScroll();
+			oliviaTable.measureSidedropHeight();
+			oliviaTable.measureMoreblock();
+		});
+
+		window.oliviaTable = oliviaTable;
+	}());
+
+
+
 	(function() {
 
 		var	parentWrap = $('.js-tablewrap'),
@@ -6,20 +190,25 @@ $(document).ready(function() {
 			row = parentWrap.find('.js-sidedrop .js-row'),
 			scrollTable = parentWrap.find('.js-scrollbar'),
 			scrollTableIn = parentWrap.find('.js-scrollbar table'),
-			win = $(window);
+			win = $(window),
+			scrollPos = win.scrollTop();
+
 
 		// scroll table and scroll buttons
-		scrollTable.perfectScrollbar();
+		// function perfectScroll() {
+		// 	scrollTable.perfectScrollbar();
+		// }
 
-		function toggleDesignElem() {
-			if (scrollTable.hasClass('ps-active-x')) {
-				scrollTableIn.css('margin-bottom', '13px');
-				scrollTable.siblings().addClass('is-scrollbar');
-			} else {
-				scrollTableIn.css('margin-bottom', '0');
-				scrollTable.siblings().removeClass('is-scrollbar');
-			}
-		}
+
+		// function toggleDesignElem() {
+		// 	if (scrollTable.hasClass('ps-active-x')) {
+		// 		scrollTableIn.css('margin-bottom', '13px');
+		// 		scrollTable.siblings().addClass('is-scrollbar');
+		// 	} else {
+		// 		scrollTableIn.css('margin-bottom', '0');
+		// 		scrollTable.siblings().removeClass('is-scrollbar');
+		// 	}
+		// }
 
 		function addScrollButtons() {
 			scrollTable.each(function() {
@@ -49,97 +238,99 @@ $(document).ready(function() {
 			});
 		}
 
-		function measureMoreblock() {
-			setTimeout(function() {
-				$('.js-measure').each(function() {
-					var	plusBlockWidth = $(this).siblings('.js-plus-more').outerWidth() + 5; // 5 stands for inline-block padding
+		// function measureMoreblock() {
+		// 	setTimeout(function() {
+		// 		$('.js-measure').each(function() {
+		// 			var	plusBlockWidth = $(this).siblings('.js-plus-more').outerWidth() + 5; // 5 stands for inline-block padding
 
-					$(this).css({
-						'max-width': 'calc( 100% - ' + plusBlockWidth + 'px)'
-					});
-				});
-			}, 0);
-		}
+		// 			$(this).css({
+		// 				'max-width': 'calc( 100% - ' + plusBlockWidth + 'px)'
+		// 			});
+		// 		});
+		// 	}, 0);
+		// }
 
-		function measureSidedropHeight() {
-			setTimeout(function() {
-				row.each(function(index) {
-					var rowHeight = parentWrap.find('.js-scrollbar tr').eq(index).outerHeight();
-					$(this).find('td').css('height', rowHeight);
-				});
-			}, 100);
-		}
+		// function measureSidedropHeight() {
+		// 	setTimeout(function() {
+		// 		row.each(function(index) {
+		// 			var rowHeight = parentWrap.find('.js-scrollbar tr:not(".table__head")').eq(index).outerHeight();
+		// 			$(this).find('td').css('height', rowHeight);
+		// 		});
+		// 	}, 100);
+		// }
 
-		function columnsToggle() {
-			var input = $('.js-inner input'),
-				tableRow = $('.js-tablewrap tr');
+		// function columnsToggle() {
+		// 	var input = $('.js-inner input'),
+		// 		tableRow = $('.js-tablewrap tr');
 
-			input.on('change', function() {
-				var data = $(this).parent().data('attr'),
-					thead = $('.js-tablewrap th[data-id="' + data + '"]'),
-					theadData = thead.data('id'),
-					theadIndex = thead.index(),
-					checkedInput = $('.js-inner input:checked'),
-					checkedInputNum = checkedInput.length;
+		// 	input.on('change', function() {
+		// 		var data = $(this).parent().data('attr'),
+		// 			thead = $('.js-tablewrap th[data-id="' + data + '"]'),
+		// 			theadData = thead.data('id'),
+		// 			theadIndex = thead.index(),
+		// 			checkedInput = $('.js-inner input:checked'),
+		// 			checkedInputNum = checkedInput.length;
 
-				measureSidedropHeight();
+		// 		measureSidedropHeight();
 
-				// check if th with input id exists
-				if ( theadData ) {
-					if ( $(this).is(':checked') ) {
-						thead.show();
+		// 		// check if th with input id exists
+		// 		if ( theadData ) {
+		// 			if ( $(this).is(':checked') ) {
+		// 				thead.show();
 
-						tableRow.each(function() {
-							$(this).find('td').eq(theadIndex).show();
-						});
-					} else {
-						thead.hide();
+		// 				tableRow.each(function() {
+		// 					$(this).find('td').eq(theadIndex).show();
+		// 				});
+		// 			} else {
+		// 				thead.hide();
 
-						tableRow.each(function() {
-							$(this).find('td').eq(theadIndex).hide();
-						});
-					}
-				}
+		// 				tableRow.each(function() {
+		// 					$(this).find('td').eq(theadIndex).hide();
+		// 				});
+		// 			}
+		// 		}
 
-				// at least one column in table
-				if ( checkedInputNum < 3 ) {
-					checkedInput.prop('disabled', true);
-				} else {
-					checkedInput.prop('disabled', false);
-				}
-			});
-		}
+		// 		// at least one column in table
+		// 		if ( checkedInputNum < 3 ) {
+		// 			checkedInput.prop('disabled', true);
+		// 		} else {
+		// 			checkedInput.prop('disabled', false);
+		// 		}
+		// 	});
+		// }
 
 		// sidebar inner scroll
-		sidebar.find('.js-content').perfectScrollbar({
-			wheelPropagation: true
-		});
+		// function sidebarScroll() {
+		// 	sidebar.find('.js-content').perfectScrollbar({
+		// 		wheelPropagation: true
+		// 	});
+		// }
 
-		function toggleSidebar() {
-			$('.js-toggle-sidebar').click(function() {
-				var parentWrap = $(this).parents(parentWrap),
-					scrollTable = parentWrap.find('.js-scrollbar');
+		// function toggleSidebar() {
+		// 	$('.js-toggle-sidebar').click(function() {
+		// 		var parentWrap = $(this).parents(parentWrap),
+		// 			scrollTable = parentWrap.find('.js-scrollbar');
 
-				$(this).toggleClass('is-opened');
-				parentWrap.find('.js-sidebar').toggleClass('is-active');
-				parentWrap.find('.js-scrollbar').toggleClass('is-sidebar');
-				parentWrap.find('.js-fake-head').toggleClass('is-sidebar');
+		// 		$(this).toggleClass('is-opened');
+		// 		parentWrap.find('.js-sidebar').toggleClass('is-active');
+		// 		parentWrap.find('.js-scrollbar').toggleClass('is-sidebar');
+		// 		parentWrap.find('.js-fake-head').toggleClass('is-sidebar');
 
-				setTimeout(function() {
-					scrollTable.perfectScrollbar('update');
-					measureSidedropHeight();
-					toggleDesignElem();
-				}, 300);
-			});
-		}
+		// 		setTimeout(function() {
+		// 			scrollTable.perfectScrollbar('update');
+		// 			measureSidedropHeight();
+		// 			toggleDesignElem();
+		// 		}, 300);
+		// 	});
+		// }
 
-		function showActivityInSidebar() {
-			if ($('.js-sidebar-option').hasClass('is-active')) {
-				$('.js-sidebar-option').closest(parentWrap).find('.js-toggle-sidebar').addClass('is-active');
-			} else {
-				$('.js-sidebar-option').closest(parentWrap).find('.js-toggle-sidebar').removeClass('is-active');
-			}
-		}
+		// function showActivityInSidebar() {
+		// 	if ($('.js-sidebar-option').hasClass('is-active')) {
+		// 		$('.js-sidebar-option').closest(parentWrap).find('.js-toggle-sidebar').addClass('is-active');
+		// 	} else {
+		// 		$('.js-sidebar-option').closest(parentWrap).find('.js-toggle-sidebar').removeClass('is-active');
+		// 	}
+		// }
 
 		function chooseSidebarOption() {
 			$('.js-sidebar-option').click(function(evt) {
@@ -147,7 +338,7 @@ $(document).ready(function() {
 				$(this).parents('.js-content').find('.js-sidebar-option').removeClass('is-active');
 				$(this).addClass('is-active');
 
-				showActivityInSidebar();
+				//showActivityInSidebar();
 			});
 		}
 
@@ -205,32 +396,6 @@ $(document).ready(function() {
 			});
 		}
 
-		// if ( document.documentElement.scrollHeight >= document.documentElement.clientHeight ) {
-		// 	var delta = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-		// }
-
-		parentWrap.each(function() {
-			// vars
-			var fakeHeadTable = $(this).find('.js-fake-head .table');
-				//table = $(this).find('.js-scrollbar'),
-				//tableH = table.outerHeight() - delta,
-				//el = $(this),
-				//row = el.find('tr');
-
-			// create and scroll fake header
-			$(this).find('.js-clone-head').clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
-
-			// setTimeout(function() {
-			// 	var rowH = row.outerHeight();
-			// 	// measure table height
-			// 	if (delta === 0) {
-			// 		table.css('max-height', 'auto');
-			// 	} else {
-			// 		table.css('max-height', Math.floor(tableH / rowH) * rowH);
-			// 	}
-			// }, 0);
-		});
-
 		function filterTabs() {
 			$('.js-tab-el').click(function() {
 				$(this).siblings().removeClass('is-active');
@@ -253,14 +418,13 @@ $(document).ready(function() {
 		}
 
 		function selectAllRows() {
-			$('.label-checkbox').on('change','input[type="checkbox"]', function() {
+			$('.label-checkbox').on('change', 'input[type="checkbox"]', function() {
 				if ($(this).prop('checked')) {
 					$(this).parents('.js-tablewrap').find('.js-scrollbar tr')
 												    .addClass('is-selected')
 													.find('input[type="checkbox"]').prop('checked', true);
 					$(this).parents('.js-tablewrap').find('.js-sidedrop tr').addClass('is-selected');
-
-				} else{
+				} else {
 					$(this).parents('.js-tablewrap').find('.js-scrollbar tr')
 												    .removeClass('is-selected')
 													.find('input[type="checkbox"]').prop('checked', false);
@@ -275,63 +439,68 @@ $(document).ready(function() {
 			});
 
 			$('.js-search-table input').on('blur', function() {
-				$(this).parent().removeClass('search-opened');
+				if (!$(this).val()) {
+					$(this).parent().removeClass('search-opened');
+				}
 			});
 		}
 
+		function addFakeHeader() {
+			parentWrap.each(function() {
+				var fakeHeadTable = $(this).find('.js-fake-head .table');
+
+				$(this).find('.js-clone-head').clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
+			});
+		}
 
 		function tableHeadFixed() {
+			scrollPos = win.scrollTop();
 			if ($('.js-filters').length && $('.js-clone-head').length) {
-				var scrollPos = win.scrollTop(),
-					fakeHeader = $('.js-fake-head'),
+				var fakeHeader = $('.js-fake-head'),
 					filters = $('.js-filters'),
-					filtersTop = filters.offset().top,
+					filtersTop = $('.js-tablewrap').offset().top,
 					filtersHeight = filters.outerHeight(),
 					cloneHead  = $('.js-clone-head').offset().top;
 
 				if (scrollPos > filtersTop)	{
 					filters.addClass('is-fixed');
 					fakeHeader.addClass('is-fixed').css('top', filtersHeight);
-				} else if ( scrollPos < cloneHead ) {
+				} else if ( scrollPos <= cloneHead ) {
 					filters.removeClass('is-fixed');
 					fakeHeader.removeClass('is-fixed').css('top', '0');
 				}
 			}
 		}
 
-		// check scrollbar to add/remove overflow styles for dropdowns
-		// setTimeout(function() {
-		// 	if ( scrollTable.get(0).scrollHeight <= scrollTable.height() ) {
-		// 		parentWrap.find('.tablewrap__in').addClass('is-visible');
-		// 	}
-		// }, 100);
-
 		// summon them on load!
-		toggleDesignElem();
+
 		filterTabs();
-		columnsToggle();
 		addScrollButtons();
-		measureSidedropHeight();
-		measureMoreblock();
-		toggleSidebar();
 		chooseSidebarOption();
 		toggleSidebarContent();
-		showActivityInSidebar();
 		sidebarFilter();
 		selectRow();
 		selectAllRows();
 		toggleSearchTable();
 		tableHeadFixed();
+		addFakeHeader();
+		//toggleDesignElem();
+		//perfectScroll();
+		//measureMoreblock();
+		//measureSidedropHeight();
+		//columnsToggle();
+		//toggleSidebar();
+		//showActivityInSidebar();
 
-		$(window).resize(function() {
-			scrollTable.perfectScrollbar('update');
-			toggleDesignElem();
-			measureMoreblock();
-			measureSidedropHeight();
-		});
+
+		// $(window).resize(function() {
+		// 	scrollTable.perfectScrollbar('update');
+		// 	toggleDesignElem();
+		// 	measureMoreblock();
+		// 	measureSidedropHeight();
+		// });
 
 		$(window).scroll(function() {
-			scrollPos = win.scrollTop();
 			tableHeadFixed();
 		});
 

@@ -10,7 +10,6 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-	<link rel="stylesheet" media="all" href="css/tooltipster.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
@@ -37,31 +36,33 @@
 				</div>
 				<div class="tablewrap js-tablewrap">
 					<!-- begin filters  -->
-					<div class="filters">
-						<div class="filters__ttl">
-							<div class="tooltip">
-								<p>My Tasks</p>
-								<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
+					<div class="filters js-filters">
+						<div class="filters__wrap js-fixed">
+							<div class="filters__ttl">
+								<div class="tooltip">
+									<p>My Tasks</p>
+									<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
+								</div>
 							</div>
-						</div>
-						<div class="filters__in">
-							<div class="toggle-btn js-toggle-sidebar">
-								<i class="icon icon-sidebar"></i>
-							</div>
-							<div class="toggle-btn js-search-table">
-								<input type="search" placeholder="Search table">
-								<i class="icon icon-zoom"></i>
-							</div>
-							<div class="dropdown js-dropdown">
-								<p class="dropdown__item">Settings</p>
-								//=include partials/staff-task-settings.html
-							</div>
-							<div class="dropdown js-dropdown">
-								<p class="dropdown__item">Actions</p>
-								<div class="dropdown__list is-top-level js-inner">
-									<div class="dropdown__text">
-										<p>Select tasks to make multiple actions</p>
-										<small>Select columns is switched on in Settings dropdown</small>
+							<div class="filters__in">
+								<div class="toggle-btn js-toggle-sidebar">
+									<i class="icon icon-sidebar"></i>
+								</div>
+								<div class="toggle-btn js-search-table">
+									<input type="search" placeholder="Search table">
+									<i class="icon icon-zoom"></i>
+								</div>
+								<div class="dropdown js-dropdown">
+									<p class="dropdown__item">Settings</p>
+									//=include partials/staff-task-settings.html
+								</div>
+								<div class="dropdown js-dropdown">
+									<p class="dropdown__item">Actions</p>
+									<div class="dropdown__list is-top-level js-inner">
+										<div class="dropdown__text">
+											<p>Select tasks to make multiple actions</p>
+											<small>Select columns is switched on in Settings dropdown</small>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -248,15 +249,17 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Re-assign</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">Open refered deal</a></li>
+													<li><a href="#">Open rep's deal</a></li>
+													<li><a href="#">Sign in as rep</a></li>
+													<li><a href="#">Delete task</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -264,15 +267,17 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Re-assign</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">Open refered deal</a></li>
+													<li><a href="#">Open rep's deal</a></li>
+													<li><a href="#">Sign in as rep</a></li>
+													<li><a href="#">Delete task</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -280,15 +285,17 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Re-assign</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">Open refered deal</a></li>
+													<li><a href="#">Open rep's deal</a></li>
+													<li><a href="#">Sign in as rep</a></li>
+													<li><a href="#">Delete task</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -296,15 +303,17 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Re-assign</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">Open refered deal</a></li>
+													<li><a href="#">Open rep's deal</a></li>
+													<li><a href="#">Sign in as rep</a></li>
+													<li><a href="#">Delete task</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -312,15 +321,17 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Re-assign</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">Open refered deal</a></li>
+													<li><a href="#">Open rep's deal</a></li>
+													<li><a href="#">Sign in as rep</a></li>
+													<li><a href="#">Delete task</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -329,7 +340,9 @@
 						<!-- end sidedrop -->
 						<!-- begin fake-header  -->
 						<div class="fake-header js-fake-head">
-							<table class="table"></table>
+							<div class="fake-header__in js-fixed">
+								<table class="table"></table>
+							</div>
 						</div>
 						<!-- end fake-header -->
 					</div>
