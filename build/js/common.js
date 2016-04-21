@@ -79,21 +79,7 @@ $(document).ready(function() {
 
 		// hide one dropdown if another is opened in the same table
 		if ($(this).parents('tr').length) {
-			$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active is-top');
-		}
-
-		// show dropdown on top side if the end of the table
-		if ($(this).parents('.js-sidedrop').length && !$(this).hasClass('is-disabled')) {
-			if (!$('.tablewrap__in').hasClass('is-visible')) {
-				var	table = $(this).parents('.js-tablewrap').find('.js-scrollbar'),
-					tableScrollHeight = table.get(0).scrollHeight,
-					innerList = $(this).find('.js-inner'),
-					innerListH = $(this).position().top + innerList.outerHeight();
-
-				if (innerListH > tableScrollHeight) {
-					$(this).toggleClass('is-top');
-				}
-			}
+			$(this).parents('tr').siblings().find('.js-dropdown').removeClass('is-active');
 		}
 
 		// unclickable when disabled
@@ -126,9 +112,9 @@ $(document).ready(function() {
 		searchResults.removeClass('is-active');
 	});
 
-	// fixed header in forms pages
 	function scrollFixedElements() {
 		var scrLeft = $(this).scrollLeft();
+
 		$('.js-fixed').css({
 			left: -scrLeft
 		});
@@ -163,14 +149,21 @@ $(document).ready(function() {
 	$('.js-vert-scroll').perfectScrollbar();
 
 	removeHeaderElem();
-	scrollFixedElements();
 	search();
 	changeDropdownOpt();
 	chooseAction();
+	scrollFixedElements();
 
+	var winStart = 0;
 	win.scroll(function() {
-		scrollFixedElements();
+		var currTop = $(window).scrollTop();
+
 		removeHeaderElem();
+
+		if (winStart == currTop) {
+			scrollFixedElements();
+		}
+		winStart = currTop;
 	});
 
 });

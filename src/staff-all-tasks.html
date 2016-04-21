@@ -10,7 +10,6 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-	<link rel="stylesheet" media="all" href="css/tooltipster.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
@@ -37,31 +36,33 @@
 				</div>
 				<div class="tablewrap js-tablewrap">
 					<!-- begin filters  -->
-					<div class="filters">
-						<div class="filters__ttl">
-							<div class="tooltip">
-								<p>My Tasks</p>
-								<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
+					<div class="filters js-filters">
+						<div class="filters__wrap js-fixed">
+							<div class="filters__ttl">
+								<div class="tooltip">
+									<p>My Tasks</p>
+									<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span></div>
+								</div>
 							</div>
-						</div>
-						<div class="filters__in">
-							<div class="toggle-btn js-toggle-sidebar">
-								<i class="icon icon-sidebar"></i>
-							</div>
-							<div class="toggle-btn js-search-table">
-								<input type="search" placeholder="Search table">
-								<i class="icon icon-zoom"></i>
-							</div>
-							<div class="dropdown js-dropdown">
-								<p class="dropdown__item">Settings</p>
-								//=include partials/staff-task-settings.html
-							</div>
-							<div class="dropdown js-dropdown">
-								<p class="dropdown__item">Actions</p>
-								<div class="dropdown__list is-top-level js-inner">
-									<div class="dropdown__text">
-										<p>Select tasks to make multiple actions</p>
-										<small>Select columns is switched on in Settings dropdown</small>
+							<div class="filters__in">
+								<div class="toggle-btn js-toggle-sidebar">
+									<i class="icon icon-sidebar"></i>
+								</div>
+								<div class="toggle-btn js-search-table">
+									<input type="search" placeholder="Search table">
+									<i class="icon icon-zoom"></i>
+								</div>
+								<div class="dropdown js-dropdown">
+									<p class="dropdown__item">Settings</p>
+									//=include partials/staff-task-settings.html
+								</div>
+								<div class="dropdown js-dropdown">
+									<p class="dropdown__item">Actions</p>
+									<div class="dropdown__list is-top-level js-inner">
+										<div class="dropdown__text">
+											<p>Select tasks to make multiple actions</p>
+											<small>Select columns is switched on in Settings dropdown</small>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -80,7 +81,7 @@
 									<th title="Refered to" width="137" data-id="refered"><p>Refered to</p></th>
 									<th title="Last Updated" width="107" data-id="update"><p>Last Updated</p></th>
 								</tr>
-								<tr class="is-active js-link" data-href="http://www.google.com">
+								<tr class="is-active" data-href="http://www.google.com">
 									<td>
 										<div class="status">
 											<span class="status-info js-plus-more">New</span>
@@ -104,7 +105,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="is-active js-link" data-href="http://www.imgur.com">
+								<tr class="is-active" data-href="http://www.imgur.com">
 									<td>
 										<div class="status">
 											<i class="icon icon-warn"></i>
@@ -127,7 +128,7 @@
 										<p class="table__text">Aug 5, 2015</p>
 									</td>
 								</tr>
-								<tr class="is-active js-link" data-href="http://www.imgur.com">
+								<tr class="is-active" data-href="http://www.imgur.com">
 									<td>
 										<div class="status is-failed">
 											<i class="icon icon-warn"></i>
@@ -151,7 +152,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="is-active js-link" data-href="http://www.imgur.com">
+								<tr class="is-active" data-href="http://www.imgur.com">
 									<td>
 										<div class="status">
 											<i class="icon icon-warn"></i>
@@ -175,245 +176,7 @@
 										<p class="table__text">Aug 5, 2015</p>
 									</td>
 								</tr>
-								<tr class="is-active js-link" data-href="http://www.imgur.com">
-									<td>
-										<div class="status">
-											<i class="icon icon-warn"></i>
-											<span class="js-measure">Review</span>
-										</div>
-									</td>
-									<td>
-										<div class="description">
-											<i class="svg-ico customer-ico"></i>
-											<span>Steve Bsucemy</span>
-										</div>
-										<p class="table__text">Brain Dunn submitted customer identification form: retail Steve Buscemy</p>
-									</td>
-									<td class="table__name">
-										<p class="table__text">Brian Dunn</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Aug 5, 2015</p>
-									</td>
-								</tr>
-								<tr class="is-active js-link" data-href="http://www.google.com">
-									<td>
-										<div class="status">
-											<span class="status-info js-plus-more">New</span>
-											<span class="js-measure">Pre-approved</span>
-										</div>
-									</td>
-									<td>
-										<div class="description">
-											<i class="svg-ico memo-ico"></i>
-											<span>Update Space X Deal Memo</span>
-										</div>
-										<p class="table__text">Kimberly Yorkinsson Pre-approved Space X Deal Memo (DM45681)</p>
-									</td>
-									<td class="table__name">
-										<p class="table__text">Brian Dunn</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Aug 10, 2015</p>
-									</td>
-								</tr>
-								<tr class="is-active js-link" data-href="http://www.imgur.com">
-									<td>
-										<div class="status">
-											<i class="icon icon-warn"></i>
-											<span class="js-measure">Review</span>
-										</div>
-									</td>
-									<td>
-										<div class="description">
-											<span>Send us your photo</span>
-										</div>
-										<p class="table__text">File in the middle name properly</p>
-									</td>
-									<td class="table__name">
-										<p class="table__text">Brian Dunn</p>
-									</td>
-									<td>
-										<p class="table__text">Other</p>
-									</td>
-									<td>
-										<p class="table__text">Aug 5, 2015</p>
-									</td>
-								</tr>
-								<tr class="is-active js-link" data-href="http://www.imgur.com">
-									<td>
-										<div class="status is-failed">
-											<i class="icon icon-warn"></i>
-											<span class="js-measure">Review</span>
-										</div>
-									</td>
-									<td>
-										<div class="description">
-											<i class="icon icon-corp"></i>
-											<span>Nakatomi Corp</span>
-										</div>
-										<p class="table__text">Brain Dunn commented: Hope this time I did it all well, please review, all best wishes</p>
-									</td>
-									<td class="table__name">
-										<p class="table__text">Brian Dunn</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Aug 10, 2015</p>
-									</td>
-								</tr>
-								<tr class="is-active js-link" data-href="http://www.imgur.com">
-									<td>
-										<div class="status">
-											<i class="icon icon-warn"></i>
-											<span class="js-measure">Review</span>
-										</div>
-									</td>
-									<td>
-										<div class="description">
-											<i class="svg-ico letter-ico"></i>
-											<span>Submit Engagement Letter</span>
-										</div>
-										<p class="table__text">Brain Dunn submitted Space X Engagement Letter</p>
-									</td>
-									<td class="table__name">
-										<p class="table__text">Brian Dunn</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Aug 5, 2015</p>
-									</td>
-								</tr>
-								<tr class="is-active js-link" data-href="http://www.imgur.com">
-									<td>
-										<div class="status">
-											<i class="icon icon-warn"></i>
-											<span class="js-measure">Review</span>
-										</div>
-									</td>
-									<td>
-										<div class="description">
-											<i class="svg-ico customer-ico"></i>
-											<span>Steve Bsucemy</span>
-										</div>
-										<p class="table__text">Brain Dunn submitted customer identification form: retail Steve Buscemy</p>
-									</td>
-									<td class="table__name">
-										<p class="table__text">Brian Dunn</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Aug 5, 2015</p>
-									</td>
-								</tr>
-								<tr class="is-active js-link" data-href="http://www.google.com">
-									<td>
-										<div class="status">
-											<span class="status-info js-plus-more">New</span>
-											<span class="js-measure">Pre-approved</span>
-										</div>
-									</td>
-									<td>
-										<div class="description">
-											<i class="svg-ico memo-ico"></i>
-											<span>Update Space X Deal Memo</span>
-										</div>
-										<p class="table__text">Kimberly Yorkinsson Pre-approved Space X Deal Memo (DM45681)</p>
-									</td>
-									<td class="table__name">
-										<p class="table__text">Brian Dunn</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Aug 10, 2015</p>
-									</td>
-								</tr>
-								<tr class="is-active js-link" data-href="http://www.imgur.com">
-									<td>
-										<div class="status">
-											<i class="icon icon-warn"></i>
-											<span class="js-measure">Review</span>
-										</div>
-									</td>
-									<td>
-										<div class="description">
-											<span>Send us your photo</span>
-										</div>
-										<p class="table__text">File in the middle name properly</p>
-									</td>
-									<td class="table__name">
-										<p class="table__text">Brian Dunn</p>
-									</td>
-									<td>
-										<p class="table__text">Other</p>
-									</td>
-									<td>
-										<p class="table__text">Aug 5, 2015</p>
-									</td>
-								</tr>
-								<tr class="is-active js-link" data-href="http://www.imgur.com">
-									<td>
-										<div class="status is-failed">
-											<i class="icon icon-warn"></i>
-											<span class="js-measure">Review</span>
-										</div>
-									</td>
-									<td>
-										<div class="description">
-											<i class="icon icon-corp"></i>
-											<span>Nakatomi Corp</span>
-										</div>
-										<p class="table__text">Brain Dunn commented: Hope this time I did it all well, please review, all best wishes</p>
-									</td>
-									<td class="table__name">
-										<p class="table__text">Brian Dunn</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Aug 10, 2015</p>
-									</td>
-								</tr>
-								<tr class="is-active js-link" data-href="http://www.imgur.com">
-									<td>
-										<div class="status">
-											<i class="icon icon-warn"></i>
-											<span class="js-measure">Review</span>
-										</div>
-									</td>
-									<td>
-										<div class="description">
-											<i class="svg-ico letter-ico"></i>
-											<span>Submit Engagement Letter</span>
-										</div>
-										<p class="table__text">Brain Dunn submitted Space X Engagement Letter</p>
-									</td>
-									<td class="table__name">
-										<p class="table__text">Brian Dunn</p>
-									</td>
-									<td>
-										<p class="table__text">Space X</p>
-									</td>
-									<td>
-										<p class="table__text">Aug 5, 2015</p>
-									</td>
-								</tr>
-								<tr class="is-active js-link" data-href="http://www.imgur.com">
+								<tr class="is-active" data-href="http://www.imgur.com">
 									<td>
 										<div class="status">
 											<i class="icon icon-warn"></i>
@@ -450,15 +213,17 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Re-assign</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">Open refered deal</a></li>
+													<li><a href="#">Open rep's deal</a></li>
+													<li><a href="#">Sign in as rep</a></li>
+													<li><a href="#">Delete task</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -466,15 +231,17 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Re-assign</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">Open refered deal</a></li>
+													<li><a href="#">Open rep's deal</a></li>
+													<li><a href="#">Sign in as rep</a></li>
+													<li><a href="#">Delete task</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -482,15 +249,17 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Re-assign</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">Open refered deal</a></li>
+													<li><a href="#">Open rep's deal</a></li>
+													<li><a href="#">Sign in as rep</a></li>
+													<li><a href="#">Delete task</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -498,15 +267,17 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Re-assign</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">Open refered deal</a></li>
+													<li><a href="#">Open rep's deal</a></li>
+													<li><a href="#">Sign in as rep</a></li>
+													<li><a href="#">Delete task</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -514,175 +285,17 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-								<tr class="js-row">
-									<td>
-										<div class="dropdown js-dropdown">
-											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Re-assign</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">Open refered deal</a></li>
-												<li><a href="#">Open rep's deal</a></li>
-												<li><a href="#">Sign in as rep</a></li>
-												<li><a href="#">Delete task</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Re-assign</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">Open refered deal</a></li>
+													<li><a href="#">Open rep's deal</a></li>
+													<li><a href="#">Sign in as rep</a></li>
+													<li><a href="#">Delete task</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -691,7 +304,9 @@
 						<!-- end sidedrop -->
 						<!-- begin fake-header  -->
 						<div class="fake-header js-fake-head">
-							<table class="table"></table>
+							<div class="fake-header__in js-fixed">
+								<table class="table"></table>
+							</div>
 						</div>
 						<!-- end fake-header -->
 					</div>
