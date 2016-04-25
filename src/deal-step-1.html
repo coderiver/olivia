@@ -9,7 +9,6 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-	<link rel="stylesheet" media="all" href="css/tooltipster.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
@@ -157,7 +156,7 @@
 								<th width="117"></th>
 								<th class="table__drop"></th>
 							</tr>
-							<tr class="js-link is-active" data-href="http://www.google.com">
+							<tr class="is-active">
 								<td>
 									<div class="status">
 										<p class="status-info js-plus-more">New</p>
@@ -177,10 +176,12 @@
 								<td class="table__drop">
 									<div class="dropdown js-dropdown">
 										<span class="dropdown__bl"></span>
-										<ul class="dropdown__list is-top-level js-inner">
-											<li><a href="#">Open in new window</a></li>
-											<li><a href="#">Ask a question (e-mail)</a></li>
-										</ul>
+										<div class="dropdown__in js-inner">
+											<ul class="dropdown__list is-top-level js-vert-scroll">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Ask a question (e-mail)</a></li>
+											</ul>
+										</div>
 									</div>
 								</td>
 							</tr>

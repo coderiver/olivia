@@ -278,6 +278,19 @@ body
 	&.is-disabled
 		background: #CFD5E0
 
+.search-close
+	position: absolute
+	top: 50%
+	right: 10px
+	margin-top: -8px
+	opacity: 0
+	visibility: hidden
+	cursor: pointer
+	+tr(0.2s)
+	&.is-active
+		opacity: 1
+		visibility: visible
+
 // common blocks
 .l
 	max-width: 1370px
