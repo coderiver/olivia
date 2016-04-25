@@ -231,7 +231,8 @@
 			color: #000
 	input
 		width: 100%
-		padding: 8px 8px 8px 40px
+		max-width: 200px
+		padding: 8px 25px 8px 40px
 		border: 1px solid #6c757a
 		border-radius: 40px
 		font-size: 13px
@@ -248,6 +249,19 @@
 		margin-top: -7px
 		font-size: 14px
 		color: #757A7D
+	.icon-close
+		position: absolute
+		top: 50%
+		right: 10px
+		margin-top: -8px
+		font-size: 16px
+		opacity: 0
+		visibility: hidden
+		cursor: pointer
+		+tr(0.2s)
+		&.is-active
+			opacity: 1
+			visibility: visible
 
 // suggest
 .suggest
@@ -272,11 +286,14 @@
 		font-size: 0
 		.suggest
 			&__head
-				position: absolute
-				right: 23px
+				margin-bottom: 10px
+			&__txt
+				max-width: 600px
+				padding-left: 7px
 			&__menu
 				margin-top: 0
 				padding-right: 50px
+				font-size: 0
 				+clr
 			&__folder
 				margin-right: 0
@@ -336,8 +353,8 @@
 		margin-top: 10px
 	&__side
 		display: inline-block
-		vertical-align: bottom
-		padding: 0 100px 0 44px
+		padding: 0 70px 0 43px
+		vertical-align: top
 		&:first-child
 			padding-left: 7px
 			border-right: 1px solid #DCE0E7

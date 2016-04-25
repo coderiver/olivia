@@ -9,7 +9,6 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-	<link rel="stylesheet" media="all" href="css/tooltipster.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
@@ -39,32 +38,34 @@
 				<!-- begin tablewrap  -->
 				<div class="tablewrap js-tablewrap">
 					<!-- begin filters  -->
-					<div class="filters">
-						<div class="filters__ttl">Transactions</div>
-						<div class="filters__in">
-							<div class="toggle-btn js-toggle-sidebar">
-								<i class="icon icon-sidebar"></i>
-							</div>
-							<div class="toggle-btn js-search-table">
-								<input type="search" placeholder="Search table">
-								<i class="icon icon-zoom"></i>
-							</div>
-							<div class="toggle-btn">
-								<i class="icon icon-calendar"></i>
-							</div>
-							<div class="dropdown js-dropdown">
-								<p class="dropdown__item">Filter by status</p>
-								<ul class="dropdown__list is-top-level js-inner">
-									<li><a href="#" class="is-active">All statuses</a></li>
-									<li><a href="#">With tasks</a></li>
-									<li><a href="#">Approved</a></li>
-									<li><a href="#">Funds received</a></li>
-									<li><a href="#">Comission paid</a></li>
-								</ul>
-							</div>
-							<div class="dropdown js-dropdown">
-								<p class="dropdown__item">Settings</p>
-								//=include partials/all-transactions-settings.html
+					<div class="filters js-filters">
+						<div class="filters__wrap js-fixed">
+							<div class="filters__ttl">Transactions</div>
+							<div class="filters__in">
+								<div class="toggle-btn js-toggle-sidebar">
+									<i class="icon icon-sidebar"></i>
+								</div>
+								<div class="toggle-btn js-search-table">
+									<input type="search" placeholder="Search table">
+									<i class="icon icon-zoom"></i>
+								</div>
+								<div class="toggle-btn">
+									<i class="icon icon-calendar"></i>
+								</div>
+								<div class="dropdown js-dropdown">
+									<p class="dropdown__item">Filter by status</p>
+									<ul class="dropdown__list is-top-level js-inner">
+										<li><a href="#" class="is-active">All statuses</a></li>
+										<li><a href="#">With tasks</a></li>
+										<li><a href="#">Approved</a></li>
+										<li><a href="#">Funds received</a></li>
+										<li><a href="#">Comission paid</a></li>
+									</ul>
+								</div>
+								<div class="dropdown js-dropdown">
+									<p class="dropdown__item">Settings</p>
+									//=include partials/all-transactions-settings.html
+								</div>
 							</div>
 						</div>
 					</div>
@@ -85,7 +86,7 @@
 									<th title="Commission" width="110" data-id="commission" class="cell-right"><p>Commission</p></th>
 									<th title="Commission paid" width="150" data-id="commissionpaid"><p>Commission paid</p></th>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -117,7 +118,7 @@
 										<p class="table__text">-</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -149,7 +150,7 @@
 										<p class="table__text">Paid</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -181,7 +182,7 @@
 										<p class="table__text">-</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -213,7 +214,7 @@
 										<p class="table__text">-</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico is-disabled"></i>
@@ -244,7 +245,7 @@
 										<p class="table__text">-</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -290,14 +291,16 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Seller profile</a></li>
-												<li><a href="#">Buyer profile</a></li>
-												<li><a href="#">Engagement letter</a></li>
-												<li><a href="#">Download as PDF</a></li>
-												<li><a href="#">Download doc pack</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Seller profile</a></li>
+													<li><a href="#">Buyer profile</a></li>
+													<li><a href="#">Engagement letter</a></li>
+													<li><a href="#">Download as PDF</a></li>
+													<li><a href="#">Download doc pack</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -305,14 +308,16 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Seller profile</a></li>
-												<li><a href="#">Buyer profile</a></li>
-												<li><a href="#">Engagement letter</a></li>
-												<li><a href="#">Download as PDF</a></li>
-												<li><a href="#">Download doc pack</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Seller profile</a></li>
+													<li><a href="#">Buyer profile</a></li>
+													<li><a href="#">Engagement letter</a></li>
+													<li><a href="#">Download as PDF</a></li>
+													<li><a href="#">Download doc pack</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -320,14 +325,16 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Seller profile</a></li>
-												<li><a href="#">Buyer profile</a></li>
-												<li><a href="#">Engagement letter</a></li>
-												<li><a href="#">Download as PDF</a></li>
-												<li><a href="#">Download doc pack</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Seller profile</a></li>
+													<li><a href="#">Buyer profile</a></li>
+													<li><a href="#">Engagement letter</a></li>
+													<li><a href="#">Download as PDF</a></li>
+													<li><a href="#">Download doc pack</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -335,14 +342,16 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Seller profile</a></li>
-												<li><a href="#">Buyer profile</a></li>
-												<li><a href="#">Engagement letter</a></li>
-												<li><a href="#">Download as PDF</a></li>
-												<li><a href="#">Download doc pack</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Seller profile</a></li>
+													<li><a href="#">Buyer profile</a></li>
+													<li><a href="#">Engagement letter</a></li>
+													<li><a href="#">Download as PDF</a></li>
+													<li><a href="#">Download doc pack</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -350,14 +359,16 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Seller profile</a></li>
-												<li><a href="#">Buyer profile</a></li>
-												<li><a href="#">Engagement letter</a></li>
-												<li><a href="#">Download as PDF</a></li>
-												<li><a href="#">Download doc pack</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Seller profile</a></li>
+													<li><a href="#">Buyer profile</a></li>
+													<li><a href="#">Engagement letter</a></li>
+													<li><a href="#">Download as PDF</a></li>
+													<li><a href="#">Download doc pack</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -365,14 +376,16 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Seller profile</a></li>
-												<li><a href="#">Buyer profile</a></li>
-												<li><a href="#">Engagement letter</a></li>
-												<li><a href="#">Download as PDF</a></li>
-												<li><a href="#">Download doc pack</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Seller profile</a></li>
+													<li><a href="#">Buyer profile</a></li>
+													<li><a href="#">Engagement letter</a></li>
+													<li><a href="#">Download as PDF</a></li>
+													<li><a href="#">Download doc pack</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -381,7 +394,9 @@
 						<!-- end sidedrop -->
 						<!-- begin fake-header  -->
 						<div class="fake-header js-fake-head">
-							<table class="table"></table>
+							<div class="fake-header__in js-fixed">
+								<table class="table"></table>
+							</div>
 						</div>
 						<!-- end fake-header -->
 					</div>

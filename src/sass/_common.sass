@@ -302,11 +302,17 @@ a
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="search"],
 textarea
 	-webkit-appearance: none
 
-*[data-href]
-	cursor: pointer
+input[type="search"]
+	padding-right: 30px
+	&::-webkit-search-cancel-button
+		-webkit-appearance: none
+	&::-ms-clear
+		display: none
+
 
 input
 	width: 100%

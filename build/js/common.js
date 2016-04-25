@@ -144,6 +144,18 @@ $(document).ready(function() {
 				searchResults.addClass('is-active');
 			}
 		});
+
+		$('input[type="search"]').on('keydown', function() {
+			var clearSearchBtn = $(this).parent().find('.js-search-clear');
+
+			clearSearchBtn.addClass('is-active');
+		});
+	}
+
+	function clearSearch() {
+		$('.js-search-clear').click(function() {
+			$(this).siblings('input').val('').focus();
+		});
 	}
 
 	$('.js-vert-scroll').perfectScrollbar();
@@ -153,6 +165,7 @@ $(document).ready(function() {
 	changeDropdownOpt();
 	chooseAction();
 	scrollFixedElements();
+	clearSearch();
 
 	var winStart = 0;
 	win.scroll(function() {

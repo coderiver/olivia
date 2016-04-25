@@ -294,12 +294,12 @@ $(document).ready(function() {
 				});
 			},
 			// filter functions
-			filterTabs: function(filters) {
-				filters = filters || this.filters;
+			tableTabs: function(tablewrap) {
+				tablewrap = tablewrap || this.tablewrap;
 
-				var filterTabs = filters.find('.js-tab-el');
+				var tableTabs = tablewrap.find('.js-tab-el');
 
-				filterTabs.click(function() {
+				tableTabs.click(function() {
 					$(this).siblings().removeClass('is-active');
 					$(this).addClass('is-active');
 				});
@@ -308,7 +308,8 @@ $(document).ready(function() {
 				filters = filters || this.filters;
 
 				var filtersSearch = filters.find('.js-search-table'),
-					filtersSearchInput = filters.find('.js-search-table input');
+					filtersSearchInput = filters.find('.js-search-table input'),
+					filtersSearchCloseBtn = filtersSearch.find('.js-search-clear');
 
 				filtersSearch.click(function(evt) {
 					evt.stopPropagation();
@@ -318,6 +319,7 @@ $(document).ready(function() {
 				$('body').click(function() {
 					if (!filtersSearchInput.val()) {
 						filtersSearch.removeClass('search-opened');
+						filtersSearchCloseBtn.removeClass('is-active');
 					}
 				});
 			},
@@ -371,7 +373,7 @@ $(document).ready(function() {
 		oliviaTable.toggleSidebarPanels();
 		oliviaTable.sidebarFilter();
 		// filters
-		oliviaTable.filterTabs();
+		oliviaTable.tableTabs();
 		oliviaTable.toggleFilterSearch();
 		// fake header
 		oliviaTable.createFakeHead();
