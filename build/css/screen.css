@@ -492,7 +492,7 @@ input.is-error::placeholder { color: #6c757a; }
 .dropdown__more .dropdown__list { position: absolute; right: 99%; top: 0; opacity: 0; visibility: hidden; white-space: normal; }
 .dropdown__more-link { position: relative; display: block; padding: 10px 14px; }
 .dropdown__more-link:before { content: ""; position: absolute; top: 50%; left: 100%; margin: -4px 0 0 -14px; -webkit-transition: 0.3s; transition: 0.3s; width: 0px; height: 0px; border-style: solid; border-width: 4.5px 0 4.5px 6px; border-color: transparent transparent transparent #d8d8d8; }
-.dropdown__search { display: block; padding: 5px 14px; }
+.dropdown__search { position: relative; display: block; margin: 5px 14px; }
 .dropdown__text { width: 200px; padding: 4px 14px; color: #96A0A6; white-space: normal; line-height: 1.35; }
 .dropdown__text small { display: block; margin-top: 6px; }
 .dropdown__img { display: inline-block; width: 18px; height: 18px; margin-right: 10px; -webkit-border-radius: 50%; border-radius: 50%; vertical-align: middle; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
@@ -894,9 +894,8 @@ input.is-error::placeholder { color: #6c757a; }
 .settings .form { margin-top: 0; }
 
 .tablewrap { position: relative; margin: 25px 0; }
-.tablewrap.no-top-padding { padding-top: 0; }
-.tablewrap.no-bottom-padding { padding-bottom: 0; }
-.tablewrap.s-bottom-padding { padding-bottom: 15px; }
+.tablewrap.no-top-margin { margin-top: 0; }
+.tablewrap.no-bottom-margin { margin-bottom: 0; }
 .tablewrap__in { position: relative; }
 .tablewrap__in:before { display: none; content: ""; position: absolute; left: 0; right: 0; bottom: 1px; border-bottom: 1px solid #efefef; z-index: 1; }
 .tablewrap__in.is-filtered:before { display: block; }
@@ -1041,7 +1040,7 @@ input.is-error::placeholder { color: #6c757a; }
 .sidebar__option.is-disabled a { color: #BCC6CC; }
 .sidebar__option.is-disabled:hover { background: none; }
 .sidebar__option.is-disabled:hover a { cursor: default; color: #BCC6CC; }
-.sidebar__option a { position: relative; display: block; padding: 4px 20px 4px 33px; font-size: 13px; color: #6c757a; }
+.sidebar__option a { position: relative; display: block; padding: 4px 20px 4px 33px; font-size: 13px; color: #6c757a; word-break: break-word; }
 .sidebar__option a.is-truncated { max-width: 100%; overflow: hidden; vertical-align: middle; text-overflow: ellipsis; white-space: nowrap; }
 .sidebar__option p { padding: 4px 20px 4px 33px; }
 .sidebar__option .icon { font-size: 10px; }

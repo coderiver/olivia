@@ -9,7 +9,6 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-	<link rel="stylesheet" media="all" href="css/tooltipster.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
@@ -30,14 +29,16 @@
 					<li class="menu__option">
 						<div class="dropdown is-menu js-dropdown">
 							<p class="dropdown__item">Me</p>
-							<ul class="dropdown__list is-top-level js-inner">
-								<li><a href="#">Profile</a></li>
-								<li><a href="#">My Team</a></li>
-								<li><a href="#">Messages</a></li>
-								<li><a href="#">Activity Log</a></li>
-								<li><a href="#">Settings</a></li>
-								<li><a href="#">Log Out</a></li>
-							</ul>
+							<div class="dropdown__in js-inner">
+								<ul class="dropdown__list is-top-level js-vert-scroll">
+									<li><a href="#">Profile</a></li>
+									<li><a href="#">My Team</a></li>
+									<li><a href="#">Messages</a></li>
+									<li><a href="#">Activity Log</a></li>
+									<li><a href="#">Settings</a></li>
+									<li><a href="#">Log Out</a></li>
+								</ul>
+							</div>
 						</div>
 					</li>
 				</ul>
@@ -65,124 +66,132 @@
 					<p class="upper__ttl">Activity Log</p>
 				</div>
 				<!-- begin tablewrap  -->
-				<div class="tablewrap no-bottom-padding js-tablewrap">
+				<div class="tablewrap js-tablewrap">
 					<!-- begin filters  -->
-					<div class="filters">
-						<div class="filters__ttl"><p>120,343 Records</p></div>
-						<div class="filters__in">
-							<div class="toggle-btn js-search-table">
-								<input type="search" placeholder="Search table">
-								<i class="icon icon-zoom"></i>
-							</div>
-							<div class="toggle-btn">
-								<i class="icon icon-calendar"></i>
-							</div>
-							<div class="dropdown js-dropdown">
-								<p class="dropdown__item">Filter by type</p>
-								<ul class="dropdown__list is-top-level js-inner">
-									<li><a href="#" class="is-active">All type</a></li>
-									<li><a href="#">Attachment</a></li>
-									<li><a href="#">Deal</a></li>
-									<li><a href="#">Task</a></li>
-									<li><a href="#">Engagement letter</a></li>
-									<li><a href="#">Deal Memo</a></li>
-									<li><a href="#">Customer</a></li>
-									<li><a href="#">GCS Form</a></li>
-								</ul>
-							</div>
-							<div class="dropdown is-reference js-dropdown">
-								<p class="dropdown__item">Filter by reference</p>
-								<ul class="dropdown__list is-top-level js-inner">
-									<li>
-										<div class="dropdown__search">
-											<input type="search" placeholder="Quick search">
+					<div class="filters js-filters">
+						<div class="filters__wrap js-fixed">
+							<div class="filters__ttl"><p>120,343 Records</p></div>
+							<div class="filters__in">
+								<div class="toggle-btn js-search-table">
+									<input type="search" placeholder="Search table">
+									<i class="icon icon-zoom"></i>
+									<i class="icon icon-close search-close js-search-clear"></i>
+								</div>
+								<div class="toggle-btn">
+									<i class="icon icon-calendar"></i>
+								</div>
+								<div class="dropdown js-dropdown">
+									<p class="dropdown__item">Filter by type</p>
+									<div class="dropdown__in js-inner">
+										<ul class="dropdown__list is-top-level js-vert-scroll">
+											<li><a href="#" class="is-active">All type</a></li>
+											<li><a href="#">Attachment</a></li>
+											<li><a href="#">Deal</a></li>
+											<li><a href="#">Task</a></li>
+											<li><a href="#">Engagement letter</a></li>
+											<li><a href="#">Deal Memo</a></li>
+											<li><a href="#">Customer</a></li>
+											<li><a href="#">GCS Form</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="dropdown is-reference js-dropdown">
+									<p class="dropdown__item">Filter by reference</p>
+									<div class="dropdown__in js-inner">
+										<ul class="dropdown__list is-top-level js-vert-scroll">
+											<li>
+												<div class="dropdown__search">
+													<input type="search" placeholder="Quick search">
+													<i class="icon icon-close search-close js-search-clear"></i>
+												</div>
+											</li>
+											<li><a href="#" class="is-active">All</a></li>
+											<li><a href="#">GCS compliance</a></li>
+											<li><a href="#">GCS library</a></li>
+											<li>
+												<a href="#" class="description">
+													<i class="icon icon-folder"></i>
+													<p>Alphabet</p>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="description">
+													<i class="icon icon-folder"></i>
+													<p>Deal with a Really long name</p>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="description">
+													<i class="icon icon-folder"></i>
+													<p>Foursquare Inc</p>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="description">
+													<i class="icon icon-folder"></i>
+													<p>Google</p>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="description is-active">
+													<i class="icon icon-folder"></i>
+													<p>Space X</p>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="description">
+													<i class="icon icon-folder"></i>
+													<p>Samsung – Round A Search</p>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="description">
+													<i class="icon icon-folder"></i>
+													<p>Twitter S</p>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="description">
+													<i class="icon icon-folder"></i>
+													<p>Twitter Z</p>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="dropdown js-dropdown">
+									<p class="dropdown__item">Settings</p>
+									<div class="dropdown__list is-top-level js-inner">
+										<div class="dropdown__check">
+											<label class="check" data-attr="activity">
+												<input type="checkbox" checked>
+												<span class="check__span">Activity</span>
+											</label>
 										</div>
-									</li>
-									<li><a href="#" class="is-active">All</a></li>
-									<li><a href="#">GCS compliance</a></li>
-									<li><a href="#">GCS library</a></li>
-									<li>
-										<a href="#" class="description">
-											<i class="icon icon-folder"></i>
-											<p>Alphabet</p>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="description">
-											<i class="icon icon-folder"></i>
-											<p>Deal with a Really long name</p>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="description">
-											<i class="icon icon-folder"></i>
-											<p>Foursquare Inc</p>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="description">
-											<i class="icon icon-folder"></i>
-											<p>Google</p>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="description is-active">
-											<i class="icon icon-folder"></i>
-											<p>Space X</p>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="description">
-											<i class="icon icon-folder"></i>
-											<p>Samsung – Round A Search</p>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="description">
-											<i class="icon icon-folder"></i>
-											<p>Twitter S</p>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="description">
-											<i class="icon icon-folder"></i>
-											<p>Twitter Z</p>
-										</a>
-									</li>
-								</ul>
-							</div>
-							<div class="dropdown js-dropdown">
-								<p class="dropdown__item">Settings</p>
-								<div class="dropdown__list is-top-level js-inner">
-									<div class="dropdown__check">
-										<label class="check" data-attr="activity">
-											<input type="checkbox" checked>
-											<span class="check__span">Activity</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="status">
-											<input type="checkbox" checked>
-											<span class="check__span">Status</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="type">
-											<input type="checkbox" checked>
-											<span class="check__span">Type</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="refered">
-											<input type="checkbox" checked>
-											<span class="check__span">Refered to</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="update">
-											<input type="checkbox" checked>
-											<span class="check__span">Last update</span>
-										</label>
+										<div class="dropdown__check">
+											<label class="check" data-attr="status">
+												<input type="checkbox" checked>
+												<span class="check__span">Status</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="type">
+												<input type="checkbox" checked>
+												<span class="check__span">Type</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="refered">
+												<input type="checkbox" checked>
+												<span class="check__span">Refered to</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="update">
+												<input type="checkbox" checked>
+												<span class="check__span">Last update</span>
+											</label>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -201,7 +210,7 @@
 									<th title="Refered to" width="140" data-id="refered"><p>Refered to</p></th>
 									<th title="Last update" width="118" data-id="update" class="is-active"><p>Last update</p></th>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="description is-bold">
 											<i class="svg-ico message-ico"></i>
@@ -219,7 +228,7 @@
 										<p>Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link is-active" data-href="http://www.imgur.com">
+								<tr class="is-active">
 									<td>
 										<div class="description is-bold">
 											<i class="svg-ico customer-ico"></i>
@@ -241,7 +250,7 @@
 										<p>Aug 9, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="description is-bold">
 											<p>James Brown added task</p>
@@ -258,7 +267,7 @@
 										<p>Aug 8, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="description is-bold">
 											<i class="svg-ico letter-ico"></i>
@@ -276,7 +285,7 @@
 										<p>Aug 8, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="description is-bold">
 											<i class="icon icon-bubble"></i>
@@ -294,7 +303,7 @@
 										<p>Aug 8, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="description is-bold">
 											<i class="icon icon-bubble"></i>
@@ -312,7 +321,7 @@
 										<p>Aug 8, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="description is-bold">
 											<i class="icon icon-folder"></i>
@@ -330,7 +339,7 @@
 										<p>Aug 7, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="description is-bold">
 											<i class="icon icon-folder"></i>
@@ -348,7 +357,7 @@
 										<p>Aug 7, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="description is-bold">
 											<i class="svg-ico message-ico"></i>
@@ -366,7 +375,7 @@
 										<p>Aug 6, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link is-active" data-href="http://www.imgur.com">
+								<tr class="is-active">
 									<td>
 										<div class="description is-bold">
 											<i class="svg-ico customer-ico"></i>
@@ -388,7 +397,7 @@
 										<p>Aug 9, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="description is-bold">
 											<p>James Brown added task</p>
@@ -405,7 +414,7 @@
 										<p>Aug 8, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="description is-bold">
 											<i class="svg-ico letter-ico"></i>
@@ -423,7 +432,7 @@
 										<p>Aug 8, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="description is-bold">
 											<i class="icon icon-bubble"></i>
@@ -441,7 +450,7 @@
 										<p>Aug 8, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="description is-bold">
 											<i class="icon icon-bubble"></i>
@@ -459,7 +468,7 @@
 										<p>Aug 8, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="description is-bold">
 											<i class="icon icon-folder"></i>
@@ -477,7 +486,7 @@
 										<p>Aug 7, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="description is-bold">
 											<i class="icon icon-folder"></i>
@@ -509,10 +518,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -520,10 +531,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -531,10 +544,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -542,10 +557,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -553,10 +570,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -564,10 +583,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -575,10 +596,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -586,10 +609,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -597,10 +622,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -608,10 +635,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -619,10 +648,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -630,10 +661,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -641,10 +674,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -652,10 +687,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -663,10 +700,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -674,10 +713,12 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Delete</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -686,7 +727,9 @@
 						<!-- end sidedrop -->
 						<!-- begin fake-header  -->
 						<div class="fake-header js-fake-head">
-							<table class="table"></table>
+							<div class="fake-header__in js-fixed">
+								<table class="table"></table>
+							</div>
 						</div>
 						<!-- end fake-header -->
 					</div>

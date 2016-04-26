@@ -9,7 +9,6 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-	<link rel="stylesheet" media="all" href="css/tooltipster.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
@@ -124,121 +123,126 @@
 				<!-- begin tablewrap  -->
 				<div class="tablewrap js-tablewrap">
 					<!-- begin filters  -->
-					<div class="filters">
-						<div class="filters__ttl">All Transactions</div>
-						<div class="filters__in">
-							<div class="toggle-btn js-toggle-sidebar">
-								<i class="icon icon-sidebar"></i>
-							</div>
-							<div class="toggle-btn">
-								<i class="icon icon-calendar"></i>
-							</div>
-							<div class="toggle-btn js-search-table">
-								<input type="search" placeholder="Search table">
-								<i class="icon icon-zoom"></i>
-							</div>
-							<div class="dropdown js-dropdown">
-								<p class="dropdown__item">Filter by status</p>
-								<ul class="dropdown__list is-top-level js-inner">
-									<li><a href="#" class="is-active">All statuses</a></li>
-									<li><a href="#">With tasks</a></li>
-									<li><a href="#">Approved</a></li>
-									<li><a href="#">Funds received</a></li>
-									<li><a href="#">Comission paid</a></li>
-								</ul>
-							</div>
-							<div class="dropdown js-dropdown">
-								<p class="dropdown__item">Settings</p>
-								<div class="dropdown__list is-top-level js-inner">
-									<div class="dropdown__check">
-										<label class="check" data-attr="id">
-											<input type="checkbox" checked>
-											<span class="check__span">ID</span>
-										</label>
+					<div class="filters js-filters">
+						<div class="filters__wrap js-fixed">
+							<div class="filters__ttl">All Transactions</div>
+							<div class="filters__in">
+								<div class="toggle-btn js-toggle-sidebar">
+									<i class="icon icon-sidebar"></i>
+								</div>
+								<div class="toggle-btn">
+									<i class="icon icon-calendar"></i>
+								</div>
+								<div class="toggle-btn js-search-table">
+									<input type="search" placeholder="Search table">
+									<i class="icon icon-zoom"></i>
+									<i class="icon icon-close search-close js-search-clear"></i>
+								</div>
+								<div class="dropdown js-dropdown">
+									<p class="dropdown__item">Filter by status</p>
+									<div class="dropdown__in js-inner">
+										<ul class="dropdown__list is-top-level js-vert-scroll">
+											<li><a href="#" class="is-active">All statuses</a></li>
+											<li><a href="#">With tasks</a></li>
+											<li><a href="#">Approved</a></li>
+											<li><a href="#">Funds received</a></li>
+											<li><a href="#">Comission paid</a></li>
+										</ul>
 									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="seller">
-											<input type="checkbox" checked>
-											<span class="check__span">Seller</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="buyer">
-											<input type="checkbox" checked>
-											<span class="check__span">Buyer</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="status">
-											<input type="checkbox" checked>
-											<span class="check__span">Status</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="statusdate">
-											<input type="checkbox">
-											<span class="check__span">Status date</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="amount">
-											<input type="checkbox" checked>
-											<span class="check__span">Amount</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="funds">
-											<input type="checkbox" checked>
-											<span class="check__span">Funds received</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="fundsdate">
-											<input type="checkbox">
-											<span class="check__span">Funds received date</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="commission">
-											<input type="checkbox" checked>
-											<span class="check__span">Commission</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="commissionpaid">
-											<input type="checkbox" checked>
-											<span class="check__span">Commission paid</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="commissiondate">
-											<input type="checkbox">
-											<span class="check__span">Commission paid date</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="gcs">
-											<input type="checkbox">
-											<span class="check__span">GCS comission</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="transactionsum">
-											<input type="checkbox">
-											<span class="check__span">Engagement letter</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="date">
-											<input type="checkbox" checked>
-											<span class="check__span">Date created</span>
-										</label>
-									</div>
-									<div class="dropdown__check">
-										<label class="check" data-attr="update">
-											<input type="checkbox">
-											<span class="check__span">Last update</span>
-										</label>
+								</div>
+								<div class="dropdown js-dropdown">
+									<p class="dropdown__item">Settings</p>
+									<div class="dropdown__list is-top-level js-inner">
+										<div class="dropdown__check">
+											<label class="check" data-attr="id">
+												<input type="checkbox" checked>
+												<span class="check__span">ID</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="seller">
+												<input type="checkbox" checked>
+												<span class="check__span">Seller</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="buyer">
+												<input type="checkbox" checked>
+												<span class="check__span">Buyer</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="status">
+												<input type="checkbox" checked>
+												<span class="check__span">Status</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="statusdate">
+												<input type="checkbox">
+												<span class="check__span">Status date</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="amount">
+												<input type="checkbox" checked>
+												<span class="check__span">Amount</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="funds">
+												<input type="checkbox" checked>
+												<span class="check__span">Funds received</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="fundsdate">
+												<input type="checkbox">
+												<span class="check__span">Funds received date</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="commission">
+												<input type="checkbox" checked>
+												<span class="check__span">Commission</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="commissionpaid">
+												<input type="checkbox" checked>
+												<span class="check__span">Commission paid</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="commissiondate">
+												<input type="checkbox">
+												<span class="check__span">Commission paid date</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="gcs">
+												<input type="checkbox">
+												<span class="check__span">GCS comission</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="transactionsum">
+												<input type="checkbox">
+												<span class="check__span">Engagement letter</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="date">
+												<input type="checkbox" checked>
+												<span class="check__span">Date created</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
+											<label class="check" data-attr="update">
+												<input type="checkbox">
+												<span class="check__span">Last update</span>
+											</label>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -254,6 +258,7 @@
 									<div class="sidebar__content js-content">
 										<div class="sidebar__search">
 											<input type="search" placeholder="Quick search">
+											<i class="icon icon-close search-close js-search-clear"></i>
 										</div>
 										<ul class="sidebar__list">
 											<li class="sidebar__option js-sidebar-option">
@@ -394,7 +399,7 @@
 									<th title="Status" width="116" data-id="status"><p>Status</p></th>
 									<th title="Amount" width="123" class="cell-right" data-id="amount"><p>Amount</p></th>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -420,7 +425,7 @@
 										<p class="table__text">$10.000.00</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -446,7 +451,7 @@
 										<p class="table__text">$100.200.000.00</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -472,7 +477,7 @@
 										<p class="table__text">$56.000.00</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -498,7 +503,7 @@
 										<p class="table__text">$1.460000.00</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico is-disabled"></i>
@@ -523,7 +528,7 @@
 										<p class="table__text">$10.000.00</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -549,7 +554,7 @@
 										<p class="table__text">$10.200.000.00</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -575,7 +580,7 @@
 										<p class="table__text">$56.000.00</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -601,7 +606,7 @@
 										<p class="table__text">$10.200.000.00</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -627,7 +632,7 @@
 										<p class="table__text">$56.000.00</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -653,7 +658,7 @@
 										<p class="table__text">$10.200.000.00</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -679,7 +684,7 @@
 										<p class="table__text">$56.000.00</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -705,7 +710,7 @@
 										<p class="table__text">$10.200.000.00</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -731,7 +736,7 @@
 										<p class="table__text">$56.000.00</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -757,7 +762,7 @@
 										<p class="table__text">$10.200.000.00</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico transaction-ico"></i>
@@ -797,11 +802,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -809,11 +816,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -821,11 +830,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -833,11 +844,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -845,11 +858,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -857,11 +872,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -869,11 +886,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -881,11 +900,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -893,11 +914,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -905,11 +928,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -917,11 +942,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -929,11 +956,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -941,11 +970,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -953,11 +984,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -965,11 +998,13 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -978,7 +1013,9 @@
 						<!-- end sidedrop -->
 						<!-- begin fake-header  -->
 						<div class="fake-header js-fake-head">
-							<table class="table"></table>
+							<div class="fake-header__in js-fixed">
+								<table class="table"></table>
+							</div>
 						</div>
 						<!-- end fake-header -->
 					</div>

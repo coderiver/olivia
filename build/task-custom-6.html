@@ -9,7 +9,6 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-	<link rel="stylesheet" media="all" href="css/tooltipster.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
@@ -50,6 +49,7 @@
 					<label class="search js-search">
 						<i class="icon icon-zoom"></i>
 						<input type="search" placeholder="Search">
+						<i class="icon icon-close search-close js-search-clear"></i>
 					</label>
 					//= ../partials/system-message.html
 					//= ../partials/search-results.html
@@ -93,7 +93,7 @@
 									<th title="Uploaded" width="97" class="is-active"><p>Uploaded</p></th>
 									<th class="table__drop">&nbsp;</th>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico pic-ico"></i>
@@ -115,11 +115,13 @@
 									<td class="table__drop">
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>

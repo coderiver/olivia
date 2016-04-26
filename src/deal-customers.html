@@ -9,7 +9,6 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-	<link rel="stylesheet" media="all" href="css/tooltipster.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
@@ -39,34 +38,39 @@
 				<!-- begin tablewrap  -->
 				<div class="tablewrap js-tablewrap">
 					<!-- begin filters  -->
-					<div class="filters">
-						<div class="filters__ttl">Customers</div>
-						<div class="filters__in">
-							<div class="toggle-btn js-toggle-sidebar">
-								<i class="icon icon-sidebar"></i>
-							</div>
-							<div class="toggle-btn js-search-table">
-								<input type="search" placeholder="Search table">
-								<i class="icon icon-zoom"></i>
-							</div>
-							<div class="tabs">
-								<div class="tabs__el js-tab-el is-active">All</div>
-								<div class="tabs__el js-tab-el">Buyers</div>
-								<div class="tabs__el js-tab-el">Sellers</div>
-							</div>
-							<div class="dropdown js-dropdown">
-								<p class="dropdown__item">Filter by status</p>
-								<ul class="dropdown__list is-top-level js-inner">
-									<li><a href="#" class="is-active">All statuses</a></li>
-									<li><a href="#">With tasks</a></li>
-									<li><a href="#">Approved</a></li>
-									<li><a href="#">Funds received</a></li>
-									<li><a href="#">Comission paid</a></li>
-								</ul>
-							</div>
-							<div class="dropdown js-dropdown">
-								<p class="dropdown__item">Settings</p>
-								//=include partials/all-settings.html
+					<div class="filters js-filters">
+						<div class="filters__wrap js-fixed">
+							<div class="filters__ttl">Customers</div>
+							<div class="filters__in">
+								<div class="toggle-btn js-toggle-sidebar">
+									<i class="icon icon-sidebar"></i>
+								</div>
+								<div class="toggle-btn js-search-table">
+									<input type="search" placeholder="Search table">
+									<i class="icon icon-zoom"></i>
+									<i class="icon icon-close search-close js-search-clear"></i>
+								</div>
+								<div class="tabs">
+									<div class="tabs__el js-tab-el is-active">All</div>
+									<div class="tabs__el js-tab-el">Buyers</div>
+									<div class="tabs__el js-tab-el">Sellers</div>
+								</div>
+								<div class="dropdown js-dropdown">
+									<p class="dropdown__item">Filter by status</p>
+									<div class="dropdown__in js-inner">
+										<ul class="dropdown__list is-top-level js-vert-scroll">
+											<li><a href="#" class="is-active">All statuses</a></li>
+											<li><a href="#">With tasks</a></li>
+											<li><a href="#">Approved</a></li>
+											<li><a href="#">Funds received</a></li>
+											<li><a href="#">Comission paid</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="dropdown js-dropdown">
+									<p class="dropdown__item">Settings</p>
+									//=include partials/all-settings.html
+								</div>
 							</div>
 						</div>
 					</div>
@@ -86,7 +90,7 @@
 									<th class="table__clip"><i class="icon icon-clip"></i></th>
 									<th class="is-active" width="117" data-id="update"><p>Last Update</p></th>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico customer-ico"></i>
@@ -115,7 +119,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico customer-ico is-disabled"></i>
@@ -144,7 +148,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.google.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico customer-ico"></i>
@@ -173,7 +177,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico customer-ico"></i>
@@ -202,7 +206,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico customer-ico"></i>
@@ -231,7 +235,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico customer-ico"></i>
@@ -260,7 +264,7 @@
 										<p class="table__text">Aug 10, 2015</p>
 									</td>
 								</tr>
-								<tr class="js-link" data-href="http://www.imgur.com">
+								<tr>
 									<td>
 										<div class="table__el">
 											<i class="svg-ico customer-ico"></i>
@@ -303,12 +307,14 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">View related transactions</a></li>
-												<li><a href="#">View related engag. letters</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">View related transactions</a></li>
+													<li><a href="#">View related engag. letters</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -316,12 +322,14 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">View related transactions</a></li>
-												<li><a href="#">View related engag. letters</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">View related transactions</a></li>
+													<li><a href="#">View related engag. letters</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -329,12 +337,14 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">View related transactions</a></li>
-												<li><a href="#">View related engag. letters</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">View related transactions</a></li>
+													<li><a href="#">View related engag. letters</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -342,12 +352,14 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">View related transactions</a></li>
-												<li><a href="#">View related engag. letters</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">View related transactions</a></li>
+													<li><a href="#">View related engag. letters</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -355,12 +367,14 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">View related transactions</a></li>
-												<li><a href="#">View related engag. letters</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">View related transactions</a></li>
+													<li><a href="#">View related engag. letters</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -368,12 +382,14 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">View related transactions</a></li>
-												<li><a href="#">View related engag. letters</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">View related transactions</a></li>
+													<li><a href="#">View related engag. letters</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -381,12 +397,14 @@
 									<td>
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<ul class="dropdown__list is-top-level js-inner">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Edit</a></li>
-												<li><a href="#">View related transactions</a></li>
-												<li><a href="#">View related engag. letters</a></li>
-											</ul>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level js-vert-scroll">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Edit</a></li>
+													<li><a href="#">View related transactions</a></li>
+													<li><a href="#">View related engag. letters</a></li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -395,7 +413,9 @@
 						<!-- end sidedrop -->
 						<!-- begin fake-header  -->
 						<div class="fake-header js-fake-head">
-							<table class="table"></table>
+							<div class="fake-header__in js-fixed">
+								<table class="table"></table>
+							</div>
 						</div>
 						<!-- end fake-header -->
 					</div>
