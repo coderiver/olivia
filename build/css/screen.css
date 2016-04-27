@@ -594,12 +594,13 @@ input.is-error::placeholder { color: #6c757a; }
 
 .suggest { position: absolute; top: 50%; right: 0; min-width: 390px; padding: 20px 23px 20px 26px; font-size: 0; background: #FFF; -webkit-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5); box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5); opacity: 0; visibility: hidden; z-index: -1; -webkit-transition: 0.4s ease; transition: 0.4s ease; }
 .suggest.is-active { opacity: 1; visibility: visible; z-index: 11; }
-.suggest.is-staff { font-size: 0; }
-.suggest.is-staff .suggest__head { margin-bottom: 10px; }
-.suggest.is-staff .suggest__txt { max-width: 600px; padding-left: 7px; }
-.suggest.is-staff .suggest__menu { margin-top: 0; padding-right: 50px; font-size: 0; *zoom: 1; }
+.suggest.is-staff { font-size: 0; padding: 0; }
+.suggest.is-staff .suggest__head { position: absolute; top: 20px; right: 24px; }
+.suggest.is-staff .suggest__txt { max-width: 300px; margin: 20px 0 10px 0; font-size: 16px; color: #000; }
+.suggest.is-staff .suggest__menu { margin-top: 0; padding: 20px 50px 20px 30px; font-size: 0; *zoom: 1; }
 .suggest.is-staff .suggest__menu:after { content: " "; display: table; clear: both; }
 .suggest.is-staff .suggest__folder { margin-right: 0; }
+.suggest.is-staff .suggest__side:first-child { padding-left: 0; }
 .suggest.is-staff .icon-folder { font-size: 40px; }
 .suggest__head { *zoom: 1; }
 .suggest__head:after { content: " "; display: table; clear: both; }

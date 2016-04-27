@@ -273,19 +273,26 @@
 		z-index: 11
 	&.is-staff
 		font-size: 0
-		.suggest
-			&__head
-				margin-bottom: 10px
-			&__txt
-				max-width: 600px
-				padding-left: 7px
-			&__menu
-				margin-top: 0
-				padding-right: 50px
-				font-size: 0
-				+clr
-			&__folder
-				margin-right: 0
+		padding: 0
+		.suggest__head
+			position: absolute
+			top: 20px
+			right: 24px
+		.suggest__txt
+			max-width: 300px
+			margin: 20px 0 10px 0
+			font-size: 16px
+			color: #000
+		.suggest__menu
+			margin-top: 0
+			padding: 20px 50px 20px 30px
+			font-size: 0
+			+clr
+		.suggest__folder
+			margin-right: 0
+		.suggest__side
+			&:first-child
+				padding-left: 0
 		.icon-folder
 			font-size: 40px
 	&__head
