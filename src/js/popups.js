@@ -26,7 +26,7 @@ $(document).ready(function() {
 	$.hidePopup = function(popup) {
 		popup.removeClass('is-active');
 		openedPopup = null;
-		$('.overlay').removeClass('is-active').removeClass('low-index');
+		$('.overlay').removeClass('is-active low-index');
 		$('body').removeClass('is-overflow');
 	};
 
@@ -51,6 +51,16 @@ $(document).ready(function() {
 		popup = $(this).parents('.js-popup');
 		$.hidePopup(popup);
 		$(this).parents('.js-bar').removeClass('is-active');
+	});
+
+	// close popup on body click
+	$('.overlay').on('click touchend', function(evt) {
+		var popup;
+		popup = $('.js-popup');
+
+		if (popup.hasClass('is-active') && !$(evt.target).parents('.js-popup').length > 0) {
+			$.hidePopup(popup);
+		}
 	});
 
 	// popup scroll
