@@ -972,8 +972,9 @@ input.is-error::placeholder { color: #6c757a; }
 .table .table__head th:last-child { border-right: 0; }
 .table .table__head th.table__drop { background: none; padding-top: 0; }
 .table .table__head th.table__drop:before { display: none; }
-.table .table__head th.table__clip { text-align: center; }
+.table .table__head th.table__clip { text-align: center; vertical-align: baseline; }
 .table .table__head th.table__clip.is-active p, .table .table__head th.table__clip span { padding-right: 17px; }
+.table .table__head th.table__clip .icon-clip { position: absolute; top: 50%; left: 50%; margin-top: -7px; margin-left: -7px; }
 .table .table__head th p, .table .table__head th span { position: relative; padding: 0 10px; width: 100%; height: 100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; line-height: 38px; }
 .table tr:first-child:hover { background: none; }
 .table tr:hover { background: #f2f2f2; }
