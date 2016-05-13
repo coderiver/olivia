@@ -337,8 +337,11 @@ $(document).ready(function() {
 				tablewrap = tablewrap || this.tablewrap;
 
 				var fakeHead 	  = this.findFakeHead(tablewrap),
+					fakeHeadIn	  = fakeHead.find('.js-fixed'),
 					filters  	  = this.findFilters(tablewrap),
+					filtersIn     = filters.find('.js-fixed'),
 					scrollPos 	  = $(window).scrollTop(),
+					scrLeft	  	  = $(window).scrollLeft(),
 					filtersHeight = filters.outerHeight(),
 					tableWrapTop  = tablewrap.offset().top,
 					tableWrapH 	  = tableWrapTop + tablewrap.outerHeight() - (filtersHeight + fakeHead.outerHeight());
@@ -348,9 +351,15 @@ $(document).ready(function() {
 				if (scrollPos > tableWrapTop && scrollPos < tableWrapH) {
 					filters.addClass('is-fixed');
 					fakeHead.addClass('is-fixed').css('top', filtersHeight);
+					if(fakeHead.hasClass('is-fixed') || filters.hasClass('is-fixed')){
+						filtersIn.css('left', -scrLeft);
+						fakeHeadIn.css('left', -scrLeft);
+					}
 				} else {
 					filters.removeClass('is-fixed');
+					filtersIn.css('left', '0');
 					fakeHead.removeClass('is-fixed').css('top', '0');
+					fakeHeadIn.css('left', '0');
 				}
 			}
 		};

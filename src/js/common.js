@@ -113,11 +113,18 @@ $(document).ready(function() {
 	});
 
 	function scrollFixedElements() {
-		var scrLeft = $(this).scrollLeft();
+		var scrLeft = $(this).scrollLeft(),
+			fixed 	= $('.js-fixed');
 
-		$('.js-fixed').css({
-			left: -scrLeft
-		});
+		if(fixed.parents('.js-tablewrap').length > 0 && !fixed.parent().hasClass('is-fixed')){
+			fixed.css({
+				left: '0'
+			});
+		} else {
+			fixed.css({
+				left: -scrLeft
+			});
+		}
 	}
 
 	function removeHeaderElem() {
