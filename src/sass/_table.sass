@@ -37,6 +37,7 @@
 	top: 0
 	left: 0
 	right: 0
+	z-index: 8
 	&.is-fixed
 		position: fixed
 		top: 0
@@ -46,7 +47,6 @@
 		min-width: 1040px
 		margin: 0 auto
 		padding: 0 20px
-		z-index: 8
 		transform: translateX(-50%)
 		.filters__wrap
 			border-left: 1px solid #dce0e7
@@ -430,6 +430,7 @@
 	position: absolute
 	top: 0
 	left: 0
+	min-height: 300px
 	bottom: 13px
 	width: 0
 	background: #fff
@@ -446,6 +447,9 @@
 		.sidebar__in
 			&:before
 				display: block
+	&.is-fixed
+		position: fixed
+		left: auto
 	&__in
 		width: 240px
 		height: 100%
@@ -462,6 +466,8 @@
 			background: #f7f8f9
 			border: 1px solid #dce0e7
 			border-width: 0 1px 1px 0
+		&.no-bottom-border
+			border-bottom: none
 	&__bl
 		overflow: hidden
 		+tr(height 0.3s)
@@ -470,7 +476,8 @@
 				border-top-width: 0
 		&:last-child
 			.sidebar__ttl
-				border-bottom: 1px solid #dce0e7
+				&:after
+					display: block
 		&.is-active
 			.sidebar__ttl
 				background: #fff

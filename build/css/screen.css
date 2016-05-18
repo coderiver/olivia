@@ -910,8 +910,8 @@ input.is-error::placeholder { color: #6c757a; }
 .tablewrap__in.is-filtered .scrollbar tr:last-child td { border-bottom: 1px solid #efefef; }
 .tablewrap__in.no-sidedrop .scrollbar { margin-right: 0; }
 
-.filters { position: absolute; top: 0; left: 0; right: 0; }
-.filters.is-fixed { position: fixed; top: 0; left: 50%; width: 100%; max-width: 1370px; min-width: 1040px; margin: 0 auto; padding: 0 20px; z-index: 8; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
+.filters { position: absolute; top: 0; left: 0; right: 0; z-index: 8; }
+.filters.is-fixed { position: fixed; top: 0; left: 50%; width: 100%; max-width: 1370px; min-width: 1040px; margin: 0 auto; padding: 0 20px; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
 .filters.is-fixed .filters__wrap { border-left: 1px solid #dce0e7; border-right: 1px solid #dce0e7; }
 .filters__wrap { position: relative; display: table; width: 100%; padding: 10px 10px 10px 20px; background: #FFF; }
 .filters__ttl { display: table-cell; max-width: 200px; text-align: left; font-size: 17px; color: #282828; vertical-align: bottom; }
@@ -1016,16 +1016,18 @@ input.is-error::placeholder { color: #6c757a; }
 .table .icon-deal-team { font-size: 16px; }
 .table a, .table a:visited { color: #6c757a; }
 
-.sidebar { position: absolute; top: 0; left: 0; bottom: 13px; width: 0; background: #fff; overflow: hidden; -webkit-transition: width 0.3s; transition: width 0.3s; }
+.sidebar { position: absolute; top: 0; left: 0; min-height: 300px; bottom: 13px; width: 0; background: #fff; overflow: hidden; -webkit-transition: width 0.3s; transition: width 0.3s; }
 .sidebar.is-active { width: 240px; z-index: 2; }
 .sidebar.is-active .sidebar__in { opacity: 1; }
 .sidebar.is-scrollbar { padding-bottom: 13px; bottom: 0; }
 .sidebar.is-scrollbar .sidebar__in:before { display: block; }
+.sidebar.is-fixed { position: fixed; left: auto; }
 .sidebar__in { width: 240px; height: 100%; border: 1px solid #dce0e7; border-width: 1px 1px 1px 0; }
 .sidebar__in:before { display: none; content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 13px; background: #f7f8f9; border: 1px solid #dce0e7; border-width: 0 1px 1px 0; }
+.sidebar__in.no-bottom-border { border-bottom: none; }
 .sidebar__bl { overflow: hidden; -webkit-transition: height 0.3s; transition: height 0.3s; }
 .sidebar__bl:first-child .sidebar__ttl { border-top-width: 0; }
-.sidebar__bl:last-child .sidebar__ttl { border-bottom: 1px solid #dce0e7; }
+.sidebar__bl:last-child .sidebar__ttl:after { display: block; }
 .sidebar__bl.is-active .sidebar__ttl { background: #fff; }
 .sidebar__bl.is-active .sidebar__ttl:before { content: "-"; font-size: 30px; margin-top: -18px; }
 .sidebar__bl.is-active .sidebar__ttl:after { display: block; }

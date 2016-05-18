@@ -9,6 +9,48 @@ $(document).ready(function() {
 				this.sidebar 	 = this.findSidebar(this.tablewrap);
 				this.fakeHead 	 = this.findFakeHead(this.tablewrap);
 			},
+			init: function() {
+				this.dom(tablewrapEl);
+				// main
+				this.addScrollButtons();
+				this.toggleDesignElem();
+				this.perfectScroll();
+				this.measureSidedropHeight();
+				this.measureMoreblock();
+				this.columnsToggle();
+				this.selectRow();
+				this.selectAllRows();
+				// sidebar
+				this.toggleSidebar();
+				this.sidebarScroll();
+				this.showActivityInSidebar();
+				this.chooseSidebarOption();
+				this.toggleSidebarPanels();
+				this.sidebarFilter();
+				// filters
+				this.tableTabs();
+				this.toggleFilterSearch();
+				// fake header
+				this.createFakeHead();
+				this.tableHeadFixed();
+
+				var that = this;
+				$(window).resize(function() {
+					that.toggleDesignElem();
+					that.perfectScroll();
+					that.measureSidedropHeight();
+					that.measureMoreblock();
+
+					if (!window.matchMedia('(max-width: 1040px)').matches) {
+						that.sidebar.css('left', 'auto');
+					}
+
+				});
+
+				$(window).scroll(function() {
+					that.tableHeadFixed();
+				});
+			},
 			// find functions
 			findScrollTable: function(tablewrap) {
 				return tablewrap.find('.js-scrollbar');
@@ -205,9 +247,7 @@ $(document).ready(function() {
 				sidebar  = sidebar || this.sidebar;
 
 				if (sidebar.length > 0) {
-					sidebar.find('.js-content').perfectScrollbar({
-						wheelPropagation: true
-					});
+					sidebar.find('.js-content').perfectScrollbar();
 				}
 			},
 			showActivityInSidebar: function(tablewrap, sidebar) {
@@ -238,13 +278,12 @@ $(document).ready(function() {
 			toggleSidebarPanels: function(sidebar) {
 				sidebar = sidebar || this.sidebar;
 
-				var sideBl    	  = sidebar.find('.js-sidebar-bl'),
+				var sideIn 		  = sidebar.find('.js-sidebar-in'),
+					sideBl    	  = sidebar.find('.js-sidebar-bl'),
 					sideTitleH	  = sideBl.find('.js-sidebar-ttl').outerHeight(),
 					sideTitleNum  = sideBl.find('.js-sidebar-ttl').length - 1,
 					allSideTitleH = sideTitleH * sideTitleNum,
-					closed		  = {'height': sideTitleH},
-					border 		  = {'border-bottom': '1px solid #dce0e7'},
-					noBorder	  = {'border-bottom': 'none'};
+					closed		  = {'height': sideTitleH};
 
 				sideBl.css(closed);
 				sideBl.on('click', '.js-sidebar-ttl', function() {
@@ -263,13 +302,12 @@ $(document).ready(function() {
 						} else {
 							closestBl.css(closed);
 						}
-					}
 
-					// border
-					if (sideBl.hasClass('is-active')) {
-						sideBl.last().find('.js-sidebar-ttl').css(noBorder);
-					} else {
-						sideBl.last().find('.js-sidebar-ttl').css(border);
+						if (sideBl.last().hasClass('is-active')){
+							sideIn.removeClass('no-bottom-border');
+						} else {
+							sideIn.addClass('no-bottom-border');
+						}
 					}
 				});
 			},
@@ -333,403 +371,97 @@ $(document).ready(function() {
 
 				cloneHead.clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
 			},
-			tableHeadFixed: function(tablewrap) {
-				tablewrap = tablewrap || this.tablewrap;
+			tableHeadFixed: function(tablewrap, scrollTable) {
+				tablewrap   = tablewrap || this.tablewrap,
+				scrollTable = scrollTable || this.scrollTable;
 
 				var fakeHead 	  = this.findFakeHead(tablewrap),
 					fakeHeadIn	  = fakeHead.find('.js-fixed'),
 					filters  	  = this.findFilters(tablewrap),
 					filtersIn     = filters.find('.js-fixed'),
+					sidebar 	  = this.findSidebar(tablewrap),
 					scrollPos 	  = $(window).scrollTop(),
 					scrLeft	  	  = $(window).scrollLeft(),
+					wh 			  = $(window).height(),
 					filtersHeight = filters.outerHeight(),
 					tableWrapTop  = tablewrap.offset().top,
-					tableWrapH 	  = tableWrapTop + tablewrap.outerHeight() - (filtersHeight + fakeHead.outerHeight());
+					tableWrapH	  = tableWrapTop + tablewrap.outerHeight(),
+					minH		  = 570;
 
 				tablewrap.css('padding-top', filtersHeight);
 
-				if (scrollPos > tableWrapTop && scrollPos < tableWrapH) {
-					filters.addClass('is-fixed');
+				// from starting point to min height at the bottom of table
+				if (scrollPos > tableWrapTop && scrollPos < tableWrapH - minH) {
+
+					filters.addClass('is-fixed').css('top', '0');
 					fakeHead.addClass('is-fixed').css('top', filtersHeight);
-					if(fakeHead.hasClass('is-fixed') || filters.hasClass('is-fixed')){
+
+					sidebar.addClass('is-fixed js-fixed').css('top', filtersHeight);
+
+					if (fakeHead.hasClass('is-fixed') || filters.hasClass('is-fixed')){
 						filtersIn.css('left', -scrLeft);
 						fakeHeadIn.css('left', -scrLeft);
 					}
-				} else {
-					filters.removeClass('is-fixed');
+
+					// when sidebar touches bottom of the table
+					if (scrollPos + wh > tableWrapH) {
+						sidebar.removeClass('is-fixed js-fixed').css({
+							'top': scrollPos - tableWrapTop,
+							'left': '0'
+						});
+					}
+
+					// when sidebar in between in fixed position
+					if (scrollPos > tableWrapTop && scrollPos + wh < tableWrapH){
+						// cases on resize with and without hz scroll
+						if (window.matchMedia('(max-width: 1040px)').matches) {
+							sidebar.css({
+								'top': filtersHeight,
+								'left': -scrLeft + 21
+							});
+						} else {
+							sidebar.css({
+								'top': filtersHeight,
+								'left': 'auto'
+							});
+						}
+					}
+
+				} else if (scrollPos < tableWrapTop) {
+					// if scroll position less then starting point
+
+					filters.removeClass('is-fixed').css('top', '0');
 					filtersIn.css('left', '0');
-					fakeHead.removeClass('is-fixed').css('top', '0');
+
+					fakeHead.removeClass('is-fixed').css('top','0');
 					fakeHeadIn.css('left', '0');
+
+					sidebar.removeClass('is-fixed js-fixed').css({
+						'top': '0',
+						'left': '0'
+					});
+
+				} else {
+					// if scroll position is more then bottom of table
+					filters.removeClass('is-fixed').css('top', tablewrap.outerHeight() - minH);
+					filtersIn.css('left', '0');
+
+					fakeHead.removeClass('is-fixed').css('top', tablewrap.outerHeight() - minH);
+					fakeHeadIn.css('left', '0');
+
+					sidebar.removeClass('is-fixed js-fixed').css('top', tablewrap.outerHeight() - minH);
 				}
 			}
 		};
-
-		oliviaTable.dom(tablewrapEl);
-		// main
-		oliviaTable.addScrollButtons();
-		oliviaTable.toggleDesignElem();
-		oliviaTable.perfectScroll();
-		oliviaTable.measureSidedropHeight();
-		oliviaTable.measureMoreblock();
-		oliviaTable.columnsToggle();
-		oliviaTable.selectRow();
-		oliviaTable.selectAllRows();
-		// sidebar
-		oliviaTable.toggleSidebar();
-		oliviaTable.sidebarScroll();
-		oliviaTable.showActivityInSidebar();
-		oliviaTable.chooseSidebarOption();
-		oliviaTable.toggleSidebarPanels();
-		oliviaTable.sidebarFilter();
-		// filters
-		oliviaTable.tableTabs();
-		oliviaTable.toggleFilterSearch();
-		// fake header
-		oliviaTable.createFakeHead();
-		oliviaTable.tableHeadFixed();
-
-		$(window).resize(function() {
-			oliviaTable.toggleDesignElem();
-			oliviaTable.perfectScroll();
-			oliviaTable.measureSidedropHeight();
-			oliviaTable.measureMoreblock();
-		});
-
-		$(window).scroll(function() {
-			oliviaTable.tableHeadFixed();
-		});
 
 		return oliviaTable;
 	};
 
 	$('.js-tablewrap').each(function() {
-		oliviaTableFactory($(this));
+		oliviaTable = oliviaTableFactory($(this));
+		oliviaTable.init();
 	});
 
 	window.oliviaTableFactory = oliviaTableFactory;
-
-	// (function() {
-
-		// var	parentWrap = $('.js-tablewrap'),
-		// 	sidebar = parentWrap.find('.js-sidebar'),
-		// 	row = parentWrap.find('.js-sidedrop .js-row'),
-		// 	scrollTable = parentWrap.find('.js-scrollbar'),
-		// 	scrollTableIn = parentWrap.find('.js-scrollbar table'),
-		// 	win = $(window),
-		// 	scrollPos = win.scrollTop();
-
-
-		// scroll table and scroll buttons
-		// function perfectScroll() {
-		// 	scrollTable.perfectScrollbar();
-		// }
-
-
-		// function toggleDesignElem() {
-		// 	if (scrollTable.hasClass('ps-active-x')) {
-		// 		scrollTableIn.css('margin-bottom', '13px');
-		// 		scrollTable.siblings().addClass('is-scrollbar');
-		// 	} else {
-		// 		scrollTableIn.css('margin-bottom', '0');
-		// 		scrollTable.siblings().removeClass('is-scrollbar');
-		// 	}
-		// }
-
-		// function addScrollButtons() {
-		// 	scrollTable.each(function() {
-		// 		var buttonPrev = $('<div />', {'class': 'btn-prev'}),
-		// 			buttonNext = $('<div />', {'class': 'btn-next'}),
-		// 			parentTabl = $(this).closest(scrollTable),
-		// 			fakeHeader = parentTabl.parents(parentWrap).find('.js-fake-head .table'),
-		// 			sidedrop   = parentTabl.parents(parentWrap).find('.js-sidedrop .table');
-
-		// 		buttonPrev.bind('click', function(evt) {
-		// 			evt.stopPropagation();
-		// 			parentTabl.scrollLeft(parentTabl.scrollLeft() - 20);
-		// 		});
-
-		// 		buttonNext.bind('click', function(evt) {
-		// 			evt.stopPropagation();
-		// 			parentTabl.scrollLeft(parentTabl.scrollLeft() + 20);
-		// 		});
-
-		// 		buttonPrev.appendTo($(this).find('.ps-scrollbar-x-rail'));
-		// 		buttonNext.appendTo($(this).find('.ps-scrollbar-x-rail'));
-
-		// 		$(this).on('scroll', function() {
-		// 			fakeHeader.css('left', -$(this).scrollLeft());
-		// 			sidedrop.css('margin-top', -$(this).scrollTop());
-		// 		});
-		// 	});
-		// }
-
-		// function measureMoreblock() {
-		// 	setTimeout(function() {
-		// 		$('.js-measure').each(function() {
-		// 			var	plusBlockWidth = $(this).siblings('.js-plus-more').outerWidth() + 5; // 5 stands for inline-block padding
-
-		// 			$(this).css({
-		// 				'max-width': 'calc( 100% - ' + plusBlockWidth + 'px)'
-		// 			});
-		// 		});
-		// 	}, 0);
-		// }
-
-		// function measureSidedropHeight() {
-		// 	setTimeout(function() {
-		// 		row.each(function(index) {
-		// 			var rowHeight = parentWrap.find('.js-scrollbar tr:not(".table__head")').eq(index).outerHeight();
-		// 			$(this).find('td').css('height', rowHeight);
-		// 		});
-		// 	}, 100);
-		// }
-
-		// function columnsToggle() {
-		// 	var input = $('.js-inner input'),
-		// 		tableRow = $('.js-tablewrap tr');
-
-		// 	input.on('change', function() {
-		// 		var data = $(this).parent().data('attr'),
-		// 			thead = $('.js-tablewrap th[data-id="' + data + '"]'),
-		// 			theadData = thead.data('id'),
-		// 			theadIndex = thead.index(),
-		// 			checkedInput = $('.js-inner input:checked'),
-		// 			checkedInputNum = checkedInput.length;
-
-		// 		measureSidedropHeight();
-
-		// 		// check if th with input id exists
-		// 		if ( theadData ) {
-		// 			if ( $(this).is(':checked') ) {
-		// 				thead.show();
-
-		// 				tableRow.each(function() {
-		// 					$(this).find('td').eq(theadIndex).show();
-		// 				});
-		// 			} else {
-		// 				thead.hide();
-
-		// 				tableRow.each(function() {
-		// 					$(this).find('td').eq(theadIndex).hide();
-		// 				});
-		// 			}
-		// 		}
-
-		// 		// at least one column in table
-		// 		if ( checkedInputNum < 3 ) {
-		// 			checkedInput.prop('disabled', true);
-		// 		} else {
-		// 			checkedInput.prop('disabled', false);
-		// 		}
-		// 	});
-		// }
-
-		// sidebar inner scroll
-		// function sidebarScroll() {
-		// 	sidebar.find('.js-content').perfectScrollbar({
-		// 		wheelPropagation: true
-		// 	});
-		// }
-
-		// function toggleSidebar() {
-		// 	$('.js-toggle-sidebar').click(function() {
-		// 		var parentWrap = $(this).parents(parentWrap),
-		// 			scrollTable = parentWrap.find('.js-scrollbar');
-
-		// 		$(this).toggleClass('is-opened');
-		// 		parentWrap.find('.js-sidebar').toggleClass('is-active');
-		// 		parentWrap.find('.js-scrollbar').toggleClass('is-sidebar');
-		// 		parentWrap.find('.js-fake-head').toggleClass('is-sidebar');
-
-		// 		setTimeout(function() {
-		// 			scrollTable.perfectScrollbar('update');
-		// 			measureSidedropHeight();
-		// 			toggleDesignElem();
-		// 		}, 300);
-		// 	});
-		// }
-
-		// function showActivityInSidebar() {
-		// 	if ($('.js-sidebar-option').hasClass('is-active')) {
-		// 		$('.js-sidebar-option').closest(parentWrap).find('.js-toggle-sidebar').addClass('is-active');
-		// 	} else {
-		// 		$('.js-sidebar-option').closest(parentWrap).find('.js-toggle-sidebar').removeClass('is-active');
-		// 	}
-		// }
-
-		// function chooseSidebarOption() {
-		// 	$('.js-sidebar-option').click(function(evt) {
-		// 		evt.preventDefault();
-		// 		$(this).parents('.js-content').find('.js-sidebar-option').removeClass('is-active');
-		// 		$(this).addClass('is-active');
-
-		// 		//showActivityInSidebar();
-		// 	});
-		// }
-
-		// sidebar filter
-		// function toggleSidebarContent() {
-		// 	var sideBl    	  = $('.js-sidebar-bl'),
-		// 		sideTitle	  = sideBl.find('.js-sidebar-ttl').outerHeight(),
-		// 		sideTitleNum  = sideBl.find('.js-sidebar-ttl').length - 1,
-		// 		allSideTitleH = sideTitle * sideTitleNum,
-		// 		closed		  = {'height': '38px'},
-		// 		border 		  = {'border-bottom': '1px solid #dce0e7'},
-		// 		noBorder	  = {'border-bottom': 'none'};
-
-		// 	sideBl.css(closed);
-		// 	sideBl.on('click', '.js-sidebar-ttl', function() {
-		// 		var closestBl = $(this).closest(sideBl);
-
-		// 		if (!closestBl.hasClass('js-disabled')) {
-		// 			// remove active class from siblings
-		// 			closestBl.siblings().removeClass('is-active').css(closed);
-
-		// 			// add active class to current
-		// 			closestBl.toggleClass('is-active');
-
-		// 			// calc height of current
-		// 			if (closestBl.hasClass('is-active')) {
-		// 				closestBl.css('height', 'calc(100% - ' + allSideTitleH + 'px)');
-		// 			} else {
-		// 				closestBl.css(closed);
-		// 			}
-		// 		}
-
-		// 		// border
-		// 		if (sideBl.hasClass('is-active')) {
-		// 			sideBl.last().find('.js-sidebar-ttl').css(noBorder);
-		// 		} else {
-		// 			sideBl.last().find('.js-sidebar-ttl').css(border);
-		// 		}
-		// 	});
-		// }
-
-		// function sidebarFilter() {
-		// 	$('.js-sidebar-filter').click(function(evt) {
-		// 		evt.stopPropagation();
-
-		// 		if ( $(this).children().length === 1 ) {
-		// 			$(this).closest('.js-sidebar-ttl').removeClass('is-two-filter');
-		// 		} else if ( $(this).children().length === 0) {
-		// 			$(this).remove();
-		// 		}
-		// 	});
-
-		// 	$('.js-sidebar-filter-remove').click(function() {
-		// 		$(this).parent().remove();
-		// 	});
-		// }
-
-		// function filterTabs() {
-		// 	$('.js-tab-el').click(function() {
-		// 		$(this).siblings().removeClass('is-active');
-		// 		$(this).addClass('is-active');
-		// 	});
-		// }
-
-		// function selectRow() {
-		// 	$('.js-select-row').click(function(evt) {
-		// 		evt.stopPropagation();
-		// 	});
-
-		// 	$('.js-select-row').on('click', 'input[type="checkbox"]', function() {
-		// 		var row = $(this).parents('tr'),
-		// 			index = $(this).parents('tr').index();
-
-		// 		$(this).parents('.js-scrollbar').siblings('.js-sidedrop').find('tr').eq(index).toggleClass('is-selected');
-		// 		row.toggleClass('is-selected');
-		// 	});
-		// }
-
-		// function selectAllRows() {
-		// 	$('.label-checkbox').on('change', 'input[type="checkbox"]', function() {
-		// 		if ($(this).prop('checked')) {
-		// 			$(this).parents('.js-tablewrap').find('.js-scrollbar tr')
-		// 										    .addClass('is-selected')
-		// 											.find('input[type="checkbox"]').prop('checked', true);
-		// 			$(this).parents('.js-tablewrap').find('.js-sidedrop tr').addClass('is-selected');
-		// 		} else {
-		// 			$(this).parents('.js-tablewrap').find('.js-scrollbar tr')
-		// 										    .removeClass('is-selected')
-		// 											.find('input[type="checkbox"]').prop('checked', false);
-		// 			$(this).parents('.js-tablewrap').find('.js-sidedrop tr').removeClass('is-selected');
-		// 		}
-		// 	});
-		// }
-
-		// function toggleSearchTable() {
-		// 	$('.js-search-table').click(function(evt) {
-		// 		evt.stopPropagation();
-		// 		$(this).addClass('search-opened');
-		// 	});
-
-		// 	$('body').click(function() {
-		// 		if (!$('.js-search-table input').val()) {
-		// 			$('.js-search-table').removeClass('search-opened');
-		// 		}
-		// 	});
-		// }
-
-		// function addFakeHeader() {
-		// 	parentWrap.each(function() {
-		// 		var fakeHeadTable = $(this).find('.js-fake-head .table');
-
-		// 		$(this).find('.js-clone-head').clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
-		// 	});
-		// }
-
-		// function tableHeadFixed() {
-		// 	scrollPos = win.scrollTop();
-		// 	if ($('.js-filters').length && $('.js-clone-head').length) {
-		// 		var fakeHeader = $('.js-fake-head'),
-		// 			filters = $('.js-filters'),
-		// 			filtersTop = $('.js-tablewrap').offset().top,
-		// 			filtersHeight = filters.outerHeight(),
-		// 			cloneHead  = $('.js-clone-head').offset().top;
-
-		// 		if (scrollPos > filtersTop)	{
-		// 			filters.addClass('is-fixed');
-		// 			fakeHeader.addClass('is-fixed').css('top', filtersHeight);
-		// 		} else if ( scrollPos <= cloneHead ) {
-		// 			filters.removeClass('is-fixed');
-		// 			fakeHeader.removeClass('is-fixed').css('top', '0');
-		// 		}
-		// 	}
-		// }
-
-		// summon them on load!
-
-
-		//addScrollButtons();
-		//tableHeadFixed();
-		//addFakeHeader();
-		//toggleDesignElem();
-		//perfectScroll();
-		//measureMoreblock();
-		//measureSidedropHeight();
-		//columnsToggle();
-		//toggleSidebar();
-		//showActivityInSidebar();
-		//chooseSidebarOption();
-		//toggleSidebarContent();
-		//sidebarFilter();
-		//filterTabs();
-		//selectRow();
-		//selectAllRows();
-		//toggleSearchTable();
-
-		// $(window).resize(function() {
-		// 	scrollTable.perfectScrollbar('update');
-		// 	toggleDesignElem();
-		// 	measureMoreblock();
-		// 	measureSidedropHeight();
-		// });
-
-		// $(window).scroll(function() {
-		// 	tableHeadFixed();
-		// });
-
-	//})();
 
 });

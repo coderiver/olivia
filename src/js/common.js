@@ -114,16 +114,24 @@ $(document).ready(function() {
 
 	function scrollFixedElements() {
 		var scrLeft = $(this).scrollLeft(),
-			fixed 	= $('.js-fixed');
+			fixed 	= $('.js-fixed'),
+			sidebar = $('.js-sidebar');
 
-		if(fixed.parents('.js-tablewrap').length > 0 && !fixed.parent().hasClass('is-fixed')){
-			fixed.css({
-				left: '0'
-			});
+		if (fixed.parents('.js-tablewrap').length > 0 && !fixed.parents().hasClass('is-fixed')) {
+
+			if (fixed.hasClass('js-sidebar')) {
+				sidebar.css('left', 'auto');
+			} else {
+				fixed.css('left', '0');
+			}
+
 		} else {
-			fixed.css({
-				left: -scrLeft
-			});
+			if (fixed.hasClass('js-sidebar')) {
+				sidebar.css('left', -scrLeft + 21);
+			} else {
+				fixed.css('left', -scrLeft);
+			}
+
 		}
 	}
 
