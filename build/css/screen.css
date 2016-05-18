@@ -27,21 +27,21 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
 
+.icon-add-library:before { content: ""; }
+
 .icon-add-news:before { content: ""; }
 
 .icon-add-report:before { content: ""; }
 
 .icon-archive:before { content: ""; }
 
-.icon-arr-top:before { content: ""; }
-
-.icon-add-library:before { content: ""; }
-
-.icon-bubble:before { content: ""; }
-
 .icon-arr-right:before { content: ""; }
 
+.icon-arr-top:before { content: ""; }
+
 .icon-bell:before { content: ""; }
+
+.icon-bubble:before { content: ""; }
 
 .icon-calendar:before { content: ""; }
 
@@ -49,7 +49,13 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-checked:before { content: ""; }
 
+.icon-clip:before { content: ""; }
+
 .icon-close:before { content: ""; }
+
+.icon-comment:before { content: ""; }
+
+.icon-corp:before { content: ""; }
 
 .icon-customer2:before { content: ""; }
 
@@ -59,21 +65,21 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-deals-team-closed:before { content: ""; }
 
-.icon-clip:before { content: ""; }
-
 .icon-delete:before { content: ""; }
 
 .icon-filter:before { content: ""; }
 
 .icon-firm:before { content: ""; }
 
-.icon-folder:before { content: ""; }
-
-.icon-corp:before { content: ""; }
-
 .icon-folder-checked:before { content: ""; }
 
+.icon-folder:before { content: ""; }
+
 .icon-letter:before { content: ""; }
+
+.icon-lock:before { content: ""; }
+
+.icon-logo-short:before { content: ""; }
 
 .icon-logo:before { content: ""; }
 
@@ -81,27 +87,23 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-menu:before { content: ""; }
 
-.icon-pending:before { content: ""; }
+.icon-news:before { content: ""; }
 
-.icon-comment:before { content: ""; }
+.icon-pending:before { content: ""; }
 
-.icon-plus:before { content: ""; }
+.icon-plus:before { content: ""; }
 
-.icon-square-arr:before { content: ""; }
+.icon-sidebar:before { content: ""; }
 
-.icon-sidebar:before { content: ""; }
+.icon-square-arr:before { content: ""; }
 
-.icon-logo-short:before { content: ""; }
+.icon-team:before { content: ""; }
 
-.icon-team:before { content: ""; }
+.icon-upload:before { content: ""; }
 
-.icon-upload:before { content: ""; }
+.icon-warn:before { content: ""; }
 
-.icon-lock:before { content: ""; }
-
-.icon-zoom:before { content: ""; }
-
-.icon-warn:before { content: ""; }
+.icon-zoom:before { content: ""; }
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default { -webkit-border-radius: 5px; border-radius: 5px; border: 2px solid #000; background: #4c4c4c; color: #fff; }
@@ -509,9 +511,11 @@ input.is-error::placeholder { color: #6c757a; }
 .description { position: relative; font-size: 0; margin-bottom: 6px; }
 .description:only-child { margin: 0; }
 .description.is-bold p, .description.is-bold span { color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
+.description.is-archive .icon-news { color: #CFD5E0; }
 .description .svg-ico, .description .icon { position: absolute; top: 50%; margin-top: -9px; }
 .description .icon { font-size: 16px; }
 .description .icon-folder, .description .icon-folder-checked { margin-top: -8px; font-size: 14px; }
+.description .icon-news { margin-top: -6px; font-size: 12px; }
 .description span, .description p { padding-left: 23px; font-size: 13px; }
 .description span:not(.highlight), .description p:not(.highlight) { display: block; }
 .description span:only-child, .description p:only-child { padding-left: 0; }
@@ -899,7 +903,7 @@ input.is-error::placeholder { color: #6c757a; }
 .settings .tooltip { margin-bottom: 20px; font-size: 18px; font-family: "opensans-semibold", Arial, sans-serif; }
 .settings .form { margin-top: 0; }
 
-.tablewrap { position: relative; margin: 25px 0; }
+.tablewrap { position: relative; margin: 30px 0 25px; }
 .tablewrap.no-top-margin { margin-top: 0; }
 .tablewrap.no-bottom-margin { margin-bottom: 0; }
 .tablewrap__in { position: relative; }
@@ -980,7 +984,10 @@ input.is-error::placeholder { color: #6c757a; }
 .table tr:hover { background: #f2f2f2; }
 .table tr.is-active .description { color: #097bf2; font-family: "opensans-semibold", Arial, sans-serif; }
 .table tr.is-active .description ~ *:not(.is-info) { color: #282828; }
+.table tr.is-pending { color: #96a0a6; }
 .table tr.is-pending .description ~ *:not(.is-info) { color: #96a0a6; }
+.table tr.is-pending .description.is-bold span, .table tr.is-pending .description.is-bold p { color: #96a0a6; }
+.table tr.is-pending .description .icon-news { color: #cfd5e0; }
 .table tr.is-pending .table__name { color: #6c757a; font-family: "opensans", Arial, sans-serif; }
 .table tr.table__head:hover { background: #f7f8f9; }
 .table tr.is-selected { background: #FFFAEB; }

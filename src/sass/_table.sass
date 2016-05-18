@@ -1,7 +1,7 @@
 // common wrapper
 .tablewrap
 	position: relative
-	margin: 25px 0
+	margin: 30px 0 25px
 	&.no-top-margin
 		margin-top: 0
 	&.no-bottom-margin
@@ -305,9 +305,15 @@
 				~ *:not(.is-info)
 					color: #282828
 		&.is-pending
+			color: #96a0a6
 			.description
 				~ *:not(.is-info)
 					color: #96a0a6
+				&.is-bold
+					span, p
+						color: #96a0a6
+				.icon-news
+					color: #cfd5e0
 			.table__name
 				color: #6c757a
 				+opensans

@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>News</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#fff">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/app.js"></script>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<!-- end header -->
+	//=include partials/header-staff.html
+
+	<div class="main">
+		<div class="l">
+			<div class="main__in">
+				<div class="upper">
+					<p class="upper__ttl">News</p>
+					<ul class="upper__list">
+						<li class="upper__option"><a class="upper__link is-active" href="#">Current</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Archive</a></li>
+					</ul>
+					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
+					//=include partials/menu-suggest.html
+				</div>
+				<!-- begin tablewrap  -->
+				<div class="tablewrap js-tablewrap">
+					<!-- begin filters  -->
+					<div class="filters js-filters">
+						<div class="filters__wrap js-fixed">
+							<div class="filters__ttl"><p>3 News</p></div>
+						</div>
+					</div>
+					<!-- end filters -->
+					<div class="tablewrap__in">
+						<!-- begin scrollbar  -->
+						<div class="scrollbar js-scrollbar">
+							<!-- begin table  -->
+							<table class="table is-top-aligned no-overflow">
+								<tr class="table__head js-clone-head">
+									<th title="Message" width="542" data-id="message"><p>News</p></th>
+									<th title="Status" width="107" data-id="status"><p>Status</p></th>
+									<th title="Publish date" width="119" data-id="publishdate"><p>Publish date</p></th>
+									<th title="Delete date" width="115" data-id="deletedate" class="is-active"><p>Delete date</p></th>
+								</tr>
+								<tr>
+									<td>
+										<div class="description is-bold">
+											<i class="icon icon-news"></i>
+											<span>Merry Christmas!</span>
+										</div>
+										<p class="table__text">Full news text go here, no additional page for reading the news. News is edited in popups, same as adding nex popup </p>
+									</td>
+									<td>
+										<p class="table__text">Scheduled</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">Dec 22, 2016</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">–</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="description is-bold">
+											<i class="icon icon-news"></i>
+											<span>New Payment!</span>
+										</div>
+										<p class="table__text">Full news text go here, no additional page for reading the news. News is edited in popups, same as adding nex popup </p>
+									</td>
+									<td>
+										<div class="status is-approved">
+											<i class="icon icon-check"></i>
+											<span title="Sent for review">Approved</span>
+										</div>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">Aug 10, 2015</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">-</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="description is-archive is-bold">
+											<i class="icon icon-news"></i>
+											<span>News title goes here</span>
+										</div>
+										<p class="table__text">Full news text go here, no additional page for reading the news. News is edited in popups, same as adding nex popup </p>
+									</td>
+									<td>
+										<p class="table__text">Draft</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">–</p>
+									</td>
+									<td class="cell-right">
+										<p class="table__text">–</p>
+									</td>
+								</tr>
+							</table>
+							<!-- end table -->
+						</div>
+						<!-- end scrollbar -->
+						<!-- begin sidedrop  -->
+						<div class="sidedrop is-top-aligned js-sidedrop">
+							<table class="table">
+								<tr class="table__head js-row-head">
+									<td>&nbsp;</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-row">
+									<td>
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!-- end sidedrop -->
+						<!-- begin fake-header  -->
+						<div class="fake-header js-fake-head">
+							<div class="fake-header__in js-fixed">
+								<table class="table"></table>
+							</div>
+						</div>
+						<!-- end fake-header -->
+					</div>
+				</div>
+				<!-- end tablewrap -->
+			</div>
+		</div>
+	</div>
+	//=include partials/footer.html
+</div>
+<!-- END out-->
+<div class="overlay">
+	//=include partials/popup-entries-submit.html
+	//=include partials/popup-deal-memo-info.html
+</div>
+</body>
+</html>
