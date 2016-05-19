@@ -26,6 +26,8 @@
 					display: block
 				tr:last-child td
 					border-bottom: 1px solid #efefef
+			.sidebar
+				bottom: 0
 		&.no-sidedrop
 			.scrollbar
 				margin-right: 0
@@ -305,6 +307,13 @@
 				~ *:not(.is-info)
 					color: #282828
 		&.is-pending
+			.description
+				~ *:not(.is-info)
+					color: #96a0a6
+			.table__name
+				color: #6c757a
+				+opensans
+		&.is-archive
 			color: #96a0a6
 			.description
 				~ *:not(.is-info)
@@ -315,8 +324,7 @@
 				.icon-news
 					color: #cfd5e0
 			.table__name
-				color: #6c757a
-				+opensans
+				color: #96a0a6
 		&.table__head
 			&:hover
 				background: #f7f8f9
@@ -448,8 +456,8 @@
 		.sidebar__in
 			opacity: 1
 	&.is-scrollbar
-		padding-bottom: 13px
 		bottom: 0
+		padding-bottom: 13px
 		.sidebar__in
 			&:before
 				display: block
@@ -626,6 +634,16 @@
 		height: 6px
 		background: #F76300
 		border-radius: 50%
+	.calendar
+		input
+			padding: 8px 9px 8px 36px
+		&.is-active
+			.icon-calendar
+				color: #FFF
+		.icon-calendar
+			left: 9px
+			right: auto
+			color: #282828
 	.ps-scrollbar-y-rail
 		right: 0
 		width: 3px
@@ -670,29 +688,6 @@
 		margin-bottom: 12px
 	&__ttl
 		margin-bottom: 8px
-	&__calendar
-		position: relative
-		cursor: pointer
-		&.is-active
-			.icon
-				color: #FFF
-			input
-				color: #fff
-				background: #828c92
-				border-color: #828c92
-		.icon
-			position: absolute
-			top: 50%
-			left: 9px
-			margin-top: -8px
-			color: #282828
-		input
-			display: block
-			padding: 8px 9px 8px 36px
-			border: 1px solid #cfd5e0
-			border-radius: 4px
-			&:focus
-				box-shadow: none
 
 // scrolling part of table
 .scrollbar

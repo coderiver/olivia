@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Engagement Letter (comment can be added)</title>
+	<title>Engagement Letter 5 (filled)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -16,34 +16,7 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<!-- begin header  -->
-	<div class="header is-form js-fixed">
-		<div class="l-head">
-			<div class="header__in">
-				<div class="header__group">
-					<a href="#" class="header__close"><i class="icon icon-close"></i></a>
-					<div class="header__bl">
-						<p><i class="svg-ico letter-ico"></i><span>Engagement Letter Steve Buscemi</span></p>
-						<small>Space X</small>
-					</div>
-				</div>
-				<div class="btn-group">
-					<button class="btn btn-no s-pad btn-txt-gray" type="button">Save as draft</button>
-					<button class="btn btn-ok s-pad" type="submit">Submit for review</button>
-				</div>
-			</div>
-			<div class="header__in js-hide">
-				<ul class="header__list">
-					<li><a href="#" class="header__option">Current task</a></li>
-					<li><a href="#" class="header__option">Form Info</a></li>
-					<li><a href="#" class="header__option">Attachments</a></li>
-					<li><a href="#" class="header__option">Help</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- end header -->
-
+	//=include partials/header-form-elform.html
 	<div class="main is-form">
 		<div class="l-form">
 			<!-- begin report  -->
@@ -65,14 +38,14 @@
 					</div>
 					<hr>
 					<div class="form__bl">
-						<a href="#" class="addpost is-visible js-tooltip-guide js-comment" data-tooltip-position="bottom-left" title="<p>You can ask a question about any field and get a reply before submitting the form. Leave a comment close the document and GCS staff will be notified.</p><a href='#' class='tooltipster__link'>Got it</a>">
+						<a href="#" class="addpost js-comment">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Economics of Engagement</p>
 						<label>How much capital is being raised, in what type of security, what is the fee to you / GCS on each security</label>
 						<div class="form__el">
-							<input type="text" placeholder="Type here">
+							<input type="text" value="Over 1 million dollars">
 						</div>
 					</div>
 					<div class="form__bl">
@@ -83,7 +56,7 @@
 						<p class="form__subttl">Time Frame of Engagement</p>
 						<label>When will this opportunity be ready to show to investors, how long do you plan to work on this engagement, any roadblocks in terms of schedule, etc.</label>
 						<div class="form__el">
-							<input type="text" placeholder="Type here">
+							<input type="text" value="One year">
 						</div>
 					</div>
 					<div class="form__bl">
@@ -94,7 +67,39 @@
 						<p class="form__subttl">Registered Representative Signature </p>
 						<label>Type First and Last Name</label>
 						<div class="form__el">
-							<input type="text" placeholder="Type here">
+							<input type="text" value="Steve Buscemi">
+						</div>
+						<div class="newpost js-newpost">
+							<div class="newpost__in">
+								<a href="#" class="newpost__link js-resolved">Mark as resolved</a>
+								<div class="newpost__bl is-old">
+									<div class="newpost__ttl">
+										<span>Me</span>
+										<span class="newpost__date">just now</span>
+									</div>
+									<p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu. Curabitur fermentum suscipit est, tincidunt mattis lorem luctus id. Donec eget massa <a href="#">Read more</a></p>
+									<div class="newpost__edit">
+										<a href="#">Edit</a>
+										<a href="#">Delete</a>
+									</div>
+								</div>
+								<div class="newpost__bl">
+									<div class="newpost__ttl">
+										<span class="status-info">New</span>
+										<span>Amanda Brown</span>
+										<span class="newpost__date">4 hours ago</span>
+									</div>
+									<p>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. </p>
+								</div>
+								<div class="form__el">
+									<label></label>
+									<input type="text" placeholder="Type your comment/question">
+								</div>
+								<div class="btn-group">
+									<button class="btn btn-no m-pad" type="button">Cancel</button>
+									<button class="btn btn-ok m-pad" type="submit" disabled>Comment</button>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="form__bl">
@@ -102,7 +107,7 @@
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label for="">Notes (optional)</label></p>
+						<p class="form__subttl"><label>Notes (optional)</label></p>
 						<div class="form__el">
 							<input type="text" placeholder="Type here">
 						</div>
@@ -116,13 +121,6 @@
 						<p>Upload a copy of the proposed engagement letter.</p>
 						<div class="upload">
 							<div class="upload__in">
-								<input type="file" name="engagement-letter">
-								<i class="icon icon-upload"></i>
-								<span>Upload Engagement Letter</span>
-							</div>
-						</div>
-						<div class="upload">
-							<div class="upload__in">
 								<input type="file" name="additional">
 								<i class="icon icon-upload"></i>
 								<span>Upload additional file (optional)</span>
@@ -131,6 +129,44 @@
 					</div>
 				</form>
 				<!-- end form -->
+				<!-- begin table  -->
+				<table class="table">
+					<tr class="table__head">
+						<th title="ID" width="138"><p>ID</p></th>
+						<th title="Name" width="466"><p>Name</p></th>
+						<th title="Type" width="61"><p>Type</p></th>
+						<th title="Uploaded" width='100' class="is-active"><p>Uploaded</p></th>
+						<th class="table__drop"><p>&nbsp;</p></th>
+					</tr>
+					<tr class="js-link" data-href="http://www.google.com">
+						<td>
+							<div class="table__el">
+								<i class="svg-ico pdf-ico"></i>
+								<span>FI12522-001</span>
+							</div>
+						</td>
+						<td>
+							<p class="table__text">Engagement Letter: EXECUTED copy</p>
+						</td>
+						<td>
+							<p class="table__text">PDF</p>
+						</td>
+						<td>
+							<p class="table__text">Aug 10, 2015</p>
+						</td>
+						<td class="txt-right table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<ul class="dropdown__list js-inner">
+									<li><a href="#">Open in new window</a></li>
+									<li><a href="#">Download all in ZIP</a></li>
+									<li><a href="#">Deal status</a></li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<!-- end table -->
 			</div>
 		</div>
 	</div>
