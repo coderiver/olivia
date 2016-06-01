@@ -263,12 +263,13 @@
 	box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5)
 	opacity: 0
 	visibility: hidden
-	z-index: -1
-	+tr(0.4s ease)
+	z-index: 11
+	transition: opacity 0.4s ease, visibility 0.4s ease
+	// +tr(0.4s ease)
 	&.is-active
 		opacity: 1
 		visibility: visible
-		z-index: 11
+		// z-index: 11
 	&.is-staff
 		font-size: 0
 		padding: 0
@@ -408,6 +409,9 @@
 		background-image: url('../img/svg-bg/transaction.svg')
 		&.is-disabled
 			background-image: url('../img/svg-bg/transaction-disabled.svg')
+	.status
+		.icon, .svg-ico
+			font-size: 16px
 	.icon
 		font-size: 50px
 		vertical-align: middle
@@ -432,7 +436,8 @@
 	border: 1px solid #dce0e7
 	border-radius: 4px
 	box-shadow: 0 2px 9px rgba(0, 0, 0, 0.5)
-	z-index: -1
+	z-index: 11
+	// z-index: -1
 	+tr(0.4s ease)
 	&:before,
 	&:after
@@ -447,7 +452,7 @@
 		left: 125px
 		+arr(20, 12, #f7f8f9, t)
 	&.is-active
-		z-index: 11
+		// z-index: 11
 		opacity: 1
 		visibility: visible
 	&__container
