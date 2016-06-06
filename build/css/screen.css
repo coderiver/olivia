@@ -1297,7 +1297,7 @@ input.is-error::placeholder { color: #6c757a; }
 .popup .reaction { margin: 0 -15px; }
 .popup .reaction li { font-size: 14px; }
 .popup .reaction li:after { display: none; }
-.popup .reaction__link { margin: 2px 15px; }
+.popup .reaction__link { margin: 2px 13px; }
 .popup .ps-container > .ps-scrollbar-y-rail { width: 6px; }
 .popup .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y { width: 6px; }
 
