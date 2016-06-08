@@ -76,40 +76,44 @@ $(document).ready(function() {
 	// popup scroll
 	function popupScrollBar() {
 		var popupScrollBl = $('.js-popup-scroll'),
-			list = popupScrollBl.find('.js-popup-list'),
-			input = popupScrollBl.find('.js-popup-search'),
-			checkbox = popupScrollBl.find('input[type="checkbox"]'),
+
 			buttons = $('.js-popup-btn'),
 			buttonsHeight = 0;
 
 		popupScrollBl.each(function() {
-			$(this).perfectScrollbar();
+			var that = $(this),
+				list = that.find('.js-popup-list'),
+				input = that.find('.js-popup-search'),
+				checkbox = that.find('input[type="checkbox"]');
 
-			if ( $(this).find('.js-popup-list').hasClass('is-hidden') ) {
-				$(this).css('height', 'auto');
+			that.perfectScrollbar();
+
+			if ( list.hasClass('is-hidden') ) {
+				that.css('height', 'auto');
 			}
-		});
 
-		input.on('keydown', function() {
-			if ( list.hasClass('is-hidden') && input.val() ) {
-				list.removeClass('is-hidden');
-			}
-
-			popupScrollBl.css('height', '430px').perfectScrollbar('update');
-		});
-
-		checkbox.on('change', function() {
-			if ( checkbox.is(':checked') ) {
-				buttons.removeClass('is-hidden');
-				if ( buttonsHeight === 0 ) {
-					buttonsHeight = buttons.outerHeight();
+			input.on('keydown', function() {
+				if ( list.hasClass('is-hidden') && input.val() ) {
+					list.removeClass('is-hidden');
 				}
-				popupScrollBl.css('padding-bottom', buttonsHeight + 'px').perfectScrollbar('update');
-			} else {
-				buttons.addClass('is-hidden');
-				popupScrollBl.css('padding-bottom', '0').perfectScrollbar('update');
-			}
+
+				that.css('height', '435px').perfectScrollbar('update');
+			});
+
+			checkbox.on('change', function() {
+				if ( checkbox.is(':checked') ) {
+					buttons.removeClass('is-hidden');
+					if ( buttonsHeight === 0 ) {
+						buttonsHeight = buttons.outerHeight();
+					}
+					that.css('margin-bottom', buttonsHeight + 'px').perfectScrollbar('update');
+				} else {
+					buttons.addClass('is-hidden');
+					that.css('margin-bottom', '0').perfectScrollbar('update');
+				}
+			});
 		});
+
 	}
 
 	popupScrollBar();
