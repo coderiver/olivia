@@ -1064,29 +1064,11 @@ input.is-error::placeholder { color: #6c757a; }
 .sidebar__ttl.is-two-filter span { max-width: -webkit-calc(100% - 160px); max-width: calc(100% - 160px); }
 .sidebar__ttl span { display: inline-block; max-width: -webkit-calc(100% - 103px); max-width: calc(100% - 103px); font-size: 13px; overflow: hidden; white-space: nowrap; vertical-align: middle; text-overflow: ellipsis; }
 .sidebar__ttl span:only-child { max-width: 100%; }
-.sidebar__option { position: relative; }
-.sidebar__option:hover { background: rgba(130, 140, 146, 0.5); }
-.sidebar__option:hover a { color: #fff; }
-.sidebar__option.is-active { background: #828C92; }
-.sidebar__option.is-active a { color: #fff; }
-.sidebar__option.is-disabled { color: #BCC6CC; }
-.sidebar__option.is-disabled a { color: #BCC6CC; }
-.sidebar__option.is-disabled:hover { background: none; }
-.sidebar__option.is-disabled:hover a { cursor: default; color: #BCC6CC; }
-.sidebar__option a { position: relative; display: block; padding: 4px 20px 4px 33px; font-size: 13px; color: #6c757a; word-break: break-word; }
-.sidebar__option a.is-truncated { max-width: 100%; overflow: hidden; vertical-align: middle; text-overflow: ellipsis; white-space: nowrap; }
-.sidebar__option p { padding: 4px 20px 4px 33px; }
-.sidebar__option .icon { font-size: 10px; }
-.sidebar__option .svg-ico { width: 10px; height: 10px; background-size: 10px 10px; }
-.sidebar__option .icon, .sidebar__option .svg-ico { position: absolute; top: 6.5px; left: 15px; }
-.sidebar__list { margin: 7px 0; }
 .sidebar__link { display: block; margin-bottom: 2px; font-size: 12px; color: #6c757a; font-family: "opensans-semibold", Arial, sans-serif; }
 .sidebar__link:hover { text-decoration: underline; }
 .sidebar__search { position: relative; margin: 7px 20px; }
 .sidebar__search input { padding: 4px 12px; font-size: 12px; }
 .sidebar__search .icon-close { margin-top: -6px; }
-.sidebar__cancel { display: inline-block; padding: 0 6px 0 5px; background: #6C757A; vertical-align: middle; -webkit-border-radius: 0 18px 18px 0; border-radius: 0 18px 18px 0; }
-.sidebar__cancel .icon-close { font-size: 5px; color: #FFF; vertical-align: middle; }
 .sidebar-task-ico { position: absolute; top: 50%; left: 19px; margin-top: -4px; width: 6px; height: 6px; background: #F76300; -webkit-border-radius: 50%; border-radius: 50%; }
 .sidebar .calendar input { padding: 8px 9px 8px 36px; }
 .sidebar .calendar.is-active .icon-calendar { color: #FFF; }
@@ -1094,16 +1076,36 @@ input.is-error::placeholder { color: #6c757a; }
 .sidebar .ps-scrollbar-y-rail { right: 0; width: 3px; }
 .sidebar .ps-scrollbar-y-rail .ps-scrollbar-y { width: 3px; }
 
-.sidebar-filter { position: absolute; top: 50%; right: 10px; margin-top: -8px; font-family: "opensans", Arial, sans-serif; }
-.sidebar-filter__bl { float: left; margin: 0 2px; font-size: 0; background: #828C92; color: #fff; -webkit-border-radius: 18px; border-radius: 18px; line-height: 17px; }
+.sidebar-filter { position: absolute; top: 50%; right: 10px; margin-top: -8px; line-height: 1; font-family: "opensans", Arial, sans-serif; }
+.sidebar-filter__bl { float: left; margin: 0 2px; font-size: 0; background: #828C92; color: #fff; -webkit-border-radius: 18px; border-radius: 18px; }
 .sidebar-filter__bl:only-child { float: none; }
 .sidebar-filter__bl:only-child .sidebar-filter__label { max-width: 85px; }
 .sidebar-filter__bl .sidebar-filter__label { max-width: 60px; }
-.sidebar-filter__label { display: inline-block; padding: 0 4px; font-size: 10px; text-overflow: ellipsis; overflow: hidden; vertical-align: middle; white-space: nowrap; }
+.sidebar-filter__label { display: inline-block; padding: 3.5px 4px; font-size: 10px; text-overflow: ellipsis; overflow: hidden; vertical-align: middle; white-space: nowrap; }
+.sidebar-filter__cancel { display: inline-block; padding: 6px 5px 6px 4px; background: #6C757A; vertical-align: middle; -webkit-border-radius: 0 18px 18px 0; border-radius: 0 18px 18px 0; }
+.sidebar-filter__cancel .icon-close { font-size: 5px; color: #FFF; vertical-align: middle; }
 
 .sidebar-dates { padding: 18px 22px; font-size: 13px; color: #282828; }
 .sidebar-dates__bl { margin-bottom: 12px; }
 .sidebar-dates__ttl { margin-bottom: 8px; }
+
+.sidebar-list { margin: 7px 0; }
+.sidebar-list.s-pad .sidebar-list__option a { padding: 4px 5px; }
+.sidebar-list__option { position: relative; }
+.sidebar-list__option:hover { background: rgba(130, 140, 146, 0.5); }
+.sidebar-list__option:hover a { color: #fff; }
+.sidebar-list__option.is-active { background: #828C92; }
+.sidebar-list__option.is-active a { color: #fff; }
+.sidebar-list__option.is-disabled { color: #BCC6CC; }
+.sidebar-list__option.is-disabled a { color: #BCC6CC; }
+.sidebar-list__option.is-disabled:hover { background: none; }
+.sidebar-list__option.is-disabled:hover a { cursor: default; color: #BCC6CC; }
+.sidebar-list__option a { position: relative; display: block; padding: 4px 20px 4px 33px; font-size: 13px; color: #6c757a; word-break: break-word; }
+.sidebar-list__option a.is-truncated { max-width: 100%; overflow: hidden; vertical-align: middle; text-overflow: ellipsis; white-space: nowrap; }
+.sidebar-list__option p { padding: 4px 20px 4px 33px; }
+.sidebar-list__option .icon { font-size: 10px; }
+.sidebar-list__option .svg-ico { width: 10px; height: 10px; background-size: 10px 10px; }
+.sidebar-list__option .icon, .sidebar-list__option .svg-ico { position: absolute; top: 6.5px; left: 15px; }
 
 .scrollbar { position: relative; min-height: 191px; margin-right: 50px; padding-bottom: 13px; background: #FFF; overflow: hidden; -webkit-transition: 0.3s ease; transition: 0.3s ease; }
 .scrollbar.is-sidebar { margin-left: 240px; }

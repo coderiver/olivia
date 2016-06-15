@@ -94,14 +94,17 @@ $(document).ready(function() {
 	});
 
 	// change dropdown options
-	function changeDropdownOpt() {
-		$('.js-dropdown.is-form').on('click', '.js-inner a', function(e) {
-			e.preventDefault();
+	function changeDropdownOpt(el) {
+		el.on('click', '.js-inner a', function(evt) {
+			evt.preventDefault();
 			var text = $(this).html();
 
 			$(this).parents('.js-dropdown').removeClass('is-active').find('.dropdown__item').text(text);
 		});
 	}
+
+	changeDropdownOpt($('.js-dropdown.is-form'));
+	changeDropdownOpt($('.js-dropdown.js-todrop'));
 
 	// hide elements on click
 	$('body').on('click', function(evt) {

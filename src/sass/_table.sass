@@ -553,6 +553,101 @@
 			text-overflow: ellipsis
 			&:only-child
 				max-width: 100%
+	&__link
+		display: block
+		margin-bottom: 2px
+		font-size: 12px
+		color: #6c757a
+		+opensans-sb
+		&:hover
+			text-decoration: underline
+	&__search
+		position: relative
+		margin: 7px 20px
+		input
+			padding: 4px 12px
+			font-size: 12px
+		.icon-close
+			margin-top: -6px
+	&-task-ico
+		position: absolute
+		top: 50%
+		left: 19px
+		margin-top: -4px
+		width: 6px
+		height: 6px
+		background: #F76300
+		border-radius: 50%
+	.calendar
+		input
+			padding: 8px 9px 8px 36px
+		&.is-active
+			.icon-calendar
+				color: #FFF
+		.icon-calendar
+			left: 9px
+			right: auto
+			color: #282828
+	.ps-scrollbar-y-rail
+		right: 0
+		width: 3px
+		.ps-scrollbar-y
+			width: 3px
+
+// sidebar filters
+.sidebar-filter
+	position: absolute
+	top: 50%
+	right: 10px
+	margin-top: -8px
+	line-height: 1
+	+opensans
+	&__bl
+		float: left
+		margin: 0 2px
+		font-size: 0
+		background: #828C92
+		color: #fff
+		border-radius: 18px
+		&:only-child
+			float: none
+			.sidebar-filter__label
+				max-width: 85px
+		.sidebar-filter__label
+			max-width: 60px
+	&__label
+		display: inline-block
+		padding: 3.5px 4px
+		font-size: 10px
+		text-overflow: ellipsis
+		overflow: hidden
+		vertical-align: middle
+		white-space: nowrap
+	&__cancel
+		display: inline-block
+		padding: 6px 5px 6px 4px
+		background: #6C757A
+		vertical-align: middle
+		border-radius: 0 18px 18px 0
+		.icon-close
+			font-size: 5px
+			color: #FFF
+			vertical-align: middle
+
+.sidebar-dates
+	padding: 18px 22px
+	font-size: 13px
+	color: #282828
+	&__bl
+		margin-bottom: 12px
+	&__ttl
+		margin-bottom: 8px
+
+.sidebar-list
+	margin: 7px 0
+	&.s-pad
+		.sidebar-list__option a
+			padding: 4px 5px
 	&__option
 		position: relative
 		&:hover
@@ -597,97 +692,6 @@
 			position: absolute
 			top: 6.5px
 			left: 15px
-	&__list
-		margin: 7px 0
-	&__link
-		display: block
-		margin-bottom: 2px
-		font-size: 12px
-		color: #6c757a
-		+opensans-sb
-		&:hover
-			text-decoration: underline
-	&__search
-		position: relative
-		margin: 7px 20px
-		input
-			padding: 4px 12px
-			font-size: 12px
-		.icon-close
-			margin-top: -6px
-	&__cancel
-		display: inline-block
-		padding: 0 6px 0 5px
-		background: #6C757A
-		vertical-align: middle
-		border-radius: 0 18px 18px 0
-		.icon-close
-			font-size: 5px
-			color: #FFF
-			vertical-align: middle
-	&-task-ico
-		position: absolute
-		top: 50%
-		left: 19px
-		margin-top: -4px
-		width: 6px
-		height: 6px
-		background: #F76300
-		border-radius: 50%
-	.calendar
-		input
-			padding: 8px 9px 8px 36px
-		&.is-active
-			.icon-calendar
-				color: #FFF
-		.icon-calendar
-			left: 9px
-			right: auto
-			color: #282828
-	.ps-scrollbar-y-rail
-		right: 0
-		width: 3px
-		.ps-scrollbar-y
-			width: 3px
-
-
-.sidebar-filter
-	position: absolute
-	top: 50%
-	right: 10px
-	margin-top: -8px
-	+opensans
-	&__bl
-		float: left
-		margin: 0 2px
-		font-size: 0
-		background: #828C92
-		color: #fff
-		border-radius: 18px
-		line-height: 17px
-		&:only-child
-			float: none
-			.sidebar-filter__label
-				max-width: 85px
-		.sidebar-filter__label
-			max-width: 60px
-	&__label
-		display: inline-block
-		padding: 0 4px
-		font-size: 10px
-		text-overflow: ellipsis
-		overflow: hidden
-		vertical-align: middle
-		white-space: nowrap
-
-.sidebar-dates
-	padding: 18px 22px
-	font-size: 13px
-	color: #282828
-	&__bl
-		margin-bottom: 12px
-	&__ttl
-		margin-bottom: 8px
 
 // scrolling part of table
 .scrollbar
