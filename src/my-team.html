@@ -53,6 +53,12 @@
 									<p class="dropdown__item">Settings</p>
 									<div class="dropdown__list is-top-level js-inner">
 										<div class="dropdown__check">
+											<label class="check" data-attr="avatar">
+												<input type="checkbox" checked>
+												<span class="check__span">Avatar</span>
+											</label>
+										</div>
+										<div class="dropdown__check">
 											<label class="check" data-attr="id">
 												<input type="checkbox" checked>
 												<span class="check__span">ID</span>
@@ -89,92 +95,130 @@
 					</div>
 					<!-- end filters -->
 					<div class="tablewrap__in">
-						<!-- begin table  -->
-						<table class="table is-top-aligned no-overflow">
-							<tr class="table__head">
-								<th title="ID" width="154" data-id="id"><p>ID</p></th>
-								<th title="Name" width="205" data-id="name"><p>Name</p></th>
-								<th title="Email" width="245" data-id="email"><p>E-mail</p></th>
-								<th title="Permissions" width="97" class="cell-center" data-id="permissions"><p>Permissions</p></th>
-								<th title="Modules" width="178" data-id="modules"><p>Modules</p></th>
-								<th class="table__drop"><p>&nbsp;</p></th>
-							</tr>
-							<tr>
-								<td>
-									<div class="table__pic">
-										<div style="background-image: url(img/profile2.jpg)"></div>
-										<p>REP2522</p>
-									</div>
-								</td>
-								<td class="table__name">
-									<p>Mark Davis</p>
-								</td>
-								<td>
-									<p>nana@sitorium.com</p>
-								</td>
-								<td class="cell-center">
-									<p>Full access</p>
-								</td>
-								<td>
-									<p>Compliance, Deal, Transactions</p>
-								</td>
-								<td class="table__drop">
-									<div class="dropdown js-dropdown">
-										<span class="dropdown__bl"></span>
-										<div class="dropdown__in js-inner">
-											<ul class="dropdown__list is-top-level">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+						<div class="scrollbar js-scrollbar">
+							<!-- begin table  -->
+							<table class="table is-top-aligned no-overflow">
+								<tr class="table__head js-clone-head">
+									<th title="Avatar" width="75" data-id="avatar" class="cell-center"><p>Avatar</p></th>
+									<th title="ID" width="154" data-id="id"><p>ID</p></th>
+									<th title="Name" width="205" data-id="name"><p>Name</p></th>
+									<th title="Email" width="245" data-id="email"><p>E-mail</p></th>
+									<th title="Permissions" width="97" class="cell-center" data-id="permissions"><p>Permissions</p></th>
+									<th title="Modules" width="178" data-id="modules"><p>Modules</p></th>
+								</tr>
+								<tr>
+									<td class="cell-center">
+										<div style="background-image: url(img/profile2.jpg)" class="table__pic"></div>
+									</td>
+									<td>
+										<div class="table__el">
+											<i class="svg-ico user-gray-ico"></i>
+											<span>RP12521</span>
 										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="table__pic">
-										<div style="background-image: url(img/profile4.jpg)"></div>
-										<p>REP2521</p>
-									</div>
-								</td>
-								<td class="table__name">
-									<p>Kate Winslet</p>
-								</td>
-								<td>
-									<p>wynepitik@hotmail.com</p>
-								</td>
-								<td class="cell-center">
-									<p>Read Only</p>
-								</td>
-								<td>
-									<p>Deal</p>
-								</td>
-								<td class="table__drop">
-									<div class="dropdown js-dropdown">
-										<span class="dropdown__bl"></span>
-										<div class="dropdown__in js-inner">
-											<ul class="dropdown__list is-top-level">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+									</td>
+									<td class="table__name">
+										<p>Mark Davis</p>
+									</td>
+									<td>
+										<p>nana@sitorium.com</p>
+									</td>
+									<td class="cell-center">
+										<p>Full access</p>
+									</td>
+									<td>
+										<p>Compliance, Deal, Transactions</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell-center">
+										<div class="table__pic" style="background-image: url(img/profile4.jpg)"></div>
+									</td>
+									<td>
+										<div class="table__el">
+											<i class="svg-ico user-gray-ico"></i>
+											<span>RP12521</span>
 										</div>
-									</div>
-								</td>
-							</tr>
-						</table>
-						<!-- end table -->
+									</td>
+									<td class="table__name">
+										<p>Kate Winslet</p>
+									</td>
+									<td>
+										<p>wynepitik@hotmail.com</p>
+									</td>
+									<td class="cell-center">
+										<p>Read Only</p>
+									</td>
+									<td>
+										<p>Deal</p>
+									</td>
+								</tr>
+							</table>
+							<!-- end table -->
+						</div>
+						<!-- begin sidedrop  -->
+						<div class="sidedrop js-sidedrop">
+							<table class="table">
+								<tbody>
+									<tr class="table__head js-row-head">
+										<td>&nbsp;</td>
+									</tr>
+									<tr class="js-row">
+										<td>
+											<div class="dropdown js-dropdown">
+												<span class="dropdown__bl"></span>
+												<div class="dropdown__in js-inner">
+													<ul class="dropdown__list is-top-level">
+														<li><a href="#">Open in new window</a></li>
+														<li><a href="#">Re-assign</a></li>
+														<li><a href="#">Edit</a></li>
+														<li><a href="#">Open refered deal</a></li>
+														<li><a href="#">Open rep's deal</a></li>
+														<li><a href="#">Sign in as rep</a></li>
+														<li><a href="#">Delete task</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="js-row">
+										<td>
+											<div class="dropdown js-dropdown">
+												<span class="dropdown__bl"></span>
+												<div class="dropdown__in js-inner">
+													<ul class="dropdown__list is-top-level">
+														<li><a href="#">Open in new window</a></li>
+														<li><a href="#">Re-assign</a></li>
+														<li><a href="#">Edit</a></li>
+														<li><a href="#">Open refered deal</a></li>
+														<li><a href="#">Open rep's deal</a></li>
+														<li><a href="#">Sign in as rep</a></li>
+														<li><a href="#">Delete task</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- end sidedrop  -->
+						<!-- begin fake-header  -->
+						<div class="fake-header js-fake-head">
+							<div class="fake-header__in js-fixed">
+								<table class="table"></table>
+							</div>
+						</div>
+						<!-- end fake-header -->
 					</div>
 				</div>
 				<div class="tablewrap js-tablewrap">
 					<!-- begin filters  -->
 					<div class="filters js-filters">
-						<div class="filters__wrap">
+						<div class="filters__wrap js-fixed">
 							<div class="filters__ttl">
 								<div class="tooltip">
-									<p>Team Mates</p>
-									<div class="tooltip__ico js-tooltip" title="Team Mates Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span>
+									<p>Affiliates</p>
+									<div class="tooltip__ico js-tooltip" title="Active Deals Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span>
 									</div>
 								</div>
 							</div>
@@ -182,6 +226,12 @@
 								<div class="dropdown js-dropdown">
 									<p class="dropdown__item">Settings</p>
 									<div class="dropdown__list is-top-level js-inner">
+										<div class="dropdown__check">
+											<label class="check" data-attr="avatar">
+												<input type="checkbox" checked>
+												<span class="check__span">Avatar</span>
+											</label>
+										</div>
 										<div class="dropdown__check">
 											<label class="check" data-attr="id">
 												<input type="checkbox" checked>
@@ -195,21 +245,21 @@
 											</label>
 										</div>
 										<div class="dropdown__check">
-											<label class="check" data-attr="contacts">
+											<label class="check" data-attr="email">
 												<input type="checkbox" checked>
-												<span class="check__span">Contacts and Address</span>
+												<span class="check__span">E-mail</span>
 											</label>
 										</div>
 										<div class="dropdown__check">
-											<label class="check" data-attr="role">
+											<label class="check" data-attr="permissions">
 												<input type="checkbox" checked>
-												<span class="check__span">Role</span>
+												<span class="check__span">Permissions</span>
 											</label>
 										</div>
 										<div class="dropdown__check">
-											<label class="check" data-attr="company">
+											<label class="check" data-attr="modules">
 												<input type="checkbox" checked>
-												<span class="check__span">Company</span>
+												<span class="check__span">Modules</span>
 											</label>
 										</div>
 									</div>
@@ -219,86 +269,124 @@
 					</div>
 					<!-- end filters -->
 					<div class="tablewrap__in">
-						<!-- begin table  -->
-						<table class="table is-top-aligned no-overflow">
-							<tr class="table__head">
-								<th title="ID" width="154" data-id="id"><p>ID</p></th>
-								<th title="Name" width="205" data-id="name"><p>Name</p></th>
-								<th title="Contacts and Address" width="245" data-id="contacts"><p>Contacts and Address</p></th>
-								<th title="Role" width="97" class="cell-center" data-id="role"><p>Role</p></th>
-								<th title="Company" width="178" data-id="company"><p>Company</p></th>
-								<th class="table__drop"><p>&nbsp;</p></th>
-							</tr>
-							<tr>
-								<td>
-									<div class="table__pic">
-										<div style="background-image: url(img/profile3.jpg)"></div>
-										<p>REP2522</p>
-									</div>
-								</td>
-								<td class="table__name">
-									<p>Brian Dunn</p>
-								</td>
-								<td>
-									<p>brian@sitorium.com</p>
-									<p>+1 234 123-23-23</p>
-									<p>34567890  St. 123</p>
-								</td>
-								<td class="cell-center">
-									<p>Team owner</p>
-								</td>
-								<td>
-									<p>Vicar Capital</p>
-								</td>
-								<td class="table__drop">
-									<div class="dropdown js-dropdown">
-										<span class="dropdown__bl"></span>
-										<div class="dropdown__in js-inner">
-											<ul class="dropdown__list is-top-level">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+						<div class="scrollbar js-scrollbar">
+							<!-- begin table  -->
+							<table class="table is-top-aligned no-overflow">
+								<tr class="table__head js-clone-head">
+									<th title="Avatar" width="75" data-id="avatar" class="cell-center"><p>Avatar</p></th>
+									<th title="ID" width="154" data-id="id"><p>ID</p></th>
+									<th title="Name" width="205" data-id="name"><p>Name</p></th>
+									<th title="Email" width="245" data-id="email"><p>E-mail</p></th>
+									<th title="Permissions" width="97" class="cell-center" data-id="permissions"><p>Permissions</p></th>
+									<th title="Modules" width="178" data-id="modules"><p>Modules</p></th>
+								</tr>
+								<tr>
+									<td class="cell-center">
+										<div style="background-image: url(img/profile3.jpg)" class="table__pic"></div>
+									</td>
+									<td>
+										<div class="table__el">
+											<i class="svg-ico user-gray-ico"></i>
+											<span>RP2522</span>
 										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="table__pic">
-										<div style="background-image: url(img/profile.jpg)"></div>
-										<p>REP2521</p>
-									</div>
-								</td>
-								<td class="table__name">
-									<p>Kate Winslet</p>
-								</td>
-								<td>
-									<p>wynepitik@hotmail.com</p>
-									<p>+1 234 123-23-23</p>
-									<p>34567890  St. 123</p>
-								</td>
-								<td class="cell-center">
-									<p>Member</p>
-								</td>
-								<td>
-									<p>Cebile Capital</p>
-								</td>
-								<td class="table__drop">
-									<div class="dropdown js-dropdown">
-										<span class="dropdown__bl"></span>
-										<div class="dropdown__in js-inner">
-											<ul class="dropdown__list is-top-level">
-												<li><a href="#">Open in new window</a></li>
-												<li><a href="#">Download all in ZIP</a></li>
-												<li><a href="#">Deal status</a></li>
-											</ul>
+									</td>
+									<td class="table__name">
+										<p>Brian Dunn</p>
+									</td>
+									<td>
+										<p>brian@sitorium.com</p>
+										<p>+1 234 123-23-23</p>
+										<p>34567890  St. 123</p>
+									</td>
+									<td class="cell-center">
+										<p>Team owner</p>
+									</td>
+									<td>
+										<p>Vicar Capital</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell-center">
+										<div class="table__pic" style="background-image: url(img/profile3.jpg)"></div>
+									</td>
+									<td>
+										<div class="table__el">
+											<i class="svg-ico user-gray-ico"></i>
+											<span>RP2522</span>
 										</div>
-									</div>
-								</td>
-							</tr>
-						</table>
-						<!-- end table -->
+									</td>
+									<td class="table__name">
+										<p>Kate Winslet</p>
+									</td>
+									<td>
+										<p>wynepitik@hotmail.com</p>
+										<p>+1 234 123-23-23</p>
+										<p>34567890  St. 123</p>
+									</td>
+									<td class="cell-center">
+										<p>Member</p>
+									</td>
+									<td>
+										<p>Cebile Capital</p>
+									</td>
+								</tr>
+							</table>
+							<!-- end table -->
+						</div>
+						<!-- begin sidedrop  -->
+						<div class="sidedrop js-sidedrop">
+							<table class="table">
+								<tbody>
+									<tr class="table__head js-row-head">
+										<td>&nbsp;</td>
+									</tr>
+									<tr class="js-row">
+										<td>
+											<div class="dropdown js-dropdown">
+												<span class="dropdown__bl"></span>
+												<div class="dropdown__in js-inner">
+													<ul class="dropdown__list is-top-level">
+														<li><a href="#">Open in new window</a></li>
+														<li><a href="#">Re-assign</a></li>
+														<li><a href="#">Edit</a></li>
+														<li><a href="#">Open refered deal</a></li>
+														<li><a href="#">Open rep's deal</a></li>
+														<li><a href="#">Sign in as rep</a></li>
+														<li><a href="#">Delete task</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="js-row">
+										<td>
+											<div class="dropdown js-dropdown">
+												<span class="dropdown__bl"></span>
+												<div class="dropdown__in js-inner">
+													<ul class="dropdown__list is-top-level">
+														<li><a href="#">Open in new window</a></li>
+														<li><a href="#">Re-assign</a></li>
+														<li><a href="#">Edit</a></li>
+														<li><a href="#">Open refered deal</a></li>
+														<li><a href="#">Open rep's deal</a></li>
+														<li><a href="#">Sign in as rep</a></li>
+														<li><a href="#">Delete task</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- end sidedrop  -->
+						<!-- begin fake-header  -->
+						<div class="fake-header js-fake-head">
+							<div class="fake-header__in js-fixed">
+								<table class="table"></table>
+							</div>
+						</div>
+						<!-- end fake-header -->
 					</div>
 				</div>
 				<a style="font-size: 15px; margin-left: 20px; margin-bottom: 20px; display: inline-block" href="#" data-popup="popup-affiliate-error">попап с ошибками</a>

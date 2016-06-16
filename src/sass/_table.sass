@@ -214,14 +214,10 @@
 		&:first-child
 			vertical-align: baseline
 	&__pic
-		div
-			float: left
-			width: 60px
-			height: 60px
-			margin-right: 10px
-			background-size: cover
-		p, span
-			overflow: hidden
+		width: 60px
+		height: 60px
+		margin: 0 auto
+		background-size: cover
 	&__text
 		max-width: 100%
 		overflow: hidden
@@ -265,7 +261,9 @@
 				p, span
 					padding-right: 20px
 			&:first-child
-				&:not(.label-checkbox) p, span
+				&:not(.label-checkbox) p, span,
+				&:not(.cell-center p),
+				&:not(.cell-center span)
 					padding-left: 17px
 			&:last-child
 				border-right: 0
