@@ -248,6 +248,10 @@
 										<i class="svg-ico memo-ico"></i>
 										<div class="suggest__in">
 											<p>Add Deal memo</p>
+											<div class="status">
+												<i class="icon icon-warn"></i>
+												<span>Task</span>
+											</div>
 										</div>
 									</a>
 									<a href="#" class="suggest__bl" data-popup="popup-add-customer">
@@ -260,6 +264,7 @@
 										<i class="svg-ico transaction-ico"></i>
 										<div class="suggest__in">
 											<p>Add Transaction Report</p>
+											<small>Preferebly submit after engagement letter and deal memo approval</small>
 										</div>
 									</a>
 									<a href="#" class="suggest__bl">
@@ -292,6 +297,12 @@
 										<i class="svg-ico add-team-ico"></i>
 										<div class="suggest__in">
 											<p>Add team</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="icon icon-firm"></i>
+										<div class="suggest__in">
+											<p>Add firm</p>
 										</div>
 									</a>
 								</div>
@@ -1465,7 +1476,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="popup js-popup" id="popup-new-customer">
+	<div class="popup is-new-customer js-popup" id="popup-new-customer">
 		<div class="popup__head">
 			<p>Add Customer</p>
 			<i class="icon icon-close js-close"></i>
@@ -1476,7 +1487,11 @@
 				<div class="popup__choose">
 					<a href="#" class="popup__el">
 						<i class="svg-ico customer-ico"></i>
-						<span>New Retail</span>
+						<span>New Individual</span>
+					</a>
+					<a href="#" class="popup__el">
+						<i class="svg-ico build-ico"></i>
+						<span>New Entity</span>
 					</a>
 					<a href="#" class="popup__el">
 						<i class="svg-ico build-ico"></i>
@@ -1490,6 +1505,7 @@
 						<input type="text" placeholder="Search by customer or deal name" class="js-popup-search">
 					</div>
 				</div>
+				<p class="popup__no-result">Search returned no result</p>
 			</div>
 			<ul class="popup-list is-hidden js-popup-list">
 				<li class="popup-list__option">

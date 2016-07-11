@@ -44,7 +44,6 @@ $(document).ready(function() {
 					if (!window.matchMedia('(max-width: 1040px)').matches) {
 						that.sidebar.css('left', 'auto');
 					}
-
 				});
 
 				$(window).scroll(function() {
