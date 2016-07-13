@@ -395,8 +395,6 @@ $(document).ready(function() {
 					filters.addClass('is-fixed').css('top', '0');
 					fakeHead.addClass('is-fixed').css('top', filtersHeight);
 
-					sidebar.addClass('is-fixed js-fixed').css('top', filtersHeight);
-
 					if (fakeHead.hasClass('is-fixed') || filters.hasClass('is-fixed')){
 						filtersIn.css('left', -scrLeft);
 						fakeHeadIn.css('left', -scrLeft);
@@ -408,6 +406,10 @@ $(document).ready(function() {
 							'top': scrollPos - tableWrapTop,
 							'left': '0'
 						});
+						console.log('stopped sidebar')
+					} else {
+						sidebar.addClass('is-fixed js-fixed').css('top', filtersHeight);
+						console.log('working sidebar')
 					}
 
 					// when sidebar in between in fixed position
@@ -426,9 +428,10 @@ $(document).ready(function() {
 						}
 					}
 
+					console.log('fixed', tableWrapH - minH)
+
 				} else if (scrollPos < tableWrapTop) {
 					// if scroll position less then starting point
-
 					filters.removeClass('is-fixed').css('top', '0');
 					filtersIn.css('left', '0');
 
@@ -439,8 +442,8 @@ $(document).ready(function() {
 						'top': '0',
 						'left': '0'
 					});
-
-				} else {
+					console.log('blabla')
+				} else if (scrollPos + wh > tableWrapH) {
 					// if scroll position is more then bottom of table
 					filters.removeClass('is-fixed').css('top', tablewrap.outerHeight() - minH);
 					filtersIn.css('left', '0');
@@ -449,6 +452,7 @@ $(document).ready(function() {
 					fakeHeadIn.css('left', '0');
 
 					sidebar.removeClass('is-fixed js-fixed').css('top', tablewrap.outerHeight() - minH);
+					console.log(scrollPos + wh);
 				}
 			}
 		};

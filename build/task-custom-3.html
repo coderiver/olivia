@@ -2,8 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Task custom 3</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Template</title>
+	<meta name="viewport" content="width=1040, initial-scale=1, user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
 	<meta name="theme-color" content="#fff">
@@ -29,10 +29,7 @@
 					<li class="menu__option">
 						<div class="dropdown is-menu js-dropdown">
 							<p class="dropdown__item">Me</p>
-							<div class="dropdown__in js-inner">
-
-							</div>
-							<ul class="dropdown__list is-top-level js-vert-scroll">
+							<ul class="dropdown__list is-top-level js-inner">
 								<li><a href="#">Profile</a></li>
 								<li><a href="#">My Team</a></li>
 								<li><a href="#">Messages</a></li>
@@ -54,8 +51,139 @@
 						<input type="search" placeholder="Search">
 						<i class="icon icon-close search-close js-search-clear"></i>
 					</label>
-					//= ../partials/system-message.html
-					//= ../partials/search-results.html
+					<!-- begin sysmessage  -->
+					<div id="sysmessage" class="sysmessage js-popup js-avoid-overflow">
+						<div class="sysmessage__head">
+							<p class="sysmessage__ttl">1 New Payment, 4 other notifications since your last visit</p>
+							<i class="icon icon-close js-close"></i>
+						</div>
+						<div class="sysmessage__container js-vert-scroll">
+							<div class="sysmessage__el">
+								<p>Messages (1)</p>
+							</div>
+							<div class="sysmessage__el no-bg">
+								<img class="sysmessage__img" src="img/user1.png" alt="">
+								<div class="sysmessage__info">
+									<i class="svg-ico message-ico"></i>
+									<div class="sysmessage__name">
+										<h4>New Payment!</h4>
+										<small class="sysmessage__date">Sept. 13, 2015</small>
+									</div>
+									<p>Transaction T34782 from Alphabet between James Brown and Steve Buscemy was payed Sept. 12, 2015</p>
+									<ul class="sysmessage__list">
+										<li>Transaction amount: $400.000.00</li>
+										<li>Funds received: $400.000.00</li>
+										<li>GCS commission: $10.000.00</li>
+										<li>Your comission*: $15.000.00</li>
+									</ul>
+									<p>Your commission will be payed to you according to your GCS agreement conditions</p>
+									<ul class="reaction">
+										<li><a class="reaction__link" href="#">Mark as read</a></li>
+										<li><a class="reaction__link" href="#">View deal</a></li>
+										<li><a class="reaction__link" href="#">View transaction</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="sysmessage__el">
+								<p>Updates (4)</p>
+							</div>
+							<div class="sysmessage__el no-bg">
+								<img class="sysmessage__img" src="img/user2.png" alt="">
+								<i class="svg-ico memo-ico"></i>
+								<div class="sysmessage__info">
+									<div class="sysmessage__name">
+										<h4><span>Deal Memo Approved for Space X</span></h4>
+										<small class="sysmessage__date">Sept. 13, 2015</small>
+									</div>
+									<ul class="reaction">
+										<li><a class="reaction__link" href="#">View</a></li>
+										<li><a class="reaction__link" href="#">Open deal</a></li>
+									</ul>
+								</div>
+								<i class="icon icon-check"></i>
+							</div>
+							<div class="sysmessage__el no-bg">
+								<img class="sysmessage__img" src="img/user2.png" alt="">
+								<i class="icon icon-bubble"></i>
+								<div class="sysmessage__info">
+									<div class="sysmessage__name">
+										<h4>New comment for EL James Brown for Space X</h4>
+										<small class="sysmessage__date">Sept. 13, 2015</small>
+									</div>
+									<ul class="reaction">
+										<li><a class="reaction__link" href="#">View</a></li>
+										<li><a class="reaction__link" href="#">Open deal</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="sysmessage__el no-bg">
+								<img class="sysmessage__img" src="img/user1.png" alt="">
+								<i class="svg-ico memo-ico"></i>
+								<div class="sysmessage__info">
+									<div class="sysmessage__name">
+										<h4>Deal Memo Approved for Space X</h4>
+										<small class="sysmessage__date">Sept. 13, 2015</small>
+									</div>
+									<ul class="reaction">
+										<li><a class="reaction__link" href="#">View</a></li>
+										<li><a class="reaction__link" href="#">Open deal</a></li>
+									</ul>
+								</div>
+								<i class="icon icon-warn"></i>
+							</div>
+						</div>
+						<div class="sysmessage__el is-all">
+							<p class="txt-center"><a class="reaction__link" href="#">See all</a></p>
+						</div>
+					</div>
+					<!-- end sysmessage -->
+					<!-- begin results -->
+					<div class="results js-search-results">
+						<a href="#" class="results__bl">
+							<div class="description">
+								<i class="svg-ico memo-ico"></i>
+								<p>Update Space X Deal Memo</p>
+							</div>
+							<p>...update a Deal Memo, please open Deal Memo and fill in <span class="highlight">amount</span></p>
+						</a>
+						<a href="#" class="results__bl">
+							<div class="description">
+								<i class="svg-ico customer-ico"></i>
+								<p>Steve Buscemi</p>
+							</div>
+							<p>...<span class="highlight">amount</span> invested $120 0000 USD</p>
+						</a>
+						<a href="#" class="results__bl">
+							<div class="description">
+								<p>Send us your photo</p>
+							</div>
+							<p>Hey, Brian, we need you photo to put it on a wall, send <span class="highlight">amount</span> my e-mail please...</p>
+						</a>
+						<a href="#" class="results__bl">
+							<div class="description">
+								<i class="svg-ico letter-ico"></i>
+								<span>Engagement Letter John Snow</span>
+							</div>
+							<p>...managers said its important. Use Upload File <span class="highlight">amount</span> below, uplo..</p>
+						</a>
+						<a href="#" class="results__bl">
+							<div class="description">
+								<i class="svg-ico library-ico"></i>
+								<span>Complaince Form Name</span>
+							</div>
+							<p>Your year spending <span class="highlight">amount</span> 100000 USD </p>
+						</a>
+						<a href="#" class="results__bl">
+							<div class="description">
+								<i class="icon icon-folder"></i>
+								<p><span class="highlight">Amount</span> Corp</p>
+							</div>
+						</a>
+						<a href="#" class="results__bl">
+							<p class="txt-center">781 results...</p>
+						</a>
+					</div>
+					<!-- end results -->
 				</div>
 			</div>
 		</div>
@@ -96,7 +224,7 @@
 									<th width="97" class="is-active"><p>Uploaded</p></th>
 									<th class="table__drop">&nbsp;</th>
 								</tr>
-								<tr>
+								<tr class="js-link" data-href="http://www.google.com">
 									<td>
 										<div class="table__el">
 											<i class="svg-ico pic-ico"></i>
@@ -118,17 +246,15 @@
 									<td class="table__drop">
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<div class="dropdown__in js-inner">
-												<ul class="dropdown__list is-top-level js-vert-scroll">
-													<li><a href="#">Open in new window</a></li>
-													<li><a href="#">Download all in ZIP</a></li>
-													<li><a href="#">Deal status</a></li>
-												</ul>
-											</div>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
 										</div>
 									</td>
 								</tr>
-								<tr>
+								<tr class="js-link" data-href="http://www.google.com">
 									<td>
 										<div class="table__el">
 											<i class="svg-ico pic-ico"></i>
@@ -150,13 +276,11 @@
 									<td class="table__drop">
 										<div class="dropdown js-dropdown">
 											<span class="dropdown__bl"></span>
-											<div class="dropdown__in js-inner">
-												<ul class="dropdown__list is-top-level js-vert-scroll">
-													<li><a href="#">Open in new window</a></li>
-													<li><a href="#">Download all in ZIP</a></li>
-													<li><a href="#">Deal status</a></li>
-												</ul>
-											</div>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
 										</div>
 									</td>
 								</tr>
@@ -212,7 +336,7 @@
 
 	<!-- begin footer  -->
 
-	<div class="footer">
+	<div class="footer js-footer">
 
 		<div class="l">
 
