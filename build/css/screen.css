@@ -29,8 +29,6 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-add-library:before { content: ""; }
 
-.icon-add-news:before { content: ""; }
-
 .icon-add-report:before { content: ""; }
 
 .icon-archive:before { content: ""; }
@@ -41,29 +39,27 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-bell:before { content: ""; }
 
-.icon-bubble:before { content: ""; }
-
 .icon-calendar:before { content: ""; }
+
+.icon-bubble:before { content: ""; }
 
 .icon-check:before { content: ""; }
 
 .icon-checked:before { content: ""; }
 
-.icon-clip:before { content: ""; }
-
 .icon-close:before { content: ""; }
 
-.icon-comment:before { content: ""; }
+.icon-add-news:before { content: ""; }
 
 .icon-corp:before { content: ""; }
 
-.icon-customer2:before { content: ""; }
+.icon-clip:before { content: ""; }
 
 .icon-deal-team:before { content: ""; }
 
-.icon-deals-team-archived:before { content: ""; }
-
 .icon-deals-team-closed:before { content: ""; }
+
+.icon-comment:before { content: ""; }
 
 .icon-delete:before { content: ""; }
 
@@ -71,13 +67,15 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-firm:before { content: ""; }
 
+.icon-deals-team-archived:before { content: ""; }
+
 .icon-folder-checked:before { content: ""; }
 
 .icon-folder:before { content: ""; }
 
-.icon-letter:before { content: ""; }
-
 .icon-lock:before { content: ""; }
+
+.icon-letter:before { content: ""; }
 
 .icon-logo-short:before { content: ""; }
 
@@ -85,25 +83,29 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-marked:before { content: ""; }
 
-.icon-menu:before { content: ""; }
-
 .icon-news:before { content: ""; }
 
-.icon-pending:before { content: ""; }
-
 .icon-plus:before { content: ""; }
+
+.icon-menu:before { content: ""; }
+
+.icon-pending:before { content: ""; }
 
 .icon-sidebar:before { content: ""; }
 
 .icon-square-arr:before { content: ""; }
 
-.icon-team:before { content: ""; }
+.icon-customer2:before { content: ""; }
 
-.icon-upload:before { content: ""; }
+.icon-team:before { content: ""; }
 
-.icon-warn:before { content: ""; }
+.icon-warn:before { content: ""; }
 
-.icon-zoom:before { content: ""; }
+.icon-upload:before { content: ""; }
+
+.icon-star:before { content: ""; }
+
+.icon-zoom:before { content: ""; }
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default { -webkit-border-radius: 5px; border-radius: 5px; border: 2px solid #000; background: #4c4c4c; color: #fff; }
@@ -1256,6 +1258,7 @@ input.is-error::placeholder { color: #6c757a; }
 .popup__bl .dropdown { float: right; }
 .popup__card { display: table; width: 100%; margin: 10px 0; }
 .popup__card .dropdown { float: right; }
+.popup__card .popup__subttl { display: block; }
 .popup__el { float: left; }
 .popup__el.is-search { width: 100%; max-width: 420px; }
 .popup__el .svg-ico { width: 16px; height: 16px; background-size: 16px 16px; vertical-align: -3px; }
@@ -1274,13 +1277,14 @@ input.is-error::placeholder { color: #6c757a; }
 .popup__scroll { position: relative; height: 435px; overflow: hidden; }
 .popup__link { display: inline-block; color: #097bf2; }
 .popup__link:hover { text-decoration: underline; }
-.popup__img { display: table-cell; width: 110px; }
+.popup__img { position: relative; display: table-cell; width: 110px; }
 .popup__img img { width: 100%; }
+.popup__owner { position: absolute; top: 2px; right: 2px; font-size: 20px; color: #F1D270; }
 .popup__info { display: table-cell; padding-left: 20px; vertical-align: top; }
 .popup__info:only-child { padding-left: 0; }
 .popup__table { color: #282828; }
 .popup__table tr:first-child td { padding-bottom: 8px; }
-.popup__table td:first-child { padding-right: 7px; color: #6c757a; }
+.popup__table td:first-child { width: 18%; padding-right: 7px; color: #6c757a; }
 .popup__table a { text-decoration: underline; color: #6c757a; }
 .popup__table a:hover { text-decoration: none; }
 .popup__no-result { padding: 7px 0 0 20px; }

@@ -119,6 +119,8 @@
 		margin: 10px 0
 		.dropdown
 			float: right
+		.popup__subttl
+			display: block
 	&__el
 		float: left
 		&.is-search
@@ -179,10 +181,17 @@
 		&:hover
 			text-decoration: underline
 	&__img
+		position: relative
 		display: table-cell
 		width: 110px
 		img
 			width: 100%
+	&__owner
+		position: absolute
+		top: 2px
+		right: 2px
+		font-size: 20px
+		color: #F1D270
 	&__info
 		display: table-cell
 		padding-left: 20px
@@ -196,6 +205,7 @@
 				padding-bottom: 8px
 		td
 			&:first-child
+				width: 18%
 				padding-right: 7px
 				color: #6c757a
 		a
