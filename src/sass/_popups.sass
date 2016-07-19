@@ -113,6 +113,12 @@
 			margin: 0
 		.dropdown
 			float: right
+	&__card
+		display: table
+		width: 100%
+		margin: 10px 0
+		.dropdown
+			float: right
 	&__el
 		float: left
 		&.is-search
@@ -172,14 +178,17 @@
 		color: #097bf2
 		&:hover
 			text-decoration: underline
-	&__over
-		overflow: hidden
+	&__img
+		display: table-cell
+		width: 110px
+		img
+			width: 100%
+	&__info
+		display: table-cell
 		padding-left: 20px
+		vertical-align: top
 		&:only-child
 			padding-left: 0
-	&__img
-		width: 110px
-		max-width: 100%
 	&__table
 		color: #282828
 		tr
@@ -235,7 +244,7 @@
 	.dropdown__list
 		display: none
 		width: 100%
-		margin-top: -3px
+		margin-top: -4px
 		white-space: normal
 		a
 			max-width: initial
