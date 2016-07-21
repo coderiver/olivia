@@ -113,6 +113,14 @@
 			margin: 0
 		.dropdown
 			float: right
+	&__card
+		display: table
+		width: 100%
+		margin: 10px 0
+		.dropdown
+			float: right
+		.popup__subttl
+			display: block
 	&__el
 		float: left
 		&.is-search
@@ -172,14 +180,24 @@
 		color: #097bf2
 		&:hover
 			text-decoration: underline
-	&__over
-		overflow: hidden
+	&__img
+		position: relative
+		display: table-cell
+		width: 110px
+		img
+			width: 100%
+	&__owner
+		position: absolute
+		top: 2px
+		right: 2px
+		font-size: 20px
+		color: #F1D270
+	&__info
+		display: table-cell
 		padding-left: 20px
+		vertical-align: top
 		&:only-child
 			padding-left: 0
-	&__img
-		width: 110px
-		max-width: 100%
 	&__table
 		color: #282828
 		tr
@@ -187,6 +205,7 @@
 				padding-bottom: 8px
 		td
 			&:first-child
+				width: 18%
 				padding-right: 7px
 				color: #6c757a
 		a
@@ -236,7 +255,7 @@
 	.dropdown__list
 		display: none
 		width: 100%
-		margin-top: -3px
+		margin-top: -4px
 		white-space: normal
 		a
 			max-width: initial

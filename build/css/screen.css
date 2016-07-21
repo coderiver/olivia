@@ -97,13 +97,15 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-square-arr:before { content: ""; }
 
-.icon-team:before { content: ""; }
+.icon-star:before { content: ""; }
 
-.icon-upload:before { content: ""; }
+.icon-team:before { content: ""; }
 
-.icon-warn:before { content: ""; }
+.icon-upload:before { content: ""; }
 
-.icon-zoom:before { content: ""; }
+.icon-warn:before { content: ""; }
+
+.icon-zoom:before { content: ""; }
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default { -webkit-border-radius: 5px; border-radius: 5px; border: 2px solid #000; background: #4c4c4c; color: #fff; }
@@ -1025,7 +1027,7 @@ input.is-error::placeholder { color: #6c757a; }
 .table td .icon.icon-clip { font-size: 14px; }
 .table .dropdown { height: 27px; vertical-align: middle; }
 .table .dropdown.is-active .dropdown__in { display: block; }
-.table .dropdown__in { display: none; position: absolute; top: 100%; right: 0; margin-top: -3px; text-align: left; background: #fff; -webkit-border-radius: 4px; border-radius: 4px; border: 1px solid #dce0e7; -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); }
+.table .dropdown__in { display: none; position: absolute; top: 100%; right: 0; margin-top: -4px; text-align: left; background: #fff; -webkit-border-radius: 4px; border-radius: 4px; border: 1px solid #dce0e7; -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); }
 .table .dropdown__list { max-height: 345px; }
 .table .dropdown__list.is-top-level { position: relative; right: auto; top: auto; margin-top: 0; -webkit-box-shadow: none; box-shadow: none; background: none; -webkit-border-radius: 0; border-radius: 0; border: none; opacity: 1; visibility: visible; }
 .table .dropdown a, .table .dropdown a:visited { color: #282828; }
@@ -1254,6 +1256,9 @@ input.is-error::placeholder { color: #6c757a; }
 .popup__bl:after { content: " "; display: table; clear: both; }
 .popup__bl .popup__label { margin: 0; }
 .popup__bl .dropdown { float: right; }
+.popup__card { display: table; width: 100%; margin: 10px 0; }
+.popup__card .dropdown { float: right; }
+.popup__card .popup__subttl { display: block; }
 .popup__el { float: left; }
 .popup__el.is-search { width: 100%; max-width: 420px; }
 .popup__el .svg-ico { width: 16px; height: 16px; background-size: 16px 16px; vertical-align: -3px; }
@@ -1272,12 +1277,14 @@ input.is-error::placeholder { color: #6c757a; }
 .popup__scroll { position: relative; height: 435px; overflow: hidden; }
 .popup__link { display: inline-block; color: #097bf2; }
 .popup__link:hover { text-decoration: underline; }
-.popup__over { overflow: hidden; padding-left: 20px; }
-.popup__over:only-child { padding-left: 0; }
-.popup__img { width: 110px; max-width: 100%; }
+.popup__img { position: relative; display: table-cell; width: 110px; }
+.popup__img img { width: 100%; }
+.popup__owner { position: absolute; top: 2px; right: 2px; font-size: 20px; color: #F1D270; }
+.popup__info { display: table-cell; padding-left: 20px; vertical-align: top; }
+.popup__info:only-child { padding-left: 0; }
 .popup__table { color: #282828; }
 .popup__table tr:first-child td { padding-bottom: 8px; }
-.popup__table td:first-child { padding-right: 7px; color: #6c757a; }
+.popup__table td:first-child { width: 18%; padding-right: 7px; color: #6c757a; }
 .popup__table a { text-decoration: underline; color: #6c757a; word-break: break-word; }
 .popup__table a:hover { text-decoration: none; }
 .popup__no-result { padding: 7px 0 0 20px; }
@@ -1291,7 +1298,7 @@ input.is-error::placeholder { color: #6c757a; }
 .popup .form { margin: 0; }
 .popup .form.is-full-w .dropdown { display: block; }
 .popup .dropdown.is-active .dropdown__list { display: block; }
-.popup .dropdown__list { display: none; width: 100%; margin-top: -3px; white-space: normal; }
+.popup .dropdown__list { display: none; width: 100%; margin-top: -4px; white-space: normal; }
 .popup .dropdown__list a { max-width: initial; }
 .popup .textarea { height: 100px; }
 .popup .check { vertical-align: middle; }
