@@ -1278,7 +1278,7 @@ input.is-error::placeholder { color: #6c757a; }
 .popup__table { color: #282828; }
 .popup__table tr:first-child td { padding-bottom: 8px; }
 .popup__table td:first-child { padding-right: 7px; color: #6c757a; }
-.popup__table a { text-decoration: underline; color: #6c757a; }
+.popup__table a { text-decoration: underline; color: #6c757a; word-break: break-word; }
 .popup__table a:hover { text-decoration: none; }
 .popup__no-result { padding: 7px 0 0 20px; }
 .popup .txt-bold { font-family: "opensans-semibold", Arial, sans-serif; }
