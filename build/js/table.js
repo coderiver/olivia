@@ -13,8 +13,8 @@ $(document).ready(function() {
 				this.dom(tablewrapEl);
 				// main
 				this.addScrollButtons();
-				this.toggleDesignElem();
 				this.perfectScroll();
+				this.toggleDesignElem();
 				this.measureSidedropHeight();
 				this.measureMoreblock();
 				this.columnsToggle();
@@ -36,8 +36,8 @@ $(document).ready(function() {
 
 				var that = this;
 				$(window).resize(function() {
-					that.toggleDesignElem();
 					that.perfectScroll();
+					that.toggleDesignElem();
 					that.measureSidedropHeight();
 					that.measureMoreblock();
 
@@ -97,7 +97,7 @@ $(document).ready(function() {
 
 				var scrollTableIn = scrollTable.find('.js-scrollbar .table');
 
-				if (scrollTable.hasClass('ps-active-x')) {
+				if ( scrollTable.hasClass('ps-active-x') ) {
 					scrollTableIn.css('margin-bottom', '13px');
 					scrollTable.siblings().addClass('is-scrollbar');
 				} else {
@@ -206,7 +206,7 @@ $(document).ready(function() {
 			selectAllRows: function(scrollTable) {
 				scrollTable = scrollTable || this.scrollTable;
 
-				var selectAllInput = scrollTable.find('th.label-checkbox'),
+				var selectAllInput = scrollTable.find('.js-label-checkbox'),
 					selectRow 	   = scrollTable.find('tr:not(".table__head")'),
 					sideActionRow  = scrollTable.siblings('.js-sidedrop').find('tr');
 
@@ -442,7 +442,6 @@ $(document).ready(function() {
 						'top': '0',
 						'left': '0'
 					});
-					console.log('blabla')
 				} else if (scrollPos + wh > tableWrapH) {
 					// if scroll position is more then bottom of table
 					filters.removeClass('is-fixed').css('top', tablewrap.outerHeight() - minH);

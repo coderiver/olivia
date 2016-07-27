@@ -214,9 +214,8 @@
 		&:first-child
 			vertical-align: baseline
 	&__pic
-		width: 60px
-		height: 60px
-		margin: 0 auto
+		max-width: 50px
+		height: 50px
 		background-size: cover
 		background-position: center center
 	&__text
@@ -261,11 +260,10 @@
 					display: block
 				p, span
 					padding-right: 20px
-			&:first-child
-				&:not(.label-checkbox) p, span,
-				&:not(.cell-center p),
-				&:not(.cell-center span)
-					padding-left: 17px
+			// &:first-child
+			// 	&:not(.cell-no-pad p),
+			// 	&:not(.cell-no-pad span)
+			// 		padding-left: 17px
 			&:last-child
 				border-right: 0
 			&.table__drop
@@ -285,14 +283,15 @@
 					margin-top: -7px
 					margin-left: -7px
 			p, span
-				position: relative
-				padding: 0 10px
-				width: 100%
-				height: 100%
-				text-overflow: ellipsis
-				overflow: hidden
-				white-space: nowrap
-				line-height: 38px
+				&:not(.check__span)
+					position: relative
+					padding: 0 10px
+					width: 100%
+					height: 100%
+					text-overflow: ellipsis
+					overflow: hidden
+					white-space: nowrap
+					line-height: 38px
 	tr
 		&:first-child
 			&:hover
@@ -717,8 +716,9 @@
 			height: 38px
 			padding: 9px 8.5px 8px
 			&:first-child
-				&:not(.cell-center)
-					padding-left: 17px
+				&.cell-center,
+				&.cell-pic
+					padding-left: 10px
 	.ps-scrollbar-x-rail
 		width: 100% !important
 		bottom: 0
