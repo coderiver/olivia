@@ -118,6 +118,28 @@ $(document).ready(function() {
 
 	popupScrollBar();
 
+	// news popups
+	function showNews() {
+		var newsTarget = $('.js-news-target'),
+			newsContent = $('.js-news-content'),
+			newsRemove = $('.js-news-remove');
+
+		newsTarget.click(function(){
+			$(this).parent().find(newsContent).slideToggle('fast');
+			console.log($(this))
+		});
+
+		newsRemove.click(function(){
+			that = $(this);
+			that.parents('.js-news-bl').addClass('is-hidden');
+			setTimeout(function() {
+			  that.parents('.js-news-bl').remove();
+			}, 300);
+		});
+	}
+
+	showNews();
+
 });
 $(document).ready(function() {
 

@@ -362,3 +362,44 @@
 		border-bottom: 1px solid #efefef
 		&:last-child
 			border-bottom: none
+
+.news
+	position: absolute
+	top: 100%
+	right: 0
+	width: 100%
+	max-width: 280px
+	margin-top: 35px
+	font-size: 13px
+	z-index: 9
+	&__bl
+		margin-bottom: 15px
+		background: #f7f8f9
+		border: 1px solid #dce0e7
+		border-radius: 4px
+		box-shadow: 0 2px 9px rgba(0, 0, 0, 0.5)
+		+tr(0.3s ease-out)
+		&.is-hidden
+			opacity: 0
+			visibility: hidden
+	&__ttl
+		padding: 15px 20px
+		text-transform: uppercase
+		color: #f76300
+		letter-spacing: 0.02em
+		cursor: pointer
+		+opensans-sb
+	&__txt
+		display: none
+		padding: 0 20px 15px
+	&__more
+		padding-top: 15px
+		+clr
+	&__link
+		text-decoration: underline
+		display: block
+		float: left
+		margin-top: 6px
+		color: #097bf2
+		&:hover
+			text-decoration: none
