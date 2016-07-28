@@ -406,10 +406,8 @@ $(document).ready(function() {
 							'top': scrollPos - tableWrapTop,
 							'left': '0'
 						});
-						console.log('stopped sidebar')
 					} else {
 						sidebar.addClass('is-fixed js-fixed').css('top', filtersHeight);
-						console.log('working sidebar')
 					}
 
 					// when sidebar in between in fixed position
@@ -427,8 +425,6 @@ $(document).ready(function() {
 							});
 						}
 					}
-
-					console.log('fixed', tableWrapH - minH)
 
 				} else if (scrollPos < tableWrapTop) {
 					// if scroll position less then starting point
@@ -451,7 +447,6 @@ $(document).ready(function() {
 					fakeHeadIn.css('left', '0');
 
 					sidebar.removeClass('is-fixed js-fixed').css('top', tablewrap.outerHeight() - minH);
-					console.log(scrollPos + wh);
 				}
 			}
 		};

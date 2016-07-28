@@ -64,14 +64,14 @@ $(document).ready(function() {
 	});
 
 	// close popup on body click
-	$('.overlay').on('click touchend', function(evt) {
-		var popup;
-		popup = $('.js-popup');
+	// $('.overlay').on('click touchend', function(evt) {
+	// 	var popup;
+	// 	popup = $('.js-popup');
 
-		if (popup.hasClass('is-active') && !$(evt.target).parents('.js-popup').length > 0) {
-			$.hidePopup(popup);
-		}
-	});
+	// 	if (popup.hasClass('is-active') && !$(evt.target).parents('.js-popup').length > 0) {
+	// 		$.hidePopup(popup);
+	// 	}
+	// });
 
 	// popup scroll
 	function popupScrollBar() {
@@ -126,7 +126,6 @@ $(document).ready(function() {
 
 		newsTarget.click(function(){
 			$(this).parent().find(newsContent).slideToggle('fast');
-			console.log($(this))
 		});
 
 		newsRemove.click(function(){
@@ -549,10 +548,8 @@ $(document).ready(function() {
 							'top': scrollPos - tableWrapTop,
 							'left': '0'
 						});
-						console.log('stopped sidebar')
 					} else {
 						sidebar.addClass('is-fixed js-fixed').css('top', filtersHeight);
-						console.log('working sidebar')
 					}
 
 					// when sidebar in between in fixed position
@@ -570,8 +567,6 @@ $(document).ready(function() {
 							});
 						}
 					}
-
-					console.log('fixed', tableWrapH - minH)
 
 				} else if (scrollPos < tableWrapTop) {
 					// if scroll position less then starting point
@@ -594,7 +589,6 @@ $(document).ready(function() {
 					fakeHeadIn.css('left', '0');
 
 					sidebar.removeClass('is-fixed js-fixed').css('top', tablewrap.outerHeight() - minH);
-					console.log(scrollPos + wh);
 				}
 			}
 		};

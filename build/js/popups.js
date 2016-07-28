@@ -54,14 +54,14 @@ $(document).ready(function() {
 	});
 
 	// close popup on body click
-	$('.overlay').on('click touchend', function(evt) {
-		var popup;
-		popup = $('.js-popup');
+	// $('.overlay').on('click touchend', function(evt) {
+	// 	var popup;
+	// 	popup = $('.js-popup');
 
-		if (popup.hasClass('is-active') && !$(evt.target).parents('.js-popup').length > 0) {
-			$.hidePopup(popup);
-		}
-	});
+	// 	if (popup.hasClass('is-active') && !$(evt.target).parents('.js-popup').length > 0) {
+	// 		$.hidePopup(popup);
+	// 	}
+	// });
 
 	// popup scroll
 	function popupScrollBar() {
@@ -116,7 +116,6 @@ $(document).ready(function() {
 
 		newsTarget.click(function(){
 			$(this).parent().find(newsContent).slideToggle('fast');
-			console.log($(this))
 		});
 
 		newsRemove.click(function(){
