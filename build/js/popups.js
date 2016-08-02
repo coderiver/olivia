@@ -118,13 +118,6 @@ $(document).ready(function() {
 			$(this).parent().find(newsContent).slideToggle('fast');
 		});
 
-		newsRemove.click(function(){
-			that = $(this);
-			that.parents('.js-news-bl').addClass('is-hidden');
-			setTimeout(function() {
-			  that.parents('.js-news-bl').remove();
-			}, 300);
-		});
 	}
 
 	showNews();
