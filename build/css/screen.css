@@ -453,6 +453,7 @@ input.is-error::placeholder { color: #6c757a; }
 .check__span:after { display: none; content: ""; position: absolute; top: 50%; left: 2.5px; margin-top: -4px; font-size: 8px; font-family: "svgfont"; }
 .check__span:empty { padding: 0; }
 .check.is-light-border .check__span:before { border-color: rgba(0, 0, 0, 0.15); }
+.check.is-light-border input:checked + .check__span { font-family: "opensans-semibold", Arial, sans-serif; }
 .check input { position: absolute; top: 0; left: 0; opacity: 0; visibility: hidden; }
 .check input:checked + span { color: #282828; }
 .check input:checked + span:after { display: block; }
@@ -657,6 +658,7 @@ input.is-error::placeholder { color: #6c757a; }
 .suggest .icon { width: 100%; max-width: 50px; text-align: center; font-size: 40px; vertical-align: middle; }
 .suggest .icon-plus { width: auto; font-size: 15px; color: #FFF; vertical-align: middle; }
 .suggest .icon-letter { -webkit-border-radius: 2px; border-radius: 2px; }
+.suggest .icon-add-library { font-size: 50px; }
 
 .sysmessage { position: absolute; top: 100%; right: 0; width: 380px; margin-top: 12px; font-size: 13px; background: #fff; opacity: 0; visibility: hidden; border: 1px solid #dce0e7; -webkit-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: 0 2px 9px rgba(0, 0, 0, 0.5); box-shadow: 0 2px 9px rgba(0, 0, 0, 0.5); z-index: 11; -webkit-transition: 0.4s ease; transition: 0.4s ease; }
 .sysmessage:before, .sysmessage:after { content: ""; position: absolute; }
@@ -1179,6 +1181,9 @@ input.is-error::placeholder { color: #6c757a; }
 .form__link:hover { text-decoration: underline; }
 .form__img.is-right { float: right; max-width: 286px; padding-right: 109px; }
 .form__img.is-right img { width: 100%; }
+.form__clear { *zoom: 1; }
+.form__clear:after { content: " "; display: table; clear: both; }
+.form__half { float: left; width: 50%; }
 .form hr { max-width: 600px; margin: 15px auto 25px; border: none; border-top: 1px solid #cfd5e0; }
 .form .radio, .form .check { display: block; margin: 7px 0; }
 .form .radio__span { color: #282828; }

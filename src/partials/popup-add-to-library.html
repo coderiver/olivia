@@ -1,0 +1,117 @@
+<div class="popup js-popup" id="popup-add-to-library">
+	<div class="popup__head">
+		<p>Add to library</p>
+		<i class="icon icon-close js-close"></i>
+	</div>
+	<div class="popup__body">
+		<form class="form is-full-w">
+			<div class="form__bl">
+				<p class="form__subttl"><label for="">Document</label></p>
+				<div class="upload">
+					<div class="btn btn-ok">
+						<input type="file">
+						<span>Browse</span>
+					</div>
+				</div>
+			</div>
+			<div class="form__bl">
+				<p class="form__subttl"><label for="name">Name</label></p>
+				<div class="form__el">
+					<input id="name" name="name" type="text">
+				</div>
+			</div>
+			<div class="form__bl">
+				<p class="form__subttl"><label for="">Description (optional)</label></p>
+				<div class="form__el">
+					<input type="text">
+				</div>
+			</div>
+			<div class="form__bl">
+				<p class="form__subttl">Status</p>
+				<div class="dropdown js-dropdown">
+					<p class="dropdown__item is-chosen">Select status</p>
+					<ul class="dropdown__list is-top-level js-inner">
+						<li><a href="#">Read only</a></li>
+						<li><a href="#">Write only</a></li>
+						<li><a href="#">Read / write</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="form__bl">
+				<p class="form__subttl">Section</p>
+				<div class="dropdown js-dropdown">
+					<p class="dropdown__item is-chosen">Select section</p>
+					<ul class="dropdown__list is-top-level js-inner">
+						<li><a href="#">Section 1</a></li>
+						<li><a href="#">Section 2</a></li>
+						<li><a href="#">Section 3</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="form__bl">
+				<p class="form__subttl">Module (optional)</p>
+				<div class="dropdown js-dropdown">
+					<p class="dropdown__item is-chosen">Select module</p>
+					<ul class="dropdown__list is-top-level js-inner">
+						<li><a href="#">Module 1</a></li>
+						<li><a href="#">Module 2</a></li>
+						<li><a href="#">Module 3</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="form__bl">
+				<p class="form__subttl">Roles</p>
+				<div class="form__clear">
+					<div class="form__half">
+						<label class="check is-light-border">
+							<input type="checkbox">
+							<span class="check__span">Admin</span>
+						</label>
+						<label class="check is-light-border">
+							<input type="checkbox">
+							<span class="check__span">Affiliate</span>
+						</label>
+						<label class="check is-light-border">
+							<input type="checkbox">
+							<span class="check__span">Affiliate draft only</span>
+						</label>
+						<label class="check is-light-border">
+							<input type="checkbox">
+							<span class="check__span">Affiliate full access</span>
+						</label>
+						<label class="check is-light-border">
+							<input type="checkbox">
+							<span class="check__span">Auditor</span>
+						</label>
+					</div>
+					<div class="form__half">
+						<label class="check is-light-border">
+							<input type="checkbox">
+							<span class="check__span">Investor</span>
+						</label>
+						<label class="check is-light-border">
+							<input type="checkbox">
+							<span class="check__span">Prospect</span>
+						</label>
+						<label class="check is-light-border">
+							<input type="checkbox">
+							<span class="check__span">Representative</span>
+						</label>
+						<label class="check is-light-border">
+							<input type="checkbox">
+							<span class="check__span">Super user</span>
+						</label>
+						<label class="check is-light-border">
+							<input type="checkbox">
+							<span class="check__span">Supervisor</span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="popup__btn xs-margin">
+				<button class="btn btn-ok" type="submit">Save</button>
+				<button class="btn btn-no" type="button">Cancel</button>
+			</div>
+		</form>
+	</div>
+</div>

@@ -305,6 +305,12 @@
 											<p>Add firm</p>
 										</div>
 									</a>
+									<a href="#" class="suggest__bl" data-popup="popup-add-to-library">
+										<i class="icon icon-add-library"></i>
+										<div class="suggest__in">
+											<p>Add to library</p>
+										</div>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -2207,26 +2213,118 @@
 			</form>
 		</div>
 	</div>
-	<div class="popup is-top js-popup" id="create">
+	<div class="popup js-popup" id="popup-add-to-library">
 		<div class="popup__head">
-			<p>Start a New Deal Folder</p>
+			<p>Add to library</p>
 			<i class="icon icon-close js-close"></i>
 		</div>
 		<div class="popup__body">
-			<form class="popup__form">
-				<p class="popup__form-ttl"><label for="">Deal Name</label></p>
-				<div class="popup__label">
-					<input type="text" placeholder="Please keep this short and informal">
+			<form class="form is-full-w">
+				<div class="form__bl">
+					<p class="form__subttl"><label for="">Document</label></p>
+					<div class="upload">
+						<div class="btn btn-ok">
+							<input type="file">
+							<span>Browse</span>
+						</div>
+					</div>
 				</div>
-				<div class="popup__label">
-					<label class="check is-light-border">
-						<input type="checkbox">
-						<span class="check__span">This is a team deal</span>
-					</label>
-					<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span>
+				<div class="form__bl">
+					<p class="form__subttl"><label for="name">Name</label></p>
+					<div class="form__el">
+						<input id="name" name="name" type="text">
+					</div>
 				</div>
-				<div class="popup__btn">
-					<button class="btn btn-ok" type="submit">Create deal</button>
+				<div class="form__bl">
+					<p class="form__subttl"><label for="">Description (optional)</label></p>
+					<div class="form__el">
+						<input type="text">
+					</div>
+				</div>
+				<div class="form__bl">
+					<p class="form__subttl">Status</p>
+					<div class="dropdown js-dropdown">
+						<p class="dropdown__item is-chosen">Select status</p>
+						<ul class="dropdown__list is-top-level js-inner">
+							<li><a href="#">Read only</a></li>
+							<li><a href="#">Write only</a></li>
+							<li><a href="#">Read / write</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="form__bl">
+					<p class="form__subttl">Section</p>
+					<div class="dropdown js-dropdown">
+						<p class="dropdown__item is-chosen">Select section</p>
+						<ul class="dropdown__list is-top-level js-inner">
+							<li><a href="#">Section 1</a></li>
+							<li><a href="#">Section 2</a></li>
+							<li><a href="#">Section 3</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="form__bl">
+					<p class="form__subttl">Module (optional)</p>
+					<div class="dropdown js-dropdown">
+						<p class="dropdown__item is-chosen">Select module</p>
+						<ul class="dropdown__list is-top-level js-inner">
+							<li><a href="#">Module 1</a></li>
+							<li><a href="#">Module 2</a></li>
+							<li><a href="#">Module 3</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="form__bl">
+					<p class="form__subttl">Roles</p>
+					<div class="form__clear">
+						<div class="form__half">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Admin</span>
+							</label>
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Affiliate</span>
+							</label>
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Affiliate draft only</span>
+							</label>
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Affiliate full access</span>
+							</label>
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Auditor</span>
+							</label>
+						</div>
+						<div class="form__half">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Investor</span>
+							</label>
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Prospect</span>
+							</label>
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Representative</span>
+							</label>
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Super user</span>
+							</label>
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Supervisor</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="popup__btn xs-margin">
+					<button class="btn btn-ok" type="submit">Save</button>
 					<button class="btn btn-no" type="button">Cancel</button>
 				</div>
 			</form>

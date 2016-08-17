@@ -7,7 +7,7 @@ gulp.task('copy', function() {
    gulp.src([config.src.img+'**/*.*', '!'+imgIcons, '!'+imgSvg])
    .pipe(gulp.dest(config.dest.img));
    gulp.src(config.src.root+'fonts/*.*')
-   .pipe(gulp.dest(config.dest.css+'fonts/'));
+   .pipe(gulp.dest(config.dest.root+'fonts/'));
    gulp.src(config.src.root+'video/*.*')
    .pipe(gulp.dest(config.dest.root+'video/'));
 });
