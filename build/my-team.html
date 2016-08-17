@@ -635,22 +635,30 @@
 				<div class="form__bl">
 					<p class="form__subttl">Modules</p>
 					<div>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Memberhip</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Compliance</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Deal</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Transactions</span>
-						</label>
+						<div class="form__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Memberhip</span>
+							</label>
+						</div>
+						<div class="form__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Compliance</span>
+							</label>
+						</div>
+						<div class="form__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Deal</span>
+							</label>
+						</div>
+						<div class="form__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Transactions</span>
+							</label>
+						</div>
 					</div>
 				</div>
 				<div class="upload">
@@ -676,33 +684,33 @@
 			<form class="form is-full-w">
 				<div class="form__bl">
 					<p class="form__subttl"><label for="">First Name</label></p>
-					<div class="form__el">
-						<input class="is-error" type="text" placeholder="Type first name">
+					<div class="form__el has-error">
+						<input type="text" placeholder="Type first name">
 					</div>
 				</div>
 				<div class="form__bl">
 					<p class="form__subttl"><label for="">Last Name</label></p>
-					<div class="form__el">
-						<input class="is-error" type="text" placeholder="Type last name">
+					<div class="form__el has-error">
+						<input type="text" placeholder="Type last name">
 					</div>
 				</div>
 				<div class="form__bl">
 					<p class="form__subttl"><label for="">E-mail</label></p>
-					<div class="form__el">
-						<input class="is-error" type="text" placeholder="Type e-mail address">
+					<div class="form__el has-error">
+						<input type="text" placeholder="Type e-mail address">
 					</div>
 				</div>
 				<div class="form__bl">
 					<p class="form__subttl"><label for="">Password</label></p>
-					<div class="form__el">
-						<input class="is-error" type="text" placeholder="Type password">
+					<div class="form__el has-error">
+						<input type="text" placeholder="Type password">
 					</div>
 				</div>
 				<div class="form__bl">
 					<p class="form__subttl no-margin">Password confirmation</p>
 					<label>Enter the dame password as above for verification</label>
-					<div class="form__el">
-						<input class="is-error" type="text" placeholder="Re-type same password">
+					<div class="form__el has-error">
+						<input type="text" placeholder="Re-type same password">
 					</div>
 				</div>
 				<div class="form__bl">
@@ -718,34 +726,48 @@
 				</div>
 				<div class="form__bl">
 					<p class="form__subttl">Modules</p>
-					<div class="is-error">
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Memberhip</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Compliance</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Deal</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Transactions</span>
-						</label>
+					<div class="form__clear">
+						<div class="form__half">
+							<div class="form__el has-error">
+								<label class="check is-light-border">
+									<input type="checkbox">
+									<span class="check__span">Memberhip</span>
+								</label>
+							</div>
+							<div class="form__el has-error">
+								<label class="check is-light-border">
+									<input type="checkbox">
+									<span class="check__span">Compliance</span>
+								</label>
+							</div>
+							<div class="form__el has-error">
+								<label class="check is-light-border">
+									<input type="checkbox">
+									<span class="check__span">Deal</span>
+								</label>
+							</div>
+							<div class="form__el has-error">
+								<label class="check is-light-border">
+									<input type="checkbox">
+									<span class="check__span">Transactions</span>
+								</label>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="upload is-error">
-					<div class="upload__in">
-						<input type="file" name="id">
-						<i class="icon icon-upload"></i>
-						<span>Upload photo</span>
+				<div class="form__el has-error">
+					<div class="upload">
+						<div class="upload__in">
+							<input type="file" name="id">
+							<i class="icon icon-upload"></i>
+							<span>Upload photo</span>
+						</div>
 					</div>
 				</div>
-				<div class="report is-error">
-					<p>Affiliate cannot be saved cause not all fields are filled in. See those are marked above with pink outline and fill them in.</p>
+				<div class="form__el has-error">
+					<div class="report">
+						<p>Affiliate cannot be saved cause not all fields are filled in. See those are marked above with pink outline and fill them in.</p>
+					</div>
 				</div>
 				<div class="popup__btn xs-margin">
 					<button class="btn btn-ok" type="submit">Add</button>

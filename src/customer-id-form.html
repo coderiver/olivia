@@ -42,14 +42,18 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">US Citizenship</p>
-						<label class="radio">
-							<input type="radio" name="citizenship" value="yes" checked>
-							<span class="radio__span">Yes</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="citizenship" value="no">
-							<span class="radio__span">No</span>
-						</label>
+						<div class="form__el">
+							<label class="radio">
+								<input type="radio" name="citizenship" value="yes" checked>
+								<span class="radio__span">Yes</span>
+							</label>
+						</div>
+						<div class="form__el">
+							<label class="radio">
+								<input type="radio" name="citizenship" value="no">
+								<span class="radio__span">No</span>
+							</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -68,22 +72,30 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Type of ID</p>
-						<label class="radio">
-							<input type="radio" name="idtype" value="license" checked>
-							<span class="radio__span">Driver's License</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="idtype" value="passport">
-							<span class="radio__span">Passport</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="idtype" value="other">
-							<span class="radio__span">Other</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="idtype" value="unavailable">
-							<span class="radio__span">Not available</span>
-						</label>
+						<div class="form__el">
+							<label class="radio">
+								<input type="radio" name="idtype" value="license" checked>
+								<span class="radio__span">Driver's License</span>
+							</label>
+						</div>
+						<div class="form__el">
+							<label class="radio">
+								<input type="radio" name="idtype" value="passport">
+								<span class="radio__span">Passport</span>
+							</label>
+						</div>
+						<div class="form__el">
+							<label class="radio">
+								<input type="radio" name="idtype" value="other">
+								<span class="radio__span">Other</span>
+							</label>
+						</div>
+						<div class="form__el">
+							<label class="radio">
+								<input type="radio" name="idtype" value="unavailable">
+								<span class="radio__span">Not available</span>
+							</label>
+						</div>
 					</div>
 					<hr>
 					<div class="form__bl">
@@ -187,16 +199,22 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Associated with a Securities Firm?</p>
-						<label class="radio">
-							<input type="radio" name="firm" value="yes">
-							<span class="radio__span">Yes</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="firm" value="no">
-							<span class="radio__span">No</span>
-						</label>
-						<label>If Yes: Name of Firm, Title, Contact Information for Compliance Supervisor</label>
 						<div class="form__el">
+							<label class="radio">
+								<input type="radio" name="firm" value="yes">
+								<span class="radio__span">Yes</span>
+							</label>
+						</div>
+						<div class="form__el">
+							<label class="radio">
+								<input type="radio" name="firm" value="no">
+								<span class="radio__span">No</span>
+							</label>
+						</div>
+					</div>
+					<div class="form__bl">
+						<div class="form__el">
+							<label>If Yes: Name of Firm, Title, Contact Information for Compliance Supervisor</label>
 							<input type="text" placeholder="Type here">
 						</div>
 					</div>
@@ -206,16 +224,22 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Director of a Public Company?</p>
-						<label class="radio">
-							<input type="radio" name="director" value="yes">
-							<span class="radio__span">Yes</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="director" value="no">
-							<span class="radio__span">No</span>
-						</label>
-						<label>If Yes, Name of Company</label>
 						<div class="form__el">
+							<label class="radio">
+								<input type="radio" name="director" value="yes">
+								<span class="radio__span">Yes</span>
+							</label>
+						</div>
+						<div class="form__el">
+							<label class="radio">
+								<input type="radio" name="director" value="no">
+								<span class="radio__span">No</span>
+							</label>
+						</div>
+					</div>
+					<div class="form__bl">
+						<div class="form__el">
+							<label>If Yes, Name of Company</label>
 							<input type="text" placeholder="Type here">
 						</div>
 					</div>
@@ -225,14 +249,18 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">10% Shareholder / Policy-Making Officer in a Public Company?</p>
-						<label class="radio">
-							<input type="radio" name="shareholder" value="yes">
-							<span class="radio__span">Yes</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="shareholder" value="no">
-							<span class="radio__span">No</span>
-						</label>
+						<div class="form__el">
+							<label class="radio">
+								<input type="radio" name="shareholder" value="yes">
+								<span class="radio__span">Yes</span>
+							</label>
+						</div>
+						<div class="form__el">
+							<label class="radio">
+								<input type="radio" name="shareholder" value="no">
+								<span class="radio__span">No</span>
+							</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -250,14 +278,18 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Registered Representative Attestations:</p>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">I attest that all of the information provided is true to the best of my knowledge.</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">I attest that I have a prior, existing and current relationship with this customer.</span>
-						</label>
+						<div class="form__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">I attest that all of the information provided is true to the best of my knowledge.</span>
+							</label>
+						</div>
+						<div class="form__el">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">I attest that I have a prior, existing and current relationship with this customer.</span>
+							</label>
+						</div>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">

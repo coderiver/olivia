@@ -43,6 +43,32 @@
 			max-width: 162px
 		&.is-middle-size
 			max-width: 340px
+		&.has-error
+			input,
+			.textarea
+				padding: 8px 12px
+				background: #FFFCFC
+				border-color: #FFA4AF
+				box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.09)
+				+placeholder
+					color: #6c757a
+			.upload,
+			.form__clear
+				background: #FFFCFC
+				border: 1px solid #FFA4AF
+			.upload
+				padding: 7px 10px
+			.form__clear
+				padding: 0 10px
+			.report
+				padding: 13px 15px
+				background: #fee
+				border-color: #ffc0c8
+			.check,
+			.radio
+				padding: 5px 10px
+				background: #FFFCFC
+				border: 1px solid #FFA4AF
 	&__link
 		color: #097BF3
 		&:hover
@@ -59,15 +85,17 @@
 	&__half
 		float: left
 		width: 50%
+	&__avatar
+		margin-bottom: 15px
+		max-width: 113px
+		img
+			display: block
+			width: 100%
 	hr
 		max-width: 600px
 		margin: 15px auto 25px
 		border: none
 		border-top: 1px solid #cfd5e0
-	.radio,
-	.check
-		display: block
-		margin: 7px 0
 	.radio__span
 		color: #282828
 	.textarea
@@ -79,12 +107,6 @@
 	margin: 15px 0
 	font-size: 14px
 	color: #097bf2
-	&.is-error
-		padding: 5px
-		background: #FFFCFC
-		border: 1px solid #FFA4AF
-		+placeholder
-			color: #6c757a
 	&__in
 		position: relative
 		display: inline-block
@@ -193,3 +215,7 @@
 		margin-top: 5px
 		&.is-visible
 			display: block
+
+.help-block
+	margin-top: 5px
+	color: red

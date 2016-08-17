@@ -681,12 +681,14 @@
 				<!-- begin tablewrap  -->
 				<div class="tablewrap js-tablewrap">
 					<!-- begin filters  -->
-					<div class="filters">
-						<div class="filters__ttl">
-							<div class="tooltip">
-								<p>Closed Deals</p>
-									<div class="tooltip__ico js-tooltip" title="Closed Deals Explanation on mouse over. How this works and what this module mean. Lets keep it informative.">
-									<span>?</span>
+					<div class="filters js-filters">
+						<div class="filters__wrap">
+							<div class="filters__ttl">
+								<div class="tooltip">
+									<p>Closed Deals</p>
+										<div class="tooltip__ico js-tooltip" title="Closed Deals Explanation on mouse over. How this works and what this module mean. Lets keep it informative.">
+										<span>?</span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1029,45 +1031,22 @@
 </div>
 <!-- END out-->
 <div class="overlay">
-	<div class="popup is-top js-popup" id="create">
-		<div class="popup__head">
-			<p>Start a New Deal Folder</p>
-			<i class="icon icon-close js-close"></i>
-		</div>
-		<div class="popup__body">
-			<form class="popup__form">
-				<p class="popup__form-ttl"><label for="">Deal Name</label></p>
-				<div class="popup__label">
-					<input type="text" placeholder="Please keep this short and informal">
-				</div>
-				<div class="popup__label">
-					<label class="check is-light-border">
-						<input type="checkbox">
-						<span class="check__span">This is a team deal</span>
-					</label>
-					<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span>
-				</div>
-				<div class="popup__btn">
-					<button class="btn btn-ok" type="submit">Create deal</button>
-					<button class="btn btn-no" type="button">Cancel</button>
-				</div>
-			</form>
-		</div>
-	</div>
 	<div class="popup is-top js-popup" id="create-error">
 		<div class="popup__head">
 			<p>Start a New Deal Folder</p>
 			<i class="icon icon-close js-close"></i>
 		</div>
 		<div class="popup__body">
-			<form class="popup__form">
-				<p class="popup__form-ttl"><label for="">Deal Name</label></p>
-				<div class="popup__label">
-					<input class="is-error" type="text" value="Google">
+			<form class="form is-full-w">
+				<p class="form__subttl"><label for="">Deal Name</label></p>
+				<div class="form__bl">
+					<div class="form__el has-error">
+						<input type="text" value="Google">
+						<div class="help-block">
+							<p>You already have another deal with the same name</p>
+						</div>
+					</div>
 				</div>
-				<ul class="errorlist is-border">
-					<li>You already have another deal with the same name</li>
-				</ul>
 				<div class="popup__btn">
 					<button class="btn btn-ok" type="submit">Create deal</button>
 					<button class="btn btn-no" type="button">Cancel</button>
@@ -1084,6 +1063,35 @@
 			<div class="report">
 				<p>All current Deal folders have Deal memos in them. As only one Deal memo is allowed within one Deal Folder you either go to Deal Folder and edit/delete existing Deal Memo or start a new deal.</p>
 			</div>
+		</div>
+	</div>
+	<div class="popup is-top js-popup" id="create">
+		<div class="popup__head">
+			<p>Start a New Deal Folder</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<form class="form is-full-w">
+				<p class="form__subttl"><label for="">Deal Name</label></p>
+				<div class="form__bl">
+					<div class="form__el">
+						<input type="text" placeholder="Please keep this short and informal">
+					</div>
+				</div>
+				<div class="form__bl">
+					<div class="form__el">
+						<label class="check is-light-border is-inline">
+							<input type="checkbox">
+							<span class="check__span">This is a team deal</span>
+						</label>
+						<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span>
+					</div>
+				</div>
+				<div class="popup__btn">
+					<button class="btn btn-ok" type="submit">Create deal</button>
+					<button class="btn btn-no" type="button">Cancel</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
