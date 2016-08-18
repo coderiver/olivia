@@ -1177,7 +1177,7 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 .form__el.has-error .upload { padding: 7px 10px; }
 .form__el.has-error .form__clear { padding: 0 10px; }
 .form__el.has-error .report { padding: 13px 15px; background: #fee; border-color: #ffc0c8; }
-.form__el.has-error .check, .form__el.has-error .radio { padding: 5px 10px; background: #FFFCFC; border: 1px solid #FFA4AF; }
+.form__el.has-error.is-choice { padding: 0 5px; background: #FFFCFC; border: 1px solid #FFA4AF; }
 .form__link { color: #097BF3; }
 .form__link:hover { text-decoration: underline; }
 .form__img.is-right { float: right; max-width: 286px; padding-right: 109px; }
@@ -1187,6 +1187,7 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 .form__half { float: left; width: 50%; }
 .form__avatar { margin-bottom: 15px; max-width: 113px; }
 .form__avatar img { display: block; width: 100%; }
+.form__choice { display: block; margin: 7px 0; }
 .form hr { max-width: 600px; margin: 15px auto 25px; border: none; border-top: 1px solid #cfd5e0; }
 .form .radio__span { color: #282828; }
 .form .textarea { min-height: 66px; }
