@@ -885,7 +885,7 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 .actions__in { min-height: 253px; padding: 22px; border: 1px solid #cfd5e0; -webkit-border-radius: 6px; border-radius: 6px; }
 .actions__ico { display: inline-block; margin-bottom: 20px; }
 .actions__txt { color: #6c757a; }
-.actions .radio { margin-bottom: 10px; }
+.actions .radio { display: block; margin-bottom: 10px; }
 .actions .icon { font-size: 77px; opacity: 0.5; }
 .actions .icon-marked { position: absolute; top: 25px; right: 6px; font-size: 25px; color: #fff; opacity: 1; }
 .actions .icon-delete { color: red; }
