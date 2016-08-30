@@ -1177,7 +1177,8 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 .form__el.has-error .upload { padding: 7px 10px; }
 .form__el.has-error .form__clear { padding: 0 10px; }
 .form__el.has-error .report { padding: 13px 15px; background: #fee; border-color: #ffc0c8; }
-.form__el.has-error.is-choice { padding: 0 5px; background: #FFFCFC; border: 1px solid #FFA4AF; }
+.form__el.has-error .redactor-box { -webkit-box-shadow: 0 0 1px 0 #FFA4AF; box-shadow: 0 0 1px 0 #FFA4AF; }
+.form__el.is-choice { padding: 0 5px; background: #FFFCFC; border: 1px solid #FFA4AF; }
 .form__link { color: #097BF3; }
 .form__link:hover { text-decoration: underline; }
 .form__img.is-right { float: right; max-width: 286px; padding-right: 109px; }
@@ -1212,6 +1213,7 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 .newpost__in:after { content: " "; display: table; clear: both; }
 .newpost__bl { margin-bottom: 17px; color: #282828; }
 .newpost__bl.is-old { color: #6c757a; }
+.newpost__bl.textarea-wrap { word-break: break-all; }
 .newpost__bl a { color: #097bf2; }
 .newpost__bl a:hover { text-decoration: underline; }
 .newpost__link { margin-left: 10px; float: right; color: #097bf2; }
@@ -1225,7 +1227,7 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 .newpost .btn-group { display: none; float: right; margin-top: 5px; }
 .newpost .btn-group.is-visible { display: block; }
 
-.help-block { margin-top: 5px; color: red; }
+.help-block { display: block; margin-top: 5px; color: red; }
 
 *[data-popup] { cursor: pointer; }
 

@@ -64,10 +64,12 @@
 				padding: 13px 15px
 				background: #fee
 				border-color: #ffc0c8
-			&.is-choice
-				padding: 0 5px
-				background: #FFFCFC
-				border: 1px solid #FFA4AF
+			.redactor-box
+				box-shadow: 0 0 1px 0 #FFA4AF
+		&.is-choice
+			padding: 0 5px
+			background: #FFFCFC
+			border: 1px solid #FFA4AF
 	&__link
 		color: #097BF3
 		&:hover
@@ -182,6 +184,8 @@
 		color: #282828
 		&.is-old
 			color: #6c757a
+		&.textarea-wrap
+			word-break: break-all
 		a
 			color: #097bf2
 			&:hover
@@ -219,5 +223,6 @@
 			display: block
 
 .help-block
+	display: block
 	margin-top: 5px
 	color: red
