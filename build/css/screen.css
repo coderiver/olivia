@@ -728,12 +728,14 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 .start { position: relative; margin: 35px 0 110px; text-align: center; font-size: 16px; color: #6c757a; z-index: 0; overflow: hidden; }
 .start:after { content: ""; position: absolute; top: 22px; right: 0; bottom: 0; width: 47px; background: #fff; z-index: 1; }
 .start.s-b-margin { margin-bottom: 30px; }
-.start__in { position: relative; max-width: 620px; margin: 0 auto; z-index: 0; }
+.start__in { position: relative; max-width: 620px; margin: 0 auto; text-align: left; z-index: 0; }
+.start__list { margin: 10px 0; }
+.start__list li { margin-bottom: 10px; }
 .start__ttl { margin-bottom: 10px; font-size: 26px; color: #282828; }
 .start__folder { position: relative; margin: 28px 0 30px; line-height: 1; }
 .start__folder .icon-folder { position: relative; }
 .start__folder .icon-folder:after { content: ""; position: absolute; width: 1000px; height: 1000px; top: 50%; left: 100%; margin: -1px 0 0 20px; border-top: 2px solid #899bac; background: #FFF; z-index: -1; }
-.start__callfor { position: relative; margin-top: 12px; color: #6c757a; line-height: 1.15; font-family: "handwrite", Arial, sans-serif; }
+.start__callfor { position: relative; margin-top: 20px; color: #6c757a; line-height: 1.15; font-family: "handwrite", Arial, sans-serif; }
 .start__callfor span { position: relative; display: inline-block; padding: 0 20px; background: #fff; z-index: 1; }
 .start__linkwrap { margin-top: 10px; font-size: 0; }
 .start__link { display: inline-block; text-decoration: underline; font-size: 13px; color: #bcc6cc; vertical-align: middle; }
