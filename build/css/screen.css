@@ -728,7 +728,7 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 .start { position: relative; margin: 35px 0 110px; text-align: center; font-size: 16px; color: #6c757a; z-index: 0; overflow: hidden; }
 .start:after { content: ""; position: absolute; top: 22px; right: 0; bottom: 0; width: 47px; background: #fff; z-index: 1; }
 .start.s-b-margin { margin-bottom: 30px; }
-.start__in { position: relative; max-width: 620px; margin: 0 auto; text-align: left; z-index: 0; }
+.start__in { position: relative; max-width: 620px; margin: 0 auto; text-align: left; font-size: 12px; z-index: 0; }
 .start__list { margin: 10px 0; }
 .start__option { margin-bottom: 10px; *zoom: 1; }
 .start__option:after { content: " "; display: table; clear: both; }
