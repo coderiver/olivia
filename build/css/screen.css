@@ -728,7 +728,8 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 .start { position: relative; margin: 35px 0 110px; text-align: center; font-size: 16px; color: #6c757a; z-index: 0; overflow: hidden; }
 .start:after { content: ""; position: absolute; top: 22px; right: 0; bottom: 0; width: 47px; background: #fff; z-index: 1; }
 .start.s-b-margin { margin-bottom: 30px; }
-.start__in { position: relative; max-width: 620px; margin: 0 auto; text-align: left; font-size: 12px; z-index: 0; }
+.start__in { position: relative; z-index: 0; }
+.start__info { max-width: 620px; margin: 0 auto; text-align: left; font-size: 12px; }
 .start__list { margin: 10px 0; }
 .start__option { margin-bottom: 10px; *zoom: 1; }
 .start__option:after { content: " "; display: table; clear: both; }
@@ -1275,12 +1276,12 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 .popup__el.is-search { width: 100%; max-width: 420px; }
 .popup__el .svg-ico { width: 16px; height: 16px; background-size: 16px 16px; vertical-align: -3px; }
 .popup__el .icon { font-size: 16px; vertical-align: -3px; }
-.popup__choose { margin: 13px -2px 21px; font-size: 0; *zoom: 1; }
+.popup__choose { position: relative; margin-bottom: 20px; padding: 13px 0 11px; font-size: 0; *zoom: 1; }
 .popup__choose:after { content: " "; display: table; clear: both; }
-.popup__choose .popup__el { float: none; display: inline-block; padding: 5px 7px; color: #097bf2; vertical-align: top; }
-.popup__choose .popup__el:hover span { text-decoration: underline; }
-.popup__choose .popup__el span { display: inline-block; font-size: 14px; vertical-align: middle; }
-.popup__choose .svg-ico { margin-right: 14px; width: 56px; height: 56px; background-size: 56px 56px; vertical-align: middle; }
+.popup__choose:before { content: ""; position: absolute; left: -20px; right: -20px; bottom: 0; border-bottom: 1px solid #efefef; }
+.popup__choose .popup__el { width: 33.33%; text-align: center; font-size: 14px; padding: 5px 0; color: #097bf2; vertical-align: top; }
+.popup__choose .popup__el:hover { text-decoration: underline; }
+.popup__choose .svg-ico { width: 56px; height: 56px; margin-bottom: 10px; background-size: 56px 56px; vertical-align: middle; }
 .popup__choose .icon { margin-right: 16px; vertical-align: middle; }
 .popup__more { float: right; color: #097bf2; }
 .popup__more:hover { text-decoration: underline; }

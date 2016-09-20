@@ -135,26 +135,31 @@
 			font-size: 16px
 			vertical-align: -3px
 	&__choose
-		margin: 13px -2px 21px
+		position: relative
+		margin-bottom: 20px 
+		padding: 13px 0 11px
 		font-size: 0
 		+clr
+		&:before
+			content: ''
+			position: absolute
+			left: -20px
+			right: -20px
+			bottom: 0
+			border-bottom: 1px solid #efefef
 		.popup__el
-			float: none
-			display: inline-block
-			padding: 5px 7px
+			width: 33.33%
+			text-align: center 
+			font-size: 14px
+			padding: 5px 0
 			color: #097bf2
 			vertical-align: top
 			&:hover
-				span
-					text-decoration: underline
-			span
-				display: inline-block
-				font-size: 14px
-				vertical-align: middle
+				text-decoration: underline
 		.svg-ico
-			margin-right: 14px
 			width: 56px
 			height: 56px
+			margin-bottom: 10px 
 			background-size: 56px 56px
 			vertical-align: middle
 		.icon
