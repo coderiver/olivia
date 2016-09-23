@@ -980,6 +980,8 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 .table__pic { max-width: 50px; height: 50px; background-size: cover; background-position: center center; }
 .table__text { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: middle; }
 .table__text.is-info { color: #f76300; }
+.table__activity a { text-decoration: underline; }
+.table__activity a:hover { text-decoration: none; }
 .table span.table__text { display: inline-block; }
 .table .table__head { background: #f7f8f9; text-align: left; }
 .table .table__head.is-full-border { border: 1px solid #dce0e7; }
