@@ -25,7 +25,7 @@ $(document).ready(function() {
 		if ( !popup.hasClass('js-avoid-overflow') ) {
 			$('body').addClass('is-overflow');
 		}
-		if ( popup.find('.js-tooltip').length > 0 ) {
+		if ( popup.find('.js-tooltip').length > 0 || popup.find('.js-tooltip-popup').length > 0 ) {
 			$('.overlay').addClass('low-index');
 		}
 		if ( $('.js-search-results').hasClass('is-active') ) {
@@ -669,29 +669,44 @@ $(document).ready(function() {
 	});
 
 	// tooltips
-	$('.js-tooltip').tooltipster({
-		position: 'right',
-		maxWidth: 290
-	});
+	function initTooltip(elem) {
+		var elem = $(elem);
 
-	$('.js-tooltip-guide').tooltipster({
-		maxWidth: 290,
-		interactive: true,
-		contentAsHTML: true,
-		trigger: 'custom',
-		functionReady: function(origin, tooltip) {
-			origin.tooltipster('option', 'position', origin.data('tooltip-position'));
-			tooltip.find('a').on('click', function(evt) {
-				evt.preventDefault();
-				origin.tooltipster('hide').removeClass('is-visible');
+		if ( elem.is($('.js-tooltip')) ) {
+			elem.tooltipster({
+				position: 'right',
+				maxWidth: 290
 			});
-		}
-	});
+		} else {
+			console.log(elem);
+			// TO FIX POSITION ON LOAD
+			elem.tooltipster({
+				maxWidth: 290,
+				interactive: true,
+				contentAsHTML: true,
+				trigger: 'click',
+				functionReady: function(origin, tooltip) {
+					origin.tooltipster('option', 'position', origin.data('tooltip-position'));
+					tooltip.find('a').on('click', function(evt) {
+						evt.preventDefault();
+						origin.tooltipster('hide').removeClass('is-visible');
+					});
+				}
+			});
 
-	$('.js-tooltip-guide').tooltipster('show');
-	$('.js-tooltip-guide').click(function(evt) {
-		evt.preventDefault();
-	});
+			elem.click(function(evt) {
+				evt.preventDefault();
+			});
+
+			if ( !elem.is($('.js-tooltip-popup')) ) {
+				elem.tooltipster('show');
+			}
+		}
+	}
+
+	initTooltip('.js-tooltip');
+	initTooltip('.js-tooltip-guide');
+	initTooltip('.js-tooltip-popup');
 
 	// textarea autoresize
 	$(document).on('input.textarea', '.js-expand', function() {
