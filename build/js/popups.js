@@ -15,7 +15,7 @@ $(document).ready(function() {
 		if ( !popup.hasClass('js-avoid-overflow') ) {
 			$('body').addClass('is-overflow');
 		}
-		if ( popup.find('.js-tooltip').length > 0 || popup.find('.js-tooltip-popup').length > 0 ) {
+		if ( popup.find('.js-tooltip').length > 0 ) {
 			$('.overlay').addClass('low-index');
 		}
 		if ( $('.js-search-results').hasClass('is-active') ) {

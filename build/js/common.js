@@ -21,7 +21,6 @@ $(document).ready(function() {
 				maxWidth: 290
 			});
 		} else {
-			console.log(elem);
 			// TO FIX POSITION ON LOAD
 			elem.tooltipster({
 				maxWidth: 290,
@@ -41,15 +40,12 @@ $(document).ready(function() {
 				evt.preventDefault();
 			});
 
-			if ( !elem.is($('.js-tooltip-popup')) ) {
-				elem.tooltipster('show');
-			}
+			elem.tooltipster('show');
 		}
 	}
 
 	initTooltip('.js-tooltip');
 	initTooltip('.js-tooltip-guide');
-	initTooltip('.js-tooltip-popup');
 
 	// textarea autoresize
 	$(document).on('input.textarea', '.js-expand', function() {
