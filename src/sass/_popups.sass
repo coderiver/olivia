@@ -73,6 +73,8 @@
 		padding: 15px 20px 20px
 		&.no-b-pad
 			padding-bottom: 0
+		.divider
+			margin: 15px -20px
 	&__label
 		display: block
 		margin: 8px 0
@@ -136,17 +138,9 @@
 			vertical-align: -3px
 	&__choose
 		position: relative
-		margin-bottom: 20px
-		padding: 13px 0 11px
+		padding-top: 13px
 		font-size: 0
 		+clr
-		&:before
-			content: ''
-			position: absolute
-			left: -20px
-			right: -20px
-			bottom: 0
-			border-bottom: 1px solid #efefef
 		.popup__el
 			width: 33.33%
 			text-align: center
@@ -441,3 +435,9 @@
 		color: #097bf2
 		&:hover
 			text-decoration: none
+
+.divider
+	display: block
+	margin: 15px 0
+	border-top: none
+	border-bottom: 1px solid #efefef
