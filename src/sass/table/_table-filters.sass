@@ -1,0 +1,48 @@
+.filters
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	z-index: 2
+	&.is-fixed
+		position: fixed
+		top: 0
+		left: 50%
+		width: 100%
+		max-width: 1370px
+		min-width: 1040px
+		margin: 0 auto
+		padding: 0 20px
+		transform: translateX(-50%)
+		.filters__wrap
+			border-left: 1px solid #dce0e7
+			border-right: 1px solid #dce0e7
+	&__wrap
+		position: relative
+		display: table
+		width: 100%
+		padding: 10px 10px 10px 20px
+		background: #FFF
+	&__ttl
+		display: table-cell
+		max-width: 250px
+		text-align: left
+		font-size: 17px
+		color: #282828
+		vertical-align: bottom
+		.tooltip
+			margin-bottom: 0
+	&__in
+		display: table-cell
+		text-align: right
+		font-size: 0
+		vertical-align: bottom
+	.dropdown
+		margin: 0 4px
+		vertical-align: middle
+		&.is-active
+			z-index: 3
+	+r(1300)
+		&.is-fixed
+			left: 0
+			transform: translateX(0)

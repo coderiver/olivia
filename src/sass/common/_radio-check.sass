@@ -1,0 +1,102 @@
+// radiobox
+.radio
+	position: relative
+	display: inline-block
+	&__span
+		position: relative
+		display: inline-block
+		padding-left: 20px
+		color: #097bf2
+		font-size: 14px
+		line-height: 1
+		cursor: pointer
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 0
+			width: 14px
+			height: 14px
+			margin-top: -8px
+			background: #fff
+			border: 1px solid #b2b2b2
+			border-radius: 50%
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 5px
+			width: 4px
+			height: 4px
+			margin-top: -3px
+			border-radius: 50%
+			background: #fff
+	input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+		&:focus
+			box-shadow: none
+		&:checked + span
+			color: #282828
+			+opensans-sb
+			&:before
+				background-color: #6c757a
+				border-color: #6c757a
+
+
+// checkbox
+.check
+	position: relative
+	display: inline-block
+	&__span
+		position: relative
+		display: inline-block
+		min-width: 14px
+		min-height: 14px
+		padding-left: 20px
+		font-size: 13px
+		color: #282828
+		line-height: 1
+		cursor: pointer
+		+nosel
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 0
+			width: 14px
+			height: 14px
+			margin-top: -7px
+			background: #efefef
+			border: 1px solid #6c757a
+		&:after
+			display: none
+			content: $icon-checked
+			position: absolute
+			top: 50%
+			left: 2.5px
+			margin-top: -4px
+			font-size: 8px
+			font-family: 'svgfont'
+		&:empty
+			padding: 0
+	&.is-light-border
+		.check__span
+			&:before
+				border-color: rgba(0, 0, 0, 0.15)
+		input
+			&:checked + .check__span
+				+opensans-sb
+	input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+		&:checked + span
+			color: #282828
+			&:after
+				display: block

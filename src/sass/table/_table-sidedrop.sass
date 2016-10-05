@@ -1,0 +1,48 @@
+.sidedrop
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	width: 50px
+	text-align: center
+	&:after
+		display: none
+		content: ""
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 50px
+		height: 14px
+		background: #f7f8f9
+		border: 1px solid #dce0e7
+		border-right: none
+	&.is-scrollbar
+		border-left: 1px solid #dce0e7
+		&:after
+			display: block
+	&.is-top-aligned
+		.table td
+			padding-top: 6px
+			vertical-align: top
+	.table
+		position: relative
+		margin-bottom: 0
+		background: #FFF
+		tr
+			&.is-selected
+				background: #FFFAEB
+				.dropdown__bl
+					background: #FFFAEB
+		td
+			height: 38px
+			padding: 0
+			vertical-align: middle
+			&:first-child
+				width: auto
+				padding-left: 0
+	.table__head
+		width: auto
+		height: 39px
+		padding-left: 0
+		td
+			border-color: #dce0e7

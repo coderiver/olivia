@@ -441,3 +441,145 @@
 	margin: 15px 0
 	border-top: none
 	border-bottom: 1px solid #efefef
+
+
+// notification in header, under bell
+.sysmessage
+	position: absolute
+	top: 100%
+	right: 0
+	width: 380px
+	margin-top: 12px
+	font-size: 13px
+	background: #fff
+	opacity: 0
+	visibility: hidden
+	border: 1px solid #dce0e7
+	border-radius: 4px
+	box-shadow: 0 2px 9px rgba(0, 0, 0, 0.5)
+	z-index: 11
+	// z-index: -1
+	+tr(0.4s ease)
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+	&:before
+		top: -14px
+		left: 124px
+		+arr(22, 14, #dde2e7, t)
+	&:after
+		top: -12px
+		left: 125px
+		+arr(20, 12, #f7f8f9, t)
+	&.is-active
+		// z-index: 11
+		opacity: 1
+		visibility: visible
+	&__container
+		position: relative
+		max-height: 350px
+		overflow: hidden
+	&__head
+		position: relative
+		padding: 10px 17px
+		background: #f7f8f9
+		border-bottom: 1px solid #dce0e7
+	&__ttl
+		max-width: 320px
+		font-size: 13px
+		color: #f76300
+		+opensans-sb
+	&__el
+		position: relative
+		padding: 10px 17px
+		color: #282828
+		background: #f7f8f9
+		border-top: 1px solid #dce0e7
+		+clr
+		&:first-child
+			border-top: none
+		&.no-bg
+			background: none
+		&.is-all
+			border-top: 1px solid #dce0e7
+			border-bottom: none
+		> .icon:last-child
+			position: absolute
+			top: 14px
+			right: 11px
+			margin: 0
+		.svg-ico,
+		.icon
+			float: left
+			margin: 3px 8px 0 0
+	&__name
+		overflow: hidden
+	&__img
+		width: 100%
+		max-width: 40px
+		max-height: 40px
+		float: left
+		margin-right: 12px
+		border-radius: 50%
+	&__info
+		max-width: 80%
+		overflow: hidden
+		p
+			margin: 10px 0
+	&__name
+		h4
+			margin-bottom: 3px
+			+opensans-sb
+		span
+			display: inline-block
+			vertical-align: middle
+	&__date
+		display: block
+		font-size: 11px
+		color: #6c757a
+	&__list
+		margin: 17px 0
+	.reaction
+		margin-bottom: 0
+	.icon-close
+		position: absolute
+		top: 11px
+		right: 10px
+		cursor: pointer
+		&:hover
+			color: red
+	.icon-check
+		color: #2caf24
+		margin-right: 5px
+		vertical-align: middle
+	.ps-scrollbar-y-rail
+		right: 0
+		width: 4px
+		.ps-scrollbar-y
+			width: 4px
+
+// part of sysmessage, move together
+.reaction
+	margin: 15px 0
+	font-size: 0
+	li
+		position: relative
+		display: inline-block
+		font-size: 13px
+		vertical-align: middle
+		&:after
+			content: "|"
+			display: inline-block
+			margin: 0 5px
+			color: #b1d3d5
+			vertical-align: middle
+		&:last-child
+			&:after
+				display: none
+	&__link
+		display: inline-block
+		color: #097bf2
+		vertical-align: middle
+		&:hover
+			text-decoration: underline

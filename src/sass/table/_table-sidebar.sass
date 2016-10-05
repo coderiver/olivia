@@ -1,0 +1,252 @@
+.sidebar
+	position: absolute
+	top: 0
+	left: 0
+	min-height: 300px
+	bottom: 13px
+	width: 0
+	background: #fff
+	overflow: hidden
+	+tr(width 0.3s)
+	&.is-active
+		width: 240px
+		z-index: 2
+		.sidebar__in
+			opacity: 1
+	&.is-scrollbar
+		bottom: 0
+		padding-bottom: 13px
+		.sidebar__in
+			&:before
+				display: block
+	&.is-fixed
+		position: fixed
+		left: auto
+	&__in
+		width: 240px
+		height: 100%
+		border: 1px solid #dce0e7
+		border-width: 1px 1px 1px 0
+		&:before
+			display: none
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 13px
+			background: #f7f8f9
+			border: 1px solid #dce0e7
+			border-width: 0 1px 1px 0
+		&.no-bottom-border
+			border-bottom: none
+	&__bl
+		overflow: hidden
+		+tr(height 0.3s)
+		&:first-child
+			.sidebar__ttl
+				border-top-width: 0
+		&:last-child
+			.sidebar__ttl
+				&:after
+					display: block
+		&.is-active
+			.sidebar__ttl
+				background: #fff
+				&:before
+					content: "-"
+					font-size: 30px
+					margin-top: -18px
+				&:after
+					display: block
+		&.is-disabled
+			.sidebar__ttl
+				color: #C0C6CF
+				&:before
+					color: #E4E5E6
+	&__content
+		position: relative
+		height: calc(100% - 38px)
+		overflow: hidden
+	&__ttl
+		position: relative
+		height: 39px
+		padding: 0 8px 0 24px
+		font-size: 0
+		background: #f7f8f9
+		color: #282828
+		border-top: 1px solid #dce0e7
+		line-height: 39px
+		cursor: pointer
+		+opensans-sb
+		&:before
+			content: "+"
+			position: absolute
+			top: 50%
+			left: 8px
+			margin-top: -9px
+			width: 16px
+			font-size: 18px
+			color: #979797
+			line-height: 1
+		&:after
+			display: none
+			content: ""
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 1px
+			background: #dce0e7
+		&.is-two-filter
+			span
+				max-width: calc(100% - 160px)
+		span
+			display: inline-block
+			max-width: calc(100% - 103px)
+			font-size: 13px
+			overflow: hidden
+			white-space: nowrap
+			vertical-align: middle
+			text-overflow: ellipsis
+			&:only-child
+				max-width: 100%
+	&__link
+		display: block
+		margin-bottom: 2px
+		font-size: 12px
+		color: #6c757a
+		+opensans-sb
+		&:hover
+			text-decoration: underline
+	&__search
+		position: relative
+		margin: 7px 20px
+		input
+			padding: 4px 12px
+			font-size: 12px
+		.icon-close
+			margin-top: -6px
+	&-task-ico
+		position: absolute
+		top: 50%
+		left: 19px
+		margin-top: -4px
+		width: 6px
+		height: 6px
+		background: #F76300
+		border-radius: 50%
+	.calendar
+		input
+			padding: 8px 9px 8px 36px
+		&.is-active
+			.icon-calendar
+				color: #FFF
+		.icon-calendar
+			left: 9px
+			right: auto
+			color: #282828
+	.ps-scrollbar-y-rail
+		right: 0
+		width: 3px
+		.ps-scrollbar-y
+			width: 3px
+
+// sidebar filters
+.sidebar-filter
+	position: absolute
+	top: 50%
+	right: 10px
+	margin-top: -8px
+	line-height: 1
+	+opensans
+	&__bl
+		float: left
+		margin: 0 2px
+		font-size: 0
+		background: #828C92
+		color: #fff
+		border-radius: 18px
+		&:only-child
+			float: none
+			.sidebar-filter__label
+				max-width: 85px
+		.sidebar-filter__label
+			max-width: 60px
+	&__label
+		display: inline-block
+		padding: 3.5px 4px
+		font-size: 10px
+		text-overflow: ellipsis
+		overflow: hidden
+		vertical-align: middle
+		white-space: nowrap
+	&__cancel
+		display: inline-block
+		padding: 6px 5px 6px 4px
+		background: #6C757A
+		vertical-align: middle
+		border-radius: 0 18px 18px 0
+		.icon-close
+			font-size: 5px
+			color: #FFF
+			vertical-align: middle
+
+.sidebar-dates
+	padding: 18px 22px
+	font-size: 13px
+	color: #282828
+	&__bl
+		margin-bottom: 12px
+	&__ttl
+		margin-bottom: 8px
+
+.sidebar-list
+	margin: 7px 0
+	&.s-pad
+		.sidebar-list__option a
+			padding: 4px 5px
+	&__option
+		position: relative
+		&:hover
+			background: rgba(#828C92, 0.5)
+			a
+				color: #fff
+		&.is-active
+			background: #828C92
+			a
+				color: #fff
+		&.is-disabled
+			color: #BCC6CC
+			a
+				color: #BCC6CC
+			&:hover
+				background: none
+				a
+					cursor: default
+					color: #BCC6CC
+		a
+			position: relative
+			display: block
+			padding: 4px 20px 4px 33px
+			font-size: 13px
+			color: #6c757a
+			word-break: break-word
+			&.is-truncated
+				max-width: 100%
+				overflow: hidden
+				vertical-align: middle
+				text-overflow: ellipsis
+				white-space: nowrap
+		p
+			padding: 4px 20px 4px 33px
+		.icon
+			font-size: 10px
+		.svg-ico
+			width: 10px
+			height: 10px
+			background-size: 10px 10px
+		.icon, .svg-ico
+			position: absolute
+			top: 6.5px
+			left: 15px

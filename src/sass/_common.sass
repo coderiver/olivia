@@ -79,227 +79,10 @@ body
 	.tooltipster-base
 		z-index: 8
 
-.footer
-	margin: 15px 0
-	font-size: 12px
-	color: #C2C3C5
-
-// icons with svg as bg
-// not in font because of incorrect display
-.svg-ico
-	display: inline-block
-	background-repeat: no-repeat
-	background-position: 0 0
-	background-size: contain
-	vertical-align: top
-
-.memo-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/memo-small.svg')
-	&.is-disabled
-		background-image: url('../img/svg-bg/memo-small-disabled.svg')
-
-.customer-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/customer-small.svg')
-	&.is-disabled
-		background-image: url('../img/svg-bg/customer-small-disabled.svg')
-
-.letter-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/letter-small.svg')
-	&.is-disabled
-		background-image: url('../img/svg-bg/letter-small-disabled.svg')
-
-.transaction-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/transaction-small.svg')
-	&.is-disabled
-		background-image: url('../img/svg-bg/transaction-small-disabled.svg')
-
-.library-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/library.svg')
-	&.is-disabled
-		background-image: url('../img/svg-bg/library-disabled.svg')
-
-.add-task-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/add-task.svg')
-
-.add-mail-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/add-mail.svg')
-
-.add-report-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/add-report.svg')
-
-.add-news-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/add-news.svg')
-
-.add-user-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/add-user.svg')
-
-.add-team-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/add-team.svg')
-
-.cash-ico
-	width: 70px
-	height: 70px
-	background-image: url('../img/svg-bg/cash.svg')
-
-.paid-ico
-	width: 110px
-	height: 106px
-	background-image: url('../img/svg-bg/paid.svg')
-
-.funds-ico
-	width: 66px
-	height: 66px
-	background-image: url('../img/svg-bg/funds.svg')
-
-.doc-ico
-	width: 16px
-	height: 16px
-	background-image: url('../img/svg-bg/doc.svg')
-
-.pdf-ico
-	width: 16px
-	height: 16px
-	background-image: url('../img/svg-bg/pdf.svg')
-
-.pic-ico
-	width: 16px
-	height: 16px
-	background-image: url('../img/svg-bg/pic.svg')
-	background-size: 16px 16px
-
-.unknown-ico
-	width: 16px
-	height: 16px
-	background-image: url('../img/svg-bg/unknown.svg')
-
-.message-ico
-	width: 16px
-	height: 16px
-	background-image: url('../img/svg-bg/message.svg')
-
-.build-ico
-	width: 56px
-	height: 56px
-	background-image: url('../img/svg-bg/build.svg')
-
-.user-gray-ico
-	width: 16px
-	height: 16px
-	background-image: url('../img/svg-bg/user-gray.svg')
-
-.deal-team-ico
-	width: 16px
-	height: 16px
-	background-image: url('../img/svg-bg/deal-team.svg')
-
-.entry-ico
-	width: 16px
-	height: 16px
-	background-image: url('../img/svg-bg/entry.svg')
-
-.entity-ico
-	width: 56px
-	height: 56px
-	background-image: url('../img/svg-bg/entity.svg')
-
-// default color for icons
-.icon-customer2, .icon-corp
-	color: #3caca2
-	&.is-disabled
-		color: #CFD5E0
-
-.icon-clip
-	color: #BCC6CC
-
-.icon-warn
-	color: #f76300
-
-.icon-check
-	color: #2caf24
-
-.icon-comment
-	color: #c6ccd8
-
-.icon-close
-	color: #6C757A
-
-.icon-pending
-	color: #738496
-
-.icon-upload
-	color: #097BF2
-
-.icon-bubble
-	color: #96A0A6
-
-.icon-calendar
-	font-size: 16px
-	color: #6c757a
-
-.icon-filter
-	color: #6c757a
-
-.icon-folder,
-.icon-deal-team
-	color: #899BAC
-
-.icon-archive,
-.icon-folder-checked,
-.icon-deals-team-closed,
-.icon-deals-team-archived
-	color: #bcc6cc
-
-.icon-add-library,
-.icon-add-news
-	color: #738BA1
-
-.icon-team
-	color: #96A1A7
-	background: transparent
-
-.icon-firm
-	color: #96A1A7
-
-.icon-letter
-	color: #fff
-	+g(#3c8cea, #327bd1)
-	&.is-disabled
-		background: #CFD5E0
-
-.search-close
-	position: absolute
-	top: 50%
-	right: 10px
-	margin-top: -8px
-	opacity: 0
-	visibility: hidden
-	cursor: pointer
-	+tr(0.2s)
-	&.is-active
-		opacity: 1
-		visibility: visible
+@import common/_icons
+@import common/_radio-check
+@import common/_input-textarea
+@import common/_dropdown
 
 // common blocks
 .l
@@ -322,68 +105,6 @@ body
 a
 	text-decoration: none
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="search"],
-textarea
-	-webkit-appearance: none
-
-input[type="search"]
-	padding-right: 30px
-	&::-webkit-search-cancel-button
-		-webkit-appearance: none
-	&::-ms-clear
-		display: none
-
-
-input
-	width: 100%
-	padding: 8px 12px
-	border-radius: 4px
-	border: 1px solid rgba(0, 0, 0, 0.15)
-	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09)
-	+opensans
-	+tr(0.3s)
-	+placeholder
-		color: #6C757A
-	&:focus
-		box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2
-		border-color: transparent
-
-.textarea-wrap
-	.textarea
-		display: block
-		border-radius: 4px 4px 0 0
-		border-bottom: none
-	.upload
-		display: block
-		margin: 0
-		padding: 12px 16px
-		background: #f7f8f9
-		border: 1px solid #cfd5e0
-		border-radius: 0 0 4px 4px
-		&__in
-			padding-left: 20px
-		.icon-clip
-			font-size: 14px
-			top: 2px
-			color: #6c757a
-
-.textarea
-	width: 100%
-	padding: 8px 12px
-	border-radius: 4px
-	border: 1px solid rgba(0, 0, 0, 0.15)
-	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09)
-	resize: none
-	+opensans
-	+tr(0.3s)
-	+placeholder
-		color: #6C757A
-	&:focus
-		box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2
-		border-color: transparent
 
 .calendar
 	position: relative
@@ -445,6 +166,7 @@ input
 	color: #282828
 	font-size: 13px
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.32)
+	line-height: 1.2
 	+g(#f0f0f0, gainsboro 100%)
 	+tr(0.3s)
 	&:hover
@@ -536,6 +258,7 @@ input
 	.icon-check
 		display: none
 
+
 .status-info
 	display: inline-block
 	margin-right: 5px
@@ -550,7 +273,7 @@ input
 	&.is-approved
 		background: #2caf24
 
-// back to top
+
 .back-to-top
 	margin: 23px 0 23px 20px
 	a
@@ -583,375 +306,20 @@ input
 		&:hover
 			text-decoration: underline
 
-// radiobox
-.radio
-	position: relative
-	display: inline-block
-	&__span
-		position: relative
-		display: inline-block
-		padding-left: 20px
-		color: #097bf2
-		font-size: 14px
-		line-height: 1
-		cursor: pointer
-		&:before
-			content: ""
-			position: absolute
-			top: 50%
-			left: 0
-			width: 14px
-			height: 14px
-			margin-top: -8px
-			background: #fff
-			border: 1px solid #b2b2b2
-			border-radius: 50%
-		&:after
-			content: ""
-			position: absolute
-			top: 50%
-			left: 5px
-			width: 4px
-			height: 4px
-			margin-top: -3px
-			border-radius: 50%
-			background: #fff
-	input
-		position: absolute
-		top: 0
-		left: 0
-		opacity: 0
-		visibility: hidden
-		&:focus
-			box-shadow: none
-		&:checked + span
-			color: #282828
-			+opensans-sb
-			&:before
-				background-color: #6c757a
-				border-color: #6c757a
-// check
-.check
-	position: relative
-	display: inline-block
-	&__span
-		position: relative
-		display: inline-block
-		min-width: 14px
-		min-height: 14px
-		padding-left: 20px
-		font-size: 13px
-		color: #282828
-		line-height: 1
-		cursor: pointer
-		+nosel
-		&:before
-			content: ""
-			position: absolute
-			top: 50%
-			left: 0
-			width: 14px
-			height: 14px
-			margin-top: -7px
-			background: #efefef
-			border: 1px solid #6c757a
-		&:after
-			display: none
-			content: $icon-checked
-			position: absolute
-			top: 50%
-			left: 2.5px
-			margin-top: -4px
-			font-size: 8px
-			font-family: 'svgfont'
-		&:empty
-			padding: 0
-	&.is-light-border
-		.check__span
-			&:before
-				border-color: rgba(0, 0, 0, 0.15)
-		input
-			&:checked + .check__span
-				+opensans-sb
-	input
-		position: absolute
-		top: 0
-		left: 0
-		opacity: 0
-		visibility: hidden
-		&:checked + span
-			color: #282828
-			&:after
-				display: block
 
-
-// dropdown
-.dropdown
-	position: relative
-	display: inline-block
-	line-height: 1
+.search-close
+	position: absolute
+	top: 50%
+	right: 10px
+	margin-top: -8px
+	opacity: 0
+	visibility: hidden
+	cursor: pointer
+	+tr(0.2s)
 	&.is-active
-		z-index: 1
-		.dropdown__bl,
-		.dropdown__item
-			border-bottom-color: transparent
-			border-bottom-left-radius: 0
-			border-bottom-right-radius: 0
-		.dropdown__bl
-			&:before
-				+arr(9, 6, #6c757a, t)
-			&:after
-				display: block
-		.dropdown__item
-			background: #FFF
-			&:before
-				+arr(9, 5, #6c757a, t)
-			&:after
-				display: block
-		.dropdown__list
-			&.is-top-level
-				//display: block
-				opacity: 1
-				visibility: visible
-	&.is-form
-		width: 100%
-		max-width: 340px
-		.dropdown__list
-			width: 100%
-	&.is-small
-		max-width: 200px
-		.dropdown__list
-			width: 100%
-	&.is-menu
-		&.is-active
-			z-index: 4
-		.dropdown__item
-			padding: 0 5px 0 0
-			border: none
-			background: none
-			text-transform: uppercase
-			color: #93988f
-			&:before
-				right: auto
-				left: 100%
-			&:after
-				display: none
-		.dropdown__list
-			left: -15px
-			margin-top: 5px
-			padding: 7px 0
-			border-radius: 4px
-			a
-				padding: 7px 15px
-	&.is-login
-		.dropdown__item
-			text-transform: none
-	&.is-reference
-		.dropdown__list
-			right: auto
-			left: 0
-		.description
-			p, span
-				max-width: 315px
-				padding-left: 28px
-				overflow: hidden
-				white-space: nowrap
-				text-overflow: ellipsis
-				line-height: 1.1
-	&.is-disabled
-		.dropdown__item
-			color: #BCC6CC
-			&:before
-				border-color: #BCC6CC transparent transparent transparent
-	&.is-top
-		.dropdown__list.is-top-level
-			top: auto
-			bottom: 95%
-		.dropdown__more .dropdown__list
-			top: auto
-			bottom: -10px
-		.dropdown__bl
-			border-bottom-color: #e4e4e4
-			border-radius: 0 0 4px 4px
-			border-top-color: transparent
-			z-index: 1
-			&:before
-				margin-top: -4px
-			&:after
-				top: -3px
-				right: 0
-				bottom: auto
-				border-width: 2px
-	&__item
-		position: relative
-		padding: 9px 25px 9px 10px
-		font-size: 13px
-		color: #6c757a
-		border: 1px solid #cfd5e0
-		border-radius: 4px
-		cursor: pointer
-		+nosel
-		+g(#f7f8f9, #ebeced)
-		&:before,
-		&:after
-			content: ""
-			position: absolute
-		&:before
-			top: 50%
-			right: 10px
-			margin-top: -3px
-			+arr(9, 5, #6c757a, b)
-		&:after
-			display: none
-			left: 0
-			right: 0
-			bottom: -1px
-			border-bottom: 3px solid #fff
-			z-index: 1
-		&.is-chosen
-			color: #282828
-	&__bl
-		position: relative
-		display: inline-block
-		width: 30px
-		height: 27px
-		border: 1px solid #e4e4e4
-		border-radius: 4px
-		cursor: pointer
-		background: #FFF
-		&:before,
-		&:after
-			content: ""
-			position: absolute
-		&:before
-			top: 50%
-			left: 50%
-			margin: -2px 0 0 -4px
-			+arr(9, 6, #d8d8d8, b)
-		&:after
-			display: none
-			left: 0
-			right: 0
-			bottom: 0
-			border-bottom: 3px solid #fff
-			z-index: 1
-	&__list
-		//display: none
-		position: absolute
-		top: 100%
-		right: 0
-		min-width: 160px
-		margin-top: -1px
-		padding: 10px 0
-		text-align: left
-		font-size: 13px
-		background: #fff
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25)
-		border-radius: 0 0 4px 4px
-		border: 1px solid #dce0e7
-		white-space: nowrap
-		opacity: 0
-		visibility: hidden
-		&.is-big
-			min-width: 205px
-		li
-			position: relative
-			&:hover
-				a:before
-					+arr(6, 9, #6c757a, r)
-				.dropdown__list
-					opacity: 1
-					visibility: visible
-			&.is-disabled
-				a, a:hover
-					color: #BCC6CC
-					cursor: default
-		a
-			display: block
-			max-width: 220px
-			padding: 5px 14px
-			color: #282828
-			overflow: hidden
-			-ms-text-overflow: ellipsis
-			text-overflow: ellipsis
-			&:hover
-				color: #097bf2
-			&.is-active
-				+opensans-sb
-	&__check
-		padding: 7px 14px
-		&:first-child
-			padding-top: 5px
-		&:last-child
-			padding-bottom: 5px
-	&__more
-		position: relative
-		border-top: 1px solid #e5e5e5
-		&:hover
-			.dropdown__list
-				visibility: visible
-				opacity: 1
-		.dropdown__list
-			position: absolute
-			right: 99%
-			top: 0
-			opacity: 0
-			visibility: hidden
-			white-space: normal
-	&__more-link
-		position: relative
-		display: block
-		padding: 10px 14px
-		&:before
-			content: ""
-			position: absolute
-			top: 50%
-			left: 100%
-			margin: -4px 0 0 -14px
-			+tr(0.3s)
-			+arr(6, 9, #d8d8d8, r)
-	&__search
-		position: relative
-		display: block
-		margin: 5px 14px
-	&__text
-		width: 200px
-		padding: 4px 14px
-		color: #96A0A6
-		white-space: normal
-		line-height: 1.35
-		small
-			display: block
-			margin-top: 6px
-	&__img
-		display: inline-block
-		width: 18px
-		height: 18px
-		margin-right: 10px
-		border-radius: 50%
-		vertical-align: middle
-		+cover
-	&__name
-		display: inline-block
-		vertical-align: middle
-	&__scroll
-		position: relative
-	hr
-		border: 0
-		border-bottom: 1px solid #DCE0E7
-	.ps-scrollbar-y-rail
-		width: 3px !important
-		right: 1px !important
-		.ps-scrollbar-y
-			width: 3px !important
-	+r(1120)
-		&__name span
-			display: none
-	+r(1020)
-		&__img
-			margin-right: 0
-		&__name
-			display: none
+		opacity: 1
+		visibility: visible
+
 
 .highlight
 	display: inline-block
@@ -959,6 +327,7 @@ input
 	background: #FFE8A1
 	vertical-align: bottom
 	+opensans-sb
+
 
 .description
 	position: relative
@@ -993,6 +362,7 @@ input
 			display: block
 		&:only-child
 			padding-left: 0
+
 
 .descriptive-text
 	margin: 10px 0
@@ -1029,3 +399,9 @@ input
 
 .word-break
 	word-break: break-all
+
+.alert
+	&.alert-error
+		margin-bottom: 10px
+		color: #e0411b
+		+opensans-sb

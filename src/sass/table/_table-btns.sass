@@ -1,0 +1,79 @@
+.toggle-btn
+	position: relative
+	display: inline-block
+	width: 33px
+	height: 33px
+	margin: 0 4px
+	border: 1px solid #cfd5e0
+	border-radius: 4px
+	vertical-align: middle
+	cursor: pointer
+	+vertical
+	+tr(width 0.3s)
+	&.is-active
+		background: #828c92
+		border-color: #828c92
+		i
+			color: #fff
+		.icon-sidebar
+			&:after
+				border-color: transparent #FFF transparent transparent
+	&.is-opened
+		.icon-sidebar
+			&:after
+				display: block
+	&.search-opened
+		width: 208px
+		.icon-zoom
+			display: none
+		input
+			display: inline-block
+	.icon-sidebar
+		position: relative
+		&:after
+			content: ""
+			display: none
+			position: absolute
+			top: 50%
+			right: 4px
+			margin-top: -3.5px
+			+arr(4, 7, #6c757a, l)
+	i
+		font-size: 16px
+		color: #6c757a
+		vertical-align: middle
+	input
+		display: none
+		height: 100%
+		box-shadow: none
+		border: none
+
+// scrolling buttons
+.btn-prev,
+.btn-next
+	position: absolute
+	top: 0
+	bottom: 0
+	background: #f7f8f9
+	cursor: pointer
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+
+.btn-prev
+	width: 15px
+	right: 13px
+	border-left: 1px solid #dce0e7
+	border-right: 1px solid #dce0e7
+	&:before
+		margin: -2px 0 0 -3px
+		+arr(4, 5, #cacdd3, l)
+
+.btn-next
+	width: 13px
+	right: 0
+	&:before
+		margin: -2px 0 0 -2px
+		+arr(4, 5, #cacdd3, r)
