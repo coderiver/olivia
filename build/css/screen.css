@@ -1137,25 +1137,25 @@ a { text-decoration: none; }
 .form.is-max-w .form__bl { max-width: 580px; }
 .form__ttl { margin-bottom: 20px; font-size: 18px; color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
 .form__ttl.s-bottom-margin { margin-bottom: 5px; }
-.form__subttl { margin-bottom: 10px; font-size: 14px; color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
+.form__subttl { display: block; margin-bottom: 10px; font-size: 14px; color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
 .form__subttl.no-margin { margin-bottom: 0; }
 .form__bl { position: relative; padding: 0 109px; margin-bottom: 20px; }
 .form__bl:hover .addpost { opacity: 1; visibility: visible; }
 .form__bl.s-bottom-margin { margin-bottom: 10px; }
+.form__bl.is-small-size input { max-width: 162px; }
+.form__bl.is-middle-size input { max-width: 340px; }
+.form__bl.has-error input, .form__bl.has-error .textarea { padding: 8px 12px; background: #FFFCFC; border-color: #FFA4AF; -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.09); box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.09); }
+.form__bl.has-error input::-webkit-input-placeholder, .form__bl.has-error .textarea::-webkit-input-placeholder { color: #6c757a; }
+.form__bl.has-error input::-moz-placeholder, .form__bl.has-error .textarea::-moz-placeholder { color: #6c757a; }
+.form__bl.has-error input:-ms-input-placeholder, .form__bl.has-error .textarea:-ms-input-placeholder { color: #6c757a; }
+.form__bl.has-error input::placeholder, .form__bl.has-error .textarea::placeholder { color: #6c757a; }
+.form__bl.has-error .upload, .form__bl.has-error .form__list, .form__bl.has-error .form__clear { background: #FFFCFC; border: 1px solid #FFA4AF; }
+.form__bl.has-error .upload { padding: 7px 10px; }
+.form__bl.has-error .form__list, .form__bl.has-error .form__clear { padding: 0 10px; }
+.form__bl.has-error .report { padding: 13px 15px; background: #fee; border-color: #ffc0c8; }
+.form__bl.has-error .redactor-box { -webkit-box-shadow: 0 0 0 1px #FFA4AF; box-shadow: 0 0 0 1px #FFA4AF; }
 .form__el { display: block; margin: 7px 0; }
-.form__el.is-small-size { max-width: 162px; }
-.form__el.is-middle-size { max-width: 340px; }
 .form__el.has-error.is-choice { padding: 0 5px; background: #FFFCFC; border: 1px solid #FFA4AF; }
-.form__el.has-error input, .form__el.has-error .textarea { padding: 8px 12px; background: #FFFCFC; border-color: #FFA4AF; -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.09); box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.09); }
-.form__el.has-error input::-webkit-input-placeholder, .form__el.has-error .textarea::-webkit-input-placeholder { color: #6c757a; }
-.form__el.has-error input::-moz-placeholder, .form__el.has-error .textarea::-moz-placeholder { color: #6c757a; }
-.form__el.has-error input:-ms-input-placeholder, .form__el.has-error .textarea:-ms-input-placeholder { color: #6c757a; }
-.form__el.has-error input::placeholder, .form__el.has-error .textarea::placeholder { color: #6c757a; }
-.form__el.has-error .upload, .form__el.has-error .form__clear { background: #FFFCFC; border: 1px solid #FFA4AF; }
-.form__el.has-error .upload { padding: 7px 10px; }
-.form__el.has-error .form__clear { padding: 0 10px; }
-.form__el.has-error .report { padding: 13px 15px; background: #fee; border-color: #ffc0c8; }
-.form__el.has-error .redactor-box { -webkit-box-shadow: 0 0 0 1px #FFA4AF; box-shadow: 0 0 0 1px #FFA4AF; }
 .form__link { color: #097BF3; }
 .form__link:hover { text-decoration: underline; }
 .form__img.is-right { float: right; max-width: 286px; padding-right: 109px; }
@@ -1163,9 +1163,10 @@ a { text-decoration: none; }
 .form__clear { *zoom: 1; }
 .form__clear:after { content: " "; display: table; clear: both; }
 .form__half { float: left; width: 50%; }
+.form__choice { margin: 7px 0; }
 .form__avatar { margin-bottom: 15px; max-width: 113px; }
 .form__avatar img { display: block; width: 100%; }
-.form__choice { display: block; margin: 7px 0; }
+.form__hint { display: block; margin-bottom: 7px; }
 .form hr { max-width: 600px; margin: 15px auto 25px; border: none; border-top: 1px solid #cfd5e0; }
 .form .radio__span { color: #282828; }
 .form .textarea { min-height: 66px; }

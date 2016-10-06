@@ -96,35 +96,29 @@
 							</ul>
 						</div>
 					</div>
-					<div class="form__bl">
+					<div class="form__bl is-middle-size">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label for="">City</label></p>
-						<div class="form__el is-middle-size">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="city" class="form__subttl">City</label>
+						<input type="text" id="city" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label>Street</label></p>
-						<div class="form__el">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="street" class="form__subttl">Street</label>
+						<input type="text" id="street" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label for="">ZIP code</label></p>
-						<div class="form__el is-small-size">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="zip" class="form__subttl">ZIP code</label>
+						<input type="text" id="zip" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -132,115 +126,106 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Industry Group (of Issuer)</p>
-						<div class="form__el">
-
-						</div>
-						<label class="radio">
-							<input type="radio" name="group" value="agriculture">
-							<span class="radio__span">Agriculture</span>
-						</label>
-						<div class="form__el">
-
-						</div>
-						<label class="radio">
-							<input type="radio" name="group" value="banking">
-							<span class="radio__span">Banking and Financial Services</span>
-						</label>
-						<div class="form__el">
-
-						</div>
-						<label class="radio">
-							<input type="radio" name="group" value="business">
-							<span class="radio__span">Business Services</span>
-						</label>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="group" value="energy">
-								<span class="radio__span">Energy</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="group" value="health">
-								<span class="radio__span">Health Care</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="group" value="manufacturing">
-								<span class="radio__span">Manufacturing</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="group" value="estate">
-								<span class="radio__span">Real Estate</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="group" value="retail">
-								<span class="radio__span">Retail</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="group" value="technology">
-								<span class="radio__span">Technology</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="group" value="travel">
-								<span class="radio__span">Travel</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="group" value="other">
-								<span class="radio__span">Other</span>
-							</label>
-						</div>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="agriculture">
+									<span class="radio__span">Agriculture</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="banking">
+									<span class="radio__span">Banking and Financial Services</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="business">
+									<span class="radio__span">Business Services</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="energy">
+									<span class="radio__span">Energy</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="health">
+									<span class="radio__span">Health Care</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="manufacturing">
+									<span class="radio__span">Manufacturing</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="estate">
+									<span class="radio__span">Real Estate</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="retail">
+									<span class="radio__span">Retail</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="technology">
+									<span class="radio__span">Technology</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="travel">
+									<span class="radio__span">Travel</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="other">
+									<span class="radio__span">Other</span>
+								</label>
+							</li>
+						</ul>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label>Website</label></p>
-						<div class="form__el">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="website" class="form__subttl">Website</label>
+						<input type="text" id="website" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label>Phone Number</label></p>
-						<div class="form__el">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="phone" class="form__subttl">Phone Number</label>
+						<input type="tel" id="phone" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label>Contact Person's Name and Title</label></p>
-						<div class="form__el">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="name" class="form__subttl">Contact Person's Name and Title</label>
+						<input type="text" id="name" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label>If Form D has been filed by the issuer, enter CIK (Filer ID Number) (optional)</label></p>
-						<div class="form__el">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="form-d" class="form__subttl">If Form D has been filed by the issuer, enter CIK (Filer ID Number) (optional)</label>
+						<input type="text" id="form-d" placeholder="Type here">
 					</div>
 					<hr>
 					<div class="form__bl">
@@ -249,99 +234,81 @@
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">List other reps involved (optional)</p>
-						<label>If any, including co-marketing agreements with other GCS reps or outside Broker Dealers</label>
-						<div class="form__el">
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
+						<label for="textarea-list" class="form__subttl">List other reps involved (optional)</label>
+						<p class="form__hint">If any, including co-marketing agreements with other GCS reps or outside Broker Dealers</p>
+						<textarea id="textarea-list" class="textarea" placeholder="Type here"></textarea>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Business Summary</p>
-						<label>Brief description of age, size and nature of business model</label>
-						<div class="form__el">
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
+						<label for="business-summary" class="form__subttl">Business Summary</label>
+						<p class="form__hint">Brief description of age, size and nature of business model</p>
+						<textarea id="business-summary" class="textarea" placeholder="Type here"></textarea>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Principals</p>
-						<label>Names and backgrounds of the company's key principals</label>
-						<div class="form__el">
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
+						<label for="principals" class="form__subttl">Principals</label>
+						<p class="form__hint">Names and backgrounds of the company's key principals</p>
+						<textarea id="principals" class="textarea" placeholder="Type here"></textarea>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Counsel for the Company</p>
-						<label>Firm name, contact name, phone, email address, website</label>
-						<div class="form__el">
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
+						<label for="counsel" class="form__subttl">Counsel for the Company</label>
+						<p class="form__hint">Firm name, contact name, phone, email address, website</p>
+						<textarea id="counsel" class="textarea" placeholder="Type here"></textarea>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">History of Engagement</p>
-						<label>How you came to know about the company, how long, and in what depth</label>
-						<div class="form__el">
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
+						<label for="history" class="form__subttl">History of Engagement</label>
+						<p class="form__hint">How you came to know about the company, how long, and in what depth</p>
+						<textarea id="history" class="textarea" placeholder="Type here"></textarea>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Due Diligence Summary</p>
-						<label>Describe what you have done to check out the story including names of people you have met, dates, and results of any site visits, third party verification, etc.</label>
-						<div class="form__el">
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
+						<label for="diligence" class="form__subttl">Due Diligence Summary</label>
+						<p class="form__hint">Describe what you have done to check out the story including names of people you have met, dates, and results of any site visits, third party verification, etc.</p>
+						<textarea id="diligence" class="textarea" placeholder="Type here"></textarea>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Selling Points</p>
-						<label>Key benefits of the opportunity</label>
-						<div class="form__el">
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
+						<label for="benefits" class="form__subttl">Selling Points</label>
+						<p class="form__hint">Key benefits of the opportunity</p>
+						<textarea id="benefits" class="textarea" placeholder="Type here"></textarea>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Risk Factors / Areas of Concern</p>
-						<label>Issues that detract from the overall opportunity -- NOTE anything included here should be formally communicated to all parties as a risk disclosure</label>
-						<div class="form__el">
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
+						<label for="risks" class="form__subttl">Risk Factors / Areas of Concern</label>
+						<p class="form__hint">Issues that detract from the overall opportunity -- NOTE anything included here should be formally communicated to all parties as a risk disclosure</p>
+						<textarea id="risks" class="textarea" placeholder="Type here"></textarea>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Economics of Engagement</p>
-						<label>How much capital is being raised, in what type of security, what is the fee on this deal</label>
-						<div class="form__el">
-							<textarea class="textarea" placeholder="Type here"></textarea>
-						</div>
+						<label for="economics" class="form__subttl">Economics of Engagement</label>
+						<p class="form__hint">How much capital is being raised, in what type of security, what is the fee on this deal</p>
+						<textarea id="economics" class="textarea" placeholder="Type here"></textarea>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -349,95 +316,81 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Are you, or do you plan to be, an investor in this company?</p>
-						<p>If yes, please complete a "Private Securities Transaction" form after you have completed this form.</p>
-						<div class="form__el">
-
-						</div>
-						<label class="radio">
-							<input type="radio" name="plan" value="yes">
-							<span class="radio__span">Yes</span>
-						</label>
-						<div class="form__el">
-
-						</div>
-						<label class="radio">
-							<input type="radio" name="plan" value="no">
-							<span class="radio__span">No</span>
-						</label>
+						<p class="form__hint">If yes, please complete a "Private Securities Transaction" form after you have completed this form.</p>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="plan" value="yes">
+									<span class="radio__span">Yes</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="plan" value="no">
+									<span class="radio__span">No</span>
+								</label>
+							</li>
+						</ul>
 					</div>
 					<hr>
-					<div class="form__bl">
+					<div class="form__bl is-middle-size">
 						<p class="form__ttl">FINRA Private Placement Form Questions</p>
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label>Maximum Amount to be raised in dollars</label></p>
-						<div class="form__el is-middle-size">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="max-amount" class="form__subttl">Maximum Amount to be raised in dollars</label>
+						<input id="max-amount" type="text" placeholder="Type here">
 					</div>
-					<div class="form__bl">
+					<div class="form__bl is-middle-size">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label>Commencement Date</label></p>
-						<div class="form__el is-middle-size">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="date" class="form__subttl">Commencement Date</label>
+						<input id="date" type="text" placeholder="Type here">
 					</div>
-					<div class="form__bl">
+					<div class="form__bl is-middle-size">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Conclusion Date</p>
-						<label>Enter date, unknown, or continuous</label>
-						<div class="form__el is-middle-size">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="counclusion-date" class="form__subttl">Conclusion Date</label>
+						<p class="form__hint">Enter date, unknown, or continuous</p>
+						<input id="counclusion-date" type="text" placeholder="Type here">
 					</div>
-					<div class="form__bl">
+					<div class="form__bl is-middle-size">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Maximum Sales Commission (% rate)</p>
-						<div class="form__el is-middle-size">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="rate" class="form__subttl">Maximum Sales Commission (% rate)</label>
+						<input id="rate" type="text" placeholder="Type here">
 					</div>
-					<div class="form__bl">
+					<div class="form__bl is-middle-size">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label>Aggregate amount of any other compensation to registered persons disclosed in the offering document:</label></p>
-						<div class="form__el is-middle-size">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="aggregate" class="form__subttl">Aggregate amount of any other compensation to registered persons disclosed in the offering document:</label>
+						<input id="aggregate" type="text" placeholder="Type here">
 					</div>
-					<div class="form__bl">
+					<div class="form__bl is-middle-size">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label for="">Dollar amount of compensation disclosed</label></p>
-						<div class="form__el is-middle-size">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="dollar" class="form__subttl">Dollar amount of compensation disclosed</label>
+						<input id="dollar" type="text" placeholder="Type here">
 					</div>
-					<div class="form__bl">
+					<div class="form__bl is-middle-size">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Stated or Target Rate of Return (%) as disclosed in the offering document</p>
-						<label>Enter date, unknown, or continuous</label>
-						<div class="form__el is-middle-size">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label class="form__subttl" for="target-rate">Stated or Target Rate of Return (%) as disclosed in the offering document</label>
+						<p class="form__hint">Enter date, unknown, or continuous</p>
+						<input id="target-rate" type="text" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -445,18 +398,20 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Are you using a private placement memorandum in connection with any sales in the offering? (optional)</p>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="private" value="yes">
-								<span class="radio__span">Yes</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="private" value="no">
-								<span class="radio__span">No</span>
-							</label>
-						</div>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="private" value="yes">
+									<span class="radio__span">Yes</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="private" value="no">
+									<span class="radio__span">No</span>
+								</label>
+							</li>
+						</ul>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -464,24 +419,26 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Is the offering a “contingency offering”?</p>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="offer" value="yes">
-								<span class="radio__span">Yes</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="offer" value="no">
-								<span class="radio__span">No</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="offer" value="unknown">
-								<span class="radio__span">Unknown</span>
-							</label>
-						</div>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="offer" value="yes">
+									<span class="radio__span">Yes</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="offer" value="no">
+									<span class="radio__span">No</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="offer" value="unknown">
+									<span class="radio__span">Unknown</span>
+								</label>
+							</li>
+						</ul>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -489,18 +446,20 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Are independently audited financial statements available for the issuer’s most recently completed fiscal year?</p>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="available" value="yes">
-								<span class="radio__span">Yes</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="available" value="no">
-								<span class="radio__span">No</span>
-							</label>
-						</div>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="available" value="yes">
+									<span class="radio__span">Yes</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="available" value="no">
+									<span class="radio__span">No</span>
+								</label>
+							</li>
+						</ul>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -508,24 +467,26 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Is the issuer able to use offering proceeds to make or repay loans to, or purchase assets from, any officer, director or executive management of the issuer, sponsor, general partner, manager, advisor or any of the issuer’s affiliates?</p>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="usage" value="yes">
-								<span class="radio__span">Yes</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="usage" value="no">
-								<span class="radio__span">No</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="usage" value="unknown">
-								<span class="radio__span">Unknown</span>
-							</label>
-						</div>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="usage" value="yes">
+									<span class="radio__span">Yes</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="usage" value="no">
+									<span class="radio__span">No</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="usage" value="unknown">
+									<span class="radio__span">Unknown</span>
+								</label>
+							</li>
+						</ul>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
