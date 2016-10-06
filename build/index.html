@@ -207,6 +207,12 @@
 					<li><a href="staff-add-news.html">Add News</a></li>
 					<li><a href="staff-archive.html">Archive</a></li>
 				</ol>
+				<h2>Popups</h2>
+				<ol>
+					<li>
+						<a href="#" data-popup="popup-form-info">Form info</a>
+					</li>
+				</ol>
 			</div>
 		</div>
 	</div>
@@ -226,5 +232,87 @@
 	<!-- end footer -->
 </div>
 <!-- END out-->
+<div class="overlay">
+	<div class="popup js-popup" id="popup-form-info">
+		<div class="popup__head">
+			<p>Info</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<!-- begin quick info  -->
+			<div class="activity is-full-w">
+				<div class="activity__table">
+					<div class="activity__row">
+						<div class="activity__cell sm-width">Deal</div>
+						<div class="activity__cell">
+							<a href="#" class="activity__name">Space X</a>
+						</div>
+					</div>
+					<div class="activity__row">
+						<div class="activity__cell sm-width">Team</div>
+						<div class="activity__cell">
+							<a href="#" class="activity__name">A-Team</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="activity is-full-w">
+				<div class="activity__table">
+					<div class="activity__row">
+						<div class="activity__cell sm-width">Created by</div>
+						<div class="activity__cell">
+							<a href="#" class="activity__name">Brian Dunn</a>
+						</div>
+					</div>
+					<div class="activity__row">
+						<div class="activity__cell sm-width">Assigned to</div>
+						<div class="activity__cell">
+							<a href="#" class="activity__name">Amanda Brown</a><a href="#" class="activity__more">Re-assign</a>
+						</div>
+					</div>
+					<div class="activity__row">
+						<div class="activity__cell sm-width">Pre-approval</div>
+						<div class="activity__cell">
+							<a href="#" class="activity__name">Olivia Wild</a><a href="#" class="activity__more">Edit</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="activity is-full-w">
+				<div class="activity__table">
+					<div class="activity__row">
+						<div class="activity__cell sm-width">Created on</div>
+						<div class="activity__cell">Aug 08, 2015 12:00 am</div>
+					</div>
+					<div class="activity__row">
+						<div class="activity__cell sm-width">Updated</div>
+						<div class="activity__cell">Aug 10, 2015 1:12 pm</div>
+					</div>
+				</div>
+			</div>
+			<!-- end quick info -->
+			<div class="history">
+				<p class="history__ttl">History</p>
+				<table class="history__table">
+					<tr>
+						<td><p class="history__in">Brian Dunn</p></td>
+						<td><p class="history__in">Submitted</p></td>
+						<td class="history__align-right"><p class="history__in">Aug 10, 2015</p></td>
+					</tr>
+					<tr>
+						<td><p class="history__in">Amanda Brown</p></td>
+						<td><p class="history__in">Rejected</p></td>
+						<td class="history__align-right"><p class="history__in">Aug 09, 2015</p></td>
+					</tr>
+					<tr>
+						<td><p class="history__in">Brian Dunn</p></td>
+						<td><p class="history__in">Submitted</p></td>
+						<td class="history__align-right"><p class="history__in">Aug 08, 2015</p></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>

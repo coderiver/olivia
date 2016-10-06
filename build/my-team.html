@@ -215,7 +215,7 @@
 						<div class="filters__wrap js-fixed">
 							<div class="filters__ttl">
 								<div class="tooltip">
-									<p>Affiliates</p>
+									<p>My Team</p>
 									<div class="tooltip__ico js-tooltip" title="Active Deals Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span>
 									</div>
 								</div>
@@ -682,36 +682,29 @@
 		</div>
 		<div class="popup__body">
 			<form class="form is-full-w">
-				<div class="form__bl">
-					<p class="form__subttl"><label for="">First Name</label></p>
-					<div class="form__el has-error">
-						<input type="text" placeholder="Type first name">
-					</div>
+				<div class="form__bl has-error">
+					<label class="form__subttl" for="firstname">First Name</label>
+					<input id="firstname" type="text" placeholder="Type first name">
+					<ul class="errorlist">
+						<li>nononono! no can do</li>
+					</ul>
 				</div>
-				<div class="form__bl">
-					<p class="form__subttl"><label for="">Last Name</label></p>
-					<div class="form__el has-error">
-						<input type="text" placeholder="Type last name">
-					</div>
+				<div class="form__bl has-error">
+					<label class="form__subttl" for="lastname">Last Name</label>
+					<input id="lastname" type="text" placeholder="Type last name">
 				</div>
-				<div class="form__bl">
-					<p class="form__subttl"><label for="">E-mail</label></p>
-					<div class="form__el has-error">
-						<input type="text" placeholder="Type e-mail address">
-					</div>
+				<div class="form__bl has-error">
+					<label class="form__subttl" for="email">E-mail</label>
+					<input id="email" type="email" placeholder="Type e-mail address">
 				</div>
-				<div class="form__bl">
-					<p class="form__subttl"><label for="">Password</label></p>
-					<div class="form__el has-error">
-						<input type="text" placeholder="Type password">
-					</div>
+				<div class="form__bl has-error">
+					<label for="pass" class="form__subttl">Password</label>
+					<input id="pass" type="password" placeholder="Type password">
 				</div>
-				<div class="form__bl">
-					<p class="form__subttl no-margin">Password confirmation</p>
-					<label>Enter the dame password as above for verification</label>
-					<div class="form__el has-error">
-						<input type="text" placeholder="Re-type same password">
-					</div>
+				<div class="form__bl has-error">
+					<label for="pass-again" class="form__subttl no-margin">Password confirmation</label>
+					<p class="form__hint">Enter the dame password as above for verification</p>
+					<input id="pass-again" type="text" placeholder="Re-type same password">
 				</div>
 				<div class="form__bl">
 					<p class="form__subttl">Permissions</p>
@@ -724,40 +717,42 @@
 						</ul>
 					</div>
 				</div>
-				<div class="form__bl">
+				<div class="form__bl has-error">
 					<p class="form__subttl">Modules</p>
-					<div class="form__clear">
-						<div class="form__half">
-							<div class="form__el is-choice has-error">
-								<div class="form__choice">
-									<label class="check is-light-border">
-										<input type="checkbox">
-										<span class="check__span">Memberhip</span>
-									</label>
-								</div>
-								<div class="form__choice">
-									<label class="check is-light-border">
-										<input type="checkbox">
-										<span class="check__span">Compliance</span>
-									</label>
-								</div>
-								<div class="form__choice">
-									<label class="check is-light-border">
-										<input type="checkbox">
-										<span class="check__span">Deal</span>
-									</label>
-								</div>
-								<div class="form__choice">
-									<label class="check is-light-border">
-										<input type="checkbox">
-										<span class="check__span">Transactions</span>
-									</label>
-								</div>
-							</div>
-						</div>
-					</div>
+					<ul class="form__list">
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Memberhip</span>
+							</label>
+						</li>
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Compliance</span>
+							</label>
+						</li>
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Deal</span>
+							</label>
+						</li>
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Deal</span>
+							</label>
+						</li>
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Transactions</span>
+							</label>
+						</li>
+					</ul>
 				</div>
-				<div class="form__el has-error">
+				<div class="form__bl has-error">
 					<div class="upload">
 						<div class="upload__in">
 							<input type="file" name="id">
@@ -766,10 +761,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="form__el has-error">
-					<div class="report">
-						<p>Affiliate cannot be saved cause not all fields are filled in. See those are marked above with pink outline and fill them in.</p>
-					</div>
+				<div class="report is-full-w">
+					<p>Affiliate cannot be saved cause not all fields are filled in. See those are marked above with pink outline and fill them in.</p>
 				</div>
 				<div class="popup__btn xs-margin">
 					<button class="btn btn-ok" type="submit">Add</button>
