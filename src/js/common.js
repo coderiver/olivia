@@ -3,6 +3,8 @@ $(document).ready(function() {
 		searchInput   = $('.js-search input'),
 		searchResults = $('.js-search-results');
 
+	//= include comments.js
+
 	// animate back to top
 	$('.js-top').click(function(evt) {
 		evt.preventDefault();
@@ -207,6 +209,7 @@ $(document).ready(function() {
 		}
 		winStart = currTop;
 	});
+
 
 
 });

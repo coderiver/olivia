@@ -41,8 +41,32 @@
 			input
 				max-width: 162px
 		&.is-middle-size
+			font-size: 0
 			input
 				max-width: 340px
+		&.is-three-fields
+			font-size: 0
+			&:hover
+				.icon-close
+					opacity: 1
+					visibility: visible
+			&.is-active
+				display: block
+			input
+				max-width: 120px
+				&.input-sm
+					max-width: 60px
+					margin-left: 20px
+			span
+				margin: 0 5px
+				font-size: 12px
+			.icon-close
+				right: 45px
+				margin-top: -5px
+				font-size: 10px
+				color: red
+				opacity: 0
+				visibility: hidden
 		&.has-error
 			input,
 			.textarea
@@ -68,6 +92,8 @@
 				border-color: #ffc0c8
 			.redactor-box
 				box-shadow: 0 0 0 1px #FFA4AF
+	&__mod
+		position: relative
 	&__link
 		color: #097BF3
 		&:hover
@@ -218,7 +244,7 @@
 	.btn-group
 		display: none
 		float: right
-		margin-top: 5px
+		margin-top: 10px
 		&.is-visible
 			display: block
 

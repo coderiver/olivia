@@ -79,29 +79,13 @@ body
 	.tooltipster-base
 		z-index: 8
 
+@import common/_layout
 @import common/_icons
 @import common/_radio-check
 @import common/_input-textarea
 @import common/_dropdown
 
 // common blocks
-.l
-	max-width: 1370px
-	padding: 0 20px
-	margin: 0 auto
-
-.l-head
-	@extend .l
-	max-width: 1064px
-
-.l-form
-	@extend .l
-	max-width: 860px
-
-.l-center
-	@extend .l
-	max-width: 620px
-
 a
 	text-decoration: none
 
@@ -157,6 +141,8 @@ a
 			+opensans-sb
 	&.is-s-margin
 		margin-top: 20px
+	&.is-right
+		text-align: right
 	.btn
 		margin: 0 5px
 
@@ -309,21 +295,6 @@ a
 		&:hover
 			text-decoration: underline
 
-
-.search-close
-	position: absolute
-	top: 50%
-	right: 10px
-	margin-top: -8px
-	opacity: 0
-	visibility: hidden
-	cursor: pointer
-	+tr(0.2s)
-	&.is-active
-		opacity: 1
-		visibility: visible
-
-
 .highlight
 	display: inline-block
 	padding: 0 1px
@@ -408,26 +379,3 @@ a
 		margin-bottom: 10px
 		color: #e0411b
 		+opensans-sb
-
-
-.history
-	&__table
-		color: #6c757a
-		table-layout: fixed
-		tr:first-child
-			td
-				border-top: 1px solid #EFEFEF
-		td
-			padding: 10px 0
-			border-bottom: 1px solid #EFEFEF
-	&__ttl
-		margin-bottom: 22px
-		font-size: 16px
-		color: #282828
-	&__in
-		max-width: 100%
-		overflow: hidden
-		text-overflow: ellipsis
-		white-space: nowrap
-	&__align-right
-		text-align: right

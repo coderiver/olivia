@@ -290,8 +290,8 @@
 	.dropdown__list
 		display: none
 		width: 100%
-		margin-top: -4px
 		white-space: normal
+		border-top-color: transparent
 		a
 			max-width: initial
 	.textarea
@@ -591,3 +591,28 @@
 		vertical-align: middle
 		&:hover
 			text-decoration: underline
+
+
+// popup-form-info
+.history
+	&__table
+		color: #6c757a
+		table-layout: fixed
+		tr:first-child
+			td
+				border-top: 1px solid #EFEFEF
+		td
+			padding: 10px 0
+			border-bottom: 1px solid #EFEFEF
+	&__ttl
+		margin-bottom: 22px
+		font-size: 16px
+		color: #282828
+	&__in
+		max-width: 100%
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+	&__align-right
+		text-align: right
+

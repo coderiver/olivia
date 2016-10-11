@@ -212,6 +212,9 @@
 					<li>
 						<a href="#" data-popup="popup-form-info">Form info</a>
 					</li>
+					<li>
+						<a href="#" data-popup="popup-edit-commissions">Edit comissions</a>
+					</li>
 				</ol>
 			</div>
 		</div>
@@ -311,6 +314,79 @@
 					</tr>
 				</table>
 			</div>
+		</div>
+	</div>
+	<div class="popup js-popup" id="popup-edit-commissions">
+		<div class="popup__head">
+			<p>Edit commission</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<form class="form is-full-w">
+				<div class="form__bl">
+					<p class="form__subttl">Rep</p>
+					<div class="dropdown is-form js-dropdown">
+						<p class="dropdown__item is-chosen">Brian Dunn</p>
+						<ul class="dropdown__list is-top-level js-inner">
+							<li><a href="#">Lorem ipsume</a></li>
+							<li><a href="#">Dolor sit</a></li>
+							<li><a href="#">Consectetur adipisicing</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Brian Dunn</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="form__bl">
+					<p class="form__subttl">Period type</p>
+					<div class="dropdown is-form js-dropdown">
+						<p class="dropdown__item">Select period</p>
+						<ul class="dropdown__list is-top-level js-inner">
+							<li><a href="#">Lorem ipsum</a></li>
+							<li><a href="#">Dolor sit</a></li>
+							<li><a href="#">Consectetur adipisicing</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Brian Dunn</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="form__bl is-middle-size">
+					<label for="period" class="form__subttl">Period</label>
+					<input type="text" id="period" placeholder="1,2,3 or more">
+				</div>
+				<div class="form__bl is-middle-size">
+					<label for="note" class="form__subttl">Note (optional)</label>
+					<input type="text" id="note" placeholder="Any additional info that might help">
+				</div>
+				<div class="popup-commision">
+					<div class="form__bl is-three-fields js-commission-fields">
+						<label for="tire" class="form__subttl">Commission tire 1</label>
+						<div class="form__mod">
+							<input type="text" id="tire" placeholder="Income from">
+							<span>-</span>
+							<input type="text" placeholder="To">
+							<input class="input-sm" type="text" placeholder="Perc.">
+							<span>%</span>
+							<i class="icon icon-close js-commission-close"></i>
+						</div>
+					</div>
+					<div class="form__bl is-three-fields js-commission-fields">
+						<label for="tire2" class="form__subttl">Commission tire 2</label>
+						<div class="form__mod">
+							<input type="text" id="tire2" placeholder="Income from">
+							<span>-</span>
+							<input type="text" placeholder="To">
+							<input class="input-sm" type="text" placeholder="Perc.">
+							<span>%</span>
+							<i class="icon icon-close js-commission-close"></i>
+						</div>
+					</div>
+					<a href="#" class="form__link js-add-commission">Add commission</a>
+				</div>
+				<div class="btn-group is-right">
+					<button class="btn btn-ok" type="submit">Save</button>
+					<button class="btn btn-no btn-txt-gray" type="button">Cancel</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>

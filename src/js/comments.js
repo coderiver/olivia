@@ -1,6 +1,5 @@
 // comments
-$(document).ready(function() {
-
+(function() {
 	function commentBl(element) {
 		var input = $(element).find('input'),
 			commentBtn = $(element).find('.btn[type="submit"]'),
@@ -53,5 +52,5 @@ $(document).ready(function() {
 		evt.preventDefault();
 		$(this).closest('.js-newpost').remove();
 	});
+}());
 
-});
