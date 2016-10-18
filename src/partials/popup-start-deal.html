@@ -1,26 +1,22 @@
-<div class="popup is-top js-popup" id="create">
+<div class="popup is-top js-popup" id="popup-start-deal">
 	<div class="popup__head">
 		<p>Start a New Deal Folder</p>
 		<i class="icon icon-close js-close"></i>
 	</div>
 	<div class="popup__body">
 		<form class="form is-full-w">
-			<p class="form__subttl"><label for="">Deal Name</label></p>
 			<div class="form__bl">
-				<div class="form__el">
-					<input type="text" placeholder="Please keep this short and informal">
-				</div>
+				<label for="deal-name" class="form__subttl">Deal Name</label>
+				<input id="deal-name" type="text" placeholder="Please keep this short and informal">
 			</div>
 			<div class="form__bl">
-				<div class="form__el">
-					<label class="check is-light-border is-inline">
-						<input type="checkbox">
-						<span class="check__span">This is a team deal</span>
-					</label>
-					<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span>
-				</div>
+				<label class="check is-light-border is-inline">
+					<input type="checkbox">
+					<span class="check__span">This is a team deal</span>
+				</label>
+				<div class="tooltip__ico js-tooltip" title="Explanation on mouse over. How this works and what this module mean. Lets keep it informative."><span>?</span>
 			</div>
-			<div class="popup__btn">
+			<div class="btn-group">
 				<button class="btn btn-ok" type="submit">Create deal</button>
 				<button class="btn btn-no" type="button">Cancel</button>
 			</div>

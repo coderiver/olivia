@@ -179,7 +179,7 @@
 								<p class="actions__txt">Keep this status for deal when you are working on it</p>
 							</div>
 						</div>
-						<div class="actions__bl js-action" data-popup="close-deal">
+						<div class="actions__bl js-action" data-popup="popup-close-deal">
 							<div class="actions__in">
 								<div class="actions__ico">
 									<i class="icon icon-folder-checked"></i>
@@ -252,18 +252,18 @@
 </div>
 <!-- END out-->
 <div class="overlay">
-	<div class="popup js-popup" id="close-deal">
+	<div class="popup js-popup" id="popup-close-deal">
 		<div class="popup__head">
 			<p>The reason of closing deal</p>
 			<i class="icon icon-close js-close"></i>
 		</div>
 		<div class="popup__body">
-			<form class="popup__form">
-				<label for="id_closure_reason" class="popup__form-ttl">Closure reason</label>
-				<div class="popup__label">
+			<form class="form is-full-w">
+				<div class="form__bl">
+					<label for="id_closure_reason" class="form__subttl">Closure reason</label>
 	          	 	<textarea placeholder="Enter the reason of closing deal" name="closure_reason" id="id_closure_reason" class="textarea"></textarea>
 				</div>
-				<div class="popup__btn xs-margin">
+				<div class="btn-group">
 					<button class="btn btn-ok" type="submit">Close deal</button>
 					<button class="btn btn-no" type="button">Cancel</button>
 				</div>

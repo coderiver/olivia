@@ -279,7 +279,7 @@
 				</div>
 				<!-- end task -->
 				<div class="back-to-top"><a href="#" class="js-top"><i class="icon icon-arr-top"></i><span>Back to top</span></a></div>
-				<a style="font-size: 15px; margin-left: 20px; margin-bottom: 20px; display: inline-block" href="#" data-popup="upload-photo">загрузить фотографию</a>
+				<a style="font-size: 15px; margin-left: 20px; margin-bottom: 20px; display: inline-block" href="#" data-popup="popup-upload-photo">загрузить фотографию</a>
 			</div>
 		</div>
 	</div>
@@ -300,20 +300,19 @@
 </div>
 <!-- END out-->
 <div class="overlay">
-	<div class="popup is-top js-popup" id="upload-photo">
+	<div class="popup is-top js-popup" id="popup-upload-photo">
 		<div class="popup__head">
 			<p>Give a proper file name</p>
 			<i class="icon icon-close js-close"></i>
 		</div>
 		<div class="popup__body">
-			<form class="popup__form">
-				<p class="popup__form-ttl">File Name</p>
-				<p class="popup__form-subttl">Keep names understandable for you and staff</p>
-				<div class="popup__label">
-					<label></label>
-					<input type="text" value="my_photo">
+			<form class="form is-full-w">
+				<div class="form__bl">
+					<label for="file-name" class="form__subttl no-margin">File Name</label>
+					<p class="form__hint">Keep names understandable for you and staff</p>
+					<input id="file-name" type="text" value="my_photo">
 				</div>
-				<div class="popup__btn s-margin">
+				<div class="btn-group">
 					<button class="btn btn-ok" type="submit">Upload</button>
 					<button class="btn btn-no" type="button">Cancel</button>
 				</div>

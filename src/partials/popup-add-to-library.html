@@ -6,8 +6,8 @@
 	<div class="popup__body">
 		<form class="form is-full-w">
 			<div class="form__bl">
-				<p class="form__subttl"><label for="">Document</label></p>
-				<div class="upload">
+				<p class="form__subttl">Document</p>
+				<div class="upload no-margin">
 					<div class="btn btn-ok">
 						<input type="file">
 						<span>Browse</span>
@@ -15,16 +15,12 @@
 				</div>
 			</div>
 			<div class="form__bl">
-				<p class="form__subttl"><label for="name">Name</label></p>
-				<div class="form__el">
-					<input id="name" name="name" type="text">
-				</div>
+				<label for="name" class="form__subttl">Name</label>
+				<input id="name" type="text">
 			</div>
 			<div class="form__bl">
-				<p class="form__subttl"><label for="">Description (optional)</label></p>
-				<div class="form__el">
-					<input type="text">
-				</div>
+				<label for="description" class="form__subttl">Description (optional)</label>
+				<input type="text" id="description">
 			</div>
 			<div class="form__bl">
 				<p class="form__subttl">Status</p>
@@ -60,52 +56,72 @@
 				</div>
 			</div>
 			<div class="form__bl">
-				<p class="form__subttl">Roles</p>
+				<p class="form__subttl no-margin">Roles</p>
 				<div class="form__clear">
-					<div class="form__half">
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Admin</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Affiliate</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Affiliate draft only</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Affiliate full access</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Auditor</span>
-						</label>
-					</div>
-					<div class="form__half">
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Investor</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Prospect</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Representative</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Super user</span>
-						</label>
-						<label class="check is-light-border">
-							<input type="checkbox">
-							<span class="check__span">Supervisor</span>
-						</label>
-					</div>
+					<ul class="form__half">
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Admin</span>
+							</label>
+						</li>
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Affiliate</span>
+							</label>
+						</li>
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Affiliate draft only</span>
+							</label>
+						</li>
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Affiliate full access</span>
+							</label>
+						</li>
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Auditor</span>
+							</label>
+						</li>
+					</ul>
+					<ul class="form__half">
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Investor</span>
+							</label>
+						</li>
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Prospect</span>
+							</label>
+						</li>
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Representative</span>
+							</label>
+						</li>
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Super user</span>
+							</label>
+						</li>
+						<li class="form__choice">
+							<label class="check is-light-border">
+								<input type="checkbox">
+								<span class="check__span">Supervisor</span>
+							</label>
+						</li>
+					</ul>
 				</div>
 			</div>
 			<div class="popup__btn xs-margin">

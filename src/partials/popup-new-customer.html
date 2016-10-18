@@ -5,7 +5,7 @@
 	</div>
 	<div class="popup__scroll js-popup-scroll">
 		<div class="popup__body">
-			<p class="popup__form-ttl">Create new customer</p>
+			<p class="popup__headline">Create new customer</p>
 			<div class="popup__choose">
 				<a href="#" class="popup__el">
 					<i class="svg-ico customer-ico"></i>
@@ -40,14 +40,23 @@
 						</div>
 					</div>
 				</a>
+				<a href="#" class="popup__el">
+					<i class="svg-ico build-ico"></i>
+					<div>
+						<div class="popup__definition">
+							RoFR
+							<div class="tooltip">
+								<p class="tooltip__ico js-tooltip" data-tooltip-position="bottom-left" title="Use this form when investor will be a natural person."><span>?</span></p>
+							</div>
+						</div>
+					</div>
+				</a>
 			</div>
 			<hr class="divider">
-			<p class="popup__form-ttl">Import existing customers from other deals</p>
+			<p class="popup__headline">Import existing customers from other deals</p>
 			<small class="popup__gray">Exisiting customers will be re-submitted to this deal</small>
 			<div class="popup__bl">
-				<div class="popup__label">
-					<input type="text" placeholder="Search by customer or deal name" class="js-popup-search">
-				</div>
+				<input type="text" placeholder="Search by customer or deal name" class="js-popup-search">
 			</div>
 			<p class="popup__no-result">Search returned no result</p>
 		</div>
@@ -171,7 +180,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="popup__btn is-hidden is-absolute js-popup-btn">
+	<div class="btn-group is-hidden is-absolute js-popup-btn">
 		<button class="btn btn-ok s-pad" type="submit">Import selected</button>
 		<button class="btn btn-no" type="button">Cancel</button>
 	</div>

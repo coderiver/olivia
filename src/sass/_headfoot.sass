@@ -16,7 +16,6 @@
 			padding: 0
 			box-shadow: 0px 1px 0px 0px #dee1e7
 			&:first-child
-				background: #FFF
 	&.is-staff
 		.menu
 			margin-left: 5px
@@ -48,15 +47,21 @@
 		vertical-align: middle
 		span
 			vertical-align: middle
-		small
-			font-size: 13px
-			color: #738496
 		.icon
 			margin-right: 5px
 			vertical-align: middle
-		.icon-check
+		.icon-check,
+		.icon-warn
 			margin-left: 5px
 			font-size: 12px
+	&__small
+		margin-top: 3px
+		font-size: 13px
+		color: #738496
+		a
+			color: #738496
+			&:hover
+				text-decoration: underline
 	&__list
 		position: relative
 		text-align: center

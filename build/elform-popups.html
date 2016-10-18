@@ -24,7 +24,7 @@
 					<a href="#" class="header__close"><i class="icon icon-close"></i></a>
 					<div class="header__bl">
 						<p><i class="svg-ico letter-ico"></i><span>Engagement Letter Steve Buscemi</span></p>
-						<small>Space X</small>
+						<div class="header__small"><a href="#">Space X</a></div>
 					</div>
 				</div>
 				<div class="btn-group">
@@ -162,15 +162,15 @@
 					</div>
 				</form>
 				<!-- end form -->
-				<a style="font-size: 15px; margin-left: 20px; margin-bottom: 20px; display: inline-block" href="#" data-popup="no-submit">попап с ошибкой</a>
-				<a style="font-size: 15px; margin-left: 20px; margin-bottom: 20px; display: inline-block" href="#" data-popup="upload-el">загрузить engagement letter</a>
+				<a style="font-size: 15px; margin-left: 20px; margin-bottom: 20px; display: inline-block" href="#" data-popup="popup-no-submit">попап с ошибкой</a>
+				<a style="font-size: 15px; margin-left: 20px; margin-bottom: 20px; display: inline-block" href="#" data-popup="popup-upload-el">загрузить engagement letter</a>
 			</div>
 		</div>
 	</div>
 </div>
 <!-- END out-->
 <div class="overlay">
-	<div class="popup js-popup" id="no-submit">
+	<div class="popup js-popup" id="popup-no-submit">
 		<div class="popup__head">
 			<p>Submit Engagement Letter</p>
 			<i class="icon icon-close js-close"></i>
@@ -183,19 +183,19 @@
 			</div>
 		</div>
 	</div>
-	<div class="popup is-top js-popup" id="upload-el">
+	<div class="popup is-top js-popup" id="popup-upload-el">
 		<div class="popup__head">
 			<p>Give a proper file name</p>
 			<i class="icon icon-close js-close"></i>
 		</div>
 		<div class="popup__body">
-			<form class="popup__form">
-				<p class="popup__form-ttl">File Name</p>
-				<p class="popup__form-subttl"><label for="">Keep names understandable for you and staff</label></p>
-				<div class="popup__label">
-					<input type="text" value="Engagement Letter">
+			<form class="form is-full-w">
+				<div class="form__bl">
+					<label for="file-name" class="form__subttl no-margin">File Name</label>
+					<p class="form__hint">Keep names understandable for you and staff</p>
+					<input id="file-name" type="text" value="Engagement Letter">
 				</div>
-				<div class="popup__btn s-margin">
+				<div class="btn-group">
 					<button class="btn btn-ok" type="submit">Upload</button>
 					<button class="btn btn-no" type="button">Cancel</button>
 				</div>

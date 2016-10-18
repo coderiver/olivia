@@ -1,0 +1,88 @@
+// buttons
+.btn-group
+	font-size: 0
+	&.is-bold
+		.btn
+			+opensans-sb
+	&.is-s-margin
+		margin-top: 20px
+	&.is-right
+		text-align: right
+	.btn
+		margin: 0 5px
+	.dropdown
+		margin: 0 5px
+
+.btn
+	position: relative
+	display: inline-block
+	padding: 8px 35px
+	background-color: #e4e4e4
+	border-radius: 4px
+	color: #282828
+	font-size: 13px
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.32)
+	line-height: 1.2
+	+g(#f0f0f0, gainsboro 100%)
+	+tr(0.3s)
+	&:hover
+		background-color: #E6E6E6
+		+g(#E6E6E6, #f0f0f0)
+	&.btn-ok
+		background-color: #025bb7
+		color: #fff
+		+g(#2c83cb, #025bb7)
+		&:hover
+			background-color: #3691DB
+			+g(#2c83cb, #3691DB)
+		&:disabled
+			background: #2c83cb
+	&.btn-txt-gray
+		color: #6c757a
+	&.btn-border
+		border: 1px solid #cfd5e0
+		box-shadow: none
+	&.btn-approve
+		background: #2CB324
+		&:hover
+			+g(#2CB324, #3dd634)
+	&.is-prev,
+	&.is-next
+		box-shadow: none
+		border: 1px solid #cfd5e0
+		+g(#fafafa, #e2e2e2)
+		&:hover
+			+g(#e2e2e2, #fafafa)
+	&.is-prev
+		padding: 8px 15px 8px 37px
+	&.is-next
+		padding: 8px 49px 8px 25px
+	&.s-pad
+		padding: 8px 20px
+	&.m-pad
+		padding: 11px 18px
+	&:disabled
+		opacity: 0.5
+		cursor: default
+	.icon-lock
+		margin-right: 10px
+		font-size: 17px
+		vertical-align: -4px
+
+.left-arr,
+.right-arr
+	position: absolute
+	top: 50%
+	margin-top: -9px
+	font-size: 13px
+	color: #6c757a
+
+.left-arr
+	left: 10px
+	&:before
+		content: "\2190"
+
+.right-arr
+	right: 10px
+	&:before
+		content: "\2192"

@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+//=include partials/head.html
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	//=include partials/header-active-notification.html
+
+	<div class="main">
+		<div class="l">
+			<div class="main__in">
+				<div class="upper is-custom">
+					<button class="btn btn-ok">Send for review</button>
+					<p class="upper__ttl">Tasks</p>
+					<p class="upper__ttl">TS27488</p>
+				</div>
+				<!-- begin task  -->
+				<div class="task">
+					<div class="task__in">
+						<h2>Send us your photo</h2>
+						<div class="task__info">
+							<p>Created: Aug 10, 2015 by Amanda Brown  Last update: Aug 21, 2015</p>
+							<p>Сurrent status: <span>Open task that requires your action</span></p>
+						</div>
+						<p class="task__text">Hey, Brian, we need you photo to put it on a wall, please use “Upload file” link below to upload and send this file to us for review. Please check attached example file. </p>
+						<div class="task__bl">
+							<p class="task__ttl">Attachments</p>
+							<!-- begin table  -->
+							<table class="table">
+								<tr class="table__head is-full-border">
+									<th width="140"><p>ID</p></th>
+									<th width="250"><p>Name</p></th>
+									<th width="96"><p>By</p></th>
+									<th width="62"><p>Type</p></th>
+									<th width="97" class="is-active"><p>Uploaded</p></th>
+									<th class="table__drop">&nbsp;</th>
+								</tr>
+								<tr class="js-link" data-href="http://www.google.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico pic-ico"></i>
+											<span>FI12522-001</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p class="table__text">my_photo</p>
+									</td>
+									<td>
+										<p class="table__text">Brian D</p>
+									</td>
+									<td>
+										<p class="table__text">JPG</p>
+									</td>
+									<td>
+										<p class="table__text">Aug 11, 2015</p>
+									</td>
+									<td class="table__drop">
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr class="js-link" data-href="http://www.google.com">
+									<td>
+										<div class="table__el">
+											<i class="svg-ico pic-ico"></i>
+											<span>FI12522-001</span>
+										</div>
+									</td>
+									<td class="table__name">
+										<p class="table__text">example</p>
+									</td>
+									<td>
+										<p class="table__text">Amanda B</p>
+									</td>
+									<td>
+										<p class="table__text">JPG</p>
+									</td>
+									<td>
+										<p class="table__text">Aug 10, 2015</p>
+									</td>
+									<td class="table__drop">
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<ul class="dropdown__list js-inner">
+												<li><a href="#">Open in new window</a></li>
+												<li><a href="#">Download all in ZIP</a></li>
+												<li><a href="#">Deal status</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+							</table>
+							<!-- end table -->
+							<div class="task__upload">
+								<div class="upload">
+									<div class="upload__in">
+										<input type="file" name="file">
+										<i class="icon icon-upload"></i>
+										<span>Upload another file</span>
+									</div>
+								</div>
+								<button class="btn btn-ok">Send for review</button>
+							</div>
+						</div>
+						<!-- begin comments  -->
+						<div class="comments">
+							<div class="comments__head">
+								<div class="tooltip">
+									<p>Conversation & Activity</p>
+									<div class="tooltip__ico js-tooltip" title="This is where all comments and questions appear until this task is positively resolved."><span>?</span></div>
+								</div>
+							</div>
+							<div class="comments__post">
+								<label></label>
+								<textarea rows="1" class="textarea js-expand" data-min-rows='1' placeholder="Your comment or question to GCS staff"></textarea>
+								<button class="btn btn-ok">Post comment</button>
+							</div>
+						</div>
+						<!-- end comments -->
+					</div>
+				</div>
+				<!-- end task -->
+				<div class="back-to-top"><a href="#" class="js-top"><i class="icon icon-arr-top"></i><span>Back to top</span></a></div>
+			</div>
+		</div>
+	</div>
+
+	//=include partials/footer.html
+</div>
+<!-- END out-->
+</body>
+</html>

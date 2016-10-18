@@ -1,20 +1,18 @@
-<div class="popup is-top js-popup" id="create-error">
+<div class="popup is-top js-popup" id="popup-create-error">
 	<div class="popup__head">
 		<p>Start a New Deal Folder</p>
 		<i class="icon icon-close js-close"></i>
 	</div>
 	<div class="popup__body">
 		<form class="form is-full-w">
-			<p class="form__subttl"><label for="">Deal Name</label></p>
-			<div class="form__bl">
-				<div class="form__el has-error">
-					<input type="text" value="Google">
-					<div class="help-block">
-						<p>You already have another deal with the same name</p>
-					</div>
-				</div>
+			<label for="google" class="form__subttl">Deal Name</label>
+			<div class="form__bl has-error">
+				<input id="google" type="text" value="Google">
+				<ul class="errorlist">
+					<li>You already have another deal with the same name</li>
+				</ul>
 			</div>
-			<div class="popup__btn">
+			<div class="btn-group">
 				<button class="btn btn-ok" type="submit">Create deal</button>
 				<button class="btn btn-no" type="button">Cancel</button>
 			</div>
