@@ -1336,6 +1336,7 @@ a { text-decoration: none; }
 .popup-list__el .icon, .popup-list__el .svg-ico { display: inline-block; margin-right: 13px; vertical-align: middle; }
 .popup-list__el .svg-ico { width: 16px; height: 16px; }
 .popup-list__el .icon { font-size: 16px; }
+.popup-list__el .check { width: 100%; }
 .popup-list__el span { vertical-align: middle; }
 .popup-list__span { display: inline-block; max-width: -webkit-calc(100% - 45px); max-width: calc(100% - 45px); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 1.2; }
 .popup-list__more { float: right; font-size: 0; color: #6c757a; }
