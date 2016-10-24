@@ -1065,8 +1065,9 @@ a { text-decoration: none; }
 .table__more { display: inline-block; font-size: 13px; vertical-align: middle; }
 .table__more:first-child { vertical-align: baseline; }
 .table__pic { max-width: 50px; height: 50px; background-size: cover; background-position: center center; }
-.table__text { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: middle; }
+.table__text { max-width: 100%; overflow: hidden; text-overflow: ellipsis; color: #6c757a; white-space: nowrap; vertical-align: middle; }
 .table__text.is-info { color: #f76300; }
+.table__text.is-black { color: #000; }
 .table__activity a { text-decoration: underline; }
 .table__activity a:hover { text-decoration: none; }
 .table span.table__text { display: inline-block; }
