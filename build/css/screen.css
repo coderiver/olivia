@@ -1278,6 +1278,7 @@ a { text-decoration: none; }
 .popup__link:hover { text-decoration: underline; }
 .popup__img { position: relative; display: table-cell; width: 110px; }
 .popup__img img { width: 100%; }
+.popup__img .fa { position: absolute; right: 4px; bottom: 9px; padding: 2px 2px 2px 4px; font-size: 16px; color: #000; background: #FFF; -webkit-box-shadow: -3px 0px 6px 0 gray; box-shadow: -3px 0px 6px 0 gray; }
 .popup__owner { position: absolute; top: 2px; right: 2px; font-size: 20px; color: #F1D270; }
 .popup__info { display: table-cell; padding-left: 20px; vertical-align: top; }
 .popup__info:only-child { padding-left: 0; }
