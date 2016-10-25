@@ -654,9 +654,8 @@ a { text-decoration: none; }
 .suggest__side:first-child { padding-left: 7px; }
 .suggest__bl { display: block; margin-bottom: 10px; font-size: 0; color: #96A0A6; }
 .suggest__bl:hover .suggest__in p:first-child { text-decoration: underline; }
-.suggest__in { display: inline-block; width: -webkit-calc(100% - 50px); width: calc(100% - 50px); max-width: 300px; padding-left: 20px; font-size: 14px; line-height: 1.3; vertical-align: middle; }
-.suggest__in p:first-child { margin-bottom: 2px; text-transform: capitalize; color: #097bf2; }
-.suggest__in small { display: block; font-size: 11px; }
+.suggest__in { display: inline-block; width: -webkit-calc(100% - 50px); width: calc(100% - 50px); max-width: 300px; padding-left: 20px; font-size: 11px; line-height: 1.2; vertical-align: middle; }
+.suggest__in p:first-child { margin-bottom: 2px; text-transform: capitalize; font-size: 14px; color: #097bf2; }
 .suggest .svg-ico { display: inline-block; width: 50px; height: 50px; background-size: 50px 50px; vertical-align: middle; }
 .suggest .memo-ico { background-image: url("../img/svg-bg/memo.svg"); }
 .suggest .memo-ico.is-disabled { background-image: url("../img/svg-bg/memo-disabled.svg"); }
@@ -666,11 +665,13 @@ a { text-decoration: none; }
 .suggest .customer-ico.is-disabled { background-image: url("../img/svg-bg/customer-disabled.svg"); }
 .suggest .transaction-ico { background-image: url("../img/svg-bg/transaction.svg"); }
 .suggest .transaction-ico.is-disabled { background-image: url("../img/svg-bg/transaction-disabled.svg"); }
+.suggest .att-ico { background: orange; -webkit-border-radius: 3px; border-radius: 3px; }
+.suggest .att-ico:before { content: "ATT"; display: inline-block; padding: 4px 0 0 5px; font-size: 18px; font-style: normal; color: #fff; letter-spacing: 0.1em; font-family: "opensans-semibold", Arial, sans-serif; }
 .suggest .status .icon, .suggest .status .svg-ico { width: auto; font-size: 16px; }
-.suggest .icon { width: 100%; max-width: 50px; text-align: center; font-size: 40px; vertical-align: middle; }
+.suggest .icon { width: 100%; max-width: 50px; text-align: center; font-size: 45px; vertical-align: middle; }
+.suggest .icon-firm, .suggest .icon-folder { font-size: 40px; }
 .suggest .icon-plus { width: auto; font-size: 15px; color: #FFF; vertical-align: middle; }
 .suggest .icon-letter { -webkit-border-radius: 2px; border-radius: 2px; }
-.suggest .icon-add-library { font-size: 50px; }
 
 .main { margin-top: -90px; }
 .main__in { min-height: 400px; background: #fff; border: 1px solid #dce0e7; -webkit-border-radius: 6px; border-radius: 6px; }
