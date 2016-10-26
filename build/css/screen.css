@@ -631,7 +631,7 @@ a { text-decoration: none; }
 .suggest.is-staff { font-size: 0; padding: 0; }
 .suggest.is-staff .suggest__head { position: absolute; top: 20px; right: 24px; z-index: 1; }
 .suggest.is-staff .suggest__txt { max-width: 350px; margin: 20px 0 10px 0; font-size: 16px; color: #000; }
-.suggest.is-staff .suggest__menu { min-width: 750px; margin-top: 0; padding: 20px 0; font-size: 0; *zoom: 1; }
+.suggest.is-staff .suggest__menu { min-width: 750px; margin-top: 0; padding: 19px 0; font-size: 0; *zoom: 1; }
 .suggest.is-staff .suggest__menu:after { content: " "; display: table; clear: both; }
 .suggest.is-staff .suggest__menu:before { display: block; }
 .suggest.is-staff .suggest__folder { margin-right: 0; }
