@@ -603,6 +603,8 @@ a { text-decoration: none; }
 .helpers .dropdown { display: inline-block; vertical-align: middle; }
 .helpers .dropdown:first-child { margin-right: 23px; }
 .helpers .dropdown .dropdown__item { text-transform: none; }
+.helpers .dropdown .dropdown__list { white-space: normal; line-height: 1.2; }
+.helpers .dropdown .dropdown__list a { padding: 4px 15px; }
 
 .search { position: relative; display: inline-block; max-width: 225px; margin-left: 15px; vertical-align: middle; }
 .search.is-active input { background: #fff; color: #000; }
