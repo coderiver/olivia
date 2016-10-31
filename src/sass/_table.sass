@@ -64,11 +64,6 @@
 		width: 50px
 		padding: 5px 8.5px
 		text-align: center
-	&__name
-		color: #282828
-		+opensans-sb
-		.status
-			display: inline-block
 	&__el
 		font-size: 0
 		+rmono
@@ -96,15 +91,16 @@
 		background-position: center center
 	&__text
 		max-width: 100%
+		color: lighten(#6c757a, 10%)
+		white-space: nowrap
 		overflow: hidden
 		text-overflow: ellipsis
-		color: #6c757a
-		white-space: nowrap
 		vertical-align: middle
 		&.is-info
 			color: #f76300
-		&.is-black
-			color: #000
+		a
+			color: #6c757a
+			+opensans_sb
 	&__activity a
 		text-decoration: underline
 		&:hover

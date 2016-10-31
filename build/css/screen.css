@@ -1060,17 +1060,15 @@ a { text-decoration: none; }
 .table__clip { width: 5%; text-align: center; }
 .table__clip .icon.icon-clip { font-size: 14px; }
 .table__drop { width: 50px; padding: 5px 8.5px; text-align: center; }
-.table__name { color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
-.table__name .status { display: inline-block; }
 .table__el { font-size: 0; font-family: "robotomono", Arial, sans-serif; }
 .table__el span { display: inline-block; max-width: -webkit-calc(100% - 25px); max-width: calc(100% - 25px); font-size: 13px; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; white-space: nowrap; }
 .table__el .svg-ico, .table__el .icon { margin-right: 5px; font-size: 16px; }
 .table__more { display: inline-block; font-size: 13px; vertical-align: middle; }
 .table__more:first-child { vertical-align: baseline; }
 .table__pic { max-width: 50px; height: 50px; background-size: cover; background-position: center center; }
-.table__text { max-width: 100%; overflow: hidden; text-overflow: ellipsis; color: #6c757a; white-space: nowrap; vertical-align: middle; }
+.table__text { max-width: 100%; color: #868e93; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; }
 .table__text.is-info { color: #f76300; }
-.table__text.is-black { color: #000; }
+.table__text a { color: #6c757a; font-family: "opensans-semibold", Arial, sans-serif; }
 .table__activity a { text-decoration: underline; }
 .table__activity a:hover { text-decoration: none; }
 .table span.table__text { display: inline-block; }
@@ -1281,9 +1279,10 @@ a { text-decoration: none; }
 .popup__scroll { position: relative; height: 435px; overflow: hidden; }
 .popup__link { display: inline-block; color: #097bf2; }
 .popup__link:hover { text-decoration: underline; }
-.popup__img { position: relative; display: table-cell; width: 110px; }
+.popup__img { display: table-cell; width: 110px; }
 .popup__img img { width: 100%; }
-.popup__img .fa { position: absolute; right: 4px; bottom: 9px; padding: 2px 2px 2px 4px; font-size: 16px; color: #000; background: #FFF; -webkit-box-shadow: -3px 0px 6px 0 gray; box-shadow: -3px 0px 6px 0 gray; }
+.popup__wrap { position: relative; }
+.popup__wrap .fa { position: absolute; right: 4px; bottom: 9px; padding: 2px 2px 2px 4px; font-size: 16px; color: #000; background: #FFF; -webkit-box-shadow: -3px 0px 6px 0 gray; box-shadow: -3px 0px 6px 0 gray; }
 .popup__owner { position: absolute; top: 2px; right: 2px; font-size: 20px; color: #F1D270; }
 .popup__info { display: table-cell; padding-left: 20px; vertical-align: top; }
 .popup__info:only-child { padding-left: 0; }
