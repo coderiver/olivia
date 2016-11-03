@@ -15,7 +15,6 @@
 			position: relative
 			padding: 0
 			box-shadow: 0px 1px 0px 0px #dee1e7
-			&:first-child
 	&.is-staff
 		.menu
 			margin-left: 5px
@@ -65,6 +64,7 @@
 	&__list
 		position: relative
 		text-align: center
+		padding: 5px 0
 		font-size: 0
 		&:before,
 		&:after
@@ -91,6 +91,14 @@
 			text-decoration: none
 			pointer-events: none
 			-ms-pointer-events: none
+	&__textarea
+		max-width: 500px
+		margin: 0 auto 15px
+		.textarea
+			height: 36px
+			+tr(height 0.3s ease)
+			&.is-expanded
+				height: 60px
 	.btn-group
 		float: right
 		padding-top: 15px

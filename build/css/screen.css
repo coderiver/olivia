@@ -564,7 +564,7 @@ a { text-decoration: none; }
 .header__small { margin-top: 3px; font-size: 13px; color: #738496; }
 .header__small a { color: #738496; }
 .header__small a:hover { text-decoration: underline; }
-.header__list { position: relative; text-align: center; font-size: 0; }
+.header__list { position: relative; text-align: center; padding: 5px 0; font-size: 0; }
 .header__list:before, .header__list:after { content: ""; position: absolute; top: 0; width: 100%; border-top: 1px solid #dee1e7; }
 .header__list:before { right: 100%; }
 .header__list:after { left: 100%; }
@@ -572,6 +572,9 @@ a { text-decoration: none; }
 .header__option { font-size: 13px; color: #6c757a; }
 .header__option:hover { text-decoration: underline; }
 .header__option.is-disabled { color: #DDECF4; text-decoration: none; pointer-events: none; -ms-pointer-events: none; }
+.header__textarea { max-width: 500px; margin: 0 auto 15px; }
+.header__textarea .textarea { height: 36px; -webkit-transition: height 0.3s ease; transition: height 0.3s ease; }
+.header__textarea .textarea.is-expanded { height: 60px; }
 .header .btn-group { float: right; padding-top: 15px; margin-right: 40px; }
 .header .btn { font-family: "opensans-semibold", Arial, sans-serif; }
 .header .svg-ico { width: 16px; height: 16px; margin-right: 5px; background-size: 16px 16px; vertical-align: middle; }
@@ -677,8 +680,9 @@ a { text-decoration: none; }
 
 .main { margin-top: -90px; }
 .main__in { min-height: 400px; background: #fff; border: 1px solid #dce0e7; -webkit-border-radius: 6px; border-radius: 6px; }
-.main.is-form { margin-top: 0; margin-bottom: 30px; padding-top: 110px; }
+.main.is-form { margin-top: 0; margin-bottom: 30px; padding-top: 175px; }
 .main.is-form .table { margin-bottom: 80px; }
+.main.sm-pad { padding-top: 120px; }
 
 .upper { position: relative; min-height: 90px; margin-bottom: 20px; padding: 18px 18px 8px; background: #f7f8f9; border-bottom: 1px solid #dce0e7; -webkit-border-radius: 6px 6px 0 0; border-radius: 6px 6px 0 0; }
 .upper.is-custom { min-height: 60px; font-size: 0; *zoom: 1; }
@@ -828,6 +832,7 @@ a { text-decoration: none; }
 .taskstat .transaction-ico.is-disabled { background-image: url("../img/svg-bg/transaction-disabled.svg"); }
 
 .comments { margin-top: 50px; }
+.comments.is-in-form { margin: 0; padding: 20px 20px 30px; }
 .comments__head { font-size: 17px; padding-bottom: 5px; border-bottom: 1px solid #efefef; *zoom: 1; }
 .comments__head:after { content: " "; display: table; clear: both; }
 .comments__bl { margin-top: 20px; font-size: 13px; color: #6c757a; *zoom: 1; }
@@ -856,16 +861,20 @@ a { text-decoration: none; }
 .report:after { content: " "; display: table; clear: both; }
 .report.is-max-w { margin: 0 17px; padding-right: 18px; max-width: 663px; }
 .report.is-full-w { padding-right: 15px; }
-.report.is-form { margin: 0 0 14px; padding: 9px 15px; color: #282828; background: #fffaf6; border: 1px solid #f76300; font-family: "opensans-semibold", Arial, sans-serif; }
+.report.is-rejected, .report.is-approved { margin: 0 0 14px; padding: 9px 15px 10px; color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
+.report.is-rejected { background: #fffaf6; border: 1px solid #f76300; }
+.report.is-approved { border: 1px solid #2CAF24; }
 .report.is-error { padding: 13px 15px; background: #fee; border-color: #ffc0c8; }
 .report__ttl { margin-bottom: 5px; font-size: 14px; font-family: "opensans-semibold", Arial, sans-serif; }
-.report__bl { float: right; }
-.report__bl:first-child { float: left; }
+.report__bl { overflow: hidden; padding: 0 10px 0 2px; }
 .report__bl span { vertical-align: middle; }
 .report__link { display: inline-block; margin-top: 3px; color: #097bf2; font-family: "opensans", Arial, sans-serif; }
 .report__link:hover { text-decoration: underline; }
+.report__more { float: right; }
 .report .icon { font-size: 12px; margin-right: 5px; vertical-align: middle; }
 .report .icon-warn { color: #f76300; }
+.report .icon-square-arr { font-size: 14px; color: #2CAF24; }
+.report .icon-calendar { font-size: 16px; color: #000; }
 
 .actions { margin: 15px 0 40px; text-align: center; font-size: 0; }
 .actions__bl { display: inline-block; width: 25%; max-width: 230px; padding: 0 10px; text-align: center; font-size: 13px; color: #738496; vertical-align: top; cursor: pointer; }

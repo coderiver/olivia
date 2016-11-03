@@ -19,7 +19,7 @@
 					<button class="btn btn-ok s-pad" type="submit"><i class="icon icon-lock"></i>Edit to re-submit</button>
 				</div>
 			</div>
-			<div class="header__in js-hide">
+			<div class="header__in">
 				<ul class="header__list">
 					<li><a href="#" class="header__option">Current task</a></li>
 					<li><a href="#" class="header__option">Form Info</a></li>
@@ -27,15 +27,22 @@
 					<li><a href="#" class="header__option">Approval Letter</a></li>
 					<li><a href="#" class="header__option">Help</a></li>
 				</ul>
+				<div class="header__textarea">
+					<textarea class="textarea js-expand-area" placeholder="Review notes"></textarea>
+				</div>
 			</div>
 		</div>
 	</div>
 	<!-- end header -->
 	<div class="main is-form">
 		<div class="l-form">
-			<div class="report">
-				<p class="report__ttl">Approved</p>
-				<p>This document was approved by GCS staff on 28 September 2015</p>
+			<div class="report is-approved">
+				<div class="report__more">
+					<a href="#"><i class="icon icon-square-arr"></i></a>
+				</div>
+				<div class="report__bl">
+					<i class="icon icon-check"></i><span>Approved: Nice job Mr.X! Keep it up!</span>
+				</div>
 			</div>
 			<div class="main__in">
 				<form class="form">

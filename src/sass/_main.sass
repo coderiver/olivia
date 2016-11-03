@@ -8,9 +8,11 @@
 	&.is-form
 		margin-top: 0
 		margin-bottom: 30px
-		padding-top: 110px
+		padding-top: 175px
 		.table
 			margin-bottom: 80px
+	&.sm-pad
+		padding-top: 120px
 
 .upper
 	position: relative
@@ -518,6 +520,9 @@
 // comments
 .comments
 	margin-top: 50px
+	&.is-in-form
+		margin: 0
+		padding: 20px 20px 30px
 	&__head
 		font-size: 17px
 		padding-bottom: 5px
@@ -597,13 +602,17 @@
 		max-width: 663px
 	&.is-full-w
 		padding-right: 15px
-	&.is-form
+	&.is-rejected,
+	&.is-approved
 		margin: 0 0 14px
-		padding: 9px 15px
+		padding: 9px 15px 10px
 		color: #282828
+		+opensans-sb
+	&.is-rejected
 		background: #fffaf6
 		border: 1px solid #f76300
-		+opensans-sb
+	&.is-approved
+		border: 1px solid #2CAF24
 	&.is-error
 		padding: 13px 15px
 		background: #fee
@@ -613,9 +622,8 @@
 		font-size: 14px
 		+opensans-sb
 	&__bl
-		float: right
-		&:first-child
-			float: left
+		overflow: hidden
+		padding: 0 10px 0 2px
 		span
 			vertical-align: middle
 	&__link
@@ -625,12 +633,20 @@
 		+opensans
 		&:hover
 			text-decoration: underline
+	&__more
+		float: right
 	.icon
 		font-size: 12px
 		margin-right: 5px
 		vertical-align: middle
 	.icon-warn
 		color: #f76300
+	.icon-square-arr
+		font-size: 14px
+		color: #2CAF24
+	.icon-calendar
+		font-size: 16px
+		color: #000
 
 // actions
 .actions
