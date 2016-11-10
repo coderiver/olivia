@@ -99,7 +99,7 @@
 					</div>
 					<div class="tablewrap">
 						<div class="tablewrap__in">
-							<!-- begin table  -->
+							<!-- begin table -->
 							<table class="table">
 								<tr class="table__head">
 									<th width="138"><p>ID</p></th>
@@ -107,6 +107,7 @@
 									<th width="100" class="cell-center"><p>File name</p></th>
 									<th width="100" ><p>Sign status</p></th>
 									<th width="100" class="cell-center"><p>Checked</p></th>
+									<th class="table__drop"><p>&nbsp;</p></th>
 								</tr>
 								<tr>
 									<td>
@@ -127,6 +128,27 @@
 									<td class="cell-center">
 										<div class="status is-pending">
 											<i class="icon icon-pending"></i>
+										</div>
+									</td>
+									<td class="txt-right table__drop">
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+													<li>
+														<div class="upload no-icon no-margin">
+															<div class="upload__in">
+																<input type="file">
+																<i class="icon icon-upload"></i>
+																<span>Upload</span>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -152,6 +174,27 @@
 											<i class="icon icon-check"></i>
 										</div>
 									</td>
+									<td class="txt-right table__drop">
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+													<li>
+														<div class="upload no-icon no-margin">
+															<div class="upload__in">
+																<input type="file">
+																<i class="icon icon-upload"></i>
+																<span>Upload</span>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</td>
 								</tr>
 								<tr>
 									<td>
@@ -164,15 +207,429 @@
 										</div>
 									</td>
 									<td>
-										<span>Upload Attachment</span>
+										<div class="upload no-icon no-margin">
+											<div class="upload__in">
+												<input type="file">
+												<i class="icon icon-upload"></i>
+												<span>Upload Attachment</span>
+											</div>
+										</div>
 									</td>
 									<td>&nbsp;<td>
 									<td>&nbsp;</td>
+									<td class="txt-right table__drop">
+										<div class="dropdown js-dropdown">
+											<span class="dropdown__bl"></span>
+											<div class="dropdown__in js-inner">
+												<ul class="dropdown__list is-top-level">
+													<li><a href="#">Open in new window</a></li>
+													<li><a href="#">Download all in ZIP</a></li>
+													<li><a href="#">Deal status</a></li>
+													<li>
+														<div class="upload no-icon no-margin">
+															<div class="upload__in">
+																<input type="file">
+																<i class="icon icon-upload"></i>
+																<span>Upload</span>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</td>
 								</tr>
 							</table>
 							<!-- end table -->
 						</div>
 					</div>
+					<!-- TO DELETE!!! example of common table to be implemented in form entry -->
+					<!-- <div class="tablewrap no-bottom-padding js-tablewrap">
+						<div class="tablewrap__in">
+							<div class="scrollbar js-scrollbar">
+								begin table
+								<table class="table" style="margin-bottom: 0">
+									<tr class="table__head js-clone-head" style="opacity: 1">
+										<th title="ID" width="112" data-id="id"><p>ID</p></th>
+										<th class="is-active" title="Name" width="316" data-id="name"><p>Name</p></th>
+										<th title="Type" width="150" data-id="type"><p>Type</p></th>
+										<th title="User Status" width="108" data-id="userstatus"><p>User Status</p></th>
+										<th class="cell-center" title="My tasks" width="133" data-id="mytasks"><p>My tasks</p></th>
+										<th class="cell-center" title="User tasks" width="133" data-id="mytasks"><p>User tasks</p></th>
+										<th class="cell-right" title="Last activity" width="133" data-id="mytasks"><p>Last activity</p></th>
+									</tr>
+									<tr data-popup="popup-user">
+										<td>
+											<div class="table__el">
+												<i class="svg-ico user-gray-ico"></i>
+												<span>RP12521</span>
+											</div>
+										</td>
+										<td>
+											<p class="table__text"><a href="#">Brian Dunn</a></p>
+										</td>
+										<td>
+											<p class="table__text">Rep</p>
+										</td>
+										<td>
+											<p class="table__text">Active</p>
+										</td>
+										<td class="cell-center">
+											<div class="status">
+												<span>1</span>
+											</div>
+										</td>
+										<td class="cell-center">
+											<div class="status is-draft">
+												<span>1</span>
+											</div>
+										</td>
+										<td class="cell-right">
+											<p class="table__text">Aug 10, 2015</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table__el">
+												<i class="svg-ico user-gray-ico"></i>
+												<span>RP12521</span>
+											</div>
+										</td>
+										<td>
+											<p class="table__text">Amorosi Ad</p>
+										</td>
+										<td>
+											<p class="table__text">Rep</p>
+										</td>
+										<td>
+											<p class="table__text">Active</p>
+										</td>
+										<td class="cell-center">
+											<div class="table__text">-</div>
+										</td>
+										<td class="cell-center">
+											<div class="table__text">-</div>
+										</td>
+										<td class="cell-right">
+											<p class="table__text">Aug 10, 2015</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table__el">
+												<i class="svg-ico user-gray-ico"></i>
+												<span>RP12521</span>
+											</div>
+										</td>
+										<td>
+											<p class="table__text">Attari Peyman</p>
+										</td>
+										<td>
+											<p class="table__text">Rep</p>
+										</td>
+										<td>
+											<p class="table__text">Active</p>
+										</td>
+										<td class="cell-center">
+											<div class="table__text">-</div>
+										</td>
+										<td class="cell-center">
+											<div class="table__text">-</div>
+										</td>
+										<td class="cell-right">
+											<p class="table__text">Aug 10, 2015</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table__el">
+												<i class="svg-ico user-gray-ico"></i>
+												<span>RP12521</span>
+											</div>
+										</td>
+										<td>
+											<p class="table__text">Auten Lane</p>
+										</td>
+										<td>
+											<p class="table__text">Rep</p>
+										</td>
+										<td>
+											<p class="table__text">Active</p>
+										</td>
+										<td class="cell-center">
+											<div class="status">
+												<span>1</span>
+											</div>
+										</td>
+										<td class="cell-center">
+											<div class="table__text">-</div>
+										</td>
+										<td class="cell-right">
+											<p class="table__text">Aug 10, 2015</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table__el">
+												<i class="svg-ico user-gray-ico"></i>
+												<span>RP12521</span>
+											</div>
+										</td>
+										<td>
+											<p class="table__text">Bergman Adam</p>
+										</td>
+										<td>
+											<p class="table__text">Rep</p>
+										</td>
+										<td>
+											<p class="table__text">Active</p>
+										</td>
+										<td class="cell-center">
+											<div class="table__text">-</div>
+										</td>
+										<td class="cell-center">
+											<div class="table__text">-</div>
+										</td>
+										<td class="cell-right">
+											<p class="table__text">Aug 10, 2015</p>
+										</td>
+									</tr>
+									<tr data-popup="popup-user-team">
+										<td>
+											<div class="table__el">
+												<i class="icon icon-team"></i>
+												<span>TM12521</span>
+											</div>
+										</td>
+										<td>
+											<p class="table__text"><a href="#">A-Team</a></p>
+										</td>
+										<td>
+											<p class="table__text">Team</p>
+										</td>
+										<td>
+											<p class="table__text">Active</p>
+										</td>
+										<td class="cell-center">
+											<div class="table__text">-</div>
+										</td>
+										<td class="cell-center">
+											<div class="table__text">-</div>
+										</td>
+										<td class="cell-right">
+											<p class="table__text">Aug 10, 2015</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table__el">
+												<i class="svg-ico user-gray-ico"></i>
+												<span>RP12521</span>
+											</div>
+										</td>
+										<td>
+											<p class="table__text">Brandt Talia</p>
+										</td>
+										<td>
+											<p class="table__text">Rep</p>
+										</td>
+										<td>
+											<p class="table__text">Inactive</p>
+										</td>
+										<td class="cell-center">
+											<div class="table__text">-</div>
+										</td>
+										<td class="cell-center">
+											<div class="table__text">-</div>
+										</td>
+										<td class="cell-right">
+											<p class="table__text">Aug 10, 2015</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table__el">
+												<i class="icon icon-firm"></i>
+												<span>TM12521</span>
+											</div>
+										</td>
+										<td>
+											<p class="table__text">Brinkhaus & Co</p>
+										</td>
+										<td>
+											<p class="table__text">Firm</p>
+										</td>
+										<td>&nbsp;</td>
+										<td class="cell-center">
+											<div class="table__text">-</div>
+										</td>
+										<td class="cell-center">
+											<div class="table__text">-</div>
+										</td>
+										<td class="cell-right">
+											<p class="table__text">Aug 10, 2015</p>
+										</td>
+									</tr>
+								</table>
+								end table
+							</div>
+							begin sidedrop
+							<div class="sidedrop js-sidedrop">
+								<table class="table">
+									<tr class="table__head js-row-head">
+										<td>&nbsp;</td>
+									</tr>
+									<tr class="js-row">
+										<td>
+											<div class="dropdown js-dropdown">
+												<span class="dropdown__bl"></span>
+												<div class="dropdown__in js-inner">
+													<ul class="dropdown__list is-top-level">
+														<li><a href="#">Open in new window</a></li>
+														<li><a href="#">Re-assign</a></li>
+														<li><a href="#">Edit</a></li>
+														<li><a href="#">Open refered deal</a></li>
+														<li><a href="#">Open rep's deal</a></li>
+														<li><a href="#">Sign in as rep</a></li>
+														<li><a href="#">Delete task</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="js-row">
+										<td>
+											<div class="dropdown js-dropdown">
+												<span class="dropdown__bl"></span>
+												<div class="dropdown__in js-inner">
+													<ul class="dropdown__list is-top-level">
+														<li><a href="#">Open in new window</a></li>
+														<li><a href="#">Re-assign</a></li>
+														<li><a href="#">Edit</a></li>
+														<li><a href="#">Open refered deal</a></li>
+														<li><a href="#">Open rep's deal</a></li>
+														<li><a href="#">Sign in as rep</a></li>
+														<li><a href="#">Delete task</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="js-row">
+										<td>
+											<div class="dropdown js-dropdown">
+												<span class="dropdown__bl"></span>
+												<div class="dropdown__in js-inner">
+													<ul class="dropdown__list is-top-level">
+														<li><a href="#">Open in new window</a></li>
+														<li><a href="#">Re-assign</a></li>
+														<li><a href="#">Edit</a></li>
+														<li><a href="#">Open refered deal</a></li>
+														<li><a href="#">Open rep's deal</a></li>
+														<li><a href="#">Sign in as rep</a></li>
+														<li><a href="#">Delete task</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="js-row">
+										<td>
+											<div class="dropdown js-dropdown">
+												<span class="dropdown__bl"></span>
+												<div class="dropdown__in js-inner">
+													<ul class="dropdown__list is-top-level">
+														<li><a href="#">Open in new window</a></li>
+														<li><a href="#">Re-assign</a></li>
+														<li><a href="#">Edit</a></li>
+														<li><a href="#">Open refered deal</a></li>
+														<li><a href="#">Open rep's deal</a></li>
+														<li><a href="#">Sign in as rep</a></li>
+														<li><a href="#">Delete task</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="js-row">
+										<td>
+											<div class="dropdown js-dropdown">
+												<span class="dropdown__bl"></span>
+												<div class="dropdown__in js-inner">
+													<ul class="dropdown__list is-top-level">
+														<li><a href="#">Open in new window</a></li>
+														<li><a href="#">Re-assign</a></li>
+														<li><a href="#">Edit</a></li>
+														<li><a href="#">Open refered deal</a></li>
+														<li><a href="#">Open rep's deal</a></li>
+														<li><a href="#">Sign in as rep</a></li>
+														<li><a href="#">Delete task</a></li>
+													</ul>
+												</div>
+
+											</div>
+										</td>
+									</tr>
+									<tr class="js-row">
+										<td>
+											<div class="dropdown js-dropdown">
+												<span class="dropdown__bl"></span>
+												<div class="dropdown__in js-inner">
+													<ul class="dropdown__list is-top-level">
+														<li><a href="#">Open in new window</a></li>
+														<li><a href="#">Re-assign</a></li>
+														<li><a href="#">Edit</a></li>
+														<li><a href="#">Open refered deal</a></li>
+														<li><a href="#">Open rep's deal</a></li>
+														<li><a href="#">Sign in as rep</a></li>
+														<li><a href="#">Delete task</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="js-row">
+										<td>
+											<div class="dropdown js-dropdown">
+												<span class="dropdown__bl"></span>
+												<div class="dropdown__in js-inner">
+													<ul class="dropdown__list is-top-level">
+														<li><a href="#">Open in new window</a></li>
+														<li><a href="#">Re-assign</a></li>
+														<li><a href="#">Edit</a></li>
+														<li><a href="#">Open refered deal</a></li>
+														<li><a href="#">Open rep's deal</a></li>
+														<li><a href="#">Sign in as rep</a></li>
+														<li><a href="#">Delete task</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="js-row">
+										<td>
+											<div class="dropdown js-dropdown">
+												<span class="dropdown__bl"></span>
+												<div class="dropdown__in js-inner">
+													<ul class="dropdown__list is-top-level">
+														<li><a href="#">Open in new window</a></li>
+														<li><a href="#">Re-assign</a></li>
+														<li><a href="#">Edit</a></li>
+														<li><a href="#">Open refered deal</a></li>
+														<li><a href="#">Open rep's deal</a></li>
+														<li><a href="#">Sign in as rep</a></li>
+														<li><a href="#">Delete task</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							end sidedrop
+						</div>
+					</div> -->
+					<!-- TO DELETE!!! example of common table to be implemented in form entry -->
 				</form>
 				<a style="font-size: 15px; margin-left: 20px; margin-bottom: 20px; display: inline-block" href="#" data-popup="popup-approve">approve</a>
 				<a style="font-size: 15px; margin-left: 20px; margin-bottom: 20px; display: inline-block" href="#" data-popup="popup-reject">reject</a>
