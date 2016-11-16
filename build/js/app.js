@@ -688,6 +688,7 @@ $(document).ready(function() {
 	window.oliviaTableFactory = oliviaTableFactory;
 
 });
+$(document).ready(function() {
 // comments
 (function() {
 	function commentBl(element) {
@@ -717,6 +718,7 @@ $(document).ready(function() {
 	});
 
 	$('.js-comment').on('click', function(evt) {
+		console.log('bla');
 		evt.preventDefault();
 		var commentParent = $(this).parent(),
 			wrapper,
@@ -744,7 +746,7 @@ $(document).ready(function() {
 	});
 }());
 
-
+});
 $(document).ready(function() {
 
 	// popups

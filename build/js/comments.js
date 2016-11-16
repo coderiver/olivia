@@ -1,3 +1,4 @@
+$(document).ready(function() {
 // comments
 (function() {
 	function commentBl(element) {
@@ -27,6 +28,7 @@
 	});
 
 	$('.js-comment').on('click', function(evt) {
+		console.log('bla');
 		evt.preventDefault();
 		var commentParent = $(this).parent(),
 			wrapper,
@@ -54,3 +56,4 @@
 	});
 }());
 
+});

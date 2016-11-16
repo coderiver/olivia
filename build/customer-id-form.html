@@ -44,7 +44,7 @@
 	</div>
 	<!-- end header -->
 
-	<div class="main is-form">
+	<div class="main is-form sm-pad">
 		<div class="l-form">
 			<div class="main__in">
 				<!-- begin form  -->
@@ -59,20 +59,37 @@
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label for="">Name</label></p>
-						<div class="form__el">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="name" class="form__subttl">Name</label>
+						<input id="name" type="text" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label for="">Date of Birth</label></p>
-						<div class="form__el is-small-size">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="bday" class="form__subttl">Date of Birth</label>
+						<input id="bday" type="text" placeholder="Type here">
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">US Citizenship</p>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="citizenship" value="yes" checked>
+									<span class="radio__span">Yes</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="citizenship" value="no">
+									<span class="radio__span">No</span>
+								</label>
+							</li>
+						</ul>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -93,16 +110,14 @@
 							</label>
 						</div>
 					</div>
-					<div class="form__bl">
+					<div class="form__bl is-middle-size">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Social Security Number</p>
-						<label>Fill in if customer is US citizenship</label>
-						<div class="form__el is-middle-size">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="social-security" class="form__subttl">Social Security Number</label>
+						<p class="form__hint">Fill in if customer is US citizenship</label>
+						<input id="social-security" type="text" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -110,30 +125,32 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Type of ID</p>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="idtype" value="license" checked>
-								<span class="radio__span">Driver's License</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="idtype" value="passport">
-								<span class="radio__span">Passport</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="idtype" value="other">
-								<span class="radio__span">Other</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="idtype" value="unavailable">
-								<span class="radio__span">Not available</span>
-							</label>
-						</div>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="idtype" value="license" checked>
+									<span class="radio__span">Driver's License</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="idtype" value="passport">
+									<span class="radio__span">Passport</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="idtype" value="other">
+									<span class="radio__span">Other</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="idtype" value="unavailable">
+									<span class="radio__span">Not available</span>
+								</label>
+							</li>
+						</ul>
 					</div>
 					<hr>
 					<div class="form__bl">
@@ -170,35 +187,29 @@
 							</ul>
 						</div>
 					</div>
-					<div class="form__bl">
+					<div class="form__bl is-middle-size">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label for="">City</label></p>
-						<div class="form__el is-middle-size">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="city" class="form__subttl">City</label>
+						<input id="city" type="text" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label for="">Street</label></p>
-						<div class="form__el">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="street" class="form__subttl">Street</label>
+						<input id="street" type="text" placeholder="Type here">
 					</div>
-					<div class="form__bl">
+					<div class="form__bl is-middle-size">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label for="">Phone Number</label></p>
-						<div class="form__el is-middle-size">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="tel" class="form__subttl">Phone Number</label>
+						<input id="tel" type="tel" placeholder="Type here">
 					</div>
 					<hr>
 					<div class="form__bl">
@@ -206,30 +217,24 @@
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label for="">E-mail Address</label></p>
-						<div class="form__el">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="email" class="form__subttl">E-mail Address</label>
+						<input id="email" type="tel" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label>Phone Number</label></p>
-						<div class="form__el">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="mob" class="form__subttl">Phone Number</label>
+						<input id="mob" type="text" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label for="">Occupation</label></p>
-						<div class="form__el">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="occupation" class="form__subttl">Occupation</label>
+						<input id="occupation" type="text" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -237,24 +242,24 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Associated with a Securities Firm?</p>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="firm" value="yes">
-								<span class="radio__span">Yes</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="firm" value="no">
-								<span class="radio__span">No</span>
-							</label>
-						</div>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="firm" value="yes">
+									<span class="radio__span">Yes</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="firm" value="no">
+									<span class="radio__span">No</span>
+								</label>
+							</li>
+						</ul>
 					</div>
 					<div class="form__bl">
-						<div class="form__el">
-							<label>If Yes: Name of Firm, Title, Contact Information for Compliance Supervisor</label>
-							<input type="text" placeholder="Type here">
-						</div>
+						<label>If Yes: Name of Firm, Title, Contact Information for Compliance Supervisor</label>
+						<input type="text" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -262,24 +267,24 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Director of a Public Company?</p>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="director" value="yes">
-								<span class="radio__span">Yes</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="director" value="no">
-								<span class="radio__span">No</span>
-							</label>
-						</div>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="citizenship" value="yes" checked>
+									<span class="radio__span">Yes</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="citizenship" value="no">
+									<span class="radio__span">No</span>
+								</label>
+							</li>
+						</ul>
 					</div>
 					<div class="form__bl">
-						<div class="form__el">
-							<label>If Yes, Name of Company</label>
-							<input type="text" placeholder="Type here">
-						</div>
+						<label>If Yes, Name of Company</label>
+						<input type="text" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -287,28 +292,28 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">10% Shareholder / Policy-Making Officer in a Public Company?</p>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="shareholder" value="yes">
-								<span class="radio__span">Yes</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="radio">
-								<input type="radio" name="shareholder" value="no">
-								<span class="radio__span">No</span>
-							</label>
-						</div>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="citizenship" value="yes" checked>
+									<span class="radio__span">Yes</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="citizenship" value="no">
+									<span class="radio__span">No</span>
+								</label>
+							</li>
+						</ul>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl"><label for="">Notes</label></p>
-						<div class="form__el">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="notes" class="form__subttl">Notes</label>
+						<input id="notes" type="text" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
@@ -316,29 +321,29 @@
 							<p>Comment</p>
 						</a>
 						<p class="form__subttl">Registered Representative Attestations:</p>
-						<div class="form__el">
-							<label class="check is-light-border">
-								<input type="checkbox">
-								<span class="check__span">I attest that all of the information provided is true to the best of my knowledge.</span>
-							</label>
-						</div>
-						<div class="form__el">
-							<label class="check is-light-border">
-								<input type="checkbox">
-								<span class="check__span">I attest that I have a prior, existing and current relationship with this customer.</span>
-							</label>
-						</div>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="check is-light-border">
+									<input type="checkbox">
+									<span class="check__span">I attest that all of the information provided is true to the best of my knowledge.</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="check is-light-border">
+									<input type="checkbox">
+									<span class="check__span">I attest that I have a prior, existing and current relationship with this customer.</span>
+								</label>
+							</li>
+						</ul>
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
 							<i class="icon icon-comment"></i>
 							<p>Comment</p>
 						</a>
-						<p class="form__subttl">Registered Representative Signature</p>
-						<label>Type your First & Last Name</label>
-						<div class="form__el">
-							<input type="text" placeholder="Type here">
-						</div>
+						<label for="signature" class="form__subttl">Registered Representative Signature</label>
+						<p class="form__hint">Type your First & Last Name</p>
+						<input id="signature" type="text" placeholder="Type here">
 					</div>
 					<div class="form__bl">
 						<a class="addpost js-comment" href="#">
