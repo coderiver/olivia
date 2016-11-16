@@ -1053,6 +1053,8 @@ a { text-decoration: none; }
 .tablewrap { position: relative; margin: 30px 0 25px; }
 .tablewrap.no-top-margin { margin-top: 0; }
 .tablewrap.no-bottom-margin { margin-bottom: 0; }
+.tablewrap.is-entry-attachments-table .table { margin-bottom: 0; }
+.tablewrap.is-entry-attachments-table .table__head { opacity: 1; }
 .tablewrap__in { position: relative; }
 .tablewrap__in:before { display: none; content: ""; position: absolute; left: 0; right: 0; bottom: 1px; border-bottom: 1px solid #efefef; z-index: 1; }
 .tablewrap__in.is-filtered:before { display: block; }
@@ -1216,6 +1218,7 @@ a { text-decoration: none; }
 .upload.no-margin { margin: 0; }
 .upload.no-icon .upload__in { padding-left: 0; }
 .upload.no-icon .icon { display: none; }
+.upload.is-popup-btn { display: inline-block; margin: 0 10px; }
 .upload__in { position: relative; display: inline-block; padding-left: 32px; cursor: pointer; }
 .upload__in:hover span { text-decoration: underline; }
 .upload input[type="file"] { position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; padding: 0; opacity: 0; font-size: 0; cursor: pointer; z-index: 1; }

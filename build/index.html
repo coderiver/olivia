@@ -216,6 +216,9 @@
 					<li>
 						<a href="#" data-popup="popup-edit-commissions">Edit comissions</a>
 					</li>
+					<li>
+						<a href="#" data-popup="popup-additional-popup">Additional popup</a>
+					</li>
 				</ol>
 			</div>
 		</div>
@@ -386,6 +389,30 @@
 				<div class="btn-group">
 					<button class="btn btn-ok" type="submit">Save</button>
 					<button class="btn btn-no btn-txt-gray" type="button">Cancel</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="popup js-popup" id="popup-additional-popup">
+		<div class="popup__head">
+			<p>Add additional upload</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<form class="form is-full-w">
+				<div class="form__bl">
+					<label for="attachment-name" class="form__subttl">Attachment name</label>
+					<input id="attachment-name" type="text" placeholder="File name will be used if left blank">
+				</div>
+				<div class="btn-group">
+					<div class="upload is-popup-btn">
+						<div class="upload__in">
+							<input type="file">
+							<i class="icon icon-upload"></i>
+							<span>Upload</span>
+						</div>
+					</div>
+					<button class="btn btn-no" type="button">Cancel</button>
 				</div>
 			</form>
 		</div>
