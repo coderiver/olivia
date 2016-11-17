@@ -1,7 +1,7 @@
 // radiobox
-.radio
+.radio,
+.deal-radio
 	position: relative
-	display: inline-block
 	&__span
 		position: relative
 		display: inline-block
@@ -39,6 +39,19 @@
 		visibility: hidden
 		&:focus
 			box-shadow: none
+		&.is-checked + span
+			color: #282828
+			+opensans-sb
+			&:before
+				background-color: #6c757a
+				border-color: #6c757a
+
+.deal-radio
+	display: block
+
+.radio
+	display: inline-block
+	input
 		&:checked + span
 			color: #282828
 			+opensans-sb

@@ -522,19 +522,26 @@
 	margin-top: 50px
 	&.is-in-form
 		margin: 0
-		max-width: 640px
+		max-width: 600px
 		margin: 0 auto
-		padding: 20px 20px 30px
+		padding: 40px 0 50px
 	&__head
 		font-size: 17px
 		padding-bottom: 5px
 		border-bottom: 1px solid #efefef
 		+clr
 	&__bl
-		margin-top: 20px
+		padding: 10px
+		margin-top: 10px
 		font-size: 13px
 		color: #6c757a
+		border: 1px solid transparent
+		border-radius: 5px
 		+clr
+		&.is-approved
+			border-color: #2CAF24
+		&.is-rejected
+			border-color: #f76300
 	&__avatar
 		float: left
 		width: 100%

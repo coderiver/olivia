@@ -363,12 +363,18 @@ body .tooltipster-base { z-index: 8; }
 .icon-letter { color: #fff; background-color: #3c8cea; background-image: -webkit-gradient(linear, left top, left bottom, from(#3c8cea), to(#327bd1)); background-image: -webkit-linear-gradient(#3c8cea, #327bd1); background-image: linear-gradient(#3c8cea, #327bd1); }
 .icon-letter.is-disabled { background: #CFD5E0; }
 
-.radio { position: relative; display: inline-block; }
-.radio__span { position: relative; display: inline-block; padding-left: 20px; color: #097bf2; font-size: 14px; line-height: 1; cursor: pointer; }
-.radio__span:before { content: ""; position: absolute; top: 50%; left: 0; width: 14px; height: 14px; margin-top: -8px; background: #fff; border: 1px solid #b2b2b2; -webkit-border-radius: 50%; border-radius: 50%; }
-.radio__span:after { content: ""; position: absolute; top: 50%; left: 5px; width: 4px; height: 4px; margin-top: -3px; -webkit-border-radius: 50%; border-radius: 50%; background: #fff; }
-.radio input { position: absolute; top: 0; left: 0; opacity: 0; visibility: hidden; }
-.radio input:focus { -webkit-box-shadow: none; box-shadow: none; }
+.radio, .deal-radio { position: relative; }
+.radio__span, .deal-radio__span { position: relative; display: inline-block; padding-left: 20px; color: #097bf2; font-size: 14px; line-height: 1; cursor: pointer; }
+.radio__span:before, .deal-radio__span:before { content: ""; position: absolute; top: 50%; left: 0; width: 14px; height: 14px; margin-top: -8px; background: #fff; border: 1px solid #b2b2b2; -webkit-border-radius: 50%; border-radius: 50%; }
+.radio__span:after, .deal-radio__span:after { content: ""; position: absolute; top: 50%; left: 5px; width: 4px; height: 4px; margin-top: -3px; -webkit-border-radius: 50%; border-radius: 50%; background: #fff; }
+.radio input, .deal-radio input { position: absolute; top: 0; left: 0; opacity: 0; visibility: hidden; }
+.radio input:focus, .deal-radio input:focus { -webkit-box-shadow: none; box-shadow: none; }
+.radio input.is-checked + span, .deal-radio input.is-checked + span { color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
+.radio input.is-checked + span:before, .deal-radio input.is-checked + span:before { background-color: #6c757a; border-color: #6c757a; }
+
+.deal-radio { display: block; }
+
+.radio { display: inline-block; }
 .radio input:checked + span { color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
 .radio input:checked + span:before { background-color: #6c757a; border-color: #6c757a; }
 
@@ -538,11 +544,11 @@ a { text-decoration: none; }
 
 .word-break { word-break: break-all; }
 
-.alert.alert-error { margin-bottom: 10px; color: #e0411b; font-family: "opensans-semibold", Arial, sans-serif; }
+.alert.alert-error { font-size: 13px; margin-bottom: 10px; color: #e0411b; font-family: "opensans-semibold", Arial, sans-serif; }
 
-.help-block { display: block; margin-top: 5px; color: #e0411b; }
+.help-block { display: block; margin-top: 5px; font-size: 13px; color: #e0411b; }
 
-.errorlist { margin: 7px 0; color: #e0411b; font-family: "opensans-semibold", Arial, sans-serif; }
+.errorlist { margin: 7px 0; font-size: 13px; color: #e0411b; font-family: "opensans-semibold", Arial, sans-serif; }
 .errorlist.is-border { padding: 5px 0; color: #E22B1B; background: #FEE; border: 1px solid #FFC0C8; }
 .errorlist.is-border li { padding: 5px 14px; }
 
@@ -832,11 +838,13 @@ a { text-decoration: none; }
 .taskstat .transaction-ico.is-disabled { background-image: url("../img/svg-bg/transaction-disabled.svg"); }
 
 .comments { margin-top: 50px; }
-.comments.is-in-form { margin: 0; max-width: 640px; margin: 0 auto; padding: 20px 20px 30px; }
+.comments.is-in-form { margin: 0; max-width: 600px; margin: 0 auto; padding: 40px 0 50px; }
 .comments__head { font-size: 17px; padding-bottom: 5px; border-bottom: 1px solid #efefef; *zoom: 1; }
 .comments__head:after { content: " "; display: table; clear: both; }
-.comments__bl { margin-top: 20px; font-size: 13px; color: #6c757a; *zoom: 1; }
+.comments__bl { padding: 10px; margin-top: 10px; font-size: 13px; color: #6c757a; border: 1px solid transparent; -webkit-border-radius: 5px; border-radius: 5px; *zoom: 1; }
 .comments__bl:after { content: " "; display: table; clear: both; }
+.comments__bl.is-approved { border-color: #2CAF24; }
+.comments__bl.is-rejected { border-color: #f76300; }
 .comments__avatar { float: left; width: 100%; max-width: 40px; max-height: 40px; margin-right: 20px; -webkit-border-radius: 50%; border-radius: 50%; }
 .comments__el { overflow: hidden; }
 .comments__in { margin-bottom: 5px; *zoom: 1; }
