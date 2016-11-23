@@ -407,7 +407,7 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 .textarea-wrap .upload__in { padding-left: 20px; }
 .textarea-wrap .upload .icon-clip { font-size: 14px; top: 2px; color: #6c757a; }
 
-.textarea { width: 100%; padding: 8px 12px; -webkit-border-radius: 4px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.15); -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09); box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09); resize: none; font-family: "opensans", Arial, sans-serif; -webkit-transition: 0.3s; transition: 0.3s; }
+.textarea { width: 100%; padding: 8px 12px; -webkit-border-radius: 4px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.15); -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09); box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09); resize: none; -webkit-transition-property: border, -webkit-box-shadow; transition-property: border, box-shadow; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; font-family: "opensans", Arial, sans-serif; }
 .textarea::-webkit-input-placeholder { color: #6C757A; }
 .textarea::-moz-placeholder { color: #6C757A; }
 .textarea:-ms-input-placeholder { color: #6C757A; }
@@ -576,8 +576,8 @@ a { text-decoration: none; }
 .header__list:after { left: 100%; }
 .header__list li { display: inline-block; padding: 7px 21px; vertical-align: middle; }
 .header__option { font-size: 13px; color: #6c757a; }
-.header__option:hover { text-decoration: underline; }
-.header__option.is-disabled { color: #DDECF4; text-decoration: none; pointer-events: none; -ms-pointer-events: none; }
+.header__option:hover, .header__option.is-active { text-decoration: underline; }
+.header__option.is-disabled { opacity: 0.6; text-decoration: none; pointer-events: none; -ms-pointer-events: none; }
 .header__textarea { max-width: 600px; margin: 0 auto 15px; }
 .header__textarea .textarea { height: 36px; -webkit-transition: height 0.3s ease; transition: height 0.3s ease; }
 .header__textarea .textarea.is-expanded { height: 60px; }
@@ -864,6 +864,7 @@ a { text-decoration: none; }
 .comments__archive:hover { text-decoration: underline; }
 .comments .tooltip { float: left; margin-bottom: 0; }
 .comments .status { color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
+.comments .textarea { min-height: 36px; }
 
 .report { margin: 15px 0; padding: 13px 65px 15px 17px; font-size: 13px; color: #282828; background: #FFF6E6; border: 1px solid #FFC55E; *zoom: 1; }
 .report:after { content: " "; display: table; clear: both; }
