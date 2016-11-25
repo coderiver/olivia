@@ -787,7 +787,7 @@ a { text-decoration: none; }
 .activity__ttl { margin-bottom: 10px; font-size: 17px; color: #282828; }
 .activity__table { display: table; margin-bottom: 8px; }
 .activity__row { display: table-row; }
-.activity__cell { display: table-cell; padding: 0 10px 3px 0; vertical-align: top; }
+.activity__cell { display: table-cell; min-width: 90px; padding: 0 10px 3px 0; vertical-align: top; }
 .activity__cell.sm-width { width: 22%; }
 .activity__cell.m-width { width: 50%; }
 .activity__cell small { font-size: 13px; color: #282828; }
@@ -1189,12 +1189,10 @@ a { text-decoration: none; }
 .form__bl.is-small-size input { max-width: 162px; }
 .form__bl.is-middle-size { font-size: 0; }
 .form__bl.is-middle-size input { max-width: 340px; }
-.form__bl.is-three-fields:hover .icon-close { opacity: 1; visibility: visible; }
-.form__bl.is-three-fields.is-active { display: block; }
-.form__bl.is-three-fields input { max-width: 120px; }
-.form__bl.is-three-fields input.input-sm { max-width: 60px; margin-left: 20px; }
-.form__bl.is-three-fields span { margin: 0 5px; font-size: 12px; }
-.form__bl.is-three-fields .icon-close { right: 45px; margin-top: -5px; font-size: 10px; color: red; opacity: 0; visibility: hidden; }
+.form__bl.is-split-fields.is-active { display: block; }
+.form__bl.is-split-fields input { max-width: 120px; }
+.form__bl.is-split-fields input.input-sm { max-width: 60px; margin-left: 20px; }
+.form__bl.is-split-fields span { margin: 0 5px; font-size: 12px; }
 .form__bl.has-error input, .form__bl.has-error .textarea { padding: 8px 12px; background: #FFFCFC; border-color: #FFA4AF; -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.09); box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.09); }
 .form__bl.has-error input::-webkit-input-placeholder, .form__bl.has-error .textarea::-webkit-input-placeholder { color: #6c757a; }
 .form__bl.has-error input::-moz-placeholder, .form__bl.has-error .textarea::-moz-placeholder { color: #6c757a; }
@@ -1206,6 +1204,8 @@ a { text-decoration: none; }
 .form__bl.has-error .report { padding: 13px 15px; background: #fee; border-color: #ffc0c8; }
 .form__bl.has-error .redactor-box { -webkit-box-shadow: 0 0 0 1px #FFA4AF; box-shadow: 0 0 0 1px #FFA4AF; }
 .form__mod { position: relative; font-size: 0; }
+.form__mod:hover .form__close { opacity: 1; visibility: visible; }
+.form__mod.is-entry { max-width: 500px; margin-bottom: 10px; }
 .form__link { color: #097BF3; }
 .form__link:hover { text-decoration: underline; }
 .form__img.is-right { float: right; max-width: 286px; padding-right: 109px; }
@@ -1217,6 +1217,8 @@ a { text-decoration: none; }
 .form__avatar { margin-bottom: 15px; max-width: 113px; }
 .form__avatar img { display: block; width: 100%; }
 .form__hint { display: block; margin-bottom: 7px; }
+.form__close { position: absolute; top: 50%; right: 45px; margin-top: -6.5px; font-size: 10px; color: red; opacity: 0; visibility: hidden; }
+.form__close .icon-close { color: red; }
 .form hr { max-width: 600px; margin: 15px auto 25px; border: none; border-top: 1px solid #cfd5e0; }
 .form .radio__span { color: #282828; }
 .form .textarea { min-height: 66px; }

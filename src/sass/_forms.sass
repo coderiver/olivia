@@ -49,11 +49,7 @@
 			font-size: 0
 			input
 				max-width: 340px
-		&.is-three-fields
-			&:hover
-				.icon-close
-					opacity: 1
-					visibility: visible
+		&.is-split-fields
 			&.is-active
 				display: block
 			input
@@ -64,13 +60,6 @@
 			span
 				margin: 0 5px
 				font-size: 12px
-			.icon-close
-				right: 45px
-				margin-top: -5px
-				font-size: 10px
-				color: red
-				opacity: 0
-				visibility: hidden
 		&.has-error
 			input,
 			.textarea
@@ -99,6 +88,13 @@
 	&__mod
 		position: relative
 		font-size: 0
+		&:hover
+			.form__close
+				opacity: 1
+				visibility: visible
+		&.is-entry
+			max-width: 500px 
+			margin-bottom: 10px
 	&__link
 		color: #097BF3
 		&:hover
@@ -126,6 +122,17 @@
 	&__hint
 		display: block
 		margin-bottom: 7px
+	&__close
+		position: absolute
+		top: 50% 
+		right: 45px
+		margin-top: -6.5px
+		font-size: 10px
+		color: red
+		opacity: 0
+		visibility: hidden
+		.icon-close
+			color: red 	
 	hr
 		max-width: 600px
 		margin: 15px auto 25px
