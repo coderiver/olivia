@@ -395,7 +395,7 @@ input[type="search"] { padding-right: 30px; }
 input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
 input[type="search"]::-ms-clear { display: none; }
 
-input { width: 100%; padding: 8px 12px; -webkit-border-radius: 4px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.15); -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09); box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09); font-family: "opensans", Arial, sans-serif; -webkit-transition: 0.3s; transition: 0.3s; }
+input { width: 100%; padding: 8px 12px; font-size: 13px; -webkit-border-radius: 4px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.15); -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09); box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09); font-family: "opensans", Arial, sans-serif; -webkit-transition: 0.3s; transition: 0.3s; }
 input::-webkit-input-placeholder { color: #6C757A; }
 input::-moz-placeholder { color: #6C757A; }
 input:-ms-input-placeholder { color: #6C757A; }
@@ -407,7 +407,7 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 .textarea-wrap .upload__in { padding-left: 20px; }
 .textarea-wrap .upload .icon-clip { font-size: 14px; top: 2px; color: #6c757a; }
 
-.textarea { width: 100%; padding: 8px 12px; -webkit-border-radius: 4px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.15); -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09); box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09); resize: none; -webkit-transition-property: border, -webkit-box-shadow; transition-property: border, box-shadow; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; font-family: "opensans", Arial, sans-serif; }
+.textarea { width: 100%; padding: 8px 12px; font-size: 13px; -webkit-border-radius: 4px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.15); -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09); box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09); resize: none; -webkit-transition-property: border, -webkit-box-shadow; transition-property: border, box-shadow; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; font-family: "opensans", Arial, sans-serif; }
 .textarea::-webkit-input-placeholder { color: #6C757A; }
 .textarea::-moz-placeholder { color: #6C757A; }
 .textarea:-ms-input-placeholder { color: #6C757A; }
