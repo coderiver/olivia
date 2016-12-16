@@ -578,13 +578,16 @@ a { text-decoration: none; }
 .header__option { font-size: 13px; color: #6c757a; }
 .header__option:hover, .header__option.is-active { text-decoration: underline; }
 .header__option.is-disabled { opacity: 0.6; text-decoration: none; pointer-events: none; -ms-pointer-events: none; }
-.header__textarea { max-width: 600px; margin: 0 auto 15px; }
+.header__fields { max-width: 600px; margin: 0 auto 15px; *zoom: 1; }
+.header__fields:after { content: " "; display: table; clear: both; }
+.header__textarea { padding: 2px; overflow: hidden; }
 .header__textarea .textarea { height: 36px; -webkit-transition: height 0.3s ease; transition: height 0.3s ease; }
 .header__textarea .textarea.is-expanded { height: 60px; }
 .header .btn-group { float: right; padding-top: 15px; }
 .header .btn { font-family: "opensans-semibold", Arial, sans-serif; }
 .header .svg-ico { width: 16px; height: 16px; margin-right: 5px; background-size: 16px 16px; vertical-align: middle; }
 .header .icon-logo-short { font-size: 14px; }
+.header .calendar { float: right; padding: 2px 0 2px 15px; }
 
 .menu { float: left; margin: 7px 0 0 20px; *zoom: 1; }
 .menu:after { content: " "; display: table; clear: both; }
@@ -1192,7 +1195,6 @@ a { text-decoration: none; }
 .form__bl.is-split-fields.is-active { display: block; }
 .form__bl.is-split-fields input { max-width: 120px; }
 .form__bl.is-split-fields input.input-sm { max-width: 60px; margin-left: 20px; }
-.form__bl.is-split-fields span { margin: 0 5px; font-size: 12px; }
 .form__bl.has-error input, .form__bl.has-error .textarea { padding: 8px 12px; background: #FFFCFC; border-color: #FFA4AF; -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.09); box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.09); }
 .form__bl.has-error input::-webkit-input-placeholder, .form__bl.has-error .textarea::-webkit-input-placeholder { color: #6c757a; }
 .form__bl.has-error input::-moz-placeholder, .form__bl.has-error .textarea::-moz-placeholder { color: #6c757a; }
@@ -1206,6 +1208,7 @@ a { text-decoration: none; }
 .form__mod { position: relative; font-size: 0; }
 .form__mod:hover .form__close { opacity: 1; visibility: visible; }
 .form__mod.is-entry { max-width: 500px; margin-bottom: 10px; }
+.form__mod.is-entry .form__close { right: 20px; }
 .form__link { color: #097BF3; }
 .form__link:hover { text-decoration: underline; }
 .form__img.is-right { float: right; max-width: 286px; padding-right: 109px; }
@@ -1216,6 +1219,7 @@ a { text-decoration: none; }
 .form__choice { margin: 7px 0; }
 .form__avatar { margin-bottom: 15px; max-width: 113px; }
 .form__avatar img { display: block; width: 100%; }
+.form__slash { margin: 0 5px; font-size: 12px; }
 .form__hint { display: block; margin-bottom: 7px; }
 .form__close { position: absolute; top: 50%; right: 45px; margin-top: -6.5px; font-size: 10px; color: red; opacity: 0; visibility: hidden; }
 .form__close .icon-close { color: red; }

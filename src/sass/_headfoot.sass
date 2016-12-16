@@ -92,9 +92,13 @@
 			text-decoration: none
 			pointer-events: none
 			-ms-pointer-events: none
-	&__textarea
+	&__fields
 		max-width: 600px
 		margin: 0 auto 15px
+		+clr
+	&__textarea
+		padding: 2px
+		overflow: hidden
 		.textarea
 			height: 36px
 			+tr(height 0.3s ease)
@@ -114,6 +118,10 @@
 		vertical-align: middle
 	.icon-logo-short
 		font-size: 14px
+	.calendar
+		float: right
+		padding: 2px 0 2px 15px
+
 
 .menu
 	float: left

@@ -57,9 +57,6 @@
 				&.input-sm
 					max-width: 60px
 					margin-left: 20px
-			span
-				margin: 0 5px
-				font-size: 12px
 		&.has-error
 			input,
 			.textarea
@@ -93,8 +90,10 @@
 				opacity: 1
 				visibility: visible
 		&.is-entry
-			max-width: 500px 
+			max-width: 500px
 			margin-bottom: 10px
+			.form__close
+				right: 20px
 	&__link
 		color: #097BF3
 		&:hover
@@ -119,12 +118,15 @@
 		img
 			display: block
 			width: 100%
+	&__slash
+		margin: 0 5px
+		font-size: 12px
 	&__hint
 		display: block
 		margin-bottom: 7px
 	&__close
 		position: absolute
-		top: 50% 
+		top: 50%
 		right: 45px
 		margin-top: -6.5px
 		font-size: 10px
@@ -132,7 +134,7 @@
 		opacity: 0
 		visibility: hidden
 		.icon-close
-			color: red 	
+			color: red
 	hr
 		max-width: 600px
 		margin: 15px auto 25px
