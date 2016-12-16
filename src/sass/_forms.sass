@@ -53,10 +53,11 @@
 			&.is-active
 				display: block
 			input
-				max-width: 120px
-				&.input-sm
-					max-width: 60px
-					margin-left: 20px
+				&:not([type="search"])
+					max-width: 120px
+					&.input-sm
+						max-width: 60px
+						margin-left: 20px
 		&.has-error
 			input,
 			.textarea
