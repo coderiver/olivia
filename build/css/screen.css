@@ -303,6 +303,10 @@ body .tooltipster-base { z-index: 8; }
 
 .cash-ico { width: 70px; height: 70px; background-image: url("../img/svg-bg/cash.svg"); }
 
+.att-ico { width: 50px; height: 50px; background-image: url("../img/svg-bg/att.svg"); }
+
+.cp-ico { width: 50px; height: 50px; background-image: url("../img/svg-bg/cp.svg"); }
+
 .paid-ico { width: 110px; height: 106px; background-image: url("../img/svg-bg/paid.svg"); }
 
 .funds-ico { width: 66px; height: 66px; background-image: url("../img/svg-bg/funds.svg"); }
@@ -679,8 +683,6 @@ a { text-decoration: none; }
 .suggest .customer-ico.is-disabled { background-image: url("../img/svg-bg/customer-disabled.svg"); }
 .suggest .transaction-ico { background-image: url("../img/svg-bg/transaction.svg"); }
 .suggest .transaction-ico.is-disabled { background-image: url("../img/svg-bg/transaction-disabled.svg"); }
-.suggest .att-ico { background: orange; -webkit-border-radius: 3px; border-radius: 3px; }
-.suggest .att-ico:before { content: "ATT"; display: inline-block; padding: 4px 0 0 5px; font-size: 18px; font-style: normal; color: #fff; letter-spacing: 0.1em; font-family: "opensans-semibold", Arial, sans-serif; }
 .suggest .status .icon, .suggest .status .svg-ico { width: auto; font-size: 16px; }
 .suggest .icon { width: 100%; max-width: 50px; text-align: center; font-size: 45px; vertical-align: middle; }
 .suggest .icon-firm, .suggest .icon-folder { font-size: 40px; }
@@ -1210,6 +1212,8 @@ a { text-decoration: none; }
 .form__bl.has-error .form__list, .form__bl.has-error .form__clear { padding: 0 10px; }
 .form__bl.has-error .report { padding: 13px 15px; background: #fee; border-color: #ffc0c8; }
 .form__bl.has-error .redactor-box { -webkit-box-shadow: 0 0 0 1px #FFA4AF; box-shadow: 0 0 0 1px #FFA4AF; }
+.form__bl.is-full-w { max-width: 100%; padding: 0; }
+.form__txt-wrapper { max-width: 740px; padding: 0 70px; margin: 0 auto 20px; }
 .form__mod { position: relative; }
 .form__mod:hover .form__close { opacity: 1; visibility: visible; }
 .form__mod.is-entry { max-width: 500px; margin: 10px 0; }
