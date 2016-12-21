@@ -1194,7 +1194,7 @@ a { text-decoration: none; }
 .form__bl.is-middle-size input { max-width: 340px; }
 .form__bl.is-split-fields.is-active { display: block; }
 .form__bl.is-split-fields input:not([type="search"]) { max-width: 120px; }
-.form__bl.is-split-fields input:not([type="search"]).input-sm { max-width: 60px; margin-left: 20px; }
+.form__bl.is-split-fields input:not([type="search"]).input-sm { max-width: 60px; margin-left: 17px; }
 .form__bl.has-error input, .form__bl.has-error .textarea { padding: 8px 12px; background: #FFFCFC; border-color: #FFA4AF; -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.09); box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.09); }
 .form__bl.has-error input::-webkit-input-placeholder, .form__bl.has-error .textarea::-webkit-input-placeholder { color: #6c757a; }
 .form__bl.has-error input::-moz-placeholder, .form__bl.has-error .textarea::-moz-placeholder { color: #6c757a; }
@@ -1205,7 +1205,7 @@ a { text-decoration: none; }
 .form__bl.has-error .form__list, .form__bl.has-error .form__clear { padding: 0 10px; }
 .form__bl.has-error .report { padding: 13px 15px; background: #fee; border-color: #ffc0c8; }
 .form__bl.has-error .redactor-box { -webkit-box-shadow: 0 0 0 1px #FFA4AF; box-shadow: 0 0 0 1px #FFA4AF; }
-.form__mod { position: relative; font-size: 0; }
+.form__mod { position: relative; }
 .form__mod:hover .form__close { opacity: 1; visibility: visible; }
 .form__mod.is-entry { max-width: 500px; margin: 10px 0; }
 .form__mod.is-entry .form__close { right: 30px; }
@@ -1221,7 +1221,7 @@ a { text-decoration: none; }
 .form__choice { margin: 7px 0; }
 .form__avatar { margin-bottom: 15px; max-width: 113px; }
 .form__avatar img { display: block; width: 100%; }
-.form__slash { margin: 0 5px; font-size: 12px; }
+.form__slash { margin: 0 2px; font-size: 12px; }
 .form__hint { display: block; margin-bottom: 7px; }
 .form__close { position: absolute; top: 50%; right: 45px; margin-top: -6.5px; font-size: 10px; color: red; opacity: 0; visibility: hidden; }
 .form__close .icon-close { color: red; }
