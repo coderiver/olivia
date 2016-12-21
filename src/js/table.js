@@ -123,7 +123,7 @@ $(document).ready(function() {
 				setTimeout(function() {
 					measure.each(function() {
 						// 5 stands for inline-block padding
-						var	plusBlockWidth = $(this).siblings('.js-plus-more').outerWidth() + 5;
+						var plusBlockWidth = $(this).siblings('.js-plus-more').outerWidth() + 5;
 
 						$(this).css({
 							'max-width': 'calc( 100% - ' + plusBlockWidth + 'px)'

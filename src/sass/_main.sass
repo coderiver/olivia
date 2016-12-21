@@ -9,8 +9,6 @@
 		margin-top: 0
 		margin-bottom: 30px
 		padding-top: 175px
-		.table
-			margin-bottom: 80px
 	&.sm-pad
 		padding-top: 120px
 
@@ -383,6 +381,12 @@
 	&.is-full-w
 		.activity__table
 			width: 100%
+	&.no-side-margin
+		margin: 40px 0
+	&.activity-form-mod
+		.activity__cell
+			padding: 4px 20px 4px 0
+			vertical-align: middle
 	&__ttl
 		margin-bottom: 10px
 		font-size: 17px
@@ -394,7 +398,7 @@
 		display: table-row
 	&__cell
 		display: table-cell
-		min-width: 90px 
+		min-width: 90px
 		padding: 0 10px 3px 0
 		vertical-align: top
 		&.sm-width
@@ -404,6 +408,9 @@
 		small
 			font-size: 13px
 			color: #282828
+	&__cell-ttl
+		display: block
+		max-width: 170px
 	&__link
 		text-decoration: underline
 		color: #6c757a
@@ -416,6 +423,8 @@
 		color: #097bf2
 		&:hover
 			text-decoration: underline
+	&__input
+		max-width: 100px
 
 // task
 .task

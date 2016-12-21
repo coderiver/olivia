@@ -3,15 +3,6 @@ function chooseAction() {
 	var actionBl = $('.js-action:not(".is-disabled")'),
 		 actionSiblings;
 
-	// // detect active elem on load
-	// actionBl.removeClass('is-active');
-	// actionBl.each(function() {
-	// 	var input = $(this).find('input');
-	// 	if ( input.prop('checked') ) {
-	// 		$(this).addClass('is-active');
-	// 	}
-	// });
-
 	actionBl.click(function() {
 		actionSiblings = $(this).siblings();
 

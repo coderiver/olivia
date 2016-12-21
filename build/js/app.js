@@ -145,15 +145,6 @@ $(document).ready(function() {
 		var actionBl = $('.js-action:not(".is-disabled")'),
 			 actionSiblings;
 	
-		// // detect active elem on load
-		// actionBl.removeClass('is-active');
-		// actionBl.each(function() {
-		// 	var input = $(this).find('input');
-		// 	if ( input.prop('checked') ) {
-		// 		$(this).addClass('is-active');
-		// 	}
-		// });
-	
 		actionBl.click(function() {
 			actionSiblings = $(this).siblings();
 	
@@ -358,7 +349,7 @@ $(document).ready(function() {
 				setTimeout(function() {
 					measure.each(function() {
 						// 5 stands for inline-block padding
-						var	plusBlockWidth = $(this).siblings('.js-plus-more').outerWidth() + 5;
+						var plusBlockWidth = $(this).siblings('.js-plus-more').outerWidth() + 5;
 
 						$(this).css({
 							'max-width': 'calc( 100% - ' + plusBlockWidth + 'px)'
