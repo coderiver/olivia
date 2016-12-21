@@ -379,6 +379,8 @@ body .tooltipster-base { z-index: 8; }
 .deal-radio { display: block; }
 
 .radio { display: inline-block; }
+.radio.is-full-w { display: block; }
+.radio.is-full-w .radio__span { width: 100%; color: #282828; }
 .radio input:checked + span { color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
 .radio input:checked + span:before { background-color: #6c757a; border-color: #6c757a; }
 
