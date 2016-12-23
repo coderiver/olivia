@@ -567,7 +567,6 @@ a { text-decoration: none; }
 .header.is-form { min-height: auto; position: fixed; min-width: 1040px; top: 0; left: 0; right: 0; background: #FFF; z-index: 7; border-bottom: 1px solid #dee1e7; }
 .header.is-form .header__in { position: relative; padding: 0; -webkit-box-shadow: 0px 1px 0px 0px #dee1e7; box-shadow: 0px 1px 0px 0px #dee1e7; }
 .header.is-staff .menu { margin-left: 5px; }
-.header.is-top-bar { top: 30px; }
 .header__in { padding: 15px 0; *zoom: 1; }
 .header__in:after { content: " "; display: table; clear: both; }
 .header__logo { float: left; margin-top: 9px; color: #fff; }
@@ -700,6 +699,7 @@ a { text-decoration: none; }
 .main { margin-top: -90px; }
 .main__in { min-height: 400px; background: #fff; border: 1px solid #dce0e7; -webkit-border-radius: 6px; border-radius: 6px; }
 .main.is-form { margin-top: 0; margin-bottom: 30px; padding-top: 175px; }
+.main.is-top-bar { padding-top: 210px; }
 .main.sm-pad { padding-top: 120px; }
 
 .upper { position: relative; min-height: 90px; margin-bottom: 20px; padding: 18px 18px 8px; background: #f7f8f9; border-bottom: 1px solid #dce0e7; -webkit-border-radius: 6px 6px 0 0; border-radius: 6px 6px 0 0; }
@@ -813,7 +813,7 @@ a { text-decoration: none; }
 .activity__more { color: #96a0a6; }
 .activity__name { margin-right: 5px; color: #097bf2; }
 .activity__name:hover { text-decoration: underline; }
-.activity__input { max-width: 100px; }
+.activity__input { max-width: 160px; }
 .activity__input input { max-width: -webkit-calc(100% - 20px); max-width: calc(100% - 20px); }
 .activity__slash { width: 14px; padding: 0 2px; }
 
@@ -1199,6 +1199,10 @@ a { text-decoration: none; }
 .form:after { content: " "; display: table; clear: both; }
 .form:only-child { margin-bottom: 60px; }
 .form.is-full-w .form__bl { max-width: 100%; padding: 0; }
+.form.is-full-w .form__ttl, .form.is-full-w .form__subtttl, .form.is-full-w .form__hint { max-width: 600px; }
+.form.is-full-w .form__ttl { margin: 0 auto 20px; }
+.form.is-full-w .form__subtttl { margin: 0 auto 10px; }
+.form.is-full-w .form__hint { margin: 0 auto 7px; }
 .form.is-max-w .form__bl { max-width: 580px; padding-left: 0; }
 .form__ttl { margin-bottom: 20px; font-size: 18px; color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
 .form__ttl.s-bottom-margin { margin-bottom: 5px; }
