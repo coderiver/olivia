@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Слой_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px"
-	 viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 49.392 49.391"
+	 style="enable-background:new 0 0 49.392 49.391;" xml:space="preserve">
 <title>action add payment</title>
 <desc>Created with Sketch.</desc>
-<g id="assets" sketch:type="MSPage">
-	<g id="action-add-payment" sketch:type="MSLayerGroup">
-		<rect id="Rectangle-path" sketch:type="MSShapeGroup" fill="none" width="50" height="50">
-		</rect>
-		<path id="Oval" sketch:type="MSShapeGroup" fill="#2CAF24" d="M24.696,49.391c13.639,0,24.696-11.057,24.696-24.696
-			S38.334,0,24.696,0S0,11.057,0,24.696S11.057,49.391,24.696,49.391z"/>
-		<path id="_x24_" sketch:type="MSShapeGroup" fill="#FFFFFF" d="M28.35,20.2l4.46-0.533c-0.266-4.16-2.729-5.891-5.725-6.257
-			v-2.962h-4.227v2.996c-3.195,0.732-5.758,2.962-5.758,6.69c0,4.826,3.561,6.091,6.723,6.956c2.43,0.666,4.593,1.198,4.593,3.395
-			c0,1.831-1.431,2.696-3.495,2.696c-2.962,0-3.694-1.331-4.094-3.794l-4.393,0.832c0.499,4.726,3.195,6.257,6.157,6.657v2.663h4.26
-			v-2.663c3.661-0.599,6.49-2.896,6.49-7.089c0-4.826-3.561-5.958-6.856-6.856c-2.729-0.732-4.294-1.531-4.294-3.528
-			c0-1.365,0.899-2.363,2.962-2.363C27.351,17.038,28.05,18.137,28.35,20.2z"/>
-	</g>
+<g id="action-add-payment" sketch:type="MSLayerGroup">
+	<rect id="Rectangle-path" sketch:type="MSShapeGroup" style="display:none;fill:none;" width="50" height="50">
+	</rect>
+	<path id="Oval" sketch:type="MSShapeGroup" style="fill:#2CAF24;" d="M24.696,49.391c13.639,0,24.696-11.057,24.696-24.696
+		S38.334,0,24.696,0S0,11.057,0,24.696S11.057,49.391,24.696,49.391z"/>
+	<path id="_x24_" sketch:type="MSShapeGroup" style="fill:#FFFFFF;" d="M28.35,20.2l4.46-0.533c-0.266-4.16-2.729-5.891-5.725-6.257
+		v-2.962h-4.227v2.996c-3.195,0.732-5.758,2.962-5.758,6.69c0,4.826,3.561,6.091,6.723,6.956c2.43,0.666,4.593,1.198,4.593,3.395
+		c0,1.831-1.431,2.696-3.495,2.696c-2.962,0-3.694-1.331-4.094-3.794l-4.393,0.832c0.499,4.726,3.195,6.257,6.157,6.657v2.663h4.26
+		v-2.663c3.661-0.599,6.49-2.896,6.49-7.089c0-4.826-3.561-5.958-6.856-6.856c-2.729-0.732-4.294-1.531-4.294-3.528
+		c0-1.365,0.899-2.363,2.962-2.363C27.351,17.038,28.05,18.137,28.35,20.2z"/>
 </g>
 </svg>
