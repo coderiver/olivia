@@ -1146,6 +1146,7 @@ a { text-decoration: none; }
 .table tr.is-archive .description .icon-news { color: #cfd5e0; }
 .table tr.is-archive .table__name { color: #96a0a6; }
 .table tr.table__head:hover { background: #f7f8f9; }
+.table tr.is-total:hover { background: none; }
 .table tr.is-total td { border-color: transparent; }
 .table tr.is-selected { background: #FFFAEB; }
 .table th { padding: 0; font-size: 0; }
