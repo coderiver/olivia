@@ -55,57 +55,55 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-comment:before { content: ""; }
 
-.icon-corp:before { content: ""; }
+.icon-customer2:before { content: ""; }
 
-.icon-customer2:before { content: ""; }
+.icon-deal-team:before { content: ""; }
 
-.icon-deal-team:before { content: ""; }
+.icon-deals-team-archived:before { content: ""; }
 
-.icon-deals-team-archived:before { content: ""; }
+.icon-deals-team-closed:before { content: ""; }
 
-.icon-deals-team-closed:before { content: ""; }
+.icon-delete:before { content: ""; }
 
-.icon-delete:before { content: ""; }
+.icon-filter:before { content: ""; }
 
-.icon-filter:before { content: ""; }
+.icon-firm:before { content: ""; }
 
-.icon-firm:before { content: ""; }
+.icon-folder-checked:before { content: ""; }
 
-.icon-folder-checked:before { content: ""; }
+.icon-folder:before { content: ""; }
 
-.icon-folder:before { content: ""; }
+.icon-letter:before { content: ""; }
 
-.icon-letter:before { content: ""; }
+.icon-lock:before { content: ""; }
 
-.icon-lock:before { content: ""; }
+.icon-logo-short:before { content: ""; }
 
-.icon-logo-short:before { content: ""; }
+.icon-logo:before { content: ""; }
 
-.icon-logo:before { content: ""; }
+.icon-marked:before { content: ""; }
 
-.icon-marked:before { content: ""; }
+.icon-menu:before { content: ""; }
 
-.icon-menu:before { content: ""; }
+.icon-news:before { content: ""; }
 
-.icon-news:before { content: ""; }
+.icon-pending:before { content: ""; }
 
-.icon-pending:before { content: ""; }
+.icon-plus:before { content: ""; }
 
-.icon-plus:before { content: ""; }
+.icon-sidebar:before { content: ""; }
 
-.icon-sidebar:before { content: ""; }
+.icon-square-arr:before { content: ""; }
 
-.icon-square-arr:before { content: ""; }
+.icon-star:before { content: ""; }
 
-.icon-star:before { content: ""; }
+.icon-team:before { content: ""; }
 
-.icon-team:before { content: ""; }
+.icon-upload:before { content: ""; }
 
-.icon-upload:before { content: ""; }
+.icon-warn:before { content: ""; }
 
-.icon-warn:before { content: ""; }
-
-.icon-zoom:before { content: ""; }
+.icon-zoom:before { content: ""; }
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default { -webkit-border-radius: 5px; border-radius: 5px; border: 2px solid #000; background: #4c4c4c; color: #fff; }
@@ -274,17 +272,17 @@ body .tooltipster-base { z-index: 8; }
 
 .svg-ico { display: inline-block; background-repeat: no-repeat; background-position: 0 0; background-size: contain; vertical-align: top; }
 
-.memo-ico { width: 70px; height: 70px; background-image: url("../img/svg-bg/memo-small.svg"); }
-.memo-ico.is-disabled { background-image: url("../img/svg-bg/memo-small-disabled.svg"); }
+.memo-ico { width: 70px; height: 70px; background-image: url("../img/svg-bg/memo-sm.svg"); }
+.memo-ico.is-disabled { background-image: url("../img/svg-bg/memo-sm-disabled.svg"); }
 
-.customer-ico { width: 70px; height: 70px; background-image: url("../img/svg-bg/customer-small.svg"); }
-.customer-ico.is-disabled { background-image: url("../img/svg-bg/customer-small-disabled.svg"); }
+.customer-ico { width: 70px; height: 70px; background-image: url("../img/svg-bg/customer-sm.svg"); }
+.customer-ico.is-disabled { background-image: url("../img/svg-bg/customer-sm-disabled.svg"); }
 
-.letter-ico { width: 70px; height: 70px; background-image: url("../img/svg-bg/letter-small.svg"); }
-.letter-ico.is-disabled { background-image: url("../img/svg-bg/letter-small-disabled.svg"); }
+.letter-ico { width: 70px; height: 70px; background-image: url("../img/svg-bg/letter-sm.svg"); }
+.letter-ico.is-disabled { background-image: url("../img/svg-bg/letter-sm-disabled.svg"); }
 
-.transaction-ico { width: 70px; height: 70px; background-image: url("../img/svg-bg/transaction-small.svg"); }
-.transaction-ico.is-disabled { background-image: url("../img/svg-bg/transaction-small-disabled.svg"); }
+.transaction-ico { width: 70px; height: 70px; background-image: url("../img/svg-bg/transaction-sm.svg"); }
+.transaction-ico.is-disabled { background-image: url("../img/svg-bg/transaction-sm-disabled.svg"); }
 
 .library-ico { width: 70px; height: 70px; background-image: url("../img/svg-bg/library.svg"); }
 .library-ico.is-disabled { background-image: url("../img/svg-bg/library-disabled.svg"); }
@@ -307,9 +305,11 @@ body .tooltipster-base { z-index: 8; }
 
 .att-ico { width: 50px; height: 50px; background-image: url("../img/svg-bg/att.svg"); }
 
-.cp-ico { width: 50px; height: 50px; background-image: url("../img/svg-bg/cp.svg"); }
+.cp-ico { width: 50px; height: 50px; background-image: url("../img/svg-bg/cp-sm.svg"); }
+.cp-ico.is-disabled { background-image: url("../img/svg-bg/cp-sm-disabled.svg"); }
 
-.cc-ico { width: 50px; height: 50px; background-image: url("../img/svg-bg/cc.svg"); }
+.cc-ico { width: 16px; height: 16px; background-image: url("../img/svg-bg/cc-sm.svg"); }
+.cc-ico.is-disabled { background-image: url("../img/svg-bg/cc-sm-disabled.svg"); }
 
 .paid-ico { width: 110px; height: 106px; background-image: url("../img/svg-bg/paid.svg"); }
 
@@ -335,8 +335,8 @@ body .tooltipster-base { z-index: 8; }
 
 .entity-ico { width: 56px; height: 56px; background-image: url("../img/svg-bg/entity.svg"); }
 
-.icon-customer2, .icon-corp { color: #3caca2; }
-.icon-customer2.is-disabled, .icon-corp.is-disabled { color: #CFD5E0; }
+.icon-customer2 { color: #3caca2; }
+.icon-customer2.is-disabled { color: #CFD5E0; }
 
 .icon-clip { color: #BCC6CC; }
 
@@ -694,6 +694,8 @@ a { text-decoration: none; }
 .suggest .customer-ico.is-disabled { background-image: url("../img/svg-bg/customer-disabled.svg"); }
 .suggest .transaction-ico { background-image: url("../img/svg-bg/transaction.svg"); }
 .suggest .transaction-ico.is-disabled { background-image: url("../img/svg-bg/transaction-disabled.svg"); }
+.suggest .cc-ico { background-image: url("../img/svg-bg/cc.svg"); }
+.suggest .cp-ico { background-image: url("../img/svg-bg/cp.svg"); }
 .suggest .status .icon, .suggest .status .svg-ico { width: auto; font-size: 16px; }
 .suggest .icon { width: 100%; max-width: 50px; text-align: center; font-size: 45px; vertical-align: middle; }
 .suggest .icon-firm, .suggest .icon-folder { font-size: 40px; }
