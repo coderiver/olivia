@@ -1240,6 +1240,7 @@ a { text-decoration: none; }
 .form__bl.is-full-w .form__hint { margin: 0 auto 7px; }
 .form__bl.is-full-w .errorlist { margin: 7px auto; }
 .form__txt-wrapper { max-width: 740px; padding: 0 70px; margin: 0 auto 20px; }
+.form__txt-wrapper.is-margin-top { margin-top: 20px; }
 .form__mod { position: relative; }
 .form__mod:hover .form__close { opacity: 1; visibility: visible; }
 .form__mod.is-entry { max-width: 500px; margin: 10px 0; }
