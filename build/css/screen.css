@@ -67,45 +67,49 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-dollar:before { content: ""; }
 
-.icon-filter:before { content: ""; }
+.icon-euro:before { content: ""; }
 
-.icon-firm:before { content: ""; }
+.icon-filter:before { content: ""; }
 
-.icon-folder-checked:before { content: ""; }
+.icon-firm:before { content: ""; }
 
-.icon-folder:before { content: ""; }
+.icon-folder-checked:before { content: ""; }
 
-.icon-letter:before { content: ""; }
+.icon-folder:before { content: ""; }
 
-.icon-lock:before { content: ""; }
+.icon-letter:before { content: ""; }
 
-.icon-logo-short:before { content: ""; }
+.icon-lock:before { content: ""; }
 
-.icon-logo:before { content: ""; }
+.icon-logo-short:before { content: ""; }
 
-.icon-marked:before { content: ""; }
+.icon-logo:before { content: ""; }
 
-.icon-menu:before { content: ""; }
+.icon-marked:before { content: ""; }
 
-.icon-news:before { content: ""; }
+.icon-menu:before { content: ""; }
 
-.icon-pending:before { content: ""; }
+.icon-news:before { content: ""; }
 
-.icon-plus:before { content: ""; }
+.icon-pending:before { content: ""; }
 
-.icon-sidebar:before { content: ""; }
+.icon-plus:before { content: ""; }
 
-.icon-square-arr:before { content: ""; }
+.icon-pound:before { content: ""; }
 
-.icon-star:before { content: ""; }
+.icon-sidebar:before { content: ""; }
 
-.icon-team:before { content: ""; }
+.icon-square-arr:before { content: ""; }
 
-.icon-upload:before { content: ""; }
+.icon-star:before { content: ""; }
 
-.icon-warn:before { content: ""; }
+.icon-team:before { content: ""; }
 
-.icon-zoom:before { content: ""; }
+.icon-upload:before { content: ""; }
+
+.icon-warn:before { content: ""; }
+
+.icon-zoom:before { content: ""; }
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default { -webkit-border-radius: 5px; border-radius: 5px; border: 2px solid #000; background: #4c4c4c; color: #fff; }
@@ -1269,7 +1273,7 @@ a { text-decoration: none; }
 .form__hint { display: block; margin-bottom: 7px; }
 .form__close { position: absolute; top: 50%; right: 45px; margin-top: -6.5px; font-size: 10px; color: red; opacity: 0; visibility: hidden; }
 .form__close .icon-close { color: red; }
-.form__select-wrapper { display: inline-block; width: 100%; max-width: 200px; padding-right: 10px; vertical-align: middle; }
+.form__select-wrapper { display: inline-block; width: 100%; max-width: 200px; margin: 0 10px; padding-right: 10px; vertical-align: middle; }
 .form__select-wrapper_max-w { max-width: 120px; }
 .form__select-wrapper .select2 { display: block; width: 100%; }
 .form hr { max-width: 600px; margin: 15px auto 25px; border: none; border-top: 1px solid #cfd5e0; }
@@ -1352,7 +1356,8 @@ a { text-decoration: none; }
 .popup__el .icon { font-size: 16px; vertical-align: -3px; }
 .popup__choose { position: relative; padding-top: 13px; font-size: 0; *zoom: 1; }
 .popup__choose:after { content: " "; display: table; clear: both; }
-.popup__choose .popup__el { width: 25%; text-align: center; font-size: 14px; padding: 5px 0; color: #097bf2; vertical-align: top; }
+.popup__choose .popup__el:nth-last-child(n+4), .popup__choose .popup__el:nth-last-child(n+4) ~ .popup__el { width: 25%; }
+.popup__choose .popup__el { width: 33%; text-align: center; font-size: 14px; padding: 5px 0; color: #097bf2; vertical-align: top; }
 .popup__choose .popup__el:hover { text-decoration: underline; }
 .popup__choose .svg-ico { width: 56px; height: 56px; margin-bottom: 10px; background-size: 56px 56px; vertical-align: middle; }
 .popup__choose .icon { margin-right: 16px; vertical-align: middle; }
@@ -1387,6 +1392,11 @@ a { text-decoration: none; }
 .popup__news ol { list-style-type: decimal; }
 .popup__definition { position: relative; display: inline-block; }
 .popup__definition .tooltip { position: absolute; top: -3px; left: 100%; margin-left: 5px; }
+.popup__currency { width: 56px; height: 56px; margin: 0 auto 10px; -webkit-border-radius: 50%; border-radius: 50%; background: #3BA99F; color: #FFF; text-align: center; font-size: 0; }
+.popup__currency:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.popup__currency .icon { font-size: 31px; margin-right: 0; vertical-align: middle; }
+.popup__currency .icon-dollar { font-size: 35px; }
+.popup__currency .icon-euro { margin-right: 2px; }
 .popup .txt-bold { font-family: "opensans-semibold", Arial, sans-serif; }
 .popup .icon-close { position: absolute; top: 50%; right: 20px; margin-top: -7.5px; font-size: 13px; cursor: pointer; -webkit-transition: color 0.3s; transition: color 0.3s; }
 .popup .icon-close:only-child { position: static; float: right; margin-top: 0; }

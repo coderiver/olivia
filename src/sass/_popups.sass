@@ -118,8 +118,11 @@
 		padding-top: 13px
 		font-size: 0
 		+clr
+		.popup__el:nth-last-child(n+4), 
+		.popup__el:nth-last-child(n+4) ~ .popup__el
+			width: 25% 
 		.popup__el
-			width: 25%
+			width: 33%
 			text-align: center
 			font-size: 14px
 			padding: 5px 0
@@ -233,6 +236,22 @@
 			top: -3px
 			left: 100%
 			margin-left: 5px
+	&__currency
+		width: 56px
+		height: 56px
+		margin: 0 auto 10px 
+		border-radius: 50%   	
+		background: #3BA99F 
+		color: #FFF 
+		+vertical	
+		.icon
+			font-size: 31px
+			margin-right: 0 
+			vertical-align: middle 
+		.icon-dollar
+			font-size: 35px 
+		.icon-euro
+			margin-right: 2px 	
 	.txt-bold
 		+opensans-sb
 	.icon-close
