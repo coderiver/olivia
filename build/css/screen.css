@@ -65,45 +65,47 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-delete:before { content: ""; }
 
-.icon-filter:before { content: ""; }
+.icon-dollar:before { content: ""; }
 
-.icon-firm:before { content: ""; }
+.icon-filter:before { content: ""; }
 
-.icon-folder-checked:before { content: ""; }
+.icon-firm:before { content: ""; }
 
-.icon-folder:before { content: ""; }
+.icon-folder-checked:before { content: ""; }
 
-.icon-letter:before { content: ""; }
+.icon-folder:before { content: ""; }
 
-.icon-lock:before { content: ""; }
+.icon-letter:before { content: ""; }
 
-.icon-logo-short:before { content: ""; }
+.icon-lock:before { content: ""; }
 
-.icon-logo:before { content: ""; }
+.icon-logo-short:before { content: ""; }
 
-.icon-marked:before { content: ""; }
+.icon-logo:before { content: ""; }
 
-.icon-menu:before { content: ""; }
+.icon-marked:before { content: ""; }
 
-.icon-news:before { content: ""; }
+.icon-menu:before { content: ""; }
 
-.icon-pending:before { content: ""; }
+.icon-news:before { content: ""; }
 
-.icon-plus:before { content: ""; }
+.icon-pending:before { content: ""; }
 
-.icon-sidebar:before { content: ""; }
+.icon-plus:before { content: ""; }
 
-.icon-square-arr:before { content: ""; }
+.icon-sidebar:before { content: ""; }
 
-.icon-star:before { content: ""; }
+.icon-square-arr:before { content: ""; }
 
-.icon-team:before { content: ""; }
+.icon-star:before { content: ""; }
 
-.icon-upload:before { content: ""; }
+.icon-team:before { content: ""; }
 
-.icon-warn:before { content: ""; }
+.icon-upload:before { content: ""; }
 
-.icon-zoom:before { content: ""; }
+.icon-warn:before { content: ""; }
+
+.icon-zoom:before { content: ""; }
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default { -webkit-border-radius: 5px; border-radius: 5px; border: 2px solid #000; background: #4c4c4c; color: #fff; }
@@ -804,6 +806,9 @@ a { text-decoration: none; }
 .activity.md-font { font-size: 14px; }
 .activity.no-side-margin { margin: 40px 0; }
 .activity.sm-margin { margin: 15px 0; }
+.activity.is-full-w .activity__table { width: 100%; }
+.activity.activity-form-mod .activity__table { margin: 0 auto; }
+.activity.activity-form-mod .activity__cell { padding: 4px 20px 4px 0; vertical-align: middle; }
 .activity__ttl { margin-bottom: 10px; font-size: 17px; color: #282828; }
 .activity__table { display: table; margin-bottom: 8px; }
 .activity__row { display: table-row; }
@@ -811,11 +816,15 @@ a { text-decoration: none; }
 .activity__cell.sm-width { width: 22%; }
 .activity__cell.m-width { width: 50%; }
 .activity__cell small { font-size: 13px; color: #282828; }
+.activity__cell-ttl { display: block; max-width: 170px; }
 .activity__link { text-decoration: underline; color: #6c757a; }
 .activity__link:hover { text-decoration: none; }
 .activity__more { color: #96a0a6; }
 .activity__name { margin-right: 5px; color: #097bf2; }
 .activity__name:hover { text-decoration: underline; }
+.activity__input { max-width: 160px; }
+.activity__input input { max-width: -webkit-calc(100% - 20px); max-width: calc(100% - 20px); }
+.activity__slash { width: 14px; padding: 0 2px; }
 .activity__hint { font-style: italic; }
 .activity__bold { font-family: "opensans-semibold", Arial, sans-serif; }
 
@@ -1219,9 +1228,9 @@ a { text-decoration: none; }
 .form__bl.is-middle-size { font-size: 0; }
 .form__bl.is-middle-size input { max-width: 340px; }
 .form__bl.is-split-fields.is-active { display: block; }
-.form__bl.is-split-fields input:not([type="search"]) { max-width: 120px; }
+.form__bl.is-split-fields input:not([type="search"]) { max-width: 120px; margin: 0 10px; }
 .form__bl.is-split-fields input:not([type="search"]).input-sm { max-width: 60px; }
-.form__bl.is-split-fields input:not([type="search"]).input-margin-left { margin-left: 17px; }
+.form__bl.is-split-fields input:not([type="search"]).input-no-margin-right { margin-right: 0; }
 .form__bl.has-error input, .form__bl.has-error .textarea { padding: 8px 12px; background: #FFFCFC; border-color: #FFA4AF; -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.09); box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.09); }
 .form__bl.has-error input::-webkit-input-placeholder, .form__bl.has-error .textarea::-webkit-input-placeholder { color: #6c757a; }
 .form__bl.has-error input::-moz-placeholder, .form__bl.has-error .textarea::-moz-placeholder { color: #6c757a; }
@@ -1242,9 +1251,9 @@ a { text-decoration: none; }
 .form__txt-wrapper.is-margin-top { margin-top: 30px; }
 .form__mod { position: relative; }
 .form__mod:hover .form__close { opacity: 1; visibility: visible; }
-.form__mod.is-entry { max-width: 500px; margin: 10px 0; }
+.form__mod.is-entry { max-width: 500px; margin: 10px -10px; }
 .form__mod.is-entry .form__close { right: 30px; }
-.form__mod.is-entry .dropdown { vertical-align: middle; }
+.form__mod.is-entry .dropdown { margin: 0 10px; vertical-align: middle; }
 .form__mod.is-entry input { vertical-align: middle; }
 .form__link { color: #097BF3; }
 .form__link:hover { text-decoration: underline; }

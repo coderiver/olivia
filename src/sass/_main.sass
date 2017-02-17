@@ -385,7 +385,16 @@
 	&.no-side-margin
 		margin: 40px 0
 	&.sm-margin
-		margin: 15px 0	
+		margin: 15px 0
+	&.is-full-w
+		.activity__table
+			width: 100%	
+	&.activity-form-mod
+		.activity__table
+			margin: 0 auto
+		.activity__cell
+			padding: 4px 20px 4px 0
+			vertical-align: middle			
 	&__ttl
 		margin-bottom: 10px
 		font-size: 17px
@@ -407,6 +416,9 @@
 		small
 			font-size: 13px
 			color: #282828
+	&__cell-ttl
+		display: block
+		max-width: 170px		
 	&__link
 		text-decoration: underline
 		color: #6c757a
@@ -419,6 +431,13 @@
 		color: #097bf2
 		&:hover
 			text-decoration: underline
+	&__input
+		max-width: 160px
+		input
+			max-width: calc(100% - 20px)
+	&__slash
+		width: 14px
+		padding: 0 2px		
 	&__hint
 		font-style: italic 	
 	&__bold

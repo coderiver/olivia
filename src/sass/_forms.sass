@@ -58,10 +58,11 @@
 			input
 				&:not([type="search"])
 					max-width: 120px
+					margin: 0 10px 
 					&.input-sm
 						max-width: 60px
-					&.input-margin-left
-						margin-left: 17px
+					&.input-no-margin-right
+						margin-right: 0
 		&.has-error
 			input,
 			.textarea
@@ -117,10 +118,11 @@
 				visibility: visible
 		&.is-entry
 			max-width: 500px
-			margin: 10px 0
+			margin: 10px -10px
 			.form__close
 				right: 30px
 			.dropdown
+				margin: 0 10px 
 				vertical-align: middle
 			input
 				vertical-align: middle
