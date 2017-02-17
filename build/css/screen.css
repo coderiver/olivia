@@ -801,11 +801,9 @@ a { text-decoration: none; }
 .deal .tooltip:only-child { margin-bottom: 0; }
 
 .activity { margin: 40px 17px; font-size: 13px; color: #6c757a; }
-.activity.is-full-w .activity__table { width: 100%; }
+.activity.md-font { font-size: 14px; }
 .activity.no-side-margin { margin: 40px 0; }
 .activity.sm-margin { margin: 15px 0; }
-.activity.activity-form-mod .activity__table { margin: 0 auto; }
-.activity.activity-form-mod .activity__cell { padding: 4px 20px 4px 0; vertical-align: middle; }
 .activity__ttl { margin-bottom: 10px; font-size: 17px; color: #282828; }
 .activity__table { display: table; margin-bottom: 8px; }
 .activity__row { display: table-row; }
@@ -813,15 +811,13 @@ a { text-decoration: none; }
 .activity__cell.sm-width { width: 22%; }
 .activity__cell.m-width { width: 50%; }
 .activity__cell small { font-size: 13px; color: #282828; }
-.activity__cell-ttl { display: block; max-width: 170px; }
 .activity__link { text-decoration: underline; color: #6c757a; }
 .activity__link:hover { text-decoration: none; }
 .activity__more { color: #96a0a6; }
 .activity__name { margin-right: 5px; color: #097bf2; }
 .activity__name:hover { text-decoration: underline; }
-.activity__input { max-width: 160px; }
-.activity__input input { max-width: -webkit-calc(100% - 20px); max-width: calc(100% - 20px); }
-.activity__slash { width: 14px; padding: 0 2px; }
+.activity__hint { font-style: italic; }
+.activity__bold { font-family: "opensans-semibold", Arial, sans-serif; }
 
 .task { max-width: 700px; margin: 15px auto 0; }
 .task__num { font-size: 13px; color: #6c757a; *zoom: 1; }
@@ -1120,6 +1116,7 @@ a { text-decoration: none; }
 .table__text a { color: #6c757a; font-family: "opensans-semibold", Arial, sans-serif; }
 .table__activity a { text-decoration: underline; }
 .table__activity a:hover { text-decoration: none; }
+.table__bold { font-family: "opensans-semibold", Arial, sans-serif; }
 .table span.table__text { display: inline-block; }
 .table .table__head { background: #f7f8f9; text-align: left; }
 .table .table__head.is-full-border { border: 1px solid #dce0e7; }
