@@ -122,4 +122,17 @@ $(document).ready(function() {
 
 	showNews();
 
+	// commission payment popup
+	function showCurrency() {
+		var username = $('.js-username'),
+				currency = $('.js-deal-currency');
+
+		username.click(function(e) {
+			e.preventDefault();
+			currency.show();
+		});
+	}
+
+	showCurrency();
+
 });

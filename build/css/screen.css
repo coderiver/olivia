@@ -1354,10 +1354,8 @@ a { text-decoration: none; }
 .popup__el.is-search { width: 100%; max-width: 420px; }
 .popup__el .svg-ico { width: 16px; height: 16px; background-size: 16px 16px; vertical-align: -3px; }
 .popup__el .icon { font-size: 16px; vertical-align: -3px; }
-.popup__choose { position: relative; padding-top: 13px; font-size: 0; *zoom: 1; }
-.popup__choose:after { content: " "; display: table; clear: both; }
-.popup__choose .popup__el:nth-last-child(n+4), .popup__choose .popup__el:nth-last-child(n+4) ~ .popup__el { width: 25%; }
-.popup__choose .popup__el { width: 33%; text-align: center; font-size: 14px; padding: 5px 0; color: #097bf2; vertical-align: top; }
+.popup__choose { position: relative; display: table; width: 100%; padding-top: 13px; font-size: 0; table-layout: fixed; }
+.popup__choose .popup__el { float: none; display: table-cell; vertical-align: top; text-align: center; padding: 5px 0; font-size: 14px; color: #097bf2; }
 .popup__choose .popup__el:hover { text-decoration: underline; }
 .popup__choose .svg-ico { width: 56px; height: 56px; margin-bottom: 10px; background-size: 56px 56px; vertical-align: middle; }
 .popup__choose .icon { margin-right: 16px; vertical-align: middle; }
@@ -1509,20 +1507,28 @@ a { text-decoration: none; }
 .history__ttl { margin-bottom: 22px; font-size: 16px; color: #282828; }
 .history__in { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .history__align-right { text-align: right; }
+
+.js-deal-currency { display: none; }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
+
 @media only screen and (max-width: 1300px){
  .fake-header.is-fixed{ left: 0; min-width: 1040px; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
  .filters.is-fixed{ left: 0; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); } }
+
 @media only screen and (max-width: 1200px){
  .dropdown__name span{ display: none; }
  .dropdown__img{ margin-right: 0; }
  .dropdown__name{ display: none; } }
+
 @media only screen and (max-width: 1020px){
  .helpers .dropdown:first-child{ margin-right: 10px; }
  .helpers .dropdown__item:before{ display: none; } }
+
 @media only screen and (max-width: 1000px){
  .actions{ text-align: left; margin-left: -10px; margin-right: -10px; } }
+
 @media print{
  .start .icon-folder:after{ display: none; }
  .arrow-block{ display: none; }

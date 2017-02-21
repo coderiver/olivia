@@ -115,19 +115,19 @@
 			vertical-align: -3px
 	&__choose
 		position: relative
+		display: table
+		width: 100%
 		padding-top: 13px
 		font-size: 0
-		+clr
-		.popup__el:nth-last-child(n+4), 
-		.popup__el:nth-last-child(n+4) ~ .popup__el
-			width: 25% 
+		table-layout: fixed
 		.popup__el
-			width: 33%
-			text-align: center
-			font-size: 14px
-			padding: 5px 0
-			color: #097bf2
+			float: none
+			display: table-cell
 			vertical-align: top
+			text-align: center
+			padding: 5px 0
+			font-size: 14px
+			color: #097bf2
 			&:hover
 				text-decoration: underline
 		.svg-ico
@@ -239,19 +239,19 @@
 	&__currency
 		width: 56px
 		height: 56px
-		margin: 0 auto 10px 
-		border-radius: 50%   	
-		background: #3BA99F 
-		color: #FFF 
-		+vertical	
+		margin: 0 auto 10px
+		border-radius: 50%
+		background: #3BA99F
+		color: #FFF
+		+vertical
 		.icon
 			font-size: 31px
-			margin-right: 0 
-			vertical-align: middle 
+			margin-right: 0
+			vertical-align: middle
 		.icon-dollar
-			font-size: 35px 
+			font-size: 35px
 		.icon-euro
-			margin-right: 2px 	
+			margin-right: 2px
 	.txt-bold
 		+opensans-sb
 	.icon-close
@@ -633,5 +633,8 @@
 		white-space: nowrap
 	&__align-right
 		text-align: right
+
+.js-deal-currency
+	display: none
 
 
