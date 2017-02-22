@@ -129,6 +129,10 @@ $(document).ready(function() {
 
 		username.click(function(e) {
 			e.preventDefault();
+			if (!$(this).hasClass('is-active')) {
+				username.removeClass('is-active');
+				$(this).addClass('is-active');
+			}
 			currency.show();
 		});
 	}

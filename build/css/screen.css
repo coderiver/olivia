@@ -1395,6 +1395,7 @@ a { text-decoration: none; }
 .popup__currency .icon { font-size: 31px; margin-right: 0; vertical-align: middle; }
 .popup__currency .icon-dollar { font-size: 35px; }
 .popup__currency .icon-euro { margin-right: 2px; }
+.popup__username.is-active .popup-list__span { font-family: "opensans-semibold", Arial, sans-serif; }
 .popup .txt-bold { font-family: "opensans-semibold", Arial, sans-serif; }
 .popup .icon-close { position: absolute; top: 50%; right: 20px; margin-top: -7.5px; font-size: 13px; cursor: pointer; -webkit-transition: color 0.3s; transition: color 0.3s; }
 .popup .icon-close:only-child { position: static; float: right; margin-top: 0; }
