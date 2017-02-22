@@ -9,6 +9,30 @@
 		margin-top: 0
 		margin-bottom: 30px
 		padding-top: 175px
+		.ui-select-container
+			&.select2-container
+				.select2-choice
+					height: 35px
+					line-height: 35px
+					border: 1px solid #cfd5e0
+					background-image: none
+					background-color: #f7f8f9
+				.select2-arrow
+					border-left: 1px solid #cfd5e0
+					b
+						background-position: 0 3px
+			&.select2-dropdown-open
+				.select2-choice
+					background-image: none
+					background: #fafafa
+				.select2-choice .select2-arrow b
+					background-position: -18px 3px
+			&.select2-container-active
+				.select2-choice,
+				.select2-container-active .select2-choices
+					border-color: #cfd5e0
+			.select2-drop-active
+				border-color: #cfd5e0
 	&.is-top-bar
 		padding-top: 210px
 	&.sm-pad
