@@ -63,7 +63,7 @@
 		+clr
 	&__option
 		float: left
-		margin-left: 30px
+		margin-left: 25px
 		&:first-child
 			margin-left: 0
 	&__link
@@ -91,6 +91,13 @@
 			&:before,
 			&:after
 				display: block
+	&__full
+		+r(1365)
+			display: none
+	&__shortcut
+		font-size: 0
+		+r(1365)
+			font-size: 14px
 	.add-btn
 		position: absolute
 		right: 23px
@@ -381,20 +388,20 @@
 	font-size: 13px
 	color: #6c757a
 	&.md-font
-		font-size: 14px 
+		font-size: 14px
 	&.no-side-margin
 		margin: 40px 0
 	&.sm-margin
 		margin: 15px 0
 	&.is-full-w
 		.activity__table
-			width: 100%	
+			width: 100%
 	&.activity-form-mod
 		.activity__table
 			margin: 0 auto
 		.activity__cell
 			padding: 4px 20px 4px 0
-			vertical-align: middle			
+			vertical-align: middle
 	&__ttl
 		margin-bottom: 10px
 		font-size: 17px
@@ -418,7 +425,7 @@
 			color: #282828
 	&__cell-ttl
 		display: block
-		max-width: 170px		
+		max-width: 170px
 	&__link
 		text-decoration: underline
 		color: #6c757a
@@ -437,11 +444,11 @@
 			max-width: calc(100% - 20px)
 	&__slash
 		width: 14px
-		padding: 0 2px		
+		padding: 0 2px
 	&__hint
-		font-style: italic 	
+		font-style: italic
 	&__bold
-		+opensans-sb		
+		+opensans-sb
 
 // task
 .task

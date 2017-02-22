@@ -735,7 +735,7 @@ a { text-decoration: none; }
 .upper__ttl .icon-folder { margin-right: 10px; font-size: 16px; color: #899bac; }
 .upper__list { *zoom: 1; }
 .upper__list:after { content: " "; display: table; clear: both; }
-.upper__option { float: left; margin-left: 30px; }
+.upper__option { float: left; margin-left: 25px; }
 .upper__option:first-child { margin-left: 0; }
 .upper__link { position: relative; color: #097bf2; font-size: 14px; }
 .upper__link:before, .upper__link:after { display: none; content: ""; position: absolute; top: 100%; left: 50%; }
@@ -744,6 +744,7 @@ a { text-decoration: none; }
 .upper__link:hover { color: #000; }
 .upper__link.is-active { color: #000; font-family: "opensans-semibold", Arial, sans-serif; }
 .upper__link.is-active:before, .upper__link.is-active:after { display: block; }
+.upper__shortcut { font-size: 0; }
 .upper .add-btn { position: absolute; right: 23px; bottom: -26px; z-index: 1; }
 
 .start { position: relative; margin: 35px 0 110px; text-align: center; font-size: 16px; color: #6c757a; z-index: 0; overflow: hidden; }
@@ -1521,6 +1522,10 @@ a { text-decoration: none; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
+
+@media only screen and (max-width: 1365px){
+ .upper__full{ display: none; }
+ .upper__shortcut{ font-size: 14px; } }
 
 @media only screen and (max-width: 1300px){
  .fake-header.is-fixed{ left: 0; min-width: 1040px; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
