@@ -711,7 +711,7 @@ a { text-decoration: none; }
 .main { margin-top: -90px; }
 .main__in { min-height: 400px; background: #fff; border: 1px solid #dce0e7; -webkit-border-radius: 6px; border-radius: 6px; }
 .main.is-form { margin-top: 0; margin-bottom: 30px; padding-top: 175px; }
-.main.is-form .ui-select-container.select2-container .select2-choice { height: 35px; line-height: 35px; border: 1px solid #cfd5e0; background-image: none; background-color: #f7f8f9; }
+.main.is-form .ui-select-container.select2-container .select2-choice { height: 35px; padding: 10px 0 0 8px; border: 1px solid #cfd5e0; background-image: none; background-color: #f7f8f9; line-height: 1; }
 .main.is-form .ui-select-container.select2-container .select2-arrow { border-left: 1px solid #cfd5e0; }
 .main.is-form .ui-select-container.select2-container .select2-arrow b { background-position: 0 3px; }
 .main.is-form .ui-select-container.select2-dropdown-open .select2-choice { background-image: none; background: #fafafa; }
