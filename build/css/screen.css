@@ -824,6 +824,7 @@ a { text-decoration: none; }
 .activity__ttl { margin-bottom: 10px; font-size: 17px; color: #282828; }
 .activity__table { display: table; margin-bottom: 8px; }
 .activity__row { display: table-row; }
+.activity__row.is-bottom-space .activity__cell { padding-bottom: 20px; }
 .activity__cell { display: table-cell; min-width: 90px; padding: 0 10px 3px 0; vertical-align: top; }
 .activity__cell.sm-width { width: 22%; }
 .activity__cell.m-width { width: 50%; }
