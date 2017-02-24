@@ -918,6 +918,7 @@ a { text-decoration: none; }
 .report.is-rejected { background: #fffaf6; border: 1px solid #f76300; }
 .report.is-approved { border: 1px solid #2CAF24; }
 .report.is-error { padding: 13px 15px; background: #fee; border-color: #ffc0c8; }
+.report.is-margin-bottom { margin: 0 0 15px; }
 .report__ttl { margin-bottom: 5px; font-size: 14px; font-family: "opensans-semibold", Arial, sans-serif; }
 .report__bl { overflow: hidden; padding: 0 10px 0 2px; }
 .report__bl span { vertical-align: middle; }
