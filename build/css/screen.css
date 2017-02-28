@@ -1267,7 +1267,8 @@ a { text-decoration: none; }
 .form__mod { position: relative; }
 .form__mod:hover .form__close { opacity: 1; visibility: visible; }
 .form__mod.is-entry { margin: 10px -10px; }
-.form__mod.is-entry .form__close { right: 0; }
+.form__mod.is-entry .form__close { right: 5px; }
+.form__mod.is-entry .form__close .icon-close { font-size: 11px; }
 .form__mod.is-entry .form__select-wrapper { margin: 0 10px; padding-right: 0; }
 .form__mod.is-entry .dropdown { margin: 0 10px; vertical-align: middle; }
 .form__mod.is-entry input { vertical-align: middle; }
