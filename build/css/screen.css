@@ -1347,6 +1347,7 @@ a { text-decoration: none; }
 .popup.is-attach { width: 665px; }
 .popup.is-new-customer { width: 565px; }
 .popup.is-edit-commission { width: 495px; }
+.popup_md { width: 860px; max-width: 100%; }
 .popup__head { position: relative; padding: 14px 21px; color: #282828; font-size: 16px; background: #f7f8f9; border-bottom: 1px solid #dce0e7; }
 .popup__head.no-bg { background: none; border: none; *zoom: 1; }
 .popup__head.no-bg:after { content: " "; display: table; clear: both; }
