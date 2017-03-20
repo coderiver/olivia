@@ -588,7 +588,7 @@ a { text-decoration: none; }
 .header__close:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .header__close .icon { font-size: 20px; color: #6c757a; vertical-align: middle; }
 .header__bl { display: inline-block; font-size: 16px; color: #282828; vertical-align: middle; }
-.header__bl span { display: inline-block; vertical-align: middle; max-width: 550px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.header__bl span { display: inline-block; vertical-align: middle; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .header__bl .icon { margin-right: 5px; vertical-align: middle; }
 .header__bl .icon-check, .header__bl .icon-warn { margin-left: 5px; font-size: 12px; }
 .header__small { margin-top: 3px; font-size: 13px; color: #738496; }

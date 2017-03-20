@@ -365,7 +365,7 @@ $(document).ready(function() {
 				scrollTable = scrollTable || this.scrollTable;
 				fakeHead 	= fakeHead || this.fakeHead;
 
-				var fakeHeadTable = fakeHead.find('.table'),
+				var fakeHeadTable = fakeHead.find('.table thead'),
 					cloneHead 	  = scrollTable.find('.js-clone-head');
 
 				cloneHead.clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
