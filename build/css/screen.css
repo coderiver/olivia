@@ -971,9 +971,9 @@ a { text-decoration: none; }
 .settings .tooltip { margin-bottom: 20px; font-size: 18px; font-family: "opensans-semibold", Arial, sans-serif; }
 .settings .form { margin-top: 0; }
 
-.fake-header { position: absolute; top: 0; left: 0; right: 0; z-index: 1; }
+.fake-header { position: absolute; top: 0; left: 0; right: 0; z-index: -2; }
 .fake-header.is-sidebar .fake-header__in { padding-left: 240px; }
-.fake-header.is-fixed { position: fixed; width: 100%; max-width: 1370px; left: 50%; padding: 0 20px; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
+.fake-header.is-fixed { position: fixed; width: 100%; max-width: 1370px; left: 50%; padding: 0 20px; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); z-index: 1; }
 .fake-header.is-fixed .fake-header__in { border-top: 1px solid #dce0e7; border-left: 1px solid #dce0e7; }
 .fake-header.is-fixed .fake-header__in:after { width: 51px; border-right-width: 1px; border-top: 0; }
 .fake-header.is-fixed .table th { border-top: #000; }
@@ -1218,7 +1218,7 @@ a { text-decoration: none; }
 .scrollbar.is-sidebar { margin-left: 240px; }
 .scrollbar.ps-in-scrolling.ps-x .ps-scrollbar-x:before, .scrollbar.ps-in-scrolling.ps-x .ps-scrollbar-x:after { background: #eee; }
 .scrollbar .table { min-width: 1000px; margin-bottom: 0; background: #FFF; }
-.scrollbar .table__head { opacity: 0; }
+.scrollbar .table__head { position: relative; z-index: 5; }
 .scrollbar .table td { height: 38px; padding: 9px 8.5px 8px; }
 .scrollbar .table td:first-child.cell-center, .scrollbar .table td:first-child.cell-pic { padding-left: 10px; }
 .scrollbar .ps-scrollbar-x-rail { width: 100% !important; bottom: 0; height: 14px; background: #f7f8f9; opacity: 1 !important; border-radius: 0; border-top: 1px solid #dce0e7; border-bottom: 1px solid #dce0e7; }

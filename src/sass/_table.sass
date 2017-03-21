@@ -190,6 +190,19 @@
 		&:first-child
 			&:hover
 				background: none
+		// &:nth-child(2)
+		// 	td 
+		// 		position: relative
+		// 		&:before 
+		// 			content: ""
+		// 			bottom: 100%
+		// 			height: 100%
+		// 			position: absolute
+		// 			left: 0
+		// 			right: 0  
+		// 			z-index: 99999
+		// 			user-select: none
+		// 			pointer-events: none 
 		&:hover
 			background: darken(#fff, 5%)
 		&.is-active
@@ -375,7 +388,9 @@
 		margin-bottom: 0
 		background: #FFF
 		&__head
-			opacity: 0
+			position: relative
+			z-index: 5 
+			// opacity: 0
 		td
 			height: 38px
 			padding: 9px 8.5px 8px
