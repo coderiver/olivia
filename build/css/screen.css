@@ -985,7 +985,7 @@ a { text-decoration: none; }
 .filters.is-fixed { position: fixed; top: 0; left: 50%; width: 100%; max-width: 1370px; min-width: 1040px; margin: 0 auto; padding: 0 20px; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
 .filters.is-fixed .filters__wrap { border-left: 1px solid #dce0e7; border-right: 1px solid #dce0e7; }
 .filters__wrap { position: relative; display: table; width: 100%; padding: 10px; background: #FFF; }
-.filters__ttl { display: table-cell; max-width: 250px; text-align: left; font-size: 17px; color: #282828; vertical-align: bottom; }
+.filters__ttl { display: table-cell; max-width: 350px; text-align: left; font-size: 17px; color: #282828; vertical-align: bottom; }
 .filters__ttl .tooltip { margin-bottom: 0; }
 .filters__in { display: table-cell; text-align: right; font-size: 0; vertical-align: bottom; }
 .filters .dropdown { margin: 0 4px; vertical-align: middle; }
