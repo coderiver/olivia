@@ -1147,7 +1147,7 @@ a { text-decoration: none; }
 .table span.table__text { display: inline-block; }
 .table .table__head { background: #f7f8f9; text-align: left; }
 .table .table__head.is-full-border { border: 1px solid #dce0e7; }
-.table .table__head th { position: relative; height: 39px; text-align: left; font-size: 13px; font-weight: normal; border: 1px solid #dce0e7; border-width: 1px 1px 1px 0; cursor: pointer; vertical-align: middle; font-family: "opensans-semibold", Arial, sans-serif; }
+.table .table__head th { position: relative; height: 39px; min-height: 39px; text-align: left; font-size: 13px; font-weight: normal; border: 1px solid #dce0e7; border-width: 1px 1px 1px 0; cursor: pointer; vertical-align: middle; font-family: "opensans-semibold", Arial, sans-serif; }
 .table .table__head th:before { display: none; content: ""; position: absolute; top: 19px; right: 10px; margin-top: -2px; width: 0px; height: 0px; border-style: solid; border-width: 4px 3.5px 0 3.5px; border-color: #6c757a transparent transparent transparent; }
 .table .table__head th:hover { background: rgba(0, 0, 0, 0.05); }
 .table .table__head th.is-active { background: rgba(0, 0, 0, 0.05); }
