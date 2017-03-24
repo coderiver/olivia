@@ -227,6 +227,9 @@
 					<li>
 						<a href="#" data-popup="popup-add-letter">popup-add-letter</a> 
 					</li>
+					<li>
+						<a href="#" data-popup="popup-reinit-task">popup-reinit-task</a> 
+					</li>
 				</ol>
 			</div>
 		</div>
@@ -671,6 +674,39 @@
 					</a>
 				</li>
 			</ul>
+		</div>
+	</div>
+	<div class="popup js-popup" id="popup-reinit-task">
+		<div class="popup__head">
+			<p>Reinit task <span>TS347</span></p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<small class="popup__gray">Select the assignee and the status for the task</small>
+			<form class="form is-full-w">
+				<div class="form__bl ">
+					<div class="select-wrap select-wrap_margin">
+						<div class="select-wrap__left">
+							<div class="select2 ui-select-container select2-container">
+								<a href="#" class="select2-choice" style="width: 200px;">
+									<span class="select2-arrow"><b></b></span>
+								</a>
+							</div>
+						</div>
+						<div class="select-wrap__right">
+							<div class="select2 ui-select-container select2-container">
+								<a href="#" class="select2-choice" style="width: 200px;">
+									<span class="select2-arrow"><b></b></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-ok" type="submit">Reinit task</button>
+					<button class="btn btn-no btn-txt-gray" type="button">Cancel</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
