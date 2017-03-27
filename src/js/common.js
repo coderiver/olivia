@@ -30,19 +30,19 @@ $(document).ready(function() {
 
 	if (filterChildren.length) { 
 		var transfer = '<div class="filters__row"></div>',
-			filterWidth = 650;
-			totalSum = 0;
+			filterMaxWidth = 650;
+			totalWidth = 0;
 
 
 		filterChildren.each(function(index, elem) {
-			totalSum += parseInt($(this).width());
+			totalWidth += parseInt($(this).width());
 		}); 
 
-		if (totalSum >= filterWidth) {
+		if (totalWidth >= filterMaxWidth) {
 			filterChildren
 				.eq(4)
 				.after(transfer);
 		}
-		
+
 	}
 });
