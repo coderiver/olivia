@@ -999,6 +999,7 @@ a { text-decoration: none; }
 .filters__ttl { display: table-cell; max-width: 350px; text-align: left; font-size: 17px; color: #282828; vertical-align: bottom; }
 .filters__ttl .tooltip { margin-bottom: 0; }
 .filters__in { display: table-cell; text-align: right; font-size: 0; vertical-align: bottom; }
+.filters__row { padding: 5px 0; }
 .filters .dropdown { margin: 0 4px; vertical-align: middle; }
 .filters .dropdown.is-active { z-index: 3; }
 

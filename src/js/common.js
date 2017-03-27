@@ -24,4 +24,25 @@ $(document).ready(function() {
 		$(this).parents('.js-slide-parent').slideUp();
 	});
 
+
+	// break line in filters
+	var filterChildren = $('.js-width-line').children('div');
+
+	if (filterChildren.length) { 
+		var transfer = '<div class="filters__row"></div>',
+			filterWidth = 650;
+			totalSum = 0;
+
+
+		filterChildren.each(function(index, elem) {
+			totalSum += parseInt($(this).width());
+		}); 
+
+		if (totalSum >= filterWidth) {
+			filterChildren
+				.eq(4)
+				.after(transfer);
+		}
+		
+	}
 });
