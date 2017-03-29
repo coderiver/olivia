@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+
+
+
 	// partials
 	function initTooltip(elem) {
 		var elem = $(elem);
@@ -215,12 +219,18 @@ $(document).ready(function() {
 	});
 
 
+	// setTimeout(breakFilters, 500);
+	
+	
+	
+});
+function breakFilters() {
 	// break line in filters
-	var filterChildren = $('.js-width-line').children('div');
+	var filterChildren = $('.js-width-line').children();
 
 	if (filterChildren.length) { 
 		var transfer = '<div class="filters__row"></div>',
-			filterMaxWidth = 650;
+			filterMaxWidth = 550;
 			totalWidth = 0;
 
 
@@ -232,7 +242,17 @@ $(document).ready(function() {
 			filterChildren
 				.eq(4)
 				.after(transfer);
+
+			
+			setTimeout(()=> {
+				var tablewrap = $('.js-tablewrap');
+				var filtersHeight = $('.js-filters').outerHeight();
+
+				tablewrap.css('padding-top', filtersHeight);
+				console.log(filtersHeight);
+			}, 10);
+
 		}
 
 	}
-});
+} 

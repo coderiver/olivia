@@ -387,8 +387,10 @@ $(document).ready(function() {
 					tableWrapH	  = tableWrapTop + tablewrap.outerHeight(),
 					minH		  = 570;
 
-				tablewrap.css('padding-top', filtersHeight);
 
+				tablewrap.css('padding-top', filtersHeight);
+				
+				
 				// from starting point to min height at the bottom of table
 				if (scrollPos > tableWrapTop && scrollPos < tableWrapH - minH) {
 
