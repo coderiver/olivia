@@ -33,6 +33,7 @@ $(document).ready(function() {
 				// fake header
 				this.createFakeHead();
 				this.tableHeadFixed();
+				this.breakFilters();
 
 				var that = this;
 				$(window).resize(function() {
@@ -451,6 +452,37 @@ $(document).ready(function() {
 					sidebar.removeClass('is-fixed js-fixed').css('top', tablewrap.outerHeight() - minH);
 				}
 			}
+			breakFilters: function() {
+				// break line in filters
+				var filterChildren = $('.js-width-line').children();
+
+				if (filterChildren.length) {
+					var transfer = '<div class="filters__row"></div>',
+						filterMaxWidth = 550,
+						totalWidth = 0;
+
+					filterChildren.each(function(index, elem) {
+						totalWidth += parseInt($(this).width());
+					});
+
+					if (totalWidth >= filterMaxWidth) {
+
+						if($('.filters__row').length == 0) {
+							filterChildren
+								.eq(3)
+								.after(transfer);
+						}
+
+
+						setTimeout(()=> {
+							var tablewrap = $('.js-tablewrap');
+							var filtersHeight = $('.js-filters').outerHeight();
+
+							tablewrap.css('padding-top', filtersHeight);
+						}, 10);
+					}
+				}
+			},
 		};
 
 		return oliviaTable;

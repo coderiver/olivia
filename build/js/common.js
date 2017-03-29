@@ -218,37 +218,6 @@ $(document).ready(function() {
 		$(this).parents('.js-slide-parent').slideUp();
 	});
 
-
-	// setTimeout(breakFilters, 500);
-	
-	
 	
 });
-function breakFilters() {
-	// break line in filters
-	var filterChildren = $('.js-width-line').children();
 
-	if (filterChildren.length) { 
-		var transfer = '<div class="filters__row"></div>',
-			filterMaxWidth = 550;
-			totalWidth = 0;
-
-		filterChildren.each(function(index, elem) {
-			totalWidth += parseInt($(this).width());
-		}); 
-
-		if (totalWidth >= filterMaxWidth) {
-			filterChildren
-				.eq(3)
-				.after(transfer);
-
-			
-			setTimeout(()=> {
-				var tablewrap = $('.js-tablewrap');
-				var filtersHeight = $('.js-filters').outerHeight();
-
-				tablewrap.css('padding-top', filtersHeight);
-			}, 10);
-		}
-	}
-} 
