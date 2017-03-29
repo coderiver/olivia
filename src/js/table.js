@@ -451,7 +451,7 @@ $(document).ready(function() {
 
 					sidebar.removeClass('is-fixed js-fixed').css('top', tablewrap.outerHeight() - minH);
 				}
-			}
+			},
 			breakFilters: function() {
 				// break line in filters
 				var filterChildren = $('.js-width-line').children();
@@ -482,7 +482,7 @@ $(document).ready(function() {
 						}, 10);
 					}
 				}
-			},
+			}
 		};
 
 		return oliviaTable;
