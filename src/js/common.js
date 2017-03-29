@@ -43,14 +43,13 @@ function breakFilters() {
 			filterMaxWidth = 550;
 			totalWidth = 0;
 
-
 		filterChildren.each(function(index, elem) {
 			totalWidth += parseInt($(this).width());
 		}); 
 
 		if (totalWidth >= filterMaxWidth) {
 			filterChildren
-				.eq(4)
+				.eq(3)
 				.after(transfer);
 
 			
@@ -59,10 +58,7 @@ function breakFilters() {
 				var filtersHeight = $('.js-filters').outerHeight();
 
 				tablewrap.css('padding-top', filtersHeight);
-				console.log(filtersHeight);
 			}, 10);
-
 		}
-
 	}
 } 
