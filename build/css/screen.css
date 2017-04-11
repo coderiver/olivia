@@ -504,6 +504,8 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 
 a { text-decoration: none; }
 
+.position-relative { position: relative; }
+
 .calendar { position: relative; max-width: 200px; font-size: 13px; color: #282828; }
 .calendar.is-active input { background: #828c92; color: #fff; border-color: #828c92; }
 .calendar.is-active .icon-calendar { color: #FFF; }
@@ -614,7 +616,7 @@ a { text-decoration: none; }
 .header__list:before { right: 100%; }
 .header__list:after { left: 100%; }
 .header__list li { display: inline-block; padding: 7px 21px; vertical-align: middle; }
-.header__option { font-size: 13px; color: #6c757a; }
+.header__option { position: relative; font-size: 13px; color: #6c757a; }
 .header__option:hover, .header__option.is-active { text-decoration: underline; }
 .header__option.is-disabled { opacity: 0.6; text-decoration: none; pointer-events: none; -ms-pointer-events: none; }
 .header__fields { max-width: 600px; margin: 0 auto 15px; *zoom: 1; }
