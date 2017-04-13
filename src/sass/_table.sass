@@ -193,6 +193,7 @@
 		&:first-child
 			&:hover
 				background: none
+			
 		// &:nth-child(2)
 		// 	td 
 		// 		position: relative
@@ -286,6 +287,13 @@
 			border-right: 1px solid #efefef
 		.icon.icon-clip
 			font-size: 14px
+	td,th 
+		&:first-child
+			.check
+				input
+					&:checked + .check__span
+						&:before
+							border-color: #6c757a
 	.dropdown
 		height: 27px
 		vertical-align: middle

@@ -1210,6 +1210,7 @@ a { text-decoration: none; }
 .table td.cell-right { text-align: right; }
 .table td.cell-border-right { border-right: 1px solid #efefef; }
 .table td .icon.icon-clip { font-size: 14px; }
+.table td:first-child .check input:checked + .check__span:before, .table th:first-child .check input:checked + .check__span:before { border-color: #6c757a; }
 .table .dropdown { height: 27px; vertical-align: middle; }
 .table .dropdown.is-active .dropdown__in { display: block; }
 .table .dropdown__in { display: none; position: absolute; top: 100%; right: 0; margin-top: -4px; text-align: left; background: #fff; border-radius: 4px; border: 1px solid #dce0e7; -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); }
