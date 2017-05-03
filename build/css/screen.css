@@ -597,7 +597,7 @@ a { text-decoration: none; }
 .table-row .status:not(.is-active) .status-info { background: #828c92; }
 
 .header { min-height: 153px; background-color: #474e52; }
-.header.is-form { min-height: auto; position: fixed; min-width: 1040px; top: 0; left: 0; right: 0; background: #FFF; z-index: 100001; border-bottom: 1px solid #dee1e7; }
+.header.is-form { min-height: auto; position: fixed; min-width: 1040px; top: 0; left: 0; right: 0; background: #FFF; z-index: 7; border-bottom: 1px solid #dee1e7; }
 .header.is-form .header__in { position: relative; padding: 0; -webkit-box-shadow: 0px 1px 0px 0px #dee1e7; box-shadow: 0px 1px 0px 0px #dee1e7; }
 .header.is-staff .menu { margin-left: 5px; }
 .header__in { padding: 15px 0; *zoom: 1; }
@@ -684,7 +684,7 @@ a { text-decoration: none; }
 
 .footer { margin: 15px 0; font-size: 12px; color: #C2C3C5; }
 
-.suggest { position: absolute; top: 50%; right: 0; min-width: 390px; padding: 20px 23px 20px 26px; font-size: 0; background: #FFF; border-radius: 4px; -webkit-box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5); box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5); opacity: 0; visibility: hidden; z-index: 100003; -webkit-transition: opacity 0.4s ease, visibility 0.4s ease; transition: opacity 0.4s ease, visibility 0.4s ease; }
+.suggest { position: absolute; top: 50%; right: 0; min-width: 390px; padding: 20px 23px 20px 26px; font-size: 0; background: #FFF; border-radius: 4px; -webkit-box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5); box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5); opacity: 0; visibility: hidden; z-index: 11; -webkit-transition: opacity 0.4s ease, visibility 0.4s ease; transition: opacity 0.4s ease, visibility 0.4s ease; }
 .suggest.is-active { opacity: 1; visibility: visible; }
 .suggest.is-staff { font-size: 0; padding: 0; }
 .suggest.is-staff .suggest__head { position: absolute; top: 20px; right: 24px; z-index: 1; }
@@ -1360,7 +1360,7 @@ a { text-decoration: none; }
 
 *[data-popup] { cursor: pointer; }
 
-.overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; padding: 10px; text-align: center; background: rgba(243, 244, 246, 0.6); opacity: 0; visibility: hidden; overflow: auto; white-space: nowrap; z-index: 100002; -webkit-transition: 0.5s ease; transition: 0.5s ease; text-align: center; font-size: 0; }
+.overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; padding: 10px; text-align: center; background: rgba(243, 244, 246, 0.6); opacity: 0; visibility: hidden; overflow: auto; white-space: nowrap; z-index: 10; -webkit-transition: 0.5s ease; transition: 0.5s ease; text-align: center; font-size: 0; }
 .overlay:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .overlay.is-active { opacity: 1; visibility: visible; }
 .overlay.low-index { z-index: 8; }
