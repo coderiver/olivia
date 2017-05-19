@@ -1316,7 +1316,7 @@ body .daterangepicker.dropdown-menu { z-index: 6; }
 .form__hint { display: block; margin-bottom: 7px; }
 .form__close { position: absolute; top: 50%; right: 45px; margin-top: -6.5px; font-size: 10px; color: red; opacity: 0; visibility: hidden; }
 .form__close .icon-close { color: red; }
-.form__select-wrapper { display: inline-block; width: 100%; max-width: 200px; padding-right: 10px; vertical-align: middle; }
+.form__select-wrapper { display: inline-block; width: 100%; width: 200px; padding-right: 10px; vertical-align: middle; }
 .form__select-wrapper_max-w { max-width: 120px; }
 .form__select-wrapper .select2 { display: block; width: 100%; }
 .form hr { max-width: 600px; margin: 15px auto 25px; border: none; border-top: 1px solid #cfd5e0; }
