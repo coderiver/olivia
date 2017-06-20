@@ -1,0 +1,38 @@
+.accordion
+	&.is-active
+		.icon-arr-right
+			+rotate(90)
+			vertical-align: middle
+	&:first-child
+		.accordion__title
+			border-bottom: none 
+	&__title
+		padding: 15px 30px
+		border-top: 1px solid #dce0e7 
+		border-bottom: 1px solid #dce0e7
+		& > button
+			background: #FFF  
+	&__title-in
+		margin-right: 30px
+	&__caption	
+		position: relative
+		font-size: 20px
+		font-weight: 600
+		text-align: left
+		color: #6c757a
+		+opensans-sb
+		span
+			+opensans 
+			font-weight: 300
+	&__caption_sm
+		font-size: 16px
+	&__icon
+		display: inline-block
+		vertical-align: text-top
+		width: 8px
+		height: 4px
+		color: #6c757a  
+		margin-right: 15px
+		font-weight: bold  
+	&__content
+		// padding: 0 15px
