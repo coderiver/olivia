@@ -210,14 +210,14 @@ $(document).ready(function() {
 	        parent.removeClass('is-active');
 	        content.slideUp(350);
 	    } else {
-	        parent.find('li .inner').removeClass('is-active');
-	        parent.find('li .inner').slideUp(350);
+	        parent.find('js-accordion').removeClass('is-active');
+	        parent.find('js-accordion').slideUp(350);
 	        parent.toggleClass('is-active'); 
 	        content.slideToggle(350);
 	    }
 	});
 
-	$('.js-vert-scroll').perfectScrollbar();       
+	$('.js-vert-scroll').perfectScrollbar();          
 	$('.js-bar').addClass('is-active');
 
 	// animate back to top

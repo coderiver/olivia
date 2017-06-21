@@ -1,11 +1,22 @@
+.accordion-wrap
+	padding-bottom: 7px
 .accordion
 	&.is-active
-		.icon-arr-right
-			+rotate(90)
-			vertical-align: middle
-	&:first-child
-		.accordion__title
-			border-bottom: none 
+		& > .accordion__title
+			// border-bottom: 1px solid #dce0e7
+			& > .accordion__title-in
+				&  > .icon-arr-right
+					+rotate(90)
+					vertical-align: middle
+		& > .accordion__content
+			& > .accordion
+				margin-top: -1px
+				margin-bottom: -1px
+				.accordion__title
+					padding: 18.5px 30px 
+	&:not(:first-child)
+		margin-top: -1px
+		margin-bottom: -1px 
 	&__title
 		padding: 15px 30px
 		border-top: 1px solid #dce0e7 
@@ -35,4 +46,5 @@
 		margin-right: 15px
 		font-weight: bold  
 	&__content
-		// padding: 0 15px
+		border-bottom: 1px solid #dce0e7
+		margin-bottom: -1px

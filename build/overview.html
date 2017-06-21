@@ -1,0 +1,1131 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=1040, initial-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#fff">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/app.js"></script>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<!-- begin header with active notification  -->
+	<div class="header">
+		<div class="l">
+			<div class="header__in">
+				<a href="#" class="header__logo"><i class="icon icon-logo"></i></a>
+				<ul class="menu">
+					<li class="menu__option"><a class="menu__link" href="#">Tasks <p class="notification"><span>2</span></p></a></li>
+					<li class="menu__option is-active"><a class="menu__link" href="#">Deals</a></li>
+					<li class="menu__option"><a class="menu__link" href="#">Entries</a></li>
+					<li class="menu__option"><a class="menu__link" href="#">Library</a></li>
+					<li class="menu__option">
+						<div class="dropdown is-menu js-dropdown">
+							<p class="dropdown__item">Me</p>
+							<ul class="dropdown__list is-top-level js-inner">
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">My Team</a></li>
+								<li><a href="#">Messages</a></li>
+								<li><a href="#">Activity Log</a></li>
+								<li><a href="#">Settings</a></li>
+								<li><a href="#">Log Out</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<div class="helpers">
+					<a href="#" class="helpers__info">?</a>
+					<a href="#" class="helpers__bell is-active" data-popup="sysmessage">
+						<i class="icon icon-bell"></i>
+						<span class="helpers__message">5</span>
+					</a>
+					<label class="search js-search">
+						<i class="icon icon-zoom"></i>
+						<input type="search" placeholder="Search">
+						<i class="icon icon-close search-close js-search-clear"></i>
+					</label>
+					<!-- begin sysmessage  -->
+					<div id="sysmessage" class="sysmessage js-popup js-avoid-overflow">
+						<div class="sysmessage__head">
+							<p class="sysmessage__ttl">1 New Payment, 4 other notifications since your last visit</p>
+							<i class="icon icon-close js-close"></i>
+						</div>
+						<div class="sysmessage__container js-vert-scroll">
+							<div class="sysmessage__el">
+								<p>Messages (1)</p>
+							</div>
+							<div class="sysmessage__el no-bg">
+								<img class="sysmessage__img" src="img/user1.png" alt="">
+								<div class="sysmessage__info">
+									<i class="svg-ico message-ico"></i>
+									<div class="sysmessage__name">
+										<h4>New Payment!</h4>
+										<small class="sysmessage__date">Sept. 13, 2015</small>
+									</div>
+									<p>Transaction T34782 from Alphabet between James Brown and Steve Buscemy was payed Sept. 12, 2015</p>
+									<ul class="sysmessage__list">
+										<li>Transaction amount: $400.000.00</li>
+										<li>Funds received: $400.000.00</li>
+										<li>GCS commission: $10.000.00</li>
+										<li>Your comission*: $15.000.00</li>
+									</ul>
+									<p>Your commission will be payed to you according to your GCS agreement conditions</p>
+									<ul class="reaction">
+										<li><a class="reaction__link" href="#">Mark as read</a></li>
+										<li><a class="reaction__link" href="#">View deal</a></li>
+										<li><a class="reaction__link" href="#">View transaction</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="sysmessage__el">
+								<p>Updates (4)</p>
+							</div>
+							<div class="sysmessage__el no-bg">
+								<img class="sysmessage__img" src="img/user2.png" alt="">
+								<i class="svg-ico memo-ico"></i>
+								<div class="sysmessage__info">
+									<div class="sysmessage__name">
+										<h4><span>Deal Memo Approved for Space X</span></h4>
+										<small class="sysmessage__date">Sept. 13, 2015</small>
+									</div>
+									<ul class="reaction">
+										<li><a class="reaction__link" href="#">View</a></li>
+										<li><a class="reaction__link" href="#">Open deal</a></li>
+									</ul>
+								</div>
+								<i class="icon icon-check"></i>
+							</div>
+							<div class="sysmessage__el no-bg">
+								<img class="sysmessage__img" src="img/user2.png" alt="">
+								<i class="icon icon-bubble"></i>
+								<div class="sysmessage__info">
+									<div class="sysmessage__name">
+										<h4>New comment for EL James Brown for Space X</h4>
+										<small class="sysmessage__date">Sept. 13, 2015</small>
+									</div>
+									<ul class="reaction">
+										<li><a class="reaction__link" href="#">View</a></li>
+										<li><a class="reaction__link" href="#">Open deal</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="sysmessage__el no-bg">
+								<img class="sysmessage__img" src="img/user1.png" alt="">
+								<i class="svg-ico memo-ico"></i>
+								<div class="sysmessage__info">
+									<div class="sysmessage__name">
+										<h4>Deal Memo Approved for Space X</h4>
+										<small class="sysmessage__date">Sept. 13, 2015</small>
+									</div>
+									<ul class="reaction">
+										<li><a class="reaction__link" href="#">View</a></li>
+										<li><a class="reaction__link" href="#">Open deal</a></li>
+									</ul>
+								</div>
+								<i class="icon icon-warn"></i>
+							</div>
+						</div>
+						<div class="sysmessage__el is-all">
+							<p class="txt-center"><a class="reaction__link" href="#">See all</a></p>
+						</div>
+					</div>
+					<!-- end sysmessage -->
+					<!-- begin results -->
+					<div class="results js-search-results">
+						<a href="#" class="results__bl">
+							<div class="description">
+								<i class="svg-ico memo-ico"></i>
+								<p>Update Space X Deal Memo</p>
+							</div>
+							<p>...update a Deal Memo, please open Deal Memo and fill in <span class="highlight">amount</span></p>
+						</a>
+						<a href="#" class="results__bl">
+							<div class="description">
+								<i class="svg-ico customer-ico"></i>
+								<p>Steve Buscemi</p>
+							</div>
+							<p>...<span class="highlight">amount</span> invested $120 0000 USD</p>
+						</a>
+						<a href="#" class="results__bl">
+							<div class="description">
+								<p>Send us your photo</p>
+							</div>
+							<p>Hey, Brian, we need you photo to put it on a wall, send <span class="highlight">amount</span> my e-mail please...</p>
+						</a>
+						<a href="#" class="results__bl">
+							<div class="description">
+								<i class="svg-ico letter-ico"></i>
+								<span>Engagement Letter John Snow</span>
+							</div>
+							<p>...managers said its important. Use Upload File <span class="highlight">amount</span> below, uplo..</p>
+						</a>
+						<a href="#" class="results__bl">
+							<div class="description">
+								<i class="svg-ico library-ico"></i>
+								<span>Complaince Form Name</span>
+							</div>
+							<p>Your year spending <span class="highlight">amount</span> 100000 USD </p>
+						</a>
+						<a href="#" class="results__bl">
+							<div class="description">
+								<i class="icon icon-folder"></i>
+								<p><span class="highlight">Amount</span> Corp</p>
+							</div>
+						</a>
+						<a href="#" class="results__bl">
+							<p class="txt-center">781 results...</p>
+						</a>
+					</div>
+					<!-- end results -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+	<div class="main">
+		<div class="l">
+			<div class="main__in">
+				<div class="upper">
+					<p class="upper__ttl">Commission Dashboard</p>
+					<ul class="upper__list">
+						<li class="upper__option"><a class="upper__link is-active" href="#">Overview</a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Enter Funds Received <span class="notification notification_sm is-violet"><span>24</span></span></a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Calculate Commission <span class="notification notification_sm is-antique"><span>15</span></span></a></li>
+						<li class="upper__option"><a class="upper__link " href="#">Pay Commission <span class="notification notification_sm is-green"><span>4</span></span></a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Mark as Paid <span class="notification notification_sm is-oragne"><span>4</span></span></a></li>
+					</ul>
+					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
+					<!-- begin suggest for new deal -->
+						<div class="suggest js-popup js-avoid-overflow" id="suggest">
+							<div class="suggest__head">
+								<p class="suggest__txt">Submit Deal Memo</p>
+								<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
+							</div>
+							<div class="suggest__menu">
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico letter-ico"></i>
+									<div class="suggest__in">
+										<p>Add Engagement Letter</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl" data-popup="popup-deal-memo-info">
+									<i class="svg-ico memo-ico"></i>
+									<div class="suggest__in">
+										<p>Add Deal memo</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico customer-ico"></i>
+									<div class="suggest__in">
+										<p>Add Customer</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico transaction-ico"></i>
+									<div class="suggest__in">
+										<p>Add Transaction Report</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico library-ico"></i>
+									<div class="suggest__in">
+										<p>Add Marketing Materials</p>
+									</div>
+								</a>
+								<a href="#" class="suggest__bl">
+									<i class="svg-ico library-ico"></i>
+									<div class="suggest__in">
+										<p>Add from Templates or Other</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					<!-- end suggest for new deal -->
+				</div>
+				<!-- begin tablewrap  -->
+				<div class="tablewrap js-tablewrap">
+					<!-- begin filters  -->
+					<div class="filters js-filters">
+						<div class="filters__wrap js-fixed">
+							<div class="filters__desc filters__desc_margin is-black">All approved Transactions with Funds Received that are equal to the Transaction amount without Commission Calculation.</div>
+							<div class="filters__in">
+								<div class="filters__desc is-grey">Completed Transactions:</div>
+								<div class="tabs tabs_simi-bold">
+									<div class="tabs__el js-tab-el is-active">hide all</div>
+									<div class="tabs__el js-tab-el">show latest</div>
+									<div class="tabs__el js-tab-el">show all</div>
+								</div>
+								<div class="tabs tabs_md">
+									<div class="tabs__el js-tab-el is-active">$</div>
+									<div class="tabs__el js-tab-el">£</div>
+									<div class="tabs__el js-tab-el">all</div>
+								</div>
+								<div class="toggle-btn">
+									<i class="icon icon-arr-right"></i>
+								</div>
+								<div class="toggle-btn js-toggle-sidebar">
+									<i class="icon icon-sidebar"></i>
+								</div>
+								<div class="toggle-btn js-search-table">
+									<input type="search" placeholder="Search table">
+									<i class="icon icon-zoom"></i>
+									<i class="icon icon-close search-close js-search-clear"></i>
+								</div>
+									
+									
+							</div>
+						</div>
+					</div>
+					<!-- end filters -->
+					<div class="tablewrap__in tablewrap__in_mod">
+						<!-- begin sidebar  -->
+						<div class="sidebar sidebar_mod js-sidebar">
+							<div class="sidebar__in js-sidebar-in">
+								<div class="sidebar__bl js-sidebar-bl">
+									<div class="sidebar__ttl js-sidebar-ttl"><span>Deals</span></div>
+									<div class="sidebar__content js-content">
+										<ul class="sidebar-list">
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico transaction-ico"></i>
+												<a href="#">Not approved</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico transaction-ico"></i>
+												<a href="#">Approved</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico transaction-ico"></i>
+												<a href="#">Split</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico transaction-ico"></i>
+												<a href="#">All</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="sidebar__bl js-sidebar-bl">
+									<div class="sidebar__ttl js-sidebar-ttl"><span>Users</span></div>
+									<div class="sidebar__content js-content">
+										<ul class="sidebar-list">
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico transaction-ico"></i>
+												<a href="#">Not approved</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico transaction-ico"></i>
+												<a href="#">Approved</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico transaction-ico"></i>
+												<a href="#">Split</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico transaction-ico"></i>
+												<a href="#">All</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="sidebar__bl js-sidebar-bl">
+									<div class="sidebar__ttl js-sidebar-ttl"><span>Funds Received</span></div>
+									<div class="sidebar__content js-content">
+										<ul class="sidebar-list">
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+												<a href="#">TR Amount not matched</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+												<a href="#">TR Amount matched</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+												<a href="#">Not received</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+												<a href="#">All</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="sidebar__bl js-sidebar-bl">
+									<div class="sidebar__ttl js-sidebar-ttl"><span>Commission Calculated</span></div>
+									<div class="sidebar__content js-content">
+										<ul class="sidebar-list">
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico cc-ico"></i>
+												<a href="#">Not Generated</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico cc-ico"></i>
+												<a href="#">Generated</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico cc-ico"></i>
+												<a href="#">Approved</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico cc-ico"></i>
+												<a href="#">All</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="sidebar__bl js-sidebar-bl">
+									<div class="sidebar__ttl js-sidebar-ttl"><span>Commission Payment</span></div>
+									<div class="sidebar__content js-content">
+										<ul class="sidebar-list">
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico cp-ico cp-icon-orange"></i> 
+												<a href="#">Not Generated</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico cp-ico cp-icon-orange"></i>
+												<a href="#">Generated</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico cp-ico cp-icon-orange"></i>
+												<a href="#">Pre-Approved</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico cp-ico cp-icon-orange"></i>
+												<a href="#">Approved</a>
+											</li>
+											<li class="sidebar-list__option js-sidebar-option">
+												<i class="svg-ico cp-ico cp-icon-orange"></i>
+												<a href="#">All</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end sidebar -->
+						<!-- begin scrollbar  -->
+						<div class="scrollbar scrollbar_nomargin js-scrollbar">
+							<div class="table">
+								<div class="accordion-wrap">
+									<div class="accordion js-accordion">
+										<div class="accordion__title ">
+											<button type="button" class="accordion__title-in js-accordion-btn">
+												<i class="icon-arr-right accordion__icon"></i>
+												<span class="accordion__caption">Unassigned <span class="notification is-antique"><span>4</span></span></span> 
+											</button>
+											<a href="#" class="btn btn_sm btn-border btn-txt-gray">ADD FR</a>
+										</div>
+										<div class="accordion__content" style="display: none;">
+											<div class="tables-line">
+												<table class="table-highlight is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Transaction</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>2840290</span>
+																</div>
+															</td>
+															<td>$ 3000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>2840290</span>
+																</div>
+															</td>
+															<td>$ 3000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>2840290</span>
+																</div>
+															</td>
+															<td>$ 3000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>2840290</span>
+																</div>
+															</td>
+															<td>$ 3000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>2840290</span>
+																</div>
+															</td>
+															<td>$ 3000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="">
+															<td>&nbsp;</td>
+															<td colspan="1"><a href="#" class="btn btn_sm is- btn-border btn-txt-gray">ADD TR</a></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>2840290</span>
+																</div>
+															</td>
+															<td>$ 3000</td>
+															<td></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>2840290</span>
+																</div>
+															</td>
+															<td>$ 3000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td>TOTAL</td>
+															<td>$ 2000</td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Funds Received</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico"></i>
+																	<span>x 5</span>
+																</div>
+															</td>
+															<td><strong>$ 3000</strong> / <span>5000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico"></i>
+																	<span>x 5</span>
+																</div>
+															</td>
+															<td><strong>$ 3000</strong> / <span>5000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico"></i>
+																	<span>x 5</span>
+																</div>
+															</td>
+															<td><strong>$ 3000</strong> / <span>5000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.13.17 </td>
+															<td><strong>$ 700</strong> / <span>5000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.13.17 </td>
+															<td><strong>$ 700</strong> / <span>5000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td>05.13.17 </td>
+															<td><strong>$ 700</strong> / <span>5000</span></td>
+															<td></td>
+														</tr>	
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>7000</span></td>
+															<td></td>
+														</tr>
+														<tr class="">
+															<td>&nbsp;</td>
+															<td colspan="1"><a href="#" class="btn btn_sm is- btn-border btn-txt-gray">ADD FR</a></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td></td>
+															<td><strong>$ 7500</strong></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Commission <br> Calculation</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td>$ 5000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td>$ 5000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td>$ 5000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td>$ 5000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td>$ 5000</td>
+															<td></td>
+														</tr>
+														<tr class="">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>	
+														<tr class="">
+															<td>&nbsp;</td>
+															<td colspan="1"><a href="#" class="btn btn_sm is- btn-border btn-txt-gray">ADD FR</a></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td></td>
+															<td><strong>$ 5000</strong></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Commission <br> Payment</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td><strong>$ 100</strong> / <span>300</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td><strong>$ 100</strong> / <span>300</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td><strong>$ 100</strong> / <span>300</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-clarify">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td><strong>$ 100</strong> / <span>300</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="">
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>	
+														<tr class="">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="">
+															<td>&nbsp;</td>
+															<td colspan="1"><a href="#" class="btn btn_sm is- btn-border btn-txt-gray">ADD FR</a></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td></td>
+															<td><strong>$ 2750</strong></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="accordion js-accordion">	
+										<div class="accordion__title ">
+											<button type="button" class="accordion__title-in js-accordion-btn">
+												<i class="icon-arr-right accordion__icon"></i>
+												<span class="accordion__caption">Pharell Williams</span> 
+											</button>
+										</div>
+										<div class="accordion__content" style="display: none;">
+											<div class="accordion js-accordion">
+												<div class="accordion__title ">
+													<button type="button" class="accordion__title-in js-accordion-btn">
+														<i class="icon-arr-right accordion__icon"></i>
+														<i class="icon-folder accordion__icon"></i>
+														<span class="accordion__caption accordion__caption_sm"> <span>28402</span> Orange Industries</span> 
+													</button>
+													
+												</div>
+												<div class="accordion__content" style="display: none;">
+													<div class="tables-line">
+														<table class="table-highlight is-md">
+															<thead>
+																<tr>
+																	<th width="40">&nbsp;</th>
+																	<th width="120">Transaction</th>
+																	<th width="100">Amount</th>
+																	<th>&nbsp;</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>
+																		<div class="table__el">
+																			<i class="svg-ico transaction-ico"></i>
+																			<span>2840290</span>
+																		</div>
+																	</td>
+																	<td>$ 3000</td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>
+																		<div class="table__el">
+																			<i class="svg-ico transaction-ico"></i>
+																			<span>2840290</span>
+																		</div>
+																	</td>
+																	<td>$ 3000</td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>
+																		<div class="table__el">
+																			<i class="svg-ico transaction-ico"></i>
+																			<span>2840290</span>
+																		</div>
+																	</td>
+																	<td>$ 3000</td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>
+																		<div class="table__el">
+																			<i class="svg-ico transaction-ico"></i>
+																			<span>2840290</span>
+																		</div>
+																	</td>
+																	<td>$ 3000</td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>
+																		<div class="table__el">
+																			<i class="svg-ico transaction-ico"></i>
+																			<span>2840290</span>
+																		</div>
+																	</td>
+																	<td>$ 3000</td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="">
+																	<td>&nbsp;</td>
+																	<td colspan="1"><a href="#" class="btn btn_sm is- btn-border btn-txt-gray">ADD TR</a></td>
+																	<td></td>
+																	<td></td>
+																</tr>
+																<tr class="is-default">
+																	<td>&nbsp;</td>
+																	<td>
+																		<div class="table__el">
+																			<i class="svg-ico transaction-ico"></i>
+																			<span>2840290</span>
+																		</div>
+																	</td>
+																	<td>$ 3000</td>
+																	<td></td>
+																</tr>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>
+																		<div class="table__el">
+																			<i class="svg-ico transaction-ico"></i>
+																			<span>2840290</span>
+																		</div>
+																	</td>
+																	<td>$ 3000</td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+															</tbody>
+															<tfoot>
+																<tr class="is-default">
+																	<td>&nbsp;</td>
+																	<td>TOTAL</td>
+																	<td>$ 2000</td>
+																	<td></td>
+																</tr>
+															</tfoot>
+														</table>
+														<table class="table-highlight is-md">
+															<thead>
+																<tr>
+																	<th width="40">&nbsp;</th>
+																	<th width="120">Funds Received</th>
+																	<th width="100">Amount</th>
+																	<th>&nbsp;</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>
+																		<div class="table__el">
+																			<i class="svg-ico fr-ico"></i>
+																			<span>x 5</span>
+																		</div>
+																	</td>
+																	<td><strong>$ 3000</strong> / <span>5000</span></td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>
+																		<div class="table__el">
+																			<i class="svg-ico fr-ico"></i>
+																			<span>x 5</span>
+																		</div>
+																	</td>
+																	<td><strong>$ 3000</strong> / <span>5000</span></td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>
+																		<div class="table__el">
+																			<i class="svg-ico fr-ico"></i>
+																			<span>x 5</span>
+																		</div>
+																	</td>
+																	<td><strong>$ 3000</strong> / <span>5000</span></td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>05.13.17 </td>
+																	<td><strong>$ 700</strong> / <span>5000</span></td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>05.13.17 </td>
+																	<td><strong>$ 700</strong> / <span>5000</span></td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-default">
+																	<td>&nbsp;</td>
+																	<td>05.13.17 </td>
+																	<td><strong>$ 700</strong> / <span>5000</span></td>
+																	<td></td>
+																</tr>	
+																<tr class="is-default">
+																	<td>&nbsp;</td>
+																	<td>
+																		<div class="table__el">
+																			<i class="svg-ico fr-ico"></i>
+																			<span>x 3</span>
+																		</div>
+																	</td>
+																	<td><strong>$ 700</strong> / <span>7000</span></td>
+																	<td></td>
+																</tr>
+																<tr class="">
+																	<td>&nbsp;</td>
+																	<td colspan="1"><a href="#" class="btn btn_sm is- btn-border btn-txt-gray">ADD FR</a></td>
+																	<td></td>
+																	<td></td>
+																</tr>
+															</tbody>
+															<tfoot>
+																<tr class="is-default">
+																	<td>&nbsp;</td>
+																	<td></td>
+																	<td><strong>$ 7500</strong></td>
+																	<td></td>
+																</tr>
+															</tfoot>
+														</table>
+														<table class="table-highlight is-md">
+															<thead>
+																<tr>
+																	<th width="40">&nbsp;</th>
+																	<th width="120">Commission <br> Calculation</th>
+																	<th width="100">Amount</th>
+																	<th>&nbsp;</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>05.15.17 </td>
+																	<td>$ 5000</td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>05.15.17 </td>
+																	<td>$ 5000</td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>05.15.17 </td>
+																	<td>$ 5000</td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>05.15.17 </td>
+																	<td>$ 5000</td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-default">
+																	<td>&nbsp;</td>
+																	<td>05.15.17 </td>
+																	<td>$ 5000</td>
+																	<td></td>
+																</tr>
+																<tr class="">
+																	<td>&nbsp;</td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																</tr>	
+																<tr class="">
+																	<td>&nbsp;</td>
+																	<td colspan="1"><a href="#" class="btn btn_sm is- btn-border btn-txt-gray">ADD FR</a></td>
+																	<td></td>
+																	<td></td>
+																</tr>
+																<tr class="">
+																	<td>&nbsp;</td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																</tr>
+															</tbody>
+															<tfoot>
+																<tr class="is-default">
+																	<td>&nbsp;</td>
+																	<td></td>
+																	<td><strong>$ 5000</strong></td>
+																	<td></td>
+																</tr>
+															</tfoot>
+														</table>
+														<table class="table-highlight is-md">
+															<thead>
+																<tr>
+																	<th width="40">&nbsp;</th>
+																	<th width="120">Commission <br> Payment</th>
+																	<th width="100">Amount</th>
+																	<th>&nbsp;</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>05.15.17 </td>
+																	<td><strong>$ 100</strong> / <span>300</span></td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>05.15.17 </td>
+																	<td><strong>$ 100</strong> / <span>300</span></td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-active">
+																	<td>&nbsp;</td>
+																	<td>05.15.17 </td>
+																	<td><strong>$ 100</strong> / <span>300</span></td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="is-clarify">
+																	<td>&nbsp;</td>
+																	<td>05.15.17 </td>
+																	<td><strong>$ 100</strong> / <span>300</span></td>
+																	<td><i class="icon-checked"></i></td>
+																</tr>
+																<tr class="">
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																</tr>
+																<tr class="">
+																	<td>&nbsp;</td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																</tr>	
+																<tr class="">
+																	<td>&nbsp;</td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																</tr>
+																<tr class="">
+																	<td>&nbsp;</td>
+																	<td colspan="1"><a href="#" class="btn btn_sm is- btn-border btn-txt-gray">ADD FR</a></td>
+																	<td></td>
+																	<td></td>
+																</tr>
+															</tbody>
+															<tfoot>
+																<tr class="is-default">
+																	<td>&nbsp;</td>
+																	<td></td>
+																	<td><strong>$ 2750</strong></td>
+																	<td></td>
+																</tr>
+															</tfoot>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end scrollbar -->
+						<!-- begin fake-header  -->
+						<div class="fake-header js-fake-head"> 
+							<div class="fake-header__in js-fixed">
+								<table class="table">
+									<thead></thead>
+								</table>
+							</div>
+						</div>
+						<!-- end fake-header -->
+					</div>
+				</div>
+				<!-- end tablewrap -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END out-->
+<div class="overlay"></div>
+</body>
+</html>
