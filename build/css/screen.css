@@ -77,39 +77,41 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-folder:before { content: ""; }
 
-.icon-letter:before { content: ""; }
+.icon-hourglass:before { content: ""; }
 
-.icon-lock:before { content: ""; }
+.icon-letter:before { content: ""; }
 
-.icon-logo-short:before { content: ""; }
+.icon-lock:before { content: ""; }
 
-.icon-logo:before { content: ""; }
+.icon-logo-short:before { content: ""; }
 
-.icon-marked:before { content: ""; }
+.icon-logo:before { content: ""; }
 
-.icon-menu:before { content: ""; }
+.icon-marked:before { content: ""; }
 
-.icon-news:before { content: ""; }
+.icon-menu:before { content: ""; }
 
-.icon-pending:before { content: ""; }
+.icon-news:before { content: ""; }
 
-.icon-plus:before { content: ""; }
+.icon-pending:before { content: ""; }
 
-.icon-pound:before { content: ""; }
+.icon-plus:before { content: ""; }
 
-.icon-sidebar:before { content: ""; }
+.icon-pound:before { content: ""; }
 
-.icon-square-arr:before { content: ""; }
+.icon-sidebar:before { content: ""; }
 
-.icon-star:before { content: ""; }
+.icon-square-arr:before { content: ""; }
 
-.icon-team:before { content: ""; }
+.icon-star:before { content: ""; }
 
-.icon-upload:before { content: ""; }
+.icon-team:before { content: ""; }
 
-.icon-warn:before { content: ""; }
+.icon-upload:before { content: ""; }
 
-.icon-zoom:before { content: ""; }
+.icon-warn:before { content: ""; }
+
+.icon-zoom:before { content: ""; }
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default { border-radius: 5px; border: 2px solid #000; background: #4c4c4c; color: #fff; }
@@ -289,6 +291,7 @@ body .tooltipster-base { z-index: 8; }
 .letter-ico.is-disabled { background-image: url("../img/svg-bg/letter-sm-disabled.svg"); }
 
 .transaction-ico { width: 70px; height: 70px; background-image: url("../img/svg-bg/transaction-sm.svg"); }
+.transaction-ico-split { background-image: url("../img/svg-bg/tr-sm-split.svg"); }
 .transaction-ico.is-disabled { background-image: url("../img/svg-bg/transaction-sm-disabled.svg"); }
 
 .library-ico { width: 70px; height: 70px; background-image: url("../img/svg-bg/library.svg"); }
@@ -1297,9 +1300,10 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table-highlight tbody tr:hover { background-color: rgba(188, 188, 188, 0.1); }
 .table-highlight tbody tr.is-active { background: rgba(163, 214, 112, 0.1); }
 .table-highlight tbody tr.is-active:hover { background: rgba(163, 214, 112, 0.1); }
-.table-highlight tbody tr.is-active .icon-checked { color: #00a11e; }
+.table-highlight tbody tr.is-active .icon-checked { color: #00a11e; font-size: 10px; }
 .table-highlight tbody tr.is-default { background: #fff; }
 .table-highlight tbody tr.is-clarify { background: rgba(255, 216, 68, 0.2); }
+.table-highlight tbody tr.is-clarify .icon-hourglass { color: #ebaf7c; font-size: 11px; vertical-align: middle; }
 .table-highlight tbody td .btn { margin: -3px 0; }
 
 .form { margin: 45px 0 5px; font-size: 13px; color: #6c757a; *zoom: 1; }
