@@ -1,0 +1,1151 @@
+<!doctype html>
+<html>
+//=include partials/head.html
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	//=include partials/header-active-notification.html
+	<div class="main">
+		<div class="l">
+			<div class="main__in">
+				<div class="upper">
+					<p class="upper__ttl">Commission Dashboard</p>
+					<ul class="upper__list">
+						<li class="upper__option"><a class="upper__link " href="#">Overview</a></li>
+						<li class="upper__option"><a class="upper__link " href="#">Enter Funds Received <span class="notification notification_sm is-violet"><span>24</span></span></a></li>
+						<li class="upper__option"><a class="upper__link is-active" href="#" >Calculate Commission <span class="notification notification_sm is-antique"><span>15</span></span></a></li>
+						<li class="upper__option"><a class="upper__link " href="#">Pay Commission <span class="notification notification_sm is-green"><span>4</span></span></a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Mark as Paid <span class="notification notification_sm is-oragne"><span>4</span></span></a></li>
+					</ul>
+					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
+					//=include partials/menu-suggest.html
+				</div>
+				<!-- begin tablewrap  -->
+				<div class="tablewrap js-tablewrap">
+					<!-- begin filters  -->
+					<div class="filters js-filters">
+						<div class="filters__wrap filters__wrap_mod js-fixed">
+							<div class="filters__desc filters__desc_margin is-black">All approved Transactions with Funds Received that are equal to the Transaction amount without Commission Calculation.</div>
+							<div class="filters__in">
+								<div class="filters__desc is-grey">Completed Transactions:</div>
+								<div class="tabs tabs_simi-bold">
+									<div class="tabs__el js-tab-el is-active">hide all</div>
+									<div class="tabs__el js-tab-el">show latest</div>
+									<div class="tabs__el js-tab-el">show all</div>
+								</div>
+								<div class="tabs tabs_md">
+									<div class="tabs__el js-tab-el is-active">$</div>
+									<div class="tabs__el js-tab-el">£</div>
+									<div class="tabs__el js-tab-el">all</div>
+								</div>
+								<div class="toggle-btn">
+									<i class="icon icon-arr-right"></i>
+								</div>
+								<div class="toggle-btn js-toggle-sidebar">
+									<i class="icon icon-sidebar"></i>
+								</div>
+								<div class="toggle-btn js-search-table">
+									<input type="search" placeholder="Search table">
+									<i class="icon icon-zoom"></i>
+									<i class="icon icon-close search-close js-search-clear"></i>
+								</div>
+									
+									
+							</div> 
+						</div>
+					</div>
+					<!-- end filters -->
+					<div class="tablewrap__in tablewrap__in_mod">
+						//=include partials/sidebar-commission.html
+						<!-- begin scrollbar  -->
+						<div class="scrollbar scrollbar_nomargin js-scrollbar">
+							<div class="table">
+								<div class="accordion-wrap">
+									<div class="accordion js-accordion is-active">
+										<div class="accordion__title ">
+											<button type="button" class="accordion__title-in js-accordion-btn">
+												<i class="icon-arr-right accordion__icon"></i>
+												<span class="accordion__caption">Pharell Williams</span> 
+											</button>
+										</div>
+										<div class="accordion__content" >
+											<div class="tables-line">
+												<table class="table-highlight table-highlight_footer is-xs">
+													<thead>
+														<tr>
+															<th width="90">Deal</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 2840228402</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 00921</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 89037</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 49274</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 276321</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 28910</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table-highlight table-highlight_footer is-sm">
+													<thead>
+														<tr>
+															<th width="10">&nbsp;</th>
+															<th width="100">Transaction</th>
+															<th width="75">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 1000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>8998072</span>
+																</div>
+															</td>
+															<td>$ 378</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 7500</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>8998072</span>
+																</div>
+															</td>
+															<td>$ 500</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 2000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 3000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Funds Received</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name" checked="checked">
+																	<label for="name"></label>
+																</div>
+															</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>1000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name2">
+																	<label for="name2"></label>
+																</div>
+															</td>
+															<td>05.13.17</td>
+															<td><strong>$ 102</strong> / <span>378</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name3" checked="checked">
+																	<label for="name3"></label>
+																</div>
+															</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>1000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name4" checked="checked">
+																	<label for="name4"></label>
+																</div>
+															</td>
+															<td>05.13.17</td>
+															<td><strong>$ 102</strong> / <span>378</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name5">
+																	<label for="name5"></label>
+																</div>
+															</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>1000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name6" checked="checked">
+																	<label for="name6"></label>
+																</div>
+															</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>1000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td><i class="icon-hourglass table-highlight__margin"></i></td>
+															<td>Selected total</td>
+															<td>$ 10 500</td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Commission <br> Calculation</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>&nbsp;</td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>&nbsp;</td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>  
+														</tr> 
+														<tr>
+															<td></td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td>
+																<a href="#" class="btn btn_md nowrap btn-border btn-txt-gray">mass add CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Commission <br> Payment</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>  
+														</tr> 
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr >
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="accordion js-accordion">	
+										<div class="accordion__title ">
+											<button type="button" class="accordion__title-in js-accordion-btn">
+												<i class="icon-arr-right accordion__icon"></i>
+												<span class="accordion__caption">Patrick Jane</span> 
+											</button>
+										</div>
+										<div class="accordion__content" style="display: none;">
+											<div class="tables-line">
+												<table class="table-highlight table-highlight_footer is-xs">
+													<thead>
+														<tr>
+															<th width="90">Deal</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 2840228402</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 00921</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 89037</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 49274</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 276321</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 28910</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table-highlight table-highlight_footer is-sm">
+													<thead>
+														<tr>
+															<th width="10">&nbsp;</th>
+															<th width="100">Transaction</th>
+															<th width="75">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 1000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>8998072</span>
+																</div>
+															</td>
+															<td>$ 378</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 7500</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>8998072</span>
+																</div>
+															</td>
+															<td>$ 500</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 2000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 3000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Funds Received</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name" checked="checked">
+																	<label for="name"></label>
+																</div>
+															</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>1000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name2">
+																	<label for="name2"></label>
+																</div>
+															</td>
+															<td>05.13.17</td>
+															<td><strong>$ 102</strong> / <span>378</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name3" checked="checked">
+																	<label for="name3"></label>
+																</div>
+															</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>1000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name4" checked="checked">
+																	<label for="name4"></label>
+																</div>
+															</td>
+															<td>05.13.17</td>
+															<td><strong>$ 102</strong> / <span>378</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name5">
+																	<label for="name5"></label>
+																</div>
+															</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>1000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name6" checked="checked">
+																	<label for="name6"></label>
+																</div>
+															</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>1000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td><i class="icon-hourglass table-highlight__margin"></i></td>
+															<td>Selected total</td>
+															<td>$ 10 500</td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Commission <br> Calculation</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>&nbsp;</td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>&nbsp;</td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>  
+														</tr> 
+														<tr>
+															<td></td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td>
+																<a href="#" class="btn btn_md nowrap btn-border btn-txt-gray">mass add CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Commission <br> Payment</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>  
+														</tr> 
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr >
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+											<div class="tables-line">
+												<table class="table-highlight table-highlight_footer is-xs">
+													<thead>
+														<tr>
+															<th width="90">Deal</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 2840228402</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 00921</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 89037</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 49274</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 276321</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 28910</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table-highlight table-highlight_footer is-sm">
+													<thead>
+														<tr>
+															<th width="10">&nbsp;</th>
+															<th width="100">Transaction</th>
+															<th width="75">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 1000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>8998072</span>
+																</div>
+															</td>
+															<td>$ 378</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 7500</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>8998072</span>
+																</div>
+															</td>
+															<td>$ 500</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 2000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 3000</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Funds Received</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name" checked="checked">
+																	<label for="name"></label>
+																</div>
+															</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>1000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name2">
+																	<label for="name2"></label>
+																</div>
+															</td>
+															<td>05.13.17</td>
+															<td><strong>$ 102</strong> / <span>378</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name3" checked="checked">
+																	<label for="name3"></label>
+																</div>
+															</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>1000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name4" checked="checked">
+																	<label for="name4"></label>
+																</div>
+															</td>
+															<td>05.13.17</td>
+															<td><strong>$ 102</strong> / <span>378</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name5">
+																	<label for="name5"></label>
+																</div>
+															</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>1000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>
+																<div class="check-square table-highlight__margin">
+																	<input type="checkbox" name="name" id="name6" checked="checked">
+																	<label for="name6"></label>
+																</div>
+															</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>1000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td><i class="icon-hourglass table-highlight__margin"></i></td>
+															<td>Selected total</td>
+															<td>$ 10 500</td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Commission <br> Calculation</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>&nbsp;</td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>&nbsp;</td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>  
+														</tr> 
+														<tr>
+															<td></td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td>
+																<a href="#" class="btn btn_sm nowrap btn-border btn-txt-gray">ADD CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td>
+																<a href="#" class="btn btn_md nowrap btn-border btn-txt-gray">mass add CC</a>
+															</td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Commission <br> Payment</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>  
+														</tr> 
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr >
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end scrollbar -->
+						<!-- begin fake-header  -->
+						<div class="fake-header js-fake-head"> 
+							<div class="fake-header__in js-fixed">
+								<table class="table">
+									<thead></thead>
+								</table>
+							</div>
+						</div>
+						<!-- end fake-header -->
+					</div>
+				</div>
+				<!-- end tablewrap -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END out-->
+<div class="overlay"></div>
+</body>
+</html>

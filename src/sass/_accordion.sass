@@ -8,6 +8,7 @@
 				&  > .icon-arr-right
 					+rotate(90)
 					vertical-align: middle
+					margin-bottom: 5px
 		& > .accordion__content
 			& > .accordion
 				margin-top: -1px
@@ -17,6 +18,9 @@
 	&:not(:first-child)
 		margin-top: -1px
 		margin-bottom: -1px 
+	&:last-child
+		.accordion__content
+			border-bottom-color: transparent 
 	&__title
 		padding: 15px 30px
 		border-top: 1px solid #dce0e7 

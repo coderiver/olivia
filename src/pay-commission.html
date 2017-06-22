@@ -1,0 +1,576 @@
+<!doctype html>
+<html>
+//=include partials/head.html
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	//=include partials/header-active-notification.html
+	<div class="main">
+		<div class="l">
+			<div class="main__in">
+				<div class="upper">
+					<p class="upper__ttl">Commission Dashboard</p>
+					<ul class="upper__list">
+						<li class="upper__option"><a class="upper__link " href="#">Overview</a></li>
+						<li class="upper__option"><a class="upper__link " href="#">Enter Funds Received <span class="notification notification_sm is-violet"><span>24</span></span></a></li>
+						<li class="upper__option"><a class="upper__link" href="#">Calculate Commission <span class="notification notification_sm is-antique"><span>15</span></span></a></li>
+						<li class="upper__option"><a class="upper__link is-active" href="#">Pay Commission <span class="notification notification_sm is-green"><span>4</span></span></a></li>
+						<li class="upper__option"><a class="upper__link " href="#">Mark as Paid <span class="notification notification_sm is-oragne"><span>4</span></span></a></li>
+					</ul>
+					<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
+					//=include partials/menu-suggest.html
+				</div>
+				<!-- begin tablewrap  -->
+				<div class="tablewrap js-tablewrap">
+					<!-- begin filters  -->
+					<div class="filters js-filters">
+						<div class="filters__wrap filters__wrap_mod js-fixed">
+							<div class="filters__desc filters__desc_margin is-black">All approved Transactions with approved Commission Calculation.</div>
+							<div class="filters__in">
+								<div class="filters__desc is-grey">Unapproved Commissions:</div>
+								<div class="tabs tabs_simi-bold">
+									<div class="tabs__el js-tab-el ">hide</div>
+									<div class="tabs__el js-tab-el is-active">show</div>
+								</div>
+								<div class="tabs tabs_md">
+									<div class="tabs__el js-tab-el is-active">$</div>
+									<div class="tabs__el js-tab-el">£</div>
+									<div class="tabs__el js-tab-el">all</div>
+								</div>
+								<div class="toggle-btn">
+									<i class="icon icon-arr-right"></i>
+								</div>
+								<div class="toggle-btn js-toggle-sidebar">
+									<i class="icon icon-sidebar"></i>
+								</div>
+								<div class="toggle-btn js-search-table">
+									<input type="search" placeholder="Search table">
+									<i class="icon icon-zoom"></i>
+									<i class="icon icon-close search-close js-search-clear"></i>
+								</div>
+									
+									
+							</div> 
+						</div>
+					</div>
+					<!-- end filters -->
+					<div class="tablewrap__in tablewrap__in_mod">
+						//=include partials/sidebar-commission.html
+						<!-- begin scrollbar  -->
+						<div class="scrollbar scrollbar_nomargin js-scrollbar">
+							<div class="table">
+								<div class="accordion-wrap">
+									<div class="accordion js-accordion is-active">
+										<div class="accordion__title ">
+											<button type="button" class="accordion__title-in js-accordion-btn">
+												<i class="icon-arr-right accordion__icon"></i>
+												<span class="accordion__caption">Pharell Williams</span> 
+											</button>
+										</div>
+										<div class="accordion__content" >
+											<div class="tables-line">
+												<table class="table-highlight table-highlight_footer is-xs is-disabled">
+													<thead>
+														<tr>
+															<th width="90">Deal</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 284029098374</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 28402</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 28402</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 28402</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table-highlight table-highlight_footer is-sm is-disabled">
+													<thead>
+														<tr>
+															<th width="21">&nbsp;</th> 
+															<th width="110">Transaction</th>
+															<th width="100">Amount</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 1000</td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 7500</td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 2000</td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico transaction-ico-split"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 3000</td>
+														</tr>
+														
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md is-disabled">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Funds Received</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>7000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>7000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>7000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>7000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Commission <br> Calculation</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td>$ 700</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td>$ 700</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td>$ 700</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td>$ 700</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td>TOTAL</td>
+															<td><div class="table-highlight__pull-left">$ 1700</div> </td>
+															<td><a href="#" class="table-highlight__pull-left btn btn_md nowrap btn-border btn-txt-gray">mass add CP</a></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Commission <br> Payment</th>
+															<th width="110">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr> 
+														<tr class="">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="accordion js-accordion">	
+										<div class="accordion__title ">
+											<button type="button" class="accordion__title-in js-accordion-btn">
+												<i class="icon-arr-right accordion__icon"></i>
+												<span class="accordion__caption">Patrick Jane</span> 
+											</button>
+										</div>	
+										<div class="accordion__content" style="display: none;">
+											<div class="tables-line">
+												<table class="table-highlight table-highlight_footer is-xs is-disabled">
+													<thead>
+														<tr>
+															<th width="90">Deal</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 284029098374</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 28402</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 28402</td>
+														</tr>
+														<tr class="is-active">
+															<td><i class="table-highlight__folder icon-folder"></i> 28402</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table-highlight table-highlight_footer is-sm is-disabled">
+													<thead>
+														<tr>
+															<th width="21">&nbsp;</th> 
+															<th width="110">Transaction</th>
+															<th width="100">Amount</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 1000</td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 7500</td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 2000</td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico transaction-ico transaction-ico-split"></i>
+																	<span>1001993</span>
+																</div>
+															</td>
+															<td>$ 3000</td>
+														</tr>
+														
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md is-disabled">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Funds Received</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>7000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>7000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>7000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>
+																<div class="table__el">
+																	<i class="svg-ico fr-ico fr-ico-light-pink"></i>
+																	<span>x 3</span>
+																</div>
+															</td>
+															<td><strong>$ 700</strong> / <span>7000</span></td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Commission <br> Calculation</th>
+															<th width="100">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td>$ 700</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td>$ 700</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td>$ 700</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+														<tr class="is-active">
+															<td>&nbsp;</td>
+															<td>05.15.17 </td>
+															<td>$ 700</td>
+															<td><i class="icon-checked"></i></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td>TOTAL</td>
+															<td><div class="table-highlight__pull-left">$ 1700</div> </td>
+															<td><a href="#" class="table-highlight__pull-left btn btn_md nowrap btn-border btn-txt-gray">mass add CP</a></td>
+														</tr>
+													</tfoot>
+												</table>
+												<table class="table-highlight table-highlight_footer is-md">
+													<thead>
+														<tr>
+															<th width="40">&nbsp;</th>
+															<th width="120">Commission <br> Payment</th>
+															<th width="110">Amount</th>
+															<th>&nbsp;</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr> 
+														<tr class="">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="is-default">
+															<td>&nbsp;</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end scrollbar -->
+						<!-- begin fake-header  -->
+						<div class="fake-header js-fake-head"> 
+							<div class="fake-header__in js-fixed">
+								<table class="table">
+									<thead></thead>
+								</table>
+							</div>
+						</div>
+						<!-- end fake-header -->
+					</div>
+				</div>
+				<!-- end tablewrap -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END out-->
+<div class="overlay"></div>
+</body>
+</html>
