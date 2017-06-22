@@ -12,6 +12,19 @@ $(document).ready(function() {
 				position: 'right',
 				maxWidth: 290
 			});
+		} else if (elem.is($('.js-tooltip-hover'))) {
+			elem.tooltipster({
+				maxWidth: 250,
+				interactive: true,
+				contentAsHTML: true,
+				position: 'bottom',
+				functionReady: function(origin, tooltip) {
+					tooltip.find('a').on('click', function(evt) {
+						evt.preventDefault();
+						origin.tooltipster('hide').removeClass('is-visible');
+					});
+				}
+			});
 		} else {
 			// TO FIX POSITION ON LOAD
 			elem.tooltipster({
@@ -38,6 +51,7 @@ $(document).ready(function() {
 	
 	initTooltip('.js-tooltip');
 	initTooltip('.js-tooltip-guide');
+	initTooltip('.js-tooltip-hover');
 	// textarea autoresize
 	$(document).on('input.textarea', '.js-expand', function() {
 			var minRows = this.getAttribute('data-min-rows') | 0,
@@ -217,13 +231,13 @@ $(document).ready(function() {
 	    }
 	});
 
-	$('.js-vert-scroll').perfectScrollbar();          
+	$('.js-vert-scroll').perfectScrollbar();            
 	$('.js-bar').addClass('is-active');
 
 	// animate back to top
-	$('.js-top').click(function(evt) {
+	$('.js-top').click(function(evt) {  
 		evt.preventDefault();
-		$( 'html, body' ).animate({
+		$( 'html, body' ).animate({   
 			scrollTop: 0
 		}, 'slow');
 	});

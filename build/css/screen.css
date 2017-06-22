@@ -556,7 +556,19 @@ a { text-decoration: none; }
 .tooltipster-base .tooltipster__link { display: inline-block; margin-top: 5px; font-size: 13px; color: #097bf2; }
 .tooltipster-base .tooltipster__link:hover { text-decoration: underline; }
 
+.tooltip-item { margin-bottom: 10px; white-space: nowrap; }
+.tooltip-item:hover { cursor: pointer; }
+.tooltip-item span { display: inline-block; vertical-align: top; }
+.tooltip-item span:first-child { max-width: 130px; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-right: 5px; font-size: 13px; color: #282828; }
+.tooltip-item span:last-child { font-size: 14px; color: #6c757a; }
+.tooltip-item span:last-child strong { font-family: "opensans-semibold", Arial, sans-serif; font-weight: 600; }
+.tooltip-item .svg-ico { display: inline-block; vertical-align: text-top; margin-right: 10px; width: 16px; height: 16px; }
+.tooltip-item.tooltip-item_icon span { color: #6c757a; font-size: 13px; }
+.tooltip-item.tooltip-item_icon span:first-child { max-width: 100px; }
+
 .highlight { display: inline-block; padding: 0 1px; background: #FFE8A1; vertical-align: bottom; font-family: "opensans-semibold", Arial, sans-serif; }
+
+.hover { cursor: pointer; }
 
 .description { position: relative; font-size: 0; margin-bottom: 6px; }
 .description:only-child { margin: 0; }

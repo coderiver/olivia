@@ -225,12 +225,52 @@ a
 		&:hover
 			text-decoration: underline
 
+.tooltip-item
+	margin-bottom: 10px
+	white-space: nowrap
+	&:hover
+		cursor: pointer
+	span
+		display: inline-block
+		vertical-align: top
+		&:first-child
+			max-width: 130px
+			width: 100% 
+			overflow: hidden 
+			text-overflow: ellipsis
+			white-space: nowrap
+			padding-right: 5px
+			font-size: 13px
+			color: #282828
+		&:last-child
+			font-size: 14px
+			color: #6c757a
+			strong
+				+opensans-sb
+				font-weight: 600 
+	.svg-ico
+		display: inline-block
+		vertical-align: text-top
+		margin-right: 10px 
+		width: 16px
+		height: 16px
+	&.tooltip-item_icon
+		span
+			color: #6c757a
+			font-size: 13px
+			&:first-child
+				max-width: 100px
+		 
+
 .highlight
 	display: inline-block
 	padding: 0 1px
 	background: #FFE8A1
 	vertical-align: bottom
 	+opensans-sb
+
+.hover
+	cursor: pointer
 
 
 .description

@@ -6,6 +6,19 @@ function initTooltip(elem) {
 			position: 'right',
 			maxWidth: 290
 		});
+	} else if (elem.is($('.js-tooltip-hover'))) {
+		elem.tooltipster({
+			maxWidth: 250,
+			interactive: true,
+			contentAsHTML: true,
+			position: 'bottom',
+			functionReady: function(origin, tooltip) {
+				tooltip.find('a').on('click', function(evt) {
+					evt.preventDefault();
+					origin.tooltipster('hide').removeClass('is-visible');
+				});
+			}
+		});
 	} else {
 		// TO FIX POSITION ON LOAD
 		elem.tooltipster({
@@ -32,3 +45,4 @@ function initTooltip(elem) {
 
 initTooltip('.js-tooltip');
 initTooltip('.js-tooltip-guide');
+initTooltip('.js-tooltip-hover');
