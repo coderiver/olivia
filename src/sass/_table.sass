@@ -474,7 +474,28 @@
 				&:last-child
 					border-right: 1px solid #dce0e7
 	&.is-md
-		max-width: 332px    
+		max-width: 332px
+	&.is-xs
+		max-width: 100px 
+		th:first-child, td:first-child
+			padding-left: 19px 
+		td
+			padding-right: 5px
+			text-overflow: ellipsis
+			overflow: hidden 
+			white-space: nowrap
+	&.is-sm
+		max-width: 230px  
+	&.is-disabled
+		opacity: .4
+		pointer-events: none 
+	&__margin
+		margin-left: 19px
+	&__folder
+		font-size: 10px
+		margin-right: 5px
+
+		   
 	thead
 		tr
 			background: #f7f8f9
@@ -507,14 +528,36 @@
 				background: #fff
 			&.is-clarify
 				background: rgba(255, 216, 68, 0.2)
+				&:hover
+					background: rgba(255, 216, 68, 0.2)
 				.icon-hourglass
 					color: #ebaf7c 
 					font-size: 11px
 					vertical-align: middle
 		td
+			color: #6c757a
+			font-size: 13px
 			.btn
 				margin: -3px 0 
+	&_footer:not(:last-child)
+		tfoot
+			tr
+				td
+					
+					&:last-child
+						border-right: transparent
 				 
+	td.table-highlight__dropdown
+		padding-top: 0 
+		padding-bottom: 0 
+				 
+.table-highlight.table-highlight_footer
+	tfoot
+		tr
+			td
+				height: auto
+				padding: 14px 8.5px
+				border-bottom-color: transparent
 
 
 

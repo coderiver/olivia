@@ -95,6 +95,37 @@
 				right: 0
 				bottom: auto
 				border-width: 2px
+	&_time
+		&.is-active
+			.dropdown__bl
+				background: #FFF 
+				&:before
+					opacity: 1
+				i
+					opacity: 0
+		.dropdown__bl
+			position: relative
+			background-image: linear-gradient(to bottom, #f7f8f9, #ebecee), linear-gradient(to bottom, #fafafa, #e3e3e3)
+			border: solid 1px #cfd5e0
+			&:before
+				opacity: 0 
+			i
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+			.icon-hourglass
+				color: #ebaf7c
+				font-size: 12px
+		.dropdown__list
+			a
+				font-size: 13px
+				color: #282828
+			.icon-checked
+				color: #00a11e
+				font-size: 10px
+				margin-right: 10px
+
 	&__item
 		position: relative
 		padding: 9px 25px 9px 10px
