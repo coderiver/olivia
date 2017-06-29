@@ -1110,10 +1110,11 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .sidebar .ps-scrollbar-y-rail { right: 0; width: 3px; }
 .sidebar .ps-scrollbar-y-rail .ps-scrollbar-y { width: 3px; }
 
-.sidebar-filter { position: absolute; top: 50%; right: 10px; margin-top: -15px; line-height: 1; font-family: "opensans", Arial, sans-serif; max-width: 101px; height: 31px; overflow-X: hidden; padding-top: 8px; }
-.sidebar-filter__bl { float: right; margin: 0 2px; font-size: 0; background: #828C92; color: #fff; border-radius: 18px; white-space: nowrap; margin-bottom: 4px; }
+.sidebar-filter { position: absolute; top: 50%; right: 10px; margin-top: -8px; line-height: 1; font-family: "opensans", Arial, sans-serif; max-width: 150px; overflow: hidden; max-height: 20px; }
+.sidebar-filter__bl { float: right; margin: 0 2px; font-size: 0; background: #828C92; color: #fff; border-radius: 18px; margin-bottom: 3px; }
 .sidebar-filter__bl:only-child { float: none; }
 .sidebar-filter__bl:only-child .sidebar-filter__label { max-width: 85px; }
+.sidebar-filter__bl:nth-last-child(n+3):first-child .sidebar-filter__label, .sidebar-filter__bl:nth-last-child(n+3):first-child ~ .sidebar-filter__bl .sidebar-filter__label { max-width: 30px; padding: 3.5px 0px 3.5px 4px; }
 .sidebar-filter__bl .sidebar-filter__label { max-width: 60px; }
 .sidebar-filter__label { display: inline-block; padding: 3.5px 4px; font-size: 10px; text-overflow: ellipsis; overflow: hidden; vertical-align: middle; white-space: nowrap; }
 .sidebar-filter__cancel { display: inline-block; padding: 6px 5px 6px 4px; background: #6C757A; vertical-align: middle; border-radius: 0 18px 18px 0; }

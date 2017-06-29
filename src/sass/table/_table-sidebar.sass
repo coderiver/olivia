@@ -191,14 +191,12 @@
 	position: absolute
 	top: 50%
 	right: 10px
-	margin-top: -15px
+	margin-top: -8px
 	line-height: 1
 	+opensans
-	max-width: 101px
-	height: 31px
-	overflow-X: hidden
-	// top: 12px
-	padding-top: 8px
+	max-width: 150px
+	overflow: hidden
+	max-height: 20px
 	&__bl
 		float: right
 		margin: 0 2px
@@ -206,12 +204,16 @@
 		background: #828C92
 		color: #fff
 		border-radius: 18px
-		white-space: nowrap
-		margin-bottom: 4px 
+		margin-bottom: 3px
 		&:only-child
 			float: none
 			.sidebar-filter__label
 				max-width: 85px
+		&:nth-last-child(n+3):first-child,
+		&:nth-last-child(n+3):first-child ~ .sidebar-filter__bl
+			.sidebar-filter__label
+				max-width: 30px
+				padding: 3.5px 0px 3.5px 4px 
 		.sidebar-filter__label
 			max-width: 60px
 	&__label
