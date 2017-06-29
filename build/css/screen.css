@@ -1110,7 +1110,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .sidebar .ps-scrollbar-y-rail { right: 0; width: 3px; }
 .sidebar .ps-scrollbar-y-rail .ps-scrollbar-y { width: 3px; }
 
-.sidebar-filter { position: absolute; top: 50%; right: 10px; margin-top: -8px; line-height: 1; font-family: "opensans", Arial, sans-serif; max-width: 150px; overflow: hidden; max-height: 20px; }
+.sidebar-filter { position: absolute; top: 50%; right: 10px; margin-top: -8px; line-height: 1; font-family: "opensans", Arial, sans-serif; max-width: 160px; overflow: hidden; max-height: 20px; }
 .sidebar-filter__bl { float: right; margin: 0 2px; font-size: 0; background: #828C92; color: #fff; border-radius: 18px; margin-bottom: 3px; }
 .sidebar-filter__bl:only-child { float: none; }
 .sidebar-filter__bl:only-child .sidebar-filter__label { max-width: 85px; }
