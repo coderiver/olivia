@@ -472,7 +472,7 @@ input:focus { -webkit-box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; 
 .dropdown.is-menu .dropdown__item { padding: 0 5px 0 0; border: none; background: none; text-transform: uppercase; color: #93988f; }
 .dropdown.is-menu .dropdown__item:before { right: auto; left: 100%; }
 .dropdown.is-menu .dropdown__item:after { display: none; }
-.dropdown.is-menu .dropdown__list { left: -15px; margin-top: 5px; padding: 7px 0; border-radius: 4px; }
+.dropdown.is-menu .dropdown__list { min-width: 200px; left: -15px; margin-top: 5px; padding: 7px 0; border-radius: 4px; }
 .dropdown.is-menu .dropdown__list a { padding: 7px 15px; }
 .dropdown.is-login .dropdown__item { text-transform: none; }
 .dropdown.is-reference .dropdown__list { right: auto; left: 0; }
