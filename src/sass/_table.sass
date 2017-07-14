@@ -588,9 +588,122 @@
 				border-bottom-color: transparent
 
 
+//test table
+.table-highlight-line
+	width: 100%
+	table-layout: fixed
+	thead
+		tr
+			background: #f7f8f9
+			border-bottom: 1px solid #dce0e7
+			&:first-child
+				&:hover
+					background: #f7f8f9
+		th
+			font-size: 12px
+			color: #626a6f
+			height: 38px
+			vertical-align: middle
+			text-align: left
+			padding: 0 8.5px 
+			+opensans-sb
+			&:nth-child(4n)
+				border-right: 1px solid #dce0e7 
+			&:last-child
+				border-right: none 
+	tbody
+		tr
+			
+			
+			&:hover
+				background-color: transparent
+			// &:first-child
+			// 	&:hover
+			// 		background-color: rgba(188, 188, 188, 0.1)
+			&.is-vertical
+				td
+					vertical-align: top
 
+		td
+			color: #6c757a
+			font-size: 13px
+			background-color: #f8f8f8
+			&:nth-child(4n)
+				border-right: 1px solid #dce0e7 
+			&:last-child
+				border-right: none 
+			&.is-table-in
+				padding: 0
+				height: auto
+				&.is-open 
+					table
+						&[data-attr="child"]
+							display: block
+			.btn
+				margin: -3px 0 
+			table
+				&[data-attr="child"]
+					display: none
+					
+				td
+					white-space: nowrap
+					background: transparent
+					border: none 
+					&:hover
+						background: none 
+	.is-active
+		// background: rgba(163, 214, 112, 0.1)
+		background: #f6fbf0 
+		&:hover
+			background: #f6fbf0
+		.icon-checked
+			color: #00a11e
+			font-size: 10px
+	.is-default
+		background: #fff
+		&:hover
+			background: #fff
+	.is-clarify
+		background: #fff7da
+		&:hover
+			background:  #fff7da
+		.icon-hourglass
+			color: #ebaf7c 
+			font-size: 11px
+			vertical-align: middle
+	.number
+		font-size: 10px
+		color: #9b9b9b
+		margin-right: 5px
+	.name
+		font-size: 12px
+		color: #4a4a4a
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
+		width: 81px
+		display: inline-block
+		vertical-align: middle
 
+	.arr-bottom-right
+		display: inline-block
+		vertical-align: middle
+		background-repeat: no-repeat
+		background-position: 0 0
+		background-size: contain
+		width: 14px
+		height: 23px 
+		margin: -15px 0 0 15px 
+		background-image: url('../img/svg-bg/arr-bottom-right.svg') 
 
+.table-highlight-line
+	tfoot
+		tr
+			td
+				height: auto
+				padding: 14px 8.5px
+				border-bottom-color: transparent
+				background: #FFF 
 
 
 

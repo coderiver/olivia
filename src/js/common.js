@@ -29,6 +29,14 @@ $(document).ready(function() {
 		$(this).parents('.js-slide-parent').slideUp();
 	});
 
+
+	$('.js-td-open').on('click', function(){
+		var td = $(this).closest('.is-table-in'),
+			tr = td.closest('tr');
+
+		td.toggleClass('is-open');
+		tr.toggleClass('is-vertical');
+	});
 	
 });
 
