@@ -471,127 +471,135 @@
 			th
 				border-top: 1px solid #dce0e7
 
-.table-highlight
-	table-layout: fixed
-	&:not(:last-child)
-		tr
-			td, th
-				&:last-child
-					border-right: 1px solid #dce0e7
-	&.is-md
-		max-width: 332px
-	&.is-xs
-		max-width: 100px 
-		th:first-child, td:first-child
-			padding-left: 19px 
-		td
-			padding-right: 5px
-			text-overflow: ellipsis
-			overflow: hidden 
-			white-space: nowrap
-	&.is-sm
-		max-width: 232px   
-	&.is-disabled
-		opacity: .4
-		pointer-events: none 
-	&__margin
-		margin-left: 10px
-	&__folder
-		font-size: 10px
-		margin-right: 5px
-	&__pull-left
-		transform: translateX(-45%)
-		max-width: 120px
-		overflow: hidden 
-		text-overflow: ellipsis
-		padding-right: 5px 
+// .table-highlight
+// 	table-layout: fixed
+// 	&:not(:last-child)
+// 		tr
+// 			td, th
+// 				&:last-child
+// 					border-right: 1px solid #dce0e7
+// 	&.is-md
+// 		max-width: 332px
+	
+// 	&.is-sm
+// 		max-width: 232px   
+	
+
+	
 		
 
 		   
-	thead
-		tr
-			background: #f7f8f9
-			border-bottom: 1px solid #dce0e7
-			&:first-child
-				&:hover
-					background: #f7f8f9
-		th
-			font-size: 12px
-			color: #626a6f
-			height: 38px
-			vertical-align: middle
-			text-align: left
-			padding: 0 8.5px 
-			+opensans-sb
-	tbody
-		tr
-			background-color: rgba(188, 188, 188, 0.1)
-			// border-bottom: 1px solid rgba(#efefef, .5)
-			&:hover
-				background-color: rgba(188, 188, 188, 0.1)
-			&:first-child
-				&:hover
-					background-color: rgba(188, 188, 188, 0.1)
-			&.is-active
-				background: rgba(163, 214, 112, 0.1)
-				&:hover
-					background: rgba(163, 214, 112, 0.1)
-				.icon-checked
-					color: #00a11e
-					font-size: 10px
-			&.is-default
-				background: #fff
-				&:hover
-					background: #fff
-			&.is-clarify
-				background: rgba(255, 216, 68, 0.2)
-				&:hover
-					background: rgba(255, 216, 68, 0.2)
-				.icon-hourglass
-					color: #ebaf7c 
-					font-size: 11px
-					vertical-align: middle
-		td
-			color: #6c757a
-			font-size: 13px
-			.btn
-				margin: -3px 0 
-	&_footer:not(:last-child)
-		tfoot
-			tr
-				td
+// 	thead
+// 		tr
+// 			background: #f7f8f9
+// 			border-bottom: 1px solid #dce0e7
+// 			&:first-child
+// 				&:hover
+// 					background: #f7f8f9
+// 		th
+// 			font-size: 12px
+// 			color: #626a6f
+// 			height: 38px
+// 			vertical-align: middle
+// 			text-align: left
+// 			padding: 0 8.5px 
+// 			+opensans-sb
+// 	tbody
+// 		tr
+// 			background-color: rgba(188, 188, 188, 0.1)
+// 			// border-bottom: 1px solid rgba(#efefef, .5)
+// 			&:hover
+// 				background-color: rgba(188, 188, 188, 0.1)
+// 			&:first-child
+// 				&:hover
+// 					background-color: rgba(188, 188, 188, 0.1)
+// 			&.is-active
+// 				background: rgba(163, 214, 112, 0.1)
+// 				&:hover
+// 					background: rgba(163, 214, 112, 0.1)
+// 				.icon-checked
+// 					color: #00a11e
+// 					font-size: 10px
+// 			&.is-default
+// 				background: #fff
+// 				&:hover
+// 					background: #fff
+// 			&.is-clarify
+// 				background: rgba(255, 216, 68, 0.2)
+// 				&:hover
+// 					background: rgba(255, 216, 68, 0.2)
+// 				.icon-hourglass
+// 					color: #ebaf7c 
+// 					font-size: 11px
+// 					vertical-align: middle
+// 		td
+// 			color: #6c757a
+// 			font-size: 13px
+// 			.btn
+// 				margin: -3px 0 
+// 	&_footer:not(:last-child)
+// 		tfoot
+// 			tr
+// 				td
 					
-					&:last-child
-						border-right: transparent
+// 					&:last-child
+// 						border-right: transparent
 				 
-	td.table-highlight__dropdown
-		padding-top: 0  
-		padding-bottom: 0
+// 	td.table-highlight__dropdown
+// 		padding-top: 0  
+// 		padding-bottom: 0
 	
-	.arr-bottom-right
-		display: inline-block
-		vertical-align: middle
-		background-repeat: no-repeat
-		background-position: 0 0
-		background-size: contain
-		width: 14px
-		height: 23px 
-		margin: -15px 0 0 15px 
-		background-image: url('../img/svg-bg/arr-bottom-right.svg') 
+// 	.arr-bottom-right
+// 		display: inline-block
+// 		vertical-align: middle
+// 		background-repeat: no-repeat
+// 		background-position: 0 0
+// 		background-size: contain
+// 		width: 14px
+// 		height: 23px 
+// 		margin: -15px 0 0 15px 
+// 		background-image: url('../img/svg-bg/arr-bottom-right.svg') 
 				 
-.table-highlight.table-highlight_footer
-	tfoot
-		tr
-			td
-				height: auto
-				padding: 14px 8.5px
-				border-bottom-color: transparent
+// .table-highlight.table-highlight_footer
+// 	tfoot
+// 		tr
+// 			td
+// 				height: auto
+// 				padding: 14px 8.5px
+// 				border-bottom-color: transparent
 
 
 //test table
 .table-highlight-line
 	width: 100%
 	table-layout: fixed
+	&__pull-left
+		transform: translateX(-15%)
+		max-width: 96px
+		overflow: hidden 
+		text-overflow: ellipsis
+		padding-right: 5px 
+	&__margin
+		margin-left: 10px
+	&__folder
+		font-size: 10px
+		margin-right: 5px
+	&_five
+		thead
+			th
+				&:nth-child(4n), &:first-child
+					border-right: 1px solid #dce0e7
+				&:first-child
+					padding-left: 19px
+				&:nth-child(2)
+					padding-left: 15px
+		tbody
+			td
+				&:nth-child(4n), &:first-child
+					border-right: 1px solid #dce0e7 
+				&:nth-child(2)
+					padding-left: 15px
+				padding-left: 15px
 	thead
 		tr
 			background: #f7f8f9
@@ -628,6 +636,7 @@
 			color: #6c757a
 			font-size: 13px
 			background-color: #f8f8f8
+			white-space: nowrap
 			&:nth-child(4n)
 				border-right: 1px solid #dce0e7 
 			&:last-child
@@ -639,6 +648,13 @@
 					table
 						&[data-attr="child"]
 							display: block
+			&.is-xs
+				max-width: 100px 
+				padding-right: 5px
+				text-overflow: ellipsis
+				overflow: hidden 
+				white-space: nowrap
+				padding-left: 19px
 			.btn
 				margin: -3px 0 
 			table
@@ -648,9 +664,24 @@
 				td
 					white-space: nowrap
 					background: transparent
-					border: none 
+					border-bottom: 1px dashed #efefef
+					
 					&:hover
 						background: none 
+				tr
+					&.is-clarify
+						&:hover
+							background:  #fff7da
+					&.is-default
+						&:hover
+							background: #fff
+					&.is-active
+						&:hover
+							background: #f6fbf0
+					&:last-child
+						td
+							border-bottom: none 
+	
 	.is-active
 		// background: rgba(163, 214, 112, 0.1)
 		background: #f6fbf0 
@@ -684,7 +715,11 @@
 		width: 81px
 		display: inline-block
 		vertical-align: middle
-
+	strong
+		font-size: 14px
+	.icon-unblock
+		display: inline-block
+		vertical-align: middle
 	.arr-bottom-right
 		display: inline-block
 		vertical-align: middle
@@ -695,20 +730,51 @@
 		height: 23px 
 		margin: -15px 0 0 15px 
 		background-image: url('../img/svg-bg/arr-bottom-right.svg') 
+	
+	.is-disabled
+		opacity: .4
+		pointer-events: none 
 
-.table-highlight-line
-	tfoot
-		tr
-			td
-				height: auto
-				padding: 14px 8.5px
-				border-bottom-color: transparent
-				background: #FFF 
+.table-highlight-line .table-highlight-line__footer
+	tr
+		td
+			height: auto
+			padding: 14px 8.5px
+			border-bottom-color: transparent
+			background: #FFF 
 
-
-
-
-
+.split-icon
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	width: 17px
+	height: 17px
+	border-radius: 50%
+	overflow: hidden
+	background: #126800 
+	margin-right: 7px
+	&:before
+		content: ''
+		position: absolute
+		left: -6px
+		right: 0
+		bottom: 5px
+		width: 21px
+		height: 10px 
+		transform-origin: 100% 0 
+		background: #438234 
+		transform: rotate(-45deg)
+	&__num
+		position: relative
+		padding: 0 6px
+		text-align: center
+		font-size: 12px
+		color: #fff
+		line-height: 17px
+		
+	
+.text-grey
+	color: #bababa
 
 
 
