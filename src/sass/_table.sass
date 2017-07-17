@@ -625,8 +625,9 @@
 			background: #f8f8f8
 			&:hover
 				background: #f8f8f8
-			// &:first-child
-			// 	&:hover
+			&:first-child
+				&:hover
+					background: #f8f8f8
 			// 		background-color: rgba(188, 188, 188, 0.1)
 			&.is-vertical
 				td
@@ -679,6 +680,7 @@
 						&[data-attr="child"]
 							display: block
 				&_border
+					padding: 0
 					&:before
 						display: none
 			&.is-xs
