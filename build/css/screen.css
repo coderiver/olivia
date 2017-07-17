@@ -1310,7 +1310,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 
 .scrollbar { position: relative; min-height: 191px; margin-right: 50px; padding-bottom: 13px; background: #FFF; overflow: hidden; -webkit-transition: 0.3s ease; transition: 0.3s ease; }
 .scrollbar.is-sidebar { margin-left: 240px; }
-.scrollbar.is-sidebar .accordion__title { width: -webkit-calc(100% + 240px); width: calc(100% + 240px); }
+.scrollbar.is-sidebar .accordion__title, .scrollbar.is-sidebar .accordion__content { width: -webkit-calc(100% + 240px); width: calc(100% + 240px); }
 .scrollbar.ps-in-scrolling.ps-x .ps-scrollbar-x:before, .scrollbar.ps-in-scrolling.ps-x .ps-scrollbar-x:after { background: #eee; }
 .scrollbar_nomargin { margin-right: 0; }
 .scrollbar .table { min-width: 1000px; margin-bottom: 0; background: #FFF; }
@@ -1348,17 +1348,20 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table-highlight-line tbody td { color: #6c757a; font-size: 13px; background-color: #f8f8f8; white-space: nowrap; }
 .table-highlight-line tbody td:nth-child(4n) { border-right: 1px solid #dce0e7; }
 .table-highlight-line tbody td:last-child { border-right: none; }
-.table-highlight-line tbody td.is-table-in { padding: 0; height: auto; }
+.table-highlight-line tbody td.is-table-in { position: relative; min-width: 331px; width: 100%; display: inline-block; white-space: nowrap; margin-bottom: -1px; border: none; padding: 0; height: auto; background: transparent; }
+.table-highlight-line tbody td.is-table-in:before { content: ""; position: absolute; bottom: 0; left: 0; right: 0; background: #efefef; height: 1px; }
 .table-highlight-line tbody td.is-table-in.is-open table[data-attr="child"] { display: block; }
 .table-highlight-line tbody td.is-xs { max-width: 100px; padding-right: 5px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-left: 19px; }
 .table-highlight-line tbody td .btn { margin: -3px 0; }
 .table-highlight-line tbody td table[data-attr="child"] { display: none; }
+.table-highlight-line tbody td table[data-attr="child"] tr:first-child td { border-top: 1px dashed #efefef; }
+.table-highlight-line tbody td table[data-attr="child"], .table-highlight-line tbody td table[data-attr="parent"] { table-layout: fixed; }
 .table-highlight-line tbody td table td { white-space: nowrap; background: transparent; border-bottom: 1px dashed #efefef; }
 .table-highlight-line tbody td table td:hover { background: none; }
 .table-highlight-line tbody td table tr.is-clarify:hover { background: #fff7da; }
 .table-highlight-line tbody td table tr.is-default:hover { background: #fff; }
 .table-highlight-line tbody td table tr.is-active:hover { background: #f6fbf0; }
-.table-highlight-line tbody td table tr:last-child td { border-bottom: none; }
+.table-highlight-line tbody td table tr:last-child td { border-bottom-style: none; }
 .table-highlight-line .is-active { background: #f6fbf0; }
 .table-highlight-line .is-active:hover { background: #f6fbf0; }
 .table-highlight-line .is-active .icon-checked { color: #00a11e; font-size: 10px; }
@@ -1376,9 +1379,9 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 
 .table-highlight-line .table-highlight-line__footer tr td { height: auto; padding: 14px 8.5px; border-bottom-color: transparent; background: #FFF; }
 
-.split-icon { position: relative; display: inline-block; vertical-align: middle; width: 17px; height: 17px; border-radius: 50%; overflow: hidden; background: #126800; margin-right: 7px; }
+.split-icon { position: relative; display: inline-block; vertical-align: middle; width: 17px; height: 17px; border-radius: 50%; -webkit-transform: translateZ(0); -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%); overflow: hidden; background: #126800; margin-right: 7px; text-align: center; }
 .split-icon:before { content: ""; position: absolute; left: -6px; right: 0; bottom: 5px; width: 21px; height: 10px; -webkit-transform-origin: 100% 0; -ms-transform-origin: 100% 0; transform-origin: 100% 0; background: #438234; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
-.split-icon__num { position: relative; padding: 0 6px; text-align: center; font-size: 12px; color: #fff; line-height: 17px; }
+.split-icon__num { position: relative; text-align: center; font-size: 12px; color: #fff; line-height: 17px; }
 
 .text-grey { color: #bababa; }
 
