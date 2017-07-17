@@ -660,6 +660,7 @@
 				height: auto
 				background: #f8f8f8
 				&:before
+					display: none
 					content: ""
 					position: absolute
 					bottom: 0
@@ -676,6 +677,8 @@
 				// 	background: #efefef 
 				// 	width: 1px 
 				&.is-open 
+					&:before
+						display: block
 					table
 						&[data-attr="child"]
 							display: block
