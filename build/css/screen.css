@@ -1343,15 +1343,16 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table-highlight-line thead th { font-size: 12px; color: #626a6f; height: 38px; vertical-align: middle; text-align: left; padding: 0 8.5px; font-family: "opensans-semibold", Arial, sans-serif; }
 .table-highlight-line thead th:nth-child(4n) { border-right: 1px solid #dce0e7; }
 .table-highlight-line thead th:last-child { border-right: none; }
-.table-highlight-line tbody tr:hover { background-color: transparent; }
+.table-highlight-line tbody tr { background: #f8f8f8; }
+.table-highlight-line tbody tr:hover { background: #f8f8f8; }
 .table-highlight-line tbody tr.is-vertical td { vertical-align: top; }
 .table-highlight-line tbody td { color: #6c757a; font-size: 13px; background-color: #f8f8f8; white-space: nowrap; }
 .table-highlight-line tbody td:nth-child(4n) { border-right: 1px solid #dce0e7; }
 .table-highlight-line tbody td:last-child { border-right: none; }
-.table-highlight-line tbody td.is-table-in { position: relative; min-width: 331px; width: 100%; display: inline-block; white-space: nowrap; margin-bottom: -1px; border: none; padding: 0; height: auto; background: #f8f8f8; }
-.table-highlight-line tbody td.is-table-in:before { display: none; content: ""; position: absolute; bottom: 0; left: 0; right: 0; background: #efefef; height: 1px; }
-.table-highlight-line tbody td.is-table-in.is-open:before { display: block; }
+.table-highlight-line tbody td.is-table-in { position: relative; min-width: 327px; width: 100%; display: inline-block; white-space: nowrap; margin-bottom: -1px; border: none; padding: 0; height: auto; background: transparent; }
+.table-highlight-line tbody td.is-table-in:before { content: ""; position: absolute; bottom: 0; left: 0; right: 0; background: #efefef; height: 1px; }
 .table-highlight-line tbody td.is-table-in.is-open table[data-attr="child"] { display: block; }
+.table-highlight-line tbody td.is-table-in_border:before { display: none; }
 .table-highlight-line tbody td.is-xs { max-width: 100px; padding-right: 5px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-left: 19px; }
 .table-highlight-line tbody td .btn { margin: -3px 0; }
 .table-highlight-line tbody td table[data-attr="child"] { display: none; }

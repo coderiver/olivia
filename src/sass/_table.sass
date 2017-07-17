@@ -622,10 +622,9 @@
 				border-right: none 
 	tbody
 		tr
-			
-			
+			background: #f8f8f8
 			&:hover
-				background-color: transparent
+				background: #f8f8f8
 			// &:first-child
 			// 	&:hover
 			// 		background-color: rgba(188, 188, 188, 0.1)
@@ -649,7 +648,7 @@
 			// 			background: #f8f8f8
 			&.is-table-in
 				position: relative
-				min-width: 331px
+				min-width: 327px
 				// min-width: 318px
 				width: 100%
 				display: inline-block
@@ -658,9 +657,8 @@
 				border: none
 				padding: 0
 				height: auto
-				background: #f8f8f8
+				background: transparent 
 				&:before
-					display: none
 					content: ""
 					position: absolute
 					bottom: 0
@@ -677,11 +675,12 @@
 				// 	background: #efefef 
 				// 	width: 1px 
 				&.is-open 
-					&:before
-						display: block
 					table
 						&[data-attr="child"]
 							display: block
+				&_border
+					&:before
+						display: none
 			&.is-xs
 				max-width: 100px 
 				padding-right: 5px
