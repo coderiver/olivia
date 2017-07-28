@@ -34,7 +34,7 @@
 			border-bottom: 1px solid #efefef
 			z-index: 1
 		&_mod
-			min-height: 274px 
+			min-height: 274px
 		&.is-filtered
 			&:before
 				display: block
@@ -122,7 +122,7 @@
 		&:hover
 			text-decoration: none
 	&__bold
-		+opensans-sb	
+		+opensans-sb
 	span.table__text
 		display: inline-block
 	.table__head
@@ -156,8 +156,8 @@
 				bottom: 0px
 				left: 0
 				right: 0
-				background: #dce0e7 
-				height: 1px 
+				background: #dce0e7
+				height: 1px
 			&:hover
 				background: rgba(0, 0, 0, 0.05)
 			&.is-active
@@ -199,7 +199,7 @@
 					border-right: 1px solid #dce0e7
 
 			&:last-child
-				
+
 				p
 					border-right-color: transparent
 			.check
@@ -208,20 +208,20 @@
 		&:first-child
 			&:hover
 				background: none
-			
+
 		// &:nth-child(2)
-		// 	td 
+		// 	td
 		// 		position: relative
-		// 		&:before 
+		// 		&:before
 		// 			content: ""
 		// 			bottom: 100%
 		// 			height: 100%
 		// 			position: absolute
 		// 			left: 0
-		// 			right: 0  
+		// 			right: 0
 		// 			z-index: 99999
 		// 			user-select: none
-		// 			pointer-events: none 
+		// 			pointer-events: none
 		&:hover
 			background: darken(#fff, 5%)
 		&.is-active
@@ -292,7 +292,7 @@
 		border-bottom: 1px solid #efefef
 		vertical-align: middle
 		line-height: 18px
-		
+
 		&:first-child
 			padding-left: 17px
 		&.cell-center
@@ -303,7 +303,7 @@
 			border-right: 1px solid #efefef
 		.icon.icon-clip
 			font-size: 14px
-	td,th 
+	td,th
 		&:first-child
 			.check
 				input
@@ -420,7 +420,7 @@
 		background: #FFF
 		&__head
 			position: relative
-			z-index: 1 
+			z-index: 1
 			// opacity: 0
 		td
 			height: 38px
@@ -480,15 +480,15 @@
 // 					border-right: 1px solid #dce0e7
 // 	&.is-md
 // 		max-width: 332px
-	
+
 // 	&.is-sm
-// 		max-width: 232px   
-	
+// 		max-width: 232px
 
-	
-		
 
-		   
+
+
+
+
 // 	thead
 // 		tr
 // 			background: #f7f8f9
@@ -502,7 +502,7 @@
 // 			height: 38px
 // 			vertical-align: middle
 // 			text-align: left
-// 			padding: 0 8.5px 
+// 			padding: 0 8.5px
 // 			+opensans-sb
 // 	tbody
 // 		tr
@@ -529,26 +529,26 @@
 // 				&:hover
 // 					background: rgba(255, 216, 68, 0.2)
 // 				.icon-hourglass
-// 					color: #ebaf7c 
+// 					color: #ebaf7c
 // 					font-size: 11px
 // 					vertical-align: middle
 // 		td
 // 			color: #6c757a
 // 			font-size: 13px
 // 			.btn
-// 				margin: -3px 0 
+// 				margin: -3px 0
 // 	&_footer:not(:last-child)
 // 		tfoot
 // 			tr
 // 				td
-					
+
 // 					&:last-child
 // 						border-right: transparent
-				 
+
 // 	td.table-highlight__dropdown
-// 		padding-top: 0  
+// 		padding-top: 0
 // 		padding-bottom: 0
-	
+
 // 	.arr-bottom-right
 // 		display: inline-block
 // 		vertical-align: middle
@@ -556,10 +556,10 @@
 // 		background-position: 0 0
 // 		background-size: contain
 // 		width: 14px
-// 		height: 23px 
-// 		margin: -15px 0 0 15px 
-// 		background-image: url('../img/svg-bg/arr-bottom-right.svg') 
-				 
+// 		height: 23px
+// 		margin: -15px 0 0 15px
+// 		background-image: url('../img/svg-bg/arr-bottom-right.svg')
+
 // .table-highlight.table-highlight_footer
 // 	tfoot
 // 		tr
@@ -577,9 +577,9 @@
 	&__pull-left
 		transform: translateX(-15%)
 		max-width: 96px
-		overflow: hidden 
+		overflow: hidden
 		text-overflow: ellipsis
-		padding-right: 5px 
+		padding-right: 5px
 	&__margin
 		margin-left: 10px
 	&__folder
@@ -597,7 +597,7 @@
 		tbody
 			td
 				&:nth-child(4n), &:first-child
-					border-right: 1px solid #dce0e7 
+					border-right: 1px solid #dce0e7
 				&:nth-child(2)
 					padding-left: 15px
 				padding-left: 15px
@@ -614,12 +614,12 @@
 			height: 38px
 			vertical-align: middle
 			text-align: left
-			padding: 0 8.5px 
+			padding: 0 8.5px
 			+opensans-sb
 			&:nth-child(4n)
-				border-right: 1px solid #dce0e7 
+				border-right: 1px solid #dce0e7
 			&:last-child
-				border-right: none 
+				border-right: none
 	tbody
 		tr
 			background: #f8f8f8
@@ -630,6 +630,16 @@
 					background: #f8f8f8
 			// 		background-color: rgba(188, 188, 188, 0.1)
 			&.is-vertical
+				position: relative
+				&:after
+					content: ''
+					position: absolute
+					// bottom: 0
+					left: 0
+					right: 0
+					height: 1px
+					background: #efefef
+
 				td
 					vertical-align: top
 
@@ -639,9 +649,9 @@
 			background-color: #f8f8f8
 			// white-space: nowrap
 			&:nth-child(4n)
-				border-right: 1px solid #dce0e7 
+				border-right: 1px solid #dce0e7
 			&:last-child
-				border-right: none 
+				border-right: none
 			// &:first-child
 			// 	&.is-table-in
 			// 		background: #f8f8f8
@@ -649,7 +659,7 @@
 			// 			background: #f8f8f8
 			&.is-table-in
 				position: relative
-				min-width: 327px
+				min-width: 333px
 				// min-width: 318px
 				width: 100%
 				display: inline-block
@@ -658,15 +668,15 @@
 				border: none
 				padding: 0
 				height: auto
-				background: transparent 
+				background: transparent
 				&:before
 					content: ""
 					position: absolute
 					bottom: 0
 					left: 0
 					right: 0
-					z-index: 2 
-					background: #efefef 
+					z-index: 2
+					background: #efefef
 					height: 1px
 				// &:after
 				// 	content: ""
@@ -674,9 +684,11 @@
 				// 	bottom: 0
 				// 	top: 0
 				// 	right: 0
-				// 	background: #efefef 
-				// 	width: 1px 
-				&.is-open 
+				// 	background: #efefef
+				// 	width: 1px
+				&.is-open
+					&::before
+						bottom: 0
 					table
 						&[data-attr="child"]
 							display: block
@@ -685,14 +697,14 @@
 					&:before
 						display: none
 			&.is-xs
-				max-width: 100px 
+				max-width: 100px
 				padding-right: 5px
 				text-overflow: ellipsis
-				overflow: hidden 
+				overflow: hidden
 				white-space: nowrap
 				padding-left: 19px
 			.btn
-				margin: -3px 0 
+				margin: -3px 0
 			table
 				&[data-attr="child"]
 					display: none
@@ -704,16 +716,16 @@
 						td
 							white-space: nowrap
 				&[data-attr="parent"]
-					min-height: 53px 
+					min-height: 55px
 				&[data-attr="child"], &[data-attr="parent"]
-					table-layout: fixed				
+					table-layout: fixed
 				td
 					// white-space: nowrap
 					background: transparent
 					border-bottom: 1px dashed #efefef
 					// border-bottom-style: none
 					&:hover
-						background: none 
+						background: none
 				tr
 					&.is-clarify
 						&:hover
@@ -728,11 +740,11 @@
 						td
 							// border-bottom: 1px solid #efefef
 							border-bottom-style: none
-					
-	
+
+
 	.is-active
 		// background: rgba(163, 214, 112, 0.1)
-		background: #f6fbf0 
+		background: #f6fbf0
 		&:hover
 			background: #f6fbf0
 		.icon-checked
@@ -747,7 +759,7 @@
 		&:hover
 			background:  #fff7da
 		.icon-hourglass
-			color: #ebaf7c 
+			color: #ebaf7c
 			font-size: 11px
 			vertical-align: middle
 	.number
@@ -775,13 +787,13 @@
 		background-position: 0 0
 		background-size: contain
 		width: 14px
-		height: 23px 
-		margin: -15px 0 0 15px 
-		background-image: url('../img/svg-bg/arr-bottom-right.svg') 
-	
+		height: 23px
+		margin: -15px 0 0 15px
+		background-image: url('../img/svg-bg/arr-bottom-right.svg')
+
 	.is-disabled
 		opacity: .4
-		pointer-events: none 
+		pointer-events: none
 
 .table-highlight-line .table-highlight-line__footer
 	tr
@@ -789,7 +801,7 @@
 			height: auto
 			padding: 14px 8.5px
 			border-bottom-color: transparent
-			background: #FFF 
+			background: #FFF
 
 .split-icon
 	position: relative
@@ -801,7 +813,7 @@
 	-webkit-transform: translateZ(0)
 	-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%)
 	overflow: hidden
-	background: #126800 
+	background: #126800
 	margin-right: 7px
 	text-align: center
 	&:before
@@ -811,9 +823,9 @@
 		right: 0
 		bottom: 5px
 		width: 21px
-		height: 10px 
-		transform-origin: 100% 0 
-		background: #438234 
+		height: 10px
+		transform-origin: 100% 0
+		background: #438234
 		transform: rotate(-45deg)
 	&__num
 		position: relative
@@ -822,10 +834,7 @@
 		font-size: 12px
 		color: #fff
 		line-height: 17px
-		
-	
+
+
 .text-grey
 	color: #bababa
-
-
-

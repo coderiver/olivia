@@ -1346,12 +1346,15 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table-highlight-line tbody tr { background: #f8f8f8; }
 .table-highlight-line tbody tr:hover { background: #f8f8f8; }
 .table-highlight-line tbody tr:first-child:hover { background: #f8f8f8; }
+.table-highlight-line tbody tr.is-vertical { position: relative; }
+.table-highlight-line tbody tr.is-vertical:after { content: ""; position: absolute; left: 0; right: 0; height: 1px; background: #efefef; }
 .table-highlight-line tbody tr.is-vertical td { vertical-align: top; }
 .table-highlight-line tbody td { color: #6c757a; font-size: 13px; background-color: #f8f8f8; }
 .table-highlight-line tbody td:nth-child(4n) { border-right: 1px solid #dce0e7; }
 .table-highlight-line tbody td:last-child { border-right: none; }
-.table-highlight-line tbody td.is-table-in { position: relative; min-width: 327px; width: 100%; display: inline-block; margin-bottom: -1px; border: none; padding: 0; height: auto; background: transparent; }
+.table-highlight-line tbody td.is-table-in { position: relative; min-width: 333px; width: 100%; display: inline-block; margin-bottom: -1px; border: none; padding: 0; height: auto; background: transparent; }
 .table-highlight-line tbody td.is-table-in:before { content: ""; position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; background: #efefef; height: 1px; }
+.table-highlight-line tbody td.is-table-in.is-open::before { bottom: 0; }
 .table-highlight-line tbody td.is-table-in.is-open table[data-attr="child"] { display: block; }
 .table-highlight-line tbody td.is-table-in_border { padding: 0; }
 .table-highlight-line tbody td.is-table-in_border:before { display: none; }
@@ -1360,7 +1363,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table-highlight-line tbody td table[data-attr="child"] { display: none; }
 .table-highlight-line tbody td table[data-attr="child"] tr:first-child td { border-top: 1px dashed #efefef; }
 .table-highlight-line tbody td table[data-attr="child"] tr td { white-space: nowrap; }
-.table-highlight-line tbody td table[data-attr="parent"] { min-height: 53px; }
+.table-highlight-line tbody td table[data-attr="parent"] { min-height: 55px; }
 .table-highlight-line tbody td table[data-attr="child"], .table-highlight-line tbody td table[data-attr="parent"] { table-layout: fixed; }
 .table-highlight-line tbody td table td { background: transparent; border-bottom: 1px dashed #efefef; }
 .table-highlight-line tbody td table td:hover { background: none; }
