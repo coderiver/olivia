@@ -1346,8 +1346,6 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table-highlight-line tbody tr { background: #f8f8f8; }
 .table-highlight-line tbody tr:hover { background: #f8f8f8; }
 .table-highlight-line tbody tr:first-child:hover { background: #f8f8f8; }
-.table-highlight-line tbody tr.is-vertical { position: relative; }
-.table-highlight-line tbody tr.is-vertical:after { content: ""; position: absolute; left: 0; right: 0; height: 1px; background: #efefef; }
 .table-highlight-line tbody tr.is-vertical td { vertical-align: top; }
 .table-highlight-line tbody td { color: #6c757a; font-size: 13px; background-color: #f8f8f8; }
 .table-highlight-line tbody td:nth-child(4n) { border-right: 1px solid #dce0e7; }
@@ -1358,6 +1356,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table-highlight-line tbody td.is-table-in.is-open table[data-attr="child"] { display: block; }
 .table-highlight-line tbody td.is-table-in_border { padding: 0; }
 .table-highlight-line tbody td.is-table-in_border:before { display: none; }
+.table-highlight-line tbody td.no-border { border-bottom: 0; }
 .table-highlight-line tbody td.is-xs { max-width: 100px; padding-right: 5px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-left: 19px; }
 .table-highlight-line tbody td .btn { margin: -3px 0; }
 .table-highlight-line tbody td table[data-attr="child"] { display: none; }
