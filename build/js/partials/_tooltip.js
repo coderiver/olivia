@@ -12,6 +12,7 @@ function initTooltip(elem) {
 			interactive: true,
 			contentAsHTML: true,
 			position: 'bottom',
+			trigger: 'click',
 			functionReady: function(origin, tooltip) {
 				tooltip.find('a').on('click', function(evt) {
 					evt.preventDefault();

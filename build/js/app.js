@@ -27,6 +27,7 @@ $(document).ready(function() {
 				interactive: true,
 				contentAsHTML: true,
 				position: 'bottom',
+				trigger: 'click',
 				functionReady: function(origin, tooltip) {
 					tooltip.find('a').on('click', function(evt) {
 						evt.preventDefault();
@@ -61,6 +62,7 @@ $(document).ready(function() {
 	initTooltip('.js-tooltip');
 	initTooltip('.js-tooltip-guide');
 	initTooltip('.js-tooltip-hover');
+	
 	// textarea autoresize
 	$(document).on('input.textarea', '.js-expand', function() {
 			var minRows = this.getAttribute('data-min-rows') | 0,
@@ -240,13 +242,13 @@ $(document).ready(function() {
 	    }
 	});
 
-	$('.js-vert-scroll').perfectScrollbar();            
-	$('.js-bar').addClass('is-active');
+	$('.js-vert-scroll').perfectScrollbar();
+	$('.js-bar').addClass('is-active'); 
 
 	// animate back to top
-	$('.js-top').click(function(evt) {  
+	$('.js-top').click(function(evt) {
 		evt.preventDefault();
-		$( 'html, body' ).animate({   
+		$( 'html, body' ).animate({
 			scrollTop: 0
 		}, 'slow');
 	});
@@ -264,9 +266,8 @@ $(document).ready(function() {
 		td.toggleClass('is-open');
 		tr.toggleClass('is-vertical');
 	});
-	
-});
 
+});
 
 $(document).ready(function() {
 
