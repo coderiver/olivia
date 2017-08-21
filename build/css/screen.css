@@ -582,8 +582,8 @@ a { text-decoration: none; }
 .tooltip-item { margin-bottom: 5px; white-space: nowrap; }
 .tooltip-item:hover { cursor: pointer; }
 .tooltip-item span { display: inline-block; vertical-align: top; }
-.tooltip-item span:first-child { max-width: 100px; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-right: 5px; font-size: 13px; color: #282828; }
-.tooltip-item span:last-child { font-size: 14px; color: #6c757a; max-width: none; }
+.tooltip-item span:first-child { max-width: 110px; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-right: 5px; font-size: 13px; color: #282828; }
+.tooltip-item span:last-child { font-size: 14px; color: #6c757a; max-width: none; margin-right: 10px; }
 .tooltip-item span:last-child strong { font-family: "opensans-semibold", Arial, sans-serif; font-weight: 600; }
 .tooltip-item .svg-ico { display: inline-block; vertical-align: text-top; margin-right: 10px; width: 16px; height: 16px; }
 .tooltip-item.tooltip-item_icon span { color: #6c757a; font-size: 13px; }
