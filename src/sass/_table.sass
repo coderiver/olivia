@@ -594,13 +594,13 @@
 					padding-left: 19px
 				&:nth-child(2)
 					padding-left: 15px
-		tbody
-			td
-				&:nth-child(4n), &:first-child
-					border-right: 1px solid #dce0e7
-				&:nth-child(2)
-					padding-left: 15px
-				padding-left: 15px
+		// & > tbody > tr
+		// 	td
+		// 		&:nth-child(4n), &:first-child
+		// 			border-right: 1px solid #dce0e7
+		// 		&:nth-child(2)
+		// 			padding-left: 15px
+		// 			padding-left: 15px
 	thead
 		tr
 			background: #f7f8f9
@@ -645,27 +645,33 @@
 
 		td
 			color: #6c757a
-			font-size: 13px
+			font-size: 12px
 			background-color: #f8f8f8
-			// white-space: nowrap
-			&:nth-child(4n)
-				border-right: 1px solid #dce0e7
+			white-space: nowrap
+
+			// &:nth-child(4n)
+			// 	border-right: 1px solid #dce0e7
 			&:last-child
-				border-right: none
+				&.is-table-in, &.border-right
+
+					border-right: none
 			// &:first-child
 			// 	&.is-table-in
 			// 		background: #f8f8f8
 			// 		&:hover
 			// 			background: #f8f8f8
+			&.border-right
+				border-right: 1px solid #dce0e7
 			&.is-table-in
 				position: relative
-				min-width: 327px
+				border-right: 1px solid #dce0e7
+				// min-width: 327px
 				// min-width: 318px
-				width: 100%
-				display: inline-block
+				// width: 100%
+				// display: inline-block
 				// white-space: nowrap
 				margin-bottom: -1px
-				border: none
+				border-bottom: none
 				padding: 0
 				height: auto
 				background: transparent
@@ -717,8 +723,8 @@
 								border-top: 1px dashed #efefef
 						td
 							white-space: nowrap
-				&[data-attr="parent"]
-					min-height: 55px
+				// &[data-attr="parent"]
+				// 	min-height: 55px
 				&[data-attr="child"], &[data-attr="parent"]
 					table-layout: fixed
 				td
@@ -778,7 +784,9 @@
 		display: inline-block
 		vertical-align: middle
 	strong
-		font-size: 14px
+		font-size: 12px
+	big
+		font-size: 13px
 	.icon-unblock
 		display: inline-block
 		vertical-align: middle
@@ -790,7 +798,7 @@
 		background-size: contain
 		width: 14px
 		height: 23px
-		margin: -15px 0 0 15px
+		margin: -15px 0 0 5px
 		background-image: url('../img/svg-bg/arr-bottom-right.svg')
 
 	.is-disabled
