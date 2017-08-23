@@ -1352,8 +1352,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table-highlight-line tbody td.is-table-in:before { content: ""; position: absolute; bottom: 0; left: 0; right: 0; z-index: 1; background: #efefef; height: 1px; }
 .table-highlight-line tbody td.is-table-in.is-open::before { bottom: 0; }
 .table-highlight-line tbody td.is-table-in.is-open table[data-attr="child"] { display: block; }
-.table-highlight-line tbody td.is-table-in_border { padding: 0; }
-.table-highlight-line tbody td.is-table-in_border:before { display: none; }
+.table-highlight-line tbody td.is-table-in_border { border-right: 1px solid #dce0e7; }
 .table-highlight-line tbody td.no-border { border-bottom: 0; }
 .table-highlight-line tbody td.is-xs { max-width: 100px; padding-right: 5px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-left: 19px; }
 .table-highlight-line tbody td .btn { margin: -3px 0; }
