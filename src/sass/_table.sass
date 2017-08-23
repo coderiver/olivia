@@ -601,6 +601,7 @@
 		// 		&:nth-child(2)
 		// 			padding-left: 15px
 		// 			padding-left: 15px
+
 	thead
 		tr
 			background: #f7f8f9
@@ -620,6 +621,8 @@
 				border-right: 1px solid #dce0e7
 			&:last-child
 				border-right: none
+			&.border-right
+				border-right: 1px solid #dce0e7 !important
 	tbody
 		tr
 			background: #f8f8f8
@@ -660,8 +663,7 @@
 			// 		background: #f8f8f8
 			// 		&:hover
 			// 			background: #f8f8f8
-			&.border-right
-				border-right: 1px solid #dce0e7
+
 			&.is-table-in
 				position: relative
 				border-right: 1px solid #dce0e7
@@ -716,6 +718,8 @@
 				overflow: hidden
 				white-space: nowrap
 				padding-left: 19px
+			&.border-right
+				border-right: 1px solid #dce0e7 !important
 			.btn
 				margin: -3px 0
 			table
@@ -776,6 +780,18 @@
 				color: #ebaf7c
 				font-size: 11px
 				vertical-align: middle
+
+	&_mod
+		thead
+			th:nth-child(4n)
+				border-right: none
+	// .border-right
+	// 	thead
+	// 		th
+	// 			border-right: 1px solid #dce0e7
+	// 	tbody
+	// 		td
+	// 			border-right: 1px solid #dce0e7
 	.number
 		font-size: 10px
 		color: #9b9b9b

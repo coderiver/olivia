@@ -1341,13 +1341,13 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table-highlight-line thead th { font-size: 12px; color: #626a6f; height: 38px; vertical-align: middle; text-align: left; padding: 0 8.5px; font-family: "opensans-semibold", Arial, sans-serif; }
 .table-highlight-line thead th:nth-child(4n) { border-right: 1px solid #dce0e7; }
 .table-highlight-line thead th:last-child { border-right: none; }
+.table-highlight-line thead th.border-right { border-right: 1px solid #dce0e7 !important; }
 .table-highlight-line tbody tr { background: #f8f8f8; }
 .table-highlight-line tbody tr:hover { background: #f8f8f8; }
 .table-highlight-line tbody tr:first-child:hover { background: #f8f8f8; }
 .table-highlight-line tbody tr.is-vertical td { vertical-align: top; }
 .table-highlight-line tbody td { color: #6c757a; font-size: 12px; background-color: #f8f8f8; white-space: nowrap; }
 .table-highlight-line tbody td:last-child.is-table-in, .table-highlight-line tbody td:last-child.border-right { border-right: none; }
-.table-highlight-line tbody td.border-right { border-right: 1px solid #dce0e7; }
 .table-highlight-line tbody td.is-table-in { position: relative; border-right: 1px solid #dce0e7; margin-bottom: -1px; border-bottom: none; padding: 0; height: auto; background: transparent; }
 .table-highlight-line tbody td.is-table-in:before { content: ""; position: absolute; bottom: 0; left: 0; right: 0; z-index: 1; background: #efefef; height: 1px; }
 .table-highlight-line tbody td.is-table-in.is-open::before { bottom: 0; }
@@ -1356,6 +1356,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table-highlight-line tbody td.is-table-in_border:before { display: none; }
 .table-highlight-line tbody td.no-border { border-bottom: 0; }
 .table-highlight-line tbody td.is-xs { max-width: 100px; padding-right: 5px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-left: 19px; }
+.table-highlight-line tbody td.border-right { border-right: 1px solid #dce0e7 !important; }
 .table-highlight-line tbody td .btn { margin: -3px 0; }
 .table-highlight-line tbody td table[data-attr="child"] { display: none; }
 .table-highlight-line tbody td table[data-attr="child"] tr:first-child td { border-top: 1px dashed #efefef; }
@@ -1375,6 +1376,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table-highlight-line tbody .is-clarify { background: #fff7da; }
 .table-highlight-line tbody .is-clarify:hover { background: #fff7da; }
 .table-highlight-line tbody .is-clarify .icon-hourglass { color: #ebaf7c; font-size: 11px; vertical-align: middle; }
+.table-highlight-line_mod thead th:nth-child(4n) { border-right: none; }
 .table-highlight-line .number { font-size: 10px; color: #9b9b9b; margin-right: 5px; }
 .table-highlight-line .name { font-size: 12px; color: #4a4a4a; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 81px; display: inline-block; vertical-align: middle; }
 .table-highlight-line strong { font-size: 12px; }
