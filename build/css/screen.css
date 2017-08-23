@@ -1367,14 +1367,14 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table-highlight-line tbody td table tr.is-default:hover { background: #fff; }
 .table-highlight-line tbody td table tr.is-active:hover { background: #f6fbf0; }
 .table-highlight-line tbody td table tr:last-child td { border-bottom-style: none; }
-.table-highlight-line .is-active { background: #f6fbf0; }
-.table-highlight-line .is-active:hover { background: #f6fbf0; }
-.table-highlight-line .is-active .icon-checked { color: #00a11e; font-size: 10px; }
-.table-highlight-line .is-default { background: #fff; }
-.table-highlight-line .is-default:hover { background: #fff; }
-.table-highlight-line .is-clarify { background: #fff7da; }
-.table-highlight-line .is-clarify:hover { background: #fff7da; }
-.table-highlight-line .is-clarify .icon-hourglass { color: #ebaf7c; font-size: 11px; vertical-align: middle; }
+.table-highlight-line tbody .is-active { background: #f6fbf0; }
+.table-highlight-line tbody .is-active:hover { background: #f6fbf0; }
+.table-highlight-line tbody .is-active .icon-checked { color: #00a11e; font-size: 10px; }
+.table-highlight-line tbody .is-default { background: #fff; }
+.table-highlight-line tbody .is-default:hover { background: #fff; }
+.table-highlight-line tbody .is-clarify { background: #fff7da; }
+.table-highlight-line tbody .is-clarify:hover { background: #fff7da; }
+.table-highlight-line tbody .is-clarify .icon-hourglass { color: #ebaf7c; font-size: 11px; vertical-align: middle; }
 .table-highlight-line .number { font-size: 10px; color: #9b9b9b; margin-right: 5px; }
 .table-highlight-line .name { font-size: 12px; color: #4a4a4a; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 81px; display: inline-block; vertical-align: middle; }
 .table-highlight-line strong { font-size: 12px; }
@@ -1382,6 +1382,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table-highlight-line .icon-unblock { display: inline-block; vertical-align: middle; }
 .table-highlight-line .arr-bottom-right { display: inline-block; vertical-align: middle; background-repeat: no-repeat; background-position: 0 0; background-size: contain; width: 14px; height: 23px; margin: -15px 0 0 5px; background-image: url("../img/svg-bg/arr-bottom-right.svg"); }
 .table-highlight-line .is-disabled { opacity: 0.4; pointer-events: none; }
+.table-highlight-line > tbody > tr > td:last-child.is-table-in, .table-highlight-line > tbody > tr > td:last-child.is-table-in_border { border-right-color: transparent; }
 
 .table-highlight-line .table-highlight-line__footer tr td { height: auto; padding: 14px 8.5px; border-bottom-color: transparent; background: #FFF; }
 
