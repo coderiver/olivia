@@ -18,7 +18,7 @@ $(document).ready(function() {
 				interactive: true,
 				contentAsHTML: true,
 				position: 'bottom',
-				trigger: 'click',
+				// trigger: 'click',
 				functionReady: function(origin, tooltip) {
 					tooltip.find('a').on('click', function(evt) {
 						evt.preventDefault();
@@ -233,8 +233,8 @@ $(document).ready(function() {
 	    }
 	});
 
-	$('.js-vert-scroll').perfectScrollbar();
-	$('.js-bar').addClass('is-active'); 
+	$('.js-vert-scroll').perfectScrollbar(); 
+	$('.js-bar').addClass('is-active');
 
 	// animate back to top
 	$('.js-top').click(function(evt) {

@@ -1300,6 +1300,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table .description p, .table .description span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .table .status { padding-left: 1px; vertical-align: middle; white-space: nowrap; }
 .table .status span:not(.status-info) { display: inline-block; max-width: -webkit-calc(100% - 20px); max-width: calc(100% - 20px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.table .table-row .status { white-space: normal; }
 .table .svg-ico { display: inline-block; width: 16px; height: 16px; background-size: 16px 16px; vertical-align: middle; }
 .table .icon { vertical-align: middle; }
 .table .icon-customer2, .table .icon-corp { font-size: 17px; }
