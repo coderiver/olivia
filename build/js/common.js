@@ -233,7 +233,7 @@ $(document).ready(function() {
 	    }
 	});
 
-	$('.js-vert-scroll').perfectScrollbar(); 
+	$('.js-vert-scroll').perfectScrollbar();   
 	$('.js-bar').addClass('is-active');
 
 	// animate back to top
