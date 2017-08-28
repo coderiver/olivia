@@ -641,7 +641,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 .table-row .status:not(.is-active) .status-info { background: #828c92; }
 
 .header { min-height: 153px; background-color: #474e52; }
-.header.is-form { min-height: auto; position: fixed; min-width: 1040px; top: 0; left: 0; right: 0; background: #FFF; z-index: 7; border-bottom: 1px solid #dee1e7; }
+.header.is-form { min-height: auto; position: fixed; min-width: 1040px; top: 0; left: 0; right: 0; background: #FFF; z-index: 12; border-bottom: 1px solid #dee1e7; }
 .header.is-form .header__in { position: relative; padding: 0; -webkit-box-shadow: 0px 1px 0px 0px #dee1e7; box-shadow: 0px 1px 0px 0px #dee1e7; }
 .header.is-staff .menu { margin-left: 5px; }
 .header__in { padding: 15px 0; *zoom: 1; }
