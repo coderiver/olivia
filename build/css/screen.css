@@ -635,8 +635,8 @@ a { text-decoration: none; }
 .select2.ui-select-container .select2-arrow b { background-position: 0 3px; display: block; width: 100%; height: 100%; }
 .select2.ui-select-container .select2-drop { z-index: 6; }
 
-body .daterangepicker.dropdown-menu { z-index: 6; }
-body .header .daterangepicker.dropdown-menu { z-index: 7; }
+body .daterangepicker.dropdown-menu { z-index: 11; }
+body .header .daterangepicker.dropdown-menu { z-index: 12; }
 
 .table-row .status:not(.is-active) .status-info { background: #828c92; }
 
@@ -1501,7 +1501,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 7; }
 
 *[data-popup] { cursor: pointer; }
 
-.overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; padding: 10px; text-align: center; background: rgba(243, 244, 246, 0.6); opacity: 0; visibility: hidden; overflow: auto; white-space: nowrap; z-index: 10; -webkit-transition: 0.5s ease; transition: 0.5s ease; text-align: center; font-size: 0; }
+.overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; padding: 10px; text-align: center; background: rgba(243, 244, 246, 0.6); opacity: 0; visibility: hidden; overflow: auto; white-space: nowrap; z-index: 12; -webkit-transition: 0.5s ease; transition: 0.5s ease; text-align: center; font-size: 0; }
 .overlay:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .overlay.is-active { opacity: 1; visibility: visible; }
 .overlay.low-index { z-index: 8; }
