@@ -1205,6 +1205,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .tablewrap.min-bottom-space .scrollbar { padding-bottom: 0; }
 .tablewrap.is-entry-attachments-table .table { margin-bottom: 0; }
 .tablewrap.is-entry-attachments-table .table__head { opacity: 1; }
+.tablewrap.is-search-page .filters { position: static; }
 .tablewrap__in { position: relative; }
 .tablewrap__in:before { display: none; content: ""; position: absolute; left: 0; right: 0; bottom: 1px; border-bottom: 1px solid #efefef; z-index: 1; }
 .tablewrap__in_mod { min-height: 274px; }
