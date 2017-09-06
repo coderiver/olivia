@@ -384,65 +384,11 @@
 			color: #000
 		&.add-more
 			display: none
-	&__btn
-		display: none
-		background-color: transparent
-		font-size: 12px
-		width: 24px
-		height: 24px
-		border-radius: 50%
-		background-color: #2caf24
-		position: absolute
-		top: 50%
-		right: -12px
-		transform: translate(0, -50%)
-		border: 2px solid #fff
-		color: #fff
-		text-align: center
-		line-height: 18px
-		padding-left: 1px
-		&-ico
-			&:before
-				font-size: 8px
-				@extend %icon
+	
 	&__icon
-		position: relative
 		display: inline-block
-		width: 52px
-		height: 52px
-		border: 1px solid transparent
-		border-radius: 3px
-		font-size: 70px
-		position: relative
 		margin-bottom: 10px
 		margin-right: 19px
-		.svg-ico
-			width: 44px
-			height: 44px
-			position: absolute
-			top: 50%
-			left: 50%
-			transform: translate(-50%, -50%)
-		&.is-checked, &.is-processed, &.is-invalid
-			.steps__btn
-				display: block
-			.memo-ico
-				background-image: url('../img/svg-bg/memo.svg')
-			.letter-ico
-				background-image: url('../img/svg-bg/letter.svg')
-			.customer-ico
-				background-image: url('../img/svg-bg/customer.svg')
-			.transaction-ico
-				background-image: url('../img/svg-bg/transaction.svg')
-		&.is-checked
-			.steps__btn-ico:before
-				content: $icon-checked
-		&.is-editable
-			border-color: #2caf24
-			.steps__btn
-				display: block
-			.steps__btn-ico:before
-				content: $icon-plus
 	.icon
 		vertical-align: top
 		border-radius: 3px
@@ -462,6 +408,65 @@
 		background-image: url('../img/svg-bg/funds-disabled.svg')
 		background-position: 50% 50%
 
+.st-icon
+	width: 52px
+	height: 52px
+	border: 1px solid transparent
+	border-radius: 3px
+	font-size: 70px
+	position: relative
+	.svg-ico
+		width: 44px
+		height: 44px
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	&__btn
+		display: none
+		width: 22px
+		height: 22px
+		border-radius: 50%
+		position: absolute
+		top: 50%
+		right: -10px
+		transform: translate(0, -50%)
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: contain
+	&__pic
+		&:before
+			font-size: 8px
+			@extend %icon
+
+
+	&.is-approved, &.is-processed, &.is-invalid, &.is-editable, &.is-added
+		.st-icon__btn
+			display: block
+		.memo-ico
+			background-image: url('../img/svg-bg/memo.svg')
+		.letter-ico
+			background-image: url('../img/svg-bg/letter.svg')
+		.customer-ico
+			background-image: url('../img/svg-bg/customer.svg')
+		.transaction-ico
+			background-image: url('../img/svg-bg/transaction.svg')
+	&.is-added
+		.st-icon__btn
+			background-image: url('../img/svg-bg/add.svg')
+	&.is-approved
+		.st-icon__btn
+			background-image: url('../img/svg-bg/approved.svg')
+	
+	&.is-invalid
+		.st-icon__btn
+			background-image: url('../img/svg-bg/warning.svg')
+	&.is-processed
+		.st-icon__btn
+			background-image: url('../img/svg-bg/waiting.svg')
+	&.is-editable
+		.st-icon__btn
+			background-image: url('../img/svg-bg/edit.svg')
 .arrow-block
 	position: absolute
 	top: 0
