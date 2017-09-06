@@ -127,8 +127,7 @@
 					<li><a href="start-deal.html">Start Deal</a></li>
 					<li><a href="deal-step-1.html">Deal step 1</a></li>
 					<li><a href="deal-step-2.html">Deal step 2</a></li>
-					<li><a href="deal-step-3.html">Deal step 3</a></li>
-					<li><a href="deal-step-4.html">Deal step 4</a></li>
+					<li><a href="deal-step-3.html">Deal step 3-4</a></li>
 					<li><a href="deal-filled.html">Deal filled</a></li>
 				</ol>
 				<h2>Tasks</h2>
@@ -224,7 +223,19 @@
 				<h2>Popups</h2>
 				<ol>
 					<li>
-						<a href="#" data-popup="popup-submitted-cif">Submitted CIF forms</a> 
+						<a href="#" data-popup="popup-form-info">Form info</a>
+					</li>
+					<li>
+						<a href="#" data-popup="popup-edit-commissions">Edit comissions</a>
+					</li>
+					<li>
+						<a href="#" data-popup="popup-additional-popup">Additional popup</a>
+					</li>
+					<li>
+						<a href="#" data-popup="popup-commission-payment">Commission payment popup</a>
+					</li>
+					<li>
+						<a href="#" data-popup="popup-add-letter">popup-add-letter</a> 
 					</li>
 				</ol>
 
@@ -248,57 +259,435 @@
 </div>
 <!-- END out-->
 <div class="overlay">
-	<div class="popup js-popup" id="popup-submitted-cif">
+	<div class="popup js-popup" id="popup-form-info">
 		<div class="popup__head">
-			<p>Submitted CIF forms</p>
+			<p>Info</p>
 			<i class="icon icon-close js-close"></i>
 		</div>
 		<div class="popup__body">
-			<div class="popup-icons">
-				<!-- begin icon -->
-				<div class="popup-icon">
-					<div class="st-icon is-approved">
-						<i class="svg-ico customer-ico"></i>
-						<a href="" class="st-icon__btn"></a>
+			<!-- begin quick info  -->
+			<div class="activity is-full-w">
+				<div class="activity__table">
+					<div class="activity__row">
+						<div class="activity__cell sm-width">Deal</div>
+						<div class="activity__cell">
+							<a href="#" class="activity__name">Space X</a>
+						</div>
 					</div>
-					<div class="popup-icon__text">John Doe</div>
-				</div>
-				<!-- end icon -->
-	
-				<!-- begin icon -->
-				<div class="popup-icon">
-					<div class="st-icon is-invalid">
-						<i class="svg-ico customer-ico"></i>
-						<a href="" class="st-icon__btn"></a>
+					<div class="activity__row">
+						<div class="activity__cell sm-width">Team</div>
+						<div class="activity__cell">
+							<a href="#" class="activity__name">A-Team</a>
+						</div>
 					</div>
-					<div class="popup-icon__text">John Doe</div>
 				</div>
-				<!-- end icon -->
-	
-				<!-- begin icon -->
-				<div class="popup-icon">
-					<div class="st-icon is-processed">
-						<i class="svg-ico customer-ico"></i>
-						<a href="" class="st-icon__btn"></a>
-					</div>
-					<div class="popup-icon__text">John Doe</div>
-				</div>
-				<!-- end icon -->
-	
-				<!-- begin icon -->
-				<div class="popup-icon">
-					<div class="st-icon is-editable">
-						<i class="svg-ico customer-ico"></i>
-						<a href="" class="st-icon__btn"></a>
-					</div>
-					<div class="popup-icon__text">John Doe</div>
-				</div>
-				<!-- end icon -->
 			</div>
-	
-			<!-- begin more-trans -->
-			<div class="more-trans">To see all your Transactions <a href="" class="more-trans__link">go to the Transactions Tab.</a></div>
-			<!-- end more-trans -->
+			<div class="activity is-full-w">
+				<div class="activity__table">
+					<div class="activity__row">
+						<div class="activity__cell sm-width">Created by</div>
+						<div class="activity__cell">
+							<a href="#" class="activity__name">Brian Dunn</a>
+						</div>
+					</div>
+					<div class="activity__row">
+						<div class="activity__cell sm-width">Assigned to</div>
+						<div class="activity__cell">
+							<a href="#" class="activity__name">Amanda Brown</a><a href="#" class="activity__more">Re-assign</a>
+						</div>
+					</div>
+					<div class="activity__row">
+						<div class="activity__cell sm-width">Pre-approval</div>
+						<div class="activity__cell">
+							<a href="#" class="activity__name">Olivia Wild</a><a href="#" class="activity__more">Edit</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="activity is-full-w">
+				<div class="activity__table">
+					<div class="activity__row">
+						<div class="activity__cell sm-width">Created on</div>
+						<div class="activity__cell">Aug 08, 2015 12:00 am</div>
+					</div>
+					<div class="activity__row">
+						<div class="activity__cell sm-width">Updated</div>
+						<div class="activity__cell">Aug 10, 2015 1:12 pm</div>
+					</div>
+				</div>
+			</div>
+			<!-- end quick info -->
+			<div class="history">
+				<p class="history__ttl">History</p>
+				<table class="history__table">
+					<tr>
+						<td><p class="history__in">Brian Dunn</p></td>
+						<td><p class="history__in">Submitted</p></td>
+						<td class="history__align-right"><p class="history__in">Aug 10, 2015</p></td>
+					</tr>
+					<tr>
+						<td><p class="history__in">Amanda Brown</p></td>
+						<td><p class="history__in">Rejected</p></td>
+						<td class="history__align-right"><p class="history__in">Aug 09, 2015</p></td>
+					</tr>
+					<tr>
+						<td><p class="history__in">Brian Dunn</p></td>
+						<td><p class="history__in">Submitted</p></td>
+						<td class="history__align-right"><p class="history__in">Aug 08, 2015</p></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="popup is-edit-commission js-popup" id="popup-edit-commissions">
+		<div class="popup__head">
+			<p>Edit commission</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<form class="form is-full-w">
+				<div class="form__bl">
+					<p class="form__subttl">Rep</p>
+					<div class="dropdown is-form js-dropdown">
+						<p class="dropdown__item is-chosen">Brian Dunn</p>
+						<ul class="dropdown__list is-top-level js-inner">
+							<li><a href="#">Lorem ipsume</a></li>
+							<li><a href="#">Dolor sit</a></li>
+							<li><a href="#">Consectetur adipisicing</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Brian Dunn</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="form__bl">
+					<p class="form__subttl">Period type</p>
+					<div class="dropdown is-form js-dropdown">
+						<p class="dropdown__item">Select period</p>
+						<ul class="dropdown__list is-top-level js-inner">
+							<li><a href="#">Lorem ipsum</a></li>
+							<li><a href="#">Dolor sit</a></li>
+							<li><a href="#">Consectetur adipisicing</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Brian Dunn</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="form__bl is-middle-size">
+					<label for="period" class="form__subttl">Period</label>
+					<input type="text" id="period" placeholder="1,2,3 or more">
+				</div>
+				<div class="form__bl is-middle-size">
+					<label for="note" class="form__subttl">Note (optional)</label>
+					<input type="text" id="note" placeholder="Any additional info that might help">
+				</div>
+				<div class="popup__commission">
+					<div class="form__bl is-split-fields">
+						<label for="tire" class="form__subttl">Commission tire 1</label>
+						<div class="form__mod is-entry">
+							<input type="text" id="tire" placeholder="Income from">
+							<span class="form__slash">-</span>
+							<input type="text" placeholder="To">
+							<input class="input-sm input-margin-left" type="text" placeholder="Perc.">
+							<span class="form__slash">%</span>
+							<a href="#" class="form__close"><i class="icon icon-close"></i></a>
+						</div>
+					</div>
+					<div class="form__bl is-split-fields">
+						<label for="tire" class="form__subttl">Commission tire 2</label>
+						<div class="form__mod is-entry">
+							<input type="text" id="tire" placeholder="Income from">
+							<span class="form__slash">-</span>
+							<input type="text" placeholder="To">
+							<input class="input-sm input-margin-left" type="text" placeholder="Perc.">
+							<span class="form__slash">%</span>
+							<a href="#" class="form__close"><i class="icon icon-close"></i></a>
+						</div>
+					</div>
+					<a href="#" class="form__link js-add-commission">Add commission</a>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-ok" type="submit">Save</button>
+					<button class="btn btn-no btn-txt-gray" type="button">Cancel</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="popup js-popup" id="popup-additional-popup">
+		<div class="popup__head">
+			<p>Add additional upload</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__body">
+			<form class="form is-full-w">
+				<div class="form__bl">
+					<label for="attachment-name" class="form__subttl">Attachment name</label>
+					<input id="attachment-name" type="text" placeholder="File name will be used if left blank">
+				</div>
+				<div class="btn-group">
+					<div class="upload is-popup-btn">
+						<div class="upload__in">
+							<input type="file">
+							<i class="icon icon-upload"></i>
+							<span>Upload</span>
+						</div>
+					</div>
+					<button class="btn btn-no" type="button">Cancel</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="popup js-popup" id="popup-commission-payment">
+		<div class="popup__head">
+			<p>Select user for commission payment</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__scroll js-popup-scroll">
+			<div class="popup__body">
+				<div class="report is-margin-bottom">
+					<p>Please pay attention, in case changing of the user, all data will be recalculated.</p>
+				</div>
+				<small class="popup__gray">Select user to submit form entry:</small>
+				<div class="popup__bl">
+					<input type="text" placeholder="Search by user name" class="js-popup-search">
+				</div>
+			</div>
+			<ul class="popup-list is-hidden js-popup-list">
+				<li class="popup-list__option">
+				 	<a href="#" class="popup__username js-username">
+				 		<div class="popup-list__more">
+				 			<i class="icon icon-square-arr"></i>
+				 		</div>
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Albert June</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+				 	<a href="#" class="popup__username js-username">
+				 		<div class="popup-list__more">
+				 			<i class="icon icon-square-arr"></i>
+				 		</div>
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Albert June</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+				 	<a href="#" class="popup__username js-username">
+				 		<div class="popup-list__more">
+				 			<i class="icon icon-square-arr"></i>
+				 		</div>
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Albert June</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" class="popup__username js-username">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Brian Adams</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" class="popup__username js-username">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Brothers Corp</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" class="popup__username js-username">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Clint Eastwood</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" class="popup__username js-username">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Jack Dorsey</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" class="popup__username js-username">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Jack Dorsey</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" class="popup__username js-username">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Jack Dorsey</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" class="popup__username js-username">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="svg-ico user-gray-ico"></i><span class="popup-list__span">Jack Dorsey</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="popup__body js-deal-currency">
+			<small class="popup__gray">Select a currency for payment:</small>
+			<div class="popup__choose">
+				<a href="#" class="popup__el">
+					<div class="popup__currency">
+						<i class="icon icon-dollar"></i>
+					</div>
+					<div>
+						<div class="popup__definition">USD</div>
+					</div>
+				</a>
+				<a href="#" class="popup__el">
+					<div class="popup__currency">
+						<i class="icon icon-euro"></i>
+					</div>
+					<div>
+						<div class="popup__definition">EUR</div>
+					</div>
+				</a>
+				<a href="#" class="popup__el">
+					<div class="popup__currency">
+						<i class="icon icon-pound"></i>
+					</div>
+					<div>
+						<div class="popup__definition">GBP</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="popup popup_md js-popup" id="popup-add-letter"> 
+		<div class="popup__head">
+			<p>Add Engagement Letter to Deal...</p>
+			<i class="icon icon-close js-close"></i>
+		</div>
+		<div class="popup__scroll js-popup-scroll">
+			<div class="popup__body no-b-pad">
+				<label for="search-letter" class="popup__gray">Select deal to submit engagement letter to:</label>
+				<div class="popup__bl">
+					<input id="search-letter" type="text" placeholder="Search">
+				</div>
+			</div>
+			<ul class="popup-list">
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-lorem">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Alphabet</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-lorem">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Deal With a Really Lond Name User Can Create if He Really Wants</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-lorem">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Foursquare Inc.</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-lorem">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Google</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-lorem">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Space X</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-lorem">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Samsung – Round A Search For People</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-lorem">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Twitter S</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-lorem">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Twitter Z</span>
+						</div>
+					</a>
+				</li>
+				<li class="popup-list__option">
+					<a href="#" data-popup="popup-lorem">
+						<div class="popup-list__more">
+							<i class="icon icon-square-arr"></i>
+						</div>
+						<div class="popup-list__el">
+							<i class="icon icon-folder"></i><span class="popup-list__span">Xero</span>
+						</div>
+					</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>
