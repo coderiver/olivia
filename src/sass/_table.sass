@@ -839,12 +839,18 @@
 
 
 .table-highlight-line .table-highlight-line__footer
+	&:before, &:after
+		content: ""
+		height: 10px
+		display: block
 	tr
 		td
 			height: auto
-			padding: 14px 8.5px
+			padding: 6px 8.5px
 			border-bottom-color: transparent
 			background: #FFF
+			a[ng-href='']
+				display: none
 
 .split-icon
 	position: relative
