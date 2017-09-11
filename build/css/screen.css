@@ -1338,6 +1338,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .tables-line + .tables-line .table-highlight th { border-top: 1px solid #dce0e7; }
 
 .table-highlight-line { width: 100%; table-layout: fixed; min-width: 1328px; }
+.table-highlight-line .fig-container { white-space: initial; word-break: break-all; }
 .table-highlight-line__pull-left { -webkit-transform: translateX(-15%); -ms-transform: translateX(-15%); transform: translateX(-15%); max-width: 96px; overflow: hidden; text-overflow: ellipsis; padding-right: 5px; }
 .table-highlight-line__margin { margin-left: 10px; }
 .table-highlight-line__folder { font-size: 10px; margin-right: 5px; }
