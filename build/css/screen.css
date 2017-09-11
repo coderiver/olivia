@@ -29,95 +29,97 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-add-library:before { content: ""; }
 
-.icon-add-report:before { content: ""; }
-
 .icon-add-news:before { content: ""; }
 
-.icon-archive:before { content: ""; }
+.icon-add-report:before { content: ""; }
 
 .icon-arr-bottom-right:before { content: ""; }
 
-.icon-arr-right:before { content: ""; }
+.icon-archive:before { content: ""; }
 
-.icon-arr-top:before { content: ""; }
+.icon-arr-right:before { content: ""; }
 
 .icon-bell:before { content: ""; }
 
-.icon-check:before { content: ""; }
-
-.icon-clip:before { content: ""; }
-
-.icon-bubble:before { content: ""; }
-
 .icon-calendar:before { content: ""; }
 
-.icon-close:before { content: ""; }
+.icon-check:before { content: ""; }
 
 .icon-checked:before { content: ""; }
 
-.icon-deal-team:before { content: ""; }
+.icon-clip:before { content: ""; }
 
-.icon-comment:before { content: ""; }
+.icon-close:before { content: ""; }
 
-.icon-delete:before { content: ""; }
+.icon-comment-cloud:before { content: ""; }
 
-.icon-deals-team-closed:before { content: ""; }
+.icon-comment:before { content: ""; }
 
-.icon-euro:before { content: ""; }
+.icon-customer2:before { content: ""; }
 
-.icon-dollar:before { content: ""; }
+.icon-deal-team:before { content: ""; }
 
-.icon-customer2:before { content: ""; }
+.icon-deals-team-closed:before { content: ""; }
 
-.icon-folder-checked:before { content: ""; }
+.icon-delete:before { content: ""; }
 
-.icon-folder-dots:before { content: ""; }
+.icon-dollar:before { content: ""; }
 
-.icon-filter:before { content: ""; }
+.icon-euro:before { content: ""; }
 
-.icon-deals-team-archived:before { content: ""; }
+.icon-deals-team-archived:before { content: ""; }
 
-.icon-infinity:before { content: ""; }
+.icon-arr-top:before { content: ""; }
 
-.icon-folder:before { content: ""; }
+.icon-folder-checked:before { content: ""; }
 
-.icon-letter:before { content: ""; }
+.icon-folder-dots:before { content: ""; }
 
-.icon-logo-short:before { content: ""; }
+.icon-folder:before { content: ""; }
 
-.icon-lock:before { content: ""; }
+.icon-hourglass:before { content: ""; }
 
-.icon-firm:before { content: ""; }
+.icon-infinity:before { content: ""; }
 
-.icon-logo:before { content: ""; }
+.icon-letter:before { content: ""; }
 
-.icon-news:before { content: ""; }
+.icon-lock:before { content: ""; }
 
-.icon-pending:before { content: ""; }
+.icon-logo-short:before { content: ""; }
 
-.icon-plus:before { content: ""; }
+.icon-firm:before { content: ""; }
 
-.icon-marked:before { content: ""; }
+.icon-bubble:before { content: ""; }
 
-.icon-pound:before { content: ""; }
+.icon-marked:before { content: ""; }
 
-.icon-menu:before { content: ""; }
+.icon-logo:before { content: ""; }
 
-.icon-sidebar:before { content: ""; }
+.icon-filter:before { content: ""; }
 
-.icon-star:before { content: ""; }
+.icon-menu:before { content: ""; }
 
-.icon-upload:before { content: ""; }
+.icon-pound:before { content: ""; }
 
-.icon-warn:before { content: ""; }
+.icon-pending:before { content: ""; }
 
-.icon-zoom:before { content: ""; }
+.icon-news:before { content: ""; }
 
-.icon-hourglass:before { content: ""; }
+.icon-square-arr:before { content: ""; }
 
-.icon-square-arr:before { content: ""; }
+.icon-sidebar:before { content: ""; }
 
-.icon-team:before { content: ""; }
+.icon-plus:before { content: ""; }
+
+.icon-warn:before { content: ""; }
+
+.icon-star:before { content: ""; }
+
+.icon-upload:before { content: ""; }
+
+.icon-zoom:before { content: ""; }
+
+.icon-team:before { content: ""; }
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default { border-radius: 5px; border: 2px solid #000; background: #4c4c4c; color: #fff; }
@@ -559,6 +561,8 @@ a { text-decoration: none; }
 .status.is-failed .icon { color: #FF001F; }
 .status.is-green .status-info { background: #2cb324 !important; }
 .status.is-old { color: #fc9f51; }
+.status.is-commented { color: #75B0DB; }
+.status.is-commented .icon-comment-cloud { margin-top: 2px; }
 .status span { font-size: 13px; vertical-align: middle; }
 .status .status-info { font-size: 10px; }
 .status .icon { margin-right: 5px; font-size: 12px; vertical-align: middle; }
