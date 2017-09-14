@@ -103,17 +103,23 @@
     .icon-add-report:before {
       content: "\EA03";
     }
-    .icon-arr-bottom-right:before {
-      content: "\EA05";
-    }
     .icon-archive:before {
       content: "\EA04";
+    }
+    .icon-arr-bottom-right:before {
+      content: "\EA05";
     }
     .icon-arr-right:before {
       content: "\EA06";
     }
+    .icon-arr-top:before {
+      content: "\EA07";
+    }
     .icon-bell:before {
       content: "\EA08";
+    }
+    .icon-bubble:before {
+      content: "\EA09";
     }
     .icon-calendar:before {
       content: "\EA0A";
@@ -142,6 +148,9 @@
     .icon-deal-team:before {
       content: "\EA12";
     }
+    .icon-deals-team-archived:before {
+      content: "\EA13";
+    }
     .icon-deals-team-closed:before {
       content: "\EA14";
     }
@@ -154,11 +163,11 @@
     .icon-euro:before {
       content: "\EA17";
     }
-    .icon-deals-team-archived:before {
-      content: "\EA13";
+    .icon-filter:before {
+      content: "\EA18";
     }
-    .icon-arr-top:before {
-      content: "\EA07";
+    .icon-firm:before {
+      content: "\EA19";
     }
     .icon-folder-checked:before {
       content: "\EA1A";
@@ -184,56 +193,47 @@
     .icon-logo-short:before {
       content: "\EA21";
     }
-    .icon-firm:before {
-      content: "\EA19";
-    }
-    .icon-bubble:before {
-      content: "\EA09";
+    .icon-logo:before {
+      content: "\EA22";
     }
     .icon-marked:before {
       content: "\EA23";
     }
-    .icon-logo:before {
-      content: "\EA22";
-    }
-    .icon-filter:before {
-      content: "\EA18";
-    }
     .icon-menu:before {
       content: "\EA24";
-    }
-    .icon-pound:before {
-      content: "\EA28";
-    }
-    .icon-pending:before {
-      content: "\EA26";
     }
     .icon-news:before {
       content: "\EA25";
     }
-    .icon-square-arr:before {
-      content: "\EA2A";
-    }
-    .icon-sidebar:before {
-      content: "\EA29";
+    .icon-pending:before {
+      content: "\EA26";
     }
     .icon-plus:before {
       content: "\EA27";
     }
-    .icon-warn:before {
-      content: "\EA2E";
+    .icon-pound:before {
+      content: "\EA28";
+    }
+    .icon-sidebar:before {
+      content: "\EA29";
+    }
+    .icon-square-arr:before {
+      content: "\EA2A";
     }
     .icon-star:before {
       content: "\EA2B";
     }
+    .icon-team:before {
+      content: "\EA2C";
+    }
     .icon-upload:before {
       content: "\EA2D";
     }
+    .icon-warn:before {
+      content: "\EA2E";
+    }
     .icon-zoom:before {
       content: "\EA2F";
-    }
-    .icon-team:before {
-      content: "\EA2C";
     }
   </style>
 </head>
@@ -272,18 +272,18 @@
     </li>
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-arr-bottom-right" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA05" readonly>
-      <div class="icon-container">
-        <i class="icon icon-arr-bottom-right"></i>
-      </div>
-    </li>
-    
-    <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-archive" readonly>
       <input class="icon-unicode autoselect" type="text" value="\EA04" readonly>
       <div class="icon-container">
         <i class="icon icon-archive"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-arr-bottom-right" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA05" readonly>
+      <div class="icon-container">
+        <i class="icon icon-arr-bottom-right"></i>
       </div>
     </li>
     
@@ -296,10 +296,26 @@
     </li>
     
     <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-arr-top" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA07" readonly>
+      <div class="icon-container">
+        <i class="icon icon-arr-top"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-bell" readonly>
       <input class="icon-unicode autoselect" type="text" value="\EA08" readonly>
       <div class="icon-container">
         <i class="icon icon-bell"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-bubble" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA09" readonly>
+      <div class="icon-container">
+        <i class="icon icon-bubble"></i>
       </div>
     </li>
     
@@ -376,6 +392,14 @@
     </li>
     
     <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-deals-team-archived" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA13" readonly>
+      <div class="icon-container">
+        <i class="icon icon-deals-team-archived"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-deals-team-closed" readonly>
       <input class="icon-unicode autoselect" type="text" value="\EA14" readonly>
       <div class="icon-container">
@@ -408,18 +432,18 @@
     </li>
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-deals-team-archived" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA13" readonly>
+      <input class="icon-class-name autoselect" type="text" value=".icon-filter" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA18" readonly>
       <div class="icon-container">
-        <i class="icon icon-deals-team-archived"></i>
+        <i class="icon icon-filter"></i>
       </div>
     </li>
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-arr-top" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA07" readonly>
+      <input class="icon-class-name autoselect" type="text" value=".icon-firm" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA19" readonly>
       <div class="icon-container">
-        <i class="icon icon-arr-top"></i>
+        <i class="icon icon-firm"></i>
       </div>
     </li>
     
@@ -488,18 +512,10 @@
     </li>
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-firm" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA19" readonly>
+      <input class="icon-class-name autoselect" type="text" value=".icon-logo" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA22" readonly>
       <div class="icon-container">
-        <i class="icon icon-firm"></i>
-      </div>
-    </li>
-    
-    <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-bubble" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA09" readonly>
-      <div class="icon-container">
-        <i class="icon icon-bubble"></i>
+        <i class="icon icon-logo"></i>
       </div>
     </li>
     
@@ -512,42 +528,10 @@
     </li>
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-logo" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA22" readonly>
-      <div class="icon-container">
-        <i class="icon icon-logo"></i>
-      </div>
-    </li>
-    
-    <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-filter" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA18" readonly>
-      <div class="icon-container">
-        <i class="icon icon-filter"></i>
-      </div>
-    </li>
-    
-    <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-menu" readonly>
       <input class="icon-unicode autoselect" type="text" value="\EA24" readonly>
       <div class="icon-container">
         <i class="icon icon-menu"></i>
-      </div>
-    </li>
-    
-    <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-pound" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA28" readonly>
-      <div class="icon-container">
-        <i class="icon icon-pound"></i>
-      </div>
-    </li>
-    
-    <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-pending" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA26" readonly>
-      <div class="icon-container">
-        <i class="icon icon-pending"></i>
       </div>
     </li>
     
@@ -560,18 +544,10 @@
     </li>
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-square-arr" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA2A" readonly>
+      <input class="icon-class-name autoselect" type="text" value=".icon-pending" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA26" readonly>
       <div class="icon-container">
-        <i class="icon icon-square-arr"></i>
-      </div>
-    </li>
-    
-    <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-sidebar" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA29" readonly>
-      <div class="icon-container">
-        <i class="icon icon-sidebar"></i>
+        <i class="icon icon-pending"></i>
       </div>
     </li>
     
@@ -584,10 +560,26 @@
     </li>
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-warn" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA2E" readonly>
+      <input class="icon-class-name autoselect" type="text" value=".icon-pound" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA28" readonly>
       <div class="icon-container">
-        <i class="icon icon-warn"></i>
+        <i class="icon icon-pound"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-sidebar" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA29" readonly>
+      <div class="icon-container">
+        <i class="icon icon-sidebar"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-square-arr" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA2A" readonly>
+      <div class="icon-container">
+        <i class="icon icon-square-arr"></i>
       </div>
     </li>
     
@@ -600,6 +592,14 @@
     </li>
     
     <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-team" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA2C" readonly>
+      <div class="icon-container">
+        <i class="icon icon-team"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-upload" readonly>
       <input class="icon-unicode autoselect" type="text" value="\EA2D" readonly>
       <div class="icon-container">
@@ -608,18 +608,18 @@
     </li>
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-zoom" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA2F" readonly>
+      <input class="icon-class-name autoselect" type="text" value=".icon-warn" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA2E" readonly>
       <div class="icon-container">
-        <i class="icon icon-zoom"></i>
+        <i class="icon icon-warn"></i>
       </div>
     </li>
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-team" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA2C" readonly>
+      <input class="icon-class-name autoselect" type="text" value=".icon-zoom" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA2F" readonly>
       <div class="icon-container">
-        <i class="icon icon-team"></i>
+        <i class="icon icon-zoom"></i>
       </div>
     </li>
     
