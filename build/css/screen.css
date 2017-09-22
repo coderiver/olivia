@@ -1210,7 +1210,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .tablewrap.no-bottom-margin { margin-bottom: 0; }
 .tablewrap.min-bottom-space { margin-bottom: 0; }
 .tablewrap.min-bottom-space .scrollbar { padding-bottom: 0; }
-.tablewrap.is-entry-attachments-table .table { margin-bottom: 0; }
+.tablewrap.is-entry-attachments-table .table { margin-bottom: 0; min-width: auto; }
 .tablewrap.is-entry-attachments-table .table__head { opacity: 1; }
 .tablewrap.is-search-page .filters { position: static; }
 .tablewrap__in { position: relative; }
