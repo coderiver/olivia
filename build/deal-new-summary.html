@@ -1,0 +1,601 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=1040, initial-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#fff">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/app.js"></script>
+</head>
+<body>
+	<!-- BEGIN  out-->
+	<div class="out">
+		<!-- begin header with active notification  -->
+		<div class="header">
+			<div class="l">
+				<div class="header__in">
+					<a href="#" class="header__logo"><i class="icon icon-logo"></i></a>
+					<ul class="menu">
+						<li class="menu__option"><a class="menu__link" href="#">Tasks <p class="notification"><span>2</span></p></a></li>
+						<li class="menu__option is-active"><a class="menu__link" href="#">Deals</a></li>
+						<li class="menu__option"><a class="menu__link" href="#">Entries</a></li>
+						<li class="menu__option"><a class="menu__link" href="#">Library</a></li>
+						<li class="menu__option">
+							<div class="dropdown is-menu js-dropdown">
+								<p class="dropdown__item">Me</p>
+								<ul class="dropdown__list is-top-level js-inner">
+									<li><a href="#">Profile</a></li>
+									<li><a href="#">My Team</a></li>
+									<li><a href="#">Messages</a></li>
+									<li><a href="#">Activity Log</a></li>
+									<li><a href="#">Settings</a></li>
+									<li><a href="#">Log Out</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<div class="helpers">
+						<a href="#" class="helpers__info">?</a>
+						<a href="#" class="helpers__bell is-active" data-popup="sysmessage">
+							<i class="icon icon-bell"></i>
+							<span class="helpers__message">5</span>
+						</a>
+						<label class="search js-search">
+							<i class="icon icon-zoom"></i>
+							<input type="search" placeholder="Search">
+							<i class="icon icon-close search-close js-search-clear"></i>
+						</label>
+						<!-- begin sysmessage  -->
+						<div id="sysmessage" class="sysmessage js-popup js-avoid-overflow">
+							<div class="sysmessage__head">
+								<p class="sysmessage__ttl">1 New Payment, 4 other notifications since your last visit</p>
+								<i class="icon icon-close js-close"></i>
+							</div>
+							<div class="sysmessage__container js-vert-scroll">
+								<div class="sysmessage__el">
+									<p>Messages (1)</p>
+								</div>
+								<div class="sysmessage__el no-bg">
+									<img class="sysmessage__img" src="img/user1.png" alt="">
+									<div class="sysmessage__info">
+										<i class="svg-ico message-ico"></i>
+										<div class="sysmessage__name">
+											<h4>New Payment!</h4>
+											<small class="sysmessage__date">Sept. 13, 2015</small>
+										</div>
+										<p>Transaction T34782 from Alphabet between James Brown and Steve Buscemy was payed Sept. 12, 2015</p>
+										<ul class="sysmessage__list">
+											<li>Transaction amount: $400.000.00</li>
+											<li>Funds received: $400.000.00</li>
+											<li>GCS commission: $10.000.00</li>
+											<li>Your comission*: $15.000.00</li>
+										</ul>
+										<p>Your commission will be payed to you according to your GCS agreement conditions</p>
+										<ul class="reaction">
+											<li><a class="reaction__link" href="#">Mark as read</a></li>
+											<li><a class="reaction__link" href="#">View deal</a></li>
+											<li><a class="reaction__link" href="#">View transaction</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="sysmessage__el">
+									<p>Updates (4)</p>
+								</div>
+								<div class="sysmessage__el no-bg">
+									<img class="sysmessage__img" src="img/user2.png" alt="">
+									<i class="svg-ico memo-ico"></i>
+									<div class="sysmessage__info">
+										<div class="sysmessage__name">
+											<h4><span>Deal Memo Approved for Space X</span></h4>
+											<small class="sysmessage__date">Sept. 13, 2015</small>
+										</div>
+										<ul class="reaction">
+											<li><a class="reaction__link" href="#">View</a></li>
+											<li><a class="reaction__link" href="#">Open deal</a></li>
+										</ul>
+									</div>
+									<i class="icon icon-check"></i>
+								</div>
+								<div class="sysmessage__el no-bg">
+									<img class="sysmessage__img" src="img/user2.png" alt="">
+									<i class="icon icon-bubble"></i>
+									<div class="sysmessage__info">
+										<div class="sysmessage__name">
+											<h4>New comment for EL James Brown for Space X</h4>
+											<small class="sysmessage__date">Sept. 13, 2015</small>
+										</div>
+										<ul class="reaction">
+											<li><a class="reaction__link" href="#">View</a></li>
+											<li><a class="reaction__link" href="#">Open deal</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="sysmessage__el no-bg">
+									<img class="sysmessage__img" src="img/user1.png" alt="">
+									<i class="svg-ico memo-ico"></i>
+									<div class="sysmessage__info">
+										<div class="sysmessage__name">
+											<h4>Deal Memo Approved for Space X</h4>
+											<small class="sysmessage__date">Sept. 13, 2015</small>
+										</div>
+										<ul class="reaction">
+											<li><a class="reaction__link" href="#">View</a></li>
+											<li><a class="reaction__link" href="#">Open deal</a></li>
+										</ul>
+									</div>
+									<i class="icon icon-warn"></i>
+								</div>
+							</div>
+							<div class="sysmessage__el is-all">
+								<p class="txt-center"><a class="reaction__link" href="#">See all</a></p>
+							</div>
+						</div>
+						<!-- end sysmessage -->
+						<!-- begin results -->
+						<div class="results js-search-results">
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="svg-ico memo-ico"></i>
+									<p>Update Space X Deal Memo</p>
+								</div>
+								<p>...update a Deal Memo, please open Deal Memo and fill in <span class="highlight">amount</span></p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="svg-ico customer-ico"></i>
+									<p>Steve Buscemi</p>
+								</div>
+								<p>...<span class="highlight">amount</span> invested $120 0000 USD</p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<p>Send us your photo</p>
+								</div>
+								<p>Hey, Brian, we need you photo to put it on a wall, send <span class="highlight">amount</span> my e-mail please...</p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="svg-ico letter-ico"></i>
+									<span>Engagement Letter John Snow</span>
+								</div>
+								<p>...managers said its important. Use Upload File <span class="highlight">amount</span> below, uplo..</p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="svg-ico library-ico"></i>
+									<span>Complaince Form Name</span>
+								</div>
+								<p>Your year spending <span class="highlight">amount</span> 100000 USD </p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="icon icon-folder"></i>
+									<p><span class="highlight">Amount</span> Corp</p>
+								</div>
+							</a>
+							<a href="#" class="results__bl">
+								<p class="txt-center">781 results...</p>
+							</a>
+						</div>
+						<!-- end results -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end header -->
+
+		<!-- begin main -->
+		<div class="main">
+			<div class="l">
+				<div class="main__in">
+					
+					<div class="upper upper_help">
+						<p class="upper__ttl"><a href="#"><i class="icon icon-folder"></i></a>Space X</p>
+						<ul class="upper__list">
+							<li class="upper__option"><a class="upper__link upper_help__link is-active" href="#">Summary</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Tasks</p></a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Engagement Letters</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Deal Memo</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Customers</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Transactions</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Deal Status</a></li>
+						</ul>
+						<p class="upper__btn-descr">If you are familiar with the Olivia system, you can easily add<br>
+							all the needed information by clicking at the plus button.</p>
+							<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
+							<!-- begin suggest for new deal -->
+								<div class="suggest js-popup js-avoid-overflow" id="suggest">
+									<div class="suggest__head">
+										<p class="suggest__txt">Submit Deal Memo</p>
+										<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
+									</div>
+									<div class="suggest__menu">
+										<a href="#" class="suggest__bl">
+											<i class="svg-ico letter-ico"></i>
+											<div class="suggest__in">
+												<p>Add Engagement Letter</p>
+											</div>
+										</a>
+										<a href="#" class="suggest__bl" data-popup="popup-deal-memo-info">
+											<i class="svg-ico memo-ico"></i>
+											<div class="suggest__in">
+												<p>Add Deal memo</p>
+											</div>
+										</a>
+										<a href="#" class="suggest__bl">
+											<i class="svg-ico customer-ico"></i>
+											<div class="suggest__in">
+												<p>Add Customer</p>
+											</div>
+										</a>
+										<a href="#" class="suggest__bl">
+											<i class="svg-ico transaction-ico"></i>
+											<div class="suggest__in">
+												<p>Add Transaction Report</p>
+											</div>
+										</a>
+										<a href="#" class="suggest__bl">
+											<i class="svg-ico library-ico"></i>
+											<div class="suggest__in">
+												<p>Add Marketing Materials</p>
+											</div>
+										</a>
+										<a href="#" class="suggest__bl">
+											<i class="svg-ico library-ico"></i>
+											<div class="suggest__in">
+												<p>Add from Templates or Other</p>
+											</div>
+										</a>
+									</div>
+								</div>
+							<!-- end suggest for new deal -->
+						</div>
+
+						<div class="up-help">
+							<p class="is-active">Your deal has been created. Follow the steps below to foster the process.</p>
+							<p>Congratulations! Your Engagement Letters and Deal Memo have been approved. You can now proceed with the Customer Identification form.</p>
+							<p>Congratulations! Your CIF forms have been approved. You can now proceed with the Transaction.</p>
+						</div>
+
+						<!-- begin deal-steps -->
+						<div class="deal-steps">
+							<div class="deal-steps__step is-active">
+
+								<div class="deal-steps__title">step 1</div>
+								<div class="deal-steps__links">
+									<a href="#" class="deal-step__link">
+										<i class="svg-ico letter-ico is-disabled"></i>
+									</a>
+								</div>
+								<div class="deal-steps__title-text">Engagement Letter</div>
+								<div class="deal-steps__text is-red">
+									<p>Obtain approval of your Engagement letter from your supervisor PRIOR to signing with you Client.</p>
+								</div>
+							</div>
+
+							<div class="deal-steps__step"></div>
+							<div class="deal-steps__step"></div>
+							<div class="deal-steps__step"></div>
+							<div class="deal-steps__step"></div>
+						</div>
+						<!-- end deal-steps -->
+
+					</div>
+				</div>
+			</div>
+			<!-- end main -->
+
+			<!-- begin footer  -->
+
+			<div class="footer js-footer">
+
+				<div class="l">
+
+					<p>© 2009-2013 Growth Capital Services.  Growth Capital Services, Member FINRA, SIPC. All information presented herein is CONFIDENTIAL.</p>
+
+				</div>
+
+			</div>
+
+			<!-- end footer -->
+		</div>
+		<!-- END out-->
+		<div class="overlay">
+			<div class="popup is-attach js-popup" id="attach">
+				<div class="popup__head">
+					<p>Attached files</p>
+					<i class="icon icon-close js-close"></i>
+				</div>
+				<div class="popup__body">
+					<p>Below are files attached to і [Document type]:</p>
+					<div class="popup__bl">
+						<div class="popup__el">
+							<i class="svg-ico letter-ico"></i>
+							<span class="popup__num">EL12522</span>
+							<span class="txt-bold">[Name of the form]</span>
+						</div>
+						<a href="#" class="popup__more">Open form to add file</a>
+					</div>
+				</div>
+				<!-- begin table  -->
+				<table class="table">
+					<tr class="table__head">
+						<th width="137"><p>ID</p></th>
+						<th width="307"><p>Name</p></th>
+						<th><p>Type</p></th>
+						<th width="98"><p>Uploaded</p></th>
+						<th class="table__drop"><p>&nbsp;</p></th>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico pdf-ico"></i>
+								<span>FI12522-001</span>
+							</div>
+						</td>
+						<td>
+							<p>Approval Letter</p>
+						</td>
+						<td>
+							<p>PDF</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico pic-ico"></i>
+								<span>FI12522-002</span>
+							</div>
+						</td>
+						<td>
+							<p>Attachment Name</p>
+						</td>
+						<td>
+							<p>Image</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico pic-ico"></i>
+								<span>FI12522-003</span>
+							</div>
+						</td>
+						<td>
+							<p>Client ID Scan</p>
+						</td>
+						<td>
+							<p>Image</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico unknown-ico"></i>
+								<span>FI12522-004</span>
+							</div>
+						</td>
+						<td>
+							<p>Client ID Scan Back</p>
+						</td>
+						<td>
+							<p>File</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico doc-ico"></i>
+								<span>FI12522-034</span>
+							</div>
+						</td>
+						<td >
+							<p>FINRA Approval Letter</p>
+						</td>
+						<td>
+							<p>DOC</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico pdf-ico"></i>
+								<span>FI12522-006</span>
+							</div>
+						</td>
+						<td>
+							<p>NDA template</p>
+						</td>
+						<td>
+							<p>PDF</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico pic-ico"></i>
+								<span>FI12522-008</span>
+							</div>
+						</td>
+						<td>
+							<p>My ID Scan</p>
+						</td>
+						<td>
+							<p>Image</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico pic-ico"></i>
+								<span>FI12522-008</span>
+							</div>
+						</td>
+						<td>
+							<p>My ID Scan</p>
+						</td>
+						<td>
+							<p>Image</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico doc-ico"></i>
+								<span>FI12522-009</span>
+							</div>
+						</td>
+						<td>
+							<p>Document name</p>
+						</td>
+						<td>
+							<p>DOC</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<!-- end table -->
+			</div>
+		</div>
+	</body>
+	</html>

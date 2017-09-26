@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+//=include partials/head.html
+<body>
+	<!-- BEGIN  out-->
+	<div class="out">
+		//=include partials/header-active-notification.html
+
+		<!-- begin main -->
+		<div class="main">
+			<div class="l">
+				<div class="main__in">
+					
+					<div class="upper upper_help">
+						<p class="upper__ttl"><a href="#"><i class="icon icon-folder"></i></a>Space X</p>
+						<ul class="upper__list">
+							<li class="upper__option"><a class="upper__link upper_help__link is-active" href="#">Summary</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Tasks</p></a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Engagement Letters</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Deal Memo</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Customers</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Transactions</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Deal Status</a></li>
+						</ul>
+						<p class="upper__btn-descr">If you are familiar with the Olivia system, you can easily add<br>
+							all the needed information by clicking at the plus button.</p>
+							<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
+							//=include partials/menu-suggest.html
+						</div>
+
+						<div class="up-help">
+							<p class="is-active">Your deal has been created. Follow the steps below to foster the process.</p>
+							<p>Congratulations! Your Engagement Letters and Deal Memo have been approved. You can now proceed with the Customer Identification form.</p>
+							<p>Congratulations! Your CIF forms have been approved. You can now proceed with the Transaction.</p>
+						</div>
+
+						<!-- begin deal-steps -->
+						<div class="deal-steps">
+							<div class="deal-steps__step is-active">
+
+								<div class="deal-steps__title">step 1</div>
+								<div class="deal-steps__links">
+									<a href="#" class="deal-step__link">
+										<i class="svg-ico letter-ico is-disabled"></i>
+									</a>
+								</div>
+								<div class="deal-steps__title-text">Engagement Letter</div>
+								<div class="deal-steps__text is-red">
+									<p>Obtain approval of your Engagement letter from your supervisor PRIOR to signing with you Client.</p>
+								</div>
+							</div>
+
+							<div class="deal-steps__step"></div>
+							<div class="deal-steps__step"></div>
+							<div class="deal-steps__step"></div>
+							<div class="deal-steps__step"></div>
+						</div>
+						<!-- end deal-steps -->
+
+					</div>
+				</div>
+			</div>
+			<!-- end main -->
+
+			//=include partials/footer.html
+		</div>
+		<!-- END out-->
+		<div class="overlay">
+			//=include partials/popup-attach.html
+		</div>
+	</body>
+	</html>

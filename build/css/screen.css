@@ -238,6 +238,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 @font-face { font-family: opensans; src: url("../fonts/opensans.eot"); src: url("../fonts/opensans.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: opensans-semibold; src: url("../fonts/opensans-semibold.eot"); src: url("../fonts/opensans-semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-semibold.woff2") format("woff2"), url("../fonts/opensans-semibold.woff") format("woff"), url("../fonts/opensans-semibold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: opensans-bold; src: url("../fonts/opensans-bold.eot"); src: url("../fonts/opensans-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-bold.woff2") format("woff2"), url("../fonts/opensans-bold.woff") format("woff"), url("../fonts/opensans-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: opensans-light; src: url("../fonts/opensans-light.eot"); src: url("../fonts/opensans-light.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-light.woff2") format("woff2"), url("../fonts/opensans-light.woff") format("woff"), url("../fonts/opensans-light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: robotomono; src: url("../fonts/robotomono.eot"); src: url("../fonts/robotomono.eot?#iefix") format("embedded-opentype"), url("../fonts/robotomono.woff2") format("woff2"), url("../fonts/robotomono.woff") format("woff"), url("../fonts/robotomono.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: handwrite; src: url("../fonts/handwrite.eot"); src: url("../fonts/handwrite.eot?#iefix") format("embedded-opentype"), url("../fonts/handwrite.woff2") format("woff2"), url("../fonts/handwrite.woff") format("woff"), url("../fonts/handwrite.ttf") format("truetype"); font-weight: normal; font-style: normal; }
@@ -823,7 +824,32 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .upper__link.is-active { color: #000; font-family: "opensans-semibold", Arial, sans-serif; }
 .upper__link.is-active:before, .upper__link.is-active:after { display: block; }
 .upper__shortcut { font-size: 0; }
+.upper__btn-descr { position: absolute; top: 30px; right: 87px; color: #0d66bd; font-size: 11px; font-family: "opensans-semibold", Arial, sans-serif; }
 .upper .add-btn { position: absolute; right: 23px; bottom: 20px; z-index: 1; }
+.upper_help { margin-bottom: 0; }
+.upper_help__link:after { width: 0px; height: 0px; border-style: solid; border-width: 0 8px 10px 8px; border-color: transparent transparent rgba(255, 241, 222, 0.8) transparent; }
+
+.up-help { background-color: rgba(255, 241, 222, 0.8); padding: 22px 52px 18px; color: #282828; font-size: 14px; }
+.up-help p { display: none; }
+.up-help p.is-active { display: block; }
+
+.deal-steps { *zoom: 1; }
+.deal-steps:after { content: " "; display: table; clear: both; }
+.deal-steps__step { width: 19%; height: 221px; background-color: rgba(216, 216, 216, 0.4); float: left; border-right: 2px solid #fff; position: relative; padding: 12px 28px 28px 26px; }
+.deal-steps__step .svg-ico { width: 50px; height: 50px; background-size: 50px 50px; position: relative; }
+.deal-steps__step .letter-ico.is-disabled { background-image: url("../img/svg-bg/letter-disabled.svg"); }
+.deal-steps__step:last-child { width: 24%; border-right: 0; }
+.deal-steps__step:last-child::before { display: none; }
+.deal-steps__step::before { content: ""; position: absolute; right: -12px; z-index: 1; top: 50%; width: 0px; height: 0px; border-style: solid; border-width: 6px 0 6px 12px; border-color: transparent transparent transparent #fff; }
+.deal-steps__step.is-active { background-color: #fff; border-bottom: solid 1px #efefef; }
+.deal-steps__step.is-active .deal-steps__title { color: #2caf24; }
+.deal-steps__step.is-active .svg-ico::before { content: ""; position: absolute; width: 54px; height: 54px; border: 1px solid #2caf24; border-radius: 3px; top: -2px; left: -2px; }
+.deal-steps__step.is-active .svg-ico::after { content: "+"; position: absolute; width: 20px; height: 20px; border-radius: 50%; border: 1px solid #fff; background-color: #2caf24; right: -10px; top: -webkit-calc(50% - 10px); top: calc(50% - 10px); font-size: 22px; font-style: normal; color: #fff; text-align: center; line-height: 0.8; }
+.deal-steps__title { color: #9b9b9b; text-transform: uppercase; font-size: 15px; font-family: "opensans-bold", Arial, sans-serif; margin-bottom: 19px; }
+.deal-steps__links { margin-bottom: 10px; }
+.deal-steps__title-text { color: #4a4a4a; font-size: 13px; font-family: "opensans-semibold", Arial, sans-serif; margin-bottom: 3px; }
+.deal-steps__text { font-size: 11px; color: #878787; }
+.deal-steps__text.is-red { color: #d0011b; }
 
 .start { position: relative; margin: 35px 0 110px; text-align: center; font-size: 16px; color: #6c757a; z-index: 0; overflow: hidden; }
 .start:after { content: ""; position: absolute; top: 22px; right: 0; bottom: 0; width: 47px; background: #fff; z-index: 1; }
@@ -1397,7 +1423,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table-highlight-line > tbody > tr > td:last-child.is-table-in, .table-highlight-line > tbody > tr > td:last-child.is-table-in_border { border-right-color: transparent; }
 
 .table-highlight-line .table-highlight-line__footer:before, .table-highlight-line .table-highlight-line__footer:after { content: ""; height: 10px; display: block; }
-.table-highlight-line .table-highlight-line__footer tr td { height: auto; padding: 6px 8.5px; border-bottom-color: transparent; background: #FFF; }
+.table-highlight-line .table-highlight-line__footer tr td { height: auto; padding: 6px 8.5px; border-bottom-color: transparent; background: #FFF; word-break: break-all; }
 .table-highlight-line .table-highlight-line__footer tr td a[ng-href=''] { display: none; }
 
 .split-icon { position: relative; display: inline-block; vertical-align: middle; width: 17px; height: 17px; border-radius: 50%; -webkit-transform: translateZ(0); -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%); overflow: hidden; background: #126800; margin-right: 7px; text-align: center; }
