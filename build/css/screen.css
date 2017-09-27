@@ -1419,7 +1419,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table-highlight-line big { font-size: 13px; }
 .table-highlight-line .icon-unblock { display: inline-block; vertical-align: middle; }
 .table-highlight-line .arr-bottom-right { display: inline-block; vertical-align: middle; background-repeat: no-repeat; background-position: 0 0; background-size: contain; width: 14px; height: 23px; margin: -15px 0 0 5px; background-image: url("../img/svg-bg/arr-bottom-right.svg"); }
-.table-highlight-line .is-disabled { opacity: 0.4; pointer-events: none; }
+.table-highlight-line .is-disabled { opacity: 0.4; }
 .table-highlight-line > tbody > tr > td:last-child.is-table-in, .table-highlight-line > tbody > tr > td:last-child.is-table-in_border { border-right-color: transparent; }
 
 .table-highlight-line .table-highlight-line__footer:before, .table-highlight-line .table-highlight-line__footer:after { content: ""; height: 10px; display: block; }
