@@ -35,21 +35,23 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-archive:before { content: ""; }
 
-.icon-arr-right:before { content: ""; }
-
-.icon-bell:before { content: ""; }
-
 .icon-arr-bottom-right:before { content: ""; }
+
+.icon-arr-right:before { content: ""; }
 
 .icon-arr-top:before { content: ""; }
 
+.icon-bell:before { content: ""; }
+
+.icon-bubble:before { content: ""; }
+
 .icon-calendar:before { content: ""; }
 
-.icon-clip:before { content: ""; }
+.icon-check:before { content: ""; }
 
 .icon-checked:before { content: ""; }
 
-.icon-check:before { content: ""; }
+.icon-clip:before { content: ""; }
 
 .icon-close:before { content: ""; }
 
@@ -57,15 +59,17 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-comment:before { content: ""; }
 
-.icon-deals-team-archived:before { content: ""; }
+.icon-customer2:before { content: ""; }
 
 .icon-deal-team:before { content: ""; }
 
-.icon-customer2:before { content: ""; }
+.icon-deals-team-archived:before { content: ""; }
 
 .icon-deals-team-closed:before { content: ""; }
 
 .icon-delete:before { content: ""; }
+
+.icon-dollar:before { content: ""; }
 
 .icon-euro:before { content: ""; }
 
@@ -79,21 +83,19 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-folder:before { content: ""; }
 
-.icon-dollar:before { content: ""; }
-
-.icon-letter:before { content: ""; }
-
 .icon-hourglass:before { content: ""; }
 
 .icon-infinity:before { content: ""; }
 
+.icon-letter:before { content: ""; }
+
 .icon-lock:before { content: ""; }
+
+.icon-logo-short:before { content: ""; }
 
 .icon-logo:before { content: ""; }
 
 .icon-marked:before { content: ""; }
-
-.icon-logo-short:before { content: ""; }
 
 .icon-menu:before { content: ""; }
 
@@ -109,17 +111,15 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-square-arr:before { content: ""; }
 
-.icon-team:before { content: ""; }
-
 .icon-star:before { content: ""; }
+
+.icon-team:before { content: ""; }
 
 .icon-upload:before { content: ""; }
 
 .icon-warn:before { content: ""; }
 
 .icon-zoom:before { content: ""; }
-
-.icon-bubble:before { content: ""; }
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default { border-radius: 5px; border: 2px solid #000; background: #4c4c4c; color: #fff; }
@@ -1236,7 +1236,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .tablewrap.no-bottom-margin { margin-bottom: 0; }
 .tablewrap.min-bottom-space { margin-bottom: 0; }
 .tablewrap.min-bottom-space .scrollbar { padding-bottom: 0; }
-.tablewrap.is-entry-attachments-table .table { margin-bottom: 0; min-width: auto; }
+.tablewrap.is-entry-attachments-table .table { margin-bottom: 0; table-layout: auto; }
 .tablewrap.is-entry-attachments-table .table__head { opacity: 1; }
 .tablewrap.is-search-page .filters { position: static; }
 .tablewrap__in { position: relative; }
