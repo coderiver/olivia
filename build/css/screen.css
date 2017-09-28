@@ -35,23 +35,21 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-archive:before { content: ""; }
 
-.icon-arr-bottom-right:before { content: ""; }
-
 .icon-arr-right:before { content: ""; }
-
-.icon-arr-top:before { content: ""; }
 
 .icon-bell:before { content: ""; }
 
-.icon-bubble:before { content: ""; }
+.icon-arr-bottom-right:before { content: ""; }
+
+.icon-arr-top:before { content: ""; }
 
 .icon-calendar:before { content: ""; }
 
-.icon-check:before { content: ""; }
+.icon-clip:before { content: ""; }
 
 .icon-checked:before { content: ""; }
 
-.icon-clip:before { content: ""; }
+.icon-check:before { content: ""; }
 
 .icon-close:before { content: ""; }
 
@@ -59,17 +57,15 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-comment:before { content: ""; }
 
-.icon-customer2:before { content: ""; }
+.icon-deals-team-archived:before { content: ""; }
 
 .icon-deal-team:before { content: ""; }
 
-.icon-deals-team-archived:before { content: ""; }
+.icon-customer2:before { content: ""; }
 
 .icon-deals-team-closed:before { content: ""; }
 
 .icon-delete:before { content: ""; }
-
-.icon-dollar:before { content: ""; }
 
 .icon-euro:before { content: ""; }
 
@@ -83,19 +79,21 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-folder:before { content: ""; }
 
+.icon-dollar:before { content: ""; }
+
+.icon-letter:before { content: ""; }
+
 .icon-hourglass:before { content: ""; }
 
 .icon-infinity:before { content: ""; }
 
-.icon-letter:before { content: ""; }
-
 .icon-lock:before { content: ""; }
-
-.icon-logo-short:before { content: ""; }
 
 .icon-logo:before { content: ""; }
 
 .icon-marked:before { content: ""; }
+
+.icon-logo-short:before { content: ""; }
 
 .icon-menu:before { content: ""; }
 
@@ -111,15 +109,17 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-square-arr:before { content: ""; }
 
-.icon-star:before { content: ""; }
-
 .icon-team:before { content: ""; }
+
+.icon-star:before { content: ""; }
 
 .icon-upload:before { content: ""; }
 
 .icon-warn:before { content: ""; }
 
 .icon-zoom:before { content: ""; }
+
+.icon-bubble:before { content: ""; }
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default { border-radius: 5px; border: 2px solid #000; background: #4c4c4c; color: #fff; }
@@ -1263,7 +1263,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table__more { display: inline-block; font-size: 13px; vertical-align: middle; }
 .table__more:first-child { vertical-align: baseline; }
 .table__pic { max-width: 50px; height: 50px; background-size: cover; background-position: center center; }
-.table__text { max-width: 100%; color: #868e93; white-space: initial; word-break: break-word; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; }
+.table__text { max-width: 100%; color: #868e93; white-space: nowrap; word-break: break-word; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; }
 .table__text.is-info { color: #f76300; }
 .table__text a { color: #6c757a; font-family: "opensans-semibold", Arial, sans-serif; white-space: nowrap; }
 .table__activity a { text-decoration: underline; }
