@@ -563,7 +563,7 @@ a { text-decoration: none; }
 .status.is-green .status-info { background: #2cb324 !important; }
 .status.is-old { color: #fc9f51; }
 .status.is-commented { color: #75B0DB; }
-.status.is-commented .icon-comment-cloud { margin-top: 2px; }
+.status.is-commented .icon-comment-cloud { margin-top: 2px; color: #76B0DB; }
 .status span { font-size: 13px; vertical-align: middle; }
 .status .status-info { font-size: 10px; }
 .status .icon { margin-right: 5px; font-size: 12px; vertical-align: middle; }
