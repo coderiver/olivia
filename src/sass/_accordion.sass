@@ -29,9 +29,18 @@
 		//border-top: 1px solid #dce0e7 
 		border-bottom: 1px solid #dce0e7
 		& > button
-			background: #FFF  
+			background: #FFF 
 	&__title-in
 		margin-right: 30px
+		&.is-hidden
+			display: none 
+	&__hint-msg
+		+opensans-it
+		font-size: 15px
+		margin-right: 10px
+		&.is-active
+			display: inline-block
+
 	&__caption	
 		position: relative
 		font-size: 16px

@@ -240,6 +240,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 @font-face { font-family: opensans-semibold; src: url("../fonts/opensans-semibold.eot"); src: url("../fonts/opensans-semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-semibold.woff2") format("woff2"), url("../fonts/opensans-semibold.woff") format("woff"), url("../fonts/opensans-semibold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: opensans-bold; src: url("../fonts/opensans-bold.eot"); src: url("../fonts/opensans-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-bold.woff2") format("woff2"), url("../fonts/opensans-bold.woff") format("woff"), url("../fonts/opensans-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: opensans-light; src: url("../fonts/opensans-light.eot"); src: url("../fonts/opensans-light.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-light.woff2") format("woff2"), url("../fonts/opensans-light.woff") format("woff"), url("../fonts/opensans-light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: opensans-italic; src: url("../fonts/opensans-italic.eot"); src: url("../fonts/opensans-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-italic.woff2") format("woff2"), url("../fonts/opensans-italic.woff") format("woff"), url("../fonts/opensans-italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: robotomono; src: url("../fonts/robotomono.eot"); src: url("../fonts/robotomono.eot?#iefix") format("embedded-opentype"), url("../fonts/robotomono.woff2") format("woff2"), url("../fonts/robotomono.woff") format("woff"), url("../fonts/robotomono.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: handwrite; src: url("../fonts/handwrite.eot"); src: url("../fonts/handwrite.eot?#iefix") format("embedded-opentype"), url("../fonts/handwrite.woff2") format("woff2"), url("../fonts/handwrite.woff") format("woff"), url("../fonts/handwrite.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 body { min-width: 1040px; font-size: 12px; line-height: 1.4; background: #F3F4F6; font-weight: normal; overflow-x: auto !important; font-family: "opensans", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
@@ -1744,6 +1745,9 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .accordion__title { padding: 9px 30px; border-bottom: 1px solid #dce0e7; }
 .accordion__title > button { background: #FFF; }
 .accordion__title-in { margin-right: 30px; }
+.accordion__title-in.is-hidden { display: none; }
+.accordion__hint-msg { font-family: "opensans-italic", Arial, sans-serif; font-size: 15px; margin-right: 10px; }
+.accordion__hint-msg.is-active { display: inline-block; }
 .accordion__caption { position: relative; font-size: 16px; font-weight: 600; text-align: left; color: #6c757a; font-family: "opensans-semibold", Arial, sans-serif; }
 .accordion__caption span { font-family: "opensans", Arial, sans-serif; font-weight: 300; }
 .accordion__caption_sm { font-size: 14px; }
