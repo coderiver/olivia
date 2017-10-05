@@ -1748,7 +1748,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .ie-issue-page { min-height: 100vh; background-color: #474e52; padding-top: 15vh; padding-bottom: 31px; text-align: center; font-size: 16px; color: #fff; position: relative; }
 .ie-issue-page__inner { max-width: 572px; margin: 0 auto; }
 .ie-issue-page__logo { margin-bottom: 14vh; display: inline-block; }
-.ie-issue-page__logo img { min-width: 228px; }
+.ie-issue-page__logo img { width: 228px; height: 25px; }
 .ie-issue-page__text { margin-bottom: 14vh; }
 .ie-issue-page__icons { padding: 0 25px; }
 .ie-issue-page__icon { display: inline-block; padding: 0 55px; color: inherit; }
