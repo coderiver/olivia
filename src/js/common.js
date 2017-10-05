@@ -14,6 +14,7 @@ $(document).ready(function() {
 	//=include partials/_accordion.js
 
 	$('.js-vert-scroll').perfectScrollbar();   
+	$('.js-popup-inner').perfectScrollbar();   
 	$('.js-bar').addClass('is-active');
 
 	// animate back to top
