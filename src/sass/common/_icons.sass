@@ -241,3 +241,35 @@
 	+g(#3c8cea, #327bd1)
 	&.is-disabled
 		background: #CFD5E0
+
+.dollar-icon
+	display: inline-block
+	position: relative
+	font-size: 25px
+	color: #d3d3d3
+	+opensans-b
+	line-height: 1
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		width: 4px
+		height: 3px
+		background-color: #d3d3d3
+		left: 50%
+		transform: translate(-50%, 0)
+	&::before
+		top: 1px
+	&::after
+		bottom: 0
+
+.approved-ico
+	width: 21px
+	height: 21px
+	background-image: url("../img/svg-bg/approved.svg")
+
+.status-ico
+	width: 21px
+	height: 21px
+	background-image: url("../img/svg-bg/status.svg")
+

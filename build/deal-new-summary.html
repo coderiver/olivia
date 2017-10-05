@@ -265,26 +265,293 @@
 
 						<!-- begin deal-steps -->
 						<div class="deal-steps">
-							<div class="deal-steps__step is-active">
+							<div class="deal-steps__step is-icon-selectable is-active is-approved">
 
-								<div class="deal-steps__title">step 1</div>
+								<div class="deal-steps__title is-arrow"><span></span>step 1</div>
 								<div class="deal-steps__links">
-									<a href="#" class="deal-step__link">
-										<i class="svg-ico letter-ico is-disabled"></i>
+									<a href="#" class="deal-steps__link is-disabled">
+										<i class="svg-ico letter-ico is-disabled"></i>									
+									</a>
+									<a href="#" class="deal-steps__link">
+										<i class="svg-ico letter-ico"></i>
+										<i class="svg-ico approved-ico"></i>
 									</a>
 								</div>
 								<div class="deal-steps__title-text">Engagement Letter</div>
-								<div class="deal-steps__text is-red">
+								<div class="deal-steps__text">
 									<p>Obtain approval of your Engagement letter from your supervisor PRIOR to signing with you Client.</p>
+									<p>Your Engagement Letter has been approved.</p>
 								</div>
+								<div class="deal-steps__link-add is-active">
+									<a href="#">add one more</a>
+								</div>
+
 							</div>
 
-							<div class="deal-steps__step"></div>
-							<div class="deal-steps__step"></div>
-							<div class="deal-steps__step"></div>
-							<div class="deal-steps__step"></div>
+							<div class="deal-steps__step">
+								
+								<div class="deal-steps__title"><span></span>step 2</div>
+								<div class="deal-steps__links">
+									<a href="#" class="deal-steps__link is-disabled">
+										<i class="svg-ico memo-ico is-disabled"></i>									
+									</a>
+									<a href="#" class="deal-steps__link">
+										<i class="svg-ico memo-ico"></i>
+										<i class="svg-ico approved-ico"></i>
+									</a>
+								</div>
+								<div class="deal-steps__title-text">Deal Memo</div>
+								<div class="deal-steps__text is-approved">
+									<p>Obtain approval of your deal and all materials PRIOR to investor solicitation.</p>
+									<p>Your Deal Memo has been approved.</p>
+								</div>
+								<div class="deal-steps__link-create is-active">
+									<a href="#">create draft</a>
+								</div>
+
+							</div>
+							<div class="deal-steps__step is-approved">
+								
+								<div class="deal-steps__title"><span></span>step 3</div>
+								<div class="deal-steps__links">
+									<a href="#" class="deal-steps__link is-disabled">
+										<i class="svg-ico customer-ico is-disabled"></i>									
+									</a>
+									<a href="#" class="deal-steps__link">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</a>
+									<a href="#" class="deal-steps__link">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</a>
+								</div>
+								<div class="deal-steps__title-text">Customer Identification</div>
+								<div class="deal-steps__text is-approved">
+									<p>Submit a form for each buyer and seller prior to the close of the transaction..</p>
+								</div>
+								<div class="deal-steps__link-create">
+									<a href="#">create draft</a>
+								</div>
+								<div class="deal-steps__link-show-all is-active">
+									<a href="#">show all</a> (<span>5</span>)
+								</div>
+								<div class="deal-steps__link-add is-active" data-popup="cif-form">
+									<a href="#">add one more</a>
+								</div>
+
+							</div>
+							<div class="deal-steps__step is-icon-selectable">
+								
+								<div class="deal-steps__title"><span></span>step 4</div>
+								<div class="deal-steps__links">
+									<a href="#" class="deal-steps__link is-disabled">
+										<i class="svg-ico transaction-ico is-disabled"></i>									
+									</a>
+									<a href="#" class="deal-steps__link">
+										<i class="svg-ico transaction-ico"></i>
+										<i class="svg-ico approved-ico"></i>
+									</a>
+								</div>
+								<div class="deal-steps__title-text">Transaction Review</div>
+								<div class="deal-steps__text is-approved">
+									<p>Submit a separate form for each buyer at the close of the transaction.</p>
+								</div>
+								<div class="deal-steps__link-create">
+									<a href="#">create draft</a>
+								</div>
+								<div class="deal-steps__link-show-all is-active">
+									<a href="#">show all</a> (<span>5</span>)
+								</div>
+								<div class="deal-steps__link-add is-active" data-popup="transactions">
+									<a href="#">add one more</a>
+								</div>
+
+							</div>
+							<div class="deal-steps__step is-approved">
+								
+								<div class="deal-steps__title"><span></span>step 5</div>
+								<div class="deal-steps__links">
+									<a href="#" class="deal-steps__link is-disabled">
+										<span class="dollar-icon">S</span>
+										<span class="dollar-icon">S</span>
+										<span class="dollar-icon">S</span>
+									</a>
+									<a href="#" class="deal-steps__link">
+										<span class="dollar-icon">S</span>
+										<span class="dollar-icon">S</span>
+										<span class="dollar-icon">S</span>
+									</a>
+								</div>
+								<div class="deal-steps__title-text">GCS Receives Funds</div>
+								<div class="deal-steps__text is-approved">
+									<p>When all of the above documentation is approved and GCS receives the funds, you'll get paid!</p>
+								</div>								
+
+							</div>
 						</div>
 						<!-- end deal-steps -->
+
+						<!-- begin modal-submitted modal-submitted_cif-form -->
+						<div class="modal-submitted modal-submitted_cif-form js-popup" id="cif-form">
+							<div class="modal-submitted__top">
+								<div class="modal-submitted__title">Submitted CIF forms</div>
+								<div class="modal-submitted__close js-close"></div>								
+							</div>
+							<div class="modal-submitted__inner">								
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>						
+							</div>
+							<div class="modal-submitted__footer">
+								<span>To see all your Transactions </span><a href="#">go to the Transactions Tab.</a>
+							</div>
+						</div>
+						<!-- end modal-submitted modal-submitted_cif-form -->
+						<!-- begin modal-submitted modal-submitted_transactions -->
+						<div class="modal-submitted modal-submitted_transactions js-popup" id="transactions">
+							<div class="modal-submitted__top">
+								<div class="modal-submitted__title">Submitted CIF forms</div>
+								<div class="modal-submitted__close js-close"></div>								
+							</div>
+							<div class="modal-submitted__inner modal-submitted_transactions__inner">								
+								<a href="#" class="modal-submitted__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon">
+										<i class="svg-ico customer-ico"></i>
+										<i class="svg-ico status-ico"></i>
+									</span>
+									<span class="modal-submitted__link-name">John Doe</span>																		
+								</a>					
+							</div>
+							<div class="modal-submitted__footer">
+								<span>To see all your Transactions </span><a href="#">go to the Transactions Tab.</a>
+							</div>
+
+						</div>
+						<!-- end modal-submitted modal-submitted_transactions -->
 
 					</div>
 				</div>
