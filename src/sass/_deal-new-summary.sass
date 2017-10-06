@@ -184,7 +184,7 @@
 	&__link-add,
 	&__link-show-all
 		display: none
-		margin-right: 17px
+		margin-right: 15px
 		&.is-active
 			display: inline-block
 		a
@@ -322,8 +322,12 @@
 	padding-left: 52px
 	padding-right: 30px
 .page-right
-	padding-left: 30px
+	padding-left: 15px
 	padding-right: 46px
+	.scrollbar
+		min-height: auto
+		.table
+			min-width: 598px
 
 .unread-comments
 	margin-bottom: 30px
@@ -381,6 +385,9 @@
 		strong
 			font-weight: normal
 			+opensans-sb
+		a
+			text-decoration: underline
+			color: inherit
 
 .recent-activity
 	margin-bottom: 20px
@@ -394,10 +401,39 @@
 		strong
 			font-weight: normal
 			+opensans-sb
+		a
+			text-decoration: underline
+			color: inherit
 	&__link
 		a
 			text-decoration: underline
 			color: #2086f2
 			font-size: 12px
+
+.tasks
+	margin-bottom: 36px
+	&__top
+		+clr
+	&__title
+		float: left
+		margin-bottom: 15px
+	&__link
+		float: right
+		a
+			color: #9b9b9b
+			font-size: 10px
+			border-bottom: 1px dashed #9b9b9b
+
+.deal-folder
+	margin-bottom: 36px
+	&__title
+		margin-bottom: 15px
+	&__empty-msg
+		color: #555c60
+		font-size: 11px
+		line-height: 1.18
+		display: none
+		&.is-active
+			display: block
 
 
