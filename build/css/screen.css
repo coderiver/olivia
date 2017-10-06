@@ -407,7 +407,7 @@ body .tooltipster-base { z-index: 8; }
 
 .status-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/status.svg"); }
 
-.commented-transparent-ico { width: 16px; height: 16px; background-image: url("..img/svg-bg/commented-transparent.svg"); background-size: 16px 16px; }
+.commented-transparent-ico { width: 15px; height: 15px; background-image: url("../img/svg-bg/commented-transparent.svg"); background-size: 15px 15px; }
 
 .radio, .deal-radio { position: relative; }
 .radio__span, .deal-radio__span { position: relative; display: inline-block; padding-left: 20px; color: #097bf2; font-size: 14px; line-height: 1; cursor: pointer; }
@@ -1330,6 +1330,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table .status span:not(.status-info) { display: inline-block; max-width: -webkit-calc(100% - 20px); max-width: calc(100% - 20px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .table .table-row .status { white-space: normal; }
 .table .svg-ico { display: inline-block; width: 16px; height: 16px; background-size: 16px 16px; vertical-align: middle; }
+.table .commented-transparent-ico { width: 15px; height: 15px; background-size: 15px 15px; margin-right: 3px; }
 .table .icon { vertical-align: middle; }
 .table .icon-customer2, .table .icon-corp { font-size: 17px; }
 .table .icon-deal-team { font-size: 16px; }
