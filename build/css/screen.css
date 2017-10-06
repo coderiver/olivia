@@ -41,17 +41,17 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-arr-top:before { content: ""; }
 
-.icon-bubble:before { content: ""; }
-
 .icon-bell:before { content: ""; }
+
+.icon-bubble:before { content: ""; }
 
 .icon-calendar:before { content: ""; }
 
 .icon-check:before { content: ""; }
 
-.icon-clip:before { content: ""; }
-
 .icon-checked:before { content: ""; }
+
+.icon-clip:before { content: ""; }
 
 .icon-close:before { content: ""; }
 
@@ -87,11 +87,11 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-infinity:before { content: ""; }
 
-.icon-logo-short:before { content: ""; }
+.icon-letter:before { content: ""; }
 
 .icon-lock:before { content: ""; }
 
-.icon-letter:before { content: ""; }
+.icon-logo-short:before { content: ""; }
 
 .icon-logo:before { content: ""; }
 
