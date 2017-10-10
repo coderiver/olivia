@@ -27,43 +27,41 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
 
-.icon-add-library:before { content: ""; }
+.icon-add-report:before { content: ""; }
 
 .icon-add-news:before { content: ""; }
 
-.icon-add-report:before { content: ""; }
-
 .icon-archive:before { content: ""; }
-
-.icon-arr-bottom-right:before { content: ""; }
 
 .icon-arr-right:before { content: ""; }
 
+.icon-arr-bottom-right:before { content: ""; }
+
+.icon-add-library:before { content: ""; }
+
 .icon-arr-top:before { content: ""; }
-
-.icon-bell:before { content: ""; }
-
-.icon-bubble:before { content: ""; }
-
-.icon-calendar:before { content: ""; }
 
 .icon-check:before { content: ""; }
 
-.icon-checked:before { content: ""; }
+.icon-bell:before { content: ""; }
+
+.icon-calendar:before { content: ""; }
 
 .icon-clip:before { content: ""; }
+
+.icon-checked:before { content: ""; }
 
 .icon-close:before { content: ""; }
 
 .icon-comment-cloud:before { content: ""; }
 
-.icon-comment:before { content: ""; }
+.icon-bubble:before { content: ""; }
 
 .icon-customer2:before { content: ""; }
 
-.icon-deal-team:before { content: ""; }
+.icon-comment:before { content: ""; }
 
-.icon-deals-team-archived:before { content: ""; }
+.icon-deal-team:before { content: ""; }
 
 .icon-deals-team-closed:before { content: ""; }
 
@@ -77,6 +75,8 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-firm:before { content: ""; }
 
+.icon-deals-team-archived:before { content: ""; }
+
 .icon-folder-checked:before { content: ""; }
 
 .icon-folder-dots:before { content: ""; }
@@ -89,21 +89,21 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-letter:before { content: ""; }
 
-.icon-lock:before { content: ""; }
-
 .icon-logo-short:before { content: ""; }
 
-.icon-logo:before { content: ""; }
+.icon-lock:before { content: ""; }
 
 .icon-marked:before { content: ""; }
 
-.icon-menu:before { content: ""; }
+.icon-logo:before { content: ""; }
 
 .icon-news:before { content: ""; }
 
-.icon-pending:before { content: ""; }
+.icon-menu:before { content: ""; }
 
 .icon-plus:before { content: ""; }
+
+.icon-pending:before { content: ""; }
 
 .icon-pound:before { content: ""; }
 
@@ -113,9 +113,9 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-star:before { content: ""; }
 
-.icon-team:before { content: ""; }
-
 .icon-upload:before { content: ""; }
+
+.icon-team:before { content: ""; }
 
 .icon-warn:before { content: ""; }
 
@@ -405,7 +405,13 @@ body .tooltipster-base { z-index: 8; }
 
 .approved-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/approved.svg"); }
 
-.status-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/status.svg"); }
+.in-review-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/in-review.svg"); }
+
+.rejected-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/rejected.svg"); }
+
+.draft-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/draft.svg"); }
+
+.not-exist-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/not-exist.svg"); }
 
 .commented-transparent-ico { width: 15px; height: 15px; background-image: url("../img/svg-bg/commented-transparent.svg"); background-size: 15px 15px; }
 
@@ -843,8 +849,6 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .upper_help__link:after { width: 0px; height: 0px; border-style: solid; border-width: 0 8px 10px 8px; border-color: transparent transparent rgba(255, 241, 222, 0.8) transparent; }
 
 .up-help { background-color: rgba(255, 241, 222, 0.8); padding: 22px 52px 18px; color: #282828; font-size: 14px; }
-.up-help p { display: none; }
-.up-help p.is-active { display: block; }
 
 .start { position: relative; margin: 35px 0 110px; text-align: center; font-size: 16px; color: #6c757a; z-index: 0; overflow: hidden; }
 .start:after { content: ""; position: absolute; top: 22px; right: 0; bottom: 0; width: 47px; background: #fff; z-index: 1; }
@@ -1784,37 +1788,29 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__step .customer-ico.is-disabled { background-image: url("../img/svg-bg/customer-disabled.svg"); }
 .deal-steps__step .transaction-ico { background-image: url("../img/svg-bg/transaction.svg"); }
 .deal-steps__step .transaction-ico.is-disabled { background-image: url("../img/svg-bg/transaction-disabled.svg"); }
-.deal-steps__step .approved-ico, .deal-steps__step .status-ico { width: 21px; height: 21px; background-size: 21px 21px; position: absolute; top: -webkit-calc(50% - 10.5px); top: calc(50% - 10.5px); right: -10.5px; }
-.deal-steps__step .deal-steps__link:not(.is-disabled) { display: none; }
-.deal-steps__step.is-icon-selectable .svg-ico.is-disabled::before { content: ""; position: absolute; width: 48px; height: 48px; border: 1px solid #2caf24; border-radius: 3px; top: -2px; left: -2px; }
-.deal-steps__step.is-icon-selectable .svg-ico.is-disabled::after { content: "+"; position: absolute; width: 20px; height: 20px; border-radius: 50%; border: 1px solid #fff; background-color: #2caf24; right: -11px; top: -webkit-calc(50% - 10px); top: calc(50% - 10px); font-size: 22px; font-style: normal; color: #fff; text-align: center; line-height: 0.8; }
 .deal-steps__step::before { content: ""; position: absolute; left: 0; z-index: 1; top: 50%; -webkit-transform: translate(0, -200%); -ms-transform: translate(0, -200%); transform: translate(0, -200%); width: 0px; height: 0px; border-style: solid; border-width: 7px 0 7px 12px; border-color: transparent transparent transparent #fff; }
 .deal-steps__step.is-active { background-color: #fff; border-bottom: solid 1px #efefef; }
 .deal-steps__step.is-active .deal-steps__title { color: #2caf24; }
 .deal-steps__step:first-child { border-left: 0; }
 .deal-steps__step:first-child::before, .deal-steps__step:first-child::after { display: none; }
-.deal-steps__step:nth-child(1) .deal-steps__text, .deal-steps__step:nth-child(2) .deal-steps__text { color: #d0011b; }
-.deal-steps__step:nth-child(1) .deal-steps__text p:last-child, .deal-steps__step:nth-child(2) .deal-steps__text p:last-child { display: none; }
-.deal-steps__step.is-approved { border-left: solid 0.5px rgba(151, 151, 151, 0.5); background-color: #fff; border-bottom: solid 1px #efefef; }
-.deal-steps__step.is-approved::before { width: 0px; height: 0px; border-style: solid; border-width: 7px 0 7px 12px; border-color: transparent transparent transparent #d8d8d8; left: -3px; }
-.deal-steps__step.is-approved::after { content: ""; position: absolute; width: 29px; height: 29px; background-color: #fff; top: 50%; -webkit-transform: translate(0, -125%); -ms-transform: translate(0, -125%); transform: translate(0, -125%); left: -10px; }
-.deal-steps__step.is-approved:nth-child(1) .deal-steps__text, .deal-steps__step.is-approved:nth-child(2) .deal-steps__text { color: #878787; }
-.deal-steps__step.is-approved:nth-child(1) .deal-steps__text p:first-child, .deal-steps__step.is-approved:nth-child(2) .deal-steps__text p:first-child { display: none; }
-.deal-steps__step.is-approved:nth-child(1) .deal-steps__text p:last-child, .deal-steps__step.is-approved:nth-child(2) .deal-steps__text p:last-child { display: block; }
-.deal-steps__step.is-approved .deal-steps__link.is-disabled { display: none; }
-.deal-steps__step.is-approved .svg-ico.is-disabled { display: none; }
-.deal-steps__step.is-approved .deal-steps__link:not(.is-disabled) { display: inline-block; }
-.deal-steps__step.is-approved .deal-steps__link:not(.is-disabled)::before, .deal-steps__step.is-approved .deal-steps__link:not(.is-disabled)::after { display: none; }
-.deal-steps__step.is-approved .dollar-icon { color: #4a4a4a; }
-.deal-steps__step.is-approved .dollar-icon::before, .deal-steps__step.is-approved .dollar-icon::after { background-color: #4a4a4a; }
+.deal-steps__step.is-approved, .deal-steps__step.is-in-review { border-left: solid 0.5px rgba(151, 151, 151, 0.5); background-color: #fff; border-bottom: solid 1px #efefef; }
+.deal-steps__step.is-approved::before, .deal-steps__step.is-in-review::before { width: 0px; height: 0px; border-style: solid; border-width: 7px 0 7px 12px; border-color: transparent transparent transparent #d8d8d8; left: -3px; }
+.deal-steps__step.is-approved::after, .deal-steps__step.is-in-review::after { content: ""; position: absolute; width: 29px; height: 29px; background-color: #fff; top: 50%; -webkit-transform: translate(0, -125%); -ms-transform: translate(0, -125%); transform: translate(0, -125%); left: -10px; }
+.deal-steps__step.is-approved .deal-steps__link.is-disabled, .deal-steps__step.is-in-review .deal-steps__link.is-disabled { display: none; }
+.deal-steps__step.is-approved .dollar-icon, .deal-steps__step.is-in-review .dollar-icon { color: #4a4a4a; }
+.deal-steps__step.is-approved .dollar-icon::before, .deal-steps__step.is-approved .dollar-icon::after, .deal-steps__step.is-in-review .dollar-icon::before, .deal-steps__step.is-in-review .dollar-icon::after { background-color: #4a4a4a; }
+.deal-steps__step.is-in-review .deal-steps__link.is-in-review { display: inline-block; }
+.deal-steps__step.is-approved .deal-steps__link.is-approved { display: inline-block; }
 .deal-steps__title { color: #9b9b9b; text-transform: uppercase; font-size: 15px; font-family: "opensans-bold", Arial, sans-serif; margin-bottom: 19px; }
 .deal-steps__title.is-arrow span { height: 2px; width: 19px; background-color: #2caf24; display: inline-block; vertical-align: middle; margin-right: 6px; position: relative; top: -2px; }
 .deal-steps__title.is-arrow span::before { content: ""; position: absolute; width: 0px; height: 0px; border-style: solid; border-width: 4px 0 4px 8px; border-color: transparent transparent transparent #2caf24; right: -1px; top: -3px; }
-.deal-steps__links { margin-bottom: 10px; height: 50px; }
-.deal-steps__link { display: inline-block; position: relative; margin-right: 36px; }
+.deal-steps__links { margin-bottom: 10px; min-height: 50px; }
+.deal-steps__link { display: inline-block; position: relative; margin-right: 36px; margin-bottom: 5px; }
+.deal-steps__link:not(.is-disabled) { display: none; }
 .deal-steps__link .dollar-icon { top: 10px; }
 .deal-steps__title-text { color: #4a4a4a; font-size: 13px; font-family: "opensans-semibold", Arial, sans-serif; margin-bottom: 3px; }
 .deal-steps__text { font-size: 11px; color: #878787; margin-bottom: 3px; }
+.deal-steps__text p.is-red { color: #d0011b; }
 .deal-steps__link-create, .deal-steps__link-add, .deal-steps__link-show-all { display: none; margin-right: 15px; }
 .deal-steps__link-create.is-active, .deal-steps__link-add.is-active, .deal-steps__link-show-all.is-active { display: inline-block; }
 .deal-steps__link-create a, .deal-steps__link-add a, .deal-steps__link-show-all a { font-size: 12px; color: #097bf2; text-decoration: underline; }
@@ -1822,8 +1818,16 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__link-show-all a { color: #3aa59b; text-decoration: none; border-bottom: 1px dotted #3aa59b; }
 
 .complicated-icon { width: 44px; height: 44px; position: relative; display: inline-block; }
+.complicated-icon::before { content: ""; width: 21px; height: 21px; background-size: 21px 21px; position: absolute; top: -webkit-calc(50% - 10.5px); top: calc(50% - 10.5px); right: -10.5px; z-index: 1; }
+.complicated-icon.is-approved::before { background-image: url("../img/svg-bg/approved.svg"); }
+.complicated-icon.is-in-review::before { background-image: url("../img/svg-bg/in-review.svg"); }
+.complicated-icon.is-draft::before { background-image: url("../img/svg-bg/draft.svg"); }
+.complicated-icon.is-rejected::before { background-image: url("../img/svg-bg/rejected.svg"); }
+.complicated-icon.is-not-exist::before { background-image: url("../img/svg-bg/not-exist.svg"); }
+.complicated-icon.is-cash { width: 48px; }
+.complicated-icon.is-cash::before { right: -24px; }
 .complicated-icon .svg-ico { width: 44px; height: 44px; background-size: 44px 44px; position: relative; }
-.complicated-icon .approved-ico, .complicated-icon .status-ico { width: 21px; height: 21px; background-size: 21px 21px; position: absolute; top: -webkit-calc(50% - 10.5px); top: calc(50% - 10.5px); right: -10.5px; }
+.complicated-icon .svg-ico.is-bd-green::before { content: ""; position: absolute; width: 48px; height: 48px; border: 1px solid #2caf24; border-radius: 3px; top: -2px; left: -2px; }
 
 .modal-submitted { position: fixed; z-index: 15; top: 30vh; background-color: #fff; -webkit-box-shadow: 0 1px 9.5px 2px rgba(0, 0, 0, 0.3); box-shadow: 0 1px 9.5px 2px rgba(0, 0, 0, 0.3); border-radius: 4px; -webkit-transition: all 0.4s; transition: all 0.4s; opacity: 0; visibility: hidden; }
 .modal-submitted.is-active { opacity: 1; visibility: visible; }

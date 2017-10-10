@@ -38,43 +38,7 @@
 			background-image: url("../img/svg-bg/transaction.svg")
 			&.is-disabled
 				background-image: url('../img/svg-bg/transaction-disabled.svg')
-		.approved-ico,
-		.status-ico,
-			width: 21px
-			height: 21px
-			background-size: 21px 21px
-			position: absolute
-			top: calc(50% - 10.5px)
-			right: -10.5px
-		.deal-steps__link:not(.is-disabled)
-			display: none
 
-		&.is-icon-selectable			
-			.svg-ico.is-disabled
-				&::before
-					content: ''
-					position: absolute
-					width: 48px
-					height: 48px
-					border: 1px solid  #2caf24
-					border-radius: 3px
-					top: -2px
-					left: -2px
-				&::after
-					content: '+'
-					position: absolute
-					width: 20px
-					height: 20px
-					border-radius: 50%
-					border: 1px solid  #fff
-					background-color: #2caf24
-					right: -11px
-					top: calc(50% - 10px)
-					font-size: 22px
-					font-style: normal
-					color: #fff
-					text-align: center
-					line-height: .8
 		&::before
 			content: ''
 			position: absolute
@@ -93,14 +57,8 @@
 			&::before,
 			&::after
 				display: none
-		&:nth-child(1),
-		&:nth-child(2)
-			.deal-steps__text
-				color: #d0011b
-				p					
-					&:last-child		
-						display: none
-		&.is-approved
+		&.is-approved,
+		&.is-in-review
 			border-left: solid 0.5px rgba(151, 151, 151, 0.5)
 			background-color: #fff
 			border-bottom: solid 1px #efefef
@@ -116,29 +74,20 @@
 				top: 50%
 				transform: translate(0, -125%)
 				left: -10px
-			&:nth-child(1),
-			&:nth-child(2)
-				.deal-steps__text
-					color: #878787
-					p
-						&:first-child
-							display: none
-						&:last-child
-							display: block
 			.deal-steps__link.is-disabled
-				display: none
-			.svg-ico.is-disabled
-				display: none
-			.deal-steps__link:not(.is-disabled)
-				display: inline-block
-				&::before,
-				&::after
-					display: none	
+				display: none			
 			.dollar-icon
 				color: #4a4a4a
 				&::before,
 				&::after
 					background-color: #4a4a4a
+		&.is-in-review
+			.deal-steps__link.is-in-review
+				display: inline-block
+		&.is-approved
+			.deal-steps__link.is-approved
+				display: inline-block
+
 
 	&__title
 		color: #9b9b9b
@@ -164,11 +113,14 @@
 					top: -3px
 	&__links
 		margin-bottom: 10px
-		height: 50px
+		min-height: 50px
 	&__link
 		display: inline-block
 		position: relative
 		margin-right: 36px
+		margin-bottom: 5px
+		&:not(.is-disabled)
+			display: none
 		.dollar-icon
 			top: 10px		
 	&__title-text
@@ -180,6 +132,8 @@
 		font-size: 11px
 		color: #878787
 		margin-bottom: 3px
+		p.is-red
+			color: #d0011b
 	&__link-create,
 	&__link-add,
 	&__link-show-all
@@ -203,19 +157,49 @@
 	height: 44px
 	position: relative
 	display: inline-block
-	.svg-ico
-		width: 44px
-		height: 44px
-		background-size: 44px 44px
-		position: relative
-	.approved-ico,
-	.status-ico,
+	&::before
+		content: ''
 		width: 21px
 		height: 21px
 		background-size: 21px 21px
 		position: absolute
 		top: calc(50% - 10.5px)
 		right: -10.5px
+		z-index: 1
+	&.is-approved
+		&::before
+			background-image: url("../img/svg-bg/approved.svg")
+	&.is-in-review
+		&::before
+			background-image: url("../img/svg-bg/in-review.svg")
+	&.is-draft
+		&::before
+			background-image: url("../img/svg-bg/draft.svg")
+	&.is-rejected
+		&::before
+			background-image: url("../img/svg-bg/rejected.svg")
+	&.is-not-exist
+		&::before
+			background-image: url("../img/svg-bg/not-exist.svg")
+	&.is-cash
+		width: 48px
+		&::before
+			right: -24px
+	.svg-ico
+		width: 44px
+		height: 44px
+		background-size: 44px 44px
+		position: relative
+		&.is-bd-green
+			&::before
+				content: ''
+				position: absolute
+				width: 48px
+				height: 48px
+				border: 1px solid  #2caf24
+				border-radius: 3px
+				top: -2px
+				left: -2px
 
 .modal-submitted
 	position: fixed
