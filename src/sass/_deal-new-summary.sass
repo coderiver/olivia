@@ -47,11 +47,6 @@
 			top: 50%
 			transform: translate(0, -200%)
 			+arr(12,14,#fff, r)
-		&.is-active
-			background-color: #fff
-			border-bottom: solid 1px #efefef
-			.deal-steps__title
-				color: #2caf24
 		&:first-child
 			border-left: 0
 			&::before,
@@ -81,36 +76,38 @@
 				&::before,
 				&::after
 					background-color: #4a4a4a
+			.deal-steps__title
+				color: #2caf24
 		&.is-entry-exists
 			.deal-steps__link.is-in-review
 				display: inline-block
 		&.is-approved
 			.deal-steps__link.is-approved
 				display: inline-block
-
-
+		&.is-active
+			.deal-steps__title
+				color: #2caf24
+				span
+					height: 2px
+					width: 19px
+					background-color: #2caf24
+					display: inline-block
+					vertical-align: middle
+					margin-right: 6px
+					position: relative
+					top: -2px
+					&::before
+						content: ''
+						position: absolute
+						+arr(8, 8, #2caf24, r)
+						right: -1px
+						top: -3px
 	&__title
 		color: #9b9b9b
 		text-transform: uppercase
 		font-size: 15px
 		+opensans-b
 		margin-bottom: 19px
-		&.is-arrow
-			span
-				height: 2px
-				width: 19px
-				background-color: #2caf24
-				display: inline-block
-				vertical-align: middle
-				margin-right: 6px
-				position: relative
-				top: -2px
-				&::before
-					content: ''
-					position: absolute
-					+arr(8, 8, #2caf24, r)
-					right: -1px
-					top: -3px
 	&__links
 		margin-bottom: 10px
 		min-height: 50px
