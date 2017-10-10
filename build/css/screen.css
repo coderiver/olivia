@@ -1793,13 +1793,13 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__step.is-active .deal-steps__title { color: #2caf24; }
 .deal-steps__step:first-child { border-left: 0; }
 .deal-steps__step:first-child::before, .deal-steps__step:first-child::after { display: none; }
-.deal-steps__step.is-approved, .deal-steps__step.is-in-review { border-left: solid 0.5px rgba(151, 151, 151, 0.5); background-color: #fff; border-bottom: solid 1px #efefef; }
-.deal-steps__step.is-approved::before, .deal-steps__step.is-in-review::before { width: 0px; height: 0px; border-style: solid; border-width: 7px 0 7px 12px; border-color: transparent transparent transparent #d8d8d8; left: -3px; }
-.deal-steps__step.is-approved::after, .deal-steps__step.is-in-review::after { content: ""; position: absolute; width: 29px; height: 29px; background-color: #fff; top: 50%; -webkit-transform: translate(0, -125%); -ms-transform: translate(0, -125%); transform: translate(0, -125%); left: -10px; }
-.deal-steps__step.is-approved .deal-steps__link.is-disabled, .deal-steps__step.is-in-review .deal-steps__link.is-disabled { display: none; }
-.deal-steps__step.is-approved .dollar-icon, .deal-steps__step.is-in-review .dollar-icon { color: #4a4a4a; }
-.deal-steps__step.is-approved .dollar-icon::before, .deal-steps__step.is-approved .dollar-icon::after, .deal-steps__step.is-in-review .dollar-icon::before, .deal-steps__step.is-in-review .dollar-icon::after { background-color: #4a4a4a; }
-.deal-steps__step.is-in-review .deal-steps__link.is-in-review { display: inline-block; }
+.deal-steps__step.is-approved, .deal-steps__step.is-entry-exists { border-left: solid 0.5px rgba(151, 151, 151, 0.5); background-color: #fff; border-bottom: solid 1px #efefef; }
+.deal-steps__step.is-approved::before, .deal-steps__step.is-entry-exists::before { width: 0px; height: 0px; border-style: solid; border-width: 7px 0 7px 12px; border-color: transparent transparent transparent #d8d8d8; left: -3px; }
+.deal-steps__step.is-approved::after, .deal-steps__step.is-entry-exists::after { content: ""; position: absolute; width: 29px; height: 29px; background-color: #fff; top: 50%; -webkit-transform: translate(0, -125%); -ms-transform: translate(0, -125%); transform: translate(0, -125%); left: -10px; }
+.deal-steps__step.is-approved .deal-steps__link.is-disabled, .deal-steps__step.is-entry-exists .deal-steps__link.is-disabled { display: none; }
+.deal-steps__step.is-approved .dollar-icon, .deal-steps__step.is-entry-exists .dollar-icon { color: #4a4a4a; }
+.deal-steps__step.is-approved .dollar-icon::before, .deal-steps__step.is-approved .dollar-icon::after, .deal-steps__step.is-entry-exists .dollar-icon::before, .deal-steps__step.is-entry-exists .dollar-icon::after { background-color: #4a4a4a; }
+.deal-steps__step.is-entry-exists .deal-steps__link.is-in-review { display: inline-block; }
 .deal-steps__step.is-approved .deal-steps__link.is-approved { display: inline-block; }
 .deal-steps__title { color: #9b9b9b; text-transform: uppercase; font-size: 15px; font-family: "opensans-bold", Arial, sans-serif; margin-bottom: 19px; }
 .deal-steps__title.is-arrow span { height: 2px; width: 19px; background-color: #2caf24; display: inline-block; vertical-align: middle; margin-right: 6px; position: relative; top: -2px; }
