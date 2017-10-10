@@ -1806,7 +1806,6 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__title { color: #9b9b9b; text-transform: uppercase; font-size: 15px; font-family: "opensans-bold", Arial, sans-serif; margin-bottom: 19px; }
 .deal-steps__links { margin-bottom: 10px; min-height: 50px; }
 .deal-steps__link { display: inline-block; position: relative; margin-right: 36px; margin-bottom: 5px; }
-.deal-steps__link:not(.is-disabled) { display: none; }
 .deal-steps__link .dollar-icon { top: 10px; }
 .deal-steps__title-text { color: #4a4a4a; font-size: 13px; font-family: "opensans-semibold", Arial, sans-serif; margin-bottom: 3px; }
 .deal-steps__text { font-size: 11px; color: #878787; margin-bottom: 3px; }
