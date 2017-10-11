@@ -1800,6 +1800,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__step.is-approved .deal-steps__title, .deal-steps__step.is-entry-exists .deal-steps__title, .deal-steps__step.is-active .deal-steps__title { color: #2caf24; }
 .deal-steps__step.is-entry-exists .deal-steps__link.is-in-review { display: inline-block; }
 .deal-steps__step.is-approved .deal-steps__link.is-approved { display: inline-block; }
+.deal-steps__step.is-active .deal-steps__link.is-disabled { display: inline-block; }
 .deal-steps__step.is-active .deal-steps__title { color: #2caf24; }
 .deal-steps__step.is-active .deal-steps__title span { height: 2px; width: 19px; background-color: #2caf24; display: inline-block; vertical-align: middle; margin-right: 6px; position: relative; top: -2px; }
 .deal-steps__step.is-active .deal-steps__title span::before { content: ""; position: absolute; width: 0px; height: 0px; border-style: solid; border-width: 4px 0 4px 8px; border-color: transparent transparent transparent #2caf24; right: -1px; top: -3px; }
