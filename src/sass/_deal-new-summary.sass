@@ -179,6 +179,20 @@
 	&.is-not-exist
 		&::before
 			background-image: url("../img/svg-bg/not-exist.svg")
+		.svg-ico
+			&::before
+				content: ''
+				position: absolute
+				width: 48px
+				height: 48px
+				border: 1px solid  #2caf24
+				border-radius: 3px
+				top: -2px
+				left: -2px
+		.letter-ico
+			background-image: url("../img/svg-bg/letter-disabled.svg")
+		.transaction-ico
+			background-image: url("../img/svg-bg/transaction-disabled.svg")
 	&.is-cash
 		width: 48px
 		&::before
