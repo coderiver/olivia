@@ -70,24 +70,24 @@
 				top: 50%
 				transform: translate(0, -125%)
 				left: -10px
-			.deal-steps__link.is-disabled
-				display: none			
-			.dollar-icon
-				color: #4a4a4a
-				&::before,
-				&::after
-					background-color: #4a4a4a
+			// .deal-steps__link.is-disabled
+			// 	display: none			
+			// .dollar-icon
+			// 	color: #4a4a4a
+			// 	&::before,
+			// 	&::after
+			// 		background-color: #4a4a4a
 			.deal-steps__title
 				color: #2caf24
-		&.is-entry-exists
-			.deal-steps__link.is-in-review
-				display: inline-block
-		&.is-approved
-			.deal-steps__link.is-approved
-				display: inline-block
-		&.is-active
-			.deal-steps__link.is-disabled
-				display: inline-block
+		// &.is-entry-exists
+		// 	.deal-steps__link.is-in-review
+		// 		display: inline-block
+		// &.is-approved
+		// 	.deal-steps__link.is-approved
+		// 		display: inline-block
+		// &.is-active
+		// 	.deal-steps__link.is-disabled
+		// 		display: inline-block
 			.deal-steps__title
 				color: #2caf24
 				span
@@ -193,6 +193,26 @@
 			background-image: url("../img/svg-bg/letter-disabled.svg")
 		.transaction-ico
 			background-image: url("../img/svg-bg/transaction-disabled.svg")
+		.memo-ico
+			background-image: url("../img/svg-bg/memo-disabled.svg")
+		.customer-ico
+			background-image: url("../img/svg-bg/customer-disabled.svg")
+	&.is-disabled,
+	&.is-draft
+		.letter-ico
+			background-image: url("../img/svg-bg/letter-disabled.svg")
+		.transaction-ico
+			background-image: url("../img/svg-bg/transaction-disabled.svg")
+		.memo-ico
+			background-image: url("../img/svg-bg/memo-disabled.svg")
+		.customer-ico
+			background-image: url("../img/svg-bg/customer-disabled.svg")
+		.dollar-icon
+				color: #d3d3d3
+				&::before,
+				&::after
+					background-color: #d3d3d3
+
 	&.is-cash
 		width: 48px
 		&::before
@@ -202,16 +222,16 @@
 		height: 44px
 		background-size: 44px 44px
 		position: relative
-		&.is-bd-green
-			&::before
-				content: ''
-				position: absolute
-				width: 48px
-				height: 48px
-				border: 1px solid  #2caf24
-				border-radius: 3px
-				top: -2px
-				left: -2px
+		// &.is-bd-green
+		// 	&::before
+		// 		content: ''
+		// 		position: absolute
+		// 		width: 48px
+		// 		height: 48px
+		// 		border: 1px solid  #2caf24
+		// 		border-radius: 3px
+		// 		top: -2px
+		// 		left: -2px
 
 .modal-submitted
 	position: fixed
@@ -431,5 +451,3 @@
 		display: none
 		&.is-active
 			display: block
-
-
