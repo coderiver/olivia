@@ -1237,6 +1237,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .tablewrap.no-bottom-margin { margin-bottom: 0; }
 .tablewrap.min-bottom-space { margin-bottom: 0; }
 .tablewrap.min-bottom-space .scrollbar { padding-bottom: 0; }
+.tablewrap.no-right-margin .scrollbar { margin-right: 0; }
 .tablewrap.is-entry-attachments-table .table { margin-bottom: 0; table-layout: auto; }
 .tablewrap.is-entry-attachments-table .table__head { opacity: 1; }
 .tablewrap.is-search-page .filters { position: static; }
@@ -1347,7 +1348,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table_smaller { border: 1px solid #dce0e7; color: #9b9b9b; }
 .table_smaller td { font-size: 11px; }
 .table_smaller .table__head th { font-size: 11px; }
-.table_smaller a, .table_smaller a:visited { color: #282828; }
+.table_smaller a, .table_smaller a:visited { color: #282828; font-size: 11px; }
+.table_smaller span { font-size: 11px; }
 .table_smaller__el span { font-size: 11px; }
 
 .scrollbar { position: relative; min-height: 191px; margin-right: 50px; padding-bottom: 13px; background: #FFF; overflow: hidden; -webkit-transition: 0.3s ease; transition: 0.3s ease; }
