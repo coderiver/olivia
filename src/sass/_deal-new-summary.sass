@@ -13,6 +13,9 @@
 	flex-wrap: wrap
 	&__step
 		// width: 20%
+		display: inline-block
+		vertical-align: top
+		width: 20%
 		flex-basis: 20%
 		min-height: 285px
 		background-color: rgba(216, 216, 216, 0.4)
@@ -49,7 +52,7 @@
 			z-index: 1
 			top: 50%
 			transform: translate(0, -200%)
-			+arr(12,14,#fff, r)
+			+arr(10,14,#fff, r)
 		&:first-child
 			border-left: 0
 			&::before,
@@ -62,17 +65,24 @@
 			background-color: #fff
 			border-bottom: solid 1px #efefef
 			&::before
-				+arr(12,14,#d8d8d8, r)
-				left: -3px
+				// +arr(12,14,#d8d8d8, r)
+				// left: -3px
+				+arr(10,14,#d8d8d8, r)
+				left: 0px
 			&::after
 				content: ''
 				position: absolute
-				width: 29px
+				// width: 29px
+				width: 1px
 				height: 29px
 				background-color: #fff
 				top: 50%
 				transform: translate(0, -125%)
-				left: -10px
+				// left: -10px
+				left: 0px
+
+
+
 			// .deal-steps__link.is-disabled
 			// 	display: none			
 			// .dollar-icon
@@ -91,6 +101,8 @@
 		&.is-active
 			// .deal-steps__link.is-disabled
 			// 	display: inline-block
+			&::after
+				left: -1px
 			.deal-steps__title
 				color: #2caf24
 				span
@@ -123,12 +135,47 @@
 		margin-right: 36px
 		margin-bottom: 5px
 		.dollar-icon
-			top: 10px		
+			top: 10px	
+		&--spec
+			margin-right: 0
+			display: block
+			margin-bottom: 16px
+			+clr
+			.complicated-icon
+				width: 31px
+				height: 31px
+				float: left
+				&:before
+					display: none
+				.svg-ico
+					width: 31px
+					height: 31px	
+					background-size: 31px 31px
+		&.is-disabled
+			.deal-steps__link-text
+				color: #cecece
+			.complicated-icon__number-icon
+				background: #cecece
+				color: transparent
+			.transaction-ico
+				background-image: url("../img/svg-bg/transaction-disabled.svg")
 	&__title-text
 		color: #4a4a4a
 		font-size: 13px
 		+opensans-sb
 		margin-bottom: 15px
+	&__link-text
+		font-size: 11px
+		color: #4a4a4a
+		padding-left: 17px
+		padding-top: 8px
+		// display: inline-block
+		// vertical-align: top
+		display: block
+		width: calc(100% - 31px)
+		float: right
+		&--more
+			padding-top: 0
 	&__text
 		font-size: 11px
 		color: #878787
@@ -251,6 +298,27 @@
 		top: calc(50% - 10.5px)
 		right: -10.5px
 		z-index: 1
+	&__number-icon
+		position: absolute
+		width: 22px
+		height: 22px
+		border-radius: 50%
+		font-size: 11px
+		color: #fff
+		+opensans-b
+		text-align: center
+		z-index: 1
+		border: 2px solid #fff
+		padding-top: 1px
+		right: 0
+		top: 50%
+		transform: translate(50%, -50%)
+		&--gray
+			background: #9b9b9b
+		&--yellow
+			background: #f5a623
+		&--green
+			background: #2daf25
 	&.is-approved
 		&::before
 			background-image: url("../img/svg-bg/approved.svg")
@@ -331,8 +399,27 @@
 		// 		border-radius: 3px
 		// 		top: -2px
 		// 		left: -2px
-
-
+	&--cash
+		&.is-in-review
+			&:before
+				content: '$'
+				font-size: 12px
+				color: #fff
+				text-align: center
+				padding-top: 1px
+				width: 20px
+				height: 20px
+				border-radius: 50%
+				border: 2px solid #fff
+				right: 0
+				top: 50%
+				background: #2caf24
+				transform: translate(50%, -50%)
+		// &::before
+		// 	background-image: url("../img/svg-bg/cash.svg")
+		.complicated-icon__number
+			margin-top: 8px
+			color: #878787
 .modal-submitted
 	position: fixed
 	z-index: 15
@@ -397,6 +484,9 @@
 		width: 76px
 		display: inline-block
 		float: left		
+		&--spec
+			width: auto
+			margin-right: 47px
 	&__link-title
 		color: #878787
 		font-size: 11px
@@ -428,7 +518,16 @@
 		&__link
 			&:nth-child(7n+7)
 				margin-right: 0
-
+	&_trans-status
+		width: 664px
+		left: calc(50% - 332px)
+		// .modal-submitted__link
+		// 	&:nth-child(5n)
+		// 		margin-right: 50px
+		.modal-submitted__inner
+			padding-left: 23px
+			padding-right: 0px
+			max-height: 100%
 .page-left,
 .page-right
 	float: left
