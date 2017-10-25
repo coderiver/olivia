@@ -8,15 +8,18 @@
 			+opensans-sb
 
 .deal-steps
-	+clr
+	// +clr
+	display: flex
+	flex-wrap: wrap
 	&__step
-		width: 20%
-		height: 285px
+		// width: 20%
+		flex-basis: 20%
+		min-height: 285px
 		background-color: rgba(216, 216, 216, 0.4)
 		float: left
 		border-left: 1px solid  #fff
 		position: relative
-		padding: 12px 28px 91px 52px
+		padding: 12px 28px 57px 52px
 		.svg-ico
 			width: 44px
 			height: 44px
@@ -110,7 +113,7 @@
 		text-transform: uppercase
 		font-size: 15px
 		+opensans-b
-		margin-bottom: 19px
+		margin-bottom: 13px
 	&__links
 		margin-bottom: 10px
 		min-height: 50px
@@ -125,7 +128,7 @@
 		color: #4a4a4a
 		font-size: 13px
 		+opensans-sb
-		margin-bottom: 3px
+		margin-bottom: 15px
 	&__text
 		font-size: 11px
 		color: #878787
@@ -142,19 +145,103 @@
 		a
 			font-size: 12px
 			color: #097bf2
-			text-decoration: underline
+			border-bottom: 1px dotted #097bf2
 	&__link-show-all
 		color: #3aa59b
 		a
 			color: #3aa59b
 			text-decoration: none
 			border-bottom: 1px dotted  #3aa59b
-
+			font-size: 10px
+			text-transform: uppercase
+		span
+			display: inline-block
+			vertical-align: top
+			background: #000
+			// margin-left: 3px
+			position: relative
+			font-size: 9px
+			height: 13px
+			width: 13px
+			text-align: center
+			padding-top: 1px
+			top: 3px
+			color: #fff
+		&--purple
+			a
+				color: #b56ac4
+				border-bottom: 1px dotted #b56ac4
+			span
+				background: #b56ac4
+		&--cian
+			a
+				color: #3aa69c
+				border-bottom: 1px dotted #3aa69c
+			span
+				background: #3aa69c
+		&--blue
+			a
+				color: #3c8cea
+				border-bottom: 1px dotted #3c8cea
+			span
+				background: #3c8cea
+		&--yellow
+			a
+				color: #ecbc23
+				border-bottom: 1px dotted #ecbc23
+			span
+				background: #ecbc23
+	&__hint
+		position: absolute
+		cursor: pointer
+		right: 10px
+		top: 5px
+		&:before
+			content: ''
+			position: absolute
+			top: -5px
+			left: -10px
+			bottom: -5px
+			right: -10px
+		&.is-open
+			.deal-steps__hint-content
+				display: block
+	&__hint-content
+		display: none
+		position: absolute
+		right: -30px
+		top: calc(100% + 20px)
+		color: #282828
+		font-size: 13px
+		padding: 22px 26px 22px 22px
+		box-shadow: 2px 2px 10px gray
+		width: 286px
+		z-index: 2
+		background: #fff
+		border-radius: 5px
+		&:before
+			content: ''
+			position: absolute
+			top: -8px
+			right: 24px
+			+arr(16, 8, white, t)
+	&__bot-links
+		position: absolute
+		bottom: 30px
+		left: 52px
+		.div
+			margin-right: 0
 .complicated-icon
 	width: 44px
 	height: 44px
 	position: relative
 	display: inline-block
+	&__number
+		font-size: 10px
+		color: #4a4a4a
+		display: block
+		text-align: center
+		margin-top: 2px
 	&::before
 		content: ''
 		width: 21px
@@ -212,7 +299,19 @@
 				&::before,
 				&::after
 					background-color: #d3d3d3
-
+	&.is-alert
+		&::before
+			background-image: url("../img/svg-bg/rejected.svg")
+		.svg-ico
+			&::before
+				content: ''
+				position: absolute
+				width: 48px
+				height: 48px
+				border: 1px solid red
+				border-radius: 3px
+				top: -2px
+				left: -2px
 	&.is-cash
 		width: 48px
 		&::before
@@ -232,6 +331,7 @@
 		// 		border-radius: 3px
 		// 		top: -2px
 		// 		left: -2px
+
 
 .modal-submitted
 	position: fixed
