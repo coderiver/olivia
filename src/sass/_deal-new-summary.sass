@@ -240,16 +240,23 @@
 				background: #ecbc23
 	&__hint
 		position: absolute
-		cursor: pointer
-		right: 10px
-		top: 5px
-		&:before
-			content: ''
-			position: absolute
-			top: -5px
-			left: -10px
-			bottom: -5px
-			right: -10px
+		right: 14px
+		top: 17px
+		img
+			display: block
+			width: 5px
+			height: 10px
+		span
+			position: relative
+			cursor: pointer
+			display: block
+			&:before
+				content: ''
+				position: absolute
+				top: -6px
+				left: -8px
+				bottom: -6px
+				right: -8px
 		&.is-open
 			.deal-steps__hint-content
 				display: block
@@ -266,6 +273,7 @@
 		z-index: 2
 		background: #fff
 		border-radius: 5px
+		cursor: default
 		&:before
 			content: ''
 			position: absolute
@@ -650,3 +658,14 @@
 		display: none
 		&.is-active
 			display: block
+.new-deal-summary__in
+	.table_smaller
+		border: none
+	.table
+		border-left: 1px solid #dce0e7
+		border-right: 1px solid #dce0e7
+	.scrollbar .ps-scrollbar-x-rail
+		border: 1px solid #dce0e7
+	.back-link-row
+		padding-left: calc(50% + 15px)
+		margin-bottom: 30px

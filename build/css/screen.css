@@ -27,41 +27,43 @@ html { box-sizing: border-box; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
 
-.icon-add-report:before { content: ""; }
+.icon-add-library:before { content: ""; }
 
 .icon-add-news:before { content: ""; }
 
-.icon-archive:before { content: ""; }
+.icon-add-report:before { content: ""; }
 
-.icon-arr-right:before { content: ""; }
+.icon-archive:before { content: ""; }
 
 .icon-arr-bottom-right:before { content: ""; }
 
-.icon-add-library:before { content: ""; }
+.icon-arr-right:before { content: ""; }
 
 .icon-arr-top:before { content: ""; }
 
-.icon-check:before { content: ""; }
-
 .icon-bell:before { content: ""; }
+
+.icon-bubble:before { content: ""; }
 
 .icon-calendar:before { content: ""; }
 
-.icon-clip:before { content: ""; }
+.icon-check:before { content: ""; }
 
 .icon-checked:before { content: ""; }
+
+.icon-clip:before { content: ""; }
 
 .icon-close:before { content: ""; }
 
 .icon-comment-cloud:before { content: ""; }
 
-.icon-bubble:before { content: ""; }
+.icon-comment:before { content: ""; }
 
 .icon-customer2:before { content: ""; }
 
-.icon-comment:before { content: ""; }
-
 .icon-deal-team:before { content: ""; }
+
+.icon-deals-team-archived:before { content: ""; }
 
 .icon-deals-team-closed:before { content: ""; }
 
@@ -75,8 +77,6 @@ html { box-sizing: border-box; }
 
 .icon-firm:before { content: ""; }
 
-.icon-deals-team-archived:before { content: ""; }
-
 .icon-folder-checked:before { content: ""; }
 
 .icon-folder-dots:before { content: ""; }
@@ -89,21 +89,21 @@ html { box-sizing: border-box; }
 
 .icon-letter:before { content: ""; }
 
-.icon-logo-short:before { content: ""; }
-
 .icon-lock:before { content: ""; }
 
-.icon-marked:before { content: ""; }
+.icon-logo-short:before { content: ""; }
 
 .icon-logo:before { content: ""; }
 
-.icon-news:before { content: ""; }
+.icon-marked:before { content: ""; }
 
 .icon-menu:before { content: ""; }
 
-.icon-plus:before { content: ""; }
+.icon-news:before { content: ""; }
 
 .icon-pending:before { content: ""; }
+
+.icon-plus:before { content: ""; }
 
 .icon-pound:before { content: ""; }
 
@@ -113,9 +113,9 @@ html { box-sizing: border-box; }
 
 .icon-star:before { content: ""; }
 
-.icon-upload:before { content: ""; }
-
 .icon-team:before { content: ""; }
+
+.icon-upload:before { content: ""; }
 
 .icon-warn:before { content: ""; }
 
@@ -1833,10 +1833,12 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__link-show-all--blue span { background: #3c8cea; }
 .deal-steps__link-show-all--yellow a { color: #ecbc23; border-bottom: 1px dotted #ecbc23; }
 .deal-steps__link-show-all--yellow span { background: #ecbc23; }
-.deal-steps__hint { position: absolute; cursor: pointer; right: 10px; top: 5px; }
-.deal-steps__hint:before { content: ""; position: absolute; top: -5px; left: -10px; bottom: -5px; right: -10px; }
+.deal-steps__hint { position: absolute; right: 14px; top: 17px; }
+.deal-steps__hint img { display: block; width: 5px; height: 10px; }
+.deal-steps__hint span { position: relative; cursor: pointer; display: block; }
+.deal-steps__hint span:before { content: ""; position: absolute; top: -6px; left: -8px; bottom: -6px; right: -8px; }
 .deal-steps__hint.is-open .deal-steps__hint-content { display: block; }
-.deal-steps__hint-content { display: none; position: absolute; right: -30px; top: -webkit-calc(100% + 20px); top: calc(100% + 20px); color: #282828; font-size: 13px; padding: 22px 26px 22px 22px; box-shadow: 2px 2px 10px gray; width: 286px; z-index: 2; background: #fff; border-radius: 5px; }
+.deal-steps__hint-content { display: none; position: absolute; right: -30px; top: -webkit-calc(100% + 20px); top: calc(100% + 20px); color: #282828; font-size: 13px; padding: 22px 26px 22px 22px; box-shadow: 2px 2px 10px gray; width: 286px; z-index: 2; background: #fff; border-radius: 5px; cursor: default; }
 .deal-steps__hint-content:before { content: ""; position: absolute; top: -8px; right: 24px; width: 0px; height: 0px; border-style: solid; border-width: 0 8px 8px 8px; border-color: transparent transparent white transparent; }
 .deal-steps__bot-links { position: absolute; bottom: 30px; left: 52px; }
 .deal-steps__bot-links .div { margin-right: 0; }
@@ -1945,6 +1947,11 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-folder__title { margin-bottom: 15px; }
 .deal-folder__empty-msg { color: #555c60; font-size: 11px; line-height: 1.18; display: none; }
 .deal-folder__empty-msg.is-active { display: block; }
+
+.new-deal-summary__in .table_smaller { border: none; }
+.new-deal-summary__in .table { border-left: 1px solid #dce0e7; border-right: 1px solid #dce0e7; }
+.new-deal-summary__in .scrollbar .ps-scrollbar-x-rail { border: 1px solid #dce0e7; }
+.new-deal-summary__in .back-link-row { padding-left: -webkit-calc(50% + 15px); padding-left: calc(50% + 15px); margin-bottom: 30px; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1365px){
