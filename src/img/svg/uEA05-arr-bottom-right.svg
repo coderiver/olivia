@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="15px" height="24px" viewBox="0 0 15 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>arr-bottom-right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arr-bottom-right">
+            <polygon id="Triangle" fill="#9B9B9B" fill-rule="nonzero" points="14.391 19.939 8 23.279 8 16.6"></polygon>
+            <path d="M8.06649234,20.0502422 L0.535548796,20.0000698" id="Path-3" stroke="#979797"></path>
+            <path d="M1.10139838,0.591217684 L1.01965672,20.4831912" id="Path-2" stroke="#979797"></path>
+        </g>
+    </g>
+</svg>
