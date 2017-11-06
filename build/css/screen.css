@@ -1779,6 +1779,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .new-deal-summary__in { *zoom: 1; }
 .new-deal-summary__in:after { content: " "; display: table; clear: both; }
 .new-deal-summary__title span { color: #555c60; font-size: 13px; font-family: "opensans-semibold", Arial, sans-serif; }
+.new-deal-summary__inner { *zoom: 1; }
+.new-deal-summary__inner:after { content: " "; display: table; clear: both; }
 
 .deal-steps { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 .deal-steps__step { display: inline-block; vertical-align: top; width: 20%; -webkit-flex-basis: 20%; -ms-flex-preferred-size: 20%; flex-basis: 20%; min-height: 285px; background-color: rgba(216, 216, 216, 0.4); float: left; border-left: 1px solid #fff; position: relative; padding: 12px 28px 57px 52px; }
