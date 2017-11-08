@@ -300,13 +300,28 @@
 	// height: 44px
 	position: relative
 	display: inline-block
+	&__status-hint
+		position: absolute
+		z-index: 1
+		background: #fff
+		display: block
+		padding: 2px 5px
+		color: #4a4a4a
+		font-size: 10px
+		box-shadow: 0 0 5px #4a4a4a
+		border-radius: 4px
+		top: 36px
+		right: 0
+		transform: translateX(50%)
+		display: none
 	&__number
 		font-size: 10px
 		color: #4a4a4a
 		display: block
 		text-align: center
 		margin-top: 2px
-	&::before
+	&__spec-icon
+		display: block
 		content: ''
 		width: 21px
 		height: 21px
@@ -316,6 +331,26 @@
 		top: 12px
 		right: -10.5px
 		z-index: 1
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			width: 21px
+			height: 21px
+			background-size: 21px 21px
+		&:hover
+			& + .complicated-icon__status-hint
+				display: block
+	// &::before
+		// content: ''
+		// width: 21px
+		// height: 21px
+		// background-size: 21px 21px
+		// position: absolute
+		// top: 12px
+		// right: -10.5px
+		// z-index: 1
 	&__number-icon
 		position: absolute
 		width: 22px
@@ -338,20 +373,25 @@
 		&--green
 			background: #2daf25
 	&.is-approved
-		&::before
-			background-image: url("../img/svg-bg/approved.svg")
+		.complicated-icon__spec-icon
+			&::before
+				background-image: url("../img/svg-bg/approved.svg")
 	&.is-in-review
-		&::before
-			background-image: url("../img/svg-bg/in-review.svg")
+		.complicated-icon__spec-icon
+			&::before
+				background-image: url("../img/svg-bg/in-review.svg")
 	&.is-draft
-		&::before
-			background-image: url("../img/svg-bg/draft.svg")
+		.complicated-icon__spec-icon
+			&::before
+				background-image: url("../img/svg-bg/draft.svg")
 	&.is-rejected
-		&::before
-			background-image: url("../img/svg-bg/rejected.svg")
+		.complicated-icon__spec-icon
+			&::before
+				background-image: url("../img/svg-bg/rejected.svg")
 	&.is-not-exist
-		&::before
-			background-image: url("../img/svg-bg/not-exist.svg")
+		.complicated-icon__spec-icon
+			&::before
+				background-image: url("../img/svg-bg/not-exist.svg")
 		.svg-ico
 			&::before
 				content: ''
@@ -386,8 +426,9 @@
 				&::after
 					background-color: #d3d3d3
 	&.is-alert
-		&::before
-			background-image: url("../img/svg-bg/rejected.svg")
+		.complicated-icon__spec-icon
+			&::before
+				background-image: url("../img/svg-bg/rejected.svg")
 		.svg-ico
 			&::before
 				content: ''
