@@ -1813,6 +1813,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__link--spec .complicated-icon { width: 31px; height: 31px; float: left; }
 .deal-steps__link--spec .complicated-icon:before { display: none; }
 .deal-steps__link--spec .complicated-icon .svg-ico { width: 31px; height: 31px; background-size: 31px 31px; }
+.deal-steps__link--spec.is-disabled { pointer-events: none; }
 .deal-steps__link.is-disabled .deal-steps__link-text { color: #cecece; }
 .deal-steps__link.is-disabled .complicated-icon__number-icon { background: #cecece; color: transparent; }
 .deal-steps__link.is-disabled .transaction-ico { background-image: url("../img/svg-bg/transaction-disabled.svg"); }
