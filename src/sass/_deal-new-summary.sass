@@ -157,9 +157,10 @@
 					width: 31px
 					height: 31px	
 					background-size: 31px 31px
-			&.is-disabled
-				pointer-events: none
+			// &.is-disabled
+			// 	pointer-events: none
 		&.is-disabled
+			pointer-events: none
 			.deal-steps__link-text
 				color: #cecece
 			.complicated-icon__number-icon
@@ -566,11 +567,22 @@
 			color: #097bf2
 			text-decoration: underline
 	&_cif-form
-		min-width: 532px
+		// min-width: 532px
+		width: 532px
 		left: calc(50% - 266px)
+		.modal-submitted__inner
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+		.modal-submitted__footer
+			float: none
+			flex-basis: 100%
 		&__link
-			&:nth-child(5n+5)
-				margin-right: 0
+			margin-right: 0px
+			width: auto
+			flex-basis: 15%
+			// &:nth-child(5n+5)
+			// 	margin-right: 0
 	&_transactions
 		width: 664px
 		left: calc(50% - 332px)

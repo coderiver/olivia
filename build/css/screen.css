@@ -1813,7 +1813,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__link--spec .complicated-icon { width: 31px; height: 31px; float: left; }
 .deal-steps__link--spec .complicated-icon:before { display: none; }
 .deal-steps__link--spec .complicated-icon .svg-ico { width: 31px; height: 31px; background-size: 31px 31px; }
-.deal-steps__link--spec.is-disabled { pointer-events: none; }
+.deal-steps__link.is-disabled { pointer-events: none; }
 .deal-steps__link.is-disabled .deal-steps__link-text { color: #cecece; }
 .deal-steps__link.is-disabled .complicated-icon__number-icon { background: #cecece; color: transparent; }
 .deal-steps__link.is-disabled .transaction-ico { background-image: url("../img/svg-bg/transaction-disabled.svg"); }
@@ -1901,8 +1901,10 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .modal-submitted__link-title { color: #878787; font-size: 11px; margin-top: 10px; display: block; }
 .modal-submitted__footer { float: left; clear: left; padding-bottom: 20px; text-align: left; color: #4a4a4a; font-size: 12px; padding-right: 50px; }
 .modal-submitted__footer a { color: #097bf2; text-decoration: underline; }
-.modal-submitted_cif-form { min-width: 532px; left: -webkit-calc(50% - 266px); left: calc(50% - 266px); }
-.modal-submitted_cif-form__link:nth-child(5n+5) { margin-right: 0; }
+.modal-submitted_cif-form { width: 532px; left: -webkit-calc(50% - 266px); left: calc(50% - 266px); }
+.modal-submitted_cif-form .modal-submitted__inner { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+.modal-submitted_cif-form .modal-submitted__footer { float: none; -webkit-flex-basis: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; }
+.modal-submitted_cif-form__link { margin-right: 0px; width: auto; -webkit-flex-basis: 15%; -ms-flex-preferred-size: 15%; flex-basis: 15%; }
 .modal-submitted_transactions { width: 664px; left: -webkit-calc(50% - 332px); left: calc(50% - 332px); }
 .modal-submitted_transactions__inner { padding-left: 22px; padding-right: 10px; }
 .modal-submitted_transactions__link:nth-child(7n+7) { margin-right: 0; }
