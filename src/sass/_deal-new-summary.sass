@@ -570,19 +570,25 @@
 		// min-width: 532px
 		width: 532px
 		left: calc(50% - 266px)
-		.modal-submitted__inner
-			display: flex
-			flex-wrap: wrap
-			justify-content: space-between
-		.modal-submitted__footer
-			float: none
-			flex-basis: 100%
-		&__link
-			margin-right: 0px
-			width: auto
-			flex-basis: 15%
+		// .modal-submitted__inner
+		// 	display: flex
+		// 	flex-wrap: wrap
+		// 	justify-content: space-between
+		// .modal-submitted__footer
+		// 	float: none
+		// 	flex-basis: 100%
+		// &__link
+		// 	margin-right: 0px
+		// 	width: auto
+		// 	flex-basis: 15%
 			// &:nth-child(5n+5)
 			// 	margin-right: 0
+		// .modal-submitted__inner
+		// 	padding: 20px 5px 0 50px
+		&__link
+			margin-right: 13px
+			&:nth-of-type(5n)
+				margin-right: 0
 	&_transactions
 		width: 664px
 		left: calc(50% - 332px)

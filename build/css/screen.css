@@ -1902,9 +1902,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .modal-submitted__footer { float: left; clear: left; padding-bottom: 20px; text-align: left; color: #4a4a4a; font-size: 12px; padding-right: 50px; }
 .modal-submitted__footer a { color: #097bf2; text-decoration: underline; }
 .modal-submitted_cif-form { width: 532px; left: -webkit-calc(50% - 266px); left: calc(50% - 266px); }
-.modal-submitted_cif-form .modal-submitted__inner { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
-.modal-submitted_cif-form .modal-submitted__footer { float: none; -webkit-flex-basis: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; }
-.modal-submitted_cif-form__link { margin-right: 0px; width: auto; -webkit-flex-basis: 15%; -ms-flex-preferred-size: 15%; flex-basis: 15%; }
+.modal-submitted_cif-form__link { margin-right: 13px; }
+.modal-submitted_cif-form__link:nth-of-type(5n) { margin-right: 0; }
 .modal-submitted_transactions { width: 664px; left: -webkit-calc(50% - 332px); left: calc(50% - 332px); }
 .modal-submitted_transactions__inner { padding-left: 22px; padding-right: 10px; }
 .modal-submitted_transactions__link:nth-child(7n+7) { margin-right: 0; }
