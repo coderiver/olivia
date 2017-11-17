@@ -1,6 +1,22 @@
 .new-deal-summary
 	&__in
 		+clr
+		.table_smaller
+			border: none
+		.table
+		.scrollbar .ps-scrollbar-x-rail
+			border: 1px solid #dce0e7
+		.back-link-row
+			padding-left: calc(50% + 15px)
+			margin-bottom: 30px
+		.upper
+			&__link
+				&:after
+					border-color: transparent transparent #fff transparent
+				
+					
+							// rgba(255, 241, 222, 0.8)
+
 	&__title
 		span
 			color: #555c60
@@ -9,6 +25,12 @@
 	&__inner
 		+clr
 
+
+.tablewrap 
+	&--table-border
+		.table
+			border-left: 1px solid #dce0e7
+			border-right: 1px solid #dce0e7
 .deal-steps
 	// +clr
 	display: flex
@@ -730,14 +752,3 @@
 		display: none
 		&.is-active
 			display: block
-.new-deal-summary__in
-	.table_smaller
-		border: none
-	.table
-		border-left: 1px solid #dce0e7
-		border-right: 1px solid #dce0e7
-	.scrollbar .ps-scrollbar-x-rail
-		border: 1px solid #dce0e7
-	.back-link-row
-		padding-left: calc(50% + 15px)
-		margin-bottom: 30px
