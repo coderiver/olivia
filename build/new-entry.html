@@ -1,0 +1,617 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=1040, initial-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#fff">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/app.js"></script>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<!-- begin header  -->
+	<div class="header is-form js-fixed">
+		<div class="l-head">
+			<div class="header__in">
+				<div class="header__group">
+					<a href="#" class="header__close"><i class="icon icon-close"></i></a>
+					<div class="header__bl">
+						<p><i class="svg-ico memo-ico"></i><span>Deal Memo</span></p>
+						<div class="header__small"><a href="#">Space X</a></div>
+					</div>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-no s-pad btn-txt-gray" type="button">Save as draft</button>
+					<button class="btn btn-ok s-pad" type="submit">Submit for review</button>
+				</div>
+			</div>
+			<div class="header__in js-hide">
+				<ul class="header__list">
+					<li><a href="#" class="header__option">Current task</a></li>
+					<li><a href="#" class="header__option">Form Info</a></li>
+					<li><a href="#" class="header__option">Attachments</a></li>
+					<li><a href="#" class="header__option">Help</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<div class="main is-form sm-pad">
+		<div class="l-form">
+			<div class="report is-rejected">
+				<div class="report__more">
+					<a href="#" class="report__link">Open task page</a>
+				</div>
+				<div class="report__bl">
+					<i class="icon icon-warn"></i><span>Task: Submit Deal Memo</span>
+				</div>
+			</div>
+			<div class="main__in">
+				<form class="form">
+					<div class="form__bl">
+						<p class="form__ttl">Deal Memo</p>
+						<p>Please use this form to submit information regarding your proposed deal and related materials for potential investors for the Compliance team to review. Upon approval, you may begin contacting potential investors.</p>
+					</div>
+					<hr>
+					<div class="form__bl">
+						<p class="form__ttl">Issuer Information</p>
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Country<span class="form__require">*</span><span class="status-info is-update">Update</span></p>
+						<div class="dropdown is-form js-dropdown">
+							<p class="dropdown__item is-chosen">USA</p>
+							<ul class="dropdown__list is-top-level js-inner">
+								<li><a href="#">USA</a></li>
+								<li><a href="#">Ukraine</a></li>
+								<li><a href="#">China</a></li>
+								<li><a href="#">Japan</a></li>
+								<li><a href="#">UK</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">State<span class="form__require">*</span><span class="status-info is-update">Update</span></p>
+						<div class="dropdown is-form js-dropdown">
+							<p class="dropdown__item">Choose</p>
+							<ul class="dropdown__list is-top-level js-inner">
+								<li><a href="#">USA</a></li>
+								<li><a href="#">Ukraine</a></li>
+								<li><a href="#">China</a></li>
+								<li><a href="#">Japan</a></li>
+								<li><a href="#">UK</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="form__bl is-middle-size">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="city" class="form__subttl">City<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<input type="text" id="city" placeholder="Type here">
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="street" class="form__subttl">Street<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<input type="text" id="street" placeholder="Type here">
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="zip" class="form__subttl">ZIP code<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<input type="text" id="zip" placeholder="Type here">
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Industry Group (of Issuer)<span class="form__require">*</span><span class="status-info is-update">Update</span></p>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="agriculture">
+									<span class="radio__span">Agriculture</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="banking">
+									<span class="radio__span">Banking and Financial Services</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="business">
+									<span class="radio__span">Business Services</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="energy">
+									<span class="radio__span">Energy</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="health">
+									<span class="radio__span">Health Care</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="manufacturing">
+									<span class="radio__span">Manufacturing</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="estate">
+									<span class="radio__span">Real Estate</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="retail">
+									<span class="radio__span">Retail</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="technology">
+									<span class="radio__span">Technology</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="travel">
+									<span class="radio__span">Travel</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="group" value="other">
+									<span class="radio__span">Other</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="website" class="form__subttl">Website<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<input type="text" id="website" placeholder="Type here">
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="phone" class="form__subttl">Phone Number<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<input type="tel" id="phone" placeholder="Type here">
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="name" class="form__subttl">Contact Person's Name and Title<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<input type="text" id="name" placeholder="Type here">
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="form-d" class="form__subttl">If Form D has been filed by the issuer, enter CIK (Filer ID Number) (optional)<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<input type="text" id="form-d" placeholder="Type here">
+					</div>
+					<hr>
+					<div class="form__bl is-split-fields">
+						<p class="form__ttl">Commission split</p>
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<div class="form__hint"><a href="#" class="form__link">Add commission</a></div>
+						<div class="form__mod is-entry">
+							<div class="dropdown is-form js-dropdown">
+								<p class="dropdown__item is-chosen">Brian Dunn</p>
+								<ul class="dropdown__list is-top-level js-inner">
+									<li><a href="#">Brian Dunn</a></li>
+									<li><a href="#">Pidge Holt</a></li>
+									<li><a href="#">Shirogane Takagashi</a></li>
+									<li><a href="#">Lance McClain</a></li>
+									<li><a href="#">Keith Kogane</a></li>
+								</ul>
+							</div>
+							<input class="input-sm input-no-margin-right" type="text" placeholder="Perc.">
+							<span class="form__slash">%</span>
+							<a href="#" class="form__close"><i class="icon icon-close"></i></a>
+						</div>
+						<div class="form__mod is-entry">
+							<div class="dropdown is-form js-dropdown">
+								<p class="dropdown__item is-chosen">Brian Dunn</p>
+								<ul class="dropdown__list is-top-level js-inner">
+									<li><a href="#">Brian Dunn</a></li>
+									<li><a href="#">Pidge Holt</a></li>
+									<li><a href="#">Shirogane Takagashi</a></li>
+									<li><a href="#">Lance McClain</a></li>
+									<li><a href="#">Keith Kogane</a></li>
+								</ul>
+							</div>
+							<input class="input-sm input-no-margin-right" type="text" placeholder="Perc.">
+							<span class="form__slash">%</span>
+							<a href="#" class="form__close"><i class="icon icon-close"></i></a>
+						</div>
+					</div>
+					<hr>
+					<div class="form__bl">
+						<p class="form__ttl">Deal Summary</p>
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="textarea-list" class="form__subttl">List other reps involved (optional)<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<p class="form__hint">If any, including co-marketing agreements with other GCS reps or outside Broker Dealers</p>
+						<textarea id="textarea-list" class="textarea" placeholder="Type here"></textarea>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="business-summary" class="form__subttl">Business Summary<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<p class="form__hint">Brief description of age, size and nature of business model</p>
+						<textarea id="business-summary" class="textarea" placeholder="Type here"></textarea>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="principals" class="form__subttl">Principals<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<p class="form__hint">Names and backgrounds of the company's key principals</p>
+						<textarea id="principals" class="textarea" placeholder="Type here"></textarea>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="counsel" class="form__subttl">Counsel for the Company<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<p class="form__hint">Firm name, contact name, phone, email address, website</p>
+						<textarea id="counsel" class="textarea" placeholder="Type here"></textarea>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="history" class="form__subttl">History of Engagement<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<p class="form__hint">How you came to know about the company, how long, and in what depth</p>
+						<textarea id="history" class="textarea" placeholder="Type here"></textarea>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="diligence" class="form__subttl">Due Diligence Summary<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<p class="form__hint">Describe what you have done to check out the story including names of people you have met, dates, and results of any site visits, third party verification, etc.</p>
+						<textarea id="diligence" class="textarea" placeholder="Type here"></textarea>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="benefits" class="form__subttl">Selling Points<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<p class="form__hint">Key benefits of the opportunity</p>
+						<textarea id="benefits" class="textarea" placeholder="Type here"></textarea>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="risks" class="form__subttl">Risk Factors / Areas of Concern<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<p class="form__hint">Issues that detract from the overall opportunity -- NOTE anything included here should be formally communicated to all parties as a risk disclosure</p>
+						<textarea id="risks" class="textarea" placeholder="Type here"></textarea>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="economics" class="form__subttl">Economics of Engagement<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<p class="form__hint">How much capital is being raised, in what type of security, what is the fee on this deal</p>
+						<textarea id="economics" class="textarea" placeholder="Type here"></textarea>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Are you, or do you plan to be, an investor in this company?<span class="form__require">*</span><span class="status-info is-update">Update</span></p>
+						<p class="form__hint">If yes, please complete a "Private Securities Transaction" form after you have completed this form.</p>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="plan" value="yes">
+									<span class="radio__span">Yes</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="plan" value="no">
+									<span class="radio__span">No</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+					<hr>
+					<div class="form__bl is-middle-size">
+						<p class="form__ttl">FINRA Private Placement Form Questions</p>
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="max-amount" class="form__subttl">Maximum Amount to be raised in dollars<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<input id="max-amount" type="text" placeholder="Type here">
+					</div>
+					<div class="form__bl is-middle-size">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="date" class="form__subttl">Commencement Date<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<input id="date" type="text" placeholder="Type here">
+					</div>
+					<div class="form__bl is-middle-size">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="counclusion-date" class="form__subttl">Conclusion Date<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<p class="form__hint">Enter date, unknown, or continuous</p>
+						<input id="counclusion-date" type="text" placeholder="Type here">
+					</div>
+					<div class="form__bl is-middle-size">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="rate" class="form__subttl">Maximum Sales Commission (% rate)<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<input id="rate" type="text" placeholder="Type here">
+					</div>
+					<div class="form__bl is-middle-size">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="aggregate" class="form__subttl">Aggregate amount of any other compensation to registered persons disclosed in the offering document:<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<input id="aggregate" type="text" placeholder="Type here">
+					</div>
+					<div class="form__bl is-middle-size">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label for="dollar" class="form__subttl">Dollar amount of compensation disclosed<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<input id="dollar" type="text" placeholder="Type here">
+					</div>
+					<div class="form__bl is-middle-size">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<label class="form__subttl" for="target-rate">Stated or Target Rate of Return (%) as disclosed in the offering document<span class="form__require">*</span><span class="status-info is-update">Update</span></label>
+						<p class="form__hint">Enter date, unknown, or continuous</p>
+						<input id="target-rate" type="text" placeholder="Type here">
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Are you using a private placement memorandum in connection with any sales in the offering? (optional)<span class="form__require">*</span><span class="status-info is-update">Update</span></p>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="private" value="yes">
+									<span class="radio__span">Yes</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="private" value="no">
+									<span class="radio__span">No</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Is the offering a “contingency offering”?<span class="form__require">*</span><span class="status-info is-update">Update</span></p>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="offer" value="yes">
+									<span class="radio__span">Yes</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="offer" value="no">
+									<span class="radio__span">No</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="offer" value="unknown">
+									<span class="radio__span">Unknown</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Are independently audited financial statements available for the issuer’s most recently completed fiscal year?<span class="form__require">*</span><span class="status-info is-update">Update</span></p>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="available" value="yes">
+									<span class="radio__span">Yes</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="available" value="no">
+									<span class="radio__span">No</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">Is the issuer able to use offering proceeds to make or repay loans to, or purchase assets from, any officer, director or executive management of the issuer, sponsor, general partner, manager, advisor or any of the issuer’s affiliates?<span class="form__require">*</span><span class="status-info is-update">Update</span></p>
+						<ul class="form__list">
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="usage" value="yes">
+									<span class="radio__span">Yes</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="usage" value="no">
+									<span class="radio__span">No</span>
+								</label>
+							</li>
+							<li class="form__choice">
+								<label class="radio">
+									<input type="radio" name="usage" value="unknown">
+									<span class="radio__span">Unknown</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+					<div class="form__bl">
+						<a class="addpost js-comment" href="#">
+							<i class="icon icon-comment"></i>
+							<p>Comment</p>
+						</a>
+						<p class="form__subttl">File Uploads<span class="form__require">*</span><span class="status-info is-update">Update</span></p>
+						<p>Some information is Required, some is Optional. If you have the Optional documentation, it must be included for a supervisor to review. Please remember that ALL materials that will be shown to investors must be uploaded here. If you do not yet have any of this documentation in hand, use the NOTES field above to provide an explanation.</p>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file" name="executed-copy">
+								<i class="icon icon-upload"></i>
+								<span>Engagement Letter: EXECUTED copy</span>
+							</div>
+						</div>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file" name="memorandum">
+								<i class="icon icon-upload"></i>
+								<span>Investment Memorandum (PPM, CIM, etc)</span>
+							</div>
+						</div>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file" name="inc-letter">
+								<i class="icon icon-upload"></i>
+								<span>Letter of Incorporation</span>
+							</div>
+						</div>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file" name="subscription">
+								<i class="icon icon-upload"></i>
+								<span>Subscription Packet</span>
+							</div>
+						</div>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file" name="bios">
+								<i class="icon icon-upload"></i>
+								<span>Management Bios (optional)</span>
+								<small>Please provide a more complete description of the principals than would be found on their website, for example</small>
+							</div>
+						</div>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file" name="presentation">
+								<i class="icon icon-upload"></i>
+								<span>Presentation (optional)</span>
+							</div>
+						</div>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file" name="form-d">
+								<i class="icon icon-upload"></i>
+								<span>Form D Upload (if applicable) (optional)</span>
+							</div>
+						</div>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file" name="placement">
+								<i class="icon icon-upload"></i>
+								<span>Placement Agent Disclosure (optional)</span>
+							</div>
+						</div>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file" name="target-investor">
+								<i class="icon icon-upload"></i>
+								<span>Target Investor List (optional)</span>
+							</div>
+						</div>
+						<div class="upload">
+							<div class="upload__in">
+								<input type="file" name="additional">
+								<i class="icon icon-upload"></i>
+								<span>Upload additional file (optional)</span>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- END out-->
+</body>
+</html>
