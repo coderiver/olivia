@@ -27,9 +27,9 @@ html { box-sizing: border-box; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
 
-.icon-add-news:before { content: ""; }
-
 .icon-add-library:before { content: ""; }
+
+.icon-add-news:before { content: ""; }
 
 .icon-add-report:before { content: ""; }
 
@@ -37,21 +37,21 @@ html { box-sizing: border-box; }
 
 .icon-arr-bottom-right:before { content: ""; }
 
-.icon-arr-top:before { content: ""; }
-
-.icon-bubble:before { content: ""; }
-
 .icon-arr-right:before { content: ""; }
 
-.icon-calendar:before { content: ""; }
+.icon-arr-top:before { content: ""; }
 
 .icon-bell:before { content: ""; }
 
-.icon-clip:before { content: ""; }
+.icon-bubble:before { content: ""; }
+
+.icon-calendar:before { content: ""; }
 
 .icon-check:before { content: ""; }
 
 .icon-checked:before { content: ""; }
+
+.icon-clip:before { content: ""; }
 
 .icon-close:before { content: ""; }
 
@@ -59,9 +59,13 @@ html { box-sizing: border-box; }
 
 .icon-comment:before { content: ""; }
 
-.icon-deals-team-archived:before { content: ""; }
+.icon-customer2:before { content: ""; }
 
 .icon-deal-team:before { content: ""; }
+
+.icon-deals-team-archived:before { content: ""; }
+
+.icon-deals-team-closed:before { content: ""; }
 
 .icon-delete:before { content: ""; }
 
@@ -69,9 +73,9 @@ html { box-sizing: border-box; }
 
 .icon-euro:before { content: ""; }
 
-.icon-deals-team-closed:before { content: ""; }
-
 .icon-filter:before { content: ""; }
+
+.icon-firm:before { content: ""; }
 
 .icon-folder-checked:before { content: ""; }
 
@@ -81,43 +85,39 @@ html { box-sizing: border-box; }
 
 .icon-hourglass:before { content: ""; }
 
-.icon-firm:before { content: ""; }
-
-.icon-customer2:before { content: ""; }
-
 .icon-infinity:before { content: ""; }
-
-.icon-logo:before { content: ""; }
 
 .icon-letter:before { content: ""; }
 
-.icon-marked:before { content: ""; }
+.icon-lock:before { content: ""; }
 
 .icon-logo-short:before { content: ""; }
 
-.icon-news:before { content: ""; }
+.icon-logo:before { content: ""; }
 
-.icon-lock:before { content: ""; }
+.icon-marked:before { content: ""; }
 
 .icon-menu:before { content: ""; }
 
+.icon-news:before { content: ""; }
+
 .icon-pending:before { content: ""; }
+
+.icon-plus:before { content: ""; }
 
 .icon-pound:before { content: ""; }
 
-.icon-star:before { content: ""; }
-
 .icon-sidebar:before { content: ""; }
+
+.icon-square-arr:before { content: ""; }
+
+.icon-star:before { content: ""; }
 
 .icon-team:before { content: ""; }
 
 .icon-upload:before { content: ""; }
 
 .icon-warn:before { content: ""; }
-
-.icon-plus:before { content: ""; }
-
-.icon-square-arr:before { content: ""; }
 
 .icon-zoom:before { content: ""; }
 
@@ -406,6 +406,8 @@ body .tooltipster-base { z-index: 8; }
 .dollar-icon.is-disabled::before, .dollar-icon.is-disabled::after { background-color: #d3d3d3; }
 
 .approved-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/approved.svg"); }
+
+.cif-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/cif.svg"); }
 
 .in-review-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/in-review.svg"); }
 
