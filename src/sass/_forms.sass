@@ -10,6 +10,8 @@
 		.form__bl
 			max-width: 100%
 			padding: 0
+			&--border
+				padding-bottom: 27px
 	&.is-max-w
 		.form__bl
 			max-width: 580px
@@ -21,17 +23,35 @@
 		+opensans-sb
 		&.s-bottom-margin
 			margin-bottom: 5px
+		&.m-bottom-margin
+			margin-bottom: 16px
+		&--big
+			font-size: 20px
+	&__steps
+		color: #6c757a
+		font-size: 14px
+		vertical-align: top
+		display: inline-block
+		padding-top: 5px
 	&__subttl
 		display: block
 		margin-bottom: 10px
 		font-size: 14px
 		color: #282828
 		+opensans-sb
+		position: relative
 		&.no-margin
 			margin-bottom: 0
 	&__require
 		padding: 0 2px
 		color: #f76300
+		
+		&--abs-left
+			position: absolute
+			left: -20px
+			transform: translateY(-50%)
+			top: 50%
+			// color: #ff001f
 	&__bl
 		position: relative
 		max-width: 740px
@@ -106,6 +126,10 @@
 				margin: 0 auto 7px
 			.errorlist
 				margin: 7px auto
+		&--border
+			margin-bottom: 27px
+			padding-bottom: 27px
+			border-bottom: 1px solid #cfd5e0
 	&__txt-wrapper
 		max-width: 740px
 		padding: 0 70px
@@ -181,6 +205,9 @@
 		.select2
 			display: block
 			width: 100%
+	&__text-magr-b
+		margin-bottom: 10px
+		max-width: 572px
 	hr
 		max-width: 600px
 		margin: 15px auto 25px

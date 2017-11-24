@@ -88,6 +88,43 @@
 			display: inline-block
 			padding: 7px 21px
 			vertical-align: middle
+			&.header__list-item--search
+				padding: 0 21px
+				position: relative
+				input
+					padding: 9px 30px 9px 12px
+					width: 172px
+					font-size: 10px
+					color: #6c757a
+					height: 100%
+					box-shadow: none
+					border-radius: 0
+					border: none
+					border-left: 1px solid #dee1e7
+					border-right: 1px solid #dee1e7
+					height: 32px
+					+placeholder
+						color: #6c757a
+				button
+					width: 12px
+					height: 12px
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					right: 33px
+					appearance: none
+					border: none
+					background-color: transparent
+					&:before
+						content: ''
+						position: absolute
+						top: -5px
+						right: -5px
+						bottom: -5px
+						left: -5px
+		&--sm
+			padding: 0
+
 	&__option
 		position: relative
 		font-size: 13px
@@ -112,6 +149,9 @@
 			+tr(height 0.3s ease)
 			&.is-expanded
 				height: 60px
+	&__search-spec
+		display: inline-block
+		vertical-align: top
 	.btn-group
 		float: right
 		padding-top: 15px
@@ -129,7 +169,7 @@
 	.calendar
 		float: right
 		padding: 2px 0 2px 15px
-
+	
 
 .menu
 	float: left
