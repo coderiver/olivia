@@ -1834,6 +1834,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__link-create, .deal-steps__link-add, .deal-steps__link-show-all { display: none; margin-right: 15px; }
 .deal-steps__link-create.is-active, .deal-steps__link-add.is-active, .deal-steps__link-show-all.is-active { display: inline-block; }
 .deal-steps__link-create a, .deal-steps__link-add a, .deal-steps__link-show-all a { font-size: 12px; color: #097bf2; border-bottom: 1px dotted #097bf2; }
+.deal-steps__link-add { float: right; margin-right: 0; }
 .deal-steps__link-show-all { color: #3aa59b; }
 .deal-steps__link-show-all a { color: #3aa59b; text-decoration: none; border-bottom: 1px dotted #3aa59b; font-size: 10px; text-transform: uppercase; }
 .deal-steps__link-show-all span { display: inline-block; vertical-align: top; background: #000; position: relative; font-size: 9px; height: 13px; width: 13px; text-align: center; padding-top: 1px; top: 3px; color: #fff; }
@@ -1851,7 +1852,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__hint.is-open .deal-steps__hint-content { display: block; }
 .deal-steps__hint-content { display: none; position: absolute; right: -30px; top: -webkit-calc(100% + 20px); top: calc(100% + 20px); color: #282828; font-size: 13px; padding: 22px 26px 22px 22px; box-shadow: 2px 2px 10px gray; width: 286px; z-index: 2; background: #fff; border-radius: 5px; cursor: default; }
 .deal-steps__hint-content:before { content: ""; position: absolute; top: -8px; right: 24px; width: 0px; height: 0px; border-style: solid; border-width: 0 8px 8px 8px; border-color: transparent transparent white transparent; }
-.deal-steps__bot-links { position: absolute; bottom: 30px; left: 52px; }
+.deal-steps__bot-links { position: absolute; bottom: 30px; left: 52px; width: -webkit-calc(100% - 28px - 57px); width: calc(100% - 28px - 57px); *zoom: 1; }
+.deal-steps__bot-links:after { content: " "; display: table; clear: both; }
 .deal-steps__bot-links .div { margin-right: 0; }
 
 .info-icon-spec { display: block; width: 5px; height: 11px; color: #eee; background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1IDEwLjciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUgMTAuNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIHN0eWxlPSJmaWxsOiNDNUM1QzU7IiBkPSJNMy44LDBjMC44LDAsMS4xLDAuNSwxLjEsMWMwLDAuNy0wLjYsMS40LTEuNSwxLjRDMi41LDIuNCwyLjIsMiwyLjIsMS4zQzIuMiwwLjgsMi42LDAsMy44LDB6IE0xLjYsMTAuN2MtMC42LDAtMS0wLjMtMC42LTEuOWwwLjctMi43YzAuMS0wLjQsMC4xLTAuNiwwLTAuNmMtMC4yLDAtMC45LDAuMy0xLjQsMC42TDAsNS42YzEuNC0xLjIsMy0xLjksMy43LTEuOWMwLjYsMCwwLjcsMC43LDAuNCwxLjdMMy4zLDguNEMzLjIsOC45LDMuMiw5LDMuNCw5YzAuMiwwLDAuNy0wLjIsMS4zLTAuNkw1LDguOEMzLjYsMTAuMiwyLjIsMTAuNywxLjYsMTAuN3oiLz48L3N2Zz4=); }
