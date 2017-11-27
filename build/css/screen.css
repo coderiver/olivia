@@ -1834,7 +1834,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__link-create, .deal-steps__link-add, .deal-steps__link-show-all { display: none; margin-right: 15px; }
 .deal-steps__link-create.is-active, .deal-steps__link-add.is-active, .deal-steps__link-show-all.is-active { display: inline-block; }
 .deal-steps__link-create a, .deal-steps__link-add a, .deal-steps__link-show-all a { font-size: 12px; color: #097bf2; border-bottom: 1px dotted #097bf2; }
-.deal-steps__link-add { float: right; margin-right: 0; }
+.deal-steps__link-add { float: right; }
 .deal-steps__link-show-all { color: #3aa59b; }
 .deal-steps__link-show-all a { color: #3aa59b; text-decoration: none; border-bottom: 1px dotted #3aa59b; font-size: 10px; text-transform: uppercase; }
 .deal-steps__link-show-all span { display: inline-block; vertical-align: top; background: #000; position: relative; font-size: 9px; height: 13px; width: 13px; text-align: center; padding-top: 1px; top: 3px; color: #fff; }
