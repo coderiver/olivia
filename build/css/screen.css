@@ -1886,6 +1886,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .complicated-icon.is-disabled .dollar-icon::before, .complicated-icon.is-disabled .dollar-icon::after, .complicated-icon.is-draft .dollar-icon::before, .complicated-icon.is-draft .dollar-icon::after { background-color: #d3d3d3; }
 .complicated-icon.is-alert .complicated-icon__spec-icon::before { background-image: url("../img/svg-bg/rejected.svg"); }
 .complicated-icon.is-alert .svg-ico::before { content: ""; position: absolute; width: 48px; height: 48px; border: 1px solid red; border-radius: 3px; top: -2px; left: -2px; }
+.complicated-icon.is-infinity .complicated-icon__spec-icon:after { content: ""; position: absolute; width: 100%; height: 100%; background: #fff; border-radius: 50%; z-index: 0; }
+.complicated-icon.is-infinity .complicated-icon__spec-icon::before { z-index: 1; background-image: url("../img/svg-bg/icon-infinity.svg"); }
 .complicated-icon.is-cash { width: 48px; }
 .complicated-icon.is-cash::before { right: -24px; }
 .complicated-icon .svg-ico { width: 44px; height: 44px; background-size: 44px 44px; position: relative; }
