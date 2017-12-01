@@ -1808,11 +1808,11 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__step.is-approved, .deal-steps__step.is-entry-exists, .deal-steps__step.is-active { border-left: solid 0.5px rgba(151, 151, 151, 0.5); background-color: #fff; border-bottom: solid 1px #efefef; }
 .deal-steps__step.is-approved::before, .deal-steps__step.is-entry-exists::before, .deal-steps__step.is-active::before { width: 0px; height: 0px; border-style: solid; border-width: 7px 0 7px 10px; border-color: transparent transparent transparent #d8d8d8; left: 0px; }
 .deal-steps__step.is-approved::after, .deal-steps__step.is-entry-exists::after, .deal-steps__step.is-active::after { content: ""; position: absolute; width: 1px; height: 29px; background-color: #fff; top: 50%; -webkit-transform: translate(0, -125%); -ms-transform: translate(0, -125%); transform: translate(0, -125%); left: 0px; }
-.deal-steps__step.is-approved .deal-steps__title, .deal-steps__step.is-entry-exists .deal-steps__title, .deal-steps__step.is-active .deal-steps__title { color: #2caf24; }
+.deal-steps__step.is-approved .deal-steps__title, .deal-steps__step.is-entry-exists .deal-steps__title, .deal-steps__step.is-active .deal-steps__title { color: #336600; }
 .deal-steps__step.is-active::after { left: -1px; }
-.deal-steps__step.is-active .deal-steps__title { color: #2caf24; }
-.deal-steps__step.is-active .deal-steps__title span { height: 2px; width: 19px; background-color: #2caf24; display: inline-block; vertical-align: middle; margin-right: 6px; position: relative; top: -2px; }
-.deal-steps__step.is-active .deal-steps__title span::before { content: ""; position: absolute; width: 0px; height: 0px; border-style: solid; border-width: 4px 0 4px 8px; border-color: transparent transparent transparent #2caf24; right: -1px; top: -3px; }
+.deal-steps__step.is-active .deal-steps__title { color: #336600; }
+.deal-steps__step.is-active .deal-steps__title span { height: 2px; width: 19px; background-color: #336600; display: inline-block; vertical-align: middle; margin-right: 6px; position: relative; top: -2px; }
+.deal-steps__step.is-active .deal-steps__title span::before { content: ""; position: absolute; width: 0px; height: 0px; border-style: solid; border-width: 4px 0 4px 8px; border-color: transparent transparent transparent #336600; right: -1px; top: -3px; }
 .deal-steps__title { color: #9b9b9b; text-transform: uppercase; font-size: 15px; font-family: "opensans-bold", Arial, sans-serif; margin-bottom: 13px; }
 .deal-steps__links { margin-bottom: 10px; min-height: 50px; }
 .deal-steps__link { display: inline-block; position: relative; margin-right: 36px; margin-bottom: 5px; vertical-align: top; }
@@ -1867,13 +1867,13 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .complicated-icon__number-icon { position: absolute; width: 22px; height: 22px; border-radius: 50%; font-size: 11px; color: #fff; font-family: "opensans-bold", Arial, sans-serif; text-align: center; z-index: 1; border: 2px solid #fff; padding-top: 1px; right: 0; top: 50%; -webkit-transform: translate(50%, -50%); -ms-transform: translate(50%, -50%); transform: translate(50%, -50%); }
 .complicated-icon__number-icon--gray { background: #9b9b9b; }
 .complicated-icon__number-icon--yellow { background: #f5a623; }
-.complicated-icon__number-icon--green { background: #2daf25; }
+.complicated-icon__number-icon--green { background: #336600; }
 .complicated-icon.is-approved .complicated-icon__spec-icon::before { background-image: url("../img/svg-bg/approved.svg"); }
 .complicated-icon.is-in-review .complicated-icon__spec-icon::before { background-image: url("../img/svg-bg/in-review.svg"); }
 .complicated-icon.is-draft .complicated-icon__spec-icon::before { background-image: url("../img/svg-bg/draft.svg"); }
 .complicated-icon.is-rejected .complicated-icon__spec-icon::before { background-image: url("../img/svg-bg/rejected.svg"); }
 .complicated-icon.is-not-exist .complicated-icon__spec-icon::before { background-image: url("../img/svg-bg/not-exist.svg"); }
-.complicated-icon.is-not-exist .svg-ico::before { content: ""; position: absolute; width: 48px; height: 48px; border: 1px solid #2caf24; border-radius: 3px; top: -2px; left: -2px; }
+.complicated-icon.is-not-exist .svg-ico::before { content: ""; position: absolute; width: 48px; height: 48px; border: 1px solid #336600; border-radius: 3px; top: -2px; left: -2px; }
 .complicated-icon.is-not-exist .letter-ico { background-image: url("../img/svg-bg/letter-disabled.svg"); }
 .complicated-icon.is-not-exist .transaction-ico { background-image: url("../img/svg-bg/transaction-disabled.svg"); }
 .complicated-icon.is-not-exist .memo-ico { background-image: url("../img/svg-bg/memo-disabled.svg"); }

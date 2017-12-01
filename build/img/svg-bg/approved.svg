@@ -10,7 +10,7 @@
         <g id="ME_Step_2@2x" transform="translate(-151.000000, -278.000000)">
             <g id="status-12-approved-icon" transform="translate(153.000000, 280.000000)">
                 <g id="Oval-12">
-                    <use fill="#2CAF24" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <use fill="#336600" fill-rule="evenodd" xlink:href="#path-1"></use>
                     <path stroke="#FFFFFF" stroke-width="2" d="M10.5,22 C4.14872538,22 -1,16.8512746 -1,10.5 C-1,4.14872538 4.14872538,-1 10.5,-1 C16.8512746,-1 22,4.14872538 22,10.5 C22,16.8512746 16.8512746,22 10.5,22 Z"></path>
                 </g>
                 <polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="4.04468845 10.4516991 8.0136885 14.2222491 9.25032249 15.3970514 10.4564369 14.1909369 16.409937 8.23743687 13.9350633 5.76256313 7.98156319 11.7160632 10.4243116 11.6847511 6.45531155 7.91420106"></polygon>
