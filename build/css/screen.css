@@ -407,7 +407,7 @@ body .tooltipster-base { z-index: 8; }
 
 .approved-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/approved.svg"); }
 
-.cif-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/cif.svg"); }
+.cif-pub-link-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/cif-pub-link.svg"); }
 
 .in-review-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/in-review.svg"); }
 
@@ -1347,6 +1347,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table .upload__in { padding-left: 22px; }
 .table .upload .icon { top: 0; font-size: 16px; }
 .table a, .table a:visited { color: #6c757a; }
+.table a.table__link-orange, .table a:visited.table__link-orange { color: #f76300; }
 .table_smaller { border-left: 1px solid #dce0e7; border-right: 1px solid #dce0e7; color: #9b9b9b; }
 .table_smaller td { font-size: 11px; }
 .table_smaller .table__head th { font-size: 11px; }
