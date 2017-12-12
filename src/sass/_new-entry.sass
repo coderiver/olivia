@@ -1,5 +1,45 @@
 .new-entry
 	padding-left: 64px
+	position: relative
+	margin-top: 8px
+	&__toggle-btn
+		width: 40px
+		height: 40px
+		border-radius: 8px 0 0 8px
+		background-color: #ffffff
+		box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.18)
+		display: none
+		position: fixed
+		right: 0
+
+		.icon
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			font-size: 7px
+			color: #6c757a
+	.form__bl--ml
+		margin-left: 0
+	&.closed-sidebar
+		padding-right: 64px
+		.two-col
+			&__left
+				width: 100%
+			&__right
+				display: none
+		.new-entry__toggle-btn
+			display: block
+		.ne-content
+			.form
+				max-width: 854px
+				margin-left: auto
+				margin-right: auto
+				&__bl--ml
+					margin-left: 20px
+
+
+	
 .ne-sidebar, .ne-content, .ne-table-wrap
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
 	background-color: #ffffff
@@ -30,4 +70,24 @@
 		.icon
 			margin-left: 4px
 	&--min-h
-		min-height: 1240px
+		min-height: 1230px
+.two-col
+	// display: flex
+	// &--pl-64
+	// 	padding-left: 64px
+	position: relative
+	+clr
+	&__left
+		// flex-basis: 864px
+		// flex-grow: 1
+		// flex-shrink: 1
+		float: left
+		width: 62.8%
+
+	&__right
+		// flex-basis: 480px
+		// flex-grow: 1
+		// flex-shrink: 1
+		float: right
+		width: calc(37.2% - 30px)
+		// margin-left: 30px

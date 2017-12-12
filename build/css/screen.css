@@ -27,6 +27,8 @@ html { box-sizing: border-box; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
 
+.icon-add-library:before { content: ""; }
+
 .icon-add-news:before { content: ""; }
 
 .icon-add-report:before { content: ""; }
@@ -35,91 +37,91 @@ html { box-sizing: border-box; }
 
 .icon-arr-bottom-right:before { content: ""; }
 
-.icon-arr-right:before { content: ""; }
+.icon-arr-left:before { content: ""; }
 
-.icon-add-library:before { content: ""; }
+.icon-arr-right:before { content: ""; }
 
-.icon-arr-top:before { content: ""; }
+.icon-arr-top:before { content: ""; }
 
-.icon-bubble:before { content: ""; }
+.icon-bell:before { content: ""; }
 
-.icon-checked:before { content: ""; }
+.icon-bubble:before { content: ""; }
 
-.icon-calendar:before { content: ""; }
+.icon-calendar:before { content: ""; }
 
-.icon-clip:before { content: ""; }
+.icon-check:before { content: ""; }
 
-.icon-comment-cloud:before { content: ""; }
+.icon-checked:before { content: ""; }
 
-.icon-comment:before { content: ""; }
+.icon-clip:before { content: ""; }
 
-.icon-check:before { content: ""; }
+.icon-close:before { content: ""; }
 
-.icon-deal-team:before { content: ""; }
+.icon-comment-cloud:before { content: ""; }
 
-.icon-deals-team-archived:before { content: ""; }
+.icon-comment:before { content: ""; }
 
-.icon-deals-team-closed:before { content: ""; }
+.icon-customer2:before { content: ""; }
 
-.icon-delete:before { content: ""; }
+.icon-deal-team:before { content: ""; }
 
-.icon-dollar:before { content: ""; }
+.icon-deals-team-archived:before { content: ""; }
 
-.icon-euro:before { content: ""; }
+.icon-deals-team-closed:before { content: ""; }
 
-.icon-filter:before { content: ""; }
+.icon-delete:before { content: ""; }
 
-.icon-firm:before { content: ""; }
+.icon-dollar:before { content: ""; }
 
-.icon-customer2:before { content: ""; }
+.icon-euro:before { content: ""; }
 
-.icon-folder-dots:before { content: ""; }
+.icon-filter:before { content: ""; }
 
-.icon-folder:before { content: ""; }
+.icon-firm:before { content: ""; }
 
-.icon-hourglass:before { content: ""; }
+.icon-folder-checked:before { content: ""; }
 
-.icon-infinity:before { content: ""; }
+.icon-folder-dots:before { content: ""; }
 
-.icon-folder-checked:before { content: ""; }
+.icon-folder:before { content: ""; }
 
-.icon-lock:before { content: ""; }
+.icon-hourglass:before { content: ""; }
 
-.icon-logo-short:before { content: ""; }
+.icon-infinity:before { content: ""; }
 
-.icon-logo:before { content: ""; }
+.icon-letter:before { content: ""; }
 
-.icon-marked:before { content: ""; }
+.icon-lock:before { content: ""; }
 
-.icon-menu:before { content: ""; }
+.icon-logo-short:before { content: ""; }
 
-.icon-news:before { content: ""; }
+.icon-logo:before { content: ""; }
 
-.icon-pending:before { content: ""; }
+.icon-marked:before { content: ""; }
 
-.icon-plus:before { content: ""; }
+.icon-menu:before { content: ""; }
 
-.icon-pound:before { content: ""; }
+.icon-news:before { content: ""; }
 
-.icon-sidebar:before { content: ""; }
+.icon-pending:before { content: ""; }
 
-.icon-square-arr:before { content: ""; }
+.icon-plus:before { content: ""; }
 
-.icon-star:before { content: ""; }
+.icon-pound:before { content: ""; }
 
-.icon-close:before { content: ""; }
+.icon-sidebar:before { content: ""; }
 
-.icon-bell:before { content: ""; }
+.icon-square-arr:before { content: ""; }
 
-.icon-warn:before { content: ""; }
+.icon-star:before { content: ""; }
 
-.icon-team:before { content: ""; }
+.icon-team:before { content: ""; }
 
-.icon-letter:before { content: ""; }
+.icon-upload:before { content: ""; }
 
-.icon-upload:before { content: ""; }
+.icon-warn:before { content: ""; }
 
-.icon-zoom:before { content: ""; }
+.icon-zoom:before { content: ""; }
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default { border-radius: 5px; border: 2px solid #000; background: #4c4c4c; color: #fff; }
@@ -449,7 +451,7 @@ body .tooltipster-base { z-index: 8; }
 .check { position: relative; display: inline-block; }
 .check__span { position: relative; display: inline-block; min-width: 14px; min-height: 14px; padding-left: 20px; font-size: 13px; color: #282828; line-height: 1; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 .check__span:before { content: ""; position: absolute; top: 50%; left: 0; width: 14px; height: 14px; margin-top: -7px; background: #efefef; border: 1px solid #6c757a; }
-.check__span:after { display: none; content: ""; position: absolute; top: 50%; left: 2.5px; margin-top: -4px; font-size: 8px; font-family: "svgfont"; }
+.check__span:after { display: none; content: ""; position: absolute; top: 50%; left: 2.5px; margin-top: -4px; font-size: 8px; font-family: "svgfont"; }
 .check__span:empty { padding: 0; }
 .check__span--border-rad:before { border-radius: 3px; }
 .check.is-light-border .check__span:before { border-color: rgba(0, 0, 0, 0.15); }
@@ -860,7 +862,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .upper.is-custom { font-size: 0; *zoom: 1; }
 .upper.is-custom:after { content: " "; display: table; clear: both; }
 .upper.is-custom .upper__ttl { position: relative; display: inline-block; margin-bottom: 0; vertical-align: middle; }
-.upper.is-custom .upper__ttl:after { content: ""; display: inline-block; margin: 0 7px; font-family: svgfont; font-size: 11px; color: #96a0a6; vertical-align: 2px; }
+.upper.is-custom .upper__ttl:after { content: ""; display: inline-block; margin: 0 7px; font-family: svgfont; font-size: 11px; color: #96a0a6; vertical-align: 2px; }
 .upper.is-custom .upper__ttl:only-of-type:after { content: none; }
 .upper.is-custom .upper__ttl:last-child:after { display: none; }
 .upper.is-custom .btn { float: right; padding: 8px 31px; }
@@ -924,7 +926,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .steps__bl { display: inline-block; width: 15%; margin-bottom: 30px; padding: 0 17px; font-size: 13px; color: #6c757a; vertical-align: top; font-family: "opensans-light", Arial, sans-serif; }
 .steps__bl:last-child .steps__icon:before { display: none; }
 .steps__icon { position: relative; display: inline-block; min-width: 70px; min-height: 80px; font-size: 70px; }
-.steps__icon:before { content: ""; position: absolute; top: 50%; left: 100%; font-size: 16px; margin: -8px 0 0 20px; color: #bcc6cc; }
+.steps__icon:before { content: ""; position: absolute; top: 50%; left: 100%; font-size: 16px; margin: -8px 0 0 20px; color: #bcc6cc; }
 .steps .icon { vertical-align: top; border-radius: 3px; }
 .steps .paid-ico { position: relative; top: -10px; left: -8px; }
 .steps .memo-ico { background-image: url("../img/svg-bg/memo.svg"); }
@@ -1108,12 +1110,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .settings { max-width: 340px; margin: 40px auto 60px; }
 .settings .tooltip { margin-bottom: 20px; font-size: 18px; font-family: "opensans-semibold", Arial, sans-serif; }
 .settings .form { margin-top: 0; }
-
-.two-col { *zoom: 1; }
-.two-col:after { content: " "; display: table; clear: both; }
-.two-col__left { float: left; width: 62.8%; }
-.two-col__right { float: right; width: -webkit-calc(37.2% - 30px); width: calc(37.2% - 30px); }
-.two-col .report { margin-top: 10px; }
+.settings .report { margin-top: 10px; }
 
 .fake-header { position: absolute; top: 0; left: 0; right: 0; z-index: -2; }
 .fake-header.is-sidebar .fake-header__in { padding-left: 240px; }
@@ -1528,6 +1525,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__bl.is-full-w .form__hint { margin: 0 auto 7px; }
 .form__bl.is-full-w .errorlist { margin: 7px auto; }
 .form__bl--border { margin-bottom: 27px; padding-bottom: 27px; border-bottom: 1px solid #cfd5e0; }
+.form__bl--ml { margin-left: 20px; }
 .form__txt-wrapper { max-width: 740px; padding: 0 70px; margin: 0 auto 20px; }
 .form__txt-wrapper.is-margin-top { margin-top: 30px; }
 .form__mod { position: relative; }
@@ -2012,7 +2010,16 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-folder__empty-msg { color: #555c60; font-size: 11px; line-height: 1.18; display: none; }
 .deal-folder__empty-msg.is-active { display: block; }
 
-.new-entry { padding-left: 64px; }
+.new-entry { padding-left: 64px; position: relative; margin-top: 8px; }
+.new-entry__toggle-btn { width: 40px; height: 40px; border-radius: 8px 0 0 8px; background-color: #ffffff; box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.18); display: none; position: fixed; right: 0; }
+.new-entry__toggle-btn .icon { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 7px; color: #6c757a; }
+.new-entry .form__bl--ml { margin-left: 0; }
+.new-entry.closed-sidebar { padding-right: 64px; }
+.new-entry.closed-sidebar .two-col__left { width: 100%; }
+.new-entry.closed-sidebar .two-col__right { display: none; }
+.new-entry.closed-sidebar .new-entry__toggle-btn { display: block; }
+.new-entry.closed-sidebar .ne-content .form { max-width: 854px; margin-left: auto; margin-right: auto; }
+.new-entry.closed-sidebar .ne-content .form__bl--ml { margin-left: 20px; }
 
 .ne-sidebar, .ne-content, .ne-table-wrap { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); background-color: #ffffff; }
 
@@ -2025,7 +2032,12 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .ne-sidebar .form__ttl { padding: 0 65px 0 29px; }
 .ne-sidebar__close-btn { color: #cccccc; position: absolute; top: 30px; right: 14px; -webkit-appearance: none; -moz-appearance: none; appearance: none; border: none; background: none; }
 .ne-sidebar__close-btn .icon { margin-left: 4px; }
-.ne-sidebar--min-h { min-height: 1240px; }
+.ne-sidebar--min-h { min-height: 1230px; }
+
+.two-col { position: relative; *zoom: 1; }
+.two-col:after { content: " "; display: table; clear: both; }
+.two-col__left { float: left; width: 62.8%; }
+.two-col__right { float: right; width: -webkit-calc(37.2% - 30px); width: calc(37.2% - 30px); }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1365px){

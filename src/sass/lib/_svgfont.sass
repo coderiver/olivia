@@ -5,53 +5,54 @@
 	font-weight: normal
 	font-style: normal
 
+$icon-add-library: "\EA01"
 $icon-add-news: "\EA02"
 $icon-add-report: "\EA03"
 $icon-archive: "\EA04"
 $icon-arr-bottom-right: "\EA05"
-$icon-arr-right: "\EA06"
-$icon-add-library: "\EA01"
-$icon-arr-top: "\EA07"
-$icon-bubble: "\EA09"
-$icon-checked: "\EA0C"
-$icon-calendar: "\EA0A"
-$icon-clip: "\EA0D"
-$icon-comment-cloud: "\EA0F"
-$icon-comment: "\EA10"
-$icon-check: "\EA0B"
-$icon-deal-team: "\EA12"
-$icon-deals-team-archived: "\EA13"
-$icon-deals-team-closed: "\EA14"
-$icon-delete: "\EA15"
-$icon-dollar: "\EA16"
-$icon-euro: "\EA17"
-$icon-filter: "\EA18"
-$icon-firm: "\EA19"
-$icon-customer2: "\EA11"
-$icon-folder-dots: "\EA1B"
-$icon-folder: "\EA1C"
-$icon-hourglass: "\EA1D"
-$icon-infinity: "\EA1E"
-$icon-folder-checked: "\EA1A"
-$icon-lock: "\EA20"
-$icon-logo-short: "\EA21"
-$icon-logo: "\EA22"
-$icon-marked: "\EA23"
-$icon-menu: "\EA24"
-$icon-news: "\EA25"
-$icon-pending: "\EA26"
-$icon-plus: "\EA27"
-$icon-pound: "\EA28"
-$icon-sidebar: "\EA29"
-$icon-square-arr: "\EA2A"
-$icon-star: "\EA2B"
-$icon-close: "\EA0E"
-$icon-bell: "\EA08"
-$icon-warn: "\EA2E"
-$icon-team: "\EA2C"
-$icon-letter: "\EA1F"
-$icon-upload: "\EA2D"
-$icon-zoom: "\EA2F"
+$icon-arr-left: "\EA06"
+$icon-arr-right: "\EA07"
+$icon-arr-top: "\EA08"
+$icon-bell: "\EA09"
+$icon-bubble: "\EA0A"
+$icon-calendar: "\EA0B"
+$icon-check: "\EA0C"
+$icon-checked: "\EA0D"
+$icon-clip: "\EA0E"
+$icon-close: "\EA0F"
+$icon-comment-cloud: "\EA10"
+$icon-comment: "\EA11"
+$icon-customer2: "\EA12"
+$icon-deal-team: "\EA13"
+$icon-deals-team-archived: "\EA14"
+$icon-deals-team-closed: "\EA15"
+$icon-delete: "\EA16"
+$icon-dollar: "\EA17"
+$icon-euro: "\EA18"
+$icon-filter: "\EA19"
+$icon-firm: "\EA1A"
+$icon-folder-checked: "\EA1B"
+$icon-folder-dots: "\EA1C"
+$icon-folder: "\EA1D"
+$icon-hourglass: "\EA1E"
+$icon-infinity: "\EA1F"
+$icon-letter: "\EA20"
+$icon-lock: "\EA21"
+$icon-logo-short: "\EA22"
+$icon-logo: "\EA23"
+$icon-marked: "\EA24"
+$icon-menu: "\EA25"
+$icon-news: "\EA26"
+$icon-pending: "\EA27"
+$icon-plus: "\EA28"
+$icon-pound: "\EA29"
+$icon-sidebar: "\EA2A"
+$icon-square-arr: "\EA2B"
+$icon-star: "\EA2C"
+$icon-team: "\EA2D"
+$icon-upload: "\EA2E"
+$icon-warn: "\EA2F"
+$icon-zoom: "\EA30"
 
 
 %icon
@@ -68,6 +69,8 @@ $icon-zoom: "\EA2F"
 	@extend %icon
 	display: inline-block
 
+.icon-add-library:before
+	content: $icon-add-library
 .icon-add-news:before
 	content: $icon-add-news
 .icon-add-report:before
@@ -76,26 +79,32 @@ $icon-zoom: "\EA2F"
 	content: $icon-archive
 .icon-arr-bottom-right:before
 	content: $icon-arr-bottom-right
+.icon-arr-left:before
+	content: $icon-arr-left
 .icon-arr-right:before
 	content: $icon-arr-right
-.icon-add-library:before
-	content: $icon-add-library
 .icon-arr-top:before
 	content: $icon-arr-top
+.icon-bell:before
+	content: $icon-bell
 .icon-bubble:before
 	content: $icon-bubble
-.icon-checked:before
-	content: $icon-checked
 .icon-calendar:before
 	content: $icon-calendar
+.icon-check:before
+	content: $icon-check
+.icon-checked:before
+	content: $icon-checked
 .icon-clip:before
 	content: $icon-clip
+.icon-close:before
+	content: $icon-close
 .icon-comment-cloud:before
 	content: $icon-comment-cloud
 .icon-comment:before
 	content: $icon-comment
-.icon-check:before
-	content: $icon-check
+.icon-customer2:before
+	content: $icon-customer2
 .icon-deal-team:before
 	content: $icon-deal-team
 .icon-deals-team-archived:before
@@ -112,8 +121,8 @@ $icon-zoom: "\EA2F"
 	content: $icon-filter
 .icon-firm:before
 	content: $icon-firm
-.icon-customer2:before
-	content: $icon-customer2
+.icon-folder-checked:before
+	content: $icon-folder-checked
 .icon-folder-dots:before
 	content: $icon-folder-dots
 .icon-folder:before
@@ -122,8 +131,8 @@ $icon-zoom: "\EA2F"
 	content: $icon-hourglass
 .icon-infinity:before
 	content: $icon-infinity
-.icon-folder-checked:before
-	content: $icon-folder-checked
+.icon-letter:before
+	content: $icon-letter
 .icon-lock:before
 	content: $icon-lock
 .icon-logo-short:before
@@ -148,17 +157,11 @@ $icon-zoom: "\EA2F"
 	content: $icon-square-arr
 .icon-star:before
 	content: $icon-star
-.icon-close:before
-	content: $icon-close
-.icon-bell:before
-	content: $icon-bell
-.icon-warn:before
-	content: $icon-warn
 .icon-team:before
 	content: $icon-team
-.icon-letter:before
-	content: $icon-letter
 .icon-upload:before
 	content: $icon-upload
+.icon-warn:before
+	content: $icon-warn
 .icon-zoom:before
 	content: $icon-zoom
