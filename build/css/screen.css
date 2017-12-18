@@ -443,6 +443,7 @@ body .tooltipster-base { z-index: 8; }
 .check__span:empty { padding: 0; }
 .check.is-light-border .check__span:before { border-color: rgba(0, 0, 0, 0.15); }
 .check.is-light-border input:checked + .check__span { font-family: "opensans-semibold", Arial, sans-serif; }
+.check.is-light-icon .check__span:before, .check.is-light-icon .check__span:after { opacity: 0.4; }
 .check input { position: absolute; top: 0; left: 0; opacity: 0; visibility: hidden; }
 .check input:checked + span { color: #282828; }
 .check input:checked + span:after { display: block; }
@@ -1563,6 +1564,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup.is-attach { width: 665px; }
 .popup.is-new-customer { width: 565px; }
 .popup.is-edit-commission { width: 495px; }
+.popup.is-new-deal { width: 530px; }
 .popup_md { width: 860px; max-width: 100%; }
 .popup__head { position: relative; padding: 14px 21px; color: #282828; font-size: 16px; background: #f7f8f9; border-bottom: 1px solid #dce0e7; }
 .popup__head.no-bg { background: none; border: none; *zoom: 1; }
@@ -1572,6 +1574,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup__headline { font-size: 14px; line-height: 19px; font-family: "opensans-semibold", Arial, sans-serif; }
 .popup__body { padding: 15px 20px 20px; }
 .popup__body.no-b-pad { padding-bottom: 0; }
+.popup__body.new-deal-body { padding-left: 54px; padding-right: 54px; padding-bottom: 34px; }
 .popup__body .divider { margin: 15px -20px; }
 .popup__body .history { margin: 37px -20px 20px; }
 .popup__body .history__ttl { padding: 0 20px; }
@@ -1580,6 +1583,9 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup__bl:after { content: " "; display: table; clear: both; }
 .popup__bl .popup__label { margin: 0; }
 .popup__bl .dropdown { float: right; }
+.popup__border-inner { background-color: #fff; box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.15); border: solid 1px #cfd5e0; padding: 10px 12px; }
+.popup__border-inner > div { margin-bottom: 3px; }
+.popup__border-inner > div:last-of-type { margin-bottom: 0; }
 .popup__card { display: table; width: 100%; margin: 10px 0; }
 .popup__card .dropdown { float: right; }
 .popup__card .popup__subttl { display: block; }
