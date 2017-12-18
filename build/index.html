@@ -239,6 +239,9 @@
 						</li>
 						<li>
 							<a href="#" data-popup="popup-new-deal">popup-new-deal</a> 
+						</li>		
+						<li>
+							<a href="#" data-popup="popup-add-news">popup-add-news</a> 
 						</li>
 					</ol>
 					<h2>New deal page</h2>
@@ -699,12 +702,12 @@
 				</ul>
 			</div>
 		</div>
-		<div class="popup is-new-deal js-popup" id="popup-new-deal"> 
+		<div class="popup is-530-w js-popup" id="popup-new-deal"> 
 			<div class="popup__head">
 				<p>Start a New Deal Folder</p>
 				<i class="icon icon-close js-close"></i>
 			</div>
-			<div class="popup__body new-deal-body">
+			<div class="popup__body popup__body--spec">
 				<form class="form is-full-w">
 					<div class="form__bl">
 						<label for="deal-name" class="form__subttl">Deal Name</label>
@@ -756,6 +759,104 @@
 				</form>
 			</div>
 		</div>
+		<div class="popup is-530-w js-popup" id="popup-add-news"> 
+			<div class="popup__head">
+				<p>Start a New Deal Folder</p>
+				<i class="icon icon-close js-close"></i>
+			</div>
+			<div class="popup__body popup__body--spec">
+				<form class="form is-full-w">
+					<div class="form__bl">
+						<label  class="form__subttl">Shown to</label>
+						<div class="ui-select-container select2 select2-container ng-valid ng-valid-server ng-not-empty ng-touched" ng-class="{'select2-container-active select2-dropdown-open open': $select.open, 'select2-container-disabled': $select.disabled, 'select2-container-active': $select.focus, 'select2-allowclear': $select.allowClear &amp;&amp; !$select.isEmpty()}" ng-model="news.display_shown_to" name="display_shown_to" theme="select2" search-enabled="false"><a class="select2-choice ui-select-match ng-scope" ng-class="{'select2-default': $select.isEmpty()}" ng-click="$select.toggle($event)" aria-label="Select box select" allow-clear="false"><span ng-show="$select.isEmpty()" class="select2-chosen ng-binding ng-hide"></span> <span ng-hide="$select.isEmpty()" class="select2-chosen" ng-transclude="">
+							<span ng-bind="$select.selected.name" class="ng-binding ng-scope">Everyone</span>
+						</span> <span class="select2-arrow ui-select-toggle"><b></b></span></a><div class="ui-select-dropdown select2-drop select2-with-searchbox select2-drop-active select2-display-none" ng-class="{'select2-display-none': !$select.open}" style="opacity: 0;"><div class="select2-search ng-hide" ng-show="$select.searchEnabled"><input type="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="combobox" aria-expanded="true" aria-owns="ui-select-choices-0" aria-label="Select box" aria-activedescendant="ui-select-choices-row-0-0" class="ui-select-search select2-input ng-pristine ng-untouched ng-valid ng-empty" ng-model="$select.search" style="width: 10px;"></div><ul tabindex="-1" class="ui-select-choices ui-select-choices-content select2-results ng-scope" repeat="group.slug as group in shown_to_groups"><li class="ui-select-choices-group" ng-class="{'select2-result-with-children': $select.choiceGrouped($group) }"><div ng-show="$select.choiceGrouped($group)" class="ui-select-choices-group-label select2-result-label ng-binding ng-hide" ng-bind="$group.name"></div><ul role="listbox" id="ui-select-choices-0" ng-class="{'select2-result-sub': $select.choiceGrouped($group), 'select2-result-single': !$select.choiceGrouped($group) }" class="select2-result-single"></ul></li></ul></div><ui-select-single></ui-select-single><input ng-disabled="$select.disabled" class="ui-select-focusser ui-select-offscreen ng-scope" type="text" id="focusser-0" aria-label="Select box focus" aria-haspopup="true" role="button"></div>
+						<label class="check check--ml	 is-light-icon">
+							<input type="checkbox">
+							<span class="check__span">Send email to the chosen people</span>
+						</label>
+					</div>
+					<div class="form__bl">
+						<label for="news-title" class="form__subttl">News Title</label>
+						<input id="news-title" type="text" placeholder="Type here, keep it short">
+					</div>
+					<div class="form__bl" validation-class-for="content">
+						<label class="form__subttl" for="id_content">News body</label>
+						<p class="form__hint">Use this for long text description, keep titles short</p>
+						<div class="textarea-wrap">
+							<div class="redactor-box" role="application"><ul class="redactor-toolbar" id="redactor-toolbar-0" role="toolbar" style="position: relative; width: auto; top: 0px; left: 0px; visibility: visible;"><li><a href="#" class="re-icon re-formatting redactor-toolbar-link-dropdown" rel="formatting" role="button" aria-label="Formatting" tabindex="-1" aria-haspopup="true"></a></li><li><a href="#" class="re-icon re-bold" rel="bold" role="button" aria-label="Bold" tabindex="-1"></a></li><li><a href="#" class="re-icon re-italic" rel="italic" role="button" aria-label="Italic" tabindex="-1"></a></li><li><a href="#" class="re-icon re-underline" rel="underline" role="button" aria-label="Underline" tabindex="-1"></a></li><li><a href="#" class="re-icon re-deleted" rel="deleted" role="button" aria-label="Deleted" tabindex="-1"></a></li><li><a href="#" class="re-icon re-unorderedlist" rel="unorderedlist" role="button" aria-label="&amp;bull; Unordered List" tabindex="-1"></a></li><li><a href="#" class="re-icon re-orderedlist" rel="orderedlist" role="button" aria-label="1. Ordered List" tabindex="-1"></a></li><li><a href="#" class="re-icon re-outdent" rel="outdent" role="button" aria-label="< Outdent" tabindex="-1"></a></li><li><a href="#" class="re-icon re-indent" rel="indent" role="button" aria-label="> Indent" tabindex="-1"></a></li><li><a href="#" class="re-icon re-alignment redactor-toolbar-link-dropdown" rel="alignment" role="button" aria-label="Alignment" tabindex="-1" aria-haspopup="true"></a></li></ul><div class="redactor-editor redactor-placeholder" contenteditable="true" dir="ltr" placeholder="Type here"><p>&#8203;</p></div><textarea redactor="" class="textarea ng-pristine ng-untouched ng-valid ng-empty ng-valid-server" id="id_content" name="content" ng-model="news.content" placeholder="Type here" dir="ltr" style="display: none;"></textarea></div>
+							<form-field-errors field="content" class="ng-scope"><ul ng-messages="formField.$error" ng-show="formField.$dirty" class="errorlist ng-inactive ng-hide"> <!-- ngMessage: server --> <!-- ngMessagesInclude: /static/v3/html/angular-messages.html --><!-- ngMessage: server -->
+								<!-- ngMessage: required -->
+								<!-- ngMessage: minlength -->
+								<!-- ngMessage: maxlength -->
+								<!-- ngMessage: min -->
+								<!-- ngMessage: max -->
+								<!-- ngMessage: email -->
+								<!-- ngMessage: pattern -->
+								<!-- ngMessage: number -->
+								<!-- ngMessage: url -->
+								<!-- ngMessage: validEmail -->
+								<!-- ngMessage: passwordVerify -->
+								<!-- ngMessage: password -->
+								<!-- ngMessage: fallback -->
+								<!-- ngMessage: youtubeLink -->
+								<!-- ngMessage: tags -->
+								<!-- ngMessage: maxDecimalDigits -->
+								<!-- ngMessage: videoLink -->
+								<!-- ngMessage: less -->
+								<!-- ngMessage: minTags -->
+								<!-- ngMessage: unique --> </ul></form-field-errors>
+							</div>
+						</div>
+						<div class="form__bl textarea-wrap word-break" validation-class-for="file">
+							<div class="upload ng-scope" flow-init="{target: '/file-upload/', query: { serializer: 'file' }}" flow-files-submitted="$flow.upload()" flow-file-error="onFileError($file, $message, $flow)" flow-file-success="onFileSuccess($file, $message, $flow)">
+								<div class="upload__in">
+									<i class="icon icon-clip"></i>
+									<span flow-btn="" ng-click="validataFile()">Add attachments<input type="file" style="visibility: hidden; position: absolute; width: 1px; height: 1px;"></span>
+								</div>
+								<table>
+									<tbody><!-- ngRepeat: file in news.files -->
+									</tbody></table>
+									<input type="text" class="ng-hide ng-pristine ng-untouched ng-valid ng-empty ng-valid-server" name="file" ng-model="news.file">
+								</div>
+								<form-field-errors field="file" class="ng-scope"><ul ng-messages="formField.$error" ng-show="formField.$dirty" class="errorlist ng-inactive ng-hide"> <!-- ngMessage: server --> <!-- ngMessagesInclude: /static/v3/html/angular-messages.html --><!-- ngMessage: server -->
+									<!-- ngMessage: required -->
+									<!-- ngMessage: minlength -->
+									<!-- ngMessage: maxlength -->
+									<!-- ngMessage: min -->
+									<!-- ngMessage: max -->
+									<!-- ngMessage: email -->
+									<!-- ngMessage: pattern -->
+									<!-- ngMessage: number -->
+									<!-- ngMessage: url -->
+									<!-- ngMessage: validEmail -->
+									<!-- ngMessage: passwordVerify -->
+									<!-- ngMessage: password -->
+									<!-- ngMessage: fallback -->
+									<!-- ngMessage: youtubeLink -->
+									<!-- ngMessage: tags -->
+									<!-- ngMessage: maxDecimalDigits -->
+									<!-- ngMessage: videoLink -->
+									<!-- ngMessage: less -->
+									<!-- ngMessage: minTags -->
+									<!-- ngMessage: unique --> </ul></form-field-errors>
+								</div>
+								<div class="form__bl">
+									<label for="date" class="form__subttl">Set up a due date</label>
+									<p class="form__hint">The news will be marked as read </p>
+									<div class="form__date-wrapper">
+										<button><i class="svg-ico icon-calendar"></i></button>
+										<input  type="text" >
+									</div>
+									
+								</div>
+								<div class="btn-group">
+									<button class="btn btn-ok" type="submit">Create Deal</button>
+									<button class="btn btn-no" type="button">Cancel</button>
+								</div>
+							</form>
+						</div>
+					</div>
 	</div>
 </body>
 </html>
