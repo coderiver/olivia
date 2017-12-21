@@ -1587,7 +1587,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup__bl:after { content: " "; display: table; clear: both; }
 .popup__bl .popup__label { margin: 0; }
 .popup__bl .dropdown { float: right; }
-.popup__border-inner { background-color: #fff; box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.15); border: solid 1px #cfd5e0; padding: 10px 12px; }
+.popup__border-inner { background-color: #fff; box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.15); border: solid 1px #cfd5e0; padding: 10px 12px; min-height: 80px; }
 .popup__border-inner > div { margin-bottom: 3px; }
 .popup__border-inner > div:last-of-type { margin-bottom: 0; }
 .popup__card { display: table; width: 100%; margin: 10px 0; }
