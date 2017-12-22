@@ -6,7 +6,26 @@
 	background-position: 0 0
 	background-size: contain
 	vertical-align: top
-
+.pencil-ico
+	width: 10px
+	height: 10px
+	background-color: transparent
+	background-image: url('../img/svg-bg/pencil.svg')
+	background-size: 10px 10px
+	appearance: none
+	border: none
+	display: inline-block
+	vertical-align: top
+	position: relative
+	top: 1px
+	margin-left: 5px
+	&:before
+		content: ''
+		position: absolute
+		top: -4px
+		bottom: -4px
+		right: -4px
+		left: -4px
 .memo-ico
 	width: 70px
 	height: 70px
