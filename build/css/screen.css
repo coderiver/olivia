@@ -1878,6 +1878,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .complicated-icon__number-icon--yellow { background: #f5a623; }
 .complicated-icon__number-icon--green { background: #336600; }
 .complicated-icon.is-approved .complicated-icon__spec-icon::before { background-image: url("../img/svg-bg/approved.svg"); }
+.complicated-icon.is-closed .complicated-icon__spec-icon::before { background-image: url("../img/svg-bg/closed-deal.svg"); }
 .complicated-icon.is-in-review .complicated-icon__spec-icon::before { background-image: url("../img/svg-bg/in-review.svg"); }
 .complicated-icon.is-draft .complicated-icon__spec-icon::before { background-image: url("../img/svg-bg/draft.svg"); }
 .complicated-icon.is-rejected .complicated-icon__spec-icon::before { background-image: url("../img/svg-bg/rejected.svg"); }
