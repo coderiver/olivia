@@ -843,7 +843,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .upper__list:after { content: " "; display: table; clear: both; }
 .upper__option { float: left; margin-left: 25px; }
 .upper__option:first-child { margin-left: 0; }
-.upper__option--spec .upper__link.is-active:after { border-color: transparent transparent #ffc845 transparent; }
+.upper__option--spec .upper__link.is-active:after { border-color: transparent transparent #FFF4E5 transparent; }
 .upper__link { position: relative; color: #097bf2; font-size: 14px; }
 .upper__link:before, .upper__link:after { display: none; content: ""; position: absolute; top: 100%; left: 50%; }
 .upper__link:before { margin: 2px 0 0 -9px; width: 0px; height: 0px; border-style: solid; border-width: 0 9px 10px 9px; border-color: transparent transparent #dce0e7 transparent; }
@@ -857,7 +857,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .upper .add-btn { position: absolute; right: 23px; bottom: 20px; z-index: 1; }
 .upper_help { margin-bottom: 0; }
 
-.up-help { background-color: #ffc845; padding: 22px 52px 18px; color: #282828; font-size: 14px; }
+.up-help { background-color: #FFF4E5; padding: 22px 52px 18px; color: #282828; font-size: 14px; }
 
 .start { position: relative; margin: 35px 0 110px; text-align: center; font-size: 16px; color: #6c757a; z-index: 0; overflow: hidden; }
 .start:after { content: ""; position: absolute; top: 22px; right: 0; bottom: 0; width: 47px; background: #fff; z-index: 1; }
@@ -1906,6 +1906,9 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .complicated-icon .svg-ico { width: 44px; height: 44px; background-size: 44px 44px; position: relative; }
 .complicated-icon--cash.is-in-review:before { content: "$"; font-size: 12px; color: #fff; text-align: center; padding-top: 1px; width: 20px; height: 20px; border-radius: 50%; border: 2px solid #fff; right: 0; top: 50%; background: #2caf24; -webkit-transform: translate(50%, -50%); -ms-transform: translate(50%, -50%); transform: translate(50%, -50%); }
 .complicated-icon--cash .complicated-icon__number { margin-top: 8px; color: #878787; }
+
+.closed-table-icon { display: inline-block; width: 20px; height: 20px; background-size: 20px 20px; position: relative; z-index: 1; }
+.closed-table-icon:before { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-size: 20px 20px; background-image: url("../img/svg-bg/closed-deal-border-none.svg"); }
 
 .modal-submitted { position: fixed; z-index: 15; top: 30vh; background-color: #fff; box-shadow: 0 1px 9.5px 2px rgba(0, 0, 0, 0.3); border-radius: 4px; -webkit-transition: all 0.4s; transition: all 0.4s; opacity: 0; visibility: hidden; }
 .modal-submitted.is-active { opacity: 1; visibility: visible; }

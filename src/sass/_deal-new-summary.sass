@@ -528,6 +528,27 @@
 		.complicated-icon__number
 			margin-top: 8px
 			color: #878787
+.closed-table-icon
+	display: inline-block
+	width: 20px
+	height: 20px
+	background-size: 20px 20px
+	position: relative
+
+	// position: absolute
+	// top: calc(50% - 10.5px)
+	// top: 12px
+	// right: -10.5px
+	z-index: 1
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-size: 20px 20px
+		background-image: url("../img/svg-bg/closed-deal-border-none.svg")
 .modal-submitted
 	position: fixed
 	z-index: 15
