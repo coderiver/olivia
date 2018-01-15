@@ -668,9 +668,18 @@
 								<!-- end tasks -->
 
 								<!-- begin dea-folder -->
-								<div class="dea-folder">
+								<div class="deal-folder">
 									<div class="deal-folder__title new-deal-summary__title">
 										<span>Deal Folder</span>
+										<div class="dropdown dropdown--float-r is-filter js-dropdown">
+											<p class="dropdown__item">Actions</p>
+											<ul class="dropdown__list is-top-level is-big js-inner">
+												<!-- ngRepeat: action in tableActions --><!-- ngIf: ::action.enabled --><li ng-repeat="action in tableActions" ng-if="::action.enabled" class="ng-scope">
+													<!-- ngInclude: undefined --><ng-include src="::(action.templateUrl || STATIC_URL + 'html/olivia-table/table-actions/default-table-action.html')" class="ng-scope"><a href="" reset-settings="" table-data="tableData" ng-bind="::action.name" class="ng-binding ng-scope ng-isolate-scope">Reset settings</a>
+													</ng-include>
+												</li><!-- end ngIf: ::action.enabled --><!-- end ngRepeat: action in tableActions -->
+											</ul>
+										</div>
 									</div>
 
 									<div class="deal-folder__empty-msg is-active">

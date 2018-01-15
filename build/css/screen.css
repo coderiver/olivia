@@ -562,6 +562,7 @@ input:focus { box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; border-c
 .dropdown hr { border: 0; border-bottom: 1px solid #DCE0E7; }
 .dropdown .ps-scrollbar-y-rail { width: 3px !important; right: 1px !important; }
 .dropdown .ps-scrollbar-y-rail .ps-scrollbar-y { width: 3px !important; }
+.dropdown--float-r { float: right; }
 
 a { text-decoration: none; }
 
@@ -1798,7 +1799,9 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .new-deal-summary__in .table_smaller { border: none; }
 .new-deal-summary__in .scrollbar .ps-scrollbar-x-rail { border: 1px solid #dce0e7; }
 .new-deal-summary__in .back-link-row { padding-left: -webkit-calc(50% + 15px); padding-left: calc(50% + 15px); margin-bottom: 30px; }
-.new-deal-summary__title span { color: #555c60; font-size: 13px; font-family: "opensans-semibold", Arial, sans-serif; }
+.new-deal-summary__title { *zoom: 1; }
+.new-deal-summary__title:after { content: " "; display: table; clear: both; }
+.new-deal-summary__title span { color: #555c60; font-size: 13px; font-family: "opensans-semibold", Arial, sans-serif; float: left; display: inline-block; vertical-align: top; }
 .new-deal-summary__inner { *zoom: 1; }
 .new-deal-summary__inner:after { content: " "; display: table; clear: both; }
 
