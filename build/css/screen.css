@@ -1607,18 +1607,18 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup__choose .popup__el:hover { text-decoration: underline; }
 .popup__choose .svg-ico { width: 56px; height: 56px; margin-bottom: 10px; background-size: 56px 56px; vertical-align: middle; }
 .popup__choose .icon { margin-right: 16px; vertical-align: middle; }
-.popup__choose--small-text .popup__el { font-size: 11px; }
 .popup__choose--small-text .popup__definition .tooltip { margin-left: 0; top: -4px; }
-.popup__choose--small-text .popup__definition:nth-of-type(1) { padding-right: 10px; }
-.popup__choose--small-text .popup__definition:nth-of-type(1) .tooltip { left: 82%; }
-.popup__choose--small-text .popup__definition:nth-of-type(2) { padding: 0 10px; }
-.popup__choose--small-text .popup__definition:nth-of-type(2) .tooltip { left: 82%; }
-.popup__choose--small-text .popup__definition:nth-of-type(3) { padding-right: 10px; }
-.popup__choose--small-text .popup__definition:nth-of-type(3) .tooltip { left: 92%; }
-.popup__choose--small-text .popup__definition:nth-of-type(4) { padding-right: 10px; }
-.popup__choose--small-text .popup__definition:nth-of-type(4) .tooltip { left: 92%; }
-.popup__choose--small-text .popup__definition:nth-of-type(5) { padding-right: 10px; }
-.popup__choose--small-text .popup__definition:nth-of-type(5) .tooltip { left: 86%; }
+.popup__choose--small-text .popup__el { font-size: 11px; }
+.popup__choose--small-text .popup__el:nth-of-type(1) .popup__definition { padding-right: 10px; }
+.popup__choose--small-text .popup__el:nth-of-type(1) .popup__definition .tooltip { left: 82%; }
+.popup__choose--small-text .popup__el:nth-of-type(2) .popup__definition { padding: 0 10px; }
+.popup__choose--small-text .popup__el:nth-of-type(2) .popup__definition .tooltip { left: 82%; }
+.popup__choose--small-text .popup__el:nth-of-type(3) .popup__definition { padding-right: 10px; }
+.popup__choose--small-text .popup__el:nth-of-type(3) .popup__definition .tooltip { left: 92%; }
+.popup__choose--small-text .popup__el:nth-of-type(4) .popup__definition { padding-right: 10px; }
+.popup__choose--small-text .popup__el:nth-of-type(4) .popup__definition .tooltip { left: 92%; }
+.popup__choose--small-text .popup__el:nth-of-type(5) .popup__definition { padding-right: 10px; }
+.popup__choose--small-text .popup__el:nth-of-type(5) .popup__definition .tooltip { left: 86%; }
 .popup__more { float: right; color: #097bf2; }
 .popup__more:hover { text-decoration: underline; }
 .popup__num { margin-right: 5px; font-family: "robotomono", Arial, sans-serif; }
