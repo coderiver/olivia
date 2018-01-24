@@ -2003,6 +2003,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-folder__title { margin-bottom: 15px; }
 .deal-folder__empty-msg { color: #555c60; font-size: 11px; line-height: 1.18; display: none; }
 .deal-folder__empty-msg.is-active { display: block; }
+.deal-folder .dropdown { z-index: 2; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1365px){
