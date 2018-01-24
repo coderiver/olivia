@@ -341,10 +341,10 @@ $(document).ready(function() {
 				tablewrap = tablewrap || this.tablewrap;
 
 				var scrollTable = this.findScrollTable(tablewrap),
-					fakeHead 	= this.findFakeHead(tablewrap),
-					buttonPrev 	 = $('<div />', {'class': 'btn-prev'}),
-					buttonNext   = $('<div />', {'class': 'btn-next'}),
-					fakeHeadTabl = fakeHead.find('.table');
+				fakeHead 	= this.findFakeHead(tablewrap),
+				buttonPrev 	 = $('<div />', {'class': 'btn-prev'}),
+				buttonNext   = $('<div />', {'class': 'btn-next'}),
+				fakeHeadTabl = fakeHead.find('.table');
 
 				buttonPrev.bind('click', function(evt) {
 					evt.stopPropagation();
@@ -422,15 +422,15 @@ $(document).ready(function() {
 				filters   = filters || this.filters;
 
 				var tableRow = scrollTable.find('tr'),
-					input    = filters.find('input[type="checkbox"]');
+				input    = filters.find('input[type="checkbox"]');
 
 				input.on('change', function() {
 					var data = $(this).parent().data('attr'),
-						thead = tablewrap.find('th[data-id="' + data + '"]'),
-						theadData = thead.data('id'),
-						theadIndex = thead.index(),
-						checkedInput = tablewrap.find('.js-filters input:checked'),
-						checkedInputNum = checkedInput.length;
+					thead = tablewrap.find('th[data-id="' + data + '"]'),
+					theadData = thead.data('id'),
+					theadIndex = thead.index(),
+					checkedInput = tablewrap.find('.js-filters input:checked'),
+					checkedInputNum = checkedInput.length;
 
 					oliviaTable.measureSidedropHeight();
 
@@ -462,7 +462,7 @@ $(document).ready(function() {
 				scrollTable = scrollTable || this.scrollTable;
 
 				var selectRow  = scrollTable.find('.js-select-row'),
-					sideAction = scrollTable.siblings('.js-sidedrop');
+				sideAction = scrollTable.siblings('.js-sidedrop');
 
 				selectRow.click(function(evt) {
 					evt.stopPropagation();
@@ -470,7 +470,7 @@ $(document).ready(function() {
 
 				selectRow.on('click', 'input[type="checkbox"]', function() {
 					var tableRow = $(this).parents('tr'),
-						index = $(this).parents('tr').index();
+					index = $(this).parents('tr').index();
 
 					sideAction.find('tr').eq(index).toggleClass('is-selected');
 					tableRow.toggleClass('is-selected');
@@ -480,8 +480,8 @@ $(document).ready(function() {
 				scrollTable = scrollTable || this.scrollTable;
 
 				var selectAllInput = scrollTable.find('.js-label-checkbox'),
-					selectRow 	   = scrollTable.find('tr:not(".table__head")'),
-					sideActionRow  = scrollTable.siblings('.js-sidedrop').find('tr');
+				selectRow 	   = scrollTable.find('tr:not(".table__head")'),
+				sideActionRow  = scrollTable.siblings('.js-sidedrop').find('tr');
 
 				selectAllInput.on('change', 'input[type="checkbox"]', function() {
 					if ($(this).prop('checked')) {
@@ -498,9 +498,9 @@ $(document).ready(function() {
 				tablewrap = tablewrap || this.tablewrap;
 
 				var scrollTable = this.findScrollTable(tablewrap),
-					fakeHead 	= this.findFakeHead(tablewrap),
-					sidebar  	= this.findSidebar(tablewrap),
-					toggleSidebarBtn = tablewrap.find('.js-toggle-sidebar');
+				fakeHead 	= this.findFakeHead(tablewrap),
+				sidebar  	= this.findSidebar(tablewrap),
+				toggleSidebarBtn = tablewrap.find('.js-toggle-sidebar');
 
 				toggleSidebarBtn.click(function() {
 					$(this).toggleClass('is-opened');
@@ -527,7 +527,7 @@ $(document).ready(function() {
 				sidebar   = sidebar || this.sidebar;
 
 				var sidebarOption 	 = sidebar.find('.js-sidebar-option'),
-					toggleSidebarBtn = tablewrap.find('.js-toggle-sidebar');
+				toggleSidebarBtn = tablewrap.find('.js-toggle-sidebar');
 
 				if (sidebarOption.hasClass('is-active')) {
 					toggleSidebarBtn.addClass('is-active');
@@ -551,11 +551,11 @@ $(document).ready(function() {
 				sidebar = sidebar || this.sidebar;
 
 				var sideIn 		  = sidebar.find('.js-sidebar-in'),
-					sideBl    	  = sidebar.find('.js-sidebar-bl'),
-					sideTitleH	  = sideBl.find('.js-sidebar-ttl').outerHeight(),
-					sideTitleNum  = sideBl.find('.js-sidebar-ttl').length - 1,
-					allSideTitleH = sideTitleH * sideTitleNum,
-					closed		  = {'height': sideTitleH};
+				sideBl    	  = sidebar.find('.js-sidebar-bl'),
+				sideTitleH	  = sideBl.find('.js-sidebar-ttl').outerHeight(),
+				sideTitleNum  = sideBl.find('.js-sidebar-ttl').length - 1,
+				allSideTitleH = sideTitleH * sideTitleNum,
+				closed		  = {'height': sideTitleH};
 
 				sideBl.css(closed);
 				sideBl.on('click', '.js-sidebar-ttl', function() {
@@ -587,7 +587,7 @@ $(document).ready(function() {
 				sidebar = sidebar || this.sidebar;
 
 				var sidebarFilter 		= sidebar.find('.js-sidebar-filter'),
-					sidebarFilterRemove = sidebar.find('.js-sidebar-filter-remove');
+				sidebarFilterRemove = sidebar.find('.js-sidebar-filter-remove');
 
 				sidebarFilter.click(function(evt) {
 					evt.stopPropagation();
@@ -618,8 +618,8 @@ $(document).ready(function() {
 				filters = filters || this.filters;
 
 				var filtersSearch = filters.find('.js-search-table'),
-					filtersSearchInput = filters.find('.js-search-table input'),
-					filtersSearchCloseBtn = filtersSearch.find('.js-search-clear');
+				filtersSearchInput = filters.find('.js-search-table input'),
+				filtersSearchCloseBtn = filtersSearch.find('.js-search-clear');
 
 				filtersSearch.click(function(evt) {
 					evt.stopPropagation();
@@ -639,7 +639,7 @@ $(document).ready(function() {
 				fakeHead 	= fakeHead || this.fakeHead;
 
 				var fakeHeadTable = fakeHead.find('.table thead'),
-					cloneHead 	  = scrollTable.find('.js-clone-head');
+				cloneHead 	  = scrollTable.find('.js-clone-head');
 
 				cloneHead.clone(true).removeClass('js-clone-head').appendTo(fakeHeadTable);
 			},
@@ -648,17 +648,17 @@ $(document).ready(function() {
 				scrollTable = scrollTable || this.scrollTable;
 
 				var fakeHead 	  = this.findFakeHead(tablewrap),
-					fakeHeadIn	  = fakeHead.find('.js-fixed'),
-					filters  	  = this.findFilters(tablewrap),
-					filtersIn     = filters.find('.js-fixed'),
-					sidebar 	  = this.findSidebar(tablewrap),
-					scrollPos 	  = $(window).scrollTop(),
-					scrLeft	  	  = $(window).scrollLeft(),
-					wh 			  = $(window).height(),
-					filtersHeight = filters.outerHeight(),
-					tableWrapTop  = tablewrap.offset().top,
-					tableWrapH	  = tableWrapTop + tablewrap.outerHeight(),
-					minH		  = 570;
+				fakeHeadIn	  = fakeHead.find('.js-fixed'),
+				filters  	  = this.findFilters(tablewrap),
+				filtersIn     = filters.find('.js-fixed'),
+				sidebar 	  = this.findSidebar(tablewrap),
+				scrollPos 	  = $(window).scrollTop(),
+				scrLeft	  	  = $(window).scrollLeft(),
+				wh 			  = $(window).height(),
+				filtersHeight = filters.outerHeight(),
+				tableWrapTop  = tablewrap.offset().top,
+				tableWrapH	  = tableWrapTop + tablewrap.outerHeight(),
+				minH		  = 570;
 
 
 				tablewrap.css('padding-top', filtersHeight);
@@ -730,8 +730,8 @@ $(document).ready(function() {
 
 				if (filterChildren.length) {
 					var transfer = '<div class="filters__row"></div>',
-						filterMaxWidth = 550,
-						totalWidth = 0;
+					filterMaxWidth = 550,
+					totalWidth = 0;
 
 					filterChildren.each(function(index, elem) {
 						totalWidth += parseInt($(this).width());
@@ -741,17 +741,22 @@ $(document).ready(function() {
 
 						if($('.filters__row').length == 0) {
 							filterChildren
-								.eq(3)
-								.after(transfer);
+							.eq(3)
+							.after(transfer);
 						}
+						// setTimeout(()=> {
+						// 	var tablewrap = $('.js-tablewrap');
+						// 	var filtersHeight = $('.js-filters').outerHeight();
 
-
-						setTimeout(()=> {
+						// 	tablewrap.css('padding-top', filtersHeight);
+						// }, 10);
+						function updateFiltersPadding() {
 							var tablewrap = $('.js-tablewrap');
 							var filtersHeight = $('.js-filters').outerHeight();
 
 							tablewrap.css('padding-top', filtersHeight);
-						}, 10);
+						}
+						setTimeout(updateFiltersPadding, 10);
 					}
 				}
 			}
