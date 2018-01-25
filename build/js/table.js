@@ -285,8 +285,9 @@ $(document).ready(function() {
 				allSideTitleH = sideTitleH * sideTitleNum,
 				closed		  = {'height': sideTitleH};
 
-				var sideBlH = sideBl.outerHeight();
-				var tempH = sideBlH - allSideTitleH;
+				var sideInH = sidebar.height();
+				var tempH = sideInH - allSideTitleH - 1;
+
 
 
 				sideBl.css(closed);
@@ -302,8 +303,11 @@ $(document).ready(function() {
 
 						// calc height of current
 						if (closestBl.hasClass('is-active')) {
-							// closestBl.css('height', 'calc(100% - ' + allSideTitleH + 'px)');
-							closestBl.css('height', '' + tempH + 'px)');
+							// closestBl.css({'min-height': 'calc(100% - ' + allSideTitleH + 'px)','height': 'auto)'});
+							// closestBl.css({'height': 'calc(100% - ' + allSideTitleH + 'px)'});
+
+							closestBl.css({'height': '' + tempH + 'px'});
+
 						} else {
 							closestBl.css(closed);
 						}
