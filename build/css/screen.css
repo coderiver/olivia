@@ -1589,6 +1589,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup__body .history { margin: 37px -20px 20px; }
 .popup__body .history__ttl { padding: 0 20px; }
 .popup__body .history td { padding: 10px 20px; }
+.popup__content--h-400 { height: 400px; }
 .popup__bl { margin: 10px 0; *zoom: 1; }
 .popup__bl:after { content: " "; display: table; clear: both; }
 .popup__bl .popup__label { margin: 0; }
@@ -1625,6 +1626,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup__num { margin-right: 5px; font-family: "robotomono", Arial, sans-serif; }
 .popup__gray { font-size: 13px; color: #6c757a; }
 .popup__scroll { position: relative; height: 435px; overflow: hidden; }
+.popup__scroll--h-auto { height: auto; }
 .popup__link { display: inline-block; color: #097bf2; }
 .popup__link:hover { text-decoration: underline; }
 .popup__img { position: relative; display: table-cell; width: 110px; }
@@ -1659,6 +1661,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup__username.is-active .popup-list__span { font-family: "opensans-semibold", Arial, sans-serif; }
 .popup__commission .form__close { right: 10px; }
 .popup__commission .form__close .icon-close { font-size: 11px; }
+.popup__right-content { text-align: right; margin-bottom: 20px; margin-top: 15px; }
 .popup .txt-bold { font-family: "opensans-semibold", Arial, sans-serif; }
 .popup .icon-close { position: absolute; top: 50%; right: 20px; margin-top: -7.5px; font-size: 13px; cursor: pointer; -webkit-transition: color 0.3s; transition: color 0.3s; }
 .popup .icon-close:only-child { position: static; float: right; margin-top: 0; }
