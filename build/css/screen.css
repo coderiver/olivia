@@ -666,17 +666,10 @@ a { text-decoration: none; }
 .select-wrap__right { float: right; }
 
 .select2.ui-select-container { width: 200px; margin: 0; position: relative; display: inline-block; zoom: 1; vertical-align: middle; }
-.select2.ui-select-container .select2-choices.select2-choices--default-styles { border: 1xps solid #cfd5e0; border-radius: 4px; background-color: #f7f8f9; }
-.select2.ui-select-container .select2-choices.select2-choices--default-styles .select2-search-field input { padding: 10px 0px 10px 8px; }
-.select2.ui-select-container .select2-choices.select2-choices--default-styles .select2-search-field input::-webkit-input-placeholder { color: #999; }
-.select2.ui-select-container .select2-choices.select2-choices--default-styles .select2-search-field input::-moz-placeholder { color: #999; }
-.select2.ui-select-container .select2-choices.select2-choices--default-styles .select2-search-field input:-ms-input-placeholder { color: #999; }
-.select2.ui-select-container .select2-choices.select2-choices--default-styles .select2-search-field input::placeholder { color: #999; }
 .select2.ui-select-container .select2-choice { height: 35px; padding: 10px 0 0 8px; border: 1px solid #cfd5e0; background-image: none; background-color: #f7f8f9; line-height: 1; display: block; overflow: hidden; position: relative; white-space: nowrap; color: #444; text-decoration: none; border-radius: 4px; background-clip: padding-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; color: #999 !important; }
 .select2.ui-select-container .select2-arrow { display: inline-block; width: 18px; height: 100%; position: absolute; right: 0; top: 0; border-left: 1px solid #cfd5e0; border-radius: 0 4px 4px 0; background-clip: padding-box; background: #ccc; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ccc), color-stop(0.6, #eee)); background-image: -webkit-linear-gradient(center bottom, #ccc 0%, #eee 60%); background-image: -moz-linear-gradient(center bottom, #ccc 0%, #eee 60%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eeeeee', endColorstr = '#cccccc', GradientType = 0); background-image: -webkit-linear-gradient(bottom, #ccc 0%, #eee 60%); background-image: linear-gradient(to top, #ccc 0%, #eee 60%); }
 .select2.ui-select-container .select2-arrow b { background-position: 0 3px; display: block; width: 100%; height: 100%; }
 .select2.ui-select-container .select2-drop { z-index: 6; }
-.select2.ui-select-container.ui-select-container--full { width: 100%; }
 .select2.ui-select-container.ng-invalid .select2-choices { border-color: #D44950; }
 
 body .daterangepicker.dropdown-menu { z-index: 11; }
@@ -1604,6 +1597,13 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup__bl:after { content: " "; display: table; clear: both; }
 .popup__bl .popup__label { margin: 0; }
 .popup__bl .dropdown { float: right; }
+.popup__bl--full .select2.ui-select-container { width: 100%; }
+.popup__bl--default-styles .select2.ui-select-container .select2-choices { border: 1xps solid #cfd5e0; border-radius: 4px; background-color: #f7f8f9; }
+.popup__bl--default-styles .select2.ui-select-container .select2-choices .select2-search-field input { padding: 10px 0px 10px 8px; }
+.popup__bl--default-styles .select2.ui-select-container .select2-choices .select2-search-field input::-webkit-input-placeholder { color: #999; }
+.popup__bl--default-styles .select2.ui-select-container .select2-choices .select2-search-field input::-moz-placeholder { color: #999; }
+.popup__bl--default-styles .select2.ui-select-container .select2-choices .select2-search-field input:-ms-input-placeholder { color: #999; }
+.popup__bl--default-styles .select2.ui-select-container .select2-choices .select2-search-field input::placeholder { color: #999; }
 .popup__border-inner { background-color: #fff; box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.15); border: solid 1px #cfd5e0; padding: 10px 12px; min-height: 80px; }
 .popup__border-inner > div { margin-bottom: 3px; }
 .popup__border-inner > div:last-of-type { margin-bottom: 0; }
