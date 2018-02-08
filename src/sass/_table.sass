@@ -66,40 +66,41 @@
 		top: -14px
 	.scrollbar 
 		margin-right: 0
-		.table 
-			// border-collapse: collapse
-			.table__head
-				th
-					border-right: 1px solid #efefef
-					p
-						border: none
-			.table__bottom-row
-				td
-					border: none
-					&.tablewrap-blotter__name-cell
-						padding-top: 13px
-						padding-bottom: 12px
-						&:hover
-							background: none
-			td
+	.table 
+		// border-collapse: collapse
+
+		.table__head
+			th
 				border-right: 1px solid #efefef
-
+				p:not(.check__span)
+					border: none
+		.table__bottom-row
+			td
+				border: none
 				&.tablewrap-blotter__name-cell
-					padding-left: 28px
-					padding-right: 62px
-					i
+					padding-top: 13px
+					padding-bottom: 12px
 					&:hover
-						background: rgba(#656565, 0.09)
-						.tablewrap-blotter__next
-							opacity: 1
-				&.tablewrap-blotter__cell-spec-padding
-					padding-right: 60px
+						background: none
+		td
+			border-right: 1px solid #efefef
+			vertical-align: top
+			&.tablewrap-blotter__name-cell
+				padding-left: 28px
+				padding-right: 62px
+				i
+				// &:hover
+				// 	background: rgba(#656565, 0.09)
+				// 	.tablewrap-blotter__next
+				// 		opacity: 1
+			&.tablewrap-blotter__cell-spec-padding
+				padding-right: 40px
 
-			tr
-				&:hover
-						background: darken(#fff, 0)
-			strong
-				font-weight: 600
+		tr
+			&:hover
+					background: darken(#fff, 0)
+		strong
+			font-weight: 600
 	&__next
 		position: absolute
 		right: -40px
@@ -186,6 +187,79 @@
 			text-decoration: none
 	&__bold
 		+opensans-sb
+	&__tooltip-icon
+		cursor: pointer
+		display: block
+		width: 18px
+		height: 18px
+		margin-left: auto
+		margin-right: auto
+		font-size: 0
+		background-size: 18px 18px
+		background-image: url(data:image/png;base64,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)
+		&:hover + .table__tooltip
+			display: block
+			
+	&__tooltip
+		display: none
+		position: absolute
+		right: calc(100% - 10px)
+		width: 290px
+		top: 50%
+		text-align: left
+		transform: translateY(-50%)
+		z-index: 1
+		background: #fff6e6
+		padding: 10px 20px
+		box-shadow:   0px  0px 8px rgba(gray, 0.5)
+		border-radius: 5px
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			right: -8px
+			margin-top: -8px
+			+arr(8, 16,#fff6e6, r )
+			z-index: 0
+	.two-vert-cell, .three-vert-cell, .four-vert-cell, .few-cells
+		display: flex
+		flex-direction: column
+		height: 100%
+		&--border-transp
+			.few-cells
+				border-color: transparent
+		&__item
+			border-bottom: 1px solid #efefef
+			position: relative
+			&:last-of-type
+				border-color: transparent
+	.two-vert-cell
+		&--border-transp
+			.two-vert-cell__item
+				border-color: transparent
+		&__item
+			padding: 10px 16px
+			flex-grow: 1
+			position: relative
+			&--spec-height
+				flex-basis: 41px
+				flex-grow: 0
+				flex-shrink: 0
+		&__item-inner
+			display: flex
+			justify-content: space-between
+			height: 100%
+	.three-vert-cell
+		font-size: 12px
+		align-content: center
+		justify-content: center
+		&__item
+			padding: 10px 7px
+			flex-grow: 0
+			flex-basis: 41px
+			flex-shrink: 0
+			&--vert-padding-small
+				padding: 2px 7px
 	span.table__text
 		display: inline-block
 	.table__head
@@ -251,6 +325,12 @@
 					left: 50%
 					margin-top: -7px
 					margin-left: -7px
+			&.cell-text-mall
+				font-size: 12px
+				p:not(.check__span)
+					white-space: normal
+					text-overflow: none
+					line-height: 1
 			p, span
 				&:not(.check__span)
 					position: relative
@@ -366,6 +446,8 @@
 			text-align: right
 		&.cell-border-right
 			border-right: 1px solid #efefef
+		&.padding-none
+			padding: 0
 		.icon.icon-clip
 			font-size: 14px
 	td,th
@@ -522,6 +604,8 @@
 				&.cell-center,
 				&.cell-pic
 					padding-left: 10px
+			&.padding-none
+				padding: 0
 	.ps-scrollbar-x-rail
 		width: 100% !important
 		bottom: 0
