@@ -293,11 +293,11 @@ $(document).ready(function() {
 				sideBl.on('click', '.js-sidebar-ttl', function() {
 					var closestBl = $(this).closest(sideBl);
 
-					var sideInH = sidebar.height();
-					var tempH = sideInH - allSideTitleH - 1;
+					// var sideInH = sidebar.height();
+					// var tempH = sideInH - allSideTitleH - 1;
 
-					console.log(`sideInH ${sideInH}`);
-					console.log(`tempH ${tempH}`);
+					// console.log(`sideInH ${sideInH}`);
+					// console.log(`tempH ${tempH}`);
 
 
 					if (!closestBl.hasClass('js-disabled')) {
