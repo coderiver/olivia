@@ -31,41 +31,41 @@ html { box-sizing: border-box; }
 
 .icon-add-news:before { content: ""; }
 
-.icon-add-report:before { content: ""; }
-
 .icon-archive:before { content: ""; }
+
+.icon-add-report:before { content: ""; }
 
 .icon-arr-bottom-right:before { content: ""; }
 
-.icon-arr-right:before { content: ""; }
-
 .icon-arr-top:before { content: ""; }
-
-.icon-bell:before { content: ""; }
 
 .icon-bubble:before { content: ""; }
 
-.icon-calendar:before { content: ""; }
+.icon-bell:before { content: ""; }
+
+.icon-arr-right:before { content: ""; }
 
 .icon-check:before { content: ""; }
 
-.icon-checked:before { content: ""; }
+.icon-calendar:before { content: ""; }
 
-.icon-clip:before { content: ""; }
+.icon-checked:before { content: ""; }
 
 .icon-close:before { content: ""; }
 
 .icon-comment-cloud:before { content: ""; }
 
+.icon-clip:before { content: ""; }
+
 .icon-comment:before { content: ""; }
 
 .icon-customer2:before { content: ""; }
 
+.icon-deals-team-closed:before { content: ""; }
+
 .icon-deal-team:before { content: ""; }
 
 .icon-deals-team-archived:before { content: ""; }
-
-.icon-deals-team-closed:before { content: ""; }
 
 .icon-delete:before { content: ""; }
 
@@ -75,39 +75,39 @@ html { box-sizing: border-box; }
 
 .icon-filter:before { content: ""; }
 
-.icon-firm:before { content: ""; }
-
 .icon-folder-checked:before { content: ""; }
 
 .icon-folder-dots:before { content: ""; }
 
-.icon-folder:before { content: ""; }
-
-.icon-hourglass:before { content: ""; }
+.icon-firm:before { content: ""; }
 
 .icon-infinity:before { content: ""; }
 
+.icon-folder:before { content: ""; }
+
 .icon-letter:before { content: ""; }
+
+.icon-hourglass:before { content: ""; }
 
 .icon-lock:before { content: ""; }
 
-.icon-logo-short:before { content: ""; }
-
 .icon-logo:before { content: ""; }
+
+.icon-logo-short:before { content: ""; }
 
 .icon-marked:before { content: ""; }
 
-.icon-menu:before { content: ""; }
-
 .icon-news:before { content: ""; }
+
+.icon-menu:before { content: ""; }
 
 .icon-pending:before { content: ""; }
 
 .icon-plus:before { content: ""; }
 
-.icon-pound:before { content: ""; }
-
 .icon-sidebar:before { content: ""; }
+
+.icon-pound:before { content: ""; }
 
 .icon-square-arr:before { content: ""; }
 
@@ -117,9 +117,9 @@ html { box-sizing: border-box; }
 
 .icon-upload:before { content: ""; }
 
-.icon-warn:before { content: ""; }
-
 .icon-zoom:before { content: ""; }
+
+.icon-warn:before { content: ""; }
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default { border-radius: 5px; border: 2px solid #000; background: #4c4c4c; color: #fff; }

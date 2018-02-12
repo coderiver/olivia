@@ -285,14 +285,20 @@ $(document).ready(function() {
 				allSideTitleH = sideTitleH * sideTitleNum,
 				closed		  = {'height': sideTitleH};
 
-				var sideInH = sidebar.height();
-				var tempH = sideInH - allSideTitleH - 1;
+
 
 
 
 				sideBl.css(closed);
 				sideBl.on('click', '.js-sidebar-ttl', function() {
 					var closestBl = $(this).closest(sideBl);
+
+					var sideInH = sidebar.height();
+					var tempH = sideInH - allSideTitleH - 1;
+
+					console.log(`sideInH ${sideInH}`);
+					console.log(`tempH ${tempH}`);
+
 
 					if (!closestBl.hasClass('js-disabled')) {
 						// remove active class from siblings
@@ -303,10 +309,9 @@ $(document).ready(function() {
 
 						// calc height of current
 						if (closestBl.hasClass('is-active')) {
-							// closestBl.css({'min-height': 'calc(100% - ' + allSideTitleH + 'px)','height': 'auto)'});
-							// closestBl.css({'height': 'calc(100% - ' + allSideTitleH + 'px)'});
+							closestBl.css({'height': 'calc(100% - ' + allSideTitleH + 'px)'});
 
-							closestBl.css({'height': '' + tempH + 'px'});
+							// closestBl.css({'height': '' + tempH + 'px'});
 
 						} else {
 							closestBl.css(closed);
