@@ -1303,7 +1303,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table__tooltip:before { content: ""; position: absolute; top: 50%; right: -8px; margin-top: -8px; width: 0px; height: 0px; border-style: solid; border-width: 8px 0 8px 8px; border-color: transparent transparent transparent #fff6e6; z-index: 0; }
 .table .few-cells { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; height: 100%; }
 .table .few-cells--border-transp .few-cells__item { border-color: transparent; }
-.table .few-cells__item { border-bottom: 1px solid #efefef; position: relative; padding: 10px 16px; width: 100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.table .few-cells__item { border-bottom: 1px solid #efefef; position: relative; padding: 10px 16px; width: 100%; }
+.table .few-cells__item:not(.few-cells__item--icon) { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 .table .few-cells__item:last-of-type { border-color: transparent; }
 .table .few-cells__item--padding-m, .table .few-cells__item--padding-sm { font-size: 12px; -webkit-box-flex: 0; -webkit-flex-grow: 0; -ms-flex-positive: 0; flex-grow: 0; -webkit-flex-shrink: 0; -ms-flex-negative: 0; flex-shrink: 0; -webkit-flex-basis: 41px; -ms-flex-preferred-size: 41px; flex-basis: 41px; }
 .table .few-cells__item--padding-m { padding: 10px 7px; }
