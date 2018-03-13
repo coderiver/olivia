@@ -137,6 +137,10 @@
 		text-align: center
 		.icon.icon-clip
 			font-size: 14px
+	&__clip-elem
+		text-overflow: ellipsis
+		overflow: hidden
+		white-space: nowrap
 	&__drop
 		width: 50px
 		padding: 5px 8.5px
@@ -263,10 +267,7 @@
 			display: flex
 			justify-content: space-between
 			height: 100%
-		&__clip-elem
-			text-overflow: ellipsis
-			overflow: hidden
-			white-space: nowrap
+
 	// .two-vert-cell
 		// &--border-transp
 			// .two-vert-cell__item
