@@ -1282,7 +1282,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table.sm-pad-first-child td:first-child { padding-left: 6px; }
 .table__clip { width: 5%; text-align: center; }
 .table__clip .icon.icon-clip { font-size: 14px; }
-.table__clip-elem { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.table__clip-elem { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 70%; }
 .table__drop { width: 50px; padding: 5px 8.5px; text-align: center; }
 .table__el { font-size: 0; font-family: "robotomono", Arial, sans-serif; }
 .table__el span { display: inline-block; max-width: -webkit-calc(100% - 25px); max-width: calc(100% - 25px); font-size: 13px; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; white-space: nowrap; }
@@ -1303,7 +1303,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table__tooltip:before { content: ""; position: absolute; top: 50%; right: -8px; margin-top: -8px; width: 0px; height: 0px; border-style: solid; border-width: 8px 0 8px 8px; border-color: transparent transparent transparent #fff6e6; z-index: 0; }
 .table .few-cells { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; height: 100%; }
 .table .few-cells--border-transp .few-cells__item { border-color: transparent; }
-.table .few-cells__item { border-bottom: 1px solid #efefef; position: relative; padding: 10px 7px; width: 100%; }
+.table .few-cells__item { border-bottom: 1px solid #efefef; position: relative; padding: 10px 7px; width: 100%; min-height: 39px; }
 .table .few-cells__item:not(.few-cells__item--icon) { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 .table .few-cells__item:last-of-type { border-color: transparent; }
 .table .few-cells__item--padding-m, .table .few-cells__item--padding-sm { font-size: 12px; -webkit-box-flex: 0; -webkit-flex-grow: 0; -ms-flex-positive: 0; flex-grow: 0; -webkit-flex-shrink: 0; -ms-flex-negative: 0; flex-shrink: 0; -webkit-flex-basis: 41px; -ms-flex-preferred-size: 41px; flex-basis: 41px; }
