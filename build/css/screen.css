@@ -247,7 +247,7 @@ body { min-width: 1040px; font-size: 12px; line-height: 1.4; background: #F3F4F6
 body.is-overflow { overflow: hidden !important; }
 body .tooltipster-base { z-index: 8; }
 
-.l, .l-head, .l-form, .l-center { max-width: 1370px; padding: 0 20px; margin: 0 auto; }
+.l, .l-head, .l-form, .l-center { padding: 0 60px; margin: 0 auto; }
 
 .l-head { max-width: 1125px; }
 
