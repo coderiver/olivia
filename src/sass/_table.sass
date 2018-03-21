@@ -229,6 +229,12 @@
 			margin-top: -8px
 			+arr(8, 16,#fff6e6, r )
 			z-index: 0
+	&__pseudo-cell
+		border-bottom: 1px solid #efefef
+		.table__justify
+			padding: 10px 7px
+	&__border-bottom
+		border-bottom: 1px solid #efefef
 	.few-cells
 		display: flex
 		flex-direction: column
@@ -269,34 +275,6 @@
 			display: flex
 			justify-content: space-between
 			height: 100%
-
-	// .two-vert-cell
-		// &--border-transp
-			// .two-vert-cell__item
-				// border-color: transparent
-		// &__item
-			// padding: 10px 16px
-			// flex-grow: 1
-			// position: relative
-			// &--spec-height
-			// 	flex-basis: 41px
-			// 	flex-grow: 0
-			// 	flex-shrink: 0
-		// &__item-inner
-		// 	display: flex
-		// 	justify-content: space-between
-		// 	height: 100%
-	// .three-vert-cell
-	// 	font-size: 12px
-	// 	align-content: center
-	// 	justify-content: center
-	// 	&__item
-	// 		padding: 10px 7px
-	// 		flex-grow: 0
-	// 		flex-basis: 41px
-	// 		flex-shrink: 0
-	// 		&--vert-padding-small
-	// 			padding: 2px 7px
 	span.table__text
 		display: inline-block
 	.table__head
@@ -487,6 +465,9 @@
 			padding: 0
 		.icon.icon-clip
 			font-size: 14px
+		.table__pseudo-cell
+			&:last-of-type
+				border-color: transparent
 	td,th
 		&:first-child
 			.check
