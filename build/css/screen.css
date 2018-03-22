@@ -1367,7 +1367,6 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table td.cell-border-right { border-right: 1px solid #efefef; }
 .table td.padding-none { padding: 0; }
 .table td .icon.icon-clip { font-size: 14px; }
-.table td .table__pseudo-cell:last-of-type { border-color: transparent; }
 .table td:first-child .check input:checked + .check__span:before, .table th:first-child .check input:checked + .check__span:before { border-color: #6c757a; }
 .table .dropdown { height: 27px; vertical-align: middle; }
 .table .dropdown.is-active .dropdown__in { display: block; }
