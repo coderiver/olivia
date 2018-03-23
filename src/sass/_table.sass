@@ -233,6 +233,16 @@
 		border-bottom: 1px solid #efefef
 		.table__justify
 			padding: 10px 7px
+			min-height: 39px
+	&__pseudo-cell-item-inner
+		padding: 10px 7px
+		min-height: 39px
+		font-size: 12px
+		position: relative
+		&:not(.table__pseudo-cell-item-inner--icon)
+			text-overflow: ellipsis
+			overflow: hidden
+			white-space: nowrap
 	&__border-bottom
 		border-bottom: 1px solid #efefef
 	.few-cells
