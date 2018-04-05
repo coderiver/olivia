@@ -90,6 +90,8 @@
 			padding-left: 50px
 			padding-right: 50px
 			padding-bottom: 34px
+		&--padding-none
+			padding: 0
 		.divider
 			margin: 15px -20px
 		.history
@@ -339,6 +341,30 @@
 		text-align: right
 		margin-bottom: 20px
 		margin-top: 15px
+	&__two-col
+		+clr
+		text-align: center
+		.deal-steps__link
+			margin-right: 0
+			margin-bottom: 20px
+		.complicated-icon 
+			.svg-ico
+				border-radius: 3px
+		.btn
+			padding: 8px 27px
+	&__two-col-left, &__two-col-right
+		width: 50%
+		padding: 32px 40px
+	&__two-col-left
+		float: left
+		border-right: 1px solid #dce0e7
+	&__two-col-right
+		float: right
+	&__two-col-text
+		font-size: 12px
+		color: #4a4a4a
+		min-height: 85px
+		margin-bottom: 20px
 	.txt-bold
 		+opensans-sb
 	.icon-close

@@ -1635,6 +1635,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup__body { padding: 15px 20px 20px; }
 .popup__body.no-b-pad { padding-bottom: 0; }
 .popup__body--spec { padding-left: 50px; padding-right: 50px; padding-bottom: 34px; }
+.popup__body--padding-none { padding: 0; }
 .popup__body .divider { margin: 15px -20px; }
 .popup__body .history { margin: 37px -20px 20px; }
 .popup__body .history__ttl { padding: 0 20px; }
@@ -1715,6 +1716,15 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup__commission .form__close { right: 10px; }
 .popup__commission .form__close .icon-close { font-size: 11px; }
 .popup__right-content { text-align: right; margin-bottom: 20px; margin-top: 15px; }
+.popup__two-col { *zoom: 1; text-align: center; }
+.popup__two-col:after { content: " "; display: table; clear: both; }
+.popup__two-col .deal-steps__link { margin-right: 0; margin-bottom: 20px; }
+.popup__two-col .complicated-icon .svg-ico { border-radius: 3px; }
+.popup__two-col .btn { padding: 8px 27px; }
+.popup__two-col-left, .popup__two-col-right { width: 50%; padding: 32px 40px; }
+.popup__two-col-left { float: left; border-right: 1px solid #dce0e7; }
+.popup__two-col-right { float: right; }
+.popup__two-col-text { font-size: 12px; color: #4a4a4a; min-height: 85px; margin-bottom: 20px; }
 .popup .txt-bold { font-family: "opensans-semibold", Arial, sans-serif; }
 .popup .icon-close { position: absolute; top: 50%; right: 20px; margin-top: -7.5px; font-size: 13px; cursor: pointer; -webkit-transition: color 0.3s; transition: color 0.3s; }
 .popup .icon-close:only-child { position: static; float: right; margin-top: 0; }
