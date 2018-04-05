@@ -1098,7 +1098,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .filters.is-fixed .filters__wrap { border-left: 1px solid #dce0e7; border-right: 1px solid #dce0e7; }
 .filters__wrap { position: relative; display: table; width: 100%; padding: 10px; background: #FFF; }
 .filters__wrap_mod { padding: 10px 20px; }
-.filters__desc { display: inline-block; vertical-align: middle; font-size: 14px; max-width: 400px; }
+.filters__desc { display: inline-block; vertical-align: middle; font-size: 14px; max-width: 450px; }
 .filters__desc.is-grey { color: #6c757a; }
 .filters__desc.is-black { color: #4a4a4a; }
 .filters__desc--ml-5 { margin-left: 5px; }
