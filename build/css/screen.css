@@ -1283,6 +1283,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table__clip { width: 5%; text-align: center; }
 .table__clip .icon.icon-clip { font-size: 14px; }
 .table__clip-elem { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 70%; }
+.table__clip-elem--sm { width: 48%; }
 .table__drop { width: 50px; padding: 5px 8.5px; text-align: center; }
 .table__el { font-size: 0; font-family: "robotomono", Arial, sans-serif; }
 .table__el span { display: inline-block; max-width: -webkit-calc(100% - 25px); max-width: calc(100% - 25px); font-size: 13px; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; white-space: nowrap; }
