@@ -1264,7 +1264,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 
 .tablewrap-blotter .filters__ttl { vertical-align: top; position: relative; top: -14px; }
 .tablewrap-blotter .scrollbar { margin-right: 0; }
-.tablewrap-blotter .scrollbar .table td { padding: 10px 7px; }
+.tablewrap-blotter .scrollbar .table td { padding: 0; }
 .tablewrap-blotter .table .table__head th { border-right: 1px solid #efefef; }
 .tablewrap-blotter .table .table__head th p:not(.check__span) { border: none; }
 .tablewrap-blotter .table .table__bottom-row td { border: none; }
@@ -1290,7 +1290,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table__el .svg-ico, .table__el .icon { margin-right: 5px; font-size: 16px; }
 .table__more { display: inline-block; font-size: 13px; vertical-align: middle; }
 .table__more:first-child { vertical-align: baseline; }
-.table__justify { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; position: relative; }
+.table__justify { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; position: relative; padding: 10px 7px; }
 .table__pic { max-width: 50px; height: 50px; background-size: cover; background-position: center center; }
 .table__text { max-width: 100%; color: #868e93; white-space: nowrap; word-break: break-word; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; }
 .table__text.is-info { color: #f76300; }
@@ -1303,7 +1303,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table__tooltip { display: none; position: absolute; right: -webkit-calc(100% - 10px); right: calc(100% - 10px); width: 290px; top: 50%; text-align: left; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); z-index: 1; background: #fff6e6; padding: 10px 20px; box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.5); border-radius: 5px; }
 .table__tooltip:before { content: ""; position: absolute; top: 50%; right: -8px; margin-top: -8px; width: 0px; height: 0px; border-style: solid; border-width: 8px 0 8px 8px; border-color: transparent transparent transparent #fff6e6; z-index: 0; }
 .table__pseudo-cell { border-bottom: 1px solid #efefef; }
-.table__pseudo-cell .table__justify { padding: 10px 7px; min-height: 39px; }
+.table__pseudo-cell .table__justify { min-height: 39px; }
 .table__pseudo-cell-item-inner { padding: 10px 7px; min-height: 39px; font-size: 12px; position: relative; }
 .table__pseudo-cell-item-inner:not(.table__pseudo-cell-item-inner--icon) { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 .table__border-bottom { border-bottom: 1px solid #efefef; }
@@ -1318,6 +1318,9 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table .few-cells__item--spec-default-height { -webkit-flex-basis: 41px; -ms-flex-preferred-size: 41px; flex-basis: 41px; -webkit-box-flex: 0; -webkit-flex-grow: 0; -ms-flex-positive: 0; flex-grow: 0; -webkit-flex-shrink: 0; -ms-flex-negative: 0; flex-shrink: 0; }
 .table .few-cells__item--auto-height { -webkit-box-flex: 1; -webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1; -webkit-flex-basis: auto; -ms-flex-preferred-size: auto; flex-basis: auto; }
 .table .few-cells__item-inner { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; height: 100%; }
+.table .table__padding-big { padding-left: 24px; padding-right: 48px; }
+.table .table__padding-md { padding-left: 15px; padding-right: 41px; }
+.table .table__padding-sm { padding-left: 16px; padding-right: 16px; }
 .table span.table__text { display: inline-block; }
 .table .table__head { background: #f7f8f9; text-align: left; height: 39px; }
 .table .table__head.is-full-border { border: 1px solid #dce0e7; }

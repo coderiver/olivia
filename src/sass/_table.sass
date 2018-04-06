@@ -66,8 +66,11 @@
 		top: -14px
 	.scrollbar 
 		margin-right: 0
-		.table td 
-			padding: 10px 7px
+		.table 
+			td 
+				padding: 0
+
+			
 	.table 
 		// border-collapse: collapse
 
@@ -172,6 +175,7 @@
 		display: flex
 		justify-content: space-between
 		position: relative
+		padding: 10px 7px
 	&__pic
 		max-width: 50px
 		height: 50px
@@ -234,7 +238,7 @@
 	&__pseudo-cell
 		border-bottom: 1px solid #efefef
 		.table__justify
-			padding: 10px 7px
+			// padding: 10px 7px
 			min-height: 39px
 	&__pseudo-cell-item-inner
 		padding: 10px 7px
@@ -247,6 +251,7 @@
 			white-space: nowrap
 	&__border-bottom
 		border-bottom: 1px solid #efefef
+
 	.few-cells
 		display: flex
 		flex-direction: column
@@ -287,6 +292,15 @@
 			display: flex
 			justify-content: space-between
 			height: 100%
+	.table__padding-big
+		padding-left: 24px
+		padding-right: 48px
+	.table__padding-md
+		padding-left: 15px
+		padding-right: 41px
+	.table__padding-sm
+		padding-left: 16px
+		padding-right: 16px
 	span.table__text
 		display: inline-block
 	.table__head
