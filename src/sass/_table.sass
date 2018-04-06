@@ -91,27 +91,13 @@
 		td
 			border-right: 1px solid #efefef
 			vertical-align: top
-			&.tablewrap-blotter__name-cell
-				// padding-left: 28px
-				// padding-right: 62px
-				i
-				// &:hover
-				// 	background: rgba(#656565, 0.09)
-				// 	.tablewrap-blotter__next
-				// 		opacity: 1
-			// &.tablewrap-blotter__cell-spec-padding
-			// 	padding-right: 40px
 
 		tr
 			&:hover
 					background: darken(#fff, 0)
 		strong
 			font-weight: 600
-	&__next
-		position: absolute
-		right: -40px
-		cursor: pointer
-		opacity: 0
+
 
 
 // table
@@ -235,8 +221,27 @@
 			margin-top: -8px
 			+arr(8, 16,#fff6e6, r )
 			z-index: 0
+	&__next
+		position: absolute
+		right: 10px
+		cursor: pointer
+		top: 12px
+		background: none
+		border: none
+		display: none
+		appearance: none
+	
+		line-height: 1
+		i
+			color: rgba(#6c757a, 0.31)
+
 	&__pseudo-cell
 		border-bottom: 1px solid #efefef
+		&.selected
+			background: rgba(#656565, 0.09)
+			position: relative
+			.table__next
+				display: block
 		.table__justify
 			// padding: 10px 7px
 			min-height: 39px

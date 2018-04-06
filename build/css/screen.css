@@ -1273,7 +1273,6 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .tablewrap-blotter .table td { border-right: 1px solid #efefef; vertical-align: top; }
 .tablewrap-blotter .table tr:hover { background: white; }
 .tablewrap-blotter .table strong { font-weight: 600; }
-.tablewrap-blotter__next { position: absolute; right: -40px; cursor: pointer; opacity: 0; }
 
 .table { max-width: 100%; font-size: 13px; color: #6c757a; table-layout: fixed; background: #FFF; }
 .table.is-top-aligned td { padding: 10.5px 8.5px; vertical-align: top; }
@@ -1302,7 +1301,11 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table__tooltip-icon:hover + .table__tooltip { display: block; }
 .table__tooltip { display: none; position: absolute; right: -webkit-calc(100% - 10px); right: calc(100% - 10px); width: 290px; top: 50%; text-align: left; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); z-index: 1; background: #fff6e6; padding: 10px 20px; box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.5); border-radius: 5px; }
 .table__tooltip:before { content: ""; position: absolute; top: 50%; right: -8px; margin-top: -8px; width: 0px; height: 0px; border-style: solid; border-width: 8px 0 8px 8px; border-color: transparent transparent transparent #fff6e6; z-index: 0; }
+.table__next { position: absolute; right: 10px; cursor: pointer; top: 12px; background: none; border: none; display: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; line-height: 1; }
+.table__next i { color: rgba(108, 117, 122, 0.31); }
 .table__pseudo-cell { border-bottom: 1px solid #efefef; }
+.table__pseudo-cell.selected { background: rgba(101, 101, 101, 0.09); position: relative; }
+.table__pseudo-cell.selected .table__next { display: block; }
 .table__pseudo-cell .table__justify { min-height: 39px; }
 .table__pseudo-cell-item-inner { padding: 10px 7px; min-height: 39px; font-size: 12px; position: relative; }
 .table__pseudo-cell-item-inner:not(.table__pseudo-cell-item-inner--icon) { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
