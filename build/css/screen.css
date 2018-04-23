@@ -1085,7 +1085,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 
 .fake-header { position: absolute; top: 0; left: 0; right: 0; z-index: -2; }
 .fake-header.is-sidebar .fake-header__in { padding-left: 240px; }
-.fake-header.is-fixed { position: fixed; width: 100%; max-width: 1370px; left: 50%; padding: 0 20px; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); z-index: 1; }
+.fake-header.is-fixed { position: fixed; width: 100%; left: 50%; padding: 0 20px; padding: 0 60px; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); z-index: 1; }
 .fake-header.is-fixed .fake-header__in { border-top: 1px solid #dce0e7; border-left: 1px solid #dce0e7; }
 .fake-header.is-fixed .fake-header__in:after { width: 51px; border-right-width: 1px; border-top: 0; }
 .fake-header.is-fixed .table th { border-top: #000; }
@@ -1094,7 +1094,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .fake-header .fake-header__in:after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 50px; background: #f7f8f9; border: 1px solid #dce0e7; border-right-width: 0; z-index: 10; }
 
 .filters { position: absolute; top: 0; left: 0; right: 0; z-index: 2; }
-.filters.is-fixed { position: fixed; top: 0; left: 50%; width: 100%; max-width: 1370px; min-width: 1040px; margin: 0 auto; padding: 0 20px; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
+.filters.is-fixed { position: fixed; top: 0; left: 50%; width: 100%; min-width: 1040px; margin: 0 auto; padding: 0 20px; padding: 0 60px; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
 .filters.is-fixed .filters__wrap { border-left: 1px solid #dce0e7; border-right: 1px solid #dce0e7; }
 .filters__wrap { position: relative; display: table; width: 100%; padding: 10px; background: #FFF; }
 .filters__wrap_mod { padding: 10px 20px; }
