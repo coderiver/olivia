@@ -259,7 +259,7 @@ body .tooltipster-base { z-index: 8; }
 
 .l-head { max-width: 1125px; }
 
-.l-form { max-width: 1125px; }
+.l-form { max-width: 1125px; padding: 0 20px; }
 
 .l-center { max-width: 620px; }
 
