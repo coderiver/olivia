@@ -40,7 +40,18 @@
 	pointer-events: none;
 	width: auto;
 	overflow: visible;
+	border-radius: 5px;
 }
+.tooltipster-arrow-background{
+	display: none;
+}
+.tooltipster-base .tooltipster-box{
+	background: #fff6e6 !important;
+	border-color: #fff6e6 !important;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25) !important;
+	// border: none!important;
+}
+
 .tooltipster-base .tooltipster-content {
 	overflow: hidden;
 }
@@ -88,6 +99,19 @@
 	border-bottom: 9px solid;
 	top: -7px;
 }
+
+
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border{
+	border-bottom-color: #fff6e6;
+}
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow{
+	top: calc(100% - 10px);
+}
+
+
+
+
+
 .tooltipster-arrow-top span, .tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-bottom span, .tooltipster-arrow-bottom .tooltipster-arrow-border {
 	left: 0;
 	right: 0;

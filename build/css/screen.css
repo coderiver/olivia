@@ -134,7 +134,11 @@ html { box-sizing: border-box; }
 .tooltipster-icon { cursor: help; margin-left: 4px; }
 
 /* This is the base styling required to make all Tooltipsters work */
-.tooltipster-base { padding: 0; font-size: 0; line-height: 0; position: absolute; left: 0; top: 0; z-index: 9999999; pointer-events: none; width: auto; overflow: visible; }
+.tooltipster-base { padding: 0; font-size: 0; line-height: 0; position: absolute; left: 0; top: 0; z-index: 9999999; pointer-events: none; width: auto; overflow: visible; border-radius: 5px; }
+
+.tooltipster-arrow-background { display: none; }
+
+.tooltipster-base .tooltipster-box { background: #fff6e6 !important; border-color: #fff6e6 !important; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25) !important; }
 
 .tooltipster-base .tooltipster-content { overflow: hidden; }
 
@@ -150,6 +154,10 @@ html { box-sizing: border-box; }
 .tooltipster-arrow-bottom span, .tooltipster-arrow-bottom-right span, .tooltipster-arrow-bottom-left span { border-left: 8px solid transparent !important; border-right: 8px solid transparent !important; border-bottom: 8px solid; top: -7px; }
 
 .tooltipster-arrow-bottom .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border { border-left: 9px solid transparent !important; border-right: 9px solid transparent !important; border-bottom: 9px solid; top: -7px; }
+
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border { border-bottom-color: #fff6e6; }
+
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow { top: -webkit-calc(100% - 10px); top: calc(100% - 10px); }
 
 .tooltipster-arrow-top span, .tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-bottom span, .tooltipster-arrow-bottom .tooltipster-arrow-border { left: 0; right: 0; margin: 0 auto; }
 
@@ -610,7 +618,7 @@ a { text-decoration: none; }
 .label-info:after { content: " "; display: table; clear: both; }
 .label-info.is-green { background: #2cb324; }
 
-.tooltipster-base { color: #282828; background-color: #fff6e6; border: 1px solid #e8e0cf; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); }
+.tooltipster-base { color: #282828; }
 .tooltipster-base .tooltipster-content { padding: 15px 10px; font-size: 13px; font-family: "opensans", Arial, sans-serif; }
 .tooltipster-base .tooltipster__link { display: inline-block; margin-top: 5px; font-size: 13px; color: #097bf2; }
 .tooltipster-base .tooltipster__link:hover { text-decoration: underline; }
