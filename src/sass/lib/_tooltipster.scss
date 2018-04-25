@@ -112,7 +112,8 @@
 	top: calc(100% - 10px);
 }
 .tooltipster-sidetip.tooltipster-left .tooltipster-arrow{
-	left: 0
+	left: auto!important;
+	
 }
 
 .tooltipster-sidetip.tooltipster-left .tooltipster-arrow-border{
