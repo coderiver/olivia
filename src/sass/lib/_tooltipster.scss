@@ -111,8 +111,17 @@
 .tooltipster-sidetip.tooltipster-top .tooltipster-arrow{
 	top: calc(100% - 10px);
 }
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow{
+	left: 0
+}
 
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-border{
+	border-left-color: #fff6e6!important;
+}
 
+.tooltipster-sidetip .tooltipster-content{
+	color: #000 !important;
+}
 
 
 

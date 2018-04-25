@@ -161,6 +161,8 @@ html { box-sizing: border-box; }
 
 .tooltipster-sidetip.tooltipster-top .tooltipster-arrow { top: -webkit-calc(100% - 10px); top: calc(100% - 10px); }
 
+.tooltipster-sidetip .tooltipster-content { color: #000 !important; }
+
 .tooltipster-arrow-top span, .tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-bottom span, .tooltipster-arrow-bottom .tooltipster-arrow-border { left: 0; right: 0; margin: 0 auto; }
 
 .tooltipster-arrow-top-left span, .tooltipster-arrow-bottom-left span { left: 6px; }
