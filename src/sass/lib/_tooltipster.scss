@@ -74,6 +74,7 @@
 	height: 0;
 	position: absolute;
 }
+
 .tooltipster-arrow-top span, .tooltipster-arrow-top-right span, .tooltipster-arrow-top-left span {
 	border-left: 8px solid transparent !important;
 	border-right: 8px solid transparent !important;
@@ -102,7 +103,10 @@
 
 
 .tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border{
-	border-bottom-color: #fff6e6;
+	border-bottom-color: #fff6e6!important;
+}
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border{
+	border-top-color: #fff6e6!important;
 }
 .tooltipster-sidetip.tooltipster-top .tooltipster-arrow{
 	top: calc(100% - 10px);

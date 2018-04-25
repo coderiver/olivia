@@ -155,7 +155,9 @@ html { box-sizing: border-box; }
 
 .tooltipster-arrow-bottom .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border { border-left: 9px solid transparent !important; border-right: 9px solid transparent !important; border-bottom: 9px solid; top: -7px; }
 
-.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border { border-bottom-color: #fff6e6; }
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border { border-bottom-color: #fff6e6 !important; }
+
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border { border-top-color: #fff6e6 !important; }
 
 .tooltipster-sidetip.tooltipster-top .tooltipster-arrow { top: -webkit-calc(100% - 10px); top: calc(100% - 10px); }
 
