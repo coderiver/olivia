@@ -877,6 +877,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .upper__btn-descr { position: absolute; top: 30px; right: 87px; color: #0d66bd; font-size: 11px; font-family: "opensans-semibold", Arial, sans-serif; }
 .upper .add-btn { position: absolute; right: 23px; bottom: 20px; z-index: 1; }
 .upper_help { margin-bottom: 0; }
+.upper .btn.btn-ok { position: absolute; right: 90px; bottom: 30px; padding: 8px 15px; }
 
 .up-help { background-color: #FFF4E5; padding: 22px 52px 18px; color: #282828; font-size: 14px; }
 
@@ -1804,6 +1805,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup-list .check input:checked + .check__span { font-family: "opensans-semibold", Arial, sans-serif; }
 .popup-list .check input:checked + .check__span:before { border-color: #6C757A; }
 .popup-list .check__span { display: block; }
+.popup-list--spec-margin { margin: 0 -20px 15px; }
+.popup-list--spec-margin .popup-list__option:last-child { border-bottom: 1px solid #efefef; }
 
 .members .popup__bl { padding: 20px; border-bottom: 1px solid #efefef; }
 .members .popup__bl:last-child { border-bottom: none; }
