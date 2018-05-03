@@ -132,12 +132,47 @@
 			border-bottom: 1px solid #cfd5e0
 		&--ml
 			margin-left: 20px
+		&--full
+			.select2
+				&.ui-select-container
+					width: 100%
+		&--default-input-styles
+			.select2
+				&.ui-select-container
+					.select2-choices
+						border: 1px solid #cfd5e0
+						border-radius: 4px
+						background-image: none
+						background-color: #f7f8f9
+						.select2-search-field 
+							input
+								padding: 8px 0px 8px 8px
+								+placeholder
+									color: #999 
+		&--mb-20
+			margin-bottom: 20px
+		&--mb-10
+			margin-bottom: 10px
 	&__txt-wrapper
 		max-width: 740px
 		padding: 0 70px
 		margin: 0 auto 20px
 		&.is-margin-top
 			margin-top: 30px
+	&__date-wrapper
+		width: 198px
+		position: relative
+		button
+			background: none
+			border: none
+			appearance: none
+			position: absolute
+			left: 8px
+			top: 50%
+			transform: translateY(-50%)
+		input
+			width: 100%
+			padding-left: 30px
 	&__mod
 		position: relative
 		&:hover
@@ -210,6 +245,10 @@
 	&__text-magr-b
 		margin-bottom: 10px
 		max-width: 572px
+	&__help
+		span
+			font-size: 14px
+			color: #4a4a4a
 	hr
 		max-width: 600px
 		margin: 15px auto 25px

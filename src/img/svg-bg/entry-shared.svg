@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>GCS form icon 16 Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-361.000000, -70.000000)">
+            <g id="GCS-form-icon-16-Copy-2" transform="translate(361.000000, 70.000000)">
+                <rect id="Rectangle-128" fill="#506EA4" x="0" y="0" width="16" height="16"></rect>
+                <polygon id="Rectangle-128" fill="#50A456" points="16 0 16 16 0 16"></polygon>
+                <path d="M3,4 L13,4 L13,6 L3,6 L3,4 Z M3,7 L13,7 L13,9 L3,9 L3,7 Z M3,10 L13,10 L13,12 L3,12 L3,10 Z" id="Rectangle-128-Copy" fill="#94B4DF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

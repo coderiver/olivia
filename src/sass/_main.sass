@@ -97,7 +97,7 @@
 			.upper__link
 				&.is-active
 					&:after
-						border-color: transparent transparent rgba(255, 241, 222, 0.8) transparent
+						border-color: transparent transparent #FFF4E5 transparent
 	&__link
 		position: relative
 		color: #097bf2
@@ -146,12 +146,18 @@
 		z-index: 1
 	&_help
 		margin-bottom: 0
-		&__link
-			&:after
-				+arr(16, 10, rgba(255, 241, 222, 0.8), t)
+		// &__link
+		// 	&:after
+		// 		+arr(16, 10, rgba(255, 200, 69, 1), t)
+	.btn.btn-ok
+		position: absolute
+		right: 90px
+		bottom: 30px
+		padding: 8px 15px
 
 .up-help
-	background-color: rgba(255, 241, 222, 0.8)
+	background-color: #FFF4E5
+	// rgba(255, 241, 222, 0.8)
 	padding: 22px 52px 18px
 	color: #282828
 	font-size: 14px

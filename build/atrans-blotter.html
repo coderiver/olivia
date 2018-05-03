@@ -1,0 +1,2943 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=1040, initial-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#fff">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/app.js"></script>
+</head>
+<body>
+	<!-- BEGIN  out-->
+	<div class="out">
+		<!-- begin header with active notification  -->
+		<div class="header">
+			<div class="l">
+				<div class="header__in">
+					<a href="#" class="header__logo"><i class="icon icon-logo"></i></a>
+					<ul class="menu">
+						<li class="menu__option"><a class="menu__link" href="#">Tasks <p class="notification"><span>2</span></p></a></li>
+						<li class="menu__option is-active"><a class="menu__link" href="#">Deals</a></li>
+						<li class="menu__option"><a class="menu__link" href="#">Entries</a></li>
+						<li class="menu__option"><a class="menu__link" href="#">Library</a></li>
+						<li class="menu__option">
+							<div class="dropdown is-menu js-dropdown">
+								<p class="dropdown__item">Me</p>
+								<ul class="dropdown__list is-top-level js-inner">
+									<li><a href="#">Profile</a></li>
+									<li><a href="#">My Team</a></li>
+									<li><a href="#">Messages</a></li>
+									<li><a href="#">Activity Log</a></li>
+									<li><a href="#">Settings</a></li>
+									<li><a href="#">Log Out</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<div class="helpers">
+						<a href="#" class="helpers__info">?</a>
+						<a href="#" class="helpers__bell is-active" data-popup="sysmessage">
+							<i class="icon icon-bell"></i>
+							<span class="helpers__message">5</span>
+						</a>
+						<label class="search js-search">
+							<i class="icon icon-zoom"></i>
+							<input type="search" placeholder="Search">
+							<i class="icon icon-close search-close js-search-clear"></i>
+						</label>
+						<!-- begin sysmessage  -->
+						<div id="sysmessage" class="sysmessage js-popup js-avoid-overflow">
+							<div class="sysmessage__head">
+								<p class="sysmessage__ttl">1 New Payment, 4 other notifications since your last visit</p>
+								<i class="icon icon-close js-close"></i>
+							</div>
+							<div class="sysmessage__container js-vert-scroll">
+								<div class="sysmessage__el">
+									<p>Messages (1)</p>
+								</div>
+								<div class="sysmessage__el no-bg">
+									<img class="sysmessage__img" src="img/user1.png" alt="">
+									<div class="sysmessage__info">
+										<i class="svg-ico message-ico"></i>
+										<div class="sysmessage__name">
+											<h4>New Payment!</h4>
+											<small class="sysmessage__date">Sept. 13, 2015</small>
+										</div>
+										<p>Transaction T34782 from Alphabet between James Brown and Steve Buscemy was payed Sept. 12, 2015</p>
+										<ul class="sysmessage__list">
+											<li>Transaction amount: $400.000.00</li>
+											<li>Funds received: $400.000.00</li>
+											<li>GCS commission: $10.000.00</li>
+											<li>Your comission*: $15.000.00</li>
+										</ul>
+										<p>Your commission will be payed to you according to your GCS agreement conditions</p>
+										<ul class="reaction">
+											<li><a class="reaction__link" href="#">Mark as read</a></li>
+											<li><a class="reaction__link" href="#">View deal</a></li>
+											<li><a class="reaction__link" href="#">View transaction</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="sysmessage__el">
+									<p>Updates (4)</p>
+								</div>
+								<div class="sysmessage__el no-bg">
+									<img class="sysmessage__img" src="img/user2.png" alt="">
+									<i class="svg-ico memo-ico"></i>
+									<div class="sysmessage__info">
+										<div class="sysmessage__name">
+											<h4><span>Deal Memo Approved for Space X</span></h4>
+											<small class="sysmessage__date">Sept. 13, 2015</small>
+										</div>
+										<ul class="reaction">
+											<li><a class="reaction__link" href="#">View</a></li>
+											<li><a class="reaction__link" href="#">Open deal</a></li>
+										</ul>
+									</div>
+									<i class="icon icon-check"></i>
+								</div>
+								<div class="sysmessage__el no-bg">
+									<img class="sysmessage__img" src="img/user2.png" alt="">
+									<i class="icon icon-bubble"></i>
+									<div class="sysmessage__info">
+										<div class="sysmessage__name">
+											<h4>New comment for EL James Brown for Space X</h4>
+											<small class="sysmessage__date">Sept. 13, 2015</small>
+										</div>
+										<ul class="reaction">
+											<li><a class="reaction__link" href="#">View</a></li>
+											<li><a class="reaction__link" href="#">Open deal</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="sysmessage__el no-bg">
+									<img class="sysmessage__img" src="img/user1.png" alt="">
+									<i class="svg-ico memo-ico"></i>
+									<div class="sysmessage__info">
+										<div class="sysmessage__name">
+											<h4>Deal Memo Approved for Space X</h4>
+											<small class="sysmessage__date">Sept. 13, 2015</small>
+										</div>
+										<ul class="reaction">
+											<li><a class="reaction__link" href="#">View</a></li>
+											<li><a class="reaction__link" href="#">Open deal</a></li>
+										</ul>
+									</div>
+									<i class="icon icon-warn"></i>
+								</div>
+							</div>
+							<div class="sysmessage__el is-all">
+								<p class="txt-center"><a class="reaction__link" href="#">See all</a></p>
+							</div>
+						</div>
+						<!-- end sysmessage -->
+						<!-- begin results -->
+						<div class="results js-search-results">
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="svg-ico memo-ico"></i>
+									<p>Update Space X Deal Memo</p>
+								</div>
+								<p>...update a Deal Memo, please open Deal Memo and fill in <span class="highlight">amount</span></p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="svg-ico customer-ico"></i>
+									<p>Steve Buscemi</p>
+								</div>
+								<p>...<span class="highlight">amount</span> invested $120 0000 USD</p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<p>Send us your photo</p>
+								</div>
+								<p>Hey, Brian, we need you photo to put it on a wall, send <span class="highlight">amount</span> my e-mail please...</p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="svg-ico letter-ico"></i>
+									<span>Engagement Letter John Snow</span>
+								</div>
+								<p>...managers said its important. Use Upload File <span class="highlight">amount</span> below, uplo..</p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="svg-ico library-ico"></i>
+									<span>Complaince Form Name</span>
+								</div>
+								<p>Your year spending <span class="highlight">amount</span> 100000 USD </p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="icon icon-folder"></i>
+									<p><span class="highlight">Amount</span> Corp</p>
+								</div>
+							</a>
+							<a href="#" class="results__bl">
+								<p class="txt-center">781 results...</p>
+							</a>
+						</div>
+						<!-- end results -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end header -->
+
+		<div class="main">
+			<div class="l">
+				<div class="main__in">
+					<div class="upper">
+						<p class="upper__ttl"><a href="#"><i class="icon icon-folder"></i></a>Space X</p>
+						<ul class="upper__list">
+							<li class="upper__option"><a class="upper__link" href="#">Summary</a></li>
+							<li class="upper__option"><a class="upper__link" href="#">Tasks</a></li>
+							<li class="upper__option"><a class="upper__link" href="#">Engagement Letters</a></li>
+							<li class="upper__option"><a class="upper__link" href="#">Deal Memo</a></li>
+							<li class="upper__option"><a class="upper__link is-active" href="#">Customers</a></li>
+							<li class="upper__option"><a class="upper__link" href="#">Transactions</a></li>
+							<li class="upper__option"><a class="upper__link" href="#">Deal Status</a></li>
+						</ul>
+						<button class="btn btn-ok" type="submit">New Deal</button>
+						<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
+						<!-- begin suggest for new deal -->
+							<div class="suggest js-popup js-avoid-overflow" id="suggest">
+								<div class="suggest__head">
+									<p class="suggest__txt">Submit Deal Memo</p>
+									<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
+								</div>
+								<div class="suggest__menu">
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico letter-ico"></i>
+										<div class="suggest__in">
+											<p>Add Engagement Letter</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl" data-popup="popup-deal-memo-info">
+										<i class="svg-ico memo-ico"></i>
+										<div class="suggest__in">
+											<p>Add Deal memo</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico customer-ico"></i>
+										<div class="suggest__in">
+											<p>Add Customer</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico transaction-ico"></i>
+										<div class="suggest__in">
+											<p>Add Transaction Report</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico library-ico"></i>
+										<div class="suggest__in">
+											<p>Add Marketing Materials</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico library-ico"></i>
+										<div class="suggest__in">
+											<p>Add from Templates or Other</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						<!-- end suggest for new deal -->
+					</div>
+					<!-- begin tablewrap  -->
+					<div class="tablewrap tablewrap-blotter js-tablewrap">
+						<!-- begin filters  -->
+						<div class="filters js-filters">
+							<div class="filters__wrap js-fixed">
+								<div class="filters__ttl">Customers</div>
+								<div class="filters__in">
+									<div class="toggle-btn js-toggle-sidebar">
+										<i class="icon icon-sidebar"></i>
+									</div>
+									<div class="toggle-btn js-search-table">
+										<input type="search" placeholder="Search table">
+										<i class="icon icon-zoom"></i>
+										<i class="icon icon-close search-close js-search-clear"></i>
+									</div>
+									<span class="filters__desc filters__desc--ml-5">View level: </span>
+									<div class="tabs">
+										<div class="tabs__el js-tab-el is-active">Firm</div>
+										<div class="tabs__el js-tab-el">Rep</div>
+										<div class="tabs__el js-tab-el">Deal</div>
+										<div class="tabs__el js-tab-el">TR</div>
+									</div>
+									<div class="dropdown js-dropdown">
+										<p class="dropdown__item">Filter by status</p>
+										<div class="dropdown__in js-inner">
+											<ul class="dropdown__list is-top-level js-vert-scroll">
+												<li><a href="#" class="is-active">All statuses</a></li>
+												<li><a href="#">With tasks</a></li>
+												<li><a href="#">Approved</a></li>
+												<li><a href="#">Funds received</a></li>
+												<li><a href="#">Comission paid</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="dropdown js-dropdown">
+										<p class="dropdown__item">Settings</p>
+										<div class="dropdown__list is-top-level js-inner">
+											<div class="dropdown__scroll js-vert-scroll">
+												<div class="dropdown__check">
+													<label class="check" data-attr="id">
+														<input type="checkbox" checked>
+														<span class="check__span">ID</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="deal">
+														<input type="checkbox" checked>
+														<span class="check__span">Deal</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="name">
+														<input type="checkbox" checked>
+														<span class="check__span">Name</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="operations">
+														<input type="checkbox" checked>
+														<span class="check__span">Operations</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="type">
+														<input type="checkbox" checked>
+														<span class="check__span">Type</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="status">
+														<input type="checkbox" checked>
+														<span class="check__span">Status</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="letters">
+														<input type="checkbox">
+														<span class="check__span">Engagement Letter(s)</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="transactionnum">
+														<input type="checkbox">
+														<span class="check__span">Number of transactions</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="">
+														<input type="checkbox">
+														<span class="check__span">Latest transaction date</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="latestid">
+														<input type="checkbox">
+														<span class="check__span">Latest transaction ID</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="lateststat">
+														<input type="checkbox">
+														<span class="check__span">Latest transaction status</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="transactionsum">
+														<input type="checkbox">
+														<span class="check__span">Transactions total</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="comissionsum">
+														<input type="checkbox">
+														<span class="check__span">My comission total</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="gcs">
+														<input type="checkbox">
+														<span class="check__span">GCS comission total</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="funds">
+														<input type="checkbox">
+														<span class="check__span">Latest funds arrived date</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="date">
+														<input type="checkbox">
+														<span class="check__span">Date created</span>
+													</label>
+												</div>
+												<div class="dropdown__check">
+													<label class="check" data-attr="update">
+														<input type="checkbox" checked>
+														<span class="check__span">Last update</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end filters -->
+						<div class="tablewrap__in">
+							<!-- begin sidebar  -->
+							<div class="sidebar js-sidebar">
+								<div class="sidebar__in js-sidebar-in">
+									<div class="sidebar__bl js-sidebar-bl">
+										<div class="sidebar__ttl js-sidebar-ttl"><span>Users</span></div>
+										<div class="sidebar__content js-content">
+											<div class="sidebar__search">
+												<input type="search" placeholder="Quick search">
+												<i class="icon icon-close search-close js-search-clear"></i>
+											</div>
+											<ul class="sidebar-list">
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All users</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All active reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All inactive reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All staff</a>
+												</li>
+												<li class="sidebar-list__option is-disabled">
+													<a href="#">A</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<i class="sidebar-task-ico"></i>
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+												<li class="sidebar-list__option is-title">
+													<a href="#">B</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Brian Dunn</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Boris Negov</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Brenda Stone</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Bonabe Mugaba</a>
+												</li>
+												<li class="sidebar-list__option is-title">
+													<a href="#">C</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Clint Clifford</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Cora Aricsson</a>
+												</li>
+												<li class="sidebar-list__option is-title">
+													<a href="#">D</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Denis Baley</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Duncan McLoud</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="sidebar__bl js-sidebar-bl">
+										<div class="sidebar__ttl js-sidebar-ttl"><span>Form types</span></div>
+										<div class="sidebar__content js-content">
+											<ul class="sidebar-list">
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All users</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All active reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All inactive reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All staff</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="sidebar__bl js-sidebar-bl">
+										<div class="sidebar__ttl js-sidebar-ttl"><span>Deals</span></div>
+										<div class="sidebar__content js-content">
+											<ul class="sidebar-list">
+												<li class="sidebar-list__option is-disabled">
+													<p>No items to show in this filter cause of the other filter combination</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end sidebar -->
+							<!-- begin scrollbar  -->
+							<div class="scrollbar js-scrollbar">
+								<!-- begin table  -->
+								<table class="table">
+									<tr class="table__head js-clone-head">
+										<th class="cell-center" title="FIRM" width="380" data-id="id"><p>FIRM</p></th>
+										<th class="cell-center" title="REP" width="290" data-id="name"><p>REP</p></th>
+										<th class="cell-center" title="DEAL" width="320" data-id="operations"><p>DEAL</p></th>
+										<th class="cell-center" title="TR" width="360" data-id="type"><p>TR</p></th>
+									</tr>
+									<tr>
+										<td class="tablewrap-blotter__name-cell">
+											<div class="table__justify">
+												<strong>Acme</strong>
+												<span>4%</span>
+												<strong>$199,999.99</strong>
+
+											</div>
+										</td>
+										<td class="tablewrap-blotter__cell-spec-padding">
+											<div class="table__justify">
+												<span>Nicholas Azur</span>
+												<strong>$199,999.99</strong>
+											</div>
+										</td>
+										<td></td>
+										<td></td>										
+									</tr>
+									<tr class="table__bottom-row" >
+										<td class="tablewrap-blotter__name-cell">
+											<div class="table__justify">
+												<strong>TOTAL  CR</strong>
+												<span>100%</span>
+												<strong>$199,999.99</strong>
+											</div>
+										</td>
+									</tr>
+								</table>
+								<!-- end table -->
+							</div>
+							<!-- end scrollbar -->
+
+							<!-- begin fake-header  -->
+							<div class="fake-header js-fake-head">
+								<div class="fake-header__in js-fixed">
+									<table class="table"><thead></thead></table>
+								</div>
+							</div>
+							<!-- end fake-header -->
+						</div>
+					</div>
+					<!-- end tablewrap -->
+
+
+
+
+					<!-- begin tablewrap  -->
+					<div class="tablewrap tablewrap-blotter js-tablewrap">
+						<div class="tablewrap__in">
+							<!-- begin sidebar  -->
+							<div class="sidebar js-sidebar">
+								<div class="sidebar__in js-sidebar-in">
+									<div class="sidebar__bl js-sidebar-bl">
+										<div class="sidebar__ttl js-sidebar-ttl"><span>Users</span></div>
+										<div class="sidebar__content js-content">
+											<div class="sidebar__search">
+												<input type="search" placeholder="Quick search">
+												<i class="icon icon-close search-close js-search-clear"></i>
+											</div>
+											<ul class="sidebar-list">
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All users</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All active reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All inactive reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All staff</a>
+												</li>
+												<li class="sidebar-list__option is-disabled">
+													<a href="#">A</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<i class="sidebar-task-ico"></i>
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+												<li class="sidebar-list__option is-title">
+													<a href="#">B</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Brian Dunn</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Boris Negov</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Brenda Stone</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Bonabe Mugaba</a>
+												</li>
+												<li class="sidebar-list__option is-title">
+													<a href="#">C</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Clint Clifford</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Cora Aricsson</a>
+												</li>
+												<li class="sidebar-list__option is-title">
+													<a href="#">D</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Denis Baley</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Duncan McLoud</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="sidebar__bl js-sidebar-bl">
+										<div class="sidebar__ttl js-sidebar-ttl"><span>Form types</span></div>
+										<div class="sidebar__content js-content">
+											<ul class="sidebar-list">
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All users</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All active reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All inactive reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All staff</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="sidebar__bl js-sidebar-bl">
+										<div class="sidebar__ttl js-sidebar-ttl"><span>Deals</span></div>
+										<div class="sidebar__content js-content">
+											<ul class="sidebar-list">
+												<li class="sidebar-list__option is-disabled">
+													<p>No items to show in this filter cause of the other filter combination</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end sidebar -->
+							<!-- begin scrollbar  -->
+							<div class="scrollbar js-scrollbar">
+								<!-- begin table  -->
+								<table class="table">
+									<tr class="table__head js-clone-head">
+										<th class="cell-center" title="FIRM" width="378" data-id="id"><p>FIRM</p></th>
+										<th class="cell-center" title="REP" width="270" data-id="name"><p>REP</p></th>
+										<th class="cell-center" title="DEAL" width="247" data-id="operations"><p>DEAL</p></th>
+										<th class="cell-center cell-text-mall" title="Date Paid to Rep" width="88" data-id="type"><p>Date Paid to Rep</p></th>
+										<th class="cell-center cell-text-mall" title="FR by GCS" width="88" data-id="type"><p>FR by GCS</p></th>
+										<th class="cell-center cell-text-mall" title="Way" width="64" data-id="type"><p>Way</p></th>
+										<th class="cell-center cell-text-mall" title="Seller" width="154" data-id="type"><p>Seller</p></th>
+										<th class="cell-center cell-text-mall" title="Buyer" width="150" data-id="type"><p>Buyer</p></th>
+										<th class="cell-center cell-text-mall" title="# of Shares" width="103" data-id="type"><p># of Shares</p></th>
+										<th class="cell-center cell-text-mall" title="TR Total" width="117" data-id="type"><p>TR Total</p></th>
+										<th class="cell-center cell-text-mall" title="CR" width="100" data-id="type"><p>CR</p></th>
+										<th class="cell-center cell-text-mall" title="TIER" width="57" data-id="type"><p>TIER</p></th>
+										<th class="cell-center cell-text-mall" title="Total CP" width="117" data-id="type"><p>Total CP</p></th>
+										<th class="cell-center cell-text-mall" title="Rep Split" width="63" data-id="type"><p>Rep Split</p></th>
+										<th class="cell-center cell-text-mall" title="Am. Paid to Rep" width="116" data-id="type"><p>Am. Paid to Rep</p></th>
+										<th class="cell-center cell-text-mall" title="Memo" width="66" data-id="type"><p>Memo</p></th>
+									</tr>
+									<tr>
+										<td class="padding-none ">
+											<div class="table__justify table__padding-big">
+												<strong>Acme</strong>
+												<span>4%</span>
+												<strong>$199,999.99</strong>
+											</div>
+										</td>
+										<td class="padding-none ">
+
+											<div class="table__justify table__padding-md">
+												<span>Nicholas Azur</span>
+												<strong>$199,999.99</strong>
+											</div>
+										</td>
+										<td class="padding-none">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--auto-height  table__padding-sm">
+													<div class="few-cells__item-inner">
+														<span class="table__clip-elem" style="width: 50%">Nicholas Azur Nicholas Azur Nicholas Azur</span>
+														<strong>$199,999.99</strong>
+													</div>
+												</div>
+												<div class="few-cells__item few-cells__item--spec-default-height table__padding-sm">
+													<div class="few-cells__item-inner">
+														<span>Nicholas Azur</span>
+														<strong>$199,999.99</strong>
+													</div>
+												</div>
+
+											</div>
+										</td>
+										<td class="padding-none">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+											</div>
+										</td>
+										<td class="padding-none">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													wire
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													wire
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													check
+												</div>
+											</div>
+										</td>
+										<td class="padding-none ">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													Commonwealth Capital Ventures IV LP
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Commonwealth 
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Commonwealth Capital Ventures IV LP 
+												</div>
+											</div>
+										</td>
+										<td class="padding-none ">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													EquityZen Growth Technology Fund LLC
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													EquityZen Growth Technology Fund LLC
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													EquityZen Growth Technology Fund LLC
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													2,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													2,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													2,650,000.00
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													$635,789,88
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$635,789,88
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$635,789,88
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													92%
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													92%
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													100%
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													92%
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													92%
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													100%
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m few-cells__item--icon">
+													<i class="table__tooltip-icon"></i>
+													<div class="table__tooltip">
+														Deal: Postmates / S: Peter Gullekson / B: EquityZen Growth Technology Fund LLC - Series 23 / Trans: $405,000.00 / Comm: $20,250.00 - $15,187.50 paid to WealthForge co-marketing = $5,062.50 @ 92% = $4,657.50 / SPLIT @ 80% = 3,726.00 paid
+													</div>
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m few-cells__item--icon">
+													<i class="table__tooltip-icon"></i>
+													<div class="table__tooltip">
+														Deal: Postmates / S: Peter Gullekson / B: EquityZen Growth Technology Fund LLC - Series 23 / Trans: $405,000.00 / Comm: $20,250.00 - $15,187.50 paid to WealthForge co-marketing = $5,062.50 @ 92% = $4,657.50 / SPLIT @ 80% = 3,726.00 paid
+													</div>
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m few-cells__item--icon">
+													<i class="table__tooltip-icon"></i>
+													<div class="table__tooltip">
+														Deal: Postmates / S: Peter Gullekson / B: EquityZen Growth Technology Fund LLC - Series 23 / Trans: $405,000.00 / Comm: $20,250.00 - $15,187.50 paid to WealthForge co-marketing = $5,062.50 @ 92% = $4,657.50 / SPLIT @ 80% = 3,726.00 paid
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="tablewrap-blotter__name-cell">
+											<div class="table__justify">
+												<strong>Acme</strong>
+												<span>4%</span>
+												<strong>$199,999.99</strong>
+											</div>
+										</td>
+										<td class="padding-none">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--auto-height">
+													<div class="few-cells__item-inner">
+														<span>Nicholas Azur</span>
+														<strong>$199,999.99</strong>
+													</div>
+												</div>
+												<div class="few-cells__item few-cells__item--auto-height">
+													<div class="few-cells__item-inner">
+														<span>Nicholas Azur</span>
+														<strong>$199,999.99</strong>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="padding-none">
+											<div class="few-cells ">
+												<div class="few-cells__item few-cells__item--auto-height">
+													<div class="few-cells__item-inner">
+														<span>Nicholas Azur</span>
+														<strong>$199,999.99</strong>
+													</div>
+												</div>
+												<div class="few-cells__item few-cells__item--auto-height">
+													<div class="few-cells__item-inner">
+														<span>Nicholas Azur</span>
+														<strong>$199,999.99</strong>
+													</div>
+												</div>
+												<div class="few-cells__item few-cells__item--auto-height">
+													<div class="few-cells__item-inner">
+														<span>Nicholas Azur</span>
+														<strong>$199,999.99</strong>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="padding-none">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+											</div>
+										</td>
+										<td class="padding-none">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													wire
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													wire
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													check
+												</div>
+											</div>
+										</td>
+										<td class="padding-none ">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													Commonwealth Capital Ventures IV LP
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Commonwealth 
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Commonwealth Capital Ventures IV LP 
+												</div>
+											</div>
+										</td>
+										<td class="padding-none ">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													EquityZen Growth Technology Fund LLC
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													EquityZen Growth Technology Fund LLC
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													EquityZen Growth Technology Fund LLC
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													2,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													2,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													2,650,000.00
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													$635,789,88
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$635,789,88
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$635,789,88
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													92%
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													92%
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													100%
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													92%
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													92%
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													100%
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m few-cells__item--icon">
+													<i class="table__tooltip-icon"></i>
+													<div class="table__tooltip">
+														Deal: Postmates / S: Peter Gullekson / B: EquityZen Growth Technology Fund LLC - Series 23 / Trans: $405,000.00 / Comm: $20,250.00 - $15,187.50 paid to WealthForge co-marketing = $5,062.50 @ 92% = $4,657.50 / SPLIT @ 80% = 3,726.00 paid
+													</div>
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m few-cells__item--icon">
+													<i class="table__tooltip-icon"></i>
+													<div class="table__tooltip">
+														Deal: Postmates / S: Peter Gullekson / B: EquityZen Growth Technology Fund LLC - Series 23 / Trans: $405,000.00 / Comm: $20,250.00 - $15,187.50 paid to WealthForge co-marketing = $5,062.50 @ 92% = $4,657.50 / SPLIT @ 80% = 3,726.00 paid
+													</div>
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m few-cells__item--icon">
+													<i class="table__tooltip-icon"></i>
+													<div class="table__tooltip">
+														Deal: Postmates / S: Peter Gullekson / B: EquityZen Growth Technology Fund LLC - Series 23 / Trans: $405,000.00 / Comm: $20,250.00 - $15,187.50 paid to WealthForge co-marketing = $5,062.50 @ 92% = $4,657.50 / SPLIT @ 80% = 3,726.00 paid
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="tablewrap-blotter__name-cell">
+											<div class="table__justify">
+												<strong>Acme</strong>
+												<span>4%</span>
+												<strong>$199,999.99</strong>
+											</div>
+										</td>
+										<td class="padding-none">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--auto-height">
+													<div class="few-cells__item-inner">
+														<span>Nicholas Azur</span>
+														<strong>$199,999.99</strong>
+													</div>
+												</div>
+												<div class="few-cells__item few-cells__item--auto-height">
+													<div class="few-cells__item-inner">
+														<span>Nicholas Azur</span>
+														<strong>$199,999.99</strong>
+													</div>
+												</div>
+												<div class="few-cells__item few-cells__item--auto-height">
+													<div class="few-cells__item-inner">
+														<span>Nicholas Azur</span>
+														<strong>$199,999.99</strong>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="padding-none">
+											<div class="few-cells ">
+												<div class="few-cells__item few-cells__item--auto-height">
+													<div class="few-cells__item-inner">
+														<span>Nicholas Azur</span>
+														<strong>$199,999.99</strong>
+													</div>
+												</div>
+												<div class="few-cells__item few-cells__item--auto-height">
+													<div class="few-cells__item-inner">
+														<span>Nicholas Azur</span>
+														<strong>$199,999.99</strong>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="padding-none">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+											</div>
+										</td>
+										<td class="padding-none">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Dec 16, 2016
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													wire
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													wire
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													check
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													check
+												</div>
+											</div>
+										</td>
+										<td class="padding-none ">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													Commonwealth Capital Ventures IV LP
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Commonwealth 
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Commonwealth Capital Ventures IV LP 
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													Commonwealth Capital Ventures IV LP 
+												</div>
+											</div>
+										</td>
+										<td class="padding-none ">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													EquityZen Growth Technology Fund LLC
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													EquityZen Growth Technology Fund LLC
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													EquityZen Growth Technology Fund LLC
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													EquityZen Growth Technology Fund LLC
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													2,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													2,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													2,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													2,650,000.00
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													$635,789,88
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$635,789,88
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$635,789,88
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$635,789,88
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													92%
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													92%
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													100%
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													100%
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													92%
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													92%
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													100%
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													100%
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m">
+													$12,650,000.00
+												</div>
+											</div>
+										</td>
+										<td class="padding-none cell-center">
+											<div class="few-cells">
+												<div class="few-cells__item few-cells__item--padding-m few-cells__item--icon">
+													<i class="table__tooltip-icon"></i>
+													<div class="table__tooltip">
+														Deal: Postmates / S: Peter Gullekson / B: EquityZen Growth Technology Fund LLC - Series 23 / Trans: $405,000.00 / Comm: $20,250.00 - $15,187.50 paid to WealthForge co-marketing = $5,062.50 @ 92% = $4,657.50 / SPLIT @ 80% = 3,726.00 paid
+													</div>
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m few-cells__item--icon">
+													<i class="table__tooltip-icon"></i>
+													<div class="table__tooltip">
+														Deal: Postmates / S: Peter Gullekson / B: EquityZen Growth Technology Fund LLC - Series 23 / Trans: $405,000.00 / Comm: $20,250.00 - $15,187.50 paid to WealthForge co-marketing = $5,062.50 @ 92% = $4,657.50 / SPLIT @ 80% = 3,726.00 paid
+													</div>
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m few-cells__item--icon">
+													<i class="table__tooltip-icon"></i>
+													<div class="table__tooltip">
+														Deal: Postmates / S: Peter Gullekson / B: EquityZen Growth Technology Fund LLC - Series 23 / Trans: $405,000.00 / Comm: $20,250.00 - $15,187.50 paid to WealthForge co-marketing = $5,062.50 @ 92% = $4,657.50 / SPLIT @ 80% = 3,726.00 paid
+													</div>
+												</div>
+												<div class="few-cells__item few-cells__item--padding-m few-cells__item--icon">
+													<i class="table__tooltip-icon"></i>
+													<div class="table__tooltip">
+														Deal: Postmates / S: Peter Gullekson / B: EquityZen Growth Technology Fund LLC - Series 23 / Trans: $405,000.00 / Comm: $20,250.00 - $15,187.50 paid to WealthForge co-marketing = $5,062.50 @ 92% = $4,657.50 / SPLIT @ 80% = 3,726.00 paid
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="table__bottom-row" >
+										<td class="tablewrap-blotter__name-cell">
+											<div class="table__justify">
+												<strong>TOTAL  CR</strong>
+												<span>100%</span>
+												<strong>$199,999.99</strong>
+											</div>
+										</td>
+									</tr>
+								</table>
+								<!-- end table -->
+							</div>
+							<!-- end scrollbar -->
+
+							<!-- begin fake-header  -->
+							<div class="fake-header js-fake-head">
+								<div class="fake-header__in js-fixed">
+									<table class="table"><thead></thead></table>
+								</div>
+							</div>
+							<!-- end fake-header -->
+						</div>
+					</div>
+					<!-- end tablewrap -->
+
+
+					<!-- begin tablewrap  -->
+					<div class="tablewrap tablewrap-blotter js-tablewrap">
+						<div class="tablewrap__in">
+							<!-- begin sidebar  -->
+							<div class="sidebar js-sidebar">
+								<div class="sidebar__in js-sidebar-in">
+									<div class="sidebar__bl js-sidebar-bl">
+										<div class="sidebar__ttl js-sidebar-ttl"><span>Users</span></div>
+										<div class="sidebar__content js-content">
+											<div class="sidebar__search">
+												<input type="search" placeholder="Quick search">
+												<i class="icon icon-close search-close js-search-clear"></i>
+											</div>
+											<ul class="sidebar-list">
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All users</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All active reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All inactive reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All staff</a>
+												</li>
+												<li class="sidebar-list__option is-disabled">
+													<a href="#">A</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<i class="sidebar-task-ico"></i>
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+												<li class="sidebar-list__option is-title">
+													<a href="#">B</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Brian Dunn</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Boris Negov</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Brenda Stone</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Bonabe Mugaba</a>
+												</li>
+												<li class="sidebar-list__option is-title">
+													<a href="#">C</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Clint Clifford</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Cora Aricsson</a>
+												</li>
+												<li class="sidebar-list__option is-title">
+													<a href="#">D</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Denis Baley</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Duncan McLoud</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="sidebar__bl js-sidebar-bl">
+										<div class="sidebar__ttl js-sidebar-ttl"><span>Form types</span></div>
+										<div class="sidebar__content js-content">
+											<ul class="sidebar-list">
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All users</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All active reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All inactive reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All staff</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="sidebar__bl js-sidebar-bl">
+										<div class="sidebar__ttl js-sidebar-ttl"><span>Deals</span></div>
+										<div class="sidebar__content js-content">
+											<ul class="sidebar-list">
+												<li class="sidebar-list__option is-disabled">
+													<p>No items to show in this filter cause of the other filter combination</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end sidebar -->
+							<!-- begin scrollbar  -->
+							<div class="scrollbar js-scrollbar">
+								<!-- begin table  -->
+								<table class="table">
+									<tr class="table__head js-clone-head">
+										<th class="cell-center" title="FIRM" width="378" data-id="id"><p>FIRM</p></th>
+										<th class="cell-center" title="REP" width="270" data-id="name"><p>REP</p></th>
+										<th class="cell-center" title="DEAL" width="247" data-id="operations"><p>DEAL</p></th>
+										<th class="cell-center cell-text-mall" title="Date Paid to Rep" width="88" data-id="type"><p>Date Paid to Rep</p></th>
+										<th class="cell-center cell-text-mall" title="FR by GCS" width="88" data-id="type"><p>FR by GCS</p></th>
+										<th class="cell-center cell-text-mall" title="Way" width="64" data-id="type"><p>Way</p></th>
+										<th class="cell-center cell-text-mall" title="Seller" width="154" data-id="type"><p>Seller</p></th>
+										<th class="cell-center cell-text-mall" title="Buyer" width="150" data-id="type"><p>Buyer</p></th>
+										<th class="cell-center cell-text-mall" title="# of Shares" width="103" data-id="type"><p># of Shares</p></th>
+										<th class="cell-center cell-text-mall" title="TR Total" width="117" data-id="type"><p>TR Total</p></th>
+										<th class="cell-center cell-text-mall" title="CR" width="100" data-id="type"><p>CR</p></th>
+										<th class="cell-center cell-text-mall" title="TIER" width="57" data-id="type"><p>TIER</p></th>
+										<th class="cell-center cell-text-mall" title="Total CP" width="117" data-id="type"><p>Total CP</p></th>
+										<th class="cell-center cell-text-mall" title="Rep Split" width="63" data-id="type"><p>Rep Split</p></th>
+										<th class="cell-center cell-text-mall" title="Am. Paid to Rep" width="116" data-id="type"><p>Am. Paid to Rep</p></th>
+										<th class="cell-center cell-text-mall" title="Memo" width="66" data-id="type"><p>Memo</p></th>
+									</tr>
+									<tr>
+										<td  class="padding-none">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell" style="height: 124px">
+												<div class="table__justify table__padding-big">
+													<strong>Acme</strong>
+													<span>4%</span>
+													<strong>$199,999.99</strong>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell" style="height: 124px">
+												<div class="table__justify">
+													<strong>Acme</strong>
+													<span>4%</span>
+													<strong>$199,999.99</strong>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell" style="height: 165px">
+												<div class="table__justify">
+													<strong>Acme</strong>
+													<span>4%</span>
+													<strong>$199,999.99</strong>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell" style="height: 124px">
+												<div class="table__justify table__padding-md">
+													<span>Nicholas Azur</span>
+													<strong>$199,999.99</strong>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell" style="height: 124px">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--auto-height">
+														<div class="few-cells__item-inner">
+															<span>Nicholas Azur</span>
+															<strong>$199,999.99</strong>
+														</div>
+													</div>
+													<div class="few-cells__item few-cells__item--auto-height">
+														<div class="few-cells__item-inner">
+															<span>Nicholas Azur</span>
+															<strong>$199,999.99</strong>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell" style="height: 165px">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--auto-height">
+														<div class="few-cells__item-inner">
+															<span>Nicholas Azur</span>
+															<strong>$199,999.99</strong>
+														</div>
+													</div>
+													<div class="few-cells__item few-cells__item--auto-height">
+														<div class="few-cells__item-inner">
+															<span>Nicholas Azur</span>
+															<strong>$199,999.99</strong>
+														</div>
+													</div>
+													<div class="few-cells__item few-cells__item--auto-height">
+														<div class="few-cells__item-inner">
+															<span>Nicholas Azur</span>
+															<strong>$199,999.99</strong>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+
+										</td>
+										<td class="padding-none">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell" style="height: 124px">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--auto-height table__padding-sm">
+														<div class="few-cells__item-inner">
+															<span class="table__clip-elem" style="width: 50%">Nicholas Azur Nicholas Azur Nicholas Azur</span>
+															<strong>$199,999.99</strong>
+														</div>
+													</div>
+													<div class="few-cells__item few-cells__item--spec-default-height table__padding-sm">
+														<div class="few-cells__item-inner">
+															<span>Nicholas Azur</span>
+															<strong>$199,999.99</strong>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell" style="height: 124px">
+												<div class="few-cells ">
+													<div class="few-cells__item few-cells__item--auto-height">
+														<div class="few-cells__item-inner">
+															<span>Nicholas Azur</span>
+															<strong>$199,999.99</strong>
+														</div>
+													</div>
+													<div class="few-cells__item few-cells__item--auto-height">
+														<div class="few-cells__item-inner">
+															<span>Nicholas Azur</span>
+															<strong>$199,999.99</strong>
+														</div>
+													</div>
+													<div class="few-cells__item few-cells__item--auto-height">
+														<div class="few-cells__item-inner">
+															<span>Nicholas Azur</span>
+															<strong>$199,999.99</strong>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell" style="height: 165px">
+												<div class="few-cells ">
+													<div class="few-cells__item few-cells__item--auto-height">
+														<div class="few-cells__item-inner">
+															<span>Nicholas Azur</span>
+															<strong>$199,999.99</strong>
+														</div>
+													</div>
+													<div class="few-cells__item few-cells__item--auto-height">
+														<div class="few-cells__item-inner">
+															<span>Nicholas Azur</span>
+															<strong>$199,999.99</strong>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+
+										</td>
+										<td class="padding-none">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+
+										</td>
+										<td class="padding-none">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Dec 16, 2016
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														wire
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														wire
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														check
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														wire
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														wire
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														check
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														wire
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														wire
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														check
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														check
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none ">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														Commonwealth Capital Ventures IV LP
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Commonwealth 
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Commonwealth Capital Ventures IV LP 
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														Commonwealth Capital Ventures IV LP
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Commonwealth 
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Commonwealth Capital Ventures IV LP 
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														Commonwealth Capital Ventures IV LP
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Commonwealth 
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Commonwealth Capital Ventures IV LP 
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														Commonwealth Capital Ventures IV LP 
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none ">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														EquityZen Growth Technology Fund LLC
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														EquityZen Growth Technology Fund LLC
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														EquityZen Growth Technology Fund LLC
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														2,650,000.00
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														2,650,000.00
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														2,650,000.00
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														$12,650,000.00
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														$12,650,000.00
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														$12,650,000.00
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														$635,789,88
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														$635,789,88
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														$635,789,88
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														92%
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														92%
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														100%
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														$12,650,000.00
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														$12,650,000.00
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														$12,650,000.00
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														92%
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														92%
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														100%
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m">
+														$12,650,000.00
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														$12,650,000.00
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m">
+														$12,650,000.00
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<div class="few-cells">
+													<div class="few-cells__item few-cells__item--padding-m few-cells__item--icon">
+														<i class="table__tooltip-icon"></i>
+														<div class="table__tooltip">
+															Deal: Postmates / S: Peter Gullekson / B: EquityZen Growth Technology Fund LLC - Series 23 / Trans: $405,000.00 / Comm: $20,250.00 - $15,187.50 paid to WealthForge co-marketing = $5,062.50 @ 92% = $4,657.50 / SPLIT @ 80% = 3,726.00 paid
+														</div>
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m few-cells__item--icon">
+														<i class="table__tooltip-icon"></i>
+														<div class="table__tooltip">
+															Deal: Postmates / S: Peter Gullekson / B: EquityZen Growth Technology Fund LLC - Series 23 / Trans: $405,000.00 / Comm: $20,250.00 - $15,187.50 paid to WealthForge co-marketing = $5,062.50 @ 92% = $4,657.50 / SPLIT @ 80% = 3,726.00 paid
+														</div>
+													</div>
+													<div class="few-cells__item few-cells__item--padding-m few-cells__item--icon">
+														<i class="table__tooltip-icon"></i>
+														<div class="table__tooltip">
+															Deal: Postmates / S: Peter Gullekson / B: EquityZen Growth Technology Fund LLC - Series 23 / Trans: $405,000.00 / Comm: $20,250.00 - $15,187.50 paid to WealthForge co-marketing = $5,062.50 @ 92% = $4,657.50 / SPLIT @ 80% = 3,726.00 paid
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+
+										</td>
+									</tr>
+
+									<tr class="table__bottom-row" >
+										<td class="tablewrap-blotter__name-cell">
+											<div class="table__justify">
+												<strong>TOTAL  CR</strong>
+												<span>100%</span>
+												<strong>$199,999.99</strong>
+											</div>
+										</td>
+									</tr>
+								</table>
+								<!-- end table -->
+							</div>
+							<!-- end scrollbar -->
+
+							<!-- begin fake-header  -->
+							<div class="fake-header js-fake-head">
+								<div class="fake-header__in js-fixed">
+									<table class="table"><thead></thead></table>
+								</div>
+							</div>
+							<!-- end fake-header -->
+						</div>
+					</div>
+					<!-- end tablewrap -->
+
+
+					<!-- begin tablewrap  -->
+					<div class="tablewrap tablewrap-blotter js-tablewrap">
+						<div class="tablewrap__in">
+							<!-- begin sidebar  -->
+							<div class="sidebar js-sidebar">
+								<div class="sidebar__in js-sidebar-in">
+									<div class="sidebar__bl js-sidebar-bl">
+										<div class="sidebar__ttl js-sidebar-ttl"><span>Users</span></div>
+										<div class="sidebar__content js-content">
+											<div class="sidebar__search">
+												<input type="search" placeholder="Quick search">
+												<i class="icon icon-close search-close js-search-clear"></i>
+											</div>
+											<ul class="sidebar-list">
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All users</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All active reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All inactive reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All staff</a>
+												</li>
+												<li class="sidebar-list__option is-disabled">
+													<a href="#">A</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<i class="sidebar-task-ico"></i>
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+												<li class="sidebar-list__option is-title">
+													<a href="#">B</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Brian Dunn</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Boris Negov</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Brenda Stone</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Bonabe Mugaba</a>
+												</li>
+												<li class="sidebar-list__option is-title">
+													<a href="#">C</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Clint Clifford</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Cora Aricsson</a>
+												</li>
+												<li class="sidebar-list__option is-title">
+													<a href="#">D</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Denis Baley</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Duncan McLoud</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="sidebar__bl js-sidebar-bl">
+										<div class="sidebar__ttl js-sidebar-ttl"><span>Form types</span></div>
+										<div class="sidebar__content js-content">
+											<ul class="sidebar-list">
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All users</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All active reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All inactive reps</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">All staff</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aaron Siwoku</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Amanda Woodward</a>
+												</li>
+												<li class="sidebar-list__option js-sidebar-option">
+													<a href="#">Aisec Asimov</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="sidebar__bl js-sidebar-bl">
+										<div class="sidebar__ttl js-sidebar-ttl"><span>Deals</span></div>
+										<div class="sidebar__content js-content">
+											<ul class="sidebar-list">
+												<li class="sidebar-list__option is-disabled">
+													<p>No items to show in this filter cause of the other filter combination</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end sidebar -->
+							<!-- begin scrollbar  -->
+							<div class="scrollbar js-scrollbar">
+								<!-- begin table  -->
+								<table class="table">
+									<tr class="table__head js-clone-head">
+										<th class="cell-center" title="FIRM" width="378" data-id="id"><p>FIRM</p></th>
+										<th class="cell-center" title="REP" width="270" data-id="name"><p>REP</p></th>
+										<th class="cell-center" title="DEAL" width="247" data-id="operations"><p>DEAL</p></th>
+										<th class="cell-center cell-text-mall" title="Date Paid to Rep" width="88" data-id="type"><p>Date Paid to Rep</p></th>
+										<th class="cell-center cell-text-mall" title="FR by GCS" width="88" data-id="type"><p>FR by GCS</p></th>
+										<th class="cell-center cell-text-mall" title="Way" width="64" data-id="type"><p>Way</p></th>
+										<th class="cell-center cell-text-mall" title="Seller" width="154" data-id="type"><p>Seller</p></th>
+										<th class="cell-center cell-text-mall" title="Buyer" width="150" data-id="type"><p>Buyer</p></th>
+										<th class="cell-center cell-text-mall" title="# of Shares" width="103" data-id="type"><p># of Shares</p></th>
+										<th class="cell-center cell-text-mall" title="TR Total" width="117" data-id="type"><p>TR Total</p></th>
+										<th class="cell-center cell-text-mall" title="CR" width="100" data-id="type"><p>CR</p></th>
+										<th class="cell-center cell-text-mall" title="TIER" width="57" data-id="type"><p>TIER</p></th>
+										<th class="cell-center cell-text-mall" title="Total CP" width="117" data-id="type"><p>Total CP</p></th>
+										<th class="cell-center cell-text-mall" title="Rep Split" width="63" data-id="type"><p>Rep Split</p></th>
+										<th class="cell-center cell-text-mall" title="Am. Paid to Rep" width="116" data-id="type"><p>Am. Paid to Rep</p></th>
+										<th class="cell-center cell-text-mall" title="Memo" width="66" data-id="type"><p>Memo</p></th>
+									</tr>
+									<tr>
+										<td  class="padding-none">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell " >
+												<div class="table__justify table__padding-big">
+													<strong class="table__clip-elem table__clip-elem--sm">Acme</strong>
+													<span>4%</span>
+													<strong>$199,999.99</strong>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->	
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell" >
+												<div class="table__justify">
+													<strong class="table__clip-elem table__clip-elem--sm">Direct Lending Investments</strong>
+													<span>4%</span>
+													<strong>$199,999.99</strong>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell" >
+												<div class="table__justify">
+													<strong class="table__clip-elem table__clip-elem--sm">Slifka Asset Management</strong>
+													<span>4%</span>
+													<strong>$199,999.99</strong>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell" >
+												<div class="table__justify">
+													<strong  class="table__clip-elem table__clip-elem--sm" >Acme</strong>
+													<span>4%</span>
+													<strong>$199,999.99</strong>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell  selected">
+												<div class="table__justify table__padding-md">
+													<span>Nicholas Azur</span>
+													<strong>$199,999.99</strong>
+													<button class="table__next" href="#">
+														<i class="svg-ico icon-arr-right"></i>
+													</button>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell" >
+												<div class="table__justify">
+													<span>Nicholas Azur</span>
+													<strong>$199,999.99</strong>
+												</div>
+
+											</div>
+											<!--end table__pseudo-cell-->
+
+
+
+										</td>
+										<td class="padding-none">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell" >
+
+												<div class="table__justify table__padding-sm">
+													<span class="table__clip-elem" style="width: 60%">Nicholas Azur Nicholas Azur Nicholas Azur</span>
+													<strong>$199,999.99</strong>
+												</div>
+											</div>
+											<!--end table__pseudo-cell-->
+
+
+										</td>
+										<td class="padding-none">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													Dec 16, 2016
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													Dec 16, 2016
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													Dec 16, 2016
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													Dec 16, 2016
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													Dec 16, 2016
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													wire
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+
+
+										</td>
+										<td class="padding-none ">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													Commonwealth Capital Ventures IV LP
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+
+											
+										</td>
+										<td class="padding-none ">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													EquityZen Growth Technology Fund LLC
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													2,650,000.00
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+
+
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													2,650,000.00
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													2,650,000.00
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													92%
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													2,650,000.00
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													92%
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begintable __pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner">
+													2,650,000.00
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+											</div>
+											<!--end table__pseudo-cell-->
+										</td>
+										<td class="padding-none cell-center">
+											<!--begin table__pseudo-cell-->
+											<div class="table__pseudo-cell">
+												<!--begin table__pseudo-cell-item-inner-->
+												<div class="table__pseudo-cell-item-inner table__pseudo-cell-item-inner--icon">
+													<i class="table__tooltip-icon"></i>
+													<div class="table__tooltip">
+														Deal: Postmates / S: Peter Gullekson / B: EquityZen Growth Technology Fund LLC - Series 23 / Trans: $405,000.00 / Comm: $20,250.00 - $15,187.50 paid to WealthForge co-marketing = $5,062.50 @ 92% = $4,657.50 / SPLIT @ 80% = 3,726.00 paid
+													</div>
+												</div>
+												<!--end table__pseudo-cell-item-inner-->
+
+											</div>
+											<!--end table__pseudo-cell-->
+
+										</td>
+									</tr>
+
+									<tr class="table__bottom-row" >
+										<td class="tablewrap-blotter__name-cell">
+											<div class="table__justify">
+												<strong>TOTAL  CR</strong>
+												<span>100%</span>
+												<strong>$199,999.99</strong>
+											</div>
+										</td>
+									</tr>
+								</table>
+								<!-- end table -->
+							</div>
+							<!-- end scrollbar -->
+
+							<!-- begin fake-header  -->
+							<div class="fake-header js-fake-head">
+								<div class="fake-header__in js-fixed">
+									<table class="table"><thead></thead></table>
+								</div>
+							</div>
+							<!-- end fake-header -->
+						</div>
+					</div>
+					<!-- end tablewrap -->
+
+				</div>
+			</div>
+		</div>
+		<!-- begin footer  -->
+		<div class="footer js-footer">
+			<div class="l">
+				<p>© 2009-2013 Growth Capital Services.  Growth Capital Services, Member FINRA, SIPC. All information presented herein is CONFIDENTIAL.</p>
+			</div>
+		</div>
+		<!-- end footer -->
+	</div>
+	<!-- END out-->
+	<div class="overlay">
+		<div class="popup is-attach js-popup" id="attach">
+			<div class="popup__head">
+				<p>Attached files</p>
+				<i class="icon icon-close js-close"></i>
+			</div>
+			<div class="popup__body">
+				<p>Below are files attached to і [Document type]:</p>
+				<div class="popup__bl">
+					<div class="popup__el">
+						<i class="svg-ico letter-ico"></i>
+						<span class="popup__num">EL12522</span>
+						<span class="txt-bold">[Name of the form]</span>
+					</div>
+					<a href="#" class="popup__more">Open form to add file</a>
+				</div>
+			</div>
+			<!-- begin table  -->
+			<table class="table">
+				<tr class="table__head">
+					<th width="137"><p>ID</p></th>
+					<th width="307"><p>Name</p></th>
+					<th><p>Type</p></th>
+					<th width="98"><p>Uploaded</p></th>
+					<th class="table__drop"><p>&nbsp;</p></th>
+				</tr>
+				<tr>
+					<td>
+						<div class="table__el">
+							<i class="svg-ico pdf-ico"></i>
+							<span>FI12522-001</span>
+						</div>
+					</td>
+					<td>
+						<p>Approval Letter</p>
+					</td>
+					<td>
+						<p>PDF</p>
+					</td>
+					<td>
+						<p>Aug 10, 2015</p>
+					</td>
+					<td class="table__drop">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__bl"></span>
+							<div class="dropdown__in js-inner">
+								<ul class="dropdown__list is-top-level">
+									<li><a href="#">Open in new window</a></li>
+									<li><a href="#">Download all in ZIP</a></li>
+									<li><a href="#">Deal status</a></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="table__el">
+							<i class="svg-ico pic-ico"></i>
+							<span>FI12522-002</span>
+						</div>
+					</td>
+					<td>
+						<p>Attachment Name</p>
+					</td>
+					<td>
+						<p>Image</p>
+					</td>
+					<td>
+						<p>Aug 10, 2015</p>
+					</td>
+					<td class="table__drop">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__bl"></span>
+							<div class="dropdown__in js-inner">
+								<ul class="dropdown__list is-top-level">
+									<li><a href="#">Open in new window</a></li>
+									<li><a href="#">Download all in ZIP</a></li>
+									<li><a href="#">Deal status</a></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="table__el">
+							<i class="svg-ico pic-ico"></i>
+							<span>FI12522-003</span>
+						</div>
+					</td>
+					<td>
+						<p>Client ID Scan</p>
+					</td>
+					<td>
+						<p>Image</p>
+					</td>
+					<td>
+						<p>Aug 10, 2015</p>
+					</td>
+					<td class="table__drop">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__bl"></span>
+							<div class="dropdown__in js-inner">
+								<ul class="dropdown__list is-top-level">
+									<li><a href="#">Open in new window</a></li>
+									<li><a href="#">Download all in ZIP</a></li>
+									<li><a href="#">Deal status</a></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="table__el">
+							<i class="svg-ico unknown-ico"></i>
+							<span>FI12522-004</span>
+						</div>
+					</td>
+					<td>
+						<p>Client ID Scan Back</p>
+					</td>
+					<td>
+						<p>File</p>
+					</td>
+					<td>
+						<p>Aug 10, 2015</p>
+					</td>
+					<td class="table__drop">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__bl"></span>
+							<div class="dropdown__in js-inner">
+								<ul class="dropdown__list is-top-level">
+									<li><a href="#">Open in new window</a></li>
+									<li><a href="#">Download all in ZIP</a></li>
+									<li><a href="#">Deal status</a></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="table__el">
+							<i class="svg-ico doc-ico"></i>
+							<span>FI12522-034</span>
+						</div>
+					</td>
+					<td >
+						<p>FINRA Approval Letter</p>
+					</td>
+					<td>
+						<p>DOC</p>
+					</td>
+					<td>
+						<p>Aug 10, 2015</p>
+					</td>
+					<td class="table__drop">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__bl"></span>
+							<div class="dropdown__in js-inner">
+								<ul class="dropdown__list is-top-level">
+									<li><a href="#">Open in new window</a></li>
+									<li><a href="#">Download all in ZIP</a></li>
+									<li><a href="#">Deal status</a></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="table__el">
+							<i class="svg-ico pdf-ico"></i>
+							<span>FI12522-006</span>
+						</div>
+					</td>
+					<td>
+						<p>NDA template</p>
+					</td>
+					<td>
+						<p>PDF</p>
+					</td>
+					<td>
+						<p>Aug 10, 2015</p>
+					</td>
+					<td class="table__drop">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__bl"></span>
+							<div class="dropdown__in js-inner">
+								<ul class="dropdown__list is-top-level">
+									<li><a href="#">Open in new window</a></li>
+									<li><a href="#">Download all in ZIP</a></li>
+									<li><a href="#">Deal status</a></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="table__el">
+							<i class="svg-ico pic-ico"></i>
+							<span>FI12522-008</span>
+						</div>
+					</td>
+					<td>
+						<p>My ID Scan</p>
+					</td>
+					<td>
+						<p>Image</p>
+					</td>
+					<td>
+						<p>Aug 10, 2015</p>
+					</td>
+					<td class="table__drop">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__bl"></span>
+							<div class="dropdown__in js-inner">
+								<ul class="dropdown__list is-top-level">
+									<li><a href="#">Open in new window</a></li>
+									<li><a href="#">Download all in ZIP</a></li>
+									<li><a href="#">Deal status</a></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="table__el">
+							<i class="svg-ico pic-ico"></i>
+							<span>FI12522-008</span>
+						</div>
+					</td>
+					<td>
+						<p>My ID Scan</p>
+					</td>
+					<td>
+						<p>Image</p>
+					</td>
+					<td>
+						<p>Aug 10, 2015</p>
+					</td>
+					<td class="table__drop">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__bl"></span>
+							<div class="dropdown__in js-inner">
+								<ul class="dropdown__list is-top-level">
+									<li><a href="#">Open in new window</a></li>
+									<li><a href="#">Download all in ZIP</a></li>
+									<li><a href="#">Deal status</a></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="table__el">
+							<i class="svg-ico doc-ico"></i>
+							<span>FI12522-009</span>
+						</div>
+					</td>
+					<td>
+						<p>Document name</p>
+					</td>
+					<td>
+						<p>DOC</p>
+					</td>
+					<td>
+						<p>Aug 10, 2015</p>
+					</td>
+					<td class="table__drop">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__bl"></span>
+							<div class="dropdown__in js-inner">
+								<ul class="dropdown__list is-top-level">
+									<li><a href="#">Open in new window</a></li>
+									<li><a href="#">Download all in ZIP</a></li>
+									<li><a href="#">Deal status</a></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<!-- end table -->
+		</div>
+	</div>
+</body>
+</html>

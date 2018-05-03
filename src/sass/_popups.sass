@@ -54,6 +54,8 @@
 		width: 565px
 	&.is-edit-commission
 		width: 495px
+	&.is-530-w
+		width: 530px
 	&_md
 		width: 860px
 		max-width: 100%
@@ -84,6 +86,12 @@
 		padding: 15px 20px 20px
 		&.no-b-pad
 			padding-bottom: 0
+		&--spec
+			padding-left: 50px
+			padding-right: 50px
+			padding-bottom: 34px
+		&--padding-none
+			padding: 0
 		.divider
 			margin: 15px -20px
 		.history
@@ -92,6 +100,23 @@
 				padding: 0 20px
 			td
 				padding: 10px 20px
+	&__content
+		&--h-400
+			height: 400px
+	&__link-row
+		font-size: 0
+		margin-bottom: 20px
+		a
+			display: inline-block
+			vertical-align: top
+			margin-right: 15px
+			font-size: 12px
+			color: #0076ff
+			padding-bottom: 0px
+			border-bottom: 1px dotted #0076ff
+			&:last-of-type
+				margin-right: 0
+
 	&__bl
 		margin: 10px 0
 		+clr
@@ -99,6 +124,16 @@
 			margin: 0
 		.dropdown
 			float: right
+	&__border-inner
+		background-color: #fff
+		box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.15)
+		border: solid 1px #cfd5e0
+		padding: 10px 12px
+		min-height: 80px
+		&>div
+			margin-bottom: 3px
+			&:last-of-type
+				margin-bottom: 0
 	&__card
 		display: table
 		width: 100%
@@ -146,6 +181,38 @@
 		.icon
 			margin-right: 16px
 			vertical-align: middle
+		&--small-text
+			.popup__definition 
+				.tooltip
+					margin-left: 0
+					top: -4px
+			.popup__el
+				font-size: 11px
+				&:nth-of-type(1)
+					.popup__definition 
+						padding-right: 10px
+						.tooltip
+							left: 84%
+				&:nth-of-type(2)
+					.popup__definition 
+						padding: 0 10px
+						.tooltip
+							left: 82%
+				&:nth-of-type(3)
+					.popup__definition 
+						padding-right: 10px
+						.tooltip
+							left: 93%
+				&:nth-of-type(4)
+					.popup__definition 
+						padding-right: 10px
+						.tooltip
+							left: 92%
+				&:nth-of-type(5)
+					.popup__definition 
+						padding-right: 10px
+						.tooltip
+							left: 86%
 	&__more
 		float: right
 		color: #097bf2
@@ -161,6 +228,8 @@
 		position: relative
 		height: 435px
 		overflow: hidden
+		&--h-auto
+			height: auto
 	&__link
 		display: inline-block
 		color: #097bf2
@@ -268,6 +337,34 @@
 			right: 10px
 			.icon-close
 				font-size: 11px
+	&__right-content
+		text-align: right
+		margin-bottom: 20px
+		margin-top: 15px
+	&__two-col
+		+clr
+		text-align: center
+		.deal-steps__link
+			margin-right: 0
+			margin-bottom: 20px
+		.complicated-icon 
+			.svg-ico
+				border-radius: 3px
+		.btn
+			padding: 8px 27px
+	&__two-col-left, &__two-col-right
+		width: 50%
+		padding: 32px 40px
+	&__two-col-left
+		float: left
+		border-right: 1px solid #dce0e7
+	&__two-col-right
+		float: right
+	&__two-col-text
+		font-size: 12px
+		color: #4a4a4a
+		min-height: 85px
+		margin-bottom: 20px
 	.txt-bold
 		+opensans-sb
 	.icon-close
@@ -426,6 +523,11 @@
 			border-color: #6C757A
 	.check__span
 		display: block
+	&--spec-margin
+		margin: 0 -20px 15px
+		.popup-list__option
+			&:last-child
+				border-bottom: 1px solid #efefef
 
 
 
@@ -459,7 +561,8 @@
 	&__ttl
 		padding: 15px 20px
 		text-transform: uppercase
-		color: #f76300
+		// color: #f76300
+		color: rgb(218,41,28) 
 		letter-spacing: 0.02em
 		cursor: pointer
 		+opensans-sb

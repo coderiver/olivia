@@ -9,19 +9,23 @@
 		.back-link-row
 			padding-left: calc(50% + 15px)
 			margin-bottom: 30px
-		.upper
-			&__link
-				&:after
-					border-color: transparent transparent #fff transparent
+		// .upper
+		// 	&__link
+		// 		&:after
+		// 			border-color: transparent transparent #fff transparent
 				
 					
 							// rgba(255, 241, 222, 0.8)
 
 	&__title
+		+clr
 		span
 			color: #555c60
 			font-size: 13px
 			+opensans-sb
+			float: left
+			display: inline-block
+			vertical-align: top
 	&__inner
 		+clr
 
@@ -46,7 +50,8 @@
 		float: left
 		border-left: 1px solid  #fff
 		position: relative
-		padding: 12px 28px 57px 52px
+		// padding: 12px 28px 57px 52px
+		padding: 12px 28px 57px 42px
 		.svg-ico
 			width: 44px
 			height: 44px
@@ -115,6 +120,7 @@
 			// 	&::after
 			// 		background-color: #4a4a4a
 			.deal-steps__title
+				// color: rgba(51, 102, 0, 1)
 				color: #2caf24
 		// &.is-entry-exists
 		// 	.deal-steps__link.is-in-review
@@ -128,11 +134,12 @@
 			&::after
 				left: -1px
 			.deal-steps__title
-				color: #2caf24
+				// color: rgba(51, 102, 0, 1)
 				span
 					height: 2px
 					width: 19px
 					background-color: #2caf24
+					// background-color: rgba(51, 102, 0, 1)
 					display: inline-block
 					vertical-align: middle
 					margin-right: 6px
@@ -224,6 +231,9 @@
 			font-size: 12px
 			color: #097bf2
 			border-bottom: 1px dotted #097bf2
+	&__link-add
+		float: right
+		// margin-right: 0
 	&__link-show-all
 		color: #3aa59b
 		a
@@ -311,6 +321,9 @@
 		position: absolute
 		bottom: 30px
 		left: 52px
+		width: calc(100% - 28px - 57px)
+		+clr
+
 		.div
 			margin-right: 0
 .info-icon-spec
@@ -397,11 +410,15 @@
 		&--yellow
 			background: #f5a623
 		&--green
-			background: #2daf25
+			background: #2caf24
 	&.is-approved
 		.complicated-icon__spec-icon
 			&::before
 				background-image: url("../img/svg-bg/approved.svg")
+	&.is-closed
+		.complicated-icon__spec-icon
+			&::before
+				background-image: url("../img/svg-bg/closed-deal.svg")
 	&.is-in-review
 		.complicated-icon__spec-icon
 			&::before
@@ -465,6 +482,19 @@
 				border-radius: 3px
 				top: -2px
 				left: -2px
+	&.is-infinity
+		.complicated-icon__spec-icon
+			&:after
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				background: #fff
+				border-radius: 50%
+				z-index: 0
+			&::before
+				z-index: 1
+				background-image: url("../img/svg-bg/icon-infinity.svg")
 	&.is-cash
 		width: 48px
 		&::before
@@ -505,6 +535,27 @@
 		.complicated-icon__number
 			margin-top: 8px
 			color: #878787
+.closed-table-icon
+	display: inline-block
+	width: 20px
+	height: 20px
+	background-size: 20px 20px
+	position: relative
+
+	// position: absolute
+	// top: calc(50% - 10.5px)
+	// top: 12px
+	// right: -10.5px
+	z-index: 1
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-size: 20px 20px
+		background-image: url("../img/svg-bg/closed-deal-border-none.svg")
 .modal-submitted
 	position: fixed
 	z-index: 15
@@ -721,11 +772,12 @@
 		a
 			text-decoration: underline
 			color: inherit
-	&__link
-		a
-			text-decoration: underline
-			color: #2086f2
-			font-size: 12px
+.deal-log-link
+	margin-bottom: 10px
+	a
+		text-decoration: underline
+		color: #2086f2
+		font-size: 12px
 
 .tasks
 	margin-bottom: 36px
@@ -752,3 +804,5 @@
 		display: none
 		&.is-active
 			display: block
+	.dropdown
+		z-index: 2

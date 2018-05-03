@@ -30,6 +30,8 @@
 	&.is-search-page 
 		.filters
 			position: static
+	&.tablewrap-blotter
+
 	&__in
 		position: relative
 		&:before
@@ -57,6 +59,47 @@
 		&.no-sidedrop
 			.scrollbar
 				margin-right: 0
+.tablewrap-blotter
+	.filters__ttl
+		vertical-align: top
+		position: relative
+		top: -14px
+	.scrollbar 
+		margin-right: 0
+		.table 
+			td 
+				padding: 0
+
+			
+	.table 
+		// border-collapse: collapse
+
+		.table__head
+			th
+				border-right: 1px solid #efefef
+				cursor: default
+				p:not(.check__span)
+					border: none
+		.table__bottom-row
+			td
+				border: none
+				
+				&.tablewrap-blotter__name-cell
+					padding-top: 13px
+					padding-bottom: 12px
+					&:hover
+						background: none
+		td
+			border-right: 1px solid #efefef
+			vertical-align: top
+
+		tr
+			&:hover
+					background: darken(#fff, 0)
+		strong
+			font-weight: 600
+
+
 
 // table
 .table
@@ -84,6 +127,13 @@
 		text-align: center
 		.icon.icon-clip
 			font-size: 14px
+	&__clip-elem
+		text-overflow: ellipsis
+		overflow: hidden
+		white-space: nowrap
+		width: 70%
+		&--sm
+			width: 48%
 	&__drop
 		width: 50px
 		padding: 5px 8.5px
@@ -108,6 +158,19 @@
 		vertical-align: middle
 		&:first-child
 			vertical-align: baseline
+	&__justify
+		display: flex
+		justify-content: space-between
+		position: relative
+		padding: 10px 7px
+	&__justify-percent
+		width: 17%
+		text-align: right
+		padding-left: 5px
+	&__justify-price
+		width: 35%
+		text-align: right
+		padding-left: 5px
 	&__pic
 		max-width: 50px
 		height: 50px
@@ -133,17 +196,138 @@
 			text-decoration: none
 	&__bold
 		+opensans-sb
+	&__tooltip-icon
+		cursor: pointer
+		display: block
+		width: 18px
+		height: 18px
+		margin-left: auto
+		margin-right: auto
+		font-size: 0
+		background-size: 18px 18px
+		background-image: url(data:image/png;base64,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)
+		&:hover + .table__tooltip
+			display: block
+			
+	&__tooltip
+		display: none
+		position: absolute
+		right: calc(100% - 10px)
+		width: 290px
+		top: 50%
+		text-align: left
+		transform: translateY(-50%)
+		z-index: 1
+		background: #fff6e6
+		padding: 10px 20px
+		box-shadow:   0px  0px 8px rgba(gray, 0.5)
+		border-radius: 5px
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			right: -8px
+			margin-top: -8px
+			+arr(8, 16,#fff6e6, r )
+			z-index: 0
+	&__next
+		position: absolute
+		right: 10px
+		cursor: pointer
+		top: 12px
+		background: none
+		border: none
+		display: none
+		appearance: none
+	
+		line-height: 1
+		i
+			color: rgba(#6c757a, 0.31)
+
+	&__pseudo-cell
+		border-bottom: 1px solid #efefef
+		&.selected
+			background: rgba(#656565, 0.09)
+			position: relative
+			.table__next
+				display: block
+		.table__justify
+			// padding: 10px 7px
+			min-height: 39px
+	&__pseudo-cell-item-inner
+		padding: 10px 7px
+		min-height: 39px
+		font-size: 12px
+		position: relative
+		&:not(.table__pseudo-cell-item-inner--icon)
+			text-overflow: ellipsis
+			overflow: hidden
+			white-space: nowrap
+	&__border-bottom
+		border-bottom: 1px solid #efefef
+
+	.few-cells
+		display: flex
+		flex-direction: column
+		height: 100%
+		&--border-transp
+			.few-cells__item
+				border-color: transparent
+		&__item
+			border-bottom: 1px solid #efefef
+			position: relative
+			padding: 10px 7px
+			width: 100%
+			min-height: 40px
+			&:not(.few-cells__item--icon)
+				text-overflow: ellipsis
+				overflow: hidden
+				white-space: nowrap
+			&:last-of-type
+				border-color: transparent
+			&--padding-m, &--padding-sm
+				font-size: 12px
+				flex-grow: 0
+				flex-shrink: 0
+				flex-basis: 41px
+			&--padding-m
+				padding: 10px 7px
+			&--padding-sm
+				padding: 2px 7px
+			&--spec-default-height
+				flex-basis: 41px
+				flex-grow: 0
+				flex-shrink: 0
+			&--auto-height
+				flex-grow: 1
+				flex-basis: auto
+
+		&__item-inner
+			display: flex
+			justify-content: space-between
+			height: 100%
+	.table__padding-big
+		padding-left: 24px
+		padding-right: 48px
+	.table__padding-md
+		padding-left: 15px
+		padding-right: 41px
+	.table__padding-sm
+		padding-left: 16px
+		padding-right: 16px
 	span.table__text
 		display: inline-block
 	.table__head
 		background: #f7f8f9
 		text-align: left
+		height: 39px
 		&.is-full-border
 			border: 1px solid #dce0e7
 		th
 			position: relative
-			height: 39px
-			min-height: 39px
+			// height: 39px
+			// min-height: 39px
+			height: 100%
 			text-align: left
 			font-size: 13px
 			font-weight: normal
@@ -196,6 +380,12 @@
 					left: 50%
 					margin-top: -7px
 					margin-left: -7px
+			&.cell-text-mall
+				font-size: 12px
+				p:not(.check__span)
+					white-space: normal
+					text-overflow: none
+					line-height: 1
 			p, span
 				&:not(.check__span)
 					position: relative
@@ -311,8 +501,13 @@
 			text-align: right
 		&.cell-border-right
 			border-right: 1px solid #efefef
+		&.padding-none
+			padding: 0
 		.icon.icon-clip
 			font-size: 14px
+		// .table__pseudo-cell
+		// 	&:last-of-type
+		// 		border-color: transparent
 	td,th
 		&:first-child
 			.check
@@ -411,6 +606,8 @@
 			font-size: 16px
 	a, a:visited
 		color: #6c757a
+		&.table__link-orange
+			color: #f76300
 
 	&_smaller
 		border-left: 1px solid  #dce0e7
@@ -467,6 +664,8 @@
 				&.cell-center,
 				&.cell-pic
 					padding-left: 10px
+			&.padding-none
+				padding: 0
 	.ps-scrollbar-x-rail
 		width: 100% !important
 		bottom: 0
