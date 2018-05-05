@@ -2165,16 +2165,16 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .ne-content { padding: 50px 35px 65px; margin-bottom: 35px; position: relative; }
 .ne-content .form { margin: 0px 0 5px; }
 
-.ne-sidebar { padding: 22px 0; position: fixed; }
+.ne-sidebar { padding: 22px 0; position: relative; top: auto; bottom: auto; -webkit-transform-origin: 50% 0%; -ms-transform-origin: 50% 0%; transform-origin: 50% 0%; }
 .ne-sidebar .form { margin: 0px 0 5px; }
 .ne-sidebar .form__ttl { padding: 0 65px 0 29px; }
 .ne-sidebar__close-btn { color: #cccccc; position: absolute; top: 30px; right: 14px; -webkit-appearance: none; -moz-appearance: none; appearance: none; border: none; background: none; }
 .ne-sidebar__close-btn .icon { margin-left: 4px; }
 
-.two-col { position: relative; *zoom: 1; }
+.two-col { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; position: relative; *zoom: 1; }
 .two-col:after { content: " "; display: table; clear: both; }
-.two-col__left { float: left; width: 62.8%; }
-.two-col__right { position: relative; height: 100%; float: right; width: -webkit-calc(37.2% - 30px); width: calc(37.2% - 30px); }
+.two-col__left { width: 62.8%; }
+.two-col__right { position: relative; width: -webkit-calc(37.2% - 30px); width: calc(37.2% - 30px); }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1365px){
