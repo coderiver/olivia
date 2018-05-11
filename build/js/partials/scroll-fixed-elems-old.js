@@ -24,10 +24,12 @@ if(isEntryPage === true){
 	let sidebarWidth = $(".js-entry-sidebar").width();
 	$(".js-entry-sidebar").css('width', `${sidebarWidth}px`);
 
-
+	var sidebarAtBottom = false;
+	var sidebarAtTop;
 	var minSidebarTopOffset = document.querySelector(".js-entry-sidebar").getBoundingClientRect().top;
+	var temp = minSidebarTopOffset;
 	var defaultBottomOffset = Math.abs(document.querySelector(".js-entry-content").getBoundingClientRect().bottom - $(document).height());
-	console.log(`def ${minSidebarTopOffset}`);
+
 };
 
 function scrollEntrySidebar(scrollProps){
@@ -36,38 +38,27 @@ function scrollEntrySidebar(scrollProps){
 	let currTop = window.pageYOffset;
 
 	
-	let headerHeight = $(".header").height();
-
-
-
-	// let entryContentHeight = entryContent.clientHeight; може знадобитись
-
-
-	// let docHeight = $(document).height();
-	let contentBottomPos = entryContent.getBoundingClientRect().bottom;
-	let $entrySidebar = $(entrySidebar);
-	let sidebarTopPos = entrySidebar.getBoundingClientRect().top;
+	let headerHeight = document.querySelector(".header").clientHeight;
+	let contentHeight = entryContent.clientHeight;
 	let sidebarHeight = entrySidebar.clientHeight;
 	let availableContentHeight = $(window).height() - headerHeight;
 
+	let contentBottomPos = entryContent.getBoundingClientRect().bottom;
+	let contentTopPos = entryContent.getBoundingClientRect().top;
+	let sidebarTopPos = entrySidebar.getBoundingClientRect().top;
 
-	console.log(`sidebarTopPos ${sidebarTopPos}`);
-	// console.log(`pageYOffset ${entryContent.pageYOffset}`);
-
-	// console.log(availableContentHeight);
-	// console.log(`curTop ${currTop}`);}
-
-
-
-//  на случай если динамически изменится позиция пересчитать значение 
-if (minSidebarTopOffset < sidebarTopPos) {
-	minSidebarTopOffset = sidebarTopPos;
-};
-let minusTopOffset = -minSidebarTopOffset;
+	let $entrySidebar = $(entrySidebar);
 
 
 
-let translateValue = availableContentHeight + currTop - minSidebarTopOffset   - sidebarHeight ;
+
+
+	if (minSidebarTopOffset < sidebarTopPos) {
+		minSidebarTopOffset = sidebarTopPos;
+	};
+	let minusTopOffset = -minSidebarTopOffset;
+
+
 
 
 
@@ -76,30 +67,68 @@ let translateValue = availableContentHeight + currTop - minSidebarTopOffset   - 
 			$entrySidebar.css('position', 'fixed');
 
 		}else{
+
+
 			if(scrollProps.prevScrollDirection === 'toBottom'){
+				// $entrySidebar.addClass('to-bottom').removeClass('to-top');
+				let bottomOffset = Math.abs(contentBottomPos - $(document).height());
+				let minBottomOffset =  bottomOffset  < defaultBottomOffset ? bottomOffset : defaultBottomOffset;
+
+				if(sidebarTopPos + minBottomOffset <= minusTopOffset){
+					$entrySidebar.css({'position': 'fixed', 'bottom': `${minBottomOffset}px`});
+					$entrySidebar.addClass('to-bottom js-control');
+				};
+
+				if(entryContent.getBoundingClientRect().bottom == entrySidebar.getBoundingClientRect().bottom){
+					sidebarAtBottom = true;
+				};
 
 
-// на случай если изменится динамически
-let bottomOffset = Math.abs(contentBottomPos - $(document).height());
-let minBottomOffset =  bottomOffset  < defaultBottomOffset ? bottomOffset : defaultBottomOffset;
+			}else if(scrollProps.prevScrollDirection === 'toTop') {
 
 
-// фиксация после полной прокрутки сайдбара
-if(sidebarTopPos + minBottomOffset <= minusTopOffset){
-	$entrySidebar.css({'position': 'fixed', 'bottom': `${minBottomOffset}px`});
-	console.log(`fixed`);
-				// console.log(availableContentHeight, entrySidebar.getBoundingClientRect().bottom);
+
+				
+				if($entrySidebar.hasClass('to-bottom')){
+
+					$entrySidebar.removeClass('to-bottom').addClass("is-translated");
+
+					$entrySidebar.css({'position': 'relative', 'bottom': `auto`, 'transform': `translateY(${temp + currTop}px)`});
+					return;
+				}
+
+				if($entrySidebar.hasClass('js-control')){
+					$entrySidebar.addClass('to-top');
+					if(sidebarTopPos >= temp){
+
+						$entrySidebar.css({'position': 'fixed', 'bottom': `auto`, 'transform': `translateY(0px)`});
+						$entrySidebar.removeClass('is-translated');
+						if(currTop == 0){
+							$entrySidebar.css({'position': 'relative', 'bottom': `auto`, 'transform': `translateY(0px)`});
+							$entrySidebar.removeClass('is-translated js-control to-top');
+							return;
+						}
+					};
+
+					if($entrySidebar.hasClass('is-translated')) return;
+					if(sidebarAtBottom == true){
+						let	translateValue = contentHeight - sidebarHeight;
+
+						$entrySidebar.css({'position': 'relative', 'bottom': `auto`, 'transform': `translateY(${translateValue}px)`});
+						$entrySidebar.addClass('is-translated');
+						sidebarAtBottom = false;
+					}
+
+				};
+
+
+
+				
+
+			}else{
 
 			};
-
-		}else if(scrollProps.prevScrollDirection === 'toTop') {
-
-			if($entrySidebar.hasClass('is-translated')) return;
-			$entrySidebar.css({'position': 'relative', 'bottom': `auto`, 'transform': `translateY(${translateValue}px)`}); 
-
-			$entrySidebar.addClass('is-translated');
-		}
-	};
+		};
 
 
 // end function

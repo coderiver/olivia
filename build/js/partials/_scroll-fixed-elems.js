@@ -65,11 +65,18 @@ function scrollEntrySidebar(scrollProps){
 	// if(sidebarHeight < entryContentHeight && sidebarHeight < availableContentHeight ){
 		if( sidebarHeight < availableContentHeight ){
 			$entrySidebar.css('position', 'fixed');
-
 		}else{
-
-
 			if(scrollProps.prevScrollDirection === 'toBottom'){
+				toBottomScroll()
+			}else if(scrollProps.prevScrollDirection === 'toTop') {
+				toTopScroll();
+			}else{
+
+			};
+		};
+
+		
+		function toBottomScroll(){
 				// $entrySidebar.addClass('to-bottom').removeClass('to-top');
 				let bottomOffset = Math.abs(contentBottomPos - $(document).height());
 				let minBottomOffset =  bottomOffset  < defaultBottomOffset ? bottomOffset : defaultBottomOffset;
@@ -84,18 +91,18 @@ function scrollEntrySidebar(scrollProps){
 				};
 
 
-			}else if(scrollProps.prevScrollDirection === 'toTop') {
+
+			};
+			function toTopScroll(){
 
 
+				// if($entrySidebar.hasClass('to-bottom')){
 
-				
-				if($entrySidebar.hasClass('to-bottom')){
+				// 	$entrySidebar.removeClass('to-bottom').addClass("is-translated");
 
-					$entrySidebar.removeClass('to-bottom').addClass("is-translated");
-
-					$entrySidebar.css({'position': 'relative', 'bottom': `auto`, 'transform': `translateY(${temp + currTop}px)`});
-					return;
-				}
+				// 	$entrySidebar.css({'position': 'relative', 'bottom': `auto`, 'transform': `translateY(${temp + currTop}px)`});
+				// 	return;
+				// }
 
 				if($entrySidebar.hasClass('js-control')){
 					$entrySidebar.addClass('to-top');
@@ -121,15 +128,7 @@ function scrollEntrySidebar(scrollProps){
 
 				};
 
-
-
-				
-
-			}else{
-
 			};
-		};
-
 
 // end function
 };
