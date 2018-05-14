@@ -39,4 +39,20 @@ $(document).ready(function() {
 		tr.toggleClass('is-vertical');
 	});
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
