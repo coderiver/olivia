@@ -191,136 +191,7 @@ $(document).ready(function() {
 	};
 	
 	
-	let isEntryPage = document.querySelector(".js-entry-sidebar") ? true: false;
-	if(isEntryPage === true){
-		let sidebarPos = document.querySelector(".js-entry-sidebar").getBoundingClientRect();
-		let contentPos = document.querySelector(".js-entry-content").getBoundingClientRect();
-		// при position fixed ширина немного меняется
-		// let sidebarWidth = $(".js-entry-sidebar").width();
-		// $(".js-entry-sidebar").css('width', `${sidebarWidth}px`);
-		// var globalSidebarPos;
-		// var minSidebarTopOffset = document.querySelector(".js-entry-sidebar").getBoundingClientRect().top;
-		// var temp = minSidebarTopOffset;
-		// var defaultBottomOffset = Math.abs(document.querySelector(".js-entry-content").getBoundingClientRect().bottom - $(document).height());
-		// $('.js-entry-sidebar').stickySidebar({
-		// 	topSpacing: sidebarPos.top,
-		// 	bottomSpacing: 0,
-	 //    containerSelector: '.js-entry-two-col',
-	 //    innerWrapperSelector: '.ne-sidebar'
-		// });
 	
-		setTimeout(function(){
-			console.log(111);
-			var sidebar = new StickySidebar('.js-entry-sidebar', {
-				containerSelector: '.js-entry-two-col',
-				innerWrapperSelector: '.ne-sidebar',
-				topSpacing: sidebarPos.top,
-				bottomSpacing: 20
-			});
-		}, 1)
-	
-	
-	};
-	
-	
-	
-	
-	
-	
-	
-	// function scrollEntrySidebar(scrollProps){
-	// 	let entrySidebar = document.querySelector(".js-entry-sidebar");
-	// 	let entryContent = document.querySelector(".js-entry-content");
-	// 	let currTop = window.pageYOffset;
-	
-		
-	// 	let headerHeight = document.querySelector(".header").clientHeight;
-	// 	let contentHeight = entryContent.clientHeight;
-	// 	let sidebarHeight = entrySidebar.clientHeight;
-	// 	let availableContentHeight = $(window).height() - headerHeight;
-	
-	// 	let contentBottomPos = entryContent.getBoundingClientRect().bottom;
-	// 	let contentTopPos = entryContent.getBoundingClientRect().top;
-	
-	// 	let sidebarTopPos = entrySidebar.getBoundingClientRect().top;
-	// 	let sidebarPos = entrySidebar.getBoundingClientRect();
-	// 	let contentPos = entryContent.getBoundingClientRect();
-	// 	let $entrySidebar = $(entrySidebar);
-	
-	
-	// 	if( sidebarHeight < availableContentHeight ){
-	// 		$entrySidebar.css('position', 'fixed');
-	// 	}else{
-	// 		if(scrollProps.prevScrollDirection === 'toBottom'){
-	// 			toBottomScroll()
-	// 		}else if(scrollProps.prevScrollDirection === 'toTop') {
-	// 			toTopScroll();
-	// 		}else{
-	
-	// 		};
-	// 	};
-	
-	
-	// 	function toBottomScroll(){
-	
-	// 		if(sidebarPos.bottom - $(window).height() <= 0){
-	// 			$entrySidebar.css({'position': 'fixed', 'bottom': `0px`});
-	// 			$entrySidebar.addClass('is-fixed js-control').removeClass('is-translated');
-	// 			console.log(2);
-	// 		};
-	
-	// 		if(contentPos.bottom <= sidebarPos.bottom){
-	// 			let	translateValue = contentHeight - sidebarHeight;
-	
-	// 			$entrySidebar.css({'position': 'relative', 'bottom': `auto`, 'transform': `translateY(${translateValue}px)`});
-	// 			$entrySidebar.removeClass('is-fixed').addClass('is-translated');
-	// 			console.log(3);
-	// 			return;
-	// 		};
-	
-	// 		if($entrySidebar.hasClass('is-fixed') && $entrySidebar.hasClass('is-translated')){
-	// 			console.log(1);
-	// 			let translate = currTop;
-	// 			$entrySidebar.css({'position': 'relative', 'bottom': `auto`, 'transform': `translateY(${translate}px)`});
-	// 			$entrySidebar.removeClass('is-translated');
-	// 		};
-	
-	
-	
-	
-	
-	
-	
-	// 	};
-	// 	function toTopScroll(){
-	
-	
-	// 		if(!$entrySidebar.hasClass('js-control')) return;
-	// 					// $entrySidebar.addClass('to-top');
-	// 					if(sidebarTopPos - headerHeight  >= 0 ){
-	// 						// console.log(`first`);
-	// 						$entrySidebar.css({'position': 'fixed', 'bottom': `auto`, 'transform': `translateY(0px)`});
-	// 						$entrySidebar.addClass('is-fixed');
-	// 						// sidebarAtBottom = false;
-	// 						if(currTop == 0){
-	// 							$entrySidebar.css({'position': 'relative', 'bottom': `auto`, 'transform': `translateY(0px)`});
-	// 							$entrySidebar.removeClass('is-fixed js-control is-translated');
-	// 							// return;
-	// 						}
-	// 					};
-	// 					if($entrySidebar.hasClass('is-translated')) return;
-	// 					if($entrySidebar.hasClass('is-fixed') ) {
-	// 						// console.log(`second`);
-	// 						let translate = currTop + availableContentHeight - sidebarHeight;
-	// 						$entrySidebar.css({'position': 'relative', 'bottom': `auto`, 'transform': `translateY(${translate}px)`});
-	// 						$entrySidebar.removeClass('is-fixed').addClass('is-translated');
-	// 					};
-	
-	
-	// 				};
-	// 				globalSidebarPos = currTop + availableContentHeight - sidebarHeight;
-	
-	// };
 	
 	
 	scrollFixedElements();
@@ -347,14 +218,55 @@ $(document).ready(function() {
 		scrollProps.prevCurrTop = currTop;
 		if (winStart == currTop) {
 			scrollFixedElements();
-		}else{
-			if(isEntryPage === true){
-				// scrollEntrySidebar(scrollProps);
-			}
-			
 		}
+	
 		winStart = currTop;
 	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	var oliviaEntryFactory = function() {
+		var entrySidebar = {
+			initSidebar: function(){
+	
+				// var isEntryPage = document.querySelector(".js-entry-sidebar") ? true: false;
+				// if(isEntryPage === true){
+					var sidebarPos = document.querySelector(".js-entry-sidebar").getBoundingClientRect();
+					var contentPos = document.querySelector(".js-entry-content").getBoundingClientRect();
+					// var headerHeight = document.querySelector(".header").clientHeight;
+					setTimeout(function(){
+						var sidebar = new StickySidebar('.js-entry-sidebar', {
+							containerSelector: '.js-entry-two-col',
+							innerWrapperSelector: '.ne-sidebar',
+							topSpacing: contentPos.top,
+							bottomSpacing: 20
+						});
+					}, 1);
+	
+				// };
+			}
+		}
+		return entrySidebar;
+	
+	};
+	
+		$('.js-entry-sidebar').each(function() {
+			let entrySidebar = oliviaEntryFactory();
+			entrySidebar.initSidebar();
+		});
+	
+	
 	// function hideFormHeaderTab() {
 	// 	var headerFixed = $('.header.js-fixed'),
 	// 		headerEl  = headerFixed.find('.js-hide');
