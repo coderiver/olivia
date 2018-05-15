@@ -2166,8 +2166,13 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .ne-content .form { margin: 0px 0 5px; }
 
 .ne-sidebar { padding: 22px 0; position: relative; top: auto; bottom: auto; -webkit-transform-origin: 50% 0%; -ms-transform-origin: 50% 0%; transform-origin: 50% 0%; -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); will-change: position, transform; }
+.ne-sidebar .form.is-full-w .form__bl { padding: 16px 29px 16px; margin-bottom: 0; }
 .ne-sidebar .form { margin: 0px 0 5px; }
-.ne-sidebar .form__ttl { padding: 0 65px 0 29px; }
+.ne-sidebar .form > .form__ttl { padding: 0 65px 0 29px; }
+.ne-sidebar .form__subttl { color: #000000; margin-bottom: 14px; font-family: "opensans", Arial, sans-serif; font-size: 13px; }
+.ne-sidebar .form .radio__span { font-size: 13px; color: #282828; }
+.ne-sidebar .form__bl.field-is-filled { background-color: #f0f0f0; border-bottom: 1px solid #fff; color: #6c757a; }
+.ne-sidebar .form__bl.field-is-filled .form__subttl, .ne-sidebar .form__bl.field-is-filled .radio__span { color: #6c757a; }
 .ne-sidebar__close-btn { color: #cccccc; position: absolute; top: 30px; right: 14px; -webkit-appearance: none; -moz-appearance: none; appearance: none; border: none; background: none; }
 .ne-sidebar__close-btn .icon { margin-left: 4px; }
 

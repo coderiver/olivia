@@ -237,36 +237,23 @@ $(document).ready(function() {
 	
 	
 	var oliviaEntryFactory = function() {
-		var entrySidebar = {
+		var oliviaEntry = {
 			initSidebar: function(){
-	
-				// var isEntryPage = document.querySelector(".js-entry-sidebar") ? true: false;
-				// if(isEntryPage === true){
-					var sidebarPos = document.querySelector(".js-entry-sidebar").getBoundingClientRect();
-					var contentPos = document.querySelector(".js-entry-content").getBoundingClientRect();
-					// var headerHeight = document.querySelector(".header").clientHeight;
-					setTimeout(function(){
-						var sidebar = new StickySidebar('.js-entry-sidebar', {
-							containerSelector: '.js-entry-two-col',
-							innerWrapperSelector: '.ne-sidebar',
-							topSpacing: contentPos.top,
-							bottomSpacing: 20
-						});
-					}, 1);
-	
-				// };
+				var sidebarPos = document.querySelector(".js-entry-sidebar").getBoundingClientRect();
+				var contentPos = document.querySelector(".js-entry-content").getBoundingClientRect();
+				var sidebar = new StickySidebar('.js-entry-sidebar', {
+					containerSelector: '.js-entry-two-col',
+					innerWrapperSelector: '.ne-sidebar',
+					topSpacing: contentPos.top,
+					bottomSpacing: 20
+				});
 			}
 		}
-		return entrySidebar;
+		return oliviaEntry;
 	
 	};
 	
-		$('.js-entry-sidebar').each(function() {
-			let entrySidebar = oliviaEntryFactory();
-			entrySidebar.initSidebar();
-		});
-	
-	
+	window.oliviaEntryFactory = oliviaEntryFactory;
 	// function hideFormHeaderTab() {
 	// 	var headerFixed = $('.header.js-fixed'),
 	// 		headerEl  = headerFixed.find('.js-hide');
