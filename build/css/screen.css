@@ -1718,6 +1718,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup__body .history__ttl { padding: 0 20px; }
 .popup__body .history td { padding: 10px 20px; }
 .popup__content--h-400 { height: 400px; }
+.popup__content-inner-spec { margin: 0 -20px; padding: 0 20px; height: 400px; position: relative; }
 .popup__link-row { font-size: 0; margin-bottom: 20px; }
 .popup__link-row a { display: inline-block; vertical-align: top; margin-right: 15px; font-size: 12px; color: #0076ff; padding-bottom: 0px; border-bottom: 1px dotted #0076ff; }
 .popup__link-row a:last-of-type { margin-right: 0; }
