@@ -1823,7 +1823,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .news__more { padding-top: 15px; *zoom: 1; }
 .news__more:after { content: " "; display: table; clear: both; }
 .news__more .btn { float: right; padding: 8px 31px; }
-.news__more .btn.btn-ok { bottom: 9px; }
+.news__more .btn.btn-ok { bottom: 9px; right: 67px; }
 .news__link { text-decoration: underline; display: block; float: left; margin-top: 6px; color: #097bf2; }
 .news__link:hover { text-decoration: none; }
 
