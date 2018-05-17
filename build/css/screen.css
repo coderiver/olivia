@@ -2170,7 +2170,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .ne-sidebar .form.is-full-w .form__bl { padding: 16px 29px 16px; margin-bottom: 0; }
 .ne-sidebar .form { margin: 0px 0 5px; }
 .ne-sidebar .form > .form__ttl { padding: 0 65px 0 29px; }
-.ne-sidebar .form__subttl { color: #000000; margin-bottom: 14px; font-family: "opensans", Arial, sans-serif; font-size: 13px; }
+.ne-sidebar .form__subttl { color: #000000; font-family: "opensans", Arial, sans-serif; font-size: 13px; }
 .ne-sidebar .form .radio__span { font-size: 13px; color: #282828; }
 .ne-sidebar .form__bl.field-is-filled { background-color: #f0f0f0; border-bottom: 1px solid #fff; color: #6c757a; }
 .ne-sidebar .form__bl.field-is-filled .form__subttl, .ne-sidebar .form__bl.field-is-filled .radio__span { color: #6c757a; }
