@@ -1816,13 +1816,14 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .members .popup__bl:last-child { border-bottom: none; }
 
 .news { position: absolute; top: 100%; right: 0; width: 100%; max-width: 280px; margin-top: 35px; font-size: 13px; z-index: 9; }
-.news__bl { margin-bottom: 15px; background: #f7f8f9; border: 1px solid #dce0e7; border-radius: 4px; box-shadow: 0 2px 9px rgba(0, 0, 0, 0.5); -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out; }
+.news__bl { margin-bottom: 15px; background: #f7f8f9; border: 1px solid #dce0e7; border-radius: 4px; box-shadow: 0 2px 9px rgba(0, 0, 0, 0.5); position: relative; -webkit-transition: 0.3s ease-out; transition: 0.3s ease-out; }
 .news__bl.is-hidden { opacity: 0; visibility: hidden; }
 .news__ttl { padding: 15px 20px; text-transform: uppercase; color: #da291c; letter-spacing: 0.02em; cursor: pointer; font-family: "opensans-semibold", Arial, sans-serif; }
 .news__txt { display: none; padding: 0 20px 15px; }
 .news__more { padding-top: 15px; *zoom: 1; }
 .news__more:after { content: " "; display: table; clear: both; }
 .news__more .btn { float: right; padding: 8px 31px; }
+.news__more .btn.btn-ok { bottom: 9px; }
 .news__link { text-decoration: underline; display: block; float: left; margin-top: 6px; color: #097bf2; }
 .news__link:hover { text-decoration: none; }
 

@@ -570,7 +570,9 @@
 		border: 1px solid #dce0e7
 		border-radius: 4px
 		box-shadow: 0 2px 9px rgba(0, 0, 0, 0.5)
+		position: relative
 		+tr(0.3s ease-out)
+
 		&.is-hidden
 			opacity: 0
 			visibility: hidden
@@ -591,6 +593,8 @@
 		.btn
 			float: right
 			padding: 8px 31px
+			&.btn-ok
+				bottom: 9px 
 	&__link
 		text-decoration: underline
 		display: block
