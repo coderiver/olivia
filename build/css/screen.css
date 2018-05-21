@@ -440,6 +440,20 @@ body .tooltipster-base { z-index: 8; }
 
 .commented-transparent-ico { width: 15px; height: 15px; background-image: url("../img/svg-bg/commented-transparent.svg"); background-size: 15px 15px; }
 
+.draft, .in_review, .approved, .rejected, .submitted, .closed { background-repeat: no-repeat; width: 14px; height: 14px; background-position: 50% 50%; background-size: 16px 16px; }
+
+.draft { background-image: url("../img/svg-bg/draft.svg"); }
+
+.in_review { position: relative; background-image: url("../img/svg-bg/in-review.svg"); }
+
+.approved { background-image: url("../img/svg-bg/approved.svg"); }
+
+.rejected { background-image: url("../img/svg-bg/rejected.svg"); }
+
+.submitted { background-image: url("../img/svg-bg/approved.svg"); }
+
+.closed { background-image: url("../img/svg-bg/closed-deal.svg"); }
+
 .radio, .deal-radio { position: relative; }
 .radio__span, .deal-radio__span { position: relative; display: inline-block; padding-left: 20px; color: #097bf2; font-size: 14px; line-height: 1; cursor: pointer; }
 .radio__span:before, .deal-radio__span:before { content: ""; position: absolute; top: 50%; left: 0; width: 14px; height: 14px; margin-top: -8px; background: #fff; border: 1px solid #b2b2b2; border-radius: 50%; }
