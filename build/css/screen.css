@@ -464,6 +464,8 @@ body .tooltipster-base { z-index: 8; }
 
 .rejected { background-image: url("../img/svg-bg/rejected.svg"); }
 
+.submitted { background-image: url("../img/svg-bg/approved.svg"); }
+
 .closed { background-image: url("../img/svg-bg/closed-deal.svg"); }
 
 .radio, .deal-radio { position: relative; }
