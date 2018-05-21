@@ -454,11 +454,9 @@ body .tooltipster-base { z-index: 8; }
 
 .commented-transparent-ico { width: 15px; height: 15px; background-image: url("../img/svg-bg/commented-transparent.svg"); background-size: 15px 15px; }
 
-.draft, .in_review, .approved, .rejected, .submitted, .closed { background-repeat: no-repeat; width: 14px; height: 14px; background-position: 50% 50%; }
+.draft, .in_review, .approved, .rejected, .submitted, .closed { background-repeat: no-repeat; width: 14px; height: 14px; background-position: 50% 50%; background-size: 16px 16px; }
 
-.in_review, .approved, .rejected, .closed { background-size: 16px 16px; }
-
-.draft { background-image: url("../img/svg-bg/draft-full-size.svg"); }
+.draft { background-image: url("../img/svg-bg/draft.svg"); }
 
 .in_review { position: relative; background-image: url("../img/svg-bg/in-review.svg"); }
 
