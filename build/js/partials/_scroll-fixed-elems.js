@@ -75,10 +75,16 @@ var oliviaEntryFactory = function() {
 				topSpacing: contentPos.top,
 				bottomSpacing: 20
 			});
+		},
+		updateSidebar: function(){
+			sidebar.updateSticky();
 		}
+
 	}
 	return oliviaEntry;
 
 };
 
 window.oliviaEntryFactory = oliviaEntryFactory;
+
+

@@ -247,13 +247,20 @@ $(document).ready(function() {
 					topSpacing: contentPos.top,
 					bottomSpacing: 20
 				});
+			},
+			updateSidebar: function(){
+				sidebar.updateSticky();
 			}
+	
 		}
 		return oliviaEntry;
 	
 	};
 	
 	window.oliviaEntryFactory = oliviaEntryFactory;
+	
+	
+	
 	// function hideFormHeaderTab() {
 	// 	var headerFixed = $('.header.js-fixed'),
 	// 		headerEl  = headerFixed.find('.js-hide');

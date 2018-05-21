@@ -71,14 +71,20 @@ var oliviaEntryFactory = function() {
 			var contentPos = document.querySelector(".js-entry-content").getBoundingClientRect();
 			var sidebar = new StickySidebar('.js-entry-sidebar', {
 				containerSelector: '.js-entry-two-col',
-				innerWrapperSelector: '.ne-sidebar',
+				innerWrapperSelector: '.js-entry-sidebar',
 				topSpacing: contentPos.top,
 				bottomSpacing: 20
 			});
+		},
+		updateSidebar: function(){
+			sidebar.updateSticky();
 		}
+
 	}
 	return oliviaEntry;
 
 };
 
 window.oliviaEntryFactory = oliviaEntryFactory;
+
+

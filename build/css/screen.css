@@ -2182,6 +2182,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .entry-content .form { margin: 0px 0 5px; }
 .entry-content .comments.is-in-form { padding: 0 0 50px; }
 .entry-content .scrollbar { margin-right: 0; }
+.entry-content .form hr { max-width: 100%; }
 
 .entry-sidebar { padding: 22px 0; position: relative; top: auto; bottom: auto; -webkit-transform-origin: 50% 0%; -ms-transform-origin: 50% 0%; transform-origin: 50% 0%; -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); will-change: position, transform; }
 .entry-sidebar .form.is-full-w .form__bl { padding: 16px 29px 16px; margin-bottom: 0; }
