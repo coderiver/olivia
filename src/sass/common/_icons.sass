@@ -335,15 +335,11 @@
 	height: 21px
 	background-image: url("../img/svg-bg/draft.svg")
 
-.draft-full-ico, .is-draft
+.draft-full-ico
 	width: 14px
 	height: 14px
 	background-image: url("../img/svg-bg/draft-full-size.svg")
-.is-in-review
-	width: 14px
-	height: 14px
-	position: relative
-	background-image: url("../img/svg-bg/desert-clock.svg")
+
 .not-exist-ico
 	width: 21px
 	height: 21px
@@ -355,3 +351,26 @@
 	height: 15px
 	background-image: url("../img/svg-bg/commented-transparent.svg")
 	background-size: 15px 15px
+
+
+
+
+.draft, .in_review, .approved, .rejected, .submitted, .closed
+	background-repeat: no-repeat
+	width: 14px
+	height: 14px
+	background-position: 50% 50%
+.in_review, .approved, .rejected, .closed
+	background-size: 16px 16px
+.draft
+	background-image: url("../img/svg-bg/draft-full-size.svg")
+.in_review
+	position: relative
+	background-image: url("../img/svg-bg/in-review.svg")
+.approved
+	background-image: url("../img/svg-bg/approved.svg")
+.rejected
+	background-image: url("../img/svg-bg/rejected.svg")
+.submitted
+.closed
+	background-image: url("../img/svg-bg/closed-deal.svg")
