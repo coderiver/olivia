@@ -1756,15 +1756,17 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup__choose--small-text .popup__definition .tooltip { margin-left: 0; top: -4px; }
 .popup__choose--small-text .popup__el { font-size: 11px; }
 .popup__choose--small-text .popup__el:nth-of-type(1) .popup__definition { padding-right: 10px; }
-.popup__choose--small-text .popup__el:nth-of-type(1) .popup__definition .tooltip { left: 84%; }
+.popup__choose--small-text .popup__el:nth-of-type(1) .popup__definition .tooltip { left: 85%; }
 .popup__choose--small-text .popup__el:nth-of-type(2) .popup__definition { padding: 0 10px; }
 .popup__choose--small-text .popup__el:nth-of-type(2) .popup__definition .tooltip { left: 82%; }
-.popup__choose--small-text .popup__el:nth-of-type(3) .popup__definition { padding-right: 10px; }
-.popup__choose--small-text .popup__el:nth-of-type(3) .popup__definition .tooltip { left: 93%; }
-.popup__choose--small-text .popup__el:nth-of-type(4) .popup__definition { padding-right: 10px; }
-.popup__choose--small-text .popup__el:nth-of-type(4) .popup__definition .tooltip { left: 92%; }
-.popup__choose--small-text .popup__el:nth-of-type(5) .popup__definition { padding-right: 10px; }
+.popup__choose--small-text .popup__el:nth-of-type(3) .popup__definition { padding-right: 6px; }
+.popup__choose--small-text .popup__el:nth-of-type(3) .popup__definition .tooltip { left: 95%; }
+.popup__choose--small-text .popup__el:nth-of-type(4) .popup__definition { padding-right: 0; width: 53px; }
+.popup__choose--small-text .popup__el:nth-of-type(4) .popup__definition .tooltip { left: 107%; }
+.popup__choose--small-text .popup__el:nth-of-type(5) .popup__definition { padding-right: 1px; width: 57px; }
 .popup__choose--small-text .popup__el:nth-of-type(5) .popup__definition .tooltip { left: 86%; }
+.popup__choose--small-text .popup__el:nth-of-type(6) .popup__definition { padding-right: 6px; width: 40px; }
+.popup__choose--small-text .popup__el:nth-of-type(6) .popup__definition .tooltip { left: 86%; }
 .popup__more { float: right; color: #097bf2; }
 .popup__more:hover { text-decoration: underline; }
 .popup__num { margin-right: 5px; font-family: "robotomono", Arial, sans-serif; }
