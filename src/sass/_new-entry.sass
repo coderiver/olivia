@@ -56,23 +56,32 @@
 	background-color: #ffffff
 .entry-content
 	// padding: 50px 35px 65px
-	padding-top: 40px
-	padding-bottom: 40px
+
 	// padding: 40px 35px 65px
+	padding: 40px 35px
 	margin-bottom: 35px
 	position: relative
-	&__layout
-		padding: 0 35px
+	// &__layout
+	// 	padding: 0 35px
 	.form
 		margin: 0px 0 5px
 	.comments.is-in-form
 		padding: 0 0 50px
+	.is-in-form
+		&.is-in-form--head-max-width
+			.comments__head
+				max-width: 600px
+				margin-left: auto
+				margin-right: auto
 	.scrollbar
 		margin-right: 0
 	// &--min-h
 	// 	height: 1061px
 	.form hr
 		max-width: 100%
+	.tablewrap
+		margin-left: -35px
+		margin-right: -35px
 .entry-sidebar
 	padding: 22px 0 
 	position: relative

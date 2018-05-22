@@ -2177,12 +2177,13 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 
 .entry-sidebar, .entry-content, .tablewrap { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); background-color: #ffffff; }
 
-.entry-content { padding-top: 40px; padding-bottom: 40px; margin-bottom: 35px; position: relative; }
-.entry-content__layout { padding: 0 35px; }
+.entry-content { padding: 40px 35px; margin-bottom: 35px; position: relative; }
 .entry-content .form { margin: 0px 0 5px; }
 .entry-content .comments.is-in-form { padding: 0 0 50px; }
+.entry-content .is-in-form.is-in-form--head-max-width .comments__head { max-width: 600px; margin-left: auto; margin-right: auto; }
 .entry-content .scrollbar { margin-right: 0; }
 .entry-content .form hr { max-width: 100%; }
+.entry-content .tablewrap { margin-left: -35px; margin-right: -35px; }
 
 .entry-sidebar { padding: 22px 0; position: relative; top: auto; bottom: auto; -webkit-transform-origin: 50% 0%; -ms-transform-origin: 50% 0%; transform-origin: 50% 0%; -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); will-change: position, transform; }
 .entry-sidebar .form.is-full-w .form__bl { padding: 16px 29px 16px; margin-bottom: 0; }

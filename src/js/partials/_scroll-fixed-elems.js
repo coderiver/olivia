@@ -69,9 +69,10 @@ var oliviaEntryFactory = function() {
 		initSidebar: function(){
 			var sidebarPos = document.querySelector(".js-entry-sidebar").getBoundingClientRect();
 			var contentPos = document.querySelector(".js-entry-content").getBoundingClientRect();
+
 			var sidebar = new StickySidebar('.js-entry-sidebar', {
 				containerSelector: '.js-entry-two-col',
-				innerWrapperSelector: '.js-entry-sidebar',
+				innerWrapperSelector: '.js-entry-sidebar-inner',
 				topSpacing: contentPos.top,
 				bottomSpacing: 20
 			});
