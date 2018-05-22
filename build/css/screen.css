@@ -2185,6 +2185,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .entry-content .scrollbar { margin-right: 0; }
 .entry-content .form hr { max-width: 100%; }
 .entry-content .tablewrap { margin-left: -35px; margin-right: -35px; }
+.entry-content .tablewrap .table { width: auto; }
 .entry-content + .tablewrap { margin-bottom: 0; }
 
 .entry-sidebar { padding: 22px 0; -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); will-change: position, transform; }
