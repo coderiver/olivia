@@ -23,7 +23,6 @@ function scrollFixedElements() {
 
 
 scrollFixedElements();
-// scrollEntrySidebar(0);
 var winStart = 0;
 let scrollProps = {
 	prevScrollDirection: 0,
@@ -67,24 +66,43 @@ $(window).scroll(function() {
 var oliviaEntryFactory = function() {
 	var oliviaEntry = {
 		initSidebar: function(){
-			var sidebarPos = document.querySelector(".js-entry-sidebar").getBoundingClientRect();
-			var contentPos = document.querySelector(".js-entry-content").getBoundingClientRect();
+
 			var sidebar = new StickySidebar('.js-entry-sidebar', {
 				containerSelector: '.js-entry-two-col',
-				innerWrapperSelector: '.ne-sidebar',
-				topSpacing: contentPos.top,
+				innerWrapperSelector: '.js-entry-sidebar-inner',
+				topSpacing: $('.js-entry-content').offset().top,
 				bottomSpacing: 20
 			});
 		},
-		updateSidebar: function(){
-			sidebar.updateSticky();
+		destroySidebar: function(){
+			// setTimeout(() => {
+				sidebar.destroy();
+			// },1)
 		}
-
 	}
 	return oliviaEntry;
 
 };
-
 window.oliviaEntryFactory = oliviaEntryFactory;
 
+// var sidebar;
+// $('.entry-wrapper__toggle-btn').on("click", (e) =>{
+// 	e.preventDefault();
+// 	$('.entry-wrapper').removeClass('closed-sidebar');
+// 	setTimeout(() => {
+// 		sidebar = new StickySidebar('.js-entry-sidebar', {
+// 			containerSelector: '.js-entry-two-col',
+// 			innerWrapperSelector: '.js-entry-sidebar-inner',
+// 			topSpacing: $('.js-entry-content').offset().top,
+// 			bottomSpacing: 20
+// 		});
+// 		console.log(2222212121121212);
 
+// 	},50)
+	
+// });
+// $('.entry-sidebar__close-btn').on("click", function(e){
+// 	e.preventDefault();
+// 	$('.entry-wrapper').addClass('closed-sidebar')
+// 	sidebar.destroy();
+// });
