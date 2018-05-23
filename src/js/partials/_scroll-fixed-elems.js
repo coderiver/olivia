@@ -56,18 +56,11 @@ $(window).scroll(function() {
 
 
 
-
-
-
-
-
-
-
 var oliviaEntryFactory = function() {
 	var oliviaEntry = {
+		sidebarElem: document.querySelector('.js-entry-sidebar'),
 		initSidebar: function(){
-
-			var sidebar = new StickySidebar('.js-entry-sidebar', {
+			sidebarElem = new StickySidebar('.js-entry-sidebar', {
 				containerSelector: '.js-entry-two-col',
 				innerWrapperSelector: '.js-entry-sidebar-inner',
 				topSpacing: $('.js-entry-content').offset().top,
@@ -75,34 +68,48 @@ var oliviaEntryFactory = function() {
 			});
 		},
 		destroySidebar: function(){
-			// setTimeout(() => {
-				sidebar.destroy();
-			// },1)
+			sidebarElem.destroy();
 		}
 	}
 	return oliviaEntry;
-
 };
+
+
+
+// var oliviaEntryFactory = function() {
+// 	var oliviaEntry = {
+// 		initSidebar: function(){
+
+// 			var sidebar = new StickySidebar('.js-entry-sidebar', {
+// 				containerSelector: '.js-entry-two-col',
+// 				innerWrapperSelector: '.js-entry-sidebar-inner',
+// 				topSpacing: $('.js-entry-content').offset().top,
+// 				bottomSpacing: 20
+// 			});
+// 		},
+// 		destroySidebar: function(){
+// 				sidebar.destroy();
+// 		}
+// 	}
+// 	return oliviaEntry;
+
+// };
+
+
 window.oliviaEntryFactory = oliviaEntryFactory;
 
-// var sidebar;
+// window.oliviaEntryFactory().initSidebar();
 // $('.entry-wrapper__toggle-btn').on("click", (e) =>{
 // 	e.preventDefault();
 // 	$('.entry-wrapper').removeClass('closed-sidebar');
 // 	setTimeout(() => {
-// 		sidebar = new StickySidebar('.js-entry-sidebar', {
-// 			containerSelector: '.js-entry-two-col',
-// 			innerWrapperSelector: '.js-entry-sidebar-inner',
-// 			topSpacing: $('.js-entry-content').offset().top,
-// 			bottomSpacing: 20
-// 		});
-// 		console.log(2222212121121212);
+// 		window.oliviaEntryFactory().initSidebar();
 
 // 	},50)
-	
+
 // });
 // $('.entry-sidebar__close-btn').on("click", function(e){
 // 	e.preventDefault();
 // 	$('.entry-wrapper').addClass('closed-sidebar')
-// 	sidebar.destroy();
+// 	window.oliviaEntryFactory().destroySidebar();
 // });
