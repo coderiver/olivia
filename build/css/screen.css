@@ -1319,8 +1319,6 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .tablewrap.no-bottom-margin { margin-bottom: 0; }
 .tablewrap.min-bottom-space { margin-bottom: 0; }
 .tablewrap.min-bottom-space .scrollbar { padding-bottom: 0; }
-.tablewrap.no-right-margin .scrollbar { margin-right: 0; }
-.tablewrap.no-table-shadow { box-shadow: none; }
 .tablewrap.is-entry-attachments-table .table { margin-bottom: 0; table-layout: auto; }
 .tablewrap.is-entry-attachments-table .table__head { opacity: 1; }
 .tablewrap.is-search-page .filters { position: static; }
@@ -2177,7 +2175,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .entry-wrapper.closed-sidebar .entry-content .form { max-width: 854px; margin-left: auto; margin-right: auto; }
 .entry-wrapper.closed-sidebar .entry-content .form__bl--ml { margin-left: 20px; }
 
-.entry-sidebar, .entry-content, .tablewrap { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); background-color: #ffffff; }
+.entry-sidebar, .entry-content { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); background-color: #ffffff; }
 
 .entry-content { padding: 40px 35px; margin-bottom: 35px; position: relative; }
 .entry-content .form { margin: 0px 0 5px; }
@@ -2187,7 +2185,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .entry-content .form hr { max-width: 100%; }
 .entry-content .tablewrap { margin-left: -35px; margin-right: -35px; }
 .entry-content .tablewrap .table { width: auto; }
-.entry-content + .tablewrap { margin-bottom: 0; }
+.entry-content + .tablewrap { margin-bottom: 0; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); background-color: #ffffff; }
 
 .entry-sidebar { padding: 22px 0; -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); will-change: position, transform; }
 .entry-sidebar .form.is-full-w .form__bl { padding: 16px 29px 16px; margin-bottom: 0; }

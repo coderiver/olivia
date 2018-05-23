@@ -230,9 +230,9 @@ $(document).ready(function() {
 	
 	var oliviaEntryFactory = function() {
 		var oliviaEntry = {
-			sidebarElem: document.querySelector('.js-entry-sidebar'),
+			entrySidebar: null,
 			initSidebar: function(){
-				sidebarElem = new StickySidebar('.js-entry-sidebar', {
+				entrySidebar = new StickySidebar('.js-entry-sidebar', {
 					containerSelector: '.js-entry-two-col',
 					innerWrapperSelector: '.js-entry-sidebar-inner',
 					topSpacing: $('.js-entry-content').offset().top,
@@ -240,11 +240,13 @@ $(document).ready(function() {
 				});
 			},
 			destroySidebar: function(){
-				sidebarElem.destroy();
+				entrySidebar.destroy();
 			}
 		}
 		return oliviaEntry;
 	};
+	
+	
 	
 	
 	
