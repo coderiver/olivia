@@ -2188,7 +2188,6 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .entry-content .scrollbar { margin-right: 0; }
 .entry-content .form hr { max-width: 100%; }
 .entry-content .tablewrap { margin-left: -35px; margin-right: -35px; }
-.entry-content .tablewrap .table { width: auto; }
 .entry-content + .tablewrap { margin-bottom: 0; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); background-color: #ffffff; }
 
 .entry-sidebar { padding: 22px 0; -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); will-change: position, transform; }
@@ -2201,6 +2200,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .entry-sidebar .form__bl.field-is-filled .form__subttl, .entry-sidebar .form__bl.field-is-filled .radio__span { color: #6c757a; }
 .entry-sidebar__close-btn { color: #cccccc; position: absolute; top: 30px; right: 14px; -webkit-appearance: none; -moz-appearance: none; appearance: none; border: none; background: none; }
 .entry-sidebar__close-btn .icon { margin-left: 4px; }
+.entry-sidebar .display-only-field hr { margin: 0 auto 0; }
+.entry-sidebar .display-only-field .form__ttl { margin-bottom: 0; }
 
 .two-col { *zoom: 1; }
 .two-col:after { content: " "; display: table; clear: both; }
