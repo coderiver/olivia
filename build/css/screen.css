@@ -709,7 +709,6 @@ a { text-decoration: none; }
 .select2.ui-select-container .select2-drop { z-index: 6; }
 .select2.ui-select-container.ng-invalid .select2-choices { border-color: #D44950; }
 
-body .daterangepicker.dropdown-menu { z-index: 11; }
 body .header .daterangepicker.dropdown-menu { z-index: 12; }
 
 .table-row .status:not(.is-active) .status-info { background: #828c92; }
