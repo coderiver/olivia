@@ -1616,6 +1616,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__select-wrapper_max-w { max-width: 120px; }
 .form__select-wrapper .select2 { display: block; width: 100%; }
 .form__help span { font-size: 14px; color: #4a4a4a; }
+.form .customer-select-field-wrapper span { display: inline-block; vertical-align: top; }
+.form .customer-select-field-wrapper span:first-of-type { margin-right: 5px; line-height: 1; font-size: 0; padding-top: 1px; }
 .form hr { max-width: 600px; margin: 15px auto 25px; border: none; border-top: 1px solid #cfd5e0; }
 .form .radio__span { color: #282828; }
 .form .textarea { min-height: 66px; }
