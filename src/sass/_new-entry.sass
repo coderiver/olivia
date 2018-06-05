@@ -1,0 +1,154 @@
+.entry-wrapper
+	padding-left: 64px
+	position: relative
+	margin-top: 8px
+	&__toggle-btn
+		width: 40px
+		height: 40px
+		border-radius: 8px 0 0 8px
+		background-color: #ffffff
+		box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.18)
+		display: none
+		position: fixed
+		right: 0
+
+		.icon
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			font-size: 7px
+			color: #6c757a
+	.form__bl--ml
+		margin-left: 0
+	.report 
+		// .is-in-review, .is-draft
+		// 	i
+		// 		width: 14px
+		// 		height: 14px
+		// 		position: relative
+		// 		display: block
+		// .is-in-review
+		// 	i
+		// 		background-image: url("../img/svg-bg/desert-clock.svg")
+
+	&.closed-sidebar
+		padding-right: 64px
+		.two-col
+			&__left
+				width: 100%
+			&__right
+				display: none
+		.entry-wrapper__toggle-btn
+			display: block
+		.entry-content
+			.form
+				max-width: 854px
+				margin-left: auto
+				margin-right: auto
+				&__bl--ml
+					margin-left: 20px
+
+
+	
+.entry-sidebar, .entry-content
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
+	background-color: #ffffff
+	.form
+		&__bl
+			.form__el
+				margin-bottom: 5px
+				&:last-of-type
+					margin-bottom: 0
+.entry-content
+	// padding: 50px 35px 65px
+
+	// padding: 40px 35px 65px
+	padding: 40px 35px
+	margin-bottom: 35px
+	position: relative
+	// &__layout
+	// 	padding: 0 35px
+	.form
+		margin: 0px 0 5px
+		&__bl
+			&:not(.form__bl--border)
+				margin-bottom: 25px
+	.comments.is-in-form
+		padding: 0 0 50px
+	.is-in-form
+		&.is-in-form--head-max-width
+			.comments__head
+				max-width: 600px
+				margin-left: auto
+				margin-right: auto
+	.scrollbar
+		margin-right: 0
+	// &--min-h
+	// 	height: 1061px
+	.form hr
+		max-width: 100%
+	.tablewrap
+		margin-left: -35px
+		margin-right: -35px
+		// .table
+		// 	width: auto
+	& + .tablewrap
+		margin-bottom: 0
+
+	& + div .tablewrap
+		background-color: #ffffff
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
+
+.entry-sidebar
+	padding: 22px 0
+	transform: translate(0, 0)
+	transform: translate3d(0, 0, 0)
+	will-change: position, transform
+	.form.is-full-w
+		.form__bl
+			padding: 15px 29px 15px
+			margin-bottom: 0
+	.form
+		margin: 0px 0 5px
+		& > .form__ttl
+			padding: 0 65px 0 29px
+		&__subttl
+			color: #000000
+			+opensans
+			font-size: 13px
+		.radio__span
+			font-size: 13px
+			color: #282828
+
+		&__bl.field-is-filled
+			background-color: #f0f0f0
+			border-bottom: 1px solid #fff
+			color: #6c757a
+			.form__subttl, .radio__span
+				color: #6c757a
+	&__close-btn
+		color: #cccccc
+		position: absolute
+		top: 30px
+		right: 14px
+		appearance: none
+		border: none
+		background: none
+		.icon
+			margin-left: 4px
+	.display-only-field
+		hr
+			margin: 0 auto 0
+		.form__ttl
+			margin-bottom: 0
+.two-col
+	+clr
+	&__left
+		float: left
+		width: calc(100% - 480px )
+	&__right
+		width: 450px
+		float: right
+		will-change: min-height
+
