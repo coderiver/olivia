@@ -11,7 +11,7 @@
 			max-width: 100%
 			padding: 0
 			&--border
-				padding-bottom: 27px
+				padding-bottom: 25px
 	&.is-max-w
 		.form__bl
 			max-width: 580px
@@ -42,6 +42,8 @@
 		position: relative
 		&.no-margin
 			margin-bottom: 0
+		& + .form__text-magr-b
+			margin-top: -7px
 	&__require
 		padding: 0 2px
 		color: #f76300
@@ -50,7 +52,11 @@
 			position: absolute
 			left: -20px
 			transform: translateY(-50%)
-			top: 50%
+			top: calc(50% + 2px)
+			line-height: 1
+
+
+
 			// color: #ff001f
 	&__bl
 		position: relative
@@ -128,7 +134,7 @@
 				margin: 7px auto
 		&--border
 			margin-bottom: 27px
-			padding-bottom: 27px
+			padding-bottom: 25px
 			border-bottom: 1px solid #cfd5e0
 		&--ml
 			margin-left: 20px
@@ -243,7 +249,7 @@
 			display: block
 			width: 100%
 	&__text-magr-b
-		margin-bottom: 10px
+		margin-bottom: 8px
 		max-width: 572px
 	&__help
 		span
