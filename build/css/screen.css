@@ -891,11 +891,11 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .upper .add-btn { position: absolute; right: 23px; bottom: 20px; z-index: 1; }
 .upper_help { margin-bottom: 0; }
 .upper .btn.btn-ok { position: absolute; right: 90px; bottom: 30px; padding: 8px 15px; }
-.upper + div > .tablewrap, .upper + .tablewrap { margin-top: 10px; }
 
 .upper-notification { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding: 20px 18px; background-color: #fff4e5; }
 .upper-notification__text { margin: 0 5px; color: #282828; }
 .upper-notification__btn a { color: #0076ff; text-decoration: underline; }
+.upper-notification + div > .tablewrap, .upper-notification + .tablewrap { margin-top: 10px; }
 
 .start { position: relative; margin: 35px 0 110px; text-align: center; font-size: 16px; color: #6c757a; z-index: 0; overflow: hidden; }
 .start:after { content: ""; position: absolute; top: 22px; right: 0; bottom: 0; width: 47px; background: #fff; z-index: 1; }
