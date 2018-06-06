@@ -426,15 +426,7 @@ body .tooltipster-base { z-index: 8; }
 .dollar-icon.is-disabled { color: #d3d3d3; }
 .dollar-icon.is-disabled::before, .dollar-icon.is-disabled::after { background-color: #d3d3d3; }
 
-.approved-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/approved.svg"); }
-
 .cif-pub-link-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/cif-pub-link.svg"); }
-
-.in-review-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/in-review.svg"); }
-
-.rejected-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/rejected.svg"); }
-
-.draft-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/draft.svg"); }
 
 .not-exist-ico { width: 21px; height: 21px; background-image: url("../img/svg-bg/not-exist.svg"); }
 
@@ -2014,8 +2006,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .complicated-icon { width: 44px; position: relative; display: inline-block; }
 .complicated-icon__status-hint { position: absolute; z-index: 1; background: #fff; display: block; padding: 2px 5px; color: #4a4a4a; font-size: 10px; box-shadow: 0 0 5px #4a4a4a; border-radius: 4px; top: 36px; right: 0; -webkit-transform: translateX(50%); -ms-transform: translateX(50%); transform: translateX(50%); display: none; white-space: nowrap; }
 .complicated-icon__number { font-size: 10px; color: #4a4a4a; display: block; text-align: center; margin-top: 2px; }
-.complicated-icon__spec-icon { display: block; content: ""; width: 21px; height: 21px; background-size: 21px 21px; position: absolute; top: 12px; right: -10.5px; z-index: 1; }
-.complicated-icon__spec-icon:before { content: ""; position: absolute; left: 0; top: 0; width: 21px; height: 21px; background-size: 21px 21px; }
+.complicated-icon__spec-icon { display: block; content: ""; width: 20px; height: 20px; background-size: 20px 20px; position: absolute; border-radius: 50%; background: #fff; top: 12px; right: -10.5px; z-index: 1; }
+.complicated-icon__spec-icon:before { content: ""; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 16px; height: 16px; background-size: 16px 16px; background-repeat: no-repeat; }
 .complicated-icon__spec-icon:hover + .complicated-icon__status-hint { display: block; }
 .complicated-icon__number-icon { position: absolute; width: 22px; height: 22px; border-radius: 50%; font-size: 11px; color: #fff; font-family: "opensans-bold", Arial, sans-serif; text-align: center; z-index: 1; border: 2px solid #fff; padding-top: 1px; right: 0; top: 50%; -webkit-transform: translate(50%, -50%); -ms-transform: translate(50%, -50%); transform: translate(50%, -50%); }
 .complicated-icon__number-icon--gray { background: #9b9b9b; }
