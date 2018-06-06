@@ -869,7 +869,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .main.is-top-bar { padding-top: 210px; }
 .main.sm-pad { padding-top: 120px; }
 
-.upper { position: relative; min-height: 90px; margin-bottom: 20px; padding: 18px 18px 8px; background: #f7f8f9; border-bottom: 1px solid #dce0e7; border-radius: 6px 6px 0 0; }
+.upper { position: relative; min-height: 90px; padding: 18px 18px 8px; background: #f7f8f9; border-bottom: 1px solid #dce0e7; border-radius: 6px 6px 0 0; }
 .upper.is-custom { font-size: 0; *zoom: 1; }
 .upper.is-custom:after { content: " "; display: table; clear: both; }
 .upper.is-custom .upper__ttl { position: relative; display: inline-block; margin-bottom: 0; vertical-align: middle; }
@@ -883,11 +883,10 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .upper__list:after { content: " "; display: table; clear: both; }
 .upper__option { float: left; margin-left: 25px; }
 .upper__option:first-child { margin-left: 0; }
-.upper__option--spec .upper__link.is-active:after { border-color: transparent transparent #FFF4E5 transparent; }
 .upper__link { position: relative; color: #097bf2; font-size: 14px; }
 .upper__link:before, .upper__link:after { display: none; content: ""; position: absolute; top: 100%; left: 50%; }
 .upper__link:before { margin: 2px 0 0 -9px; width: 0px; height: 0px; border-style: solid; border-width: 0 9px 10px 9px; border-color: transparent transparent #dce0e7 transparent; }
-.upper__link:after { margin: 3px 0 0 -8px; width: 0px; height: 0px; border-style: solid; border-width: 0 8px 10px 8px; border-color: transparent transparent #fff transparent; }
+.upper__link:after { margin: 3px 0 0 -8px; width: 0px; height: 0px; border-style: solid; border-width: 0 8px 10px 8px; border-color: transparent transparent #fff4e5 transparent; }
 .upper__link:hover { color: #000; }
 .upper__link.is-active { color: #000; font-family: "opensans-semibold", Arial, sans-serif; }
 .upper__link.is-active:before, .upper__link.is-active:after { display: block; }
@@ -897,8 +896,11 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .upper .add-btn { position: absolute; right: 23px; bottom: 20px; z-index: 1; }
 .upper_help { margin-bottom: 0; }
 .upper .btn.btn-ok { position: absolute; right: 90px; bottom: 30px; padding: 8px 15px; }
+.upper + div > .tablewrap, .upper + .tablewrap { margin-top: 10px; }
 
-.up-help { background-color: #FFF4E5; padding: 22px 52px 18px; color: #282828; font-size: 14px; }
+.upper-notification { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding: 20px 18px; background-color: #fff4e5; }
+.upper-notification__text { margin: 0 5px; color: #282828; }
+.upper-notification__btn a { color: #0076ff; text-decoration: underline; }
 
 .start { position: relative; margin: 35px 0 110px; text-align: center; font-size: 16px; color: #6c757a; z-index: 0; overflow: hidden; }
 .start:after { content: ""; position: absolute; top: 22px; right: 0; bottom: 0; width: 47px; background: #fff; z-index: 1; }
