@@ -1,12 +1,19 @@
 function initEntryOneScreen(){
 	if(!$('.js-entry-content')[0]) return;
-let content = $('.js-entry-content');
-let sidebar = $('.js-entry-sidebar');
-let entryWrapper = $('.js-entry-two-col');
-let wrapperPos = entryWrapper.offset().top;
-let windowH = $(window).height();
-let height = windowH - wrapperPos;
-sidebar.css('height', `${height}px`)
-content.css('height', `${height}px`)
+	let windowH = $(window).height();
+	let content = $('.js-entry-content');
+	let sidebar = $('.js-entry-sidebar');
+
+
+	function setHeight(el){
+		let $el = $(el);
+		let elPosTop = $el.offset().top;
+		let elHeight = windowH - elPosTop;
+		$el.css('height', `${elHeight}px`)
+	};
+	
+	setHeight(content);
+	setHeight(sidebar);
+
 };
 initEntryOneScreen();

@@ -625,9 +625,9 @@ a { text-decoration: none; }
 
 .out--one-screen { height: 100vh; overflow: hidden; }
 .out--one-screen .main { margin-bottom: 0 !important; }
-.out--one-screen .two-col__left, .out--one-screen .two-col__right { overflow: hidden; position: relative; }
-.out--one-screen .two-col__left > .ps-scrollbar-y-rail, .out--one-screen .two-col__right > .ps-scrollbar-y-rail { right: 0 !important; width: 3px; }
-.out--one-screen .two-col__left > .ps-scrollbar-y-rail .ps-scrollbar-y, .out--one-screen .two-col__right > .ps-scrollbar-y-rail .ps-scrollbar-y { width: 3px; }
+.out--one-screen .two-col__left .scroll-wrapper, .out--one-screen .two-col__right .scroll-wrapper { overflow: hidden; position: relative; }
+.out--one-screen .two-col__left .scroll-wrapper > .ps-scrollbar-y-rail, .out--one-screen .two-col__right .scroll-wrapper > .ps-scrollbar-y-rail { right: 0 !important; width: 3px; }
+.out--one-screen .two-col__left .scroll-wrapper > .ps-scrollbar-y-rail .ps-scrollbar-y, .out--one-screen .two-col__right .scroll-wrapper > .ps-scrollbar-y-rail .ps-scrollbar-y { width: 3px; }
 
 .position-relative { position: relative; }
 
@@ -2189,13 +2189,12 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .entry-sidebar .form__bl .form__el, .entry-content .form__bl .form__el { margin-bottom: 5px; }
 .entry-sidebar .form__bl .form__el:last-of-type, .entry-content .form__bl .form__el:last-of-type { margin-bottom: 0; }
 
-.entry-content { padding: 40px 35px; position: relative; }
+.entry-content { padding: 40px 35px; }
 .entry-content .form { margin: 0px 0 5px; }
 .entry-content .form__bl:not(.form__bl--border) { margin-bottom: 25px; }
 .entry-content .comments.is-in-form { padding: 0 0 50px; }
 .entry-content .is-in-form.is-in-form--head-max-width .comments__head { max-width: 600px; margin-left: auto; margin-right: auto; }
 .entry-content .scrollbar { margin-right: 0; }
-.entry-content .form hr { max-width: 100%; }
 .entry-content .tablewrap { margin-left: -35px; margin-right: -35px; }
 .entry-content + div .tablewrap { margin-bottom: 0; margin-top: 35px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); background-color: #ffffff; }
 
