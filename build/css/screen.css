@@ -621,6 +621,12 @@ input:focus { box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; border-c
 
 a { text-decoration: none; }
 
+.out--one-screen { height: 100vh; overflow: hidden; }
+.out--one-screen .main { margin-bottom: 0 !important; }
+.out--one-screen .two-col__left, .out--one-screen .two-col__right { overflow: hidden; position: relative; }
+.out--one-screen .two-col__left > .ps-scrollbar-y-rail, .out--one-screen .two-col__right > .ps-scrollbar-y-rail { right: 0 !important; width: 3px; }
+.out--one-screen .two-col__left > .ps-scrollbar-y-rail .ps-scrollbar-y, .out--one-screen .two-col__right > .ps-scrollbar-y-rail .ps-scrollbar-y { width: 3px; }
+
 .position-relative { position: relative; }
 
 .calendar { position: relative; max-width: 200px; font-size: 13px; color: #282828; }
@@ -2181,7 +2187,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .entry-sidebar .form__bl .form__el, .entry-content .form__bl .form__el { margin-bottom: 5px; }
 .entry-sidebar .form__bl .form__el:last-of-type, .entry-content .form__bl .form__el:last-of-type { margin-bottom: 0; }
 
-.entry-content { padding: 40px 35px; margin-bottom: 35px; position: relative; }
+.entry-content { padding: 40px 35px; position: relative; }
 .entry-content .form { margin: 0px 0 5px; }
 .entry-content .form__bl:not(.form__bl--border) { margin-bottom: 25px; }
 .entry-content .comments.is-in-form { padding: 0 0 50px; }
@@ -2189,7 +2195,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .entry-content .scrollbar { margin-right: 0; }
 .entry-content .form hr { max-width: 100%; }
 .entry-content .tablewrap { margin-left: -35px; margin-right: -35px; }
-.entry-content + .tablewrap { margin-bottom: 0; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); background-color: #ffffff; }
+.entry-content + div .tablewrap { margin-bottom: 0; margin-top: 35px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); background-color: #ffffff; }
 
 .entry-sidebar { padding: 22px 0; -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); will-change: position, transform; }
 .entry-sidebar .form.is-full-w .form__bl { padding: 15px 29px 15px; margin-bottom: 0; }

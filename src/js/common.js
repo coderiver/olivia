@@ -12,6 +12,8 @@ $(document).ready(function() {
 	//=include partials/_scroll-fixed-elems.js
 	//=include partials/_hide-head-tabs.js
 	//=include partials/_accordion.js
+	//=include partials/_entry-one-screen.js
+	
 
 	$('.js-vert-scroll').perfectScrollbar();   
 	$('.js-popup-inner').perfectScrollbar();   

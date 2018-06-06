@@ -228,33 +228,11 @@ $(document).ready(function() {
 	
 	
 	
-	var oliviaEntryFactory = function() {
-		var oliviaEntry = {
-			entrySidebar: null,
-			initSidebar: function(){
-				entrySidebar = new StickySidebar('.js-entry-sidebar', {
-					containerSelector: '.js-entry-two-col',
-					innerWrapperSelector: '.js-entry-sidebar-inner',
-					topSpacing: $('.js-entry-content').offset().top,
-					bottomSpacing: 20
-				});
-			},
-			destroySidebar: function(){
-				entrySidebar.destroy();
-			}
-		}
-		return oliviaEntry;
-	};
-	
-	
-	
-	
-	
 	// var oliviaEntryFactory = function() {
 	// 	var oliviaEntry = {
+	// 		entrySidebar: null,
 	// 		initSidebar: function(){
-	
-	// 			var sidebar = new StickySidebar('.js-entry-sidebar', {
+	// 			entrySidebar = new StickySidebar('.js-entry-sidebar', {
 	// 				containerSelector: '.js-entry-two-col',
 	// 				innerWrapperSelector: '.js-entry-sidebar-inner',
 	// 				topSpacing: $('.js-entry-content').offset().top,
@@ -262,31 +240,15 @@ $(document).ready(function() {
 	// 			});
 	// 		},
 	// 		destroySidebar: function(){
-	// 				sidebar.destroy();
+	// 			entrySidebar.destroy();
 	// 		}
 	// 	}
 	// 	return oliviaEntry;
-	
 	// };
 	
+	// window.oliviaEntryFactory = oliviaEntryFactory;
 	
-	window.oliviaEntryFactory = oliviaEntryFactory;
 	
-	// window.oliviaEntryFactory().initSidebar();
-	// $('.entry-wrapper__toggle-btn').on("click", (e) =>{
-	// 	e.preventDefault();
-	// 	$('.entry-wrapper').removeClass('closed-sidebar');
-	// 	setTimeout(() => {
-	// 		window.oliviaEntryFactory().initSidebar();
-	
-	// 	},50)
-	
-	// });
-	// $('.entry-sidebar__close-btn').on("click", function(e){
-	// 	e.preventDefault();
-	// 	$('.entry-wrapper').addClass('closed-sidebar')
-	// 	window.oliviaEntryFactory().destroySidebar();
-	// });
 	// function hideFormHeaderTab() {
 	// 	var headerFixed = $('.header.js-fixed'),
 	// 		headerEl  = headerFixed.find('.js-hide');
@@ -318,6 +280,21 @@ $(document).ready(function() {
 	        content.slideToggle(350);
 	    }
 	});
+	console.log(`entry`);
+	function initEntryOneScreen(){
+	let content = $('.js-entry-content');
+	let sidebar = $('.js-entry-sidebar');
+	let entryWrapper = $('.js-entry-two-col');
+	let wrapperPos = entryWrapper.offset().top;
+	let windowH = $(window).height();
+	let height = windowH - wrapperPos;
+	console.log(windowH);
+	console.log(wrapperPos);
+	sidebar.css('height', `${height}px`)
+	content.css('height', `${height}px`)
+	};
+	initEntryOneScreen();
+	
 
 	$('.js-vert-scroll').perfectScrollbar();   
 	$('.js-popup-inner').perfectScrollbar();   

@@ -96,6 +96,22 @@ body
 a
 	text-decoration: none
 
+
+.out
+	&--one-screen
+		height: 100vh
+		overflow: hidden
+		.main
+			margin-bottom: 0!important
+		.two-col__left, .two-col__right
+			overflow: hidden
+			position: relative
+
+			& > .ps-scrollbar-y-rail
+				right: 0!important
+				width: 3px
+				.ps-scrollbar-y
+					width: 3px
 .position-relative
 	position: relative
 
