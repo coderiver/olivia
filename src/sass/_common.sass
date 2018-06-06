@@ -103,16 +103,23 @@ a
 		overflow: hidden
 		.main
 			margin-bottom: 0!important
-		.two-col__left, .two-col__right
-			.scroll-wrapper 
-				overflow: hidden
-				position: relative
-
+		.two-col__left
+			.scroll-wrapper
+				padding-left: 5px
+				padding-right: 5px
 				& > .ps-scrollbar-y-rail
-					right: 0!important
+					right: 5px!important
+		.two-col__right
+			.scroll-wrapper
+				box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
+		.scroll-wrapper 
+			position: relative
+
+			& > .ps-scrollbar-y-rail
+				right: 0!important
+				width: 3px
+				.ps-scrollbar-y
 					width: 3px
-					.ps-scrollbar-y
-						width: 3px
 .position-relative
 	position: relative
 

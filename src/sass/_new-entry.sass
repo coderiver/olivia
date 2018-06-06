@@ -19,6 +19,17 @@
 			transform: translate(-50%, -50%)
 			font-size: 7px
 			color: #6c757a
+	&__top-shadow
+		margin: 0 5px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			height: 2px
+			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
+			width: 100%
+			top: 0
 	.form__bl--ml
 		margin-left: 0
 	&.closed-sidebar
@@ -41,7 +52,7 @@
 					max-width: 600px
 	
 .entry-sidebar, .entry-content
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
+	// box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
 	background-color: #ffffff
 	.form
 		&__bl
@@ -50,6 +61,7 @@
 				&:last-of-type
 					margin-bottom: 0
 .entry-content
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
 	padding: 40px 35px
 	// margin-bottom: 35px
 	// position: relative
@@ -87,9 +99,6 @@
 
 .entry-sidebar
 	padding: 22px 0
-	transform: translate(0, 0)
-	transform: translate3d(0, 0, 0)
-	will-change: position, transform
 	.form.is-full-w
 		.form__bl
 			padding: 15px 29px 15px
@@ -131,7 +140,11 @@
 	+clr
 	&__left
 		float: left
-		width: calc(100% - 480px )
+		// width: calc(100% - 480px )
+		width: calc(100% - 470px )
+		.report
+			margin-left: 5px
+			margin-right: 5px
 	&__right
 		width: 450px
 		float: right
