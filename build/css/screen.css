@@ -2184,6 +2184,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .entry-wrapper.closed-sidebar .entry-wrapper__toggle-btn { display: block; }
 .entry-wrapper.closed-sidebar .entry-content .form { margin-left: auto; margin-right: auto; }
 .entry-wrapper.closed-sidebar .entry-content .form__bl--ml { margin-left: 20px; }
+.entry-wrapper.closed-sidebar .entry-content .form hr { max-width: 600px; }
 
 .entry-sidebar, .entry-content { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); background-color: #ffffff; }
 .entry-sidebar .form__bl .form__el, .entry-content .form__bl .form__el { margin-bottom: 5px; }
@@ -2192,6 +2193,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .entry-content { padding: 40px 35px; }
 .entry-content .form { margin: 0px 0 5px; }
 .entry-content .form__bl:not(.form__bl--border) { margin-bottom: 25px; }
+.entry-content .form hr { max-width: 100%; }
 .entry-content .comments.is-in-form { padding: 0 0 50px; }
 .entry-content .is-in-form.is-in-form--head-max-width .comments__head { max-width: 600px; margin-left: auto; margin-right: auto; }
 .entry-content .scrollbar { margin-right: 0; }
