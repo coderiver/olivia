@@ -1,5 +1,4 @@
 function initEntryOneScreen(){
-	if(!$('.js-entry-content')[0]) return;
 	let windowH = $(window).height();
 	let content = $('.js-entry-content');
 	let sidebar = $('.js-entry-sidebar');
@@ -7,6 +6,8 @@ function initEntryOneScreen(){
 
 	function setHeight(el){
 		let $el = $(el);
+		if(!$el[0]) return;
+		console.log($el);
 		let elPosTop = $el.offset().top;
 		let elHeight = windowH - elPosTop;
 		$el.css('height', `${elHeight}px`)
@@ -14,6 +15,5 @@ function initEntryOneScreen(){
 	
 	setHeight(content);
 	setHeight(sidebar);
-
 };
 initEntryOneScreen();

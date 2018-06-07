@@ -6,16 +6,8 @@ $('.js-perfect_scroll-scroll-to').on('click', function(e){
 	let target = $(`[data-target-elem="${targetStr}"]`);
 	let perfectContainer = target.parents('.js-vert-scroll');
 
-console.log(target.position().top);
 	perfectContainer.animate({
 		scrollTop: target.position().top
 	}, '400');
 
-
-	// $('.js-top').click(function(evt) {
-	// 	evt.preventDefault();
-	// 	$( 'html, body' ).animate({
-	// 		scrollTop: 0
-	// 	}, 'slow');
-	// });
 });
