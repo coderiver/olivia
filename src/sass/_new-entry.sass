@@ -30,8 +30,8 @@
 			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
 			width: 100%
 			top: 0
-	.form__bl--ml
-		margin-left: 0
+	// .form__bl--ml
+	// 	margin-left: 0
 	&.closed-sidebar
 		padding-right: 64px
 		.two-col
@@ -46,10 +46,10 @@
 				// max-width: 854px
 				margin-left: auto
 				margin-right: auto
-				&__bl--ml
-					margin-left: 20px
-				hr
-					max-width: 600px
+				// &__bl--ml
+				// 	margin-left: 20px
+				// hr
+				// 	max-width: 600px
 	
 .entry-sidebar, .entry-content
 	// box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
@@ -63,17 +63,18 @@
 .entry-content
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
 	padding: 40px 35px
-	// margin-bottom: 35px
-	// position: relative
-	// &__layout
-	// 	padding: 0 35px
+	overflow: hidden
 	.form
 		margin: 0px 0 5px
 		&__bl
-			&:not(.form__bl--border)
-				margin-bottom: 25px
-		hr
+			margin-bottom: 25px
 			max-width: 100%
+			padding-left: 0
+			padding-right: 0
+			// &:not(.form__bl--border)
+			// 	margin-bottom: 25px
+		// hr
+		// 	max-width: 100%
 	.comments.is-in-form
 		padding: 0 0 50px
 	.is-in-form
@@ -84,13 +85,6 @@
 				margin-right: auto
 	.scrollbar
 		margin-right: 0
-	// &--min-h
-	// 	height: 1061px
-	.tablewrap
-		margin-left: -35px
-		margin-right: -35px
-		// .table
-		// 	width: auto
 	& + div .tablewrap
 		margin-bottom: 0
 		margin-top: 35px
@@ -98,13 +92,14 @@
 		background-color: #ffffff
 
 .entry-sidebar
-	padding: 22px 0
+	padding: 22px 0 0
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
 	.form.is-full-w
 		.form__bl
 			padding: 15px 29px 15px
 			margin-bottom: 0
 	.form
-		margin: 0px 0 5px
+		margin: 0
 		& > .form__ttl
 			padding: 0 65px 0 29px
 		&__subttl
@@ -121,6 +116,8 @@
 			color: #6c757a
 			.form__subttl, .radio__span
 				color: #6c757a
+			&:last-of-type
+				border-bottom: none
 	&__close-btn
 		color: #cccccc
 		position: absolute
@@ -146,7 +143,7 @@
 			margin-left: 5px
 			margin-right: 5px
 	&__right
-		width: 450px
+		width: 460px
 		float: right
 		will-change: min-height
 

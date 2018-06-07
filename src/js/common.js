@@ -14,6 +14,7 @@ $(document).ready(function() {
 	//=include partials/_accordion.js
 	//=include partials/_entry-one-screen.js
 	//=include partials/_spec-scroll-to.js
+	//=include partials/_entry-factory.js
 	
 
 	$('.js-vert-scroll').perfectScrollbar();   
