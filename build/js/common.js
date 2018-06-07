@@ -289,7 +289,6 @@ $(document).ready(function() {
 		function setHeight(el){
 			let $el = $(el);
 			if(!$el[0]) return;
-			console.log($el);
 			let elPosTop = $el.offset().top;
 			let elHeight = windowH - elPosTop;
 			$el.css('height', `${elHeight}px`)
