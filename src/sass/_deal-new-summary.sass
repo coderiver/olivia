@@ -365,22 +365,26 @@
 	&__spec-icon
 		display: block
 		content: ''
-		width: 21px
-		height: 21px
-		background-size: 21px 21px
+		width: 20px
+		height: 20px
+		background-size: 20px 20px
 		position: absolute
 		// top: calc(50% - 10.5px)
+		border-radius: 50%
+		background: #fff
 		top: 12px
 		right: -10.5px
 		z-index: 1
 		&:before
 			content: ''
 			position: absolute
-			left: 0
-			top: 0
-			width: 21px
-			height: 21px
-			background-size: 21px 21px
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			width: 16px
+			height: 16px
+			background-size: 16px 16px
+			background-repeat: no-repeat
 		&:hover
 			& + .complicated-icon__status-hint
 				display: block
@@ -414,6 +418,7 @@
 			background: #f5a623
 		&--green
 			background: #2caf24
+
 	&.is-approved
 		.complicated-icon__spec-icon
 			&::before
@@ -448,6 +453,8 @@
 				border-radius: 3px
 				top: -2px
 				left: -2px
+
+
 		.letter-ico
 			background-image: url("../img/svg-bg/letter-disabled.svg")
 		.transaction-ico

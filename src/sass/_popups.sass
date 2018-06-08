@@ -51,7 +51,8 @@
 	&.is-attach
 		width: 665px
 	&.is-new-customer
-		width: 565px
+		// width: 565px
+		width: 620px
 	&.is-edit-commission
 		width: 495px
 	&.is-530-w
@@ -106,10 +107,14 @@
 		&--h-400
 			height: 400px
 	&__content-inner-spec
+
 		margin: 0 -20px
 		padding: 0 20px
 		height: 400px
 		position: relative
+
+
+
 	&__link-row
 		font-size: 0
 		margin-bottom: 20px
@@ -220,6 +225,12 @@
 					.popup__definition 
 						padding-right: 1px
 						width: 57px
+						.tooltip
+							left: 86%
+				&:nth-of-type(6)
+					.popup__definition 
+						padding-right: 6px
+						width: 40px
 						.tooltip
 							left: 86%
 				&:nth-of-type(6)
@@ -570,7 +581,9 @@
 		border: 1px solid #dce0e7
 		border-radius: 4px
 		box-shadow: 0 2px 9px rgba(0, 0, 0, 0.5)
+		position: relative
 		+tr(0.3s ease-out)
+
 		&.is-hidden
 			opacity: 0
 			visibility: hidden
@@ -591,6 +604,9 @@
 		.btn
 			float: right
 			padding: 8px 31px
+			&.btn-ok
+				bottom: 9px 
+				right: 67px
 	&__link
 		text-decoration: underline
 		display: block

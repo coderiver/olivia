@@ -46,7 +46,7 @@
 .upper
 	position: relative
 	min-height: 90px
-	margin-bottom: 20px
+	// margin-bottom: 20px
 	padding: 18px 18px 8px
 	background: #f7f8f9
 	border-bottom: 1px solid #dce0e7
@@ -95,11 +95,11 @@
 		margin-left: 25px
 		&:first-child
 			margin-left: 0
-		&--spec
-			.upper__link
-				&.is-active
-					&:after
-						border-color: transparent transparent #FFF4E5 transparent
+		// &--spec
+		// 	.upper__link
+		// 		&.is-active
+		// 			&:after
+		// 				border-color: transparent transparent #FFF4E5 transparent
 	&__link
 		position: relative
 		color: #097bf2
@@ -116,7 +116,7 @@
 			+arr(18, 10, #dce0e7, t)
 		&:after
 			margin: 3px 0 0 -8px
-			+arr(16, 10, #fff, t)
+			+arr(16, 10, #fff4e5, t)
 		&:hover
 			color: #000
 		&.is-active
@@ -157,12 +157,29 @@
 		bottom: 30px
 		padding: 8px 15px
 
-.up-help
-	background-color: #FFF4E5
-	// rgba(255, 241, 222, 0.8)
-	padding: 22px 52px 18px
-	color: #282828
-	font-size: 14px
+
+.upper-notification
+	display: flex
+	align-items: center
+	padding: 20px 18px
+	background-color: #fff4e5
+
+	&__text
+		margin: 0 5px
+		color: #282828
+
+	&__btn a 
+		color: #0076ff
+		text-decoration: underline
+	& + div > .tablewrap, & + .tablewrap
+		margin-top: 10px
+
+// .up-help
+// 	background-color: #FFF4E5
+// 	// rgba(255, 241, 222, 0.8)
+// 	padding: 22px 52px 18px
+// 	color: #282828
+// 	font-size: 14px
 
 
 
@@ -426,8 +443,11 @@
 			&.is-delete
 				color: #ff4159
 	&__ttl
-		font-size: 17px
+		font-size: 14px
 		color: #282828
+		margin-bottom: 10px
+		font-weight: 400
+		font-family: "opensans-semibold", Arial, sans-serif
 	&__form
 		max-width: 565px
 		margin: 10px 0 15px
