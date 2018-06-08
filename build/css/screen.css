@@ -695,7 +695,6 @@ a { text-decoration: none; }
 .select2.ui-select-container .select2-choices { border-radius: 4px; }
 .select2.ui-select-container .select2-choice { height: 35px; padding: 10px 0 0 8px; border: 1px solid #cfd5e0; background-image: none; background-color: #f7f8f9; line-height: 1; display: block; overflow: hidden; position: relative; white-space: nowrap; color: #444; text-decoration: none; border-radius: 4px; background-clip: padding-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; color: #999 !important; }
 .select2.ui-select-container .select2-choice .select2-chosen .icon, .select2.ui-select-container .select2-choice .select2-chosen span { display: inline-block; vertical-align: top; }
-.select2.ui-select-container .select2-choice .select2-chosen .icon { position: relative; top: -1px; }
 .select2.ui-select-container .select2-result-label { padding: 4px 7px 3px; }
 .select2.ui-select-container .select2-result-label .icon { position: relative; top: 1px; float: left; margin-right: 5px; }
 .select2.ui-select-container .select2-arrow { display: inline-block; width: 18px; height: 100%; position: absolute; right: 0; top: 0; border-left: 1px solid #cfd5e0; border-radius: 0 4px 4px 0; background-clip: padding-box; background: #ccc; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ccc), color-stop(0.6, #eee)); background-image: -webkit-linear-gradient(center bottom, #ccc 0%, #eee 60%); background-image: -moz-linear-gradient(center bottom, #ccc 0%, #eee 60%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eeeeee', endColorstr = '#cccccc', GradientType = 0); background-image: -webkit-linear-gradient(bottom, #ccc 0%, #eee 60%); background-image: linear-gradient(to top, #ccc 0%, #eee 60%); }
@@ -896,6 +895,9 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .upper-notification__text { margin: 0 5px; color: #282828; }
 .upper-notification__btn a { color: #0076ff; text-decoration: underline; }
 .upper-notification + div > .tablewrap, .upper-notification + .tablewrap { margin-top: 10px; }
+.upper-notification + .up-help { border-top: 1px solid rgba(151, 151, 151, 0.5); }
+
+.up-help { background-color: #FFF4E5; padding: 22px 52px 18px; color: #282828; font-size: 14px; }
 
 .start { position: relative; margin: 35px 0 110px; text-align: center; font-size: 16px; color: #6c757a; z-index: 0; overflow: hidden; }
 .start:after { content: ""; position: absolute; top: 22px; right: 0; bottom: 0; width: 47px; background: #fff; z-index: 1; }
@@ -1128,7 +1130,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .fake-header .fake-header__in { position: relative; padding-right: 50px; overflow: hidden; -webkit-transition: padding-left 0.3s; transition: padding-left 0.3s; }
 .fake-header .fake-header__in:after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 50px; background: #f7f8f9; border: 1px solid #dce0e7; border-right-width: 0; z-index: 10; }
 
-.filters { position: absolute; top: 0; left: 0; right: 0; z-index: 2; }
+.filters { position: absolute; top: 0; left: 0; right: 0; z-index: 2; min-height: 44px; }
 .filters.is-fixed { position: fixed; top: 0; left: 50%; width: 100%; min-width: 1040px; margin: 0 auto; padding: 0 20px; padding: 0 60px; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
 .filters.is-fixed .filters__wrap { border-left: 1px solid #dce0e7; border-right: 1px solid #dce0e7; }
 .filters__wrap { position: relative; display: table; width: 100%; padding: 10px; background: #FFF; }
