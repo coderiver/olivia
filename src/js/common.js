@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
 
-
-
 	// partials
 	//=include partials/_tooltip.js
 	//=include partials/_textarea.js

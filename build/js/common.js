@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
 
-
-
 	// partials
 	function initTooltip(elem) {
 		var elem = $(elem);
