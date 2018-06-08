@@ -896,6 +896,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .upper-notification__btn a { color: #0076ff; text-decoration: underline; }
 .upper-notification + div > .tablewrap, .upper-notification + .tablewrap { margin-top: 10px; }
 .upper-notification + .up-help { border-top: 1px solid rgba(151, 151, 151, 0.5); }
+.upper-notification + .new-deal-summary__in .up-help { border-top: 1px solid rgba(151, 151, 151, 0.5); }
 
 .up-help { background-color: #FFF4E5; padding: 22px 52px 18px; color: #282828; font-size: 14px; }
 
