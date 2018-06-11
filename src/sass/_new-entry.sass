@@ -20,7 +20,7 @@
 			transform: translate(-50%, -50%)
 			font-size: 7px
 			color: #6c757a
-	&__top-shadow
+	&__top-shadow, &__bottom-shadow
 		margin: 0 5px
 		position: relative
 		&:before
@@ -31,8 +31,11 @@
 			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
 			width: 100%
 			top: 0
-	// .form__bl--ml
-	// 	margin-left: 0
+			z-index: -1
+	// &__bottom-shadow
+	// 	&:before
+	// 		top: -2px
+
 	&.closed-sidebar
 		padding-right: 64px
 		.two-col
