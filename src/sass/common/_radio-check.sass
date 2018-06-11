@@ -101,6 +101,9 @@
 			font-family: 'svgfont'
 		&:empty
 			padding: 0
+		&--border-rad
+			&:before
+				border-radius: 3px
 	&--ml
 		margin-left: 4px
 	&.is-light-border
@@ -163,7 +166,27 @@
 		opacity: 1
 
 
-
+.check-block
+	//  возможно уже не нужный кусок кода ¯_(ツ)_¯
+	padding: 32px 29px 0
+	&__title
+		color: #000000
+		margin-bottom: 14px
+	.check
+		display: block
+		margin-bottom: 9px
+		&:last-of-type
+			margin-bottom: 0
+	&--checked
+		padding: 17px 29px
+		border-bottom: 1px solid #fff
+		color: #6c757a
+		background-color: #f0f0f0
+		.check-block__title
+			margin-bottom: 12px
+			color: #6c757a
+		.check__span
+			color: #6c757a
 
 
 

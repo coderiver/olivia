@@ -10,6 +10,8 @@
 		.form__bl
 			max-width: 100%
 			padding: 0
+			&--border
+				padding-bottom: 25px
 	&.is-max-w
 		.form__bl
 			max-width: 580px
@@ -21,17 +23,42 @@
 		+opensans-sb
 		&.s-bottom-margin
 			margin-bottom: 5px
+		&.m-bottom-margin
+			margin-bottom: 16px
+		&--big
+			font-size: 20px
+	&__steps
+		color: #6c757a
+		font-size: 14px
+		vertical-align: top
+		display: inline-block
+		padding-top: 5px
 	&__subttl
 		display: block
 		margin-bottom: 10px
 		font-size: 14px
 		color: #282828
 		+opensans-sb
+		position: relative
 		&.no-margin
 			margin-bottom: 0
+		& + .form__text-magr-b
+			margin-top: -7px
 	&__require
 		padding: 0 2px
 		color: #f76300
+		
+		&--abs-left
+			position: absolute
+			left: -20px
+			top: 2px
+			// transform: translateY(-50%)
+			// top: calc(50% + 2px)
+			// line-height: 1
+
+
+
+			// color: #ff001f
 	&__bl
 		position: relative
 		max-width: 740px
@@ -106,6 +133,16 @@
 				margin: 0 auto 7px
 			.errorlist
 				margin: 7px auto
+		&.is-full-field-w
+			.tablewrap
+				margin-left: -35px
+				margin-right: -35px
+		&--border
+			margin-bottom: 27px
+			padding-bottom: 25px
+			border-bottom: 1px solid #cfd5e0
+		&--ml
+			margin-left: 20px
 		&--full
 			.select2
 				&.ui-select-container
@@ -127,6 +164,7 @@
 			margin-bottom: 20px
 		&--mb-10
 			margin-bottom: 10px
+
 	&__txt-wrapper
 		max-width: 740px
 		padding: 0 70px
@@ -216,6 +254,9 @@
 		.select2
 			display: block
 			width: 100%
+	&__text-magr-b
+		margin-bottom: 8px
+		max-width: 572px
 	&__help
 		span
 			font-size: 14px
@@ -235,6 +276,10 @@
 		margin: 15px auto 25px
 		border: none
 		border-top: 1px solid #cfd5e0
+	.form__bl
+		hr
+			max-width: 100%
+			margin-top: 25px
 	.radio__span
 		color: #282828
 	.textarea

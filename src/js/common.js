@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
 
-
-
 	// partials
 	//=include partials/_tooltip.js
 	//=include partials/_textarea.js
@@ -12,6 +10,9 @@ $(document).ready(function() {
 	//=include partials/_scroll-fixed-elems.js
 	//=include partials/_hide-head-tabs.js
 	//=include partials/_accordion.js
+	//=include partials/_entry-one-screen.js
+	//=include partials/_spec-scroll-to.js
+	//=include partials/_entry-factory.js
 
 	$('.js-vert-scroll').perfectScrollbar();   
 	$('.js-popup-inner').perfectScrollbar();   
@@ -38,5 +39,21 @@ $(document).ready(function() {
 		td.toggleClass('is-open');
 		tr.toggleClass('is-vertical');
 	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 });
