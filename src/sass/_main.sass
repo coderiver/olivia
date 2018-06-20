@@ -767,8 +767,19 @@
 	&__bl
 		overflow: hidden
 		padding: 0 10px 0 2px
-		span
-			vertical-align: middle
+		display: flex
+		align-items: center
+		min-height: 20px
+		*
+			flex-shrink: 0
+		*:last-child
+			flex-shrink: 1
+			white-space: nowrap
+			text-overflow: ellipsis
+			overflow: hidden
+			margin-left: 3px
+		// span
+		// 	vertical-align: middle
 	&__link
 		display: inline-block
 		margin-top: 3px
