@@ -507,7 +507,7 @@ $(document).ready(function() {
 	};
 	
 	window.oliviaEntryFactory = oliviaEntryFactory;
-
+	
 	$('.js-vert-scroll').perfectScrollbar();   
 	$('.js-popup-inner').perfectScrollbar();   
 	$('.js-bar').addClass('is-active');

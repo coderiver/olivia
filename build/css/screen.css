@@ -618,8 +618,8 @@ a { text-decoration: none; }
 .out--one-screen { height: 100vh; overflow: hidden; }
 .out--one-screen .main { margin-bottom: 0 !important; }
 .out--one-screen .scroll-wrapper { padding-left: 5px; padding-right: 5px; position: relative; }
-.out--one-screen .scroll-wrapper > .ps-scrollbar-y-rail { right: 5px !important; width: 3px; -webkit-transform: translateY(-8px); -ms-transform: translateY(-8px); transform: translateY(-8px); z-index: 5; }
-.out--one-screen .scroll-wrapper > .ps-scrollbar-y-rail .ps-scrollbar-y { width: 3px; }
+.out--one-screen .scroll-wrapper > .ps-scrollbar-y-rail { -webkit-transform: translateY(-8px); -ms-transform: translateY(-8px); transform: translateY(-8px); z-index: 5; }
+.out--one-screen .scroll-wrapper > .ps-scrollbar-y-rail .ps-scrollbar-y { border-radius: 0; }
 
 .position-relative { position: relative; }
 

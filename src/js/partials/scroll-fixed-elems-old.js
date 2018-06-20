@@ -158,7 +158,6 @@ function scrollEntrySidebar(scrollProps){
 // end function
 };
 
-
 scrollFixedElements();
 // scrollEntrySidebar(0);
 var winStart = 0;
