@@ -770,16 +770,13 @@
 		display: flex
 		align-items: center
 		min-height: 20px
-		*
+		& > *
 			flex-shrink: 0
-		*:last-child
+		& > .truncate
 			flex-shrink: 1
-			white-space: nowrap
-			text-overflow: ellipsis
-			overflow: hidden
 			margin-left: 3px
-		// span
-		// 	vertical-align: middle
+		span
+			vertical-align: middle
 	&__link
 		display: inline-block
 		margin-top: 3px
@@ -805,7 +802,7 @@
 		.icon
 			vertical-align: top
 			position: relative
-			top: 4px
+			top: 2px
 
 // actions
 .actions
