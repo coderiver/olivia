@@ -1,8 +1,7 @@
-//dd=include lib/jquery.js
-//dd=include lib/tooltipster.min.js
-//dd=include lib/perfect-scrollbar.jquery.min.js
-//dd=include lib/sticky-sidebar.min.js
-
+// df=include lib/jquery.js
+// df=include lib/tooltipster.min.js
+// df=include lib/perfect-scrollbar.jquery.min.js
+// df=include lib/sticky-sidebar.min.js
 
 //=include common.js
 //=include table.js
