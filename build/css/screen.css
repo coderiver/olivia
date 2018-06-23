@@ -35,87 +35,87 @@ html { box-sizing: border-box; }
 
 .icon-add-report:before { content: ""; }
 
-.icon-arr-bottom-right:before { content: ""; }
+.icon-arr-left:before { content: ""; }
 
-.icon-arr-top:before { content: ""; }
+.icon-arr-bottom-right:before { content: ""; }
 
 .icon-arr-right:before { content: ""; }
 
-.icon-arr-left:before { content: ""; }
-
 .icon-bell:before { content: ""; }
+
+.icon-arr-top:before { content: ""; }
 
 .icon-bubble:before { content: ""; }
 
 .icon-checked:before { content: ""; }
 
-.icon-check:before { content: ""; }
-
 .icon-calendar:before { content: ""; }
+
+.icon-check:before { content: ""; }
 
 .icon-clip:before { content: ""; }
 
 .icon-comment:before { content: ""; }
 
-.icon-close:before { content: ""; }
-
 .icon-comment-cloud:before { content: ""; }
 
 .icon-customer2:before { content: ""; }
 
+.icon-close:before { content: ""; }
+
 .icon-deals-team-archived:before { content: ""; }
+
+.icon-deal-team:before { content: ""; }
 
 .icon-deals-team-closed:before { content: ""; }
 
-.icon-delete:before { content: ""; }
-
 .icon-dollar:before { content: ""; }
-
-.icon-deal-team:before { content: ""; }
 
 .icon-euro:before { content: ""; }
 
 .icon-filter:before { content: ""; }
 
-.icon-folder-dots:before { content: ""; }
-
 .icon-firm:before { content: ""; }
 
 .icon-folder-checked:before { content: ""; }
+
+.icon-delete:before { content: ""; }
+
+.icon-folder-dots:before { content: ""; }
 
 .icon-folder:before { content: ""; }
 
 .icon-infinity:before { content: ""; }
 
-.icon-letter:before { content: ""; }
-
 .icon-hourglass:before { content: ""; }
 
 .icon-lock:before { content: ""; }
 
-.icon-logo-short:before { content: ""; }
+.icon-letter:before { content: ""; }
 
-.icon-marked:before { content: ""; }
+.icon-logo-short:before { content: ""; }
 
 .icon-logo:before { content: ""; }
 
 .icon-menu:before { content: ""; }
 
+.icon-marked:before { content: ""; }
+
 .icon-news:before { content: ""; }
 
 .icon-pending:before { content: ""; }
 
-.icon-sidebar:before { content: ""; }
-
 .icon-plus:before { content: ""; }
 
-.icon-square-arr:before { content: ""; }
+.icon-sidebar:before { content: ""; }
 
-.icon-star:before { content: ""; }
+.icon-square-arr:before { content: ""; }
 
 .icon-pound:before { content: ""; }
 
 .icon-team:before { content: ""; }
+
+.icon-star:before { content: ""; }
 
 .icon-warn:before { content: ""; }
 
@@ -392,6 +392,8 @@ body .tooltipster-base { z-index: 8; }
 .close-ico { width: 10px; height: 10px; background-image: url("../img/svg-bg/close-btn-icon.svg"); }
 
 .entry-shared { background-image: url("../img/svg-bg/entry-shared.svg"); width: 16px; height: 16px; }
+
+.overdue-ico { background-image: url("../img/svg-bg/overdue-ico.svg"); width: 16px; height: 16px; }
 
 .icon-customer2 { color: #3caca2; }
 .icon-customer2.is-disabled { color: #CFD5E0; }
