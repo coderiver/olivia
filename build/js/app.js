@@ -573,8 +573,6 @@ $(document).ready(function() {
 
 	
 
-	
-
 		function setHeight(el){
 
 			let $el = $(el);
@@ -585,7 +583,7 @@ $(document).ready(function() {
 
 			let elHeight = windowH - elPosTop;
 
-			$el.css('height', `${elHeight - 8}px`)
+			$el.css('height', `${elHeight}px`)
 
 		};
 
@@ -595,11 +593,25 @@ $(document).ready(function() {
 
 		setHeight(sidebar);
 
+	
+
+		$(window).on('resize', function() {
+
+			windowH = $(window).height();
+
+	
+
+			setHeight(content);
+
+			setHeight(sidebar);
+
+	
+
+		})
+
 	};
 
 	initEntryOneScreen();
-
-	
 
 	
 
@@ -1830,5 +1842,3 @@ $(document).ready(function() {
 	showCurrency();
 
 });
-
-

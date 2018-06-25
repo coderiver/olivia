@@ -283,20 +283,26 @@ $(document).ready(function() {
 		let content = $('.js-entry-content');
 		let sidebar = $('.js-entry-sidebar');
 	
-	
 		function setHeight(el){
 			let $el = $(el);
 			if(!$el[0]) return;
 			let elPosTop = $el.offset().top;
 			let elHeight = windowH - elPosTop;
-			$el.css('height', `${elHeight - 8}px`)
+			$el.css('height', `${elHeight}px`)
 		};
 		
 		setHeight(content);
 		setHeight(sidebar);
+	
+		$(window).on('resize', function() {
+			windowH = $(window).height();
+	
+			setHeight(content);
+			setHeight(sidebar);
+	
+		})
 	};
 	initEntryOneScreen();
-	
 	
 	$('.js-perfect_scroll-scroll-to').on('click', function(e){
 		e.preventDefault();

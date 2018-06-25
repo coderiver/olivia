@@ -3,7 +3,6 @@ function initEntryOneScreen(){
 	let content = $('.js-entry-content');
 	let sidebar = $('.js-entry-sidebar');
 
-
 	function setHeight(el){
 		let $el = $(el);
 		if(!$el[0]) return;
@@ -14,5 +13,13 @@ function initEntryOneScreen(){
 	
 	setHeight(content);
 	setHeight(sidebar);
+
+	$(window).on('resize', function() {
+		windowH = $(window).height();
+
+		setHeight(content);
+		setHeight(sidebar);
+
+	})
 };
 initEntryOneScreen();

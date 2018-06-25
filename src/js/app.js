@@ -7,5 +7,3 @@
 //=include table.js
 //=include comments.js
 //=include popups.js
-
-
