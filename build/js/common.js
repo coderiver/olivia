@@ -289,13 +289,14 @@ $(document).ready(function() {
 			if(!$el[0]) return;
 			let elPosTop = $el.offset().top;
 			let elHeight = windowH - elPosTop;
-			$el.css('height', `${elHeight}px`)
+			$el.css('height', `${elHeight - 8}px`)
 		};
 		
 		setHeight(content);
 		setHeight(sidebar);
 	};
 	initEntryOneScreen();
+	
 	
 	$('.js-perfect_scroll-scroll-to').on('click', function(e){
 		e.preventDefault();

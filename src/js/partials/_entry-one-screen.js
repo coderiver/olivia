@@ -9,7 +9,7 @@ function initEntryOneScreen(){
 		if(!$el[0]) return;
 		let elPosTop = $el.offset().top;
 		let elHeight = windowH - elPosTop;
-		$el.css('height', `${elHeight}px`)
+		$el.css('height', `${elHeight - 8}px`)
 	};
 	
 	setHeight(content);

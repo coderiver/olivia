@@ -139,11 +139,7 @@ var oliviaEntryFactory = function() {
                     fieldNumberText = oliviaEntryObj.fieldsCount + '. '
                     $('.field-number', $fieldContainer).text(fieldNumberText)
                 };
-                // entry in finalized statuses
-                if (oliviaEntryObj.isFieldFilled($fieldContainer)){
-                    oliviaEntryObj.fieldsFilledCount++;
-                    return;
-                }
+
                 // check if the field is checkbox
                 if (oliviaEntryObj.isFieldExistInContainer(checkboxSelector, $fieldContainer)) {
                     // check if checkbox has value. if true we mark container as filled
