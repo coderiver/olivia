@@ -6,6 +6,8 @@ var config = require('../config');
 var browserSync = require('browser-sync');
 reload = browserSync.reload;
 
+var timeStamp = Math.round(Date.now() / 1000);
+
 var fontname = 'svgfont';
 gulp.task('font', function() {
 	return gulp.src(config.src.img + 'svg/*.svg')
@@ -26,13 +28,15 @@ gulp.task('font', function() {
 								glyphs: glyphs,
 								fontName: fontname,
 								fontPath: '../fonts/',
-								className: 'icon'
+								className: 'icon',
+								timeStamp: timeStamp
 						}))
 						.pipe(gulp.dest(config.src.sass + 'lib/'));
 				gulp.src(config.src.helpers + 'icons.html')
 						.pipe(consolidate('lodash', {
 								glyphs: glyphs,
 								fontName: fontname,
+								timeStamp: timeStamp,
 								fontPath: '../fonts/',
 								className: 'icon',
 								htmlBefore: '<i class="icon ',
