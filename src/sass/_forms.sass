@@ -293,6 +293,90 @@
 		margin: 30px -5px 0
 	label.form__subttl
 		cursor: pointer
+	&__layout
+		display: flex
+		justify-content: space-between
+		.form__box-dashed:first-child
+			margin-right: 40px
+		.form__box-dashed:last-child
+			width: 100%
+			max-width: 490px
+
+	&__box-dashed
+		padding: 32px 40px 40px
+		margin-bottom: 32px
+		border: 1px dashed #979797
+		border-radius: 3px
+		input, textarea, .dropdown__item
+			box-shadow: none
+			background-image: none
+			background-color: #ffffff
+		.form__bl
+			&.no-bottom-margin
+				margin-bottom: 0
+		.check
+			width: 19.5%
+		.check__span:before
+			background-color: #ffffff
+			border-color: #c7cbd3
+			border-radius: 2px
+		.dropdown
+			max-width: 100%
+	&__container
+		max-width: 912px
+		margin: 0 auto
+	&__left
+		width: 100%
+		max-width: 400px
+		margin-right: 32px
+	&__right
+		width: 100%
+		max-width: 400px
+		flex-shrink: 0
+	&__top
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		.form__bl 
+			width: 281px
+			margin: 0 0 20px
+		.form__bl--small
+			width: 87px
+	&__bottom
+		.form__layout
+			align-items: center
+		.dropdown
+			max-width: 236px
+			&__item
+				height: 36px
+		.upload 
+			margin: 0
+			font-size: 13px
+			color: #282828
+			border: 1px solid #cfd5e0
+			border-radius: 4px
+			cursor: pointer
+			background-color: #f7f8f9
+			background-image: linear-gradient(#ffffff, #b2b8be)
+			box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.23)
+			box-shadow: inset 0 0.5px 0.5px 0 #ffffff
+			&__in
+				padding: 8px 18px 8px 48px
+				&:hover span
+					text-decoration: none
+			& .icon 
+				top: 50%
+				transform: translateY(-50%)
+				left: 15px
+	&__baseline
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		.form__bl
+			width: 48%
+			margin: 0 0 20px
+	&__descr
+		margin-bottom: 8px
 
 .upload
 	margin: 15px 0

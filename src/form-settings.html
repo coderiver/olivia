@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+//=include partials/head.html
+<body>
+	<!-- BEGIN  out-->
+	<div class="out">
+		
+		//=include partials/header-form-settings.html
+
+		<div class="main is-form m-pad">
+			
+			<div class="l-lg">
+				<!--begin entry-wrapper-->
+				<div class="entry-wrapper closed-sidebar">
+
+					<div class="entry-wrapper__top-shadow">
+
+					<div class="entry-content">
+						<form class="form">
+							
+							<div class="form__container">
+								<div class="form__bl">
+									<h2 class="form__ttl form__ttl--big s-bottom-margin">Form Settings</h2>
+									<hr/>
+								</div>
+
+								<div class="form__box-dashed">
+
+									<div class="form__layout">
+										<div class="form__left">
+
+											<div class="form__bl">
+												<p class="form__subttl">Name</p>
+												<p class="form__descr">Should be informative</p>
+												<div class="form__el">
+													<input type="text">
+												</div>
+											</div>
+
+											<div class="form__bl no-bottom-margin">
+												<p class="form__subttl">Short Description</p>
+												<p class="form__descr">Displayed in list of forms. Keep it short.</p>
+												<div class="form__el">
+													<textarea class="textarea"></textarea>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="form__right">
+
+											<div class="form__top">
+												<div class="form__bl">
+													<p class="form__subttl">Short Name</p>
+													<p class="form__descr">For use in file naming convention for export</p>
+													<div class="form__el">
+														<input type="text">
+													</div>
+												</div>
+
+												<div class="form__bl form__bl--small">
+													<p class="form__subttl">Abbreviation</p>
+													<div class="form__el">
+														<input type="text">
+													</div>
+												</div>
+											</div>
+
+											<div class="form__bottom">
+
+												<div class="form__bl no-bottom-margin">
+													<p class="form__subttl">Form Icon</p>
+													<p class="form__descr">To change the icon just drag and drop new .png file to the <br/>upload field</p>
+													<div class="form__el">
+														<div class="form__layout">
+															<div class="upload">
+																<div class="upload__in">
+																	<input type="file">
+																	<i class="icon icon-upload"></i>
+																	<span>Upload icon</span>
+																</div>
+															</div>
+
+															<div class="dropdown is-form js-dropdown">
+																<p class="dropdown__item is-chosen">Choose existing icon</p>
+																<ul class="dropdown__list is-top-level js-inner">
+																	<li><a href="#">Choose existing icon</a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</div>
+
+										</div>
+									</div>
+									
+								</div>
+
+								<div class="form__box-dashed">
+									<div class="form__bl no-bottom-margin">
+										<p class="form__subttl">Form Modules</p>
+										<div class="form__el">
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Membership</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Compliance</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Deal</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Transaction</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Task</span>
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="form__box-dashed">
+
+									<div class="form__baseline">
+										<div class="form__bl">
+											<p class="form__subttl">Workflow</p>
+											<p class="form__descr">Choose this workflow, if the entry has to be pre-reviewed before, it is assigned to a GCS reviewer with the license. After verification, the entry will get the status Approved</p>
+											<div class="form__el">
+												<div class="dropdown is-form js-dropdown">
+													<p class="dropdown__item is-chosen">Review by Pre-Reviewer & Supervisor</p>
+													<ul class="dropdown__list is-top-level js-inner">
+														<li><a href="#">Review by Pre-Reviewer & Supervisor</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="form__bl">
+											<p class="form__subttl">Select Reviewer</p>
+											<p class="form__descr">Select the reviewer who will check the entry. If the reviewer field is empty, entry will be assigned to the user supervisor</p>
+											<div class="form__el">
+												<div class="dropdown is-form js-dropdown">
+													<p class="dropdown__item is-chosen">Review by Pre-Reviewer & Supervisor</p>
+													<ul class="dropdown__list is-top-level js-inner">
+														<li><a href="#">Review by Pre-Reviewer & Supervisor</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="form__baseline">
+										<div class="form__bl no-bottom-margin">
+											<p class="form__subttl">Due Date for Supervisory Review</p>
+											<p class="form__descr">Supervisor should review the entry in this number of days after submition</p>
+											<div class="form__el">
+												<div class="dropdown is-form js-dropdown">
+													<p class="dropdown__item is-chosen">Without auto assign</p>
+													<ul class="dropdown__list is-top-level js-inner">
+														<li><a href="#">Without auto assign</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="form__bl no-bottom-margin">
+											<p class="form__subttl">Select Pre-Reviewer</p>
+											<p class="form__descr">Select the user who will check the entry before the reviewer</p>
+											<div class="form__el">
+												<div class="dropdown is-form js-dropdown">
+													<p class="dropdown__item is-chosen">Review by Pre-Reviewer & Supervisor</p>
+													<ul class="dropdown__list is-top-level js-inner">
+														<li><a href="#">Review by Pre-Reviewer & Supervisor</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="form__box-dashed">
+
+									<div class="form__baseline">
+										<div class="form__bl no-bottom-margin">
+											<p class="form__subttl">Approve Template</p>
+											<p class="form__descr">The supervisor should approve the template</p>
+											<div class="form__el">
+												<div class="dropdown is-form js-dropdown">
+													<p class="dropdown__item is-chosen">Advertising/Marketing Materials: Approve</p>
+													<ul class="dropdown__list is-top-level js-inner">
+														<li><a href="#">Advertising/Marketing Materials: Approve</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="form__bl no-bottom-margin">
+											<p class="form__subttl">Reject Template</p>
+											<p class="form__descr">Gaudeamus igitur iuvenes dum sumus</p>
+											<div class="form__el">
+												<div class="dropdown is-form js-dropdown">
+													<p class="dropdown__item is-chosen">Advertising/Marketing Materials: Decline</p>
+													<ul class="dropdown__list is-top-level js-inner">
+														<li><a href="#">Advertising/Marketing Materials: Decline</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="form__box-dashed">
+									<div class="form__bl no-bottom-margin">
+										<p class="form__subttl">Form Modules</p>
+
+										<div class="form__el">
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Admin</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Affiliate-Full-Access</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Investor</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Staff Draft-Only</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Superuser</span>
+											</label>
+										</div>
+
+										<div class="form__el">
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Affiliate</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Auditor</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Prospect</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Staff Full-Access</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Superuser</span>
+											</label>
+										</div>
+
+										<div class="form__el">
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Affiliate-Draft-Only</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Chaperone</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Representative</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Staff Read-Only</span>
+											</label>
+										</div>
+
+									</div>
+								</div>
+								
+								<div class="form__box-dashed">
+									<div class="form__bl">
+										<p class="form__subttl">Form Modules</p>
+
+										<div class="form__el">
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Azary Dennis</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Carini Shannon</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Dunn Brian</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Miranda Angela</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Test Supervisor</span>
+											</label>
+										</div>
+
+										<div class="form__el">
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Blumin Scott</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Deva Amar</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Dusett Kate</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Schleifer Justin</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Test19 Vladimir</span>
+											</label>
+										</div>
+
+										<div class="form__el">
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Brown Amanda</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Developer OLIVIA</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Johnson Manka</span>
+											</label>
+											<label class="check">
+												<input type="checkbox">
+												<span class="check__span">Sidorenko Vladimir</span>
+											</label>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="form__layout">
+									<div class="form__box-dashed">
+										<div class="form__bl no-bottom-margin">
+											<p class="form__subttl">Confirmation Message</p>
+											<p class="form__descr">Displayed as a message after the form submission</p>
+											<div class="form__el">
+												<textarea class="textarea"></textarea>
+											</div>
+										</div>
+									</div>
+
+									<div class="form__box-dashed">
+										<div class="form__bl">
+											<p class="form__subttl">Term of Expiry</p>
+											<p class="form__descr">The entry will be marked as expired if the deal is not updated</p>
+											<div class="form__el">
+												<div class="dropdown is-form js-dropdown">
+													<p class="dropdown__item is-chosen">Without Expiry</p>
+													<ul class="dropdown__list is-top-level js-inner">
+														<li><a href="#">Without Expiry</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							
+						</form>
+					</div>
+				</div>
+				<!-- end entry-wrapper-->
+			</div>
+
+		</div>
+		
+	</div>
+	<!-- END out-->
+</body>
+</html>
