@@ -614,6 +614,8 @@ input:focus { box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; border-c
 .dropdown .ps-scrollbar-y-rail { width: 3px !important; right: 1px !important; }
 .dropdown .ps-scrollbar-y-rail .ps-scrollbar-y { width: 3px !important; }
 .dropdown--float-r { float: right; }
+.dropdown--heading.is-form { position: absolute; top: 0; right: 0; width: auto; min-width: 87px; }
+.dropdown--heading.is-form .dropdown__item { height: 36px; box-shadow: none; background-image: none; background-color: #ffffff; }
 
 a { text-decoration: none; }
 
@@ -1689,14 +1691,15 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form .btn-group { margin: 30px -5px 0; }
 .form label.form__subttl { cursor: pointer; }
 .form__layout { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
-.form__layout .form__box-dashed:first-child { margin-right: 40px; }
-.form__layout .form__box-dashed:last-child { width: 100%; max-width: 490px; }
-.form__box-dashed { padding: 32px 40px 40px; margin-bottom: 32px; border: 1px dashed #979797; border-radius: 3px; }
-.form__box-dashed input, .form__box-dashed textarea, .form__box-dashed .dropdown__item { box-shadow: none; background-image: none; background-color: #ffffff; }
-.form__box-dashed .form__bl.no-bottom-margin { margin-bottom: 0; }
-.form__box-dashed .check { width: 19.5%; }
-.form__box-dashed .check__span:before { background-color: #ffffff; border-color: #c7cbd3; border-radius: 2px; }
-.form__box-dashed .dropdown { max-width: 100%; }
+.form__layout .form__box-dotted:first-child { margin-right: 40px; }
+.form__layout .form__box-dotted:last-child { width: 100%; max-width: 490px; }
+.form__box-dotted { padding: 32px 40px 40px; margin-bottom: 32px; border: 1px dotted #979797; border-radius: 3px; }
+.form__box-dotted input, .form__box-dotted textarea, .form__box-dotted .dropdown__item { box-shadow: none; background-image: none; background-color: #ffffff; }
+.form__box-dotted input:focus, .form__box-dotted textarea:focus { box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2; }
+.form__box-dotted .form__bl.no-bottom-margin { margin-bottom: 0; }
+.form__box-dotted .check { width: 19.5%; }
+.form__box-dotted .check__span:before { background-color: #ffffff; border-color: #c7cbd3; border-radius: 2px; }
+.form__box-dotted .dropdown { max-width: 100%; }
 .form__container { max-width: 912px; margin: 0 auto; }
 .form__left { width: 100%; max-width: 400px; margin-right: 32px; }
 .form__right { width: 100%; max-width: 400px; -webkit-flex-shrink: 0; -ms-flex-negative: 0; flex-shrink: 0; }
