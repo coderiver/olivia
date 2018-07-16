@@ -296,21 +296,23 @@
 	&__layout
 		display: flex
 		justify-content: space-between
-		.form__box-dashed:first-child
+		.form__box-dotted:first-child
 			margin-right: 40px
-		.form__box-dashed:last-child
+		.form__box-dotted:last-child
 			width: 100%
 			max-width: 490px
 
-	&__box-dashed
+	&__box-dotted
 		padding: 32px 40px 40px
 		margin-bottom: 32px
-		border: 1px dashed #979797
+		border: 1px dotted #979797
 		border-radius: 3px
 		input, textarea, .dropdown__item
 			box-shadow: none
 			background-image: none
 			background-color: #ffffff
+		input:focus, textarea:focus
+			box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2
 		.form__bl
 			&.no-bottom-margin
 				margin-bottom: 0
