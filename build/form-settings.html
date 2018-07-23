@@ -95,7 +95,7 @@
 
 											<div class="form__bl">
 												<p class="form__subttl">Name</p>
-												<p class="form__descr">Should be informative</p>
+												<p class="form__hint">Should be informative</p>
 												<div class="form__el">
 													<input type="text">
 												</div>
@@ -103,10 +103,8 @@
 
 											<div class="form__bl no-bottom-margin">
 												<p class="form__subttl">Short Description</p>
-												<p class="form__descr">Displayed in list of forms. Keep it short.</p>
-												<div class="form__el">
-													<textarea class="textarea"></textarea>
-												</div>
+												<p class="form__hint">Displayed in list of forms. Keep it short.</p>
+												<textarea class="textarea"></textarea>
 											</div>
 
 										</div>
@@ -116,7 +114,7 @@
 											<div class="form__top">
 												<div class="form__bl">
 													<p class="form__subttl">Short Name</p>
-													<p class="form__descr">For use in file naming convention for export</p>
+													<p class="form__hint">For use in file naming convention for export</p>
 													<div class="form__el">
 														<input type="text">
 													</div>
@@ -134,7 +132,7 @@
 
 												<div class="form__bl no-bottom-margin">
 													<p class="form__subttl">Form Icon</p>
-													<p class="form__descr">To change the icon just drag and drop new .png file to the <br/>upload field</p>
+													<p class="form__hint">To change the icon just drag and drop new .png file to the <br/>upload field</p>
 													<div class="form__el">
 														<div class="form__layout">
 															<div class="upload">
@@ -195,7 +193,7 @@
 									<div class="form__baseline">
 										<div class="form__bl">
 											<p class="form__subttl">Workflow</p>
-											<p class="form__descr">Choose this workflow, if the entry has to be pre-reviewed before, it is assigned to a GCS reviewer with the license. After verification, the entry will get the status Approved</p>
+											<p class="form__hint">Choose this workflow, if the entry has to be pre-reviewed before, it is assigned to a GCS reviewer with the license. After verification, the entry will get the status Approved</p>
 											<div class="form__el">
 												<div class="dropdown is-form js-dropdown">
 													<p class="dropdown__item is-chosen">Review by Pre-Reviewer & Supervisor</p>
@@ -208,7 +206,7 @@
 
 										<div class="form__bl">
 											<p class="form__subttl">Select Reviewer</p>
-											<p class="form__descr">Select the reviewer who will check the entry. If the reviewer field is empty, entry will be assigned to the user supervisor</p>
+											<p class="form__hint">Select the reviewer who will check the entry. If the reviewer field is empty, entry will be assigned to the user supervisor</p>
 											<div class="form__el">
 												<div class="dropdown is-form js-dropdown">
 													<p class="dropdown__item is-chosen">Review by Pre-Reviewer & Supervisor</p>
@@ -223,7 +221,7 @@
 									<div class="form__baseline">
 										<div class="form__bl no-bottom-margin">
 											<p class="form__subttl">Due Date for Supervisory Review</p>
-											<p class="form__descr">Supervisor should review the entry in this number of days after submition</p>
+											<p class="form__hint">Supervisor should review the entry in this number of days after submition</p>
 											<div class="form__el">
 												<div class="dropdown is-form js-dropdown">
 													<p class="dropdown__item is-chosen">Without auto assign</p>
@@ -236,7 +234,7 @@
 
 										<div class="form__bl no-bottom-margin">
 											<p class="form__subttl">Select Pre-Reviewer</p>
-											<p class="form__descr">Select the user who will check the entry before the reviewer</p>
+											<p class="form__hint">Select the user who will check the entry before the reviewer</p>
 											<div class="form__el">
 												<div class="dropdown is-form js-dropdown">
 													<p class="dropdown__item is-chosen">Review by Pre-Reviewer & Supervisor</p>
@@ -255,7 +253,7 @@
 									<div class="form__baseline">
 										<div class="form__bl no-bottom-margin">
 											<p class="form__subttl">Approve Template</p>
-											<p class="form__descr">The supervisor should approve the template</p>
+											<p class="form__hint">The supervisor should approve the template</p>
 											<div class="form__el">
 												<div class="dropdown is-form js-dropdown">
 													<p class="dropdown__item is-chosen">Advertising/Marketing Materials: Approve</p>
@@ -268,12 +266,14 @@
 
 										<div class="form__bl no-bottom-margin">
 											<p class="form__subttl">Reject Template</p>
-											<p class="form__descr">Gaudeamus igitur iuvenes dum sumus</p>
+											<p class="form__hint">Gaudeamus igitur iuvenes dum sumus</p>
 											<div class="form__el">
 												<div class="dropdown is-form js-dropdown">
 													<p class="dropdown__item is-chosen">Advertising/Marketing Materials: Decline</p>
 													<ul class="dropdown__list is-top-level js-inner">
 														<li><a href="#">Advertising/Marketing Materials: Decline</a></li>
+														<li><a href="#">Advertising/Marketing Materials:</a></li>
+														<li><a href="#">Advertising/Marketing</a></li>
 													</ul>
 												</div>
 											</div>
@@ -430,7 +430,7 @@
 									<div class="form__box-dotted">
 										<div class="form__bl no-bottom-margin">
 											<p class="form__subttl">Confirmation Message</p>
-											<p class="form__descr">Displayed as a message after the form submission</p>
+											<p class="form__hint">Displayed as a message after the form submission</p>
 											<div class="form__el">
 												<textarea class="textarea"></textarea>
 											</div>
@@ -440,7 +440,7 @@
 									<div class="form__box-dotted">
 										<div class="form__bl">
 											<p class="form__subttl">Term of Expiry</p>
-											<p class="form__descr">The entry will be marked as expired if the deal is not updated</p>
+											<p class="form__hint">The entry will be marked as expired if the deal is not updated</p>
 											<div class="form__el">
 												<div class="dropdown is-form js-dropdown">
 													<p class="dropdown__item is-chosen">Without Expiry</p>
