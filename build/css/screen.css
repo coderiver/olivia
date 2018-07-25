@@ -1752,6 +1752,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__box-dotted .form__bl.no-bottom-margin { margin-bottom: 0; }
 .form__box-dotted .check { width: 19.5%; }
 .form__box-dotted .dropdown { max-width: 100%; }
+.form__box-dotted .dropdown .ng-select .ng-select-container { border: 1px solid #c7cbd3; color: #4a4a4a; }
+.form__box-dotted .dropdown .ng-select .ng-arrow-wrapper .ng-arrow { border-color: #6c757a transparent transparent; }
 .form__container { max-width: 912px; margin: 0 auto; }
 .form__left { width: 100%; max-width: 400px; margin-right: 32px; }
 .form__right { width: 100%; max-width: 400px; -webkit-flex-shrink: 0; -ms-flex-negative: 0; flex-shrink: 0; }
