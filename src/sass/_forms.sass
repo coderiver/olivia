@@ -301,6 +301,12 @@
 		.form__box-dotted:last-child
 			width: 100%
 			max-width: 490px
+		&--large
+			.form__left, .form__right
+				max-width: 480px
+				flex-shrink: 1
+			.form__left
+				margin-right: 16px
 
 	&__box-dotted
 		padding: 32px 40px 40px
@@ -325,6 +331,8 @@
 				color: #4a4a4a
 			.ng-select .ng-arrow-wrapper .ng-arrow
 				border-color: #6c757a transparent transparent
+		&--no-padd
+			padding: 0
 
 	&__container
 		max-width: 912px
@@ -381,6 +389,30 @@
 			margin: 0 0 20px
 	&__descr
 		margin-bottom: 8px
+
+	&__head
+		display: flex
+		justify-content: space-between
+		padding: 16px 20px 16px 40px
+		border-bottom: 1px solid #d8d8d8
+	&__head-ttl
+		font-size: 16px
+		font-weight: 600
+		color: #657689
+	&__btn-close
+		position: relative
+		width: 20px
+		background-color: transparent
+		&:before, &:after
+			content: ''
+			position: absolute
+			right: 0
+			width: 15px
+			height: 1px
+			transform: rotate(45deg)
+			background-color: #c0c0c0
+		&:after
+			transform: rotate(-45deg)
 
 .upload
 	margin: 15px 0
