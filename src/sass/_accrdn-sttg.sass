@@ -1,0 +1,65 @@
+.accrdn-sttg
+	&__list
+		display: none
+	&__title
+		position: relative
+		width: 100%
+		padding: 15px 20px
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		text-align: left
+		color: #ffffff
+		letter-spacing: 0.3px
+		background-color: #32373b
+		border-top: 1px solid #767e83
+		border-bottom: 1px solid #767e83
+		&:before
+			content: ''
+			position: absolute
+			top: 20px
+			right: 20px
+
+			width: 11px
+			height: 11px
+
+			border-left: 3px solid #fff
+			border-bottom: 3px solid #fff
+			transform: rotate(135deg)
+	&.is-open
+		.accrdn-sttg__title:before
+			top: 15px
+			transform: rotate(-45deg)
+
+	&__item
+		display: flex
+		width: 100%
+		padding: 16px 20px 16px 20px
+		font-size: 14px
+		font-weight: 700
+		color: #ffffff
+		background-color: #373d41
+		border-top: 1px solid #767e83
+		border-bottom: 1px solid #32373b
+		cursor: pointer
+		span:first-child
+			display: flex
+			justify-content: center
+			width: 40px
+			height: 17px
+			margin-right: 4px
+			img
+				height: 100%
+		&:first-child
+			border-top: none
+		&--last-border
+			box-shadow: 0 1px 0 0 #767e83
+
+	&.is-open
+		.accrdn-sttg__list
+			display: block
+
+
+
+
+
