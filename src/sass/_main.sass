@@ -1,5 +1,10 @@
 .main
 	margin-top: -90px
+	&.is-layout
+		position: relative
+		display: flex
+		margin-top: 0
+		margin-bottom: 0
 	&__in
 		min-height: 400px
 		background: #fff
@@ -42,7 +47,11 @@
 		padding-top: 112px
 	&.xs-pad
 		padding-top: 98px
-
+.main-sidebar
+	width: 300px
+	min-height: calc(100% + 6px)
+	margin-top: -6px
+	background-color: #32373b
 .upper
 	position: relative
 	min-height: 90px
