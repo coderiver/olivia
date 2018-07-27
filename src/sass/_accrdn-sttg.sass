@@ -30,8 +30,13 @@
 		.accrdn-sttg__title:before
 			top: 15px
 			transform: rotate(-45deg)
+	&__item-drag
+		display: none
+		position: absolute
+		right: 50px
 
 	&__item
+		position: relative
 		display: flex
 		width: 100%
 		padding: 16px 20px 16px 20px
@@ -50,16 +55,30 @@
 			margin-right: 4px
 			img
 				height: 100%
+		&:before
+			display: none
+			content: '• • •'
+			font-size: 6px
+			position: absolute
+			top: 20px
+			left: 7px
+			transform: rotate(90deg)
 		&:first-child
 			border-top: none
 		&--last-border
 			box-shadow: 0 1px 0 0 #767e83
+		&:hover
+			background-color: #515558
+			border-bottom: 1px solid #515558
+		&.drag-and-drop-start
+			.accrdn-sttg__item-drag
+				display: block
 
 	&.is-open
 		.accrdn-sttg__list
 			display: block
-
-
+.drag-and-drop-start.accrdn-sttg__item:before
+	display: block
 
 
 
