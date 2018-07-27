@@ -339,6 +339,10 @@
 			padding: 0
 		&--no-margin
 			margin-bottom: 0
+		&.drag-and-drop-finish
+			border: 2px solid #0076ff
+			.form__drag
+				display: none
 
 	&__container
 		max-width: 912px
@@ -523,7 +527,7 @@
 			display: flex
 		.form__el
 			width: 100%
-		&.is-drag, .form__check.is-drag
+		&.drag-and-drop-start
 			.form__drag-bg
 				position: absolute
 				left: -30px
@@ -568,7 +572,7 @@
 			margin: 0
 		.form__el
 			width: 100%
-		&.is-drag
+		&.drag-and-drop-start
 			.form__drag-bg
 				position: absolute
 				left: -30px
