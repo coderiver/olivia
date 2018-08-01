@@ -1,11 +1,69 @@
 <!doctype html>
 <html>
-//=include partials/head.html
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=1040, initial-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#fff">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/app.js"></script>
+</head>
 <body>
 	<!-- BEGIN  out-->
 	<div class="out">
 		
-		//=include partials/header-form-settings.html
+		<!-- begin header  -->
+		
+		<div class="header is-form js-fixed">
+		
+			<div class="l-lg">
+		
+				<div class="header__in">
+		
+					<div class="header__group">
+		
+						<a href="#" class="header__close"><i class="icon icon-close"></i></a>
+		
+						<div class="header__bl">
+		
+							<p><span>Form</span></p>
+		
+							<div class="header__small header__small--gray">Last Edited 12.06.18, 3:45 PM</div>
+		
+						</div>
+		
+					</div>
+		
+					<div class="btn-group">
+		
+						<button class="btn btn-ok" type="button">Save</button>
+		
+					</div>
+		
+				</div>
+		
+				<div class="header__in js-hide">
+		
+					<ul class="header__list header__list--sm">
+		
+						<li><a href="#" class="header__option header__option--blue is-active">Settings</a></li>
+		
+						<li><a href="#" class="header__option header__option--blue">Layout</a></li>
+		
+					</ul>
+		
+				</div>
+		
+			</div>
+		
+		</div>
+		
+		<!-- end header -->
 
 		<div class="main is-layout m-pad">
 
@@ -15,17 +73,17 @@
 				<div class="accrdn-sttg is-open">
 					<button class="accrdn-sttg__title">GENERAL FIELDS</button>
 					<ul class="accrdn-sttg__list">
-						<li class="accrdn-sttg__item"><span><img src="img/text.svg"></span><span>Text</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/text-area.svg"></span><span>Text Area</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/integer.svg"></span><span>Integer</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/decimal.svg"></span><span>Decimal</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/currency-field.svg"></span><span>Currency Field</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/date.svg"></span><span>Date</span></li>
-						<li class="accrdn-sttg__item drag-and-drop-start"><span><img src="img/list.svg"></span><span>List</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/radio-group.svg"></span><span>Radio Group</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/mult-select.svg"></span><span>Multiple Select List</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/email.svg"></span><span>Email</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/file-upload.svg"></span><span>File Upload</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/text.svg"></span><span>Text</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/text-area.svg"></span><span>Text Area</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/integer.svg"></span><span>Integer</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/decimal.svg"></span><span>Decimal</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/currency-field.svg"></span><span>Currency Field</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/date.svg"></span><span>Date</span></li>
+						<li class="accrdn-sttg__item drag-and-drop-start"><span><img src="img/formbuilder/list.svg"></span><span>List</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/radio-group.svg"></span><span>Radio Group</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/mult-select.svg"></span><span>Multiple Select List</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/email.svg"></span><span>Email</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/file-upload.svg"></span><span>File Upload</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
 					</ul>
 				</div>
 				<!-- end accordion -->
@@ -33,10 +91,10 @@
 				<div class="accrdn-sttg is-open">
 					<button class="accrdn-sttg__title">SPECIALSIZED</button>
 					<ul class="accrdn-sttg__list">
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>EIN</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>SSN</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>List of States</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>List of Countries</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>EIN</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>SSN</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>List of States</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>List of Countries</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
 					</ul>
 				</div>
 				<!-- end accordion -->
@@ -44,15 +102,15 @@
 				<div class="accrdn-sttg is-open">
 					<button class="accrdn-sttg__title">OLIVIA FIELDS</button>
 					<ul class="accrdn-sttg__list">
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>List of Users</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>List of Customers</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>List of Deals</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>List of Transactions</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>List of Roles</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>List of Firms</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>Commission Split</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>Co-Marketing Split</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>Library Documents</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>List of Users</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>List of Customers</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>List of Deals</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>List of Transactions</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>List of Roles</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>List of Firms</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>Commission Split</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>Co-Marketing Split</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>Library Documents</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
 					</ul>
 				</div>
 				<!-- end accordion -->
@@ -60,10 +118,10 @@
 				<div class="accrdn-sttg is-open">
 					<button class="accrdn-sttg__title">FORMAT</button>
 					<ul class="accrdn-sttg__list">
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>Form Section Instructions</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>Form Section Title</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item"><span><img src="img/list.svg"></span><span>Form Title</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
-						<li class="accrdn-sttg__item accrdn-sttg__item--last-border"><span><img src="img/list.svg"></span><span>Section Divider</span><img class="accrdn-sttg__item-drag" src="img/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>Form Section Instructions</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>Form Section Title</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item"><span><img src="img/formbuilder/list.svg"></span><span>Form Title</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
+						<li class="accrdn-sttg__item accrdn-sttg__item--last-border"><span><img src="img/formbuilder/list.svg"></span><span>Section Divider</span><img class="accrdn-sttg__item-drag" src="img/formbuilder/drag2.svg"></li>
 					</ul>
 				</div>
 				<!-- end accordion -->
@@ -101,12 +159,12 @@
 
 							<!--begin form__box-dotted-->
 							<div class="form__box-dotted form__box-dotted--no-padd drag-and-drop-finish">
-								<div class="form__drag"><img src="img/drag1.svg"></div>
+								<div class="form__drag"><img src="img/formbuilder/drag1.svg"></div>
 								<div class="form__head">
 									<div class="form__head-el">
-										<button class="form__head-link"><img src="img/link.svg"></button>
+										<button class="form__head-link"><img src="img/formbuilder/link.svg"></button>
 										<div class="form__head-ttl">Text Field</div>
-										<button class="form__head-edit"><img src="img/edit.svg"></button>
+										<button class="form__head-edit"><img src="img/formbuilder/edit.svg"></button>
 									</div>
 									<button class="form__btn-close"></button>
 								</div>
@@ -169,12 +227,12 @@
 
 							<!--begin form__box-dotted-->
 							<div class="form__box-dotted form__box-dotted--no-padd">
-								<div class="form__drag"><img src="img/drag1.svg"></div>
+								<div class="form__drag"><img src="img/formbuilder/drag1.svg"></div>
 								<div class="form__head">
 									<div class="form__head-el">
-										<button class="form__head-link"><img src="img/link.svg"></button>
+										<button class="form__head-link"><img src="img/formbuilder/link.svg"></button>
 										<div class="form__head-ttl">Text Field:<span>Does this require a FINRA filing?</span></div>
-										<button class="form__head-edit"><img src="img/edit.svg"></button>
+										<button class="form__head-edit"><img src="img/formbuilder/edit.svg"></button>
 									</div>
 									<button class="form__btn-close"></button>
 								</div>
@@ -237,12 +295,12 @@
 
 							<!--begin form__box-dotted-->
 							<div class="form__box-dotted form__box-dotted--no-padd">
-								<div class="form__drag"><img src="img/drag1.svg"></div>
+								<div class="form__drag"><img src="img/formbuilder/drag1.svg"></div>
 								<div class="form__head">
 									<div class="form__head-el">
-										<button class="form__head-link"><img src="img/link.svg"></button>
+										<button class="form__head-link"><img src="img/formbuilder/link.svg"></button>
 										<div class="form__head-ttl">Radio Group:<span>Does this require a FINRA filing?</span></div>
-										<button class="form__head-edit"><img src="img/edit.svg"></button>
+										<button class="form__head-edit"><img src="img/formbuilder/edit.svg"></button>
 									</div>
 									<button class="form__btn-close"></button>
 								</div>
@@ -267,7 +325,7 @@
 													<span class="form__radio-plh">Option 1</span>
 
 													<span class="form__radio-cont">
-														<button class="form__cont-link"><img src="img/link-bl.svg"></button>
+														<button class="form__cont-link"><img src="img/formbuilder/link-bl.svg"></button>
 														<span class="form__cont-text">Some long connected field name…,</span>
 														<span class="form__cont-text">Another connected field name</span>
 													</span>
@@ -283,7 +341,7 @@
 													<span class="form__radio-plh">Option 2</span>
 
 													<span class="form__radio-cont">
-														<button class="form__cont-link"><img src="img/link-bl.svg"></button>
+														<button class="form__cont-link"><img src="img/formbuilder/link-bl.svg"></button>
 														<span class="form__cont-text">Some long connected field name…,</span>
 														<span class="form__cont-text">Another connected field name</span>
 													</span>
@@ -293,14 +351,14 @@
 											</label>
 
 											<label class="form__radio radio drag-and-drop-start">
-												<span class="form__drag-bg"><img src="img/drag1.svg"></span>
+												<span class="form__drag-bg"><img src="img/formbuilder/drag1.svg"></span>
 												<input type="radio" name="group1" value="option3">
 												<span class="radio__span"></span>
 												<span class="form__el">
 													<span class="form__radio-plh">Option 3</span>
 
 													<span class="form__radio-cont">
-														<button class="form__cont-link"><img src="img/link-bl.svg"></button>
+														<button class="form__cont-link"><img src="img/formbuilder/link-bl.svg"></button>
 														<span class="form__cont-text">Some long connected field name…,</span>
 														<span class="form__cont-text">Another connected field name</span>
 													</span>
@@ -316,7 +374,7 @@
 													<span class="form__radio-plh">Option 4</span>
 
 													<span class="form__radio-cont">
-														<button class="form__cont-link"><img src="img/link-bl.svg"></button>
+														<button class="form__cont-link"><img src="img/formbuilder/link-bl.svg"></button>
 														<span class="form__cont-text">Some long connected field name…,</span>
 														<span class="form__cont-text">Another connected field name</span>
 													</span>
@@ -378,7 +436,7 @@
 							<!--end drop-line-->
 							<!--begin form__box-dotted-->
 							<div class="form__box-dotted form__box-dotted--no-padd">
-								<div class="form__drag"><img src="img/drag1.svg"></div>
+								<div class="form__drag"><img src="img/formbuilder/drag1.svg"></div>
 
 								<div class="form__head">
 
@@ -387,7 +445,7 @@
 											
 											<div class="form__hint">
 												<a class="form__head-link">
-													<img src="img/link-bl.svg">
+													<img src="img/formbuilder/link-bl.svg">
 													<!--begin form__popup-->
 													<span class="form__popup">
 														<!--begin select-->
@@ -441,7 +499,7 @@
 										
 										<div class="form__head-el">
 											<div class="form__head-ttl">The textfield label</div>
-											<button class="form__head-edit"><img src="img/edit.svg"></button>
+											<button class="form__head-edit"><img src="img/formbuilder/edit.svg"></button>
 										</div>
 									</div>
 
@@ -506,7 +564,7 @@
 
 							<!--begin form__box-dotted-->
 							<div class="form__box-dotted form__box-dotted--no-padd">
-								<div class="form__drag"><img src="img/drag1.svg"></div>
+								<div class="form__drag"><img src="img/formbuilder/drag1.svg"></div>
 
 								<div class="form__head">
 
@@ -514,7 +572,7 @@
 										<div class="form__row">
 											
 											<div class="form__hint">
-												<button class="form__head-link"><img src="img/link-bl.svg"></button>
+												<button class="form__head-link"><img src="img/formbuilder/link-bl.svg"></button>
 												<span>Have you conducted a review of the material in the context of FINRA rules 2210(d)(1)(A), (B) and (D)?</span>
 											</div>
 											<div class="form__hint">• Yes</div>
@@ -522,7 +580,7 @@
 										
 										<div class="form__head-el">
 											<div class="form__head-ttl">The textfield label</div>
-											<button class="form__head-edit"><img src="img/edit.svg"></button>
+											<button class="form__head-edit"><img src="img/formbuilder/edit.svg"></button>
 										</div>
 									</div>
 
@@ -587,14 +645,14 @@
 
 							<!--begin form__box-dotted-->
 							<div class="form__box-dotted form__box-dotted--no-padd">
-								<div class="form__drag"><img src="img/drag1.svg"></div>
+								<div class="form__drag"><img src="img/formbuilder/drag1.svg"></div>
 
 								<div class="form__head">
 										
 									<div class="form__head-el">
-										<button class="form__head-link"><img src="img/link.svg"></button>
+										<button class="form__head-link"><img src="img/formbuilder/link.svg"></button>
 										<div class="form__head-ttl">The textfield label</div>
-										<button class="form__head-edit"><img src="img/edit.svg"></button>
+										<button class="form__head-edit"><img src="img/formbuilder/edit.svg"></button>
 									</div>
 
 									<button class="form__btn-close"></button>
@@ -633,7 +691,7 @@
 											</label>
 
 											<label class="form__check check drag-and-drop-start">
-												<span class="form__drag-bg"><img src="img/drag1.svg"></span>
+												<span class="form__drag-bg"><img src="img/formbuilder/drag1.svg"></span>
 												<input type="checkbox" name="group2" value="option3">
 												<span class="check__span"></span>
 												<span class="form__el">
@@ -700,14 +758,14 @@
 
 							<!--begin form__box-dotted-->
 							<div class="form__box-dotted form__box-dotted--no-padd">
-								<div class="form__drag"><img src="img/drag1.svg"></div>
+								<div class="form__drag"><img src="img/formbuilder/drag1.svg"></div>
 
 								<div class="form__head">
 										
 									<div class="form__head-el">
-										<button class="form__head-link"><img src="img/link.svg"></button>
+										<button class="form__head-link"><img src="img/formbuilder/link.svg"></button>
 										<div class="form__head-ttl">Radio Group:<span>Does this require a FINRA filing?</span></div>
-										<button class="form__head-edit"><img src="img/edit.svg"></button>
+										<button class="form__head-edit"><img src="img/formbuilder/edit.svg"></button>
 									</div>
 
 									<button class="form__btn-close"></button>
