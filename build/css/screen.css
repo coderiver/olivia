@@ -334,6 +334,7 @@ body .tooltipster-base { z-index: 8; }
 
 .l-layout { width: 100%; max-width: 1060px; margin: 0 auto; }
 .l-layout .entry-wrapper { padding-left: 0; margin-bottom: 40px; }
+.l-layout .entry-content { padding: 40px 80px; }
 
 .btn-group { font-size: 0; }
 .btn-group.is-bold .btn { font-family: "opensans-semibold", Arial, sans-serif; }
