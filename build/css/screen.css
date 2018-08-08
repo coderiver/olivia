@@ -1826,9 +1826,9 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__baseline { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
 .form__baseline .form__bl { width: 48%; margin: 0 0 20px; }
 .form__descr { margin-bottom: 8px; }
-.form__head { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; padding: 16px 20px 16px 40px; border-bottom: 1px solid #d8d8d8; }
-.form__head input { max-width: 470px; width: 100%; height: 35px; margin-right: 8px; }
-.form__head .btn { border: 1px solid #b2b8be; font-weight: 600; width: 64px; height: 35px; }
+.form__head { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding: 16px 20px 16px 40px; border-bottom: 1px solid #d8d8d8; }
+.form__head input { width: 470px; height: 35px; }
+.form__head .btn { border: 1px solid #b2b8be; font-weight: 600; width: 64px; height: 35px; margin-left: 8px; }
 .form__head-ttl { margin: 0 8px 0 4px; font-size: 16px; font-weight: 600; color: #657689; }
 .form__head-ttl span { margin-left: 4px; color: #4a4a4a; }
 .form__head-el { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
@@ -1839,7 +1839,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__head-link .icon { width: 100%; height: 8px; }
 .form .link-bl { width: 100%; height: 8px; }
 .form__head-edit .edit { height: 20px; width: 100%; }
-.form__btn-close { position: relative; width: 20px; background-color: transparent; margin-left: auto; }
+.form__btn-close { position: relative; width: 20px; height: 20px; background-color: transparent; margin-left: auto; }
 .form__btn-close:before, .form__btn-close:after { content: ""; position: absolute; top: 10px; right: 0; width: 15px; height: 1px; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); background-color: #c0c0c0; }
 .form__btn-close:after { -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
 .form__btn-close--small { width: 35px; min-height: 36px; }
