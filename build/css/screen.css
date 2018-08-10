@@ -533,6 +533,8 @@ body .tooltipster-base { z-index: 8; }
 
 .list { background-image: url("../img/svg-bg/list.svg"); }
 
+.split { background-image: url("../img/svg-bg/split.svg"); }
+
 .drag2 { height: 22px; background-image: url("../img/svg-bg/drag2.svg"); }
 
 .text-area { background-image: url("../img/svg-bg/text-area.svg"); }
@@ -2460,7 +2462,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .accrdn-sttg__item.drag-and-drop-start .accrdn-sttg__item-drag { display: block; }
 .accrdn-sttg.is-open .accrdn-sttg__list { display: block; }
 
-.drag-and-drop-start.accrdn-sttg__item:before { display: block; }
+.accrdn-sttg__item:hover.accrdn-sttg__item:before, .accrdn-sttg__item:hover .accrdn-sttg__item-drag { display: block; }
 
 html.ngspinner-show, body.ngspinner-show { overflow: hidden; }
 
