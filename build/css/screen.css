@@ -1018,7 +1018,6 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .drop-line { position: relative; width: 100%; height: 1px; margin-bottom: 32px; background-color: #0076ff; }
 .drop-line:before, .drop-line:after { content: "•••"; font-size: 10px; color: #0076ff; position: absolute; top: -12px; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
 .drop-line:after { top: auto; bottom: -12px; }
-
 .drop-line { position: relative; width: 100%; height: 1px; margin-bottom: 32px; background-color: #0076ff; }
 .drop-line:before, .drop-line:after { content: "•••"; font-size: 10px; color: #0076ff; position: absolute; top: -12px; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
 .drop-line:after { top: auto; bottom: -12px; }
