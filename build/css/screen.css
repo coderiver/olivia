@@ -22,7 +22,7 @@ html { box-sizing: border-box; }
 
 *, *:before, *:after { box-sizing: inherit; }
 
-@font-face { font-family: "svgfont"; src: url("../fonts/svgfont.eot?v=1530004889"); src: url("../fonts/svgfont.eot?#iefix?v=1530004889") format("eot"), url("../fonts/svgfont.woff?v=1530004889") format("woff"), url("../fonts/svgfont.woff2?v=1530004889") format("woff2"), url("../fonts/svgfont.ttf?v=1530004889") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "svgfont"; src: url("../fonts/svgfont.eot?v=1534842799"); src: url("../fonts/svgfont.eot?#iefix?v=1534842799") format("eot"), url("../fonts/svgfont.woff?v=1534842799") format("woff"), url("../fonts/svgfont.woff2?v=1534842799") format("woff2"), url("../fonts/svgfont.ttf?v=1534842799") format("truetype"); font-weight: normal; font-style: normal; }
 .icon, [class^="icon-"], [class*=" icon-"], .steps__icon:before { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
@@ -31,33 +31,31 @@ html { box-sizing: border-box; }
 
 .icon-add-news:before { content: ""; }
 
-.icon-add-report:before { content: ""; }
-
 .icon-archive:before { content: ""; }
+
+.icon-add-report:before { content: ""; }
 
 .icon-arr-bottom-right:before { content: ""; }
 
-.icon-arr-left:before { content: ""; }
-
 .icon-arr-right:before { content: ""; }
 
-.icon-arr-top:before { content: ""; }
-
 .icon-bell:before { content: ""; }
+
+.icon-arr-top:before { content: ""; }
 
 .icon-bubble:before { content: ""; }
 
 .icon-calendar:before { content: ""; }
 
-.icon-check:before { content: ""; }
+.icon-arr-left:before { content: ""; }
 
 .icon-checked:before { content: ""; }
 
 .icon-clip:before { content: ""; }
 
-.icon-close:before { content: ""; }
+.icon-check:before { content: ""; }
 
-.icon-comment-cloud:before { content: ""; }
+.icon-close:before { content: ""; }
 
 .icon-comment:before { content: ""; }
 
@@ -71,23 +69,23 @@ html { box-sizing: border-box; }
 
 .icon-delete:before { content: ""; }
 
-.icon-dollar:before { content: ""; }
-
-.icon-euro:before { content: ""; }
-
-.icon-filter:before { content: ""; }
+.icon-comment-cloud:before { content: ""; }
 
 .icon-firm:before { content: ""; }
 
-.icon-folder-checked:before { content: ""; }
+.icon-filter:before { content: ""; }
+
+.icon-euro:before { content: ""; }
 
 .icon-folder-dots:before { content: ""; }
 
 .icon-folder:before { content: ""; }
 
+.icon-folder-checked:before { content: ""; }
+
 .icon-hourglass:before { content: ""; }
 
-.icon-infinity:before { content: ""; }
+.icon-dollar:before { content: ""; }
 
 .icon-letter:before { content: ""; }
 
@@ -97,33 +95,37 @@ html { box-sizing: border-box; }
 
 .icon-logo:before { content: ""; }
 
-.icon-marked:before { content: ""; }
+.icon-news:before { content: ""; }
 
 .icon-menu:before { content: ""; }
 
-.icon-news:before { content: ""; }
+.icon-marked:before { content: ""; }
 
 .icon-overdue-ico:before { content: ""; }
 
 .icon-pending:before { content: ""; }
 
-.icon-plus:before { content: ""; }
+.icon-sek:before { content: ""; }
+
+.icon-sidebar:before { content: ""; }
 
 .icon-pound:before { content: ""; }
 
-.icon-sidebar:before { content: ""; }
+.icon-infinity:before { content: ""; }
 
-.icon-square-arr:before { content: ""; }
+.icon-square-arr:before { content: ""; }
 
-.icon-star:before { content: ""; }
+.icon-star:before { content: ""; }
 
-.icon-team:before { content: ""; }
+.icon-plus:before { content: ""; }
 
-.icon-upload:before { content: ""; }
+.icon-upload:before { content: ""; }
 
-.icon-warn:before { content: ""; }
+.icon-team:before { content: ""; }
 
-.icon-zoom:before { content: ""; }
+.icon-warn:before { content: ""; }
+
+.icon-zoom:before { content: ""; }
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default { border-radius: 5px; border: 2px solid #000; background: #4c4c4c; color: #fff; }
