@@ -460,7 +460,7 @@
 		&:before, &:after
 			content: ''
 			position: absolute
-			top: 17px
+			top: 10px
 			right: 0
 			width: 15px
 			height: 1px
@@ -494,7 +494,10 @@
 	&__box
 		width: 100%
 		padding: 35px 55px 35px 40px
+		&.no-sidebar
+			padding-right: 277px
 	&__item
+		position: relative
 		display: flex
 		justify-content: space-between
 		align-items: center
@@ -509,6 +512,10 @@
 			white-space: nowrap
 		input
 			max-width: 550px
+		.errors
+			position: absolute
+			bottom: -20px
+			left: 110px
 	&__drag
 		position: absolute
 		top: 10px
