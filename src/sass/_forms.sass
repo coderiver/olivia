@@ -314,6 +314,7 @@
 		margin-bottom: 32px
 		border: 1px dotted #979797
 		border-radius: 3px
+		background-color: #ffffff
 		input, textarea, .dropdown__item
 			box-shadow: none
 			background-image: none
@@ -344,6 +345,8 @@
 			border: 2px solid #0076ff
 			.form__drag
 				display: none
+		&.drag-and-drop-out
+			box-shadow: 0 0 50px 0px rgba(0,0,0,0.4)
 
 	&__container
 		max-width: 912px
@@ -404,6 +407,7 @@
 	&__head
 		display: flex
 		align-items: center
+		height: 55px
 		// justify-content: space-between
 		padding: 16px 20px 16px 40px
 		border-bottom: 1px solid #d8d8d8
@@ -484,7 +488,8 @@
 	&__sidebar
 		display: flex
 		flex-direction: column
-		min-width: 222px
+		width: 222px
+		min-height: 100%
 		padding: 30px 40px
 		background-color: #f4f4f4
 		.check
@@ -503,13 +508,15 @@
 		align-items: center
 		width: 100%
 		margin-bottom: 23px
+		.dropdown
+			max-width: 550px
 		.form__subttl
 			min-width: 91px
+			width: 91px
 			flex-grow: 1
 			margin-right: 17px
 			margin-bottom: 0
 			text-align: right
-			white-space: nowrap
 		input
 			max-width: 550px
 		.errors
