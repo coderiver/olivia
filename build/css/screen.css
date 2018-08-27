@@ -313,17 +313,17 @@ html { box-sizing: border-box; }
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-child { padding-left: 22px; }
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-option .ng-tag-label { padding-right: 5px; font-size: 80%; font-weight: 400; }
 
-.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value { line-height: 20px; }
+.ng-select.ng-select-single ::ng-deep .ng-select-container .ng-value-container .ng-value { line-height: 20px; }
 
-.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input { top: 0; }
+.ng-select.ng-select-single ::ng-deep .ng-select-container .ng-value-container .ng-input { top: 0; }
 
-.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-placeholder { top: 0; padding-bottom: 0; padding-left: 0; }
+.ng-select.ng-select-multiple ::ng-deep .ng-select-container .ng-value-container .ng-placeholder { top: 0; padding-bottom: 0; padding-left: 0; }
 
-.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-input { padding-bottom: 0; padding-left: 0; }
+.ng-select.ng-select-multiple ::ng-deep .ng-select-container .ng-value-container .ng-input { padding-bottom: 0; padding-left: 0; }
 
-.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value { margin-bottom: 0; }
+.ng-select.ng-select-multiple ::ng-deep .ng-select-container .ng-value-container .ng-value { margin-bottom: 0; }
 
-.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-label { padding: 4px; font-size: 13px; }
+.ng-select.ng-select-multiple ::ng-deep .ng-select-container .ng-value-container .ng-value .ng-value-label { padding: 4px; font-size: 13px; }
 
 @font-face { font-family: opensans; src: url("../fonts/opensans.eot"); src: url("../fonts/opensans.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: opensans-semibold; src: url("../fonts/opensans-semibold.eot"); src: url("../fonts/opensans-semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-semibold.woff2") format("woff2"), url("../fonts/opensans-semibold.woff") format("woff"), url("../fonts/opensans-semibold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
