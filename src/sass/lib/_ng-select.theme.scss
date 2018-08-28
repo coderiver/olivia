@@ -260,15 +260,14 @@ $color-selected: #f5faff;
 .ng-select.formbuilder-select.ng-select-multiple .ng-select-container .ng-value-container .ng-placeholder {
     top: 50%;
     transform: translateY(-50%);
-    padding-bottom: 0;
-    padding-left: 0;
+    padding: 4px 0 0 7px;
 }
 .ng-select.formbuilder-select.ng-select-multiple .ng-select-container .ng-value-container .ng-input {
     padding-bottom: 0;
     padding-left: 0;
 }
 .ng-select.formbuilder-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
-    margin-bottom: 0;
+    margin-bottom: 4px;
 }
 .ng-select.formbuilder-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-label {
     padding: 4px;
@@ -276,4 +275,11 @@ $color-selected: #f5faff;
 }
 .ng-select.formbuilder-select.ng-select-multiple .ng-select-container .ng-value-container {
     padding-top: 0;
+}
+.ng-select.formbuilder-select .ng-select-container .ng-value-container .ng-input>input {
+    padding: 8px 0;
+}
+
+.form__box-dotted .dropdown .ng-select .ng-arrow-wrapper .ng-arrow {
+    margin-top: 7px;
 }
