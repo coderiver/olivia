@@ -293,7 +293,428 @@
 		margin: 30px -5px 0
 	label.form__subttl
 		cursor: pointer
+	&__layout
+		display: flex
+		justify-content: space-between
+		.form__box-dotted:first-child
+			margin-right: 40px
+		.form__box-dotted:last-child
+			width: 100%
+			max-width: 490px
+		&--large
+			.form__left, .form__right
+				max-width: 480px
+				flex-shrink: 1
+			.form__left
+				margin-right: 16px
 
+	&__box-dotted
+		position: relative
+		padding: 32px 40px 40px
+		margin-bottom: 32px
+		border: 1px dotted #979797
+		border-radius: 3px
+		background-color: #ffffff
+		input, textarea, .dropdown__item
+			box-shadow: none
+			background-image: none
+			background-color: #ffffff
+		input:focus, textarea:focus
+			box-shadow: inset 0 1px 3px transparent, 0 0 6px #097bf2
+		input
+			+placeholder
+				color: #4a4a4a
+		.form__bl
+			&.no-bottom-margin
+				margin-bottom: 0
+		.check
+			width: 19.5%
+			margin-bottom: 15px
+		.dropdown
+			max-width: 100%
+			.ng-select .ng-select-container
+				border: 1px solid #c7cbd3
+				color: #4a4a4a
+			.ng-select .ng-arrow-wrapper .ng-arrow
+				border-color: #6c757a transparent transparent
+		&--no-padd
+			padding: 0
+		&--no-margin
+			margin-bottom: 0
+		&.drag-and-drop-finish
+			border: 2px solid #0076ff
+			.form__drag
+				display: none
+		&.drag-and-drop-out
+			box-shadow: 0 0 50px 0px rgba(0,0,0,0.4)
+
+	&__container
+		max-width: 912px
+		margin: 0 auto
+		& .errors-box
+			position: absolute
+			bottom: -20px
+			left: 0
+			white-space: nowrap
+	&__left
+		width: 100%
+		max-width: 400px
+		margin-right: 32px
+	&__right
+		width: 100%
+		max-width: 400px
+		flex-shrink: 0
+	&__top
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		.form__bl 
+			width: 281px
+			margin: 0 0 20px
+		.form__bl--small
+			width: 87px
+	&__bottom
+		.form__layout
+			align-items: center
+		.dropdown
+			max-width: 236px
+			&__item
+				height: 36px
+		.upload 
+			margin: 0
+			font-size: 13px
+			color: #282828
+			border: 1px solid #cfd5e0
+			border-radius: 4px
+			cursor: pointer
+			background-color: #f7f8f9
+			background-image: linear-gradient(#ffffff, #b2b8be)
+			box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.23)
+			box-shadow: inset 0 0.5px 0.5px 0 #ffffff
+			&__in
+				padding: 8px 18px 8px 48px
+				&:hover span
+					text-decoration: none
+			& .icon 
+				top: 50%
+				transform: translateY(-50%)
+				left: 15px
+	&__baseline
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		.form__bl
+			width: 48%
+			margin: 0 0 20px
+	&__descr
+		margin-bottom: 8px
+
+	&__head
+		display: flex
+		align-items: center
+		height: 55px
+		// justify-content: space-between
+		padding: 16px 20px 16px 40px
+		border-bottom: 1px solid #d8d8d8
+		input 
+			width: 470px
+			height: 35px
+		.btn
+			border: 1px solid #b2b8be
+			font-weight: 600
+			width: 64px
+			height: 35px
+			margin-left: 8px
+	&__head-ttl
+		margin: 0 8px 0 4px
+		font-size: 16px
+		font-weight: 600
+		color: #657689
+		span
+			margin-left: 4px
+			color: #4a4a4a
+	&__head-el
+		display: flex
+		align-items: center
+		&--column
+			flex-direction: column
+			align-items: start
+	&__head-link, &__head-edit
+		display: flex
+		width: 14px
+		background-color: transparent
+		img
+			height: 100%
+			width: 100%
+	&__head-link
+		position: relative
+		margin-top: 2px
+		height: 8px
+		.icon
+			width: 100%
+			height: 8px
+	.link-bl
+		width: 100%
+		height: 8px
+	&__head-edit
+		.edit
+			height: 20px
+			width: 100%
+	&__btn-close
+		position: relative
+		width: 20px
+		height: 20px
+		background-color: transparent
+		margin-left: auto
+		&:before, &:after
+			content: ''
+			position: absolute
+			top: 10px
+			right: 0
+			width: 15px
+			height: 1px
+			transform: rotate(45deg)
+			background-color: #c0c0c0
+		&:after
+			transform: rotate(-45deg)
+
+		&--small
+			width: 35px
+			min-height: 36px
+			&:before, &:after
+				right: 12px
+				width: 12px
+	&__row
+		.form__head-link
+			display: inline-block
+		.form__hint
+			font-size: 14px
+
+	&__sidebar
+		display: flex
+		flex-direction: column
+		width: 222px
+		min-height: 100%
+		padding: 30px 40px
+		background-color: #f4f4f4
+		.check
+			margin-bottom: 5px
+			&__span
+				white-space: nowrap
+	&__box
+		width: 100%
+		padding: 35px 55px 35px 40px
+		&.no-sidebar
+			padding-right: 277px
+	&__item
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+		margin-bottom: 23px
+		.dropdown
+			max-width: 550px
+		.form__subttl
+			min-width: 91px
+			width: 91px
+			flex-grow: 1
+			margin-right: 17px
+			margin-bottom: 0
+			text-align: right
+		input
+			max-width: 550px
+		.errors
+			position: absolute
+			bottom: 0
+			left: 110px
+	&__drag
+		position: absolute
+		top: 10px
+		left: -17px
+		width: 34px
+		height: 34px
+		cursor: pointer
+		.icon
+			width: 100%
+			height: 100%
+	&__options
+		max-width: 550px
+		margin-left: auto
+		.btn
+			margin-top: 15px
+			border: 1px solid #b2b8be
+			font-weight: 600
+		.check 
+			width: 100%
+		.form__el
+			z-index: 5
+		.form__radio-plh, .form__check-plh
+			display: block
+			width: 100%
+			padding: 9px 12px
+			font-size: 13px
+			color: #4a4a4a
+			border-radius: 4px
+			border: 1px solid rgba(0, 0, 0, 0.15)
+			position: static
+			visibility: visible
+			opacity: 1
+	&__radio
+		position: relative
+		display: flex
+		align-items: flex-start
+		margin-bottom: 15px
+		input[type="radio"]
+			width: 18px
+			height: 18px
+			position: absolute
+			left: -22px
+			top: 7px
+			z-index: 10
+			cursor: pointer
+			visibility: visible
+		input[type="radio"] + .radio__span:before
+			border-color: #c7cbd3
+		.radio__span
+			position: absolute
+			left: -20px
+			top: 18px
+		input[type="radio"]:checked + .radio__span:before
+			border-color: #c7cbd3
+			background-color: #ffffff
+		input[type="radio"]:checked + .radio__span:after
+			left: 4px
+			width: 6px
+			height: 6px
+			margin-top: -4px
+			background-color: #c7cbd3
+		input[type="radio"]:checked ~ .form__el > .form__radio-cont
+			margin-top: 5px
+			display: flex
+		.form__el
+			width: 100%
+		&.drag-and-drop-start
+			.form__drag-bg
+				position: absolute
+				left: -30px
+				width: calc(100% + 30px)
+				height: 100%
+				border-radius: 2px
+				box-shadow: 0 1px 7.5px 0.5px rgba(0, 0, 0, 0.13)
+				background-color: #ffffff
+				border: dotted 1px #c7cbd3
+				.icon
+					width: 34px
+					height: 34px
+					position: absolute
+					right: 25%
+					top: 35%
+					z-index: 10
+	&__check
+		position: relative
+		display: flex
+		align-items: flex-start
+		margin-bottom: 15px
+		input[type="checkbox"]
+			width: 18px
+			height: 18px
+			position: absolute
+			left: -22px
+			top: 7px
+			z-index: 10
+			cursor: pointer
+			visibility: visible
+		input[type="checkbox"] + .check__span:before
+			background-color: #ffffff
+			border-color: #c7cbd3
+			border-radius: 2px
+		.check__span
+			position: absolute
+			left: -20px
+			top: 10px
+		input[type="checkbox"]:checked + .check__span:before
+			border-color: #c7cbd3
+			background-color: #ffffff
+		input[type="checkbox"]:checked + .check__span:after
+			content: ''
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			width: 7px
+			height: 7px
+			background-color: #c7cbd3
+			border-radius: 2px
+			margin: 0
+		.form__el
+			width: 100%
+		&.drag-and-drop-start
+			.form__drag-bg
+				position: absolute
+				left: -30px
+				width: calc(100% + 30px)
+				height: 100%
+				border-radius: 2px
+				box-shadow: 0 1px 7.5px 0.5px rgba(0, 0, 0, 0.13)
+				background-color: #ffffff
+				border: dotted 1px #c7cbd3
+				.icon
+					width: 34px
+					height: 34px
+					position: absolute
+					right: 25%
+					top: 35%
+					z-index: 10
+	&__radio-cont
+		display: none
+		align-items: center
+	&__cont-link
+		display: flex
+		width: 13px
+		margin-right: 5px
+		background-color: transparent
+		img
+			width: 100%
+	&__cont-text
+		margin-right: 5px
+		font-size: 12px
+		border-bottom: 1px dotted #9b9b9b
+	&__popup
+		z-index: 5
+		width: 620px
+		padding: 20px 25px 20px 20px
+		border: 1px solid #e3e6ed
+		position: absolute
+		top: 22px
+		left: -10px
+		border-radius: 4px
+		background-color: #ffffff
+		box-shadow: 1px 2px 5px rgba(0,0,0,0.2)
+		&:before
+			position: absolute
+			top: -5px
+			left: 12px
+			content: ''
+			width: 7px
+			height: 7px
+			background-color: #ffffff
+			border-right: 1px solid #e3e6ed
+			border-bottom: 1px solid #e3e6ed
+			transform: rotate(225deg)
+		.check
+			width: 100%
+			margin-bottom: 5px
+			&__span
+				font-size: 12px
+		.select
+			display: block
+			margin-bottom: 5px
+			font-size: 12px
+		.btn
+			margin-top: 10px
+			border: 1px solid #b2b8be
+			font-weight: 600
+			width: auto
 .upload
 	margin: 15px 0
 	font-size: 14px

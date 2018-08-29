@@ -1,0 +1,980 @@
+<!doctype html>
+<html>
+//=include partials/head.html
+<body>
+	<!-- BEGIN  out-->
+	<div class="out">
+		
+	//=include partials/header-form-settings.html
+
+		<div class="main is-layout m-pad">
+			<div class="fake-sidebar"></div>
+			<!-- begin wrapper-sidebar -->
+			<div class="wrapper-sidebar">
+				<!-- begin sidebar-sttg -->
+				<div class="main-sidebar">
+					<!-- begin accordion -->
+					<div class="accrdn-sttg is-open">
+						<button class="accrdn-sttg__title">GENERAL FIELDS</button>
+						<ul class="accrdn-sttg__list">
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon text"></i></span>
+								<span>Text</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon text-area"></i></span>
+								<span>Text Area</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon integer"></i></span>
+								<span>Integer</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon decimal"></i></span>
+								<span>Decimal</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon currency-field"></i></span>
+								<span>Currency Field</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon date"></i></span>
+								<span>Date</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class=" icon list"></i></span>
+								<span>List</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon radio-group"></i></span>
+								<span>Radio Group</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon mult-select"></i></span>
+								<span>Multiple Select List</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon email"></i></span>
+								<span>Email</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon file-upload"></i></span>
+								<span>File Upload</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+						</ul>
+					</div>
+					<!-- end accordion -->
+					<!-- begin accordion -->
+					<div class="accrdn-sttg is-open">
+						<button class="accrdn-sttg__title">SPECIALSIZED</button>
+						<ul class="accrdn-sttg__list">
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon list"></i></span>
+								<span>EIN</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon list"></i></span>
+								<span>SSN</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon list"></i></span>
+								<span>List of States</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon list"></i></span>
+								<span>List of Countries</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+						</ul>
+					</div>
+					<!-- end accordion -->
+					<!-- begin accordion -->
+					<div class="accrdn-sttg is-open">
+						<button class="accrdn-sttg__title">OLIVIA FIELDS</button>
+						<ul class="accrdn-sttg__list">
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon list"></i></span>
+								<span>List of Users</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon list"></i></span>
+								<span>List of Customers</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon list"></i></span>
+								<span>List of Deals</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon list"></i></span>
+								<span>List of Transactions</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon list"></i></span>
+								<span>List of Roles</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon list"></i></span>
+								<span>List of Firms</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon split"></i></span>
+								<span>Commission Split</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon split"></i></span>
+								<span>Co-Marketing Split</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon list"></i></span>
+								<span>Library Documents</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+						</ul>
+					</div>
+					<!-- end accordion -->
+					<!-- begin accordion -->
+					<div class="accrdn-sttg is-open">
+						<button class="accrdn-sttg__title">FORMAT</button>
+						<ul class="accrdn-sttg__list">
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon list"></i></span>
+								<span>Form Section Instructions</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon list"></i></span>
+								<span>Form Section Title</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item">
+								<span><i class="icon list"></i></span>
+								<span>Form Title</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+							<li class="accrdn-sttg__item accrdn-sttg__item--last-border">
+								<span><i class="icon list"></i></span>
+								<span>Section Divider</span>
+								<span class="accrdn-sttg__item-drag"><i class="icon drag2"></i></span>
+							</li>
+
+						</ul>
+					</div>
+					<!-- end accordion -->
+				</div>
+				<!-- end sidebar-sttg -->
+			</div>
+			<!-- end wrapper-sidebar -->
+			<div class="l-layout">
+				<!--begin entry-wrapper-->
+				<div class="entry-wrapper">
+
+					<div class="entry-wrapper__top-shadow">
+					<!--begin entry-content-->
+					<div class="entry-content">
+						<form class="form">
+							<!--begin form__layout-->
+							<div class="form__layout form__layout--large">
+
+								<div class="form__left">
+									<div class="form__bl no-bottom-margin">
+										<div class="form__subttl">Instructions</div>
+										<div class="form__hint">Displayed at form top right after the form title</div>
+										<textarea class="textarea"></textarea>
+									</div>
+								</div>
+
+								<div class="form__right">
+									<div class="form__bl no-bottom-margin">
+										<div class="form__subttl">Uploads Instructions</div>
+										<div class="form__hint">Displayed before "Required uploads" block</div>
+										<textarea class="textarea"></textarea>
+									</div>
+								</div>
+							</div>
+							<!--end form__layout-->
+
+							<!--begin form__box-dotted-->
+							<div class="form__box-dotted form__box-dotted--no-padd drag-and-drop-finish">
+								<div class="form__drag"><i class="icon drag1"></i></div>
+								<div class="form__head">
+									<div class="form__head-el">
+										<button class="form__head-link"><i class="icon link"></i></button>
+										<div class="form__head-ttl">Text Field</div>
+										<button class="form__head-edit"><i class="icon edit"></i></button>
+									</div>
+									<button class="form__btn-close"></button>
+								</div>
+
+								<div class="form__layout">
+
+									<div class="form__box">
+
+										<div class="form__item">
+											<div class="form__subttl">Default Value</div>
+											<input type="text" placeholder="Untitled">
+										</div>
+
+										<div class="form__item">
+											<div class="form__subttl">Slug</div>
+											<input type="text" placeholder="Untitled">
+										</div>
+
+									</div>
+									<!--begin form__sidebar-->
+									<div class="form__sidebar">
+
+										<div class="form__subttl">Field Settings</div>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Required</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Internal</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Show after approve</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Locked</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Show for Tasks only</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Use in title</span>
+										</label>
+
+									</div>
+									<!--end form__sidebar-->
+								</div>
+							</div>
+							<!--end form__box-dotted-->
+
+							<!--begin form__box-dotted-->
+							<div class="form__box-dotted form__box-dotted--no-padd">
+								<div class="form__drag"><i class="icon drag1"></i></div>
+								<div class="form__head">
+
+									<div class="form__head-el">
+										<button class="form__head-link"><i class="icon link"></i></button>
+										<div class="form__head-ttl">Text Field:<span class="hide">Some label</span></div>
+										<button class="form__head-edit"><i class="icon edit"></i></button>
+									</div>
+
+									<div class="show form__layout">
+										<div>
+											<input type="text" placeholder="Untitled">
+										</div>
+										<button class="form__btn-add btn btn_md">Save</button>
+									</div>
+									
+									<button class="form__btn-close"></button>
+								</div>
+
+								<div class="form__layout">
+
+									<div class="form__box">
+
+										<div class="form__item">
+											<div class="form__subttl">Default Value</div>
+											<input type="text" placeholder="Untitled">
+										</div>
+
+										<div class="form__item">
+											<div class="form__subttl">Slug</div>
+											<input type="text" placeholder="Untitled">
+										</div>
+
+									</div>
+									<!--begin form__sidebar-->
+									<div class="form__sidebar">
+
+										<div class="form__subttl">Field Settings</div>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Required</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Internal</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Show after approve</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Locked</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Show for Tasks only</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Use in title</span>
+										</label>
+
+									</div>
+									<!--end form__sidebar-->
+								</div>
+							</div>
+							<!--end form__box-dotted-->
+
+							<!--begin form__box-dotted-->
+							<div class="form__box-dotted form__box-dotted--no-padd">
+								<div class="form__drag"><i class="icon drag1"></i></div>
+								<div class="form__head">
+									<div class="form__head-el">
+										<button class="form__head-link"><i class="icon link"></i></button>
+										<div class="form__head-ttl">Radio Group:<span>Does this require a FINRA filing?</span></div>
+										<button class="form__head-edit"><i class="icon edit"></i></button>
+									</div>
+									<button class="form__btn-close"></button>
+								</div>
+								<!--begin form__layout-->
+								<div class="form__layout">
+									<!--begin form__box-->
+									<div class="form__box">
+
+										<div class="form__item">
+											<div class="form__subttl">Slug</div>
+											<input type="text" placeholder="Untitled">
+										</div>
+										<!--begin form__options-->
+										<div class="form__options">
+
+											<div class="form__subttl">Options</div>
+
+											<div class="form__radio radio">
+												<input type="radio" name="group1" value="option1" checked>
+												<span class="radio__span"></span>
+												<span class="form__el">
+													<input type="text" class="form__radio-plh" placeholder="Option 1">
+
+													<span class="form__radio-cont">
+														<button class="form__cont-link"><i class="icon link-bl"></i></button>
+														<span class="form__cont-text">Some long connected field name…,</span>
+														<span class="form__cont-text">Another connected field name</span>
+													</span>
+
+												</span>
+												<button class="form__btn-close form__btn-close--small"></button>
+											</div>
+											
+											<div class="form__radio radio">
+												<input type="radio" name="group1" value="option2">
+												<span class="radio__span"></span>
+												<span class="form__el">
+													<input type="text" class="form__radio-plh" placeholder="Option 2">
+
+													<span class="form__radio-cont">
+														<button class="form__cont-link"><i class="icon link-bl"></i></button>
+														<span class="form__cont-text">Some long connected field name…,</span>
+														<span class="form__cont-text">Another connected field name</span>
+													</span>
+
+												</span>
+												<button class="form__btn-close form__btn-close--small"></button>
+											</div>
+
+											<div class="form__radio radio drag-and-drop-start">
+												<span class="form__drag-bg"><i class="icon drag1"></i></span>
+												<input type="radio" name="group1" value="option3">
+												<span class="radio__span"></span>
+												<span class="form__el">
+													<input type="text" class="form__radio-plh" placeholder="Option 3">
+
+													<span class="form__radio-cont">
+														<button class="form__cont-link"><i class="icon link-bl"></i></button>
+														<span class="form__cont-text">Some long connected field name…,</span>
+														<span class="form__cont-text">Another connected field name</span>
+													</span>
+
+												</span>
+												<button class="form__btn-close form__btn-close--small"></button>
+											</div>
+
+											<div class="form__radio radio">
+												<input type="radio" name="group1" value="option4">
+												<span class="radio__span"></span>
+												<span class="form__el">
+													<input type="text" class="form__radio-plh" placeholder="Option 4">
+
+													<span class="form__radio-cont">
+														<button class="form__cont-link"><i class="icon link-bl"></i></button>
+														<span class="form__cont-text">Some long connected field name…,</span>
+														<span class="form__cont-text">Another connected field name</span>
+													</span>
+
+												</span>
+												<button class="form__btn-close form__btn-close--small"></button>
+											</div>
+
+											<button class="form__btn-add btn btn_md">+ Add Option</button>
+
+										</div>
+										<!--end form__options-->
+
+									</div>
+									<!--end form__box-->
+									<!--begin form__sidebar-->
+									<div class="form__sidebar">
+
+										<div class="form__subttl">Field Settings</div>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Required</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Internal</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Show after approve</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Locked</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Show for Tasks only</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Use in title</span>
+										</label>
+
+									</div>
+									<!--end form__sidebar-->
+								</div>
+								<!--end form__layout-->
+							</div>
+							<!--end form__box-dotted-->
+							<!--begin drop-line-->
+							<div class="drop-line"></div>
+							<!--end drop-line-->
+							<!--begin form__box-dotted-->
+							<div class="form__box-dotted form__box-dotted--no-padd">
+								<div class="form__drag"><i class="icon drag1"></i></div>
+
+								<div class="form__head">
+
+									<div class="form__head-el form__head-el--column">
+										<div class="form__row">
+											
+											<div class="form__hint">
+												<a class="form__head-link">
+													<img src="img/formbuilder/link-bl.svg">
+													<!--begin form__popup-->
+													<span class="form__popup">
+														<!--begin select-->
+														<span class="select">
+															<ng-select class="ng-select ng-select-single ng-select-searchable ng-pristine ng-valid ng-select-bottom ng-touched" role="listbox" ng-reflect-items="true,Two,3" ng-reflect-model="Two"><div class="ng-select-container ng-has-value"><div class="ng-value-container"><div class="ng-placeholder">Select item</div><!--bindings={
+															"ng-reflect-ng-if": "true"
+															}--><!----><!--bindings={
+															  "ng-reflect-ng-for-of": "[object Object]"
+															}--><div class="ng-value"><!----><!--bindings={
+															  "ng-reflect-ng-template-outlet-context": "[object Object]",
+															  "ng-reflect-ng-template-outlet": "[object Object]"
+															}--><span aria-hidden="true" class="ng-value-icon left">×</span><span class="ng-value-label">Two</span></div><!----><!--bindings={}--><div class="ng-input"><input role="combobox" type="text" autocomplete="a4f9d487ba40" aria-expanded="false"></div></div><!--bindings={
+															  "ng-reflect-ng-if": "false"
+															}--><!--bindings={
+															  "ng-reflect-ng-if": "true"
+															}--><span class="ng-clear-wrapper" title="Clear all"><span aria-hidden="true" class="ng-clear">×</span></span><span class="ng-arrow-wrapper"><span class="ng-arrow"></span></span></div><!--bindings={
+															  "ng-reflect-ng-if": "false"
+															}--></ng-select>
+														</span>
+														<!--end select-->
+														
+														<label class="check is-light-border">
+															<input type="checkbox" checked>
+															<span class="check__span">Reg D, Rule 504</span>
+														</label>
+
+														<label class="check is-light-border">
+															<input type="checkbox">
+															<span class="check__span">Have you conducted a review of the material in the context of FINRA rules 2210(d)(1)(A), (B) and (D)</span>
+														</label>
+
+														<label class="check is-light-border">
+															<input type="checkbox">
+															<span class="check__span">Reg D, Rule 505</span>
+														</label>
+
+														<label class="check is-light-border">
+															<input type="checkbox">
+															<span class="check__span">Reg D, Rule 506 (c)</span>
+														</label>
+
+														<button class="form__btn-add btn btn_md">Remove Connection</button>
+
+													</span>
+													<!--end form__popup-->
+												</a>
+												<span>Have you conducted a review of the material in the context of FINRA rules 2210(d)(1)(A), (B) and (D)?</span>
+											</div>
+											<div class="form__hint">• Yes</div>
+										</div>
+										
+										<div class="form__head-el">
+											<div class="form__head-ttl">The textfield label</div>
+											<button class="form__head-edit"><i class="icon edit"></i></button>
+										</div>
+									</div>
+
+									<button class="form__btn-close"></button>
+								</div>
+
+								<div class="form__layout">
+
+									<div class="form__box">
+
+										<div class="form__item">
+											<div class="form__subttl">Default Value</div>
+											<input type="text" placeholder="Untitled">
+										</div>
+
+										<div class="form__item">
+											<div class="form__subttl">Slug</div>
+											<input type="text" placeholder="Untitled">
+										</div>
+
+									</div>
+									<!--begin form__sidebar-->
+									<div class="form__sidebar">
+
+										<div class="form__subttl">Field Settings</div>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Required</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Internal</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Show after approve</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Locked</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Show for Tasks only</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Use in title</span>
+										</label>
+
+									</div>
+									<!--end form__sidebar-->
+								</div>
+							</div>
+							<!--end form__box-dotted-->
+
+							<!--begin form__box-dotted-->
+							<div class="form__box-dotted form__box-dotted--no-padd">
+								<div class="form__drag"><i class="icon drag1"></i></div>
+
+								<div class="form__head">
+
+									<div class="form__head-el form__head-el--column">
+										<div class="form__row">
+											
+											<div class="form__hint">
+												<button class="form__head-link"><img src="img/formbuilder/link-bl.svg"></button>
+												<span>Have you conducted a review of the material in the context of FINRA rules 2210(d)(1)(A), (B) and (D)?</span>
+											</div>
+											<div class="form__hint">• Yes</div>
+										</div>
+										
+										<div class="form__head-el">
+											<div class="form__head-ttl">The textfield label</div>
+											<button class="form__head-edit"><i class="icon edit"></i></button>
+										</div>
+									</div>
+
+									<button class="form__btn-close"></button>
+								</div>
+
+								<div class="form__layout">
+
+									<div class="form__box">
+
+										<div class="form__item">
+											<div class="form__subttl">Default Value</div>
+											<input type="text" placeholder="Untitled">
+										</div>
+
+										<div class="form__item">
+											<div class="form__subttl">Slug</div>
+											<input type="text" placeholder="Untitled">
+										</div>
+
+									</div>
+									<!--begin form__sidebar-->
+									<div class="form__sidebar">
+
+										<div class="form__subttl">Field Settings</div>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Required</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Internal</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Show after approve</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Locked</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Show for Tasks only</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Use in title</span>
+										</label>
+
+									</div>
+									<!--end form__sidebar-->
+								</div>
+							</div>
+							<!--end form__box-dotted-->
+
+							<!--begin form__box-dotted-->
+							<div class="form__box-dotted form__box-dotted--no-padd">
+								<div class="form__drag"><i class="icon drag1"></i></div>
+
+								<div class="form__head">
+										
+									<div class="form__head-el">
+										<button class="form__head-link"><i class="icon link"></i></button>
+										<div class="form__head-ttl">The textfield label</div>
+										<button class="form__head-edit"><i class="icon edit"></i></button>
+									</div>
+
+									<button class="form__btn-close"></button>
+								</div>
+
+								<div class="form__layout">
+
+									<div class="form__box">
+
+										<div class="form__item">
+											<div class="form__subttl">Slug</div>
+											<input type="text" placeholder="Untitled">
+										</div>
+
+										<!--begin form__options-->
+										<div class="form__options">
+
+											<div class="form__subttl">Options</div>
+
+											<div class="form__check check">
+												<input type="checkbox" name="group2" value="option1" checked>
+												<span class="check__span"></span>
+												<span class="form__el">
+													<input type="text" class="form__check-plh" placeholder="Option 1">
+												</span>
+												<button class="form__btn-close form__btn-close--small"></button>
+											</div>
+											
+											<div class="form__check check">
+												<input type="checkbox" name="group2" value="option2">
+												<span class="check__span"></span>
+												<span class="form__el">
+													<input type="text" class="form__check-plh" placeholder="Option 2">
+												</span>
+												<button class="form__btn-close form__btn-close--small"></button>
+											</div>
+
+											<div class="form__check check drag-and-drop-start">
+												<span class="form__drag-bg"><i class="icon drag1"></i></span>
+												<input type="checkbox" name="group2" value="option3">
+												<span class="check__span"></span>
+												<span class="form__el">
+													<input type="text" class="form__check-plh" placeholder="Option 3">
+												</span>
+												<button class="form__btn-close form__btn-close--small"></button>
+											</div>
+
+											<div class="form__check check">
+												<input type="checkbox" name="group2" value="option4">
+												<span class="check__span"></span>
+												<span class="form__el">
+													<input type="text" class="form__check-plh" placeholder="Option 4">
+												</span>
+												<button class="form__btn-close form__btn-close--small"></button>
+											</div>
+
+											<button class="form__btn-add btn btn_md">+ Add Option</button>
+
+										</div>
+										<!--end form__options-->
+
+									</div>
+									<!--begin form__sidebar-->
+									<div class="form__sidebar">
+
+										<div class="form__subttl">Field Settings</div>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Required</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Internal</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Show after approve</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Locked</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Show for Tasks only</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Use in title</span>
+										</label>
+
+									</div>
+									<!--end form__sidebar-->
+								</div>
+							</div>
+							<!--end form__box-dotted-->
+
+							<!--begin form__box-dotted-->
+							<div class="form__box-dotted form__box-dotted--no-padd">
+								<div class="form__drag"><i class="icon drag1"></i></div>
+
+								<div class="form__head">
+										
+									<div class="form__head-el">
+										<button class="form__head-link"><i class="icon link"></i></button>
+										<div class="form__head-ttl">Radio Group:<span>Does this require a FINRA filing?</span></div>
+										<button class="form__head-edit"><i class="icon edit"></i></button>
+									</div>
+
+									<button class="form__btn-close"></button>
+								</div>
+
+								<div class="form__layout">
+
+									<div class="form__box">
+
+										<div class="form__item">
+											<div class="form__subttl">Slug</div>
+											<input type="text" placeholder="Untitled">
+										</div>
+
+										<!--begin form__options-->
+										<div class="form__options">
+
+											<div class="form__subttl">Options</div>
+
+											<div class="form__radio radio">
+												<input type="radio" name="group3" value="option1" checked>
+												<span class="radio__span"></span>
+												<span class="form__el">
+													<input type="text" class="form__radio-plh" placeholder="Option 1">
+												</span>
+												<button class="form__btn-close form__btn-close--small"></button>
+											</div>
+											
+											<div class="form__radio radio">
+												<input type="radio" name="group3" value="option2">
+												<span class="radio__span"></span>
+												<span class="form__el">
+													<input type="text" class="form__radio-plh" placeholder="Option 2">
+												</span>
+												<button class="form__btn-close form__btn-close--small"></button>
+											</div>
+
+											<div class="form__radio radio">
+												<input type="radio" name="group3" value="option3">
+												<span class="radio__span"></span>
+												<span class="form__el">
+													<input type="text" class="form__radio-plh" placeholder="Option 3">
+												</span>
+												<button class="form__btn-close form__btn-close--small"></button>
+											</div>
+
+											<div class="form__radio radio">
+												<input type="radio" name="group3" value="option4">
+												<span class="radio__span"></span>
+												<span class="form__el">
+													<input type="text" class="form__radio-plh" placeholder="Option 4">
+												</span>
+												<button class="form__btn-close form__btn-close--small"></button>
+											</div>
+
+											<button class="form__btn-add btn btn_md">+ Add Option</button>
+
+										</div>
+										<!--end form__options-->
+
+									</div>
+									<!--begin form__sidebar-->
+									<div class="form__sidebar">
+
+										<div class="form__subttl">Field Settings</div>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Required</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Internal</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Show after approve</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Locked</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Show for Tasks only</span>
+										</label>
+
+										<label class="check is-light-border">
+											<input type="checkbox">
+											<span class="check__span">Use in title</span>
+										</label>
+
+									</div>
+									<!--end form__sidebar-->
+								</div>
+							</div>
+							<!--end form__box-dotted-->
+						</form>
+					</div>
+					<!-- end entry-content-->
+				</div>
+				<!-- end entry-wrapper-->
+			</div>
+
+		</div>
+		
+	</div>
+	<!-- END out-->
+</body>
+</html>
