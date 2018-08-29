@@ -1836,6 +1836,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__box-dotted.drag-and-drop-finish .form__drag { display: none; }
 .form__box-dotted.drag-and-drop-out { box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.4); }
 .form__container { max-width: 912px; margin: 0 auto; }
+.form__container .errors-box { position: absolute; bottom: -20px; left: 0; white-space: nowrap; }
 .form__left { width: 100%; max-width: 400px; margin-right: 32px; }
 .form__right { width: 100%; max-width: 400px; -webkit-flex-shrink: 0; -ms-flex-negative: 0; flex-shrink: 0; }
 .form__top { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
@@ -1880,7 +1881,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__item .dropdown { max-width: 550px; }
 .form__item .form__subttl { min-width: 91px; width: 91px; -webkit-box-flex: 1; -webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1; margin-right: 17px; margin-bottom: 0; text-align: right; }
 .form__item input { max-width: 550px; }
-.form__item .errors { position: absolute; bottom: -20px; left: 110px; }
+.form__item .errors { position: absolute; bottom: 0; left: 110px; }
 .form__drag { position: absolute; top: 10px; left: -17px; width: 34px; height: 34px; cursor: pointer; }
 .form__drag .icon { width: 100%; height: 100%; }
 .form__options { max-width: 550px; margin-left: auto; }
