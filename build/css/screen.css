@@ -1815,7 +1815,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form .btn-group { margin: 30px -5px 0; }
 .form label.form__subttl { cursor: pointer; }
 .form__layout { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
-.form__layout .form__box-dotted:first-child { margin-right: 40px; }
+.form__layout .form__box-dotted:first-child { margin-right: 40px; -webkit-box-flex: 1; -webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1; }
 .form__layout .form__box-dotted:last-child { width: 100%; max-width: 490px; }
 .form__layout--large .form__left, .form__layout--large .form__right { max-width: 480px; -webkit-flex-shrink: 1; -ms-flex-negative: 1; flex-shrink: 1; }
 .form__layout--large .form__left { margin-right: 16px; }
