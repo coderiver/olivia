@@ -1837,6 +1837,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__box-dotted.drag-and-drop-out { box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.4); }
 .form__container { max-width: 912px; margin: 0 auto; }
 .form__container .errors-box { position: absolute; bottom: -20px; left: 0; white-space: nowrap; }
+.form__container .form__left { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+.form__container .form__left .form__bl { width: 100%; margin-top: auto; }
 .form__left { width: 100%; max-width: 400px; margin-right: 32px; }
 .form__right { width: 100%; max-width: 400px; -webkit-flex-shrink: 0; -ms-flex-negative: 0; flex-shrink: 0; }
 .form__top { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
