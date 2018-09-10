@@ -2428,6 +2428,12 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-folder__empty-msg.is-active { display: block; }
 .deal-folder .dropdown { z-index: 2; }
 
+.deal-team { padding-bottom: 5px; }
+
+.deal-team:last-child { padding-bottom: 0px; }
+
+.deal-team-name { font-weight: bold; padding-bottom: 1px; }
+
 .entry-wrapper { padding-left: 64px; position: relative; margin-top: 8px; }
 .entry-wrapper__toggle-btn { width: 40px; height: 40px; border-radius: 8px 0 0 8px; background-color: #ffffff; box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.18); display: none; position: fixed; right: 0; }
 .entry-wrapper__toggle-btn .icon { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 7px; color: #6c757a; }
