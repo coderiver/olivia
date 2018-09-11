@@ -380,7 +380,7 @@ body .tooltipster-base { z-index: 8; }
 .btn.is-next { padding: 8px 49px 8px 25px; }
 .btn.s-pad { padding: 8px 20px; }
 .btn.m-pad { padding: 11px 18px; }
-.btn:disabled { opacity: 0.5; cursor: default; }
+.btn:disabled, .btn.disabled { opacity: 0.5; cursor: default; pointer-events: none; }
 .btn_sm { padding: 4px 10px; }
 .btn_md { padding: 8px 10px; }
 .btn.nowrap { white-space: nowrap; }
@@ -1868,7 +1868,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form .link-bl { width: 100%; height: 8px; }
 .form__head-edit .edit { height: 20px; width: 100%; }
 .form__btn-close { position: relative; width: 20px; height: 20px; background-color: transparent; margin-left: auto; }
-.form__btn-close:before, .form__btn-close:after { content: ""; position: absolute; top: 10px; right: 0; width: 15px; height: 1px; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); background-color: #c0c0c0; }
+.form__btn-close:before, .form__btn-close:after { content: ""; position: absolute; top: 17px; right: 0; width: 15px; height: 1px; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); background-color: #c0c0c0; }
 .form__btn-close:after { -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
 .form__btn-close--small { width: 35px; min-height: 36px; }
 .form__btn-close--small:before, .form__btn-close--small:after { right: 12px; width: 12px; }
