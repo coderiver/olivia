@@ -1879,11 +1879,12 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__sidebar .check__span { white-space: nowrap; }
 .form__box { width: 100%; padding: 35px 55px 35px 40px; }
 .form__box.no-sidebar { padding-right: 277px; }
-.form__item { position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; width: 100%; margin-bottom: 23px; }
+.form__item { position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; width: 100%; margin-bottom: 25px; }
 .form__item .dropdown { max-width: 550px; }
 .form__item .form__subttl { min-width: 91px; width: 91px; -webkit-box-flex: 1; -webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1; margin-right: 17px; margin-bottom: 0; text-align: right; }
 .form__item input { max-width: 550px; }
 .form__item .errors { position: absolute; bottom: 0; left: 110px; }
+.form__item .form__hint { position: absolute; bottom: -21px; left: 116px; }
 .form__drag { position: absolute; top: 10px; left: -17px; width: 34px; height: 34px; cursor: pointer; }
 .form__drag .icon { width: 100%; height: 100%; }
 .form__options { max-width: 550px; margin-left: auto; }
