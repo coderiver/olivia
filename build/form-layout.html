@@ -454,7 +454,54 @@
 								<div class="form__drag"><i class="icon drag1"></i></div>
 								<div class="form__head">
 									<div class="form__head-el">
-										<button class="form__head-link"><i class="icon link"></i></button>
+										<a class="form__head-link is-show-popup">
+											<i class="icon link"></i>
+											<!--begin form__popup-->
+											<div class="form__popup">
+												<!--begin select-->
+												<span class="select">
+													<ng-select class="ng-select ng-select-single ng-select-searchable ng-pristine ng-valid ng-select-bottom ng-touched" role="listbox" ng-reflect-items="true,Two,3" ng-reflect-model="Two"><div class="ng-select-container ng-has-value"><div class="ng-value-container"><div class="ng-placeholder">Select item</div><!--bindings={
+													"ng-reflect-ng-if": "true"
+													}--><!----><!--bindings={
+													  "ng-reflect-ng-for-of": "[object Object]"
+													}--><div class="ng-value"><!----><!--bindings={
+													  "ng-reflect-ng-template-outlet-context": "[object Object]",
+													  "ng-reflect-ng-template-outlet": "[object Object]"
+													}--><span aria-hidden="true" class="ng-value-icon left">×</span><span class="ng-value-label">Two</span></div><!----><!--bindings={}--><div class="ng-input"><input role="combobox" type="text" autocomplete="a4f9d487ba40" aria-expanded="false"></div></div><!--bindings={
+													  "ng-reflect-ng-if": "false"
+													}--><!--bindings={
+													  "ng-reflect-ng-if": "true"
+													}--><span class="ng-clear-wrapper" title="Clear all"><span aria-hidden="true" class="ng-clear">×</span></span><span class="ng-arrow-wrapper"><span class="ng-arrow"></span></span></div><!--bindings={
+													  "ng-reflect-ng-if": "false"
+													}--></ng-select>
+												</span>
+												<!--end select-->
+												
+												<label class="check is-light-border">
+													<input type="checkbox" checked>
+													<span class="check__span">Reg D, Rule 504</span>
+												</label>
+
+												<label class="check is-light-border">
+													<input type="checkbox">
+													<span class="check__span">Have you conducted a review of the material in the context of FINRA rules 2210(d)(1)(A), (B) and (D)</span>
+												</label>
+
+												<label class="check is-light-border">
+													<input type="checkbox">
+													<span class="check__span">Reg D, Rule 505</span>
+												</label>
+
+												<label class="check is-light-border">
+													<input type="checkbox">
+													<span class="check__span">Reg D, Rule 506 (c)</span>
+												</label>
+
+												<button class="form__btn-add btn btn_md">Remove Connection</button>
+
+											</div>
+											<!--end form__popup-->
+										</a>
 										<div class="form__head-ttl">Radio Group:<span>Does this require a FINRA filing?</span></div>
 										<button class="form__head-edit"><i class="icon edit"></i></button>
 									</div>
@@ -600,7 +647,7 @@
 										<div class="form__row">
 											
 											<div class="form__hint">
-												<a class="form__head-link">
+												<a class="form__head-link is-show-popup">
 													<img src="img/formbuilder/link-bl.svg">
 													<!--begin form__popup-->
 													<span class="form__popup">

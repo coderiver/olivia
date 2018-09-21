@@ -431,6 +431,9 @@
 			width: 64px
 			height: 35px
 			margin-left: 8px
+		.form__btn-close
+			&:before, &:after
+				top: 10px
 	&__head-ttl
 		margin: 0 8px 0 4px
 		font-size: 16px
@@ -459,6 +462,9 @@
 		.icon
 			width: 100%
 			height: 8px
+		&.is-show-popup
+			.form__popup
+				display: block
 	.link-bl
 		width: 100%
 		height: 8px
@@ -690,7 +696,9 @@
 		font-size: 12px
 		border-bottom: 1px dotted #9b9b9b
 	&__popup
-		z-index: 5
+		display: none
+		z-index: 10
+		text-align: left
 		width: 620px
 		padding: 20px 25px 20px 20px
 		border: 1px solid #e3e6ed
