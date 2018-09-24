@@ -418,7 +418,7 @@
 	&__head
 		display: flex
 		align-items: center
-		height: 55px
+		min-height: 55px
 		// justify-content: space-between
 		padding: 16px 20px 16px 40px
 		border-bottom: 1px solid #d8d8d8
@@ -443,6 +443,7 @@
 			margin-left: 4px
 			color: #4a4a4a
 	&__head-el
+		max-width: calc(100% - 40px)
 		display: flex
 		align-items: center
 		&--column
@@ -453,6 +454,7 @@
 		width: 14px
 		background-color: transparent
 		cursor: pointer
+		flex-shrink: 0
 		img
 			height: 100%
 			width: 100%
