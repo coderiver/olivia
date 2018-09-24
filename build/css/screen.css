@@ -1916,10 +1916,13 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__cont-link { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; width: 13px; margin-right: 5px; background-color: transparent; }
 .form__cont-link img { width: 100%; }
 .form__cont-text { margin-right: 5px; font-size: 12px; border-bottom: 1px dotted #9b9b9b; }
-.form__popup { z-index: 10; text-align: left; width: 620px; padding: 20px 25px 20px 20px; border: 1px solid #e3e6ed; position: absolute; top: 22px; left: -10px; border-radius: 4px; background-color: #ffffff; box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2); }
+.form__popup { z-index: 15; text-align: left; width: 620px; padding: 20px 25px 20px 20px; border: 1px solid #e3e6ed; position: absolute; top: 22px; left: -10px; border-radius: 4px; background-color: #ffffff; box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2); }
 .form__popup:before { position: absolute; top: -5px; left: 12px; content: ""; width: 7px; height: 7px; background-color: #ffffff; border-right: 1px solid #e3e6ed; border-bottom: 1px solid #e3e6ed; -webkit-transform: rotate(225deg); -ms-transform: rotate(225deg); transform: rotate(225deg); }
-.form__popup .check { width: 100%; margin-bottom: 5px; }
-.form__popup .check__span { font-size: 12px; }
+.form__popup .check, .form__popup .radio { width: 100%; margin-bottom: 5px; }
+.form__popup .check__span, .form__popup .radio__span { font-size: 12px; }
+.form__popup .radio__span:before { border-color: #c7cbd3; background-color: #ffffff; }
+.form__popup .radio input:checked + span:before { background-color: #ffffff; border-color: #c7cbd3; }
+.form__popup .radio input[type="radio"]:checked + .radio__span:after { left: 4px; width: 6px; height: 6px; margin-top: -4px; background-color: #c7cbd3; }
 .form__popup .select { display: block; margin-bottom: 5px; font-size: 12px; }
 .form__popup .btn { margin-top: 10px; border: 1px solid #b2b8be; font-weight: 600; width: auto; }
 
