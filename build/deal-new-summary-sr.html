@@ -1,0 +1,1397 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=1040, initial-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#fff">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/app.js"></script>
+</head>
+<body>
+	<!-- BEGIN  out-->
+	<div class="out">
+		<!-- begin header with active notification  -->
+		<div class="header">
+			<div class="l">
+				<div class="header__in">
+					<a href="#" class="header__logo"><i class="icon icon-logo"></i></a>
+					<ul class="menu">
+						<li class="menu__option"><a class="menu__link" href="#">Tasks <p class="notification"><span>2</span></p></a></li>
+						<li class="menu__option is-active"><a class="menu__link" href="#">Deals</a></li>
+						<li class="menu__option"><a class="menu__link" href="#">Entries</a></li>
+						<li class="menu__option"><a class="menu__link" href="#">Library</a></li>
+						<li class="menu__option">
+							<div class="dropdown is-menu js-dropdown">
+								<p class="dropdown__item">Me</p>
+								<ul class="dropdown__list is-top-level js-inner">
+									<li><a href="#">Profile</a></li>
+									<li><a href="#">My Team</a></li>
+									<li><a href="#">Messages</a></li>
+									<li><a href="#">Activity Log</a></li>
+									<li><a href="#">Settings</a></li>
+									<li><a href="#">Log Out</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<div class="helpers">
+						<a href="#" class="helpers__info">?</a>
+						<a href="#" class="helpers__bell is-active" data-popup="sysmessage">
+							<i class="icon icon-bell"></i>
+							<span class="helpers__message">5</span>
+						</a>
+						<label class="search js-search">
+							<i class="icon icon-zoom"></i>
+							<input type="search" placeholder="Search">
+							<i class="icon icon-close search-close js-search-clear"></i>
+						</label>
+						<!-- begin sysmessage  -->
+						<div id="sysmessage" class="sysmessage js-popup js-avoid-overflow">
+							<div class="sysmessage__head">
+								<p class="sysmessage__ttl">1 New Payment, 4 other notifications since your last visit</p>
+								<i class="icon icon-close js-close"></i>
+							</div>
+							<div class="sysmessage__container js-vert-scroll">
+								<div class="sysmessage__el">
+									<p>Messages (1)</p>
+								</div>
+								<div class="sysmessage__el no-bg">
+									<img class="sysmessage__img" src="img/user1.png" alt="">
+									<div class="sysmessage__info">
+										<i class="svg-ico message-ico"></i>
+										<div class="sysmessage__name">
+											<h4>New Payment!</h4>
+											<small class="sysmessage__date">Sept. 13, 2015</small>
+										</div>
+										<p>Transaction T34782 from Alphabet between James Brown and Steve Buscemy was payed Sept. 12, 2015</p>
+										<ul class="sysmessage__list">
+											<li>Transaction amount: $400.000.00</li>
+											<li>Funds received: $400.000.00</li>
+											<li>GCS commission: $10.000.00</li>
+											<li>Your comission*: $15.000.00</li>
+										</ul>
+										<p>Your commission will be payed to you according to your GCS agreement conditions</p>
+										<ul class="reaction">
+											<li><a class="reaction__link" href="#">Mark as read</a></li>
+											<li><a class="reaction__link" href="#">View deal</a></li>
+											<li><a class="reaction__link" href="#">View transaction</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="sysmessage__el">
+									<p>Updates (4)</p>
+								</div>
+								<div class="sysmessage__el no-bg">
+									<img class="sysmessage__img" src="img/user2.png" alt="">
+									<i class="svg-ico memo-ico"></i>
+									<div class="sysmessage__info">
+										<div class="sysmessage__name">
+											<h4><span>Deal Memo Approved for Space X</span></h4>
+											<small class="sysmessage__date">Sept. 13, 2015</small>
+										</div>
+										<ul class="reaction">
+											<li><a class="reaction__link" href="#">View</a></li>
+											<li><a class="reaction__link" href="#">Open deal</a></li>
+										</ul>
+									</div>
+									<i class="icon icon-check"></i>
+								</div>
+								<div class="sysmessage__el no-bg">
+									<img class="sysmessage__img" src="img/user2.png" alt="">
+									<i class="icon icon-bubble"></i>
+									<div class="sysmessage__info">
+										<div class="sysmessage__name">
+											<h4>New comment for EL James Brown for Space X</h4>
+											<small class="sysmessage__date">Sept. 13, 2015</small>
+										</div>
+										<ul class="reaction">
+											<li><a class="reaction__link" href="#">View</a></li>
+											<li><a class="reaction__link" href="#">Open deal</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="sysmessage__el no-bg">
+									<img class="sysmessage__img" src="img/user1.png" alt="">
+									<i class="svg-ico memo-ico"></i>
+									<div class="sysmessage__info">
+										<div class="sysmessage__name">
+											<h4>Deal Memo Approved for Space X</h4>
+											<small class="sysmessage__date">Sept. 13, 2015</small>
+										</div>
+										<ul class="reaction">
+											<li><a class="reaction__link" href="#">View</a></li>
+											<li><a class="reaction__link" href="#">Open deal</a></li>
+										</ul>
+									</div>
+									<i class="icon icon-warn"></i>
+								</div>
+							</div>
+							<div class="sysmessage__el is-all">
+								<p class="txt-center"><a class="reaction__link" href="#">See all</a></p>
+							</div>
+						</div>
+						<!-- end sysmessage -->
+						<!-- begin results -->
+						<div class="results js-search-results">
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="svg-ico memo-ico"></i>
+									<p>Update Space X Deal Memo</p>
+								</div>
+								<p>...update a Deal Memo, please open Deal Memo and fill in <span class="highlight">amount</span></p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="svg-ico customer-ico"></i>
+									<p>Steve Buscemi</p>
+								</div>
+								<p>...<span class="highlight">amount</span> invested $120 0000 USD</p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<p>Send us your photo</p>
+								</div>
+								<p>Hey, Brian, we need you photo to put it on a wall, send <span class="highlight">amount</span> my e-mail please...</p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="svg-ico letter-ico"></i>
+									<span>Engagement Letter John Snow</span>
+								</div>
+								<p>...managers said its important. Use Upload File <span class="highlight">amount</span> below, uplo..</p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="svg-ico library-ico"></i>
+									<span>Complaince Form Name</span>
+								</div>
+								<p>Your year spending <span class="highlight">amount</span> 100000 USD </p>
+							</a>
+							<a href="#" class="results__bl">
+								<div class="description">
+									<i class="icon icon-folder"></i>
+									<p><span class="highlight">Amount</span> Corp</p>
+								</div>
+							</a>
+							<a href="#" class="results__bl">
+								<p class="txt-center">781 results...</p>
+							</a>
+						</div>
+						<!-- end results -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end header -->
+
+		<!-- begin main -->
+		<div class="main">
+			<div class="l">
+				<div class="main__in new-deal-summary__in">
+					
+					<div class="upper upper_help">
+						<p class="upper__ttl"><a href="#"><i class="icon icon-folder"></i></a>Space X</p>
+						<ul class="upper__list">
+							<li class="upper__option"><a class="upper__link upper_help__link is-active" href="#">Summary</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Tasks</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Engagement Letters</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Deal Memo</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Customers</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Transactions</a></li>
+							<li class="upper__option"><a class="upper__link upper_help__link" href="#">Deal Status</a></li>
+						</ul>
+						<p class="upper__btn-descr">If you are familiar with the Olivia system, you can easily add<br>
+						all the needed information by clicking at the plus button.</p>
+						<button class="add-btn js-deal-suggest" data-popup="suggest"><i class="icon icon-plus"></i></button>
+						<!-- begin suggest for new deal -->
+							<div class="suggest js-popup js-avoid-overflow" id="suggest">
+								<div class="suggest__head">
+									<p class="suggest__txt">Submit Deal Memo</p>
+									<div class="suggest__close js-close"><i class="icon icon-plus"></i></div>
+								</div>
+								<div class="suggest__menu">
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico letter-ico"></i>
+										<div class="suggest__in">
+											<p>Add Engagement Letter</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl" data-popup="popup-deal-memo-info">
+										<i class="svg-ico memo-ico"></i>
+										<div class="suggest__in">
+											<p>Add Deal memo</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico customer-ico"></i>
+										<div class="suggest__in">
+											<p>Add Customer</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico transaction-ico"></i>
+										<div class="suggest__in">
+											<p>Add Transaction Report</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico library-ico"></i>
+										<div class="suggest__in">
+											<p>Add Marketing Materials</p>
+										</div>
+									</a>
+									<a href="#" class="suggest__bl">
+										<i class="svg-ico library-ico"></i>
+										<div class="suggest__in">
+											<p>Add from Templates or Other</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						<!-- end suggest for new deal -->
+					</div>
+
+					<div class="upper-notification">
+
+						<i class="icon icon-warn"></i>
+
+					
+
+						<p class="upper-notification__text">Before creating any entries that pertain to a deal start a new Deal by creating a </p>
+
+					
+
+						<div class="upper-notification__btn">
+
+							<a href="#">New Deal Folder</a>
+
+						</div>
+
+					</div>
+					<div class="up-help">
+						<p>Congratulations! Your Commission payout has been wired to your account.</p>
+					</div>
+
+<!-- 					<div class="up-help">
+						<p>Your deal has been created. Follow the steps below to foster the process.</p>
+						<p>Congratulations! Your Engagement Letters and Deal Memo have been approved. You can now proceed with the Customer Identification form.</p>
+						<p>Congratulations! Your CIF forms have been approved. You can now proceed with the Transaction.</p>						
+					</div> -->
+
+					<!-- begin deal-steps -->
+					<div class="deal-steps">
+						<div class="deal-steps__step  is-approved">
+							<div class="deal-steps__hint">
+								<span><i class="info-icon-spec"></i></span>
+								<div class="deal-steps__hint-content">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quas, odio incidunt magni, omnis animi iure rem accusamus, corrupti impedit porro! Dolor quam, quisquam praesentium!
+								</div>
+							</div>
+							<div class="deal-steps__title"><span></span>step 1</div>
+							<div class="deal-steps__title-text">Engagement Letter</div>
+							<div class="deal-steps__links">
+								<a href="#" class="deal-steps__link">
+									<span class="complicated-icon is-approved">
+										<i class="complicated-icon__spec-icon"></i>
+										<span class="complicated-icon__status-hint">Approved Approved</span>
+										<i class="svg-ico letter-ico"></i>
+										<span class="complicated-icon__number">456309</span>		
+									</span>
+								</a>
+							</div>
+							<div class="deal-steps__text">
+								<p class="is-red">Obtain approval of your Engagement letter from your supervisor PRIOR to signing with you Client.</p>
+								<p>Your Engagement Letter has been approved.</p>
+							</div>
+							<!--begin deal-steps__bot-links-->
+							<div class="deal-steps__bot-links">
+								<div class="deal-steps__link-show-all deal-steps__link-show-all--blue is-active">
+									<a href="#">show all</a> <span>5</span>
+								</div>
+								<div class="deal-steps__link-add is-active">
+									<a href="#">add one more</a>
+								</div>
+							</div>
+							<!--end deal-steps__bot-links-->
+						</div>
+
+						<div class="deal-steps__step deal-steps__step--bg-white">
+							<div class="deal-steps__hint">
+								<span><i class="info-icon-spec"></i></span>
+								<div class="deal-steps__hint-content">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quas, odio incidunt magni, omnis animi iure rem accusamus, corrupti impedit porro! Dolor quam, quisquam praesentium!
+								</div>
+							</div>
+							<div class="deal-steps__title"><span></span>step 2</div>
+							<div class="deal-steps__title-text">Deal Memo</div>
+							<div class="deal-steps__links">
+								<a href="#" class="deal-steps__link">
+									<span class="complicated-icon is-approved">
+										<i class="complicated-icon__spec-icon"></i>
+										<i class="svg-ico memo-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>
+								</a>
+							</div>
+							<div class="deal-steps__text">
+								<p class="is-red">Obtain approval of your deal and all materials PRIOR to investor solicitation.</p>
+								<p>Your Deal Memo has been approved.</p>
+							</div>
+
+							<!--begin deal-steps__bot-links-->
+							<div class="deal-steps__bot-links">
+								<div class="deal-steps__link-show-all deal-steps__link-show-all--yellow">
+									<a href="#">show all</a> <span>5</span>
+								</div>
+								<div class="deal-steps__link-create is-active">
+									<a href="#">create draft</a>
+								</div>
+							</div>
+							<!--end deal-steps__bot-links-->
+						</div>
+
+						<div class="deal-steps__banner">
+							<div class="deal-steps__banner-title">Coming soon</div>
+						</div>
+						
+					</div>
+					<!-- end deal-steps -->
+
+
+
+
+						<!--begin .new-deal-summary__inner-->
+						<div class="new-deal-summary__inner">
+							<!-- begin page-left -->
+							<div class="page-left">
+								<div class="deal-log-link">
+									<a href="#">See full activity log</a>
+								</div>
+								<!-- begin quick-info -->
+								<div class="quick-info">
+									<div class="new-deal-summary__title quick-info__title">
+										<span>Quick Info</span>
+									</div>
+									<div class="quick-info__item">
+										<span>Deal owner: </span><strong><a href="#">Turtle Adam</a>, <a href="#">Rede Partners</a></strong>
+									</div>
+									<div class="quick-info__item">
+										<span>Deal Team: <strong>WLCM </strong></span><span>(Vasco Nikki, Johnson Manka, Chambers Dennis, Vasco Nikki, Johnson Manka, Chambers Dennis,  Vasco Nikki, Johnson Manka, Chambers Dennis,  Vasco Nikki, Johnson Manka, Chambers Dennis,  Barker Travis)</span> <button class="pencil-ico"></button>
+									</div>
+									<div class="quick-info__item">
+										<span>Deal Status: </span><strong>Active, <a href="#">Change Status</a></strong>
+									</div>
+									<div class="quick-info__item">
+										<span>Exeption: </span><strong>Reg D, Rule 505</strong>
+									</div>
+								</div>
+								<!-- end quick-info -->
+								<!-- begin unread-comments -->
+								<div class="unread-comments">
+									<div class="unread-comments__no-com-text is-active">There are no Unread Comments</div>
+									
+									<div class="new-deal-summary__title unread-comments__title">
+										<span>Unread Comments</span>
+									</div>
+
+									<div class="unread-comments__comment">
+										<div class="unread-comments__comment-id">
+											<a href="#">
+												<i class="svg-ico memo-ico"></i>
+												<span>DM98345</span>
+											</a>
+										</div>
+										<div class="unread-comments__comment-text">
+											<div class="unread-comments__comment-title">
+												<a href="#">Adam Smith, Sept 14, 2017</a>
+											</div>
+											<p>“Lorem ipsum dolor sit amet, sed ignota putant ceteros eu. Adhuc aeque mea cu, numquam tincidunt ad duo. Ei melius qualisque mei. Ne vel oratio copiosae convenire. Everti vidisse platonem te eum.”</p>
+										</div>
+									</div>
+									<div class="unread-comments__comment">
+										<div class="unread-comments__comment-id">
+											<a href="#">
+												<i class="svg-ico memo-ico"></i>
+												<span>DM98345</span>
+											</a>
+										</div>
+										<div class="unread-comments__comment-text">
+											<div class="unread-comments__comment-title">
+												<a href="#">Adam Smith, Sept 14, 2017</a>
+											</div>
+											<p>“Lorem ipsum dolor sit amet, sed ignota putant ceteros eu. Adhuc aeque mea cu, numquam tincidunt ad duo. Ei melius qualisque mei. Ne vel oratio copiosae convenire. Everti vidisse platonem te eum.”</p>
+										</div>
+									</div>
+
+								</div>
+								<!-- end unread-comments -->
+
+
+
+								<!-- begin recent-activity -->
+		<!-- 						<div class="recent-activity">
+									<div class="new-deal-summary__title recent-activity__title">
+										<span>Recent activity</span>
+									</div>
+									<div class="recent-activity__record">									
+										<strong>Jul 4, 2017 </strong><span>You uploaded a file <a href="#">AT37137 1.png</a> in the entry <a href="#">EL15780 John Doe</a></span>									
+									</div>
+									<div class="recent-activity__record">									
+										<strong>Jul 4, 2017 </strong><span>You uploaded a file <a href="#">AT37137 1.png</a> in the entry <a href="#">EL15780 John Doe</a></span>									
+									</div>								
+								</div> -->
+								<!-- end recent-activity -->
+							</div>
+							<!-- end page-left -->
+
+							<!-- begin page-right -->
+							<div class="page-right">
+
+								<!-- begin tasks -->
+								<div class="tasks">
+									
+									<div class="tasks__top">
+										<div class="tasks__title new-deal-summary__title">
+											<span>Tasks</span>
+										</div>
+
+										<div class="tasks__link">
+											<a href="#">Show Completed</a>
+										</div>
+									</div>
+
+									<!-- begin tablewrap  -->
+									<div class="tablewrap tablewrap--table-border js-tablewrap no-top-margin">
+
+										<div class="tablewrap__in">
+											<div class="scrollbar scrollbar_nomargin js-scrollbar">
+												<!-- begin table  -->
+												<table class="table table_smaller">
+													<tr class="table__head js-clone-head">
+														<th title="Status" width="182"><p>Status</p></th>
+														<th title="Form" width="202"><p>Form</p></th>
+														<th title="Entry ID" width="106"><p>Entry ID</p></th>
+														<th title="Date Created" width="110"><p>Date Created</p></th>
+													</tr>
+													<tr>
+														<td>
+															<p class="table__text is-info">New</p>
+														</td>
+														<td>
+															<div class="table__el table_smaller__el">
+																<a href="#">
+																	<i class="svg-ico customer-ico"></i>
+																	<span>Customer Identification</span>
+																</a>
+															</div>
+														</td>
+														<td>
+															<a href="#">CIF00980</a>
+														</td>
+														<td>
+															<a href="#">07.16.2017</a>
+														</td>
+													</tr>
+												</table>
+												<!-- end table -->
+											</div>
+										</div>
+
+									</div>
+
+									<!-- end tablewrap -->
+
+								</div>
+								<!-- end tasks -->
+
+								<!-- begin dea-folder -->
+								<div class="deal-folder">
+									<div class="deal-folder__title new-deal-summary__title">
+										<span>Deal Folder</span>
+										<div class="dropdown dropdown--float-r is-filter js-dropdown">
+											<p class="dropdown__item">Actions</p>
+											<ul class="dropdown__list is-top-level is-big js-inner">
+												<!-- ngRepeat: action in tableActions --><!-- ngIf: ::action.enabled --><li ng-repeat="action in tableActions" ng-if="::action.enabled" class="ng-scope">
+													<!-- ngInclude: undefined --><ng-include src="::(action.templateUrl || STATIC_URL + 'html/olivia-table/table-actions/default-table-action.html')" class="ng-scope"><a href="" reset-settings="" table-data="tableData" ng-bind="::action.name" class="ng-binding ng-scope ng-isolate-scope">Reset settings</a>
+													</ng-include>
+												</li><!-- end ngIf: ::action.enabled --><!-- end ngRepeat: action in tableActions -->
+											</ul>
+										</div>
+									</div>
+
+									<div class="deal-folder__empty-msg is-active">
+										Your Deal Folder is currently empty. Start by uploading the Engagement Letter and Deal Memo.
+									</div>
+
+									<!-- begin tablewrap  -->
+									<div class="tablewrap js-tablewrap no-top-margin">
+
+										<div class="tablewrap__in">
+											<div class="scrollbar scrollbar_nomargin js-scrollbar">
+												<!-- begin table  -->
+												<table class="table table_smaller">
+													<tr class="table__head js-clone-head">
+														<th title="ID" width="108"><p>ID</p></th>
+														<th title="Status" width="108"><p>Status</p></th>
+														<th title="Title" width="108"><p>Title</p></th>
+														<th title="Form" width="115"><p>Form</p></th>
+														<th title="Updated" width="100"><p>Updated</p></th>
+														<th title="" width="60" class="cell-center">
+															<a href="#">
+																<i class="commented-transparent-ico svg-ico"></i>
+															</a>
+														</th>
+													</tr>
+													<tr>
+														<td>
+															<div class="table__el table_smaller__el">
+																<a href="#">
+																	<i class="svg-ico letter-ico"></i>
+																	<span>EL15780</span>
+																</a>
+															</div>
+														</td>
+														<td>
+															<div class="table__el table_smaller__el">
+																<a href="#">
+																	<i class="icon icon-pending"></i>
+																	<span>In Review</span>
+																</a>
+															</div>
+														</td>
+														<td>
+															<a href="#">John Doe</a>
+														</td>
+														<td>
+															<a href="#">Engagement Letter</a>
+														</td>
+														<td>
+															<a href="#">07.04.2017</a>
+														</td>
+														<td class="cell-center">
+															<div class="status is-commented">
+																<a href="#"><i class="icon icon-comment-cloud svg-ico"></i></a>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div class="table__el table_smaller__el">
+																<a href="#">
+																	<i class="entry-shared svg-ico"></i>
+																	<span>EL15780</span>
+																</a>
+															</div>
+														</td>
+														<td>
+															<div class="table__el table_smaller__el">
+																<a href="#">
+																	<i class="icon icon-pending"></i>
+																	<span>In Review</span>
+																</a>
+															</div>
+														</td>
+														<td>
+															<a href="#">John Doe</a>
+														</td>
+														<td>
+															<a href="#">Engagement Letter</a>
+														</td>
+														<td>
+															<a href="#">07.04.2017</a>
+														</td>
+														<td class="cell-center">
+															<div class="status is-commented">
+																<a href="#"><i class="icon closed-table-icon"></i> <span>1</span></a>
+															</div>
+														</td>
+													</tr>
+												</table>
+												<!-- end table -->
+											</div>
+										</div>
+
+									</div>
+
+									<!-- end tablewrap -->
+
+
+								</div>
+								<!-- end dea-folder -->
+
+							</div>
+							<!-- end page-right -->
+						</div>
+						<!--end .new-deal-summary__inner-->
+						
+
+
+
+						<!-- begin modal-submitted modal-submitted_trans-status -->
+						<div class="modal-submitted modal-submitted_trans-status js-popup" id="cif-form-second">
+							<div class="modal-submitted__top">
+								<div class="modal-submitted__title">Transaction Statuses</div>
+								<div class="modal-submitted__close js-close"></div>								
+							</div>
+							<div class="modal-submitted__inner js-popup-inner">								
+								<a href="#" class="modal-submitted__link modal-submitted__link--spec ">
+									<span class="complicated-icon complicated-icon--cash is-in-review">
+										<i class="svg-ico transaction-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>																	
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted__link--spec ">
+									<span class="complicated-icon complicated-icon--cash is-in-review">
+										<i class="svg-ico transaction-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>																	
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted__link--spec ">
+									<span class="complicated-icon complicated-icon--cash is-in-review">
+										<i class="svg-ico transaction-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>																	
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted__link--spec ">
+									<span class="complicated-icon complicated-icon--cash is-in-review">
+										<i class="svg-ico transaction-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>																	
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted__link--spec ">
+									<span class="complicated-icon complicated-icon--cash is-in-review">
+										<i class="svg-ico transaction-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>																	
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted__link--spec ">
+									<span class="complicated-icon complicated-icon--cash is-in-review">
+										<i class="svg-ico transaction-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>																	
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted__link--spec ">
+									<span class="complicated-icon complicated-icon--cash is-in-review">
+										<i class="svg-ico transaction-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>																	
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted__link--spec ">
+									<span class="complicated-icon complicated-icon--cash is-in-review">
+										<i class="svg-ico transaction-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>																	
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted__link--spec ">
+									<span class="complicated-icon complicated-icon--cash is-in-review">
+										<i class="svg-ico transaction-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>																	
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted__link--spec ">
+									<span class="complicated-icon complicated-icon--cash is-in-review">
+										<i class="svg-ico transaction-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>																	
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted__link--spec ">
+									<span class="complicated-icon complicated-icon--cash is-in-review">
+										<i class="svg-ico transaction-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>																	
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted__link--spec ">
+									<span class="complicated-icon complicated-icon--cash is-in-review">
+										<i class="svg-ico transaction-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>																	
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted__link--spec ">
+									<span class="complicated-icon complicated-icon--cash is-in-review">
+										<i class="svg-ico transaction-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>																	
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted__link--spec ">
+									<span class="complicated-icon complicated-icon--cash is-in-review">
+										<i class="svg-ico transaction-ico"></i>
+										<span class="complicated-icon__number">456309</span>	
+									</span>																	
+								</a>
+
+
+							</div>
+
+						</div>
+						<!-- end modal-submitted modal-submitted_trans-status -->
+
+						<!-- begin modal-submitted modal-submitted_cif-form -->
+						<div class="modal-submitted modal-submitted_cif-form js-popup" id="cif-form">
+							<div class="modal-submitted__top">
+								<div class="modal-submitted__title">Submitted CIF forms</div>
+								<div class="modal-submitted__close js-close"></div>								
+							</div>
+							<div class="modal-submitted__inner js-popup-inner js-scrollbar">		
+
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								
+
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								
+
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_cif-form__link">
+									<span class="complicated-icon is-in-review">
+										<i class="svg-ico customer-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								
+								
+
+								<div class="modal-submitted__footer">
+									<span>To see all your Transactions </span><a href="#">go to the Transactions Tab.</a>
+								</div>		
+
+							</div>
+
+						</div>
+						<!-- end modal-submitted modal-submitted_cif-form -->
+
+
+
+						<!-- begin modal-submitted modal-submitted_transactions -->
+						<div class="modal-submitted modal-submitted_transactions js-popup" id="transactions">
+							<div class="modal-submitted__top">
+								<div class="modal-submitted__title">Submitted transactions</div>
+								<div class="modal-submitted__close js-close"></div>								
+							</div>
+							<div class="modal-submitted__inner modal-submitted_transactions__inner js-popup-inner">								
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon is-approved">
+										<i class="svg-ico transaction-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon is-rejected">
+										<i class="svg-ico transaction-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon is-draft">
+										<i class="svg-ico transaction-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon is-approved">
+										<i class="svg-ico transaction-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon is-approved">
+										<i class="svg-ico transaction-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon is-approved">
+										<i class="svg-ico transaction-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon is-approved">
+										<i class="svg-ico transaction-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon is-approved">
+										<i class="svg-ico transaction-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon is-approved">
+										<i class="svg-ico transaction-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon is-approved">
+										<i class="svg-ico transaction-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon is-approved">
+										<i class="svg-ico transaction-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon is-approved">
+										<i class="svg-ico transaction-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon is-approved">
+										<i class="svg-ico transaction-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+
+								<a href="#" class="modal-submitted__link modal-submitted_transactions__link">
+									<span class="complicated-icon is-approved">
+										<i class="svg-ico transaction-ico"></i>
+									</span>
+									<span class="modal-submitted__link-title">John Doe</span>																		
+								</a>
+
+
+								<div class="modal-submitted__footer">
+									<span>To see all your Transactions </span><a href="#">go to the Transactions Tab.</a>
+								</div>					
+							</div>
+
+
+						</div>
+						<!-- end modal-submitted modal-submitted_transactions -->
+
+					</div>
+				</div>
+			</div>
+			<!-- end main -->
+
+			<!-- begin footer  -->
+
+			<div class="footer js-footer">
+
+				<div class="l">
+
+					<p>© 2009-2013 Growth Capital Services.  Growth Capital Services, Member FINRA, SIPC. All information presented herein is CONFIDENTIAL.</p>
+
+				</div>
+
+			</div>
+
+			<!-- end footer -->
+		</div>
+		<!-- END out-->
+		<div class="overlay">
+			<div class="popup is-attach js-popup" id="attach">
+				<div class="popup__head">
+					<p>Attached files</p>
+					<i class="icon icon-close js-close"></i>
+				</div>
+				<div class="popup__body">
+					<p>Below are files attached to і [Document type]:</p>
+					<div class="popup__bl">
+						<div class="popup__el">
+							<i class="svg-ico letter-ico"></i>
+							<span class="popup__num">EL12522</span>
+							<span class="txt-bold">[Name of the form]</span>
+						</div>
+						<a href="#" class="popup__more">Open form to add file</a>
+					</div>
+				</div>
+				<!-- begin table  -->
+				<table class="table">
+					<tr class="table__head">
+						<th width="137"><p>ID</p></th>
+						<th width="307"><p>Name</p></th>
+						<th><p>Type</p></th>
+						<th width="98"><p>Uploaded</p></th>
+						<th class="table__drop"><p>&nbsp;</p></th>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico pdf-ico"></i>
+								<span>FI12522-001</span>
+							</div>
+						</td>
+						<td>
+							<p>Approval Letter</p>
+						</td>
+						<td>
+							<p>PDF</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico pic-ico"></i>
+								<span>FI12522-002</span>
+							</div>
+						</td>
+						<td>
+							<p>Attachment Name</p>
+						</td>
+						<td>
+							<p>Image</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico pic-ico"></i>
+								<span>FI12522-003</span>
+							</div>
+						</td>
+						<td>
+							<p>Client ID Scan</p>
+						</td>
+						<td>
+							<p>Image</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico unknown-ico"></i>
+								<span>FI12522-004</span>
+							</div>
+						</td>
+						<td>
+							<p>Client ID Scan Back</p>
+						</td>
+						<td>
+							<p>File</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico doc-ico"></i>
+								<span>FI12522-034</span>
+							</div>
+						</td>
+						<td >
+							<p>FINRA Approval Letter</p>
+						</td>
+						<td>
+							<p>DOC</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico pdf-ico"></i>
+								<span>FI12522-006</span>
+							</div>
+						</td>
+						<td>
+							<p>NDA template</p>
+						</td>
+						<td>
+							<p>PDF</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico pic-ico"></i>
+								<span>FI12522-008</span>
+							</div>
+						</td>
+						<td>
+							<p>My ID Scan</p>
+						</td>
+						<td>
+							<p>Image</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico pic-ico"></i>
+								<span>FI12522-008</span>
+							</div>
+						</td>
+						<td>
+							<p>My ID Scan</p>
+						</td>
+						<td>
+							<p>Image</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="table__el">
+								<i class="svg-ico doc-ico"></i>
+								<span>FI12522-009</span>
+							</div>
+						</td>
+						<td>
+							<p>Document name</p>
+						</td>
+						<td>
+							<p>DOC</p>
+						</td>
+						<td>
+							<p>Aug 10, 2015</p>
+						</td>
+						<td class="table__drop">
+							<div class="dropdown js-dropdown">
+								<span class="dropdown__bl"></span>
+								<div class="dropdown__in js-inner">
+									<ul class="dropdown__list is-top-level">
+										<li><a href="#">Open in new window</a></li>
+										<li><a href="#">Download all in ZIP</a></li>
+										<li><a href="#">Deal status</a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<!-- end table -->
+			</div>
+		</div>
+	</body>
+	</html>

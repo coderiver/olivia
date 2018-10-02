@@ -82,7 +82,7 @@
 			left: 0
 			z-index: 1
 			top: 50%
-			transform: translate(0, -200%)
+			transform: translate(0, -50%)
 			+arr(10,14,#fff, r)
 		&:first-child
 			border-left: 0
@@ -153,6 +153,44 @@
 						+arr(8, 8, #2caf24, r)
 						right: -1px
 						top: -3px
+		&--bg-white
+			background-color: #fff
+			border-left: 1px solid rgba(151, 151, 151, 0.5)
+			&:before
+				left: -3px
+				border-left-color: rgba(151, 151, 151, 0.5)
+				z-index: 3
+			&:after
+				position: absolute
+				left: -15px
+				top: 50%
+				transform: translateY(-50%)
+				content: ''
+				width: 30px
+				height: 30px
+				background-color: #fff
+				z-index: 2
+	&__banner
+		position: relative
+		width: 60%
+		display: flex
+		justify-content: space-around
+		align-items: center
+		background-color: rgba(216, 216, 216, 0.4)
+		border-left: 1px solid rgba(151, 151, 151, 0.5)
+		&::before
+			content: ''
+			position: absolute
+			left: 35%
+			z-index: 1
+			top: 50%
+			transform: translate(0, -50%)
+			+arr(10,14,#fff, r)
+		&-title
+			+opensans-b
+			font-size: 16px
+			text-transform: uppercase
+			color: #9b9b9b
 	&__title
 		color: #9b9b9b
 		text-transform: uppercase
