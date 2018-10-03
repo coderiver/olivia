@@ -234,7 +234,7 @@
 		font-size: 12px
 	&__hint
 		display: block
-		margin-bottom: 7px
+		margin-bottom: 5px
 
 	&__close
 		position: absolute
@@ -416,12 +416,16 @@
 		margin-bottom: 8px
 
 	&__head
+		position: relative
 		display: flex
 		align-items: center
 		min-height: 55px
 		// justify-content: space-between
-		padding: 16px 20px 16px 40px
+		padding: 16px 40px 16px 40px
 		border-bottom: 1px solid #d8d8d8
+		&--column
+			flex-direction: column
+			align-items: start
 		input 
 			width: 470px
 			height: 35px
@@ -434,6 +438,19 @@
 		.form__btn-close
 			&:before, &:after
 				top: 10px
+	&__head-list li
+		position: relative
+		padding-left: 8px
+		&:before
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+			content: ''
+			width: 4px
+			height: 4px
+			background-color: #9e9898
+			border-radius: 50%
 	&__head-ttl
 		margin: 0 8px 0 4px
 		font-size: 16px
@@ -473,7 +490,10 @@
 			height: 20px
 			width: 100%
 	&__btn-close
-		position: relative
+		position: absolute
+		top: 50%
+		right: 20px
+		transform: translateY(-50%)
 		width: 20px
 		height: 20px
 		background-color: transparent
