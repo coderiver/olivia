@@ -1914,6 +1914,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__radio .form__el { width: 100%; }
 .form__radio.drag-and-drop-start .form__drag-bg { position: absolute; left: -30px; width: -webkit-calc(100% + 30px); width: calc(100% + 30px); height: 100%; border-radius: 2px; box-shadow: 0 1px 7.5px 0.5px rgba(0, 0, 0, 0.13); background-color: #ffffff; border: dotted 1px #c7cbd3; }
 .form__radio.drag-and-drop-start .form__drag-bg .icon { width: 34px; height: 34px; position: absolute; right: 25%; top: 35%; z-index: 10; }
+.form__radio .form__btn-close { position: static; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
 .form__check { position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; margin-bottom: 15px; }
 .form__check input[type="checkbox"] { width: 18px; height: 18px; position: absolute; left: -22px; top: 7px; z-index: 10; cursor: pointer; visibility: visible; }
 .form__check input[type="checkbox"] + .check__span:before { background-color: #ffffff; border-color: #c7cbd3; border-radius: 2px; }
@@ -1923,6 +1924,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__check .form__el { width: 100%; }
 .form__check.drag-and-drop-start .form__drag-bg { position: absolute; left: -30px; width: -webkit-calc(100% + 30px); width: calc(100% + 30px); height: 100%; border-radius: 2px; box-shadow: 0 1px 7.5px 0.5px rgba(0, 0, 0, 0.13); background-color: #ffffff; border: dotted 1px #c7cbd3; }
 .form__check.drag-and-drop-start .form__drag-bg .icon { width: 34px; height: 34px; position: absolute; right: 25%; top: 35%; z-index: 10; }
+.form__check .form__btn-close { position: static; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
 .form__radio-cont { display: none; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 .form__cont-link { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; width: 13px; margin-right: 5px; background-color: transparent; }
 .form__cont-link img { width: 100%; }
