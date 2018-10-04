@@ -19,7 +19,7 @@
 		
 			<!-- begin header  -->
 		
-			<div class="header is-form js-fixed">
+			<div class="header formbuilder is-form js-fixed">
 		
 				<div class="l-lg">
 		
@@ -49,6 +49,14 @@
 		
 					<div class="header__in js-hide">
 		
+						<div class="header__btns">
+		
+							<button class="btn btn_md">Collapse All</button>
+		
+							<button class="btn btn_md">Expand All</button>
+		
+						</div>
+		
 						<ul class="header__list header__list--sm">
 		
 							<li><a href="#" class="header__option header__option--blue is-active">Settings</a></li>
@@ -65,9 +73,18 @@
 		
 			<!-- end header -->
 
-		<div class="main is-form m-pad">
+		<div class="main is-form l-pad">
 			
 			<div class="l-layout">
+
+				<!-- begin report -->
+				<div class="report is-rejected">
+					<div class="report__bl">
+						<i class="icon rejected"></i><span>The field(s): “Currency, Integer, Text” are marked as additional. This is allowed only for “Review by Pre-Reviewer & Supervisor” workflow. Change the workflow to save the form.</span>
+					</div>
+				</div>
+				<!-- end report -->
+
 				<!--begin entry-wrapper-->
 				<div class="entry-wrapper">
 
@@ -106,7 +123,12 @@
 											<div class="form__bl">
 												<p class="form__subttl">Name</p>
 												<p class="form__hint">Should be informative</p>
-												<input type="text">
+												<input class="is-error" type="text">
+												<div _ngcontent-c3="" class="errors-box">
+													<div _ngcontent-c3="" class="control-errors">
+														<span _ngcontent-c3="">Field is required.</span>
+													</div>
+												</div>
 											</div>
 										</div>
 
@@ -336,7 +358,7 @@
 								</div>
 
 								<div class="form__box-dotted">
-									<div class="form__bl no-bottom-margin">
+									<div class="form__bl is-error no-bottom-margin">
 										<p class="form__subttl">Form Modules</p>
 										
 										<label class="check is-light-border">

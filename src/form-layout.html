@@ -7,7 +7,7 @@
 		
 	//=include partials/header-form-settings.html
 
-		<div class="main is-layout m-pad">
+		<div class="main is-layout l-pad">
 			<div class="fake-sidebar"></div>
 			<!-- begin wrapper-sidebar -->
 			<div class="wrapper-sidebar">
@@ -217,7 +217,16 @@
 				<!-- end sidebar-sttg -->
 			</div>
 			<!-- end wrapper-sidebar -->
+			
 			<div class="l-layout">
+
+				<!-- begin report -->
+				<div class="report is-rejected">
+					<div class="report__bl">
+						<i class="icon rejected"></i><span>The field(s): “Currency, Integer, Text” are marked as additional. This is allowed only for “Review by Pre-Reviewer & Supervisor” workflow. Change the workflow to save the form.</span>
+					</div>
+				</div>
+				<!-- end report -->
 				<!--begin entry-wrapper-->
 				<div class="entry-wrapper">
 
@@ -255,10 +264,11 @@
 										<div class="form__head-ttl">Text Field</div>
 										<button class="form__head-edit"><i class="icon edit"></i></button>
 									</div>
-									<button class="form__btn-close"></button>
+									<button class="form__btn-toggle"></button>
 								</div>
 
 								<div class="form__layout">
+									<button class="form__btn-close">Delete</button>
 
 									<div class="form__box">
 
@@ -342,11 +352,11 @@
 										</div>
 									</div>
 									
-									<button class="form__btn-close"></button>
+									<button class="form__btn-toggle"></button>
 								</div>
 
 								<div class="form__layout">
-
+									<button class="form__btn-close">Delete</button>
 									<div class="form__box">
 
 										<div class="form__item">
@@ -472,10 +482,11 @@
 										<div class="form__head-ttl">Radio Group:<span>Does this require a FINRA filing?</span></div>
 										<button class="form__head-edit"><i class="icon edit"></i></button>
 									</div>
-									<button class="form__btn-close"></button>
+									<button class="form__btn-toggle"></button>
 								</div>
 								<!--begin form__layout-->
 								<div class="form__layout">
+									<button class="form__btn-close">Delete</button>
 									<!--begin form__box-->
 									<div class="form__box">
 
@@ -673,10 +684,10 @@
 										</div>
 									</div>
 
-									<button class="form__btn-close"></button>
+									<button class="form__btn-toggle"></button>
 								</div>
-
 								<div class="form__layout">
+									<button class="form__btn-close">Delete</button>
 
 									<div class="form__box">
 
@@ -733,7 +744,7 @@
 							<!--end form__box-dotted-->
 
 							<!--begin form__box-dotted-->
-							<div class="form__box-dotted form__box-dotted--no-padd">
+							<div class="form__box-dotted is-close form__box-dotted--no-padd">
 								<div class="form__drag"><i class="icon drag1"></i></div>
 
 								<div class="form__head form__head--column">
@@ -753,31 +764,11 @@
 										<button class="form__head-edit"><i class="icon edit"></i></button>
 									</div>
 
-									<button class="form__btn-close"></button>
+									<button class="form__btn-toggle"></button>
 								</div>
-
-								<!-- <div class="form__head">
-
-									<div class="form__head-el form__head-el--column">
-										<div class="form__row">
-											
-											<div class="form__hint">
-												<button class="form__head-link"><img src="img/formbuilder/link-bl.svg"></button>
-												<span>Have you conducted a review of the material in the context of FINRA rules 2210(d)(1)(A), (B) and (D)?</span>
-											</div>
-											<div class="form__hint">• Yes</div>
-										</div>
-										
-										<div class="form__head-el">
-											<div class="form__head-ttl">The textfield label</div>
-											<button class="form__head-edit"><i class="icon edit"></i></button>
-										</div>
-									</div>
-
-									<button class="form__btn-close"></button>
-								</div> -->
-
+								<!--begin form__layout-->
 								<div class="form__layout">
+									<button class="form__btn-close">Delete</button>
 
 									<div class="form__box">
 
@@ -845,10 +836,10 @@
 										<button class="form__head-edit"><i class="icon edit"></i></button>
 									</div>
 
-									<button class="form__btn-close"></button>
+									<button class="form__btn-toggle"></button>
 								</div>
-
 								<div class="form__layout">
+									<button class="form__btn-close">Delete</button>
 
 									<div class="form__box">
 
@@ -958,10 +949,11 @@
 										<button class="form__head-edit"><i class="icon edit"></i></button>
 									</div>
 
-									<button class="form__btn-close"></button>
+									<button class="form__btn-toggle"></button>
 								</div>
-
+								<!--begin form__layout-->
 								<div class="form__layout">
+									<button class="form__btn-close">Delete</button>
 
 									<div class="form__box">
 

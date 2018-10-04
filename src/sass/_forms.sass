@@ -348,6 +348,13 @@
 				display: none
 		&.drag-and-drop-out
 			box-shadow: 0 0 50px 0px rgba(0,0,0,0.4)
+		&.is-close
+			.form__head 
+				border-bottom: none
+			.form__layout
+				display: none
+			.form__btn-toggle
+				transform: rotate(180deg)
 
 	&__container
 		max-width: 912px
@@ -357,11 +364,28 @@
 			bottom: -20px
 			left: 0
 			white-space: nowrap
+			font-weight: bold
+			color: #e0421b
+		.form__bl.is-error
+			position: relative
+			padding: 10px
+			margin: -10px 0px -10px -10px
+			background-color: #fff
+			&:before
+				content: 'Requared'
+				position: absolute
+				bottom: -24px
+				left: 0
+				white-space: nowrap
+				font-weight: bold
+				color: #e0421b
 		& .form__left
 			display: flex
 			.form__bl
 				width: 100%
 				margin-top: auto
+		& input.is-error
+			padding: 8px 12px
 	&__left
 		width: 100%
 		max-width: 400px
@@ -377,6 +401,7 @@
 		.form__bl 
 			width: 281px
 			margin: 0 0 20px
+			
 		.form__bl--small
 			width: 87px
 	&__bottom
@@ -485,28 +510,44 @@
 	.link-bl
 		width: 100%
 		height: 8px
-	&__head-edit
+	&__head-editposition
 		.edit
 			height: 20px
 			width: 100%
-	&__btn-close
+	&__btn-toggle
 		position: absolute
-		top: 50%
+		top: 20px
 		right: 20px
-		transform: translateY(-50%)
 		width: 20px
 		height: 20px
 		background-color: transparent
+		&:before
+			content: ''
+			position: absolute
+			top: 5px
+			right: 5px
+			width: 10px
+			height: 10px
+			transform: rotate(45deg)
+			border-top: 1px solid #c0c0c0
+			border-left: 1px solid #c0c0c0
+	&__btn-close
+		position: absolute
+		bottom: 11px
+		left: 15px
+		padding-left: 20px
+		background-color: transparent
 		margin-left: auto
+		color: #e76262
 		&:before, &:after
 			content: ''
 			position: absolute
-			top: 17px
-			right: 0
+			top: 7px
+			left: 0
 			width: 15px
 			height: 1px
 			transform: rotate(45deg)
-			background-color: #c0c0c0
+			background-color: #e76262
 		&:after
 			transform: rotate(-45deg)
 
@@ -650,6 +691,16 @@
 		.form__btn-close
 			position: static
 			transform: translateY(0)
+			padding-left: 0
+			&:before, &:after
+				top: 50%
+				left: 50%
+				background-color: silver
+			&:before
+				transform: translate(-50%,-50%) rotate(45deg)
+			&:after
+				transform: translate(-50%,-50%) rotate(-45deg)
+
 	&__check
 		position: relative
 		display: flex
@@ -707,6 +758,16 @@
 		.form__btn-close
 			position: static
 			transform: translateY(0)
+			padding-left: 0
+			&:before, &:after
+				top: 50%
+				left: 50%
+				background-color: silver
+			&:before
+				transform: translate(-50%,-50%) rotate(45deg)
+			&:after
+				transform: translate(-50%,-50%) rotate(-45deg)
+
 	&__radio-cont
 		display: none
 		align-items: center
