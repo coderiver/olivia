@@ -666,9 +666,7 @@
 			height: 6px
 			margin-top: -4px
 			background-color: #c7cbd3
-		input[type="radio"]:checked ~ .form__el > .form__radio-cont
-			margin-top: 5px
-			display: flex
+			
 		.form__el
 			width: 100%
 		&.drag-and-drop-start
@@ -767,10 +765,16 @@
 				transform: translate(-50%,-50%) rotate(45deg)
 			&:after
 				transform: translate(-50%,-50%) rotate(-45deg)
+		&.has-connection
+			margin-bottom: 30px
 
 	&__radio-cont
-		display: none
+		position: absolute
+		bottom: -20px
+		left: 0
+		display: flex
 		align-items: center
+		margin-top: 5px
 	&__cont-link
 		display: flex
 		width: 13px
