@@ -582,7 +582,7 @@ body .tooltipster-base { z-index: 8; }
 
 .link-bl { background-image: url("../img/svg-bg/link-bl.svg"); }
 
-.edit { background-image: url("../img/svg-bg/edit.svg"); }
+.edit { width: 14px; height: 14px; background-image: url("../img/svg-bg/edit.svg"); }
 
 .drag1 { background-image: url("../img/svg-bg/drag1.svg"); }
 
