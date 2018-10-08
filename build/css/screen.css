@@ -2004,7 +2004,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 
 *[data-popup] { cursor: pointer; }
 
-.overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; padding: 10px; text-align: center; background: rgba(243, 244, 246, 0.6); opacity: 0; visibility: hidden; overflow: auto; white-space: nowrap; z-index: 12; -webkit-transition: 0.5s ease; transition: 0.5s ease; text-align: center; font-size: 0; }
+.overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; padding: 10px; text-align: center; background: rgba(243, 244, 246, 0.6); opacity: 0; visibility: hidden; overflow: auto; white-space: nowrap; z-index: 35; -webkit-transition: 0.5s ease; transition: 0.5s ease; text-align: center; font-size: 0; }
 .overlay:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .overlay.is-active { opacity: 1; visibility: visible; }
 .overlay.low-index { z-index: 8; }
