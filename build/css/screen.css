@@ -1949,7 +1949,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__check .form__btn-close:before { -webkit-transform: translate(-50%, -50%) rotate(45deg); -ms-transform: translate(-50%, -50%) rotate(45deg); transform: translate(-50%, -50%) rotate(45deg); }
 .form__check .form__btn-close:after { -webkit-transform: translate(-50%, -50%) rotate(-45deg); -ms-transform: translate(-50%, -50%) rotate(-45deg); transform: translate(-50%, -50%) rotate(-45deg); }
 .form__check.has-connection { margin-bottom: 30px; }
-.form__radio-cont { position: absolute; bottom: -20px; left: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; margin-top: 5px; }
+.form__el.has-connection .form__radio-cont { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+.form__radio-cont { position: absolute; bottom: -20px; left: 0; display: none; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; margin-top: 5px; }
 .form__cont-link { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; width: 13px; margin-right: 5px; background-color: transparent; }
 .form__cont-link img { width: 100%; }
 .form__cont-text { margin-right: 5px; font-size: 12px; border-bottom: 1px dotted #9b9b9b; }
