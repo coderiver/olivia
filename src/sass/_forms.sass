@@ -698,6 +698,10 @@
 				transform: translate(-50%,-50%) rotate(45deg)
 			&:after
 				transform: translate(-50%,-50%) rotate(-45deg)
+		&.has-connection
+			margin-bottom: 30px
+			.form__radio-cont
+				display: flex
 
 	&__check
 		position: relative
@@ -766,10 +770,10 @@
 			&:after
 				transform: translate(-50%,-50%) rotate(-45deg)
 		&.has-connection
-			margin-bottom: 30px 
-	&__el.has-connection
-		.form__radio-cont
-			display: flex
+			margin-bottom: 30px
+			.form__radio-cont
+				display: flex
+		
 	&__radio-cont
 		position: absolute
 		bottom: -20px

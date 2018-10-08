@@ -1935,6 +1935,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__radio .form__btn-close:before, .form__radio .form__btn-close:after { top: 50%; left: 50%; background-color: silver; }
 .form__radio .form__btn-close:before { -webkit-transform: translate(-50%, -50%) rotate(45deg); -ms-transform: translate(-50%, -50%) rotate(45deg); transform: translate(-50%, -50%) rotate(45deg); }
 .form__radio .form__btn-close:after { -webkit-transform: translate(-50%, -50%) rotate(-45deg); -ms-transform: translate(-50%, -50%) rotate(-45deg); transform: translate(-50%, -50%) rotate(-45deg); }
+.form__radio.has-connection { margin-bottom: 30px; }
+.form__radio.has-connection .form__radio-cont { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
 .form__check { position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; margin-bottom: 15px; }
 .form__check input[type="checkbox"] { width: 18px; height: 18px; position: absolute; left: -22px; top: 7px; z-index: 10; cursor: pointer; visibility: visible; }
 .form__check input[type="checkbox"] + .check__span:before { background-color: #ffffff; border-color: #c7cbd3; border-radius: 2px; }
@@ -1949,7 +1951,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__check .form__btn-close:before { -webkit-transform: translate(-50%, -50%) rotate(45deg); -ms-transform: translate(-50%, -50%) rotate(45deg); transform: translate(-50%, -50%) rotate(45deg); }
 .form__check .form__btn-close:after { -webkit-transform: translate(-50%, -50%) rotate(-45deg); -ms-transform: translate(-50%, -50%) rotate(-45deg); transform: translate(-50%, -50%) rotate(-45deg); }
 .form__check.has-connection { margin-bottom: 30px; }
-.form__el.has-connection .form__radio-cont { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+.form__check.has-connection .form__radio-cont { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
 .form__radio-cont { position: absolute; bottom: -20px; left: 0; display: none; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; margin-top: 5px; }
 .form__cont-link { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; width: 13px; margin-right: 5px; background-color: transparent; }
 .form__cont-link img { width: 100%; }
