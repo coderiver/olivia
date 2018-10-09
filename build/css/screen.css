@@ -1757,6 +1757,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__require--abs-left { position: absolute; left: -20px; top: 2px; }
 .form__bl { position: relative; max-width: 740px; padding: 0 70px; margin: 0 auto 20px; }
 .form__bl:hover .addpost { opacity: 1; visibility: visible; }
+.form__bl.not-satisfied-connection { display: none; }
 .form__bl.s-bottom-margin { margin-bottom: 10px; }
 .form__bl.m-bottom-margin { margin-bottom: 40px; }
 .form__bl.is-small-size input { max-width: 162px; }
