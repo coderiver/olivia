@@ -879,7 +879,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .table-row .status:not(.is-active) .status-info { background: #828c92; }
 
 .header { min-height: 153px; background-color: #474e52; }
-.header.is-form { min-height: auto; position: fixed; min-width: 1040px; top: 0; left: 0; right: 0; background: #FFF; z-index: 30; border-bottom: 1px solid #dee1e7; }
+.header.is-form { min-height: auto; position: fixed; min-width: 1040px; top: 0; left: 0; right: 0; background: #FFF; z-index: 9; border-bottom: 1px solid #dee1e7; }
 .header.is-form .header__in { position: relative; padding: 0; box-shadow: 0px 1px 0px 0px #dee1e7; }
 .header.formbuilder .header__list { padding: 16px 0; min-height: 60px; }
 .header.is-staff .menu { margin-left: 5px; }
@@ -1931,7 +1931,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__radio input[type="radio"]:checked + .radio__span:after { left: 4px; width: 6px; height: 6px; margin-top: -4px; background-color: #c7cbd3; }
 .form__radio .form__el { width: 100%; }
 .form__radio.drag-and-drop-start .form__drag-bg { position: absolute; left: -30px; width: -webkit-calc(100% + 30px); width: calc(100% + 30px); height: 100%; border-radius: 2px; box-shadow: 0 1px 7.5px 0.5px rgba(0, 0, 0, 0.13); background-color: #ffffff; border: dotted 1px #c7cbd3; }
-.form__radio.drag-and-drop-start .form__drag-bg .icon { width: 34px; height: 34px; position: absolute; right: 25%; top: 35%; z-index: 10; }
+.form__radio.drag-and-drop-start .form__drag-bg .icon { width: 34px; height: 34px; position: absolute; right: 25%; top: 35%; z-index: 7; }
 .form__radio .form__btn-close { position: static; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); padding-left: 0; }
 .form__radio .form__btn-close:before, .form__radio .form__btn-close:after { top: 50%; left: 50%; background-color: silver; }
 .form__radio .form__btn-close:before { -webkit-transform: translate(-50%, -50%) rotate(45deg); -ms-transform: translate(-50%, -50%) rotate(45deg); transform: translate(-50%, -50%) rotate(45deg); }
@@ -1957,7 +1957,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__cont-link { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; width: 13px; margin-right: 5px; background-color: transparent; }
 .form__cont-link img { width: 100%; }
 .form__cont-text { margin-right: 5px; font-size: 12px; border-bottom: 1px dotted #9b9b9b; }
-.form__popup { z-index: 15; text-align: left; width: 620px; padding: 20px 25px 20px 20px; border: 1px solid #e3e6ed; position: absolute; top: 22px; left: -10px; border-radius: 4px; background-color: #ffffff; box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2); }
+.form__popup { z-index: 8; text-align: left; width: 620px; padding: 20px 25px 20px 20px; border: 1px solid #e3e6ed; position: absolute; top: 22px; left: -10px; border-radius: 4px; background-color: #ffffff; box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2); }
 .form__popup:before { position: absolute; top: -5px; left: 12px; content: ""; width: 7px; height: 7px; background-color: #ffffff; border-right: 1px solid #e3e6ed; border-bottom: 1px solid #e3e6ed; -webkit-transform: rotate(225deg); -ms-transform: rotate(225deg); transform: rotate(225deg); }
 .form__popup .check, .form__popup .radio { width: 100%; margin-bottom: 5px; }
 .form__popup .check__span, .form__popup .radio__span { font-size: 12px; }
@@ -2005,7 +2005,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 
 *[data-popup] { cursor: pointer; }
 
-.overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; padding: 10px; text-align: center; background: rgba(243, 244, 246, 0.6); opacity: 0; visibility: hidden; overflow: auto; white-space: nowrap; z-index: 35; -webkit-transition: 0.5s ease; transition: 0.5s ease; text-align: center; font-size: 0; }
+.overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; padding: 10px; text-align: center; background: rgba(243, 244, 246, 0.6); opacity: 0; visibility: hidden; overflow: auto; white-space: nowrap; z-index: 10; -webkit-transition: 0.5s ease; transition: 0.5s ease; text-align: center; font-size: 0; }
 .overlay:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .overlay.is-active { opacity: 1; visibility: visible; }
 .overlay.low-index { z-index: 8; }
