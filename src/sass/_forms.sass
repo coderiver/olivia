@@ -785,23 +785,37 @@
 				display: flex
 		
 	&__radio-cont
-		position: absolute
-		bottom: -20px
 		left: 0
 		display: none
-		align-items: center
+		flex-wrap: wrap
+		position: relative
+		padding-left: 18px
 		margin-top: 5px
 	&__cont-link
 		display: flex
 		width: 13px
-		margin-right: 5px
 		background-color: transparent
+		position: absolute
+		top: 3px
+		left: 0
 		img
 			width: 100%
 	&__cont-text
 		margin-right: 5px
 		font-size: 12px
 		border-bottom: 1px dotted #9b9b9b
+		max-width: 196px
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+		display: inline-block
+		position: relative
+		padding-right: 3px
+		&:not(:last-child):after
+			content: ","
+			position: absolute
+			bottom: 0
+			right: 0
 	&__popup
 		z-index: 8
 		text-align: left
