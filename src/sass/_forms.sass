@@ -472,9 +472,8 @@
 		padding-left: 8px
 		&:before
 			position: absolute
-			top: 50%
+			top: 6px
 			left: 0
-			transform: translateY(-50%)
 			content: ''
 			width: 4px
 			height: 4px
@@ -829,6 +828,8 @@
 			margin-bottom: 5px
 			&__span
 				font-size: 12px
+				&:before, &:after
+					top: 6px
 		.radio__span:before
 			border-color: #c7cbd3
 			background-color: #ffffff
