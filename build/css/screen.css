@@ -1879,11 +1879,12 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__baseline { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
 .form__baseline .form__bl { width: 48%; margin: 0 0 20px; }
 .form__descr { margin-bottom: 8px; }
-.form__head { position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; min-height: 55px; padding: 16px 60px 16px 40px; border-bottom: 1px solid #d8d8d8; }
+.form__head { position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; min-height: 55px; padding: 8px 60px 8px 40px; border-bottom: 1px solid #d8d8d8; }
 .form__head--column { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: start; -webkit-align-items: start; -ms-flex-align: start; align-items: start; }
 .form__head input { width: 470px; height: 35px; }
 .form__head .btn { border: 1px solid #b2b8be; font-weight: 600; width: 64px; height: 35px; margin-left: 8px; }
 .form__head .form__btn-close:before, .form__head .form__btn-close:after { top: 10px; }
+.form__head .form__hint { margin-top: 3px; }
 .form__head-list li { position: relative; padding-left: 8px; }
 .form__head-list li:before { position: absolute; top: 50%; left: 0; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); content: ""; width: 4px; height: 4px; background-color: #9e9898; border-radius: 50%; }
 .form__head-ttl { margin: 0 8px 0 4px; font-size: 16px; font-weight: 600; color: #657689; }
