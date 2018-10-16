@@ -1866,7 +1866,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__box-dotted.is-close .form__layout { display: none; }
 .form__box-dotted.is-close .form__btn-toggle { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
 .form__container { max-width: 912px; margin: 0 auto; }
-.form__container .errors-box { position: absolute; bottom: -20px; left: 0; white-space: nowrap; font-weight: bold; color: #e0421b; }
+.form__container .errors-box { position: absolute; top: 100%; left: 0; white-space: nowrap; font-weight: bold; color: #e0421b; }
 .form__container .form__bl.is-error { position: relative; padding: 10px; margin: -10px 0px -10px -10px; background-color: #fff; }
 .form__container .form__bl.is-error:before { content: "Requared"; position: absolute; bottom: -24px; left: 0; white-space: nowrap; font-weight: bold; color: #e0421b; }
 .form__container .form__left { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
@@ -2516,7 +2516,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 
 .entry-content { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); padding: 40px 35px; overflow: hidden; }
 .entry-content .form { margin: 0px 0 5px; }
-.entry-content .form__bl { margin-bottom: 25px; max-width: 100%; padding-left: 0; padding-right: 0; }
+.entry-content .form__bl { margin-bottom: 32px; max-width: 100%; padding-left: 0; padding-right: 0; }
 .entry-content .comments.is-in-form { padding: 0 0 50px; }
 .entry-content .is-in-form.is-in-form--head-max-width .comments__head { max-width: 600px; margin-left: auto; margin-right: auto; }
 .entry-content + div .tablewrap { margin-bottom: 0; margin-top: 20px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); background-color: #ffffff; }
