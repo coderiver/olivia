@@ -882,6 +882,10 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 
 .table-row.not-satisfied-connection { display: none; }
 
+#toast-container > div { opacity: 0.8 !important; }
+#toast-container .toast-title { font-size: 14px; }
+#toast-container .toast-message { font-size: 13px; }
+
 .header { min-height: 153px; background-color: #474e52; }
 .header.is-form { min-height: auto; position: fixed; min-width: 1040px; top: 0; left: 0; right: 0; background: #FFF; z-index: 9; border-bottom: 1px solid #dee1e7; }
 .header.is-form .header__in { position: relative; padding: 0; box-shadow: 0px 1px 0px 0px #dee1e7; }
