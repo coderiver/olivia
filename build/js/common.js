@@ -319,8 +319,6 @@ $(document).ready(function() {
 	var oliviaEntryFactory = function() {
 	    var oliviaEntry = {
 	        entryStickySidebar: null,
-	        fieldsCount: 0,
-	        fieldsFilledCount: 0,
 	        isInitiated: false,
 	        initSidebar: function() {
 	            if (!this.isInitiated) {
@@ -353,6 +351,18 @@ $(document).ready(function() {
 	        },
 	        isDisplayOnlyField: function(fieldContainer) {
 	            return fieldContainer.hasClass('display-only-field');
+	        },
+	        isNoConnectionField: function(fieldContainer) {
+	            return fieldContainer.hasClass('no-connection');
+	        },
+	        isSatisfiedField: function(fieldContainer) {
+	            return fieldContainer.hasClass('satisfied-connection');
+	        },
+	        isNotSatisfiedField: function(fieldContainer) {
+	            return fieldContainer.hasClass('not-satisfied-connection');
+	        },
+	        isConnectorField: function(fieldContainer) {
+	            return fieldContainer.hasClass('connector-field');
 	        },
 	        isFieldExistInContainer: function(fieldSelector, fieldContainer) {
 	            // field exist in form_bl container
@@ -397,6 +407,18 @@ $(document).ready(function() {
 	                var field = $(this),
 	                    value = field.val();
 	
+	                // always update sidebar if connector field value has been changed
+	                if (oliviaEntryObj.isConnectorField(fieldContainer)) {
+	                    oliviaEntryObj.initSidebarCounter();
+	                    return
+	                }
+	
+	                // decrement filled counter fields for not satisfied fields
+	                if (oliviaEntryObj.isNotSatisfiedField(fieldContainer)) {
+	                    oliviaEntryObj.decrementFilledCounter();
+	                    return
+	                }
+	
 	                // check if checkbox field does not have checked values
 	                if (oliviaEntryObj.isCheckboxField(field) && !oliviaEntryObj.checkboxFieldHasValue(fieldSelector, fieldContainer) && oliviaEntryObj.isFieldFilled(fieldContainer)) {
 	                    oliviaEntryObj.markFieldAsUnFilled($(this).parents('.form__bl'));
@@ -437,77 +459,94 @@ $(document).ready(function() {
 	                checkboxSelector = 'input[type="checkbox"]',
 	                radioSelector = 'input[type="radio"]',
 	                textSelector = 'input[type="text"]',
-	                textareaSelector = 'textarea';
+	                textareaSelector = 'textarea',
+	                fieldsCount = 0,
+	                fieldsFilledCount = 0;
 	
 	            $('.js-entry-sidebar .form__bl').each(function() {
 	                var $fieldContainer = $(this),
 	                    label = $('.form__subttl', $fieldContainer),
-	                    fieldNumber = $('.field-number', $fieldContainer);
+	                    fieldNumberContainer = $('.field-number', $fieldContainer);
 	
 	                // skip display only fields
 	                if (oliviaEntryObj.isDisplayOnlyField($fieldContainer)) {
 	                    return;
 	                }
 	
-	                oliviaEntryObj.fieldsCount++;
+	                if (oliviaEntryObj.isNoConnectionField($fieldContainer) || oliviaEntryObj.isSatisfiedField($fieldContainer)) {
+	                    fieldsCount++;
+	                }
 	
-	                // update field label text
-	                if (!fieldNumber.length) {
-	                    label.prepend('<span class="field-number"></span>');
-	                    fieldNumberText = oliviaEntryObj.fieldsCount + '. '
-	                    $('.field-number', $fieldContainer).text(fieldNumberText)
+	                if (fieldNumberContainer.length) {
+	                    fieldNumberContainer.remove();
 	                };
+	                label.prepend('<span class="field-number"></span>');
+	                fieldNumberText = fieldsCount + '. '
+	                $('.field-number', $fieldContainer).text(fieldNumberText)
 	
 	                // check if the field is checkbox
 	                if (oliviaEntryObj.isFieldExistInContainer(checkboxSelector, $fieldContainer)) {
 	                    // check if checkbox has value. if true we mark container as filled
-	                    if (oliviaEntryObj.checkboxFieldHasValue(checkboxSelector, $fieldContainer)) {
-	                        oliviaEntryObj.fieldsFilledCount++;
+	                    if (oliviaEntryObj.checkboxFieldHasValue(checkboxSelector, $fieldContainer) && (oliviaEntryObj.isNoConnectionField($fieldContainer) || oliviaEntryObj.isSatisfiedField($fieldContainer))) {
+	                        fieldsFilledCount++;
 	                        oliviaEntryObj.markFieldAsFilled($fieldContainer);
 	                    }
 	                    // subscribe on checkbox value changes
-	                    oliviaEntryObj.updateFieldOnChange($fieldContainer, checkboxSelector);
+	                    if (!oliviaEntryObj.isInitiated) {
+	                        oliviaEntryObj.updateFieldOnChange($fieldContainer, checkboxSelector);
+	                    }
 	                    return;
 	                }
 	
 	                // check if the field is radio button
 	                if (oliviaEntryObj.isFieldExistInContainer(radioSelector, $fieldContainer)) {
 	                    // check if radio button has value. if true we mark container as filled
-	                    if (oliviaEntryObj.radioButtonFieldHasValue(radioSelector, $fieldContainer)) {
-	                        oliviaEntryObj.fieldsFilledCount++;
+	                    if (oliviaEntryObj.radioButtonFieldHasValue(radioSelector, $fieldContainer) && (oliviaEntryObj.isNoConnectionField($fieldContainer) || oliviaEntryObj.isSatisfiedField($fieldContainer))) {
+	                        fieldsFilledCount++;
 	                        oliviaEntryObj.markFieldAsFilled($fieldContainer);
 	                    }
 	                    // subscribe on radio button value changes
-	                    oliviaEntryObj.updateFieldOnChange($fieldContainer, radioSelector);
+	                    if (!oliviaEntryObj.isInitiated) {
+	                        oliviaEntryObj.updateFieldOnChange($fieldContainer, radioSelector);
+	                    }
 	                    return;
 	                }
 	
 	                // check if the field is textarea
 	                if (oliviaEntryObj.isFieldExistInContainer(textareaSelector, $fieldContainer)) {
 	                    // check if textarea has value. if true we mark container as filled
-	                    if (oliviaEntryObj.textareaFieldHasValue(textareaSelector, $fieldContainer)) {
-	                        oliviaEntryObj.fieldsFilledCount++;
+	                    if (oliviaEntryObj.textareaFieldHasValue(textareaSelector, $fieldContainer) && (oliviaEntryObj.isNoConnectionField($fieldContainer) || oliviaEntryObj.isSatisfiedField($fieldContainer))) {
+	                        fieldsFilledCount++;
 	                        oliviaEntryObj.markFieldAsFilled($fieldContainer);
 	                    }
 	                    // subscribe on textarea value changes
-	                    oliviaEntryObj.updateFieldOnChange($fieldContainer, textareaSelector);
+	                    if (!oliviaEntryObj.isInitiated) {
+	                        oliviaEntryObj.updateFieldOnChange($fieldContainer, textareaSelector);
+	                    }
 	                    return;
 	                }
 	
 	                // check if the field is text input
 	                if (oliviaEntryObj.isFieldExistInContainer(textSelector, $fieldContainer)) {
 	                    // check if text input has value. if true we mark container as filled
-	                    if (oliviaEntryObj.textInputFieldHasValue(textSelector, $fieldContainer)) {
-	                        oliviaEntryObj.fieldsFilledCount++;
+	                    if (oliviaEntryObj.textInputFieldHasValue(textSelector, $fieldContainer) && (oliviaEntryObj.isNoConnectionField($fieldContainer) || oliviaEntryObj.isSatisfiedField($fieldContainer))) {
+	                        fieldsFilledCount++;
 	                        oliviaEntryObj.markFieldAsFilled($fieldContainer);
 	                    }
 	                    // subscribe on text input value changes
-	                    oliviaEntryObj.updateFieldOnChange($fieldContainer, textSelector);
+	                    if (!oliviaEntryObj.isInitiated) {
+	                        oliviaEntryObj.updateFieldOnChange($fieldContainer, textSelector);
+	                    }
 	                    return;
 	                }
 	
+	                // if this rule executed, it means that entry in finalized status and we need only to calculate filled fields.
+	                if (oliviaEntryObj.isFieldFilled($fieldContainer)) {
+	                    fieldsFilledCount++;
+	                }
+	
 	            });
-	            oliviaEntryObj.updateSidebarTitleCount(oliviaEntryObj.fieldsFilledCount, oliviaEntryObj.fieldsCount);
+	            oliviaEntryObj.updateSidebarTitleCount(fieldsFilledCount, fieldsCount);
 	        },
 	    }
 	    return oliviaEntry;
