@@ -113,6 +113,7 @@
 .entry-sidebar
 	padding: 22px 0 0
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
+	position: relative
 	// margin-bottom: 8px
 	.form.is-full-w
 		.form__bl
@@ -138,6 +139,14 @@
 				color: #6c757a
 			&:last-of-type
 				border-bottom: none
+	&--top 
+		margin-bottom: 5px
+		.form
+			&__ttl
+				margin-bottom: 0
+		.form.is-full-w 
+			.form__bl 
+				padding: 5px 29px 25px
 	&__close-btn
 		color: #cccccc
 		position: absolute
@@ -166,3 +175,47 @@
 		width: 460px
 		float: right
 		// will-change: min-height
+
+
+.connected-entry
+	margin-bottom: 5px
+	&__link 
+		font-size: 13px
+		display: inline-block
+		vertical-align: middle
+		a  
+			color: #0076ff
+			text-decoration: underline
+			&:hover 
+				text-decoration: none
+	&__text 
+		font-size: 13px 
+		color: #9b9b9b
+		display: inline-block
+		vertical-align: middle 
+		margin-left: 6px
+		padding-left: 6px
+		position: relative
+		&:before 
+			content: '|'
+			top: 0
+			left: -5px
+			position: absolute  
+
+	&__icon 
+		display: inline-block
+		margin-right: 5px
+		vertical-align: top
+		position: relative 
+		top: 2px
+		cursor: pointer
+
+.entry-value 
+	font-size: 13px
+	color: #4a4a4a
+	&__title
+		color: #282828
+		+opensans-sb 
+	&__desc 
+		padding: 1px 0
+		background: #fcde6e
