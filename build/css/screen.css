@@ -2552,13 +2552,15 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .connected-entries__ttl h2 { font-size: 20px; }
 .connected-entries__ttl span { color: #6c757a; font-size: 14px; vertical-align: top; display: inline-block; padding-top: 5px; }
 .connected-entries__item { margin-bottom: 5px; }
+.connected-entries__btn { font-size: 13px; color: #0076ff; background: transparent; margin-left: 22px; border-bottom: 1px dotted #0076ff; }
+.connected-entries__btn:hover { border-bottom: none; }
 
+.connected-entry { padding-left: 22px; position: relative; }
 .connected-entry__link { font-size: 13px; display: inline-block; vertical-align: middle; }
 .connected-entry__link a { color: #0076ff; text-decoration: underline; }
 .connected-entry__link a:hover { text-decoration: none; }
-.connected-entry__text { font-size: 13px; color: #9b9b9b; display: inline-block; vertical-align: middle; margin-left: 6px; padding-left: 6px; position: relative; }
-.connected-entry__text:before { content: "|"; top: 0; left: -5px; position: absolute; }
-.connected-entry__icon { display: inline-block; margin-right: 5px; vertical-align: top; position: relative; top: 2px; cursor: pointer; }
+.connected-entry__text { font-size: 10px; color: #9b9b9b; display: inline-block; vertical-align: middle; position: relative; width: 100%; }
+.connected-entry__icon { position: absolute; left: 0; top: 2px; cursor: pointer; }
 
 .entry-value { font-size: 13px; color: #4a4a4a; }
 .entry-value__title { color: #282828; font-family: "opensans-semibold", Arial, sans-serif; }
