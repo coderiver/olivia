@@ -2560,7 +2560,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 
 .connected-entry { padding-left: 40px; position: relative; }
 .connected-entry__link { font-size: 13px; display: inline-block; vertical-align: middle; }
-.connected-entry__link a { color: #0076ff; text-decoration: underline; }
+.connected-entry__link a { color: #0076ff; text-decoration: underline; margin-right: 6px;}
 .connected-entry__link a:hover { text-decoration: none; }
 .connected-entry__text { font-size: 10px; color: #9b9b9b; display: inline-block; vertical-align: middle; position: relative; width: 100%; }
 .connected-entry__icon { position: absolute; left: 18px; top: 2px; cursor: pointer; }
