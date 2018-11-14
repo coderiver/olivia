@@ -511,7 +511,8 @@
 		span
 			vertical-align: middle
 	&__span
-		display: inline-block
+		display: flex
+		flex-direction: column
 		max-width: calc(100% - 45px)
 		font-size: 13px
 		overflow: hidden
@@ -557,9 +558,15 @@
 		.popup-list__option
 			&:last-child
 				border-bottom: 1px solid #efefef
+	&__text 
+		margin-bottom: 5px
+	&__date
+		font-size: 11px
+		color: #9b9b9b
 
-
-
+	.radio__span
+		display: flex
+		align-items: center
 
 .members
 	.popup__bl
