@@ -2023,7 +2023,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .wysiwyg-formatted-text ol { padding-left: 30px; list-style-type: decimal; }
 .wysiwyg-formatted-text ul { padding-left: 30px; }
 .wysiwyg-formatted-text ul li { position: relative; }
-.wysiwyg-formatted-text ul li:before { content: ""; position: absolute; left: 0; top: 7px; width: 3px; height: 3px; border-radius: 50%; background-color: #6c757a; }
+.wysiwyg-formatted-text ul li:before { content: ""; position: absolute; left: -11px; top: 7px; width: 3px; height: 3px; border-radius: 50%; background-color: #6c757a; }
 .wysiwyg-formatted-text .ql-align-center { text-align: center; }
 .wysiwyg-formatted-text .ql-align-right { text-align: right; }
 .wysiwyg-formatted-text .ql-align-left { text-align: left; }
