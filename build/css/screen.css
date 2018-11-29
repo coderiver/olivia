@@ -2018,6 +2018,16 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .newpost .btn-group { display: none; float: right; margin-top: 10px; }
 .newpost .btn-group.is-visible { display: block; }
 
+.wysiwyg-formatted-text blockquote { position: relative; padding-left: 15px; }
+.wysiwyg-formatted-text blockquote:before { content: ""; position: absolute; left: 0; top: 0; width: 4px; height: 100%; background-color: #cccccc; }
+.wysiwyg-formatted-text ol { padding-left: 30px; list-style-type: decimal; }
+.wysiwyg-formatted-text ul { padding-left: 30px; }
+.wysiwyg-formatted-text ul li { position: relative; }
+.wysiwyg-formatted-text ul li:before { content: ""; position: absolute; left: 0; top: 7px; width: 3px; height: 3px; border-radius: 50%; background-color: #6c757a; }
+.wysiwyg-formatted-text .ql-align-center { text-align: center; }
+.wysiwyg-formatted-text .ql-align-right { text-align: right; }
+.wysiwyg-formatted-text .ql-align-left { text-align: left; }
+
 *[data-popup] { cursor: pointer; }
 
 .overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; padding: 10px; text-align: center; background: rgba(243, 244, 246, 0.6); opacity: 0; visibility: hidden; overflow: auto; white-space: nowrap; z-index: 10; -webkit-transition: 0.5s ease; transition: 0.5s ease; text-align: center; font-size: 0; }
