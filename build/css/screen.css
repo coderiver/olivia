@@ -2360,7 +2360,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__link-text--more { padding-top: 0; }
 .deal-steps__text { font-size: 11px; color: #878787; margin-bottom: 3px; }
 .deal-steps__text p.is-red { color: #d0011b; }
-.deal-steps__link-create, .deal-steps__link-add, .deal-steps__link-show-all { display: none; margin-right: 15px; }
+.deal-steps__link-create, .deal-steps__link-add, .deal-steps__link-show-all { display: none; }
 .deal-steps__link-create.is-active, .deal-steps__link-add.is-active, .deal-steps__link-show-all.is-active { display: inline-block; }
 .deal-steps__link-create a, .deal-steps__link-add a, .deal-steps__link-show-all a { font-size: 12px; color: #097bf2; border-bottom: 1px dotted #097bf2; }
 .deal-steps__link-add { float: right; }
@@ -2381,7 +2381,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__hint.is-open .deal-steps__hint-content { display: block; }
 .deal-steps__hint-content { display: none; position: absolute; right: -30px; top: -webkit-calc(100% + 20px); top: calc(100% + 20px); color: #282828; font-size: 13px; padding: 22px 26px 22px 22px; box-shadow: 2px 2px 10px gray; width: 286px; z-index: 4; background: #fff; border-radius: 5px; cursor: default; }
 .deal-steps__hint-content:before { content: ""; position: absolute; top: -8px; right: 24px; width: 0px; height: 0px; border-style: solid; border-width: 0 8px 8px 8px; border-color: transparent transparent white transparent; }
-.deal-steps__bot-links { position: absolute; bottom: 30px; left: 52px; width: -webkit-calc(100% - 28px - 57px); width: calc(100% - 28px - 57px); *zoom: 1; }
+.deal-steps__bot-links { *zoom: 1; }
 .deal-steps__bot-links:after { content: " "; display: table; clear: both; }
 .deal-steps__bot-links .div { margin-right: 0; }
 
@@ -2412,6 +2412,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .complicated-icon.is-disabled .transaction-ico, .complicated-icon.is-draft .transaction-ico { background-image: url("../img/svg-bg/transaction-disabled.svg"); }
 .complicated-icon.is-disabled .memo-ico, .complicated-icon.is-draft .memo-ico { background-image: url("../img/svg-bg/memo-disabled.svg"); }
 .complicated-icon.is-disabled .customer-ico, .complicated-icon.is-draft .customer-ico { background-image: url("../img/svg-bg/customer-disabled.svg"); }
+.complicated-icon.is-disabled .sr-sm, .complicated-icon.is-disabled .sr, .complicated-icon.is-draft .sr-sm, .complicated-icon.is-draft .sr { background-image: url("../img/svg-bg/sr-disabled.svg"); }
 .complicated-icon.is-disabled .dollar-icon, .complicated-icon.is-draft .dollar-icon { color: #d3d3d3; }
 .complicated-icon.is-disabled .dollar-icon::before, .complicated-icon.is-disabled .dollar-icon::after, .complicated-icon.is-draft .dollar-icon::before, .complicated-icon.is-draft .dollar-icon::after { background-color: #d3d3d3; }
 .complicated-icon.is-alert .complicated-icon__spec-icon::before { background-image: url("../img/svg-bg/rejected.svg"); }

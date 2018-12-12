@@ -245,7 +245,6 @@
 	&__link-add,
 	&__link-show-all
 		display: none
-		margin-right: 15px
 		&.is-active
 			display: inline-block
 		a
@@ -254,7 +253,6 @@
 			border-bottom: 1px dotted #097bf2
 	&__link-add
 		float: right
-		// margin-right: 0
 	&__link-show-all
 		color: #3aa59b
 		a
@@ -339,10 +337,6 @@
 			right: 24px
 			+arr(16, 8, white, t)
 	&__bot-links
-		position: absolute
-		bottom: 30px
-		left: 52px
-		width: calc(100% - 28px - 57px)
 		+clr
 
 		.div
@@ -491,6 +485,8 @@
 			background-image: url("../img/svg-bg/memo-disabled.svg")
 		.customer-ico
 			background-image: url("../img/svg-bg/customer-disabled.svg")
+		.sr-sm, .sr
+			background-image: url("../img/svg-bg/sr-disabled.svg")
 		.dollar-icon
 			color: #d3d3d3
 			&::before,
