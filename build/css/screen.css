@@ -588,9 +588,9 @@ body .tooltipster-base { z-index: 8; }
 
 .integer { background-image: url("../img/svg-bg/integer.svg"); }
 
-.sr { background-image: url("../img/svg-bg/sr.svg"); }
+.sr { background-image: url("../img/svg-bg/sr-sm.svg"); }
 
-.sr-sm { background-image: url("../img/svg-bg/sr-sm.svg"); }
+.sr-sm { background-image: url("../img/svg-bg/sr.svg"); }
 
 .sr-disabled { background-image: url("../img/svg-bg/sr-disabled.svg"); }
 
@@ -2320,6 +2320,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 
 .deal-steps { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 .deal-steps__step { display: inline-block; vertical-align: top; width: 20%; -webkit-flex-basis: 20%; -ms-flex-preferred-size: 20%; flex-basis: 20%; min-height: 285px; background-color: rgba(216, 216, 216, 0.4); float: left; border-left: 1px solid #fff; position: relative; padding: 12px 28px 57px 42px; }
+.deal-steps__step > div { min-height: 180px; margin-bottom: 20px; }
 .deal-steps__step .svg-ico { width: 44px; height: 44px; background-size: 44px 44px; position: relative; }
 .deal-steps__step .letter-ico { background-image: url("../img/svg-bg/letter.svg"); }
 .deal-steps__step .letter-ico.is-disabled { background-image: url("../img/svg-bg/letter-disabled.svg"); }
@@ -2329,6 +2330,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__step .customer-ico.is-disabled { background-image: url("../img/svg-bg/customer-disabled.svg"); }
 .deal-steps__step .transaction-ico { background-image: url("../img/svg-bg/transaction.svg"); }
 .deal-steps__step .transaction-ico.is-disabled { background-image: url("../img/svg-bg/transaction-disabled.svg"); }
+.deal-steps__step .sr { background-image: url("../img/svg-bg/sr.svg"); }
 .deal-steps__step::before { content: ""; position: absolute; left: 0; z-index: 1; top: 50%; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); width: 0px; height: 0px; border-style: solid; border-width: 7px 0 7px 10px; border-color: transparent transparent transparent #fff; }
 .deal-steps__step:first-child { border-left: 0; }
 .deal-steps__step:first-child::before, .deal-steps__step:first-child::after { display: none; }
