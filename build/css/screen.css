@@ -2509,7 +2509,8 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-folder .dropdown { z-index: 2; }
 
 .deal-team { padding-bottom: 5px; }
-
+.deal-team__row { margin-bottom: 15px; }
+.deal-team__row .check { min-width: 120px; }
 .deal-team:last-child { padding-bottom: 0px; }
 
 .deal-team-name { font-weight: bold; padding-bottom: 1px; }
