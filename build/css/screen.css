@@ -2510,6 +2510,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 
 .deal-team { padding-bottom: 5px; }
 .deal-team__row { margin-bottom: 15px; }
+.deal-team__row:last-child { margin-bottom: 0; }
 .deal-team__row .check { min-width: 120px; }
 .deal-team:last-child { padding-bottom: 0px; }
 
