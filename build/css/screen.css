@@ -2320,7 +2320,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 
 .deal-steps { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
 .deal-steps__wrap { min-height: 175px; }
-.deal-steps__step { display: inline-block; vertical-align: top; width: 25%; -webkit-flex-basis: 25%; -ms-flex-preferred-size: 25%; flex-basis: 25%; min-height: 285px; background-color: rgba(216, 216, 216, 0.4); float: left; border-left: 1px solid #fff; position: relative; padding: 12px 80px 57px 50px; }
+.deal-steps__step { display: inline-block; vertical-align: top; width: 25%; -webkit-flex-basis: 25%; -ms-flex-preferred-size: 25%; flex-basis: 25%; min-height: 285px; background-color: rgba(216, 216, 216, 0.4); float: left; border-left: 1px solid #fff; position: relative; padding: 12px 45px 57px 45px; }
 .deal-steps__step .svg-ico { width: 44px; height: 44px; background-size: 44px 44px; position: relative; }
 .deal-steps__step .letter-ico { background-image: url("../img/svg-bg/letter.svg"); }
 .deal-steps__step .letter-ico.is-disabled { background-image: url("../img/svg-bg/letter-disabled.svg"); }
@@ -2347,6 +2347,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-steps__title { color: #9b9b9b; text-transform: uppercase; font-size: 15px; font-family: "opensans-bold", Arial, sans-serif; margin-bottom: 13px; }
 .deal-steps__links { margin-bottom: 10px; min-height: 50px; }
 .deal-steps__link { display: inline-block; position: relative; margin-right: 36px; margin-bottom: 5px; vertical-align: top; }
+.deal-steps__link:last-child { margin-right: 0; }
 .deal-steps__link .dollar-icon { top: 10px; }
 .deal-steps__link--spec { margin-right: 0; display: block; margin-bottom: 16px; *zoom: 1; }
 .deal-steps__link--spec:after { content: " "; display: table; clear: both; }
