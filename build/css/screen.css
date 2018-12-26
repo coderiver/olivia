@@ -2411,6 +2411,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .complicated-icon.is-not-exist .transaction-ico { background-image: url("../img/svg-bg/transaction-disabled.svg"); }
 .complicated-icon.is-not-exist .memo-ico { background-image: url("../img/svg-bg/memo-disabled.svg"); }
 .complicated-icon.is-not-exist .customer-ico { background-image: url("../img/svg-bg/customer-disabled.svg"); }
+.complicated-icon.is-not-exist .sr-sm, .complicated-icon.is-not-exist .sr { background-image: url("../img/svg-bg/sr-disabled.svg"); }
 .complicated-icon.is-disabled .letter-ico, .complicated-icon.is-draft .letter-ico { background-image: url("../img/svg-bg/letter-disabled.svg"); }
 .complicated-icon.is-disabled .transaction-ico, .complicated-icon.is-draft .transaction-ico { background-image: url("../img/svg-bg/transaction-disabled.svg"); }
 .complicated-icon.is-disabled .memo-ico, .complicated-icon.is-draft .memo-ico { background-image: url("../img/svg-bg/memo-disabled.svg"); }
@@ -2513,6 +2514,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .deal-team__row { margin-bottom: 15px; }
 .deal-team__row:last-child { margin-bottom: 0; }
 .deal-team__row .check { min-width: 120px; }
+
 .deal-team:last-child { padding-bottom: 0px; }
 
 .deal-team-name { font-weight: bold; padding-bottom: 1px; }
