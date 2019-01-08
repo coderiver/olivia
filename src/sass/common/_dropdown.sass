@@ -57,6 +57,47 @@
 			border-radius: 4px
 			a
 				padding: 7px 15px
+		.dropdown__crd
+			position: relative
+			border-bottom: 1px solid #747f86
+			margin: 0 15px 7px
+			a
+				padding: 14px
+				color: #747f86
+		.dropdown__success
+			position: absolute
+			display: none
+			top: 0 
+			right: -325px
+			width: 300px
+			padding: 15px 40px 25px 50px
+			color: #ffffff
+			line-height: 1.5
+			background: rgba(67,159,68,0.73)
+			border-radius: 3px
+			box-shadow: 0 0 3.5px 1px rgba(0, 0, 0, 0.19)
+			span
+				display: block
+			&:before
+				content: ''
+				position: absolute
+				top: 37px
+				left: 23px
+				width: 20px
+				height: 3px
+				background-color: #ffffff
+				transform: rotate(-45deg)
+			&:after
+				content: ''
+				position: absolute
+				top: 39px
+				left: 17px
+				width: 12px
+				height: 3px
+				background-color: #ffffff
+				transform: rotate(45deg)
+		.dropdown__success.is-show
+			display: block
 	&.is-login
 		.dropdown__item
 			text-transform: none
