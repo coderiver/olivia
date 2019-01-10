@@ -61,9 +61,19 @@
 			position: relative
 			border-bottom: 1px solid #747f86
 			margin: 0 15px 7px
+			display: flex
+			justify-content: space-between
+			align-items: center
 			a
-				padding: 14px
+				padding: 14px 0
 				color: #747f86
+			img
+				display: none
+			&:hover
+				a
+					color: #097bf2	
+				img
+					display: block
 		.dropdown__success
 			position: absolute
 			display: none
