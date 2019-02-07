@@ -514,4 +514,24 @@ $(document).ready(function() {
 
 	window.oliviaTableFactory = oliviaTableFactory;
 
+	function tableHorizontalScrollbar() {
+		var windowOffsetBottom = $(document).scrollTop() + $(window).height();
+	    console.log('windowOffsetBottom=' + windowOffsetBottom);
+	    var tableOffsetBottom = $('.tablewrap__in').offset().top + $('.tablewrap__in').height();
+	    console.log('tableOffsetBottom=' + tableOffsetBottom);
+	    var scrollTop = tableOffsetBottom - windowOffsetBottom;
+
+	    if (scrollTop > 0) {
+	    	$('.tablewrap__in .ps-scrollbar-x-rail').css('margin-bottom', scrollTop);
+	    } else {
+	    	$('.tablewrap__in .ps-scrollbar-x-rail').css('margin-bottom', 0);
+		}
+	}
+
+	tableHorizontalScrollbar()
+
+	$(document).on('scroll', function(){
+	    tableHorizontalScrollbar()
+	});
+
 });
