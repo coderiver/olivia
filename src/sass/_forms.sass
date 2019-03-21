@@ -872,6 +872,74 @@
 			width: auto
 	&__entry-value
 		margin: 12px 0
+	&__actions
+		.form__head
+			padding-top: 24px
+			.form__btn-toggle 
+				top: 8px
+				right: 8px
+				width: auto
+				padding-right: 26px
+				span
+					font-size: 12px
+					color: #6d7278
+					display: inline-block
+					padding-bottom: 5px
+		&.is-close 
+			.form__btn-toggle 
+				transform: none
+				&:before 
+					transform: rotate(-135deg)
+					top: 0
+
+
+	&__actions-rows 
+		padding: 8px 8px 8px 40px
+		border-bottom: 1px dotted #979797 
+		&:last-child 
+			border-bottom: none
+	&__actions-row 
+		padding-right: 80px
+		position: relative
+		display: flex
+		margin-bottom: 8px 
+		.form__btn-toggle 
+			top: 8px 
+			right: 0
+		.form__btn-close
+			position: absolute 
+			top: 0
+			right: 60px
+			left: auto
+			padding-left: 0
+			&:before,
+			&:after 
+				background-color: silver
+				top: 50%
+				left: 50%
+	&__actions-col 
+		width: 25%
+		padding-right: 8px
+		&:first-child 
+			display: flex 
+			align-items: center
+		&:last-child 
+			padding-right: 0
+	&__actions-title
+		width: 100%
+		font-size: 13px 
+		color: #282828
+		+opensans-sb
+		display: flex
+		justify-content: space-between
+		align-items: center
+		span 
+			width: calc(100% - 20px)
+			display: inline-block
+		.icon 
+			color: #c9c9c9
+			font-size: 8px
+			transform: rotate(180deg)
 
 .upload
 	margin: 15px 0
