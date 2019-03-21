@@ -898,6 +898,27 @@
 		border-bottom: 1px dotted #979797 
 		&:last-child 
 			border-bottom: none
+		&.is-close
+			.form__btn-close 
+				opacity: 0
+				pointer-events: none
+			.form__btn-toggle
+				transform: rotate(180deg)
+				top: 5px
+			.form__actions-row
+				display: none 
+				&:first-child 
+					display: flex
+			.form__actions-count
+				display: block
+
+	&__actions-count 
+		font-size: 13px
+		position: absolute
+		right: 65px
+		top: 10px
+		display: none
+
 	&__actions-row 
 		padding-right: 80px
 		position: relative
@@ -917,6 +938,9 @@
 				background-color: silver
 				top: 50%
 				left: 50%
+		.form__btn-add
+			border: 1px solid #b2b8be
+			font-weight: 600
 	&__actions-col 
 		width: 25%
 		padding-right: 8px
@@ -940,6 +964,7 @@
 			color: #c9c9c9
 			font-size: 8px
 			transform: rotate(180deg)
+
 
 .upload
 	margin: 15px 0
