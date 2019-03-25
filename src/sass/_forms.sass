@@ -915,7 +915,7 @@
 	&__actions-count 
 		font-size: 13px
 		position: absolute
-		right: 65px
+		right: 60px
 		top: 10px
 		display: none
 
@@ -923,14 +923,16 @@
 		padding-right: 80px
 		position: relative
 		display: flex
-		margin-bottom: 8px 
+		margin-bottom: 8px
+		&:last-child 
+			margin-bottom: 0 
 		.form__btn-toggle 
 			top: 8px 
 			right: 0
 		.form__btn-close
 			position: absolute 
 			top: 0
-			right: 60px
+			right: 55px
 			left: auto
 			padding-left: 0
 			&:before,
@@ -941,8 +943,15 @@
 		.form__btn-add
 			border: 1px solid #b2b8be
 			font-weight: 600
+
+	&__actions-bl 
+		width: 75%
+		
+	&__actions-cols 
+		display: flex
+		justify-content: space-between
 	&__actions-col 
-		width: 25%
+		width: 33%
 		padding-right: 8px
 		&:first-child 
 			display: flex 
@@ -950,13 +959,14 @@
 		&:last-child 
 			padding-right: 0
 	&__actions-title
-		width: 100%
+		width: 25%
 		font-size: 13px 
 		color: #282828
 		+opensans-sb
 		display: flex
 		justify-content: space-between
 		align-items: center
+		padding-right: 10px
 		span 
 			width: calc(100% - 20px)
 			display: inline-block
