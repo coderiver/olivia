@@ -892,12 +892,30 @@
 					transform: rotate(-135deg)
 					top: 0
 
+	&__actions-count 
+		font-size: 13px
+		position: absolute
+		right: -20px
+		top: 10px
+		display: none
 
-	&__actions-rows 
-		padding: 8px 8px 8px 40px
-		border-bottom: 1px dotted #979797 
+	&__actions-select
+		border: 1px solid #c7cbd3
+		border-radius: 4px
+		height: 36px
+		width: 100%
+
+	&__actions-row
+		padding: 8px 80px 8px 40px
+		position: relative
+		display: flex
+		align-items: flex-start
+		border-bottom: 1px dotted #979797
 		&:last-child 
 			border-bottom: none
+		.form__btn-toggle 
+			top: 8px 
+			right: 8px
 		&.is-close
 			.form__btn-close 
 				opacity: 0
@@ -905,59 +923,50 @@
 			.form__btn-toggle
 				transform: rotate(180deg)
 				top: 5px
-			.form__actions-row
+			.form__actions-cols
 				display: none 
 				&:first-child 
 					display: flex
 			.form__actions-count
 				display: block
 
-	&__actions-count 
-		font-size: 13px
-		position: absolute
-		right: 60px
-		top: 10px
-		display: none
-
-	&__actions-row 
-		padding-right: 80px
-		position: relative
-		display: flex
-		margin-bottom: 8px
-		&:last-child 
-			margin-bottom: 0 
-		.form__btn-toggle 
-			top: 8px 
-			right: 0
-		.form__btn-close
-			position: absolute 
-			top: 0
-			right: 55px
-			left: auto
-			padding-left: 0
-			&:before,
-			&:after 
-				background-color: silver
-				top: 50%
-				left: 50%
-		.form__btn-add
-			border: 1px solid #b2b8be
-			font-weight: 600
-
 	&__actions-bl 
 		width: 75%
+
+	&__actions-drop 
+		width: 100%
 		
 	&__actions-cols 
 		display: flex
 		justify-content: space-between
+		margin-bottom: 8px
+		position: relative
+		&:last-child 
+			margin-bottom: 0
+		.form__btn-close
+			position: absolute 
+			top: 0
+			right: -30px
+			left: auto
+			padding-left: 0
+			width: 30px
+			&:before,
+			&:after 
+				background-color: silver
+				top: 17px
+				left: 10px
 	&__actions-col 
 		width: 33%
 		padding-right: 8px
-		&:first-child 
-			display: flex 
-			align-items: center
-		&:last-child 
+		&:last-of-type 
 			padding-right: 0
+		.form__bl 
+			width: 100%
+			&.is-hidden 
+				display: none
+		.form__btn-add
+			border: 1px solid #b2b8be
+			font-weight: 600
 	&__actions-title
 		width: 25%
 		font-size: 13px 
@@ -966,7 +975,7 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
-		padding-right: 10px
+		padding: 10px 10px 0 0
 		span 
 			width: calc(100% - 20px)
 			display: inline-block
