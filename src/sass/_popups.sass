@@ -475,6 +475,41 @@
 				width: 6px
 				min-height: 50px
 
+.popup-news-view 
+	background: transparent
+	box-shadow: none
+	.btn-group 
+		text-align: left
+	&__container 
+		background: #fff
+		box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5)
+	&__caution
+		margin-top: 16px
+		
+.caution
+	background: #ff5b53
+	border-radius: 3px
+	box-shadow: 0 0 3.5px 0 rgba(0, 0, 0, 0.5)
+	&__in 
+		display: flex 
+		align-items: center
+	&__icon
+		padding: 0 14px
+		color: #fff 
+		font-size: 20px 
+		line-hright: 1
+		+opensans
+		.icon-caution
+			color: #fff
+	&__text 
+		line-height: 1.6
+		border-left: 1px solid rgba(255, 255, 255, 0.5)
+		padding: 18px 10px 18px
+		font-size: 12px
+		text-transform: uppercase
+		color: #fff 
+		+opensans-sb
+
 .popup-list
 	&.is-hidden
 		display: none
