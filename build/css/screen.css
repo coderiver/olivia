@@ -2225,6 +2225,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .popup-news-view { background: transparent; box-shadow: none; }
 .popup-news-view .btn-group { text-align: left; }
 .popup-news-view__container { background: #fff; box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.5); }
+.popup-news-view__container .btn-group .btn.btn-ok { bottom: auto; right: auto; position: static; padding: 8px 35px; }
 .popup-news-view__caution { margin-top: 16px; }
 
 .caution { background: #ff5b53; border-radius: 3px; box-shadow: 0 0 3.5px 0 rgba(0, 0, 0, 0.5); }
