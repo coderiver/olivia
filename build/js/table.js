@@ -528,10 +528,10 @@ $(document).ready(function() {
 		}
 	}
 
-	tableHorizontalScrollbar()
+	// tableHorizontalScrollbar()
 
-	$(document).on('scroll', function(){
-	    tableHorizontalScrollbar()
-	});
+	// $(document).on('scroll', function(){
+	//     tableHorizontalScrollbar()
+	// });
 
 });
