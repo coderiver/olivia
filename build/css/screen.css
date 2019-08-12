@@ -2028,7 +2028,7 @@ body .header .daterangepicker.dropdown-menu { z-index: 12; }
 .form__actions-cols .form__btn-close:before, .form__actions-cols .form__btn-close:after { background-color: silver; top: 17px; left: 10px; }
 .form__actions-col { width: 33%; padding-right: 8px; }
 .form__actions-col:last-of-type { padding-right: 0; }
-.form__actions-col .is-inactive .ng-select-container { pointer-events: none; opacity: 0.5; }
+.form__actions-col.is-inactive .ng-select-container { pointer-events: none; opacity: 0.5; }
 .form__actions-col .form__bl { width: 100%; }
 .form__actions-col .form__bl.is-hidden { display: none; }
 .form__actions-col .form__btn-add { border: 1px solid #b2b8be; font-weight: 600; }
