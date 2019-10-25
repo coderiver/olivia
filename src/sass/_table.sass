@@ -893,41 +893,20 @@
 				td
 					vertical-align: top
 
-		td
-			color: #6c757a
-			font-size: 12px
-			background-color: #f8f8f8
-			white-space: nowrap
-
-			// &:nth-child(4n)
-			// 	border-right: 1px solid #dce0e7
+		*
 			&:last-child
 				&.is-table-in, &.border-right
-
 					border-right: none
-			// &:first-child
-			// 	&.is-table-in
-			// 		background: #f8f8f8
-			// 		&:hover
-			// 			background: #f8f8f8
 
+		*
 			&.is-table-in
 				position: relative
 				border-right: 1px solid #dce0e7
-				// min-width: 327px
-				// min-width: 318px
-				// width: 100%
-				// display: inline-block
-				// white-space: nowrap
 				margin-bottom: -1px
 				border-bottom: none
 				padding: 0
 				height: auto
-				//background: transparent
 				background: #fff
-				.table__text
-					a
-						white-space: initial
 				&:before
 					content: ""
 					position: absolute
@@ -937,6 +916,47 @@
 					z-index: 1
 					background: #efefef
 					height: 1px
+				&.is-open
+					&::before
+						bottom: 0
+					table
+						&[data-attr="child"]
+							display: block
+				.table__text
+					a
+						white-space: initial
+
+		* 
+			&.is-table-in_border
+				padding: 0
+				border-right: 1px solid #dce0e7
+				&:before
+					display: none
+
+		td
+			color: #6c757a
+			font-size: 12px
+			background-color: #f8f8f8
+			white-space: nowrap
+
+			// &:nth-child(4n)
+			// 	border-right: 1px solid #dce0e7 
+
+			// &:first-child
+			// 	&.is-table-in
+			// 		background: #f8f8f8
+			// 		&:hover
+			// 			background: #f8f8f8
+
+			&.is-table-in
+				// min-width: 327px
+				// min-width: 318px
+				// width: 100%
+				// display: inline-block
+				// white-space: nowrap
+
+				background: transparent
+
 				// &:after
 				// 	content: ""
 				// 	position: absolute
@@ -945,21 +965,7 @@
 				// 	right: 0
 				// 	background: #efefef
 				// 	width: 1px
-				&.is-open
-					&::before
-						bottom: 0
-					table
-						&[data-attr="child"]
-							display: block
-
-					// padding: 0
-					// &:before
-					// 	display: none
-			&.is-table-in_border
-				padding: 0
-				border-right: 1px solid #dce0e7
-				&:before
-					display: none
+				
 			&.no-border
 				border-bottom: 0
 			&.is-xs
