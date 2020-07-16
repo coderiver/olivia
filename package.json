@@ -23,7 +23,7 @@
     "gulp-ruby-sass": "~2.0.3",
     "gulp-sourcemaps": "^1.5.2",
     "gulp.spritesmith": "^4.1.0",
-    "lodash": "^3.10.1",
+    "lodash": "^4.17.19",
     "postcss-svg": "^1.0.4",
     "require-dir": "^0.3.0",
     "rimraf": "^2.4.3"
